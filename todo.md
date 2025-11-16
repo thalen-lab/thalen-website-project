@@ -107,3 +107,7 @@
 - [x] Multi-Cloud Strategy blog post
 - [x] Change Management blog post
 - [x] Real-Time Analytics blog post
+
+## Phase 16: Add Partners Section
+- [x] Add Partners section to homepage following Incentro's format
+- [x] Include technology partners across categories (Process Automation, Cloud Platforms, Data Analytics, Cybersecurity)

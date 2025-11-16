@@ -356,6 +356,116 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Technology Partners</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              With these partners we deliver enterprise-grade solutions for government and mission-critical operations.
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            {/* Process Automation */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold mb-6 text-center">Process Automation</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">UiPath</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Automation Anywhere</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Blue Prism</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Cloud Platforms */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold mb-6 text-center">Cloud Platforms</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">AWS GovCloud</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Microsoft Azure Government</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Google Cloud</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Data & Analytics */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold mb-6 text-center">Data & Analytics</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Snowflake</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Databricks</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Tableau</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Cybersecurity */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold mb-6 text-center">Cybersecurity</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Palo Alto Networks</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">CrowdStrike</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Splunk</span>
+                </div>
+              </div>
+            </div>
+
+            {/* AI & Machine Learning */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold mb-6 text-center">AI & Machine Learning</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">OpenAI</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Anthropic</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">DataRobot</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Enterprise Software */}
+            <div className="mb-8">
+              <h3 className="text-xl font-bold mb-6 text-center">Enterprise Software</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">ServiceNow</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">Salesforce</span>
+                </div>
+                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
+                  <span className="text-lg font-semibold">SAP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient diagonal-top text-primary-foreground">
         <div className="container text-center">
