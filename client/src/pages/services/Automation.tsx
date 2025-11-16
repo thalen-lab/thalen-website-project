@@ -3,9 +3,33 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, TrendingUp, Zap, Target, BarChart } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, Zap, Target, BarChart, Bot, Network, GitBranch } from 'lucide-react';
 
 export default function Automation() {
+  const subServices = [
+    {
+      icon: Bot,
+      title: 'Robotic Process Automation (RPA)',
+      description: 'Deploy AI-powered digital workers that execute repetitive tasks 24/7 with zero errors, freeing your team to focus on mission-critical work.',
+      benefits: ['24/7 automated processing', 'Zero-error execution', 'Rapid 4-6 week deployment', 'FedRAMP-compliant bots'],
+      link: '/services/automation/rpa'
+    },
+    {
+      icon: Network,
+      title: 'Enterprise Integration Platform',
+      description: 'Eliminate data silos and manual transfers by connecting all your systems through a secure, government-certified integration platform.',
+      benefits: ['Unified data landscape', 'Real-time synchronization', 'No custom APIs needed', 'CMMC Level 2 certified'],
+      link: '/services/automation/integration'
+    },
+    {
+      icon: GitBranch,
+      title: 'Process Orchestration',
+      description: 'Automate complex, multi-system workflows from end to end with intelligent orchestration that adapts to your agency\'s unique processes.',
+      benefits: ['End-to-end automation', 'Cross-department workflows', 'Bottleneck identification', 'Continuous optimization'],
+      link: '/services/automation/orchestration'
+    }
+  ];
+
   const methodology = [
     {
       number: '1',
@@ -127,6 +151,46 @@ export default function Automation() {
                 Download Service Sheet
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Automation Specializations */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Automation Specializations</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Three proven approaches to transform your operations with intelligent automation tailored to your agency's unique needs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {subServices.map((service, index) => (
+              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
+                <CardContent className="p-8">
+                  <service.icon className="h-16 w-16 text-accent mb-6" />
+                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <p className="text-muted-foreground mb-6">{service.description}</p>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-start text-sm">
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link href={service.link}>
+                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

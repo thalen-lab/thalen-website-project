@@ -21,6 +21,11 @@ import AppDevelopmentService from "./pages/services/AppDevelopment";
 import CustomSoftwareService from "./pages/services/CustomSoftware";
 import DigitalTransformationService from "./pages/services/DigitalTransformation";
 
+// Automation Subpages
+import RPAService from "./pages/services/automation/RPA";
+import IntegrationService from "./pages/services/automation/Integration";
+import OrchestrationService from "./pages/services/automation/Orchestration";
+
 // Industry Pages
 import FederalIndustry from "./pages/industries/FederalGovernment";
 import HealthcareIndustry from "./pages/industries/Healthcare";
@@ -60,6 +65,9 @@ function Router() {
       
       {/* Service Routes */}
       <Route path={"/services/automation"} component={AutomationService} />
+      <Route path={"/services/automation/rpa"} component={RPAService} />
+      <Route path={"/services/automation/integration"} component={IntegrationService} />
+      <Route path={"/services/automation/orchestration"} component={OrchestrationService} />
       <Route path={"/services/analytics"} component={AnalyticsService} />
       <Route path={"/services/cloud"} component={CloudService} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />

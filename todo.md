@@ -195,3 +195,11 @@
 
 ## Phase 28: Resources Page Updates
 - [x] Remove "No Credit Card Required" text from Resources page hero section
+
+## Phase 29: Enhance Intelligent Automation & Process Optimization Service
+- [x] Add sub-services section to main Automation page (RPA, Enterprise Integration, Process Orchestration)
+- [x] Create /services/automation/rpa subpage with government-focused RPA content
+- [x] Create /services/automation/integration subpage for Enterprise Integration (iPaaS)
+- [x] Create /services/automation/orchestration subpage for Process Orchestration
+- [x] Add routes for all three subpages in App.tsx
+- [x] Test all automation pages and subpage navigation
