@@ -27,7 +27,15 @@ import Healthcare from "./pages/industries/Healthcare";
 import Manufacturing from "./pages/industries/Manufacturing";
 import Financial from "./pages/industries/Financial";
 
+// Case Study Pages
+import FederalAutomation from "./pages/case-studies/FederalAutomation";
+import HealthcareAI from "./pages/case-studies/HealthcareAI";
+
+// Blog Post Pages
+import ROIMethodology from "./pages/insights/ROIMethodology";
+
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       {/* Main Pages */}
@@ -51,6 +59,13 @@ function Router() {
       <Route path="/industries/healthcare" component={Healthcare} />
       <Route path="/industries/manufacturing" component={Manufacturing} />
       <Route path="/industries/financial" component={Financial} />
+
+      {/* Case Study Detail Pages */}
+      <Route path="/case-studies/federal-automation" component={FederalAutomation} />
+      <Route path="/case-studies/healthcare-ai" component={HealthcareAI} />
+
+      {/* Blog Post Pages */}
+      <Route path="/insights/roi-methodology" component={ROIMethodology} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />

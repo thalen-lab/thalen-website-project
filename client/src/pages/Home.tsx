@@ -177,13 +177,17 @@ export default function Home() {
                 <h1 className="text-5xl md:text-6xl font-bold mb-4">{slide.title}</h1>
                 <p className="text-xl md:text-2xl mb-8 opacity-90">{slide.subtitle}</p>
                 <div className="flex flex-wrap gap-4">
-                  <Button size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
-                    Schedule Strategic Assessment
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                  <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                    View ROI Methodology
-                  </Button>
+                  <Link href="/contact">
+                    <Button size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
+                      Schedule Strategic Assessment
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                  <Link href="/insights">
+                    <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                      View ROI Methodology
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -274,7 +278,7 @@ export default function Home() {
                     <h3 className="text-3xl font-bold mb-4">{caseStudies[currentCaseStudy].title}</h3>
                     <p className="text-primary-foreground/90 mb-6">{caseStudies[currentCaseStudy].description}</p>
                     <Link href={caseStudies[currentCaseStudy].href}>
-                      <Button className="bg-orange-gradient hover:opacity-90">
+                      <Button className="bg-orange-gradient hover:opacity-90 w-fit">
                         Read Case Study
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
@@ -360,13 +364,17 @@ export default function Home() {
             Schedule a comprehensive automation assessment and discover how our proven methodology can deliver measurable ROI for your organization.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
-              Schedule Strategic Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Learn About Our Team
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
+                Schedule Strategic Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="/about">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                Learn About Our Team
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
