@@ -39,7 +39,12 @@ import HospitalWaitTimes from "./pages/case-studies/HospitalWaitTimes";
 import AerospaceDigitalTwin from "./pages/case-studies/AerospaceDigitalTwin";
 
 // Blog Post Pages
-import ROIMethodology from "./pages/insights/ROIMethodology";
+import ROIMethodology from "@/pages/insights/ROIMethodology";
+import ZeroTrustArchitecture from "@/pages/insights/ZeroTrustArchitecture";
+import ResponsibleAI from "@/pages/insights/ResponsibleAI";
+import MultiCloudStrategy from "@/pages/insights/MultiCloudStrategy";
+import ChangeManagement from "@/pages/insights/ChangeManagement";
+import RealTimeAnalytics from "@/pages/insights/RealTimeAnalytics";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -80,6 +85,11 @@ function Router() {
 
       {/* Blog Post Pages */}
       <Route path="/insights/roi-methodology" component={ROIMethodology} />
+      <Route path="/insights/zero-trust-architecture" component={ZeroTrustArchitecture} />
+      <Route path="/insights/responsible-ai" component={ResponsibleAI} />
+      <Route path="/insights/multi-cloud-strategy" component={MultiCloudStrategy} />
+      <Route path="/insights/change-management" component={ChangeManagement} />
+      <Route path="/insights/real-time-analytics" component={RealTimeAnalytics} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />

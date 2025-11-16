@@ -100,3 +100,10 @@
 - [x] Intelligence Security case study page
 - [x] Hospital Wait Times case study page
 - [x] Aerospace Digital Twin case study page
+
+## Phase 15: Create All Remaining Blog Posts
+- [x] Zero-Trust Architecture blog post
+- [x] Responsible AI blog post
+- [x] Multi-Cloud Strategy blog post
+- [x] Change Management blog post
+- [x] Real-Time Analytics blog post
