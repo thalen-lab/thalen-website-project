@@ -183,10 +183,8 @@ export default function Home() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  <Link href="/insights">
-                    View ROI Methodology
-                  </Link>
+                <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                  <Link href="/methodology">View ROI Methodology</Link>
                 </Button>
                 </div>
               </div>

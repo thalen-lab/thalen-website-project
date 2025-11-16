@@ -9,6 +9,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Partners from "./pages/Partners";
+import Methodology from "./pages/Methodology";
 import Contact from "./pages/Contact";
 import CaseStudies from "./pages/CaseStudies";
 import Insights from "./pages/Insights";
@@ -55,6 +56,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/partners" component={Partners} />
+      <Route path="/methodology" component={Methodology} />
       <Route path="/contact" component={Contact} />
       <Route path="/case-studies" component={CaseStudies} />
       <Route path="/insights" component={Insights} />

@@ -154,3 +154,14 @@
 - [ ] Add downloadable resources section (whitepapers, ROI calculators, methodology guides)
 - [ ] Enhance About page with leadership team and company history
 - [x] Create service outcome categories on homepage
+
+## Phase 24: Create ROI Methodology Page
+- [x] Create /methodology page with hero section
+- [x] Add detailed RAPID Framework explanation with ROI impact per phase
+- [x] Build interactive ROI calculator with input fields and projections
+- [x] Add industry benchmarks section (Federal, Healthcare, Manufacturing, Financial)
+- [x] Include case study ROI examples
+- [x] Add downloadable methodology PDF guide (gated with email capture)
+- [x] Update hero CTA link from /insights to /methodology
+- [x] Add route for /methodology page
+- [x] Test calculator functionality
