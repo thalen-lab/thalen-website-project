@@ -123,3 +123,7 @@
 - [x] Add partner categories with large logo cards (Process Automation, Cloud Platforms, Data & Analytics, Cybersecurity, AI & Machine Learning, Enterprise Software)
 - [x] Link "All partners" button from homepage carousel to the new page
 - [x] Add route for /partners page
+
+## Phase 19: Fix Nested Anchor Tag Error
+- [x] Fix nested <a> tag error on homepage (Link wrapping Button)
+- [x] Test fix and verify no console errors
