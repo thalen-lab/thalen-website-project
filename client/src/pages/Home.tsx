@@ -177,17 +177,19 @@ export default function Home() {
                 <h1 className="text-5xl md:text-6xl font-bold mb-4">{slide.title}</h1>
                 <p className="text-xl md:text-2xl mb-8 opacity-90">{slide.subtitle}</p>
                 <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
                   <Link href="/contact">
-                    <Button size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
+                    <a>
                       Schedule Strategic Assessment
                       <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
+                    </a>
                   </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   <Link href="/insights">
-                    <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                      View ROI Methodology
-                    </Button>
+                    <a>View ROI Methodology</a>
                   </Link>
+                </Button>
                 </div>
               </div>
             </div>
@@ -246,12 +248,14 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <Link href={service.href}>
-                    <Button variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all">
-                      Explore Service
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+                  <Button asChild variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all">
+                    <Link href={service.href}>
+                      <a>
+                        Explore Service
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -277,12 +281,14 @@ export default function Home() {
                     <div className="text-sm font-semibold text-accent mb-2">{caseStudies[currentCaseStudy].category}</div>
                     <h3 className="text-3xl font-bold mb-4">{caseStudies[currentCaseStudy].title}</h3>
                     <p className="text-primary-foreground/90 mb-6">{caseStudies[currentCaseStudy].description}</p>
+                  <Button asChild className="bg-orange-gradient hover:opacity-90 w-fit">
                     <Link href={caseStudies[currentCaseStudy].href}>
-                      <Button className="bg-orange-gradient hover:opacity-90 w-fit">
+                      <a>
                         Read Case Study
                         <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      </a>
                     </Link>
+                  </Button>
                   </div>
                   <div className="bg-accent/10 p-12 flex items-center justify-center">
                     <div className="text-center">
@@ -323,12 +329,14 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/case-studies">
-              <Button variant="outline" size="lg">
-                View All Case Studies
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/case-studies">
+                <a>
+                  View All Case Studies
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -501,17 +509,19 @@ export default function Home() {
             Schedule a comprehensive automation assessment and discover how our proven methodology can deliver measurable ROI for your organization.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
-                Schedule Strategic Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/about">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Learn About Our Team
-              </Button>
-            </Link>
+            <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
+              <Link href="/contact">
+                <a>
+                  Schedule Strategic Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Link href="/about">
+                <a>Learn About Our Team</a>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
