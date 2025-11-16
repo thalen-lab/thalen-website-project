@@ -111,3 +111,9 @@
 ## Phase 16: Add Partners Section
 - [x] Add Partners section to homepage following Incentro's format
 - [x] Include technology partners across categories (Process Automation, Cloud Platforms, Data Analytics, Cybersecurity)
+
+## Phase 17: Redesign Partners Section to Match Incentro's Carousel Design
+- [x] Update Partners section with horizontal scrolling carousel layout
+- [x] Replace grid cards with rounded pill-shaped partner buttons
+- [x] Add carousel navigation arrows
+- [x] Organize partners by category cards with horizontal scroll

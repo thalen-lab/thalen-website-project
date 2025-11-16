@@ -357,109 +357,134 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Technology Partners</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              With these partners we deliver enterprise-grade solutions for government and mission-critical operations.
-            </p>
+          <div className="flex items-start justify-between mb-12">
+            <div className="max-w-xl">
+              <p className="text-sm text-muted-foreground mb-2">Partners</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                With these partners we deliver enterprise-grade solutions
+              </h2>
+              <Button variant="outline" size="lg" className="rounded-full">
+                All partners
+              </Button>
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={() => {
+                  const container = document.getElementById('partners-carousel');
+                  if (container) container.scrollBy({ left: -400, behavior: 'smooth' });
+                }}
+                className="p-3 rounded-full border border-border hover:bg-accent transition-colors"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => {
+                  const container = document.getElementById('partners-carousel');
+                  if (container) container.scrollBy({ left: 400, behavior: 'smooth' });
+                }}
+                className="p-3 rounded-full border border-border hover:bg-accent transition-colors"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+            </div>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            {/* Process Automation */}
-            <div className="mb-12">
-              <h3 className="text-xl font-bold mb-6 text-center">Process Automation</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">UiPath</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Automation Anywhere</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Blue Prism</span>
-                </div>
+          <div id="partners-carousel" className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4">
+            {/* Process Automation Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+              <h3 className="text-xl font-bold mb-6 text-accent">Process Automation</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  UiPath
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Automation Anywhere
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Blue Prism
+                </span>
               </div>
             </div>
 
-            {/* Cloud Platforms */}
-            <div className="mb-12">
-              <h3 className="text-xl font-bold mb-6 text-center">Cloud Platforms</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">AWS GovCloud</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Microsoft Azure Government</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Google Cloud</span>
-                </div>
+            {/* Cloud Platforms Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+              <h3 className="text-xl font-bold mb-6 text-accent">Cloud Platforms</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  AWS GovCloud
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Azure Government
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Google Cloud
+                </span>
               </div>
             </div>
 
-            {/* Data & Analytics */}
-            <div className="mb-12">
-              <h3 className="text-xl font-bold mb-6 text-center">Data & Analytics</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Snowflake</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Databricks</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Tableau</span>
-                </div>
+            {/* Data & Analytics Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+              <h3 className="text-xl font-bold mb-6 text-accent">Data & Analytics</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Snowflake
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Databricks
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Tableau
+                </span>
               </div>
             </div>
 
-            {/* Cybersecurity */}
-            <div className="mb-12">
-              <h3 className="text-xl font-bold mb-6 text-center">Cybersecurity</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Palo Alto Networks</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">CrowdStrike</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Splunk</span>
-                </div>
+            {/* Cybersecurity Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+              <h3 className="text-xl font-bold mb-6 text-accent">Cybersecurity</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Palo Alto Networks
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  CrowdStrike
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Splunk
+                </span>
               </div>
             </div>
 
-            {/* AI & Machine Learning */}
-            <div className="mb-12">
-              <h3 className="text-xl font-bold mb-6 text-center">AI & Machine Learning</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">OpenAI</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Anthropic</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">DataRobot</span>
-                </div>
+            {/* AI & Machine Learning Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+              <h3 className="text-xl font-bold mb-6 text-accent">AI & Machine Learning</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  OpenAI
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Anthropic
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  DataRobot
+                </span>
               </div>
             </div>
 
-            {/* Enterprise Software */}
-            <div className="mb-8">
-              <h3 className="text-xl font-bold mb-6 text-center">Enterprise Software</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">ServiceNow</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">Salesforce</span>
-                </div>
-                <div className="flex items-center justify-center p-6 bg-card border border-border rounded-lg hover:border-accent transition-colors">
-                  <span className="text-lg font-semibold">SAP</span>
-                </div>
+            {/* Enterprise Software Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+              <h3 className="text-xl font-bold mb-6 text-accent">Enterprise Software</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  ServiceNow
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  Salesforce
+                </span>
+                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                  SAP
+                </span>
               </div>
             </div>
           </div>
