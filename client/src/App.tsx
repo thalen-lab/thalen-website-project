@@ -30,6 +30,13 @@ import Financial from "./pages/industries/Financial";
 // Case Study Pages
 import FederalAutomation from "./pages/case-studies/FederalAutomation";
 import HealthcareAI from "./pages/case-studies/HealthcareAI";
+import DefenseCloud from "./pages/case-studies/DefenseCloud";
+import ManufacturingUptime from "./pages/case-studies/ManufacturingUptime";
+import EnergyGrid from "./pages/case-studies/EnergyGrid";
+import BankFraud from "./pages/case-studies/BankFraud";
+import IntelligenceSecurity from "./pages/case-studies/IntelligenceSecurity";
+import HospitalWaitTimes from "./pages/case-studies/HospitalWaitTimes";
+import AerospaceDigitalTwin from "./pages/case-studies/AerospaceDigitalTwin";
 
 // Blog Post Pages
 import ROIMethodology from "./pages/insights/ROIMethodology";
@@ -63,6 +70,13 @@ function Router() {
       {/* Case Study Detail Pages */}
       <Route path="/case-studies/federal-automation" component={FederalAutomation} />
       <Route path="/case-studies/healthcare-ai" component={HealthcareAI} />
+      <Route path="/case-studies/defense-cloud" component={DefenseCloud} />
+      <Route path="/case-studies/manufacturing-uptime" component={ManufacturingUptime} />
+      <Route path="/case-studies/energy-grid" component={EnergyGrid} />
+      <Route path="/case-studies/bank-fraud" component={BankFraud} />
+      <Route path="/case-studies/intelligence-security" component={IntelligenceSecurity} />
+      <Route path="/case-studies/hospital-wait-times" component={HospitalWaitTimes} />
+      <Route path="/case-studies/aerospace-digital-twin" component={AerospaceDigitalTwin} />
 
       {/* Blog Post Pages */}
       <Route path="/insights/roi-methodology" component={ROIMethodology} />

@@ -91,3 +91,12 @@
 - [ ] Multi-Cloud Strategy blog post (template provided)
 - [ ] Change Management blog post (template provided)
 - [ ] Real-Time Analytics blog post (template provided)
+
+## Phase 14: Complete All Remaining Case Study Pages
+- [x] Defense Cloud Migration case study page
+- [x] Manufacturing 99.2% Uptime case study page
+- [x] Energy Grid $500M case study page
+- [x] Bank Fraud Detection case study page
+- [x] Intelligence Security case study page
+- [x] Hospital Wait Times case study page
+- [x] Aerospace Digital Twin case study page
