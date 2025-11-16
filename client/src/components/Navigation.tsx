@@ -97,6 +97,12 @@ export default function Navigation() {
             <Link href="/case-studies" className="hover:text-accent transition-colors">
               Case Studies
             </Link>
+            <Link href="/resources" className="hover:text-accent transition-colors">
+              Resources
+            </Link>
+            <Link href="/events" className="hover:text-accent transition-colors">
+              Events
+            </Link>
             <Link href="/about" className="hover:text-accent transition-colors">
               About
             </Link>
@@ -182,6 +188,20 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Case Studies
+            </Link>
+            <Link 
+              href="/resources" 
+              className="block py-2 font-medium hover:text-accent"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Resources
+            </Link>
+            <Link 
+              href="/events" 
+              className="block py-2 font-medium hover:text-accent"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Events
             </Link>
             <Link 
               href="/about" 

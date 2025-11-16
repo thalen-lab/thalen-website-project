@@ -165,3 +165,30 @@
 - [x] Update hero CTA link from /insights to /methodology
 - [x] Add route for /methodology page
 - [x] Test calculator functionality
+
+## Phase 25: Create Resources Hub Page
+- [x] Create /resources page with hero section
+- [x] Add downloadable whitepapers section (Government Automation, Zero-Trust Security, AI Governance)
+- [x] Add compliance checklists section (FedRAMP, CMMC, HIPAA)
+- [x] Add ROI calculators and assessment tools
+- [x] Add industry reports and case study PDFs
+- [x] Implement email capture forms for gated content
+- [x] Add resource categories and filtering
+- [x] Update navigation to include Resources link
+
+## Phase 26: Enhance About Page with Leadership and Timeline
+- [x] Add leadership team section with executive bios and photos
+- [x] Create company history timeline (founding to present)
+- [x] Expand company culture section with employee stories
+- [x] Add office locations with photos
+- [x] Include awards and recognition section
+- [x] Add "Join Our Team" CTA linking to careers
+
+## Phase 27: Create Webinar/Events Section
+- [x] Create /events page with upcoming webinars
+- [x] Add past webinar recordings section
+- [x] Implement webinar registration form
+- [x] Add event calendar/schedule
+- [x] Create individual event detail pages
+- [ ] Add "Upcoming Events" widget to homepage
+- [x] Update navigation to include Events link
