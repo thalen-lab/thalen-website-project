@@ -365,9 +365,11 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 With these partners we deliver enterprise-grade solutions
               </h2>
-              <Button variant="outline" size="lg" className="rounded-full">
-                All partners
-              </Button>
+              <Link href="/partners">
+                <Button variant="outline" size="lg" className="rounded-full">
+                  All partners
+                </Button>
+              </Link>
             </div>
             <div className="flex gap-2">
               <button
