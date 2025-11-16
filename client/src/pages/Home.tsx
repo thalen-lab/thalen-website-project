@@ -226,9 +226,10 @@ export default function Home() {
       <section className="py-20 bg-navy-gradient diagonal-top text-primary-foreground">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive Automation Intelligence Services</h2>
+            <p className="text-sm font-semibold text-accent mb-2">Services</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Driving Mission Success Through Three Core Outcomes</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Proven methodologies and expert implementation designed to address your most critical business transformation needs.
+              Operational Efficiency • Mission Continuity • Compliance Assurance
             </p>
           </div>
 
@@ -352,6 +353,141 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology Section - RAPID Framework */}
+      <section className="py-20 bg-muted">
+        <div className="container">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold text-accent mb-2">Our Methodology</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne RAPID Framework</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Results-Accelerated Process Intelligence & Delivery: Our proven 4-phase methodology delivering measurable ROI in 30 days
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Phase 1 */}
+            <Card className="border-2 hover:border-accent transition-colors">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                  1
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Research & Assessment</h3>
+                <p className="text-muted-foreground mb-4">
+                  Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Current state analysis</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Opportunity identification</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>ROI projection modeling</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Phase 2 */}
+            <Card className="border-2 hover:border-accent transition-colors">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                  2
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Architecture & Planning</h3>
+                <p className="text-muted-foreground mb-4">
+                  Solution architecture design, technology stack selection, and detailed implementation roadmap.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Architecture optimization</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Technology evaluation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Phased roadmap creation</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Phase 3 */}
+            <Card className="border-2 hover:border-accent transition-colors">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                  3
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Implementation & Delivery</h3>
+                <p className="text-muted-foreground mb-4">
+                  AI-assisted implementation with RPA deployment, ML integration, and zero-downtime migration.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Agile development sprints</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Continuous testing & QA</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Zero-downtime deployment</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Phase 4 */}
+            <Card className="border-2 hover:border-accent transition-colors">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                  4
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Performance & Optimization</h3>
+                <p className="text-muted-foreground mb-4">
+                  Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Real-time dashboards</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>ROI measurement & reporting</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Predictive maintenance</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg text-muted-foreground mb-6">
+              <strong className="text-foreground">30 days to first results</strong> • <strong className="text-foreground">100% success rate</strong> • <strong className="text-foreground">Zero operational disruption</strong>
+            </p>
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:opacity-90">
+              <Link href="/contact">
+                Learn More About RAPID
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

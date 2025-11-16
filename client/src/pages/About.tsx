@@ -8,23 +8,23 @@ export default function About() {
   const values = [
     {
       icon: Target,
-      title: 'Mission-Focused',
-      description: 'We prioritize outcomes that directly support our clients\' critical missions and strategic objectives.'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We maintain the highest standards of technical expertise and professional service delivery.'
-    },
-    {
-      icon: Users,
-      title: 'Partnership',
-      description: 'We build long-term relationships based on trust, transparency, and mutual success.'
+      title: 'Commitment',
+      description: 'Unwavering dedication to mission success. We treat every project as mission-critical and deliver results that directly support our clients\' strategic objectives with zero compromise on quality or security.'
     },
     {
       icon: Globe,
-      title: 'Innovation',
-      description: 'We continuously evolve our methodologies to deliver cutting-edge solutions that drive transformation.'
+      title: 'Balance',
+      description: 'Harmonizing innovation with stability. We balance cutting-edge AI capabilities with proven methodologies, ensuring transformative results without operational disruption or unnecessary risk.'
+    },
+    {
+      icon: Award,
+      title: 'Accountability',
+      description: 'Measurable results, transparent reporting. We hold ourselves accountable to ROI projections, delivery timelines, and security standards — with real-time dashboards tracking every metric that matters.'
+    },
+    {
+      icon: Users,
+      title: 'Mastery',
+      description: 'Deep expertise across the full automation stack. Our team maintains elite certifications (FedRAMP, CMMC, AWS, Azure) and 15+ years of specialized experience in government and enterprise transformation.'
     }
   ];
 
