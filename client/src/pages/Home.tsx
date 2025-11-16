@@ -179,15 +179,13 @@ export default function Home() {
                 <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
                   <Link href="/contact">
-                    <a>
-                      Schedule Strategic Assessment
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
+                    Schedule Strategic Assessment
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   <Link href="/insights">
-                    <a>View ROI Methodology</a>
+                    View ROI Methodology
                   </Link>
                 </Button>
                 </div>
@@ -250,10 +248,8 @@ export default function Home() {
                   </div>
                   <Button asChild variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all">
                     <Link href={service.href}>
-                      <a>
-                        Explore Service
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
+                      Explore Service
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -283,10 +279,8 @@ export default function Home() {
                     <p className="text-primary-foreground/90 mb-6">{caseStudies[currentCaseStudy].description}</p>
                   <Button asChild className="bg-orange-gradient hover:opacity-90 w-fit">
                     <Link href={caseStudies[currentCaseStudy].href}>
-                      <a>
-                        Read Case Study
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
+                      Read Case Study
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                   </div>
@@ -331,10 +325,8 @@ export default function Home() {
           <div className="text-center mt-12">
             <Button asChild variant="outline" size="lg">
               <Link href="/case-studies">
-                <a>
-                  View All Case Studies
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                View All Case Studies
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
@@ -511,15 +503,13 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
               <Link href="/contact">
-                <a>
-                  Schedule Strategic Assessment
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                Schedule Strategic Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <Link href="/about">
-                <a>Learn About Our Team</a>
+                Learn About Our Team
               </Link>
             </Button>
           </div>
