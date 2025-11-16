@@ -192,3 +192,6 @@
 - [x] Create individual event detail pages
 - [ ] Add "Upcoming Events" widget to homepage
 - [x] Update navigation to include Events link
+
+## Phase 28: Resources Page Updates
+- [x] Remove "No Credit Card Required" text from Resources page hero section

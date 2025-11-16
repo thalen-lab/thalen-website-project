@@ -251,10 +251,7 @@ export default function Resources() {
                 <CheckCircle2 className="h-5 w-5 text-accent" />
                 <span>Free Downloads</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-accent" />
-                <span>No Credit Card Required</span>
-              </div>
+
             </div>
           </div>
         </div>
