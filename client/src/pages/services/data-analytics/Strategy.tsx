@@ -293,6 +293,46 @@ export default function DataStrategy() {
         </div>
       </section>
 
+      {/* Related Services Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Maximize your data strategy impact with these related NexDyne offerings
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Digital Transformation Enablement</h3>
+                <p className="text-muted-foreground mb-4">
+                  Turn your data strategy into organizational change. Our change management experts help you build data literacy, establish new workflows, and drive adoption across your agency.
+                </p>
+                <Link href="/services/digital-transformation">
+                  <Button variant="outline" className="w-full">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Cybersecurity & Compliance</h3>
+                <p className="text-muted-foreground mb-4">
+                  Protect your data assets with FedRAMP-authorized security controls. We implement data classification, access governance, and compliance frameworks aligned to your strategy.
+                </p>
+                <Link href="/services/cybersecurity">
+                  <Button variant="outline" className="w-full">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">

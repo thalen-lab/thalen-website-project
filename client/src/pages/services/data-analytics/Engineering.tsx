@@ -373,6 +373,46 @@ export default function Engineering() {
         </div>
       </section>
 
+      {/* Related Services Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Build a complete data infrastructure with these related NexDyne offerings
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Cloud Infrastructure & Modernization</h3>
+                <p className="text-muted-foreground mb-4">
+                  Host your data pipelines on FedRAMP-authorized cloud platforms. We architect scalable, secure cloud infrastructure optimized for data workloads with auto-scaling and disaster recovery.
+                </p>
+                <Link href="/services/cloud">
+                  <Button variant="outline" className="w-full">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Application Development & Integration</h3>
+                <p className="text-muted-foreground mb-4">
+                  Connect your data pipelines to mission applications. We build APIs, microservices, and integration layers that make your engineered data accessible to downstream systems.
+                </p>
+                <Link href="/services/app-development">
+                  <Button variant="outline" className="w-full">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">

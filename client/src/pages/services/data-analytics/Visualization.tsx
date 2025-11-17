@@ -302,6 +302,46 @@ export default function Visualization() {
         </div>
       </section>
 
+      {/* Related Services Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Enhance your analytics capabilities with these related NexDyne offerings
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Intelligent Automation & Process Optimization</h3>
+                <p className="text-muted-foreground mb-4">
+                  Turn your analytics insights into automated action. Our RPA and process orchestration solutions trigger workflows based on real-time data thresholds and alerts.
+                </p>
+                <Link href="/services/automation">
+                  <Button variant="outline" className="w-full">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Custom Software Solutions</h3>
+                <p className="text-muted-foreground mb-4">
+                  Build custom mission applications powered by your analytics platform. We develop bespoke dashboards, mobile apps, and citizen portals that leverage your data infrastructure.
+                </p>
+                <Link href="/services/custom-software">
+                  <Button variant="outline" className="w-full">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">

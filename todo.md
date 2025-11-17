@@ -223,3 +223,9 @@
 
 ## Phase 32: Update Homepage Service Card Links
 - [x] Update Data Analytics & Intelligence service card link from /services/analytics to /services/data-analytics
+
+## Phase 33: Add Related Services Cross-Links to Data Analytics Subpages
+- [x] Add Related Services section to Data Strategy subpage (suggest Digital Transformation, Cybersecurity)
+- [x] Add Related Services section to Visualization subpage (suggest Intelligent Automation, Custom Software)
+- [x] Add Related Services section to ML/AI subpage (suggest Intelligent Automation, Application Development)
+- [x] Add Related Services section to Data Engineering subpage (suggest Cloud Infrastructure, Application Development)
