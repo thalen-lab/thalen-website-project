@@ -220,3 +220,6 @@
 - [x] Add routes for all data analytics pages in App.tsx
 - [x] Update Navigation component Services dropdown to include Data Analytics & Intelligence link
 - [x] Test all data analytics pages and subpage navigation
+
+## Phase 32: Update Homepage Service Card Links
+- [x] Update Data Analytics & Intelligence service card link from /services/analytics to /services/data-analytics

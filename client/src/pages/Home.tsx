@@ -52,7 +52,7 @@ export default function Home() {
       icon: BarChart3,
       title: 'Data Analytics & Intelligence',
       description: 'Real-time analytics platforms with ML/AI models for intelligent automation and optimized performance at operational scale.',
-      href: '/services/analytics',
+      href: '/services/data-analytics',
       stats: ['Real-time Insights', 'Predictive Analytics']
     },
     {
