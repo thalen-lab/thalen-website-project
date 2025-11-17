@@ -2,7 +2,7 @@ import { router, publicProcedure } from "./_core/trpc";
 import { z } from "zod";
 import { getDb } from "./db";
 import { blogPosts, caseStudies, events } from "../drizzle/schema";
-import { eq, desc, like, or } from "drizzle-orm";
+import { eq, desc, like, or, inArray } from "drizzle-orm";
 import { TRPCError } from "@trpc/server";
 
 // Middleware to check if user is admin
@@ -133,6 +133,37 @@ export const adminRouter = router({
         
         return { success: true };
       }),
+
+    bulkUpdateStatus: adminProcedure
+      .input(z.object({
+        ids: z.array(z.number()),
+        status: z.enum(["draft", "published", "archived"]),
+      }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        await db
+          .update(blogPosts)
+          .set({
+            status: input.status,
+            publishedAt: input.status === "published" ? new Date() : null,
+          })
+          .where(inArray(blogPosts.id, input.ids));
+        
+        return { success: true, count: input.ids.length };
+      }),
+
+    bulkDelete: adminProcedure
+      .input(z.object({ ids: z.array(z.number()) }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        await db.delete(blogPosts).where(inArray(blogPosts.id, input.ids));
+        
+        return { success: true, count: input.ids.length };
+      }),
   }),
 
   // Case Studies Management
@@ -259,6 +290,34 @@ export const adminRouter = router({
         
         return { success: true };
       }),
+
+    bulkUpdateStatus: adminProcedure
+      .input(z.object({
+        ids: z.array(z.number()),
+        status: z.enum(["draft", "published", "archived"]),
+      }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        await db
+          .update(caseStudies)
+          .set({ status: input.status })
+          .where(inArray(caseStudies.id, input.ids));
+        
+        return { success: true, count: input.ids.length };
+      }),
+
+    bulkDelete: adminProcedure
+      .input(z.object({ ids: z.array(z.number()) }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        await db.delete(caseStudies).where(inArray(caseStudies.id, input.ids));
+        
+        return { success: true, count: input.ids.length };
+      }),
   }),
 
   // Events Management
@@ -374,6 +433,34 @@ export const adminRouter = router({
         await db.delete(events).where(eq(events.id, input.id));
         
         return { success: true };
+      }),
+
+    bulkUpdateStatus: adminProcedure
+      .input(z.object({
+        ids: z.array(z.number()),
+        status: z.enum(["upcoming", "ongoing", "completed", "cancelled"]),
+      }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        await db
+          .update(events)
+          .set({ status: input.status })
+          .where(inArray(events.id, input.ids));
+        
+        return { success: true, count: input.ids.length };
+      }),
+
+    bulkDelete: adminProcedure
+      .input(z.object({ ids: z.array(z.number()) }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        await db.delete(events).where(inArray(events.id, input.ids));
+        
+        return { success: true, count: input.ids.length };
       }),
   }),
 

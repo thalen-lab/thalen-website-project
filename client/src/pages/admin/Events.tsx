@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import { trpc } from '@/lib/trpc';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
 import {
   Select,
   SelectContent,
@@ -37,6 +38,9 @@ export default function AdminEvents() {
   const [statusFilter, setStatusFilter] = useState<'upcoming' | 'ongoing' | 'completed' | 'cancelled' | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [deleteId, setDeleteId] = useState<number | null>(null);
+  const [selectedIds, setSelectedIds] = useState<number[]>([]);
+  const [bulkAction, setBulkAction] = useState<'upcoming' | 'ongoing' | 'completed' | 'cancelled' | 'delete' | ''>('');
+  const [showBulkDeleteDialog, setShowBulkDeleteDialog] = useState(false);
 
   const { data: events = [], isLoading, refetch } = trpc.admin.events.list.useQuery({
     status: statusFilter === 'all' ? undefined : statusFilter,
@@ -54,10 +58,72 @@ export default function AdminEvents() {
     },
   });
 
+  const bulkUpdateStatusMutation = trpc.admin.events.bulkUpdateStatus.useMutation({
+    onSuccess: (data) => {
+      toast.success(`${data.count} event(s) updated successfully`);
+      refetch();
+      setSelectedIds([]);
+      setBulkAction('');
+    },
+    onError: (error) => {
+      toast.error(`Failed to update events: ${error.message}`);
+    },
+  });
+
+  const bulkDeleteMutation = trpc.admin.events.bulkDelete.useMutation({
+    onSuccess: (data) => {
+      toast.success(`${data.count} event(s) deleted successfully`);
+      refetch();
+      setSelectedIds([]);
+      setShowBulkDeleteDialog(false);
+    },
+    onError: (error) => {
+      toast.error(`Failed to delete events: ${error.message}`);
+    },
+  });
+
   const handleDelete = () => {
     if (deleteId) {
       deleteMutation.mutate({ id: deleteId });
     }
+  };
+
+  const handleSelectAll = () => {
+    if (selectedIds.length === events.length) {
+      setSelectedIds([]);
+    } else {
+      setSelectedIds(events.map(event => event.id));
+    }
+  };
+
+  const handleSelectOne = (id: number) => {
+    if (selectedIds.includes(id)) {
+      setSelectedIds(selectedIds.filter(selectedId => selectedId !== id));
+    } else {
+      setSelectedIds([...selectedIds, id]);
+    }
+  };
+
+  const handleBulkAction = () => {
+    if (selectedIds.length === 0) {
+      toast.error('Please select at least one event');
+      return;
+    }
+
+    if (!bulkAction) {
+      toast.error('Please select an action');
+      return;
+    }
+
+    if (bulkAction === 'delete') {
+      setShowBulkDeleteDialog(true);
+    } else {
+      bulkUpdateStatusMutation.mutate({ ids: selectedIds, status: bulkAction });
+    }
+  };
+
+  const confirmBulkDelete = () => {
+    bulkDeleteMutation.mutate({ ids: selectedIds });
   };
 
   const getStatusColor = (status: string) => {
@@ -93,29 +159,58 @@ export default function AdminEvents() {
         </Link>
       </div>
 
-      {/* Filters */}
-      <div className="flex gap-4">
-        <div className="flex-1 relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="Search events..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10"
-          />
+      {/* Filters and Bulk Actions */}
+      <div className="flex flex-col gap-4">
+        <div className="flex gap-4">
+          <div className="flex-1 relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="Search events..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10"
+            />
+          </div>
+          <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Filter by status" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Status</SelectItem>
+              <SelectItem value="upcoming">Upcoming</SelectItem>
+              <SelectItem value="ongoing">Ongoing</SelectItem>
+              <SelectItem value="completed">Completed</SelectItem>
+              <SelectItem value="cancelled">Cancelled</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
-        <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Filter by status" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Status</SelectItem>
-            <SelectItem value="upcoming">Upcoming</SelectItem>
-            <SelectItem value="ongoing">Ongoing</SelectItem>
-            <SelectItem value="completed">Completed</SelectItem>
-            <SelectItem value="cancelled">Cancelled</SelectItem>
-          </SelectContent>
-        </Select>
+
+        {/* Bulk Actions Toolbar */}
+        {selectedIds.length > 0 && (
+          <div className="flex items-center gap-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <span className="text-sm font-medium text-blue-900">
+              {selectedIds.length} selected
+            </span>
+            <Select value={bulkAction} onValueChange={(value: any) => setBulkAction(value)}>
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Bulk action..." />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="upcoming">Mark Upcoming</SelectItem>
+                <SelectItem value="ongoing">Mark Ongoing</SelectItem>
+                <SelectItem value="completed">Mark Completed</SelectItem>
+                <SelectItem value="cancelled">Mark Cancelled</SelectItem>
+                <SelectItem value="delete">Delete</SelectItem>
+              </SelectContent>
+            </Select>
+            <Button onClick={handleBulkAction} disabled={!bulkAction}>
+              Apply
+            </Button>
+            <Button variant="ghost" onClick={() => setSelectedIds([])}>
+              Clear Selection
+            </Button>
+          </div>
+        )}
       </div>
 
       {/* Table */}
@@ -123,6 +218,12 @@ export default function AdminEvents() {
         <Table>
           <TableHeader>
             <TableRow>
+              <TableHead className="w-[50px]">
+                <Checkbox
+                  checked={selectedIds.length === events.length && events.length > 0}
+                  onCheckedChange={handleSelectAll}
+                />
+              </TableHead>
               <TableHead>Title</TableHead>
               <TableHead>Type</TableHead>
               <TableHead>Start Date</TableHead>
@@ -135,19 +236,25 @@ export default function AdminEvents() {
           <TableBody>
             {isLoading ? (
               <TableRow>
-                <TableCell colSpan={7} className="text-center py-8 text-muted-foreground">
+                <TableCell colSpan={8} className="text-center py-8 text-muted-foreground">
                   Loading events...
                 </TableCell>
               </TableRow>
             ) : events.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={7} className="text-center py-8 text-muted-foreground">
+                <TableCell colSpan={8} className="text-center py-8 text-muted-foreground">
                   No events found. Create your first event to get started.
                 </TableCell>
               </TableRow>
             ) : (
               events.map((event) => (
                 <TableRow key={event.id}>
+                  <TableCell>
+                    <Checkbox
+                      checked={selectedIds.includes(event.id)}
+                      onCheckedChange={() => handleSelectOne(event.id)}
+                    />
+                  </TableCell>
                   <TableCell className="font-medium max-w-xs truncate">
                     {event.title}
                   </TableCell>
@@ -209,6 +316,28 @@ export default function AdminEvents() {
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
             >
               Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      {/* Bulk Delete Confirmation Dialog */}
+      <AlertDialog open={showBulkDeleteDialog} onOpenChange={setShowBulkDeleteDialog}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete {selectedIds.length} event(s)?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete the selected events
+              and remove them from the database.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={confirmBulkDelete}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              Delete {selectedIds.length} Event(s)
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

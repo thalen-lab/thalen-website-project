@@ -417,3 +417,13 @@
 - [x] Create /admin/events/[id]/edit page for editing existing events
 - [x] Add events link to admin sidebar navigation
 - [x] Test event CRUD operations (create, read, update, delete)
+
+## Phase 54: Bulk Operations Feature
+- [x] Add bulk update/delete API endpoints to adminRouters.ts for blog posts
+- [x] Add bulk update/delete API endpoints to adminRouters.ts for case studies
+- [x] Add bulk update/delete API endpoints to adminRouters.ts for events
+- [x] Update BlogPosts.tsx with checkbox selection and bulk action toolbar
+- [x] Update CaseStudies.tsx with checkbox selection and bulk action toolbar
+- [x] Update Events.tsx with checkbox selection and bulk action toolbar
+- [x] Test bulk publish, archive, and delete operations
+- [x] Add confirmation dialogs for bulk delete operations
