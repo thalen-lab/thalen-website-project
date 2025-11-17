@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Clock, User, Search } from 'lucide-react';
+import { ArrowRight, Clock, User, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Insights() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
 
   const insights = [
     {
@@ -86,6 +88,53 @@ export default function Insights() {
     
     return matchesCategory && matchesSearch;
   });
+
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredInsights.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedInsights = filteredInsights.slice(startIndex, endIndex);
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedCategory]);
+
+  // Generate page numbers to display
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxPagesToShow = 5;
+    
+    if (totalPages <= maxPagesToShow) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      if (currentPage <= 3) {
+        for (let i = 1; i <= 4; i++) {
+          pages.push(i);
+        }
+        pages.push('...');
+        pages.push(totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        pages.push(1);
+        pages.push('...');
+        for (let i = totalPages - 3; i <= totalPages; i++) {
+          pages.push(i);
+        }
+      } else {
+        pages.push(1);
+        pages.push('...');
+        pages.push(currentPage - 1);
+        pages.push(currentPage);
+        pages.push(currentPage + 1);
+        pages.push('...');
+        pages.push(totalPages);
+      }
+    }
+    
+    return pages;
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -179,52 +228,113 @@ export default function Insights() {
           {/* Results Count */}
           <div className="text-center mb-8">
             <p className="text-muted-foreground">
-              Showing {filteredInsights.length} {filteredInsights.length === 1 ? 'article' : 'articles'}
-              {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-              {searchQuery && ` matching "${searchQuery}"`}
+              {filteredInsights.length > 0 ? (
+                <>
+                  Showing {startIndex + 1}-{Math.min(endIndex, filteredInsights.length)} of {filteredInsights.length} {filteredInsights.length === 1 ? 'article' : 'articles'}
+                  {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+                  {searchQuery && ` matching "${searchQuery}"`}
+                </>
+              ) : (
+                <>
+                  Showing 0 articles
+                  {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+                  {searchQuery && ` matching "${searchQuery}"`}
+                </>
+              )}
             </p>
           </div>
 
           {/* Insights Grid */}
-          {filteredInsights.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredInsights.map((insight, index) => (
-                <Link key={index} href={insight.href}>
-                  <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer">
-                    <CardContent className="p-8 flex flex-col flex-1">
-                      <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
-                      <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
-                        {insight.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
+          {paginatedInsights.length > 0 ? (
+            <>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                {paginatedInsights.map((insight, index) => (
+                  <Link key={index} href={insight.href}>
+                    <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer">
+                      <CardContent className="p-8 flex flex-col flex-1">
+                        <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
+                        <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                          {insight.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
 
-                      <div className="flex items-center text-sm text-muted-foreground mb-4">
-                        <User className="h-4 w-4 mr-2" />
-                        <span className="mr-4">{insight.author}</span>
-                        <Clock className="h-4 w-4 mr-2" />
-                        <span>{insight.readTime}</span>
-                      </div>
+                        <div className="flex items-center text-sm text-muted-foreground mb-4">
+                          <User className="h-4 w-4 mr-2" />
+                          <span className="mr-4">{insight.author}</span>
+                          <Clock className="h-4 w-4 mr-2" />
+                          <span>{insight.readTime}</span>
+                        </div>
 
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {insight.tags.map((tag, idx) => (
-                          <span key={idx} className="text-xs bg-background px-3 py-1 rounded-full border border-border">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {insight.tags.map((tag, idx) => (
+                            <span key={idx} className="text-xs bg-background px-3 py-1 rounded-full border border-border">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
 
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-muted-foreground">{insight.date}</span>
-                        <Button variant="ghost" size="sm" className="group-hover:text-accent">
-                          Read More
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-muted-foreground">{insight.date}</span>
+                          <Button variant="ghost" size="sm" className="group-hover:text-accent">
+                            Read More
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-center gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                    disabled={currentPage === 1}
+                    className="disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <ChevronLeft className="h-4 w-4 mr-1" />
+                    Previous
+                  </Button>
+
+                  <div className="flex gap-1">
+                    {getPageNumbers().map((page, index) => (
+                      page === '...' ? (
+                        <span key={`ellipsis-${index}`} className="px-3 py-2 text-muted-foreground">
+                          ...
+                        </span>
+                      ) : (
+                        <button
+                          key={page}
+                          onClick={() => setCurrentPage(page as number)}
+                          className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                            currentPage === page
+                              ? 'bg-accent text-accent-foreground shadow-md'
+                              : 'bg-background border border-border hover:border-accent hover:text-accent'
+                          }`}
+                        >
+                          {page}
+                        </button>
+                      )
+                    ))}
+                  </div>
+
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                    disabled={currentPage === totalPages}
+                    className="disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Next
+                    <ChevronRight className="h-4 w-4 ml-1" />
+                  </Button>
+                </div>
+              )}
+            </>
           ) : (
             <div className="text-center py-16">
               <div className="max-w-md mx-auto">
