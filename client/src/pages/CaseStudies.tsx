@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,6 +7,9 @@ import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 
 export default function CaseStudies() {
+  const [selectedIndustry, setSelectedIndustry] = useState('All');
+  const [selectedService, setSelectedService] = useState('All');
+
   const caseStudies = [
     {
       category: 'Federal Government',
@@ -93,7 +97,7 @@ export default function CaseStudies() {
         { value: '2M+', label: 'Patients Served' }
       ],
       tags: ['Automation', 'Healthcare', 'Operations'],
-      href: '/case-studies/hospital-flow'
+      href: '/case-studies/hospital-wait-times'
     },
     {
       category: 'Manufacturing',
@@ -107,6 +111,18 @@ export default function CaseStudies() {
       href: '/case-studies/aerospace-digital-twin'
     }
   ];
+
+  const industries = ['All', 'Federal Government', 'Healthcare', 'Manufacturing', 'Financial Services', 'Defense', 'Energy'];
+  const services = ['All', 'Automation', 'Analytics', 'Cloud', 'Cybersecurity', 'AI', 'Security'];
+
+  // Filter case studies based on selected industry and service
+  const filteredCaseStudies = caseStudies.filter(study => {
+    const matchesIndustry = selectedIndustry === 'All' || study.category === selectedIndustry;
+    const matchesService = selectedService === 'All' || study.tags.some(tag => 
+      tag.toLowerCase() === selectedService.toLowerCase()
+    );
+    return matchesIndustry && matchesService;
+  });
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -145,44 +161,117 @@ export default function CaseStudies() {
         </div>
       </section>
 
+      {/* Filters */}
+      <section className="py-8 bg-background border-b">
+        <div className="container">
+          {/* Industry Filters */}
+          <div className="mb-6">
+            <h3 className="text-sm font-semibold text-muted-foreground mb-3">Filter by Industry</h3>
+            <div className="flex flex-wrap gap-2">
+              {industries.map(industry => (
+                <Button
+                  key={industry}
+                  variant={selectedIndustry === industry ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setSelectedIndustry(industry)}
+                  className={selectedIndustry === industry ? 'bg-orange-gradient' : ''}
+                >
+                  {industry}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          {/* Service Filters */}
+          <div className="mb-4">
+            <h3 className="text-sm font-semibold text-muted-foreground mb-3">Filter by Service</h3>
+            <div className="flex flex-wrap gap-2">
+              {services.map(service => (
+                <Button
+                  key={service}
+                  variant={selectedService === service ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setSelectedService(service)}
+                  className={selectedService === service ? 'bg-orange-gradient' : ''}
+                >
+                  {service}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          {/* Results Count */}
+          <div className="text-sm text-muted-foreground">
+            {filteredCaseStudies.length === 0 ? (
+              'No case studies found'
+            ) : (
+              <>
+                Showing {filteredCaseStudies.length} case {filteredCaseStudies.length === 1 ? 'study' : 'studies'}
+                {selectedIndustry !== 'All' && ` in ${selectedIndustry}`}
+                {selectedService !== 'All' && ` for ${selectedService}`}
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies Grid */}
       <section className="py-20">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all flex flex-col">
-                <CardContent className="p-8 flex flex-col flex-1">
-                  <div className="text-sm font-semibold text-accent mb-3">{study.category}</div>
-                  <h3 className="text-xl font-bold mb-3">{study.title}</h3>
-                  <p className="text-muted-foreground mb-6 flex-1">{study.description}</p>
-                  
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    {study.metrics.map((metric, idx) => (
-                      <div key={idx} className="bg-accent/10 rounded-lg p-4 text-center">
-                        <div className="text-2xl font-bold text-accent mb-1">{metric.value}</div>
-                        <div className="text-xs text-muted-foreground">{metric.label}</div>
-                      </div>
-                    ))}
-                  </div>
+          {filteredCaseStudies.length === 0 ? (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold mb-2">No Case Studies Found</h3>
+              <p className="text-muted-foreground mb-6">
+                Try adjusting your filters to see more results.
+              </p>
+              <Button
+                onClick={() => {
+                  setSelectedIndustry('All');
+                  setSelectedService('All');
+                }}
+                variant="outline"
+              >
+                Clear All Filters
+              </Button>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredCaseStudies.map((study, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all flex flex-col">
+                  <CardContent className="p-8 flex flex-col flex-1">
+                    <div className="text-sm font-semibold text-accent mb-3">{study.category}</div>
+                    <h3 className="text-xl font-bold mb-3">{study.title}</h3>
+                    <p className="text-muted-foreground mb-6 flex-1">{study.description}</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      {study.metrics.map((metric, idx) => (
+                        <div key={idx} className="bg-accent/10 rounded-lg p-4 text-center">
+                          <div className="text-2xl font-bold text-accent mb-1">{metric.value}</div>
+                          <div className="text-xs text-muted-foreground">{metric.label}</div>
+                        </div>
+                      ))}
+                    </div>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {study.tags.map((tag, idx) => (
-                      <span key={idx} className="text-xs bg-secondary px-3 py-1 rounded-full">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {study.tags.map((tag, idx) => (
+                        <span key={idx} className="text-xs bg-secondary px-3 py-1 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
 
-                  <Link href={study.href}>
-                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all">
-                      Read Case Study
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                    <Link href={study.href}>
+                      <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all">
+                        Read Case Study
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
