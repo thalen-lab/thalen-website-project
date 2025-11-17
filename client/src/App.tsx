@@ -48,6 +48,9 @@ import EnergyGridCase from "./pages/case-studies/EnergyGrid";
 import BankFraudCase from "./pages/case-studies/BankFraud";
 import IntelligenceSecurityCase from "./pages/case-studies/IntelligenceSecurity";
 import HospitalWaitTimesCase from "./pages/case-studies/HospitalWaitTimes";
+import VAPredictiveAnalyticsCase from "./pages/case-studies/VAPredictiveAnalytics";
+import DODDataPipelinesCase from "./pages/case-studies/DODDataPipelines";
+import HHSPublicHealthCase from "./pages/case-studies/HHSPublicHealth";
 import AerospaceDigitalTwinCase from "./pages/case-studies/AerospaceDigitalTwin";
 
 // Insights Pages
@@ -103,6 +106,9 @@ function Router() {
       <Route path={"/case-studies/intelligence-security"} component={IntelligenceSecurityCase} />
       <Route path={"/case-studies/hospital-wait-times"} component={HospitalWaitTimesCase} />
       <Route path={"/case-studies/aerospace-digital-twin"} component={AerospaceDigitalTwinCase} />
+      <Route path={"/case-studies/va-predictive-analytics"} component={VAPredictiveAnalyticsCase} />
+      <Route path={"/case-studies/dod-data-pipelines"} component={DODDataPipelinesCase} />
+      <Route path={"/case-studies/hhs-public-health"} component={HHSPublicHealthCase} />
       
       {/* Insights Routes */}
       <Route path={"/insights/roi-methodology"} component={ROIMethodologyInsight} />

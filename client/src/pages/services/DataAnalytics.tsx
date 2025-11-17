@@ -218,6 +218,94 @@ export default function DataAnalytics() {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Proven Results for Federal Agencies</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              See how NexDyne's data analytics solutions deliver measurable outcomes for government missions
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="text-sm font-semibold text-accent mb-3">PREDICTIVE ANALYTICS</div>
+                <h3 className="text-xl font-bold mb-3">VA Reduces Claims Processing Time 60%</h3>
+                <p className="text-muted-foreground mb-4">
+                  Machine learning models prioritize disability claims, reduce backlog, and deliver faster decisions to veterans.
+                </p>
+                <div className="flex gap-4 mb-4 text-sm">
+                  <div>
+                    <div className="font-bold text-2xl">60%</div>
+                    <div className="text-muted-foreground">Faster Processing</div>
+                  </div>
+                  <div>
+                    <div className="font-bold text-2xl">$8.2M</div>
+                    <div className="text-muted-foreground">Annual Savings</div>
+                  </div>
+                </div>
+                <Link href="/case-studies/va-predictive-analytics">
+                  <Button variant="outline" className="w-full">
+                    Read Case Study <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="text-sm font-semibold text-accent mb-3">DATA ENGINEERING</div>
+                <h3 className="text-xl font-bold mb-3">DOD Saves $12M with Automated Pipelines</h3>
+                <p className="text-muted-foreground mb-4">
+                  Automated data integration eliminates manual work and delivers real-time supply chain visibility across 47 systems.
+                </p>
+                <div className="flex gap-4 mb-4 text-sm">
+                  <div>
+                    <div className="font-bold text-2xl">95%</div>
+                    <div className="text-muted-foreground">Less Manual Work</div>
+                  </div>
+                  <div>
+                    <div className="font-bold text-2xl">15min</div>
+                    <div className="text-muted-foreground">Data Refresh</div>
+                  </div>
+                </div>
+                <Link href="/case-studies/dod-data-pipelines">
+                  <Button variant="outline" className="w-full">
+                    Read Case Study <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="text-sm font-semibold text-accent mb-3">REAL-TIME ANALYTICS</div>
+                <h3 className="text-xl font-bold mb-3">HHS Achieves Real-Time Public Health Surveillance</h3>
+                <p className="text-muted-foreground mb-4">
+                  Streaming analytics platform detects disease outbreaks 72 hours faster and coordinates response across 3,000 jurisdictions.
+                </p>
+                <div className="flex gap-4 mb-4 text-sm">
+                  <div>
+                    <div className="font-bold text-2xl">72hrs</div>
+                    <div className="text-muted-foreground">Faster Detection</div>
+                  </div>
+                  <div>
+                    <div className="font-bold text-2xl">89%</div>
+                    <div className="text-muted-foreground">Fewer False Alerts</div>
+                  </div>
+                </div>
+                <Link href="/case-studies/hhs-public-health">
+                  <Button variant="outline" className="w-full">
+                    Read Case Study <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">

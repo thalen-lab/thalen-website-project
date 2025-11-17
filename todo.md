@@ -229,3 +229,10 @@
 - [x] Add Related Services section to Visualization subpage (suggest Intelligent Automation, Custom Software)
 - [x] Add Related Services section to ML/AI subpage (suggest Intelligent Automation, Application Development)
 - [x] Add Related Services section to Data Engineering subpage (suggest Cloud Infrastructure, Application Development)
+
+## Phase 34: Create Data Analytics Case Studies
+- [x] Create VA case study: "VA Reduces Claims Processing Time 60% with Predictive Analytics"
+- [x] Create DOD case study: "DOD Saves $12M Annually with Automated Data Pipelines"
+- [x] Create HHS case study: "HHS Achieves Real-Time Public Health Surveillance with Analytics Platform"
+- [x] Add case study showcase sections to Data Analytics service pages
+- [x] Add routes for all case study pages in App.tsx
