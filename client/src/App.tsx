@@ -38,6 +38,14 @@ import MultiCloud from "./pages/services/MultiCloud";
 import CloudSecurity from "./pages/services/CloudSecurity";
 import InfrastructureAsCode from "./pages/services/InfrastructureAsCode";
 import DisasterRecovery from "./pages/services/DisasterRecovery";
+
+// Cybersecurity Subpages
+import SecurityAssessment from "./pages/services/SecurityAssessment";
+import PenetrationTesting from "./pages/services/PenetrationTesting";
+import IdentityAccessManagement from "./pages/services/IdentityAccessManagement";
+import SecurityOperationsCenter from "./pages/services/SecurityOperationsCenter";
+import IncidentResponse from "./pages/services/IncidentResponse";
+import ZeroTrustArchitecture from "./pages/services/ZeroTrustArchitecture";
 import VisualizationService from "./pages/services/data-analytics/Visualization";
 import MLAIService from "./pages/services/data-analytics/MLAI";
 import DataEngineeringService from "./pages/services/data-analytics/Engineering";
@@ -118,6 +126,12 @@ function Router() {
       <Route path={"/services/infrastructure-as-code"} component={InfrastructureAsCode} />
       <Route path={"/services/disaster-recovery"} component={DisasterRecovery} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />
+      <Route path={"/services/security-assessment"} component={SecurityAssessment} />
+      <Route path={"/services/penetration-testing"} component={PenetrationTesting} />
+      <Route path={"/services/identity-access-management"} component={IdentityAccessManagement} />
+      <Route path={"/services/security-operations-center"} component={SecurityOperationsCenter} />
+      <Route path={"/services/incident-response"} component={IncidentResponse} />
+      <Route path={"/services/zero-trust-architecture"} component={ZeroTrustArchitecture} />
       <Route path={"/services/app-development"} component={AppDevelopmentService} />
       <Route path={"/services/custom-software"} component={CustomSoftwareService} />
       <Route path={"/services/digital-transformation"} component={DigitalTransformationService} />
