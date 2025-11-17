@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Partners from "./pages/Partners";
 import Resources from "./pages/Resources";
 import Events from "./pages/Events";
+import Insights from "./pages/Insights";
 import Methodology from "./pages/Methodology";
 
 // Service Pages
@@ -72,6 +73,7 @@ function Router() {
       <Route path={"/partners"} component={Partners} />
       <Route path={"/resources"} component={Resources} />
       <Route path={"/events"} component={Events} />
+      <Route path={"/insights"} component={Insights} />
       <Route path={"/methodology"} component={Methodology} />
       
       {/* Service Routes */}

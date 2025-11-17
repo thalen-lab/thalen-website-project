@@ -246,3 +246,8 @@
 - [x] Calculate estimated ROI and implementation timeline
 - [x] Add route for assessment page in App.tsx
 - [x] Test complete assessment flow from start to results
+
+## Phase 36: Fix Missing /insights Route
+- [x] Create /insights landing page showcasing all blog posts/insights
+- [x] Add /insights route to App.tsx
+- [x] Test insights route and verify it loads correctly
