@@ -140,6 +140,7 @@ export const appRouter = router({
           searchQuery: z.string().default(""),
           industry: z.string().default("All"),
           service: z.string().default("All"),
+          emailNotifications: z.number().default(1),
         })
       )
       .mutation(async ({ input, ctx }) => {
@@ -158,6 +159,7 @@ export const appRouter = router({
           searchQuery: input.searchQuery,
           industry: input.industry,
           service: input.service,
+          emailNotifications: input.emailNotifications,
         });
 
         return { success: true, id: Number((result as any).insertId || 0) };

@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Checkbox } from '@/components/ui/checkbox';
 import { trpc } from '@/lib/trpc';
 import { toast } from 'sonner';
 
@@ -31,6 +32,7 @@ export default function SaveSearchDialog({
   onSaved,
 }: SaveSearchDialogProps) {
   const [name, setName] = useState('');
+  const [emailNotifications, setEmailNotifications] = useState(true);
   const utils = trpc.useUtils();
 
   const saveMutation = trpc.savedSearches.create.useMutation({
@@ -57,6 +59,7 @@ export default function SaveSearchDialog({
       searchQuery,
       industry,
       service,
+      emailNotifications: emailNotifications ? 1 : 0,
     });
   };
 
@@ -83,6 +86,24 @@ export default function SaveSearchDialog({
                 }
               }}
             />
+          </div>
+          <div className="flex items-start space-x-2">
+            <Checkbox
+              id="emailNotifications"
+              checked={emailNotifications}
+              onCheckedChange={(checked) => setEmailNotifications(checked as boolean)}
+            />
+            <div className="grid gap-1.5 leading-none">
+              <Label
+                htmlFor="emailNotifications"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+              >
+                Email notifications
+              </Label>
+              <p className="text-sm text-muted-foreground">
+                Get notified when new case studies match this search
+              </p>
+            </div>
           </div>
           <div className="grid gap-2 text-sm text-muted-foreground">
             <div>

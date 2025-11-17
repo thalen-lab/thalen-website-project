@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { trpc } from '@/lib/trpc';
-import { Bookmark, Trash2 } from 'lucide-react';
+import { Bookmark, Trash2, Bell, BellOff } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface SavedSearchesDropdownProps {
@@ -73,7 +73,18 @@ export default function SavedSearchesDropdown({ onLoadSearch }: SavedSearchesDro
             }
           >
             <div className="flex-1">
-              <div className="font-medium">{search.name}</div>
+              <div className="flex items-center gap-2">
+                <span className="font-medium">{search.name}</span>
+                {search.emailNotifications === 1 ? (
+                  <span title="Email notifications enabled">
+                    <Bell className="h-3 w-3 text-accent" />
+                  </span>
+                ) : (
+                  <span title="Email notifications disabled">
+                    <BellOff className="h-3 w-3 text-muted-foreground" />
+                  </span>
+                )}
+              </div>
               <div className="text-xs text-muted-foreground mt-1">
                 {search.searchQuery && `"${search.searchQuery}" • `}
                 {search.industry !== 'All' && `${search.industry} • `}

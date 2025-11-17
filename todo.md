@@ -371,3 +371,14 @@
 - [x] Add delete option for each saved search in dropdown
 - [x] Test saving, loading, and deleting saved searches
 - [x] Verify saved searches persist across sessions
+
+## Phase 49: Implement Email Notifications for Saved Searches
+- [x] Extend saved_searches table to include emailNotifications boolean field
+- [x] Create notification matching algorithm to check new case studies against saved searches
+- [x] Create email template for case study notifications
+- [x] Build notification preferences UI (toggle for each saved search)
+- [x] Add "Notify me" checkbox when saving new searches
+- [x] Create admin function to trigger notifications when new case studies are published
+- [x] Add unsubscribe link to notification emails
+- [x] Test notification matching logic with various search combinations
+- [x] Verify email delivery and template rendering

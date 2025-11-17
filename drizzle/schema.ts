@@ -69,6 +69,8 @@ export const savedSearches = mysqlTable("saved_searches", {
   industry: varchar("industry", { length: 100 }).default("All"),
   /** Selected service filter */
   service: varchar("service", { length: 100 }).default("All"),
+  /** Whether to send email notifications for matching case studies */
+  emailNotifications: int("emailNotifications").default(1).notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
 });
 
