@@ -62,6 +62,7 @@ import ResponsibleAIInsight from "./pages/insights/ResponsibleAI";
 import MultiCloudInsight from "./pages/insights/MultiCloudStrategy";
 import ChangeManagementInsight from "./pages/insights/ChangeManagement";
 import RealTimeAnalyticsInsight from "./pages/insights/RealTimeAnalytics";
+import AuthorProfile from "./pages/AuthorProfile";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -121,6 +122,9 @@ function Router() {
       <Route path={"/insights/multi-cloud"} component={MultiCloudInsight} />
       <Route path={"/insights/change-management"} component={ChangeManagementInsight} />
       <Route path={"/insights/real-time-analytics"} component={RealTimeAnalyticsInsight} />
+      
+      {/* Author Profile Routes */}
+      <Route path={"/authors/:slug"} component={AuthorProfile} />
       
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

@@ -18,6 +18,7 @@ export default function Insights() {
       title: 'The ROI Methodology: Measuring Automation Success',
       excerpt: 'A comprehensive framework for calculating and tracking return on investment in intelligent automation initiatives.',
       author: 'Sarah Chen',
+      authorSlug: 'sarah-chen',
       date: 'Nov 10, 2024',
       readTime: '8 min read',
       tags: ['ROI', 'Strategy', 'Automation'],
@@ -28,6 +29,7 @@ export default function Insights() {
       title: 'Zero-Trust Architecture for Federal Agencies',
       excerpt: 'Implementation strategies for zero-trust security in government environments with FedRAMP compliance.',
       author: 'Michael Rodriguez',
+      authorSlug: 'michael-rodriguez',
       date: 'Nov 8, 2024',
       readTime: '10 min read',
       tags: ['Security', 'Federal', 'Compliance'],
@@ -38,6 +40,7 @@ export default function Insights() {
       title: 'Responsible AI Implementation in Government',
       excerpt: 'Best practices for deploying AI systems that maintain transparency, accountability, and ethical standards.',
       author: 'Dr. Jennifer Park',
+      authorSlug: 'jennifer-park',
       date: 'Nov 5, 2024',
       readTime: '12 min read',
       tags: ['AI', 'Ethics', 'Government'],
@@ -48,6 +51,7 @@ export default function Insights() {
       title: 'Multi-Cloud Strategy: Avoiding Vendor Lock-In',
       excerpt: 'How to design cloud architectures that maintain flexibility across AWS, Azure, and Google Cloud.',
       author: 'David Thompson',
+      authorSlug: 'david-thompson',
       date: 'Nov 1, 2024',
       readTime: '9 min read',
       tags: ['Cloud', 'Strategy', 'Architecture'],
@@ -58,6 +62,7 @@ export default function Insights() {
       title: 'Change Management: The Key to Transformation Success',
       excerpt: 'Why 70% of digital transformations fail and how to ensure yours succeeds through effective change management.',
       author: 'Lisa Martinez',
+      authorSlug: 'lisa-martinez',
       date: 'Oct 28, 2024',
       readTime: '11 min read',
       tags: ['Transformation', 'Change Management', 'Leadership'],
@@ -68,6 +73,7 @@ export default function Insights() {
       title: 'Real-Time Analytics at Government Scale',
       excerpt: 'Architecture patterns and technologies for processing billions of data points with sub-second latency.',
       author: 'James Wilson',
+      authorSlug: 'james-wilson',
       date: 'Oct 25, 2024',
       readTime: '10 min read',
       tags: ['Analytics', 'Big Data', 'Architecture'],
@@ -260,7 +266,9 @@ export default function Insights() {
 
                         <div className="flex items-center text-sm text-muted-foreground mb-4">
                           <User className="h-4 w-4 mr-2" />
-                          <span className="mr-4">{insight.author}</span>
+                          <Link href={`/authors/${insight.authorSlug}`}>
+                            <span className="mr-4 hover:text-accent transition-colors cursor-pointer">{insight.author}</span>
+                          </Link>
                           <Clock className="h-4 w-4 mr-2" />
                           <span>{insight.readTime}</span>
                         </div>
