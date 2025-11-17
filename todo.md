@@ -210,3 +210,13 @@
 - [x] Rewrite Process Orchestration subpage with fresh content and use cases
 - [x] Ensure all content is original and maintains NexDyne's voice
 - [x] Test all pages for consistency and quality
+
+## Phase 31: Create Data Analytics & Intelligence Service Page
+- [x] Create main /services/data-analytics page with hero, overview, and sub-services showcase
+- [x] Create /services/data-analytics/strategy subpage (Data Strategy & Roadmap)
+- [x] Create /services/data-analytics/visualization subpage (Real-Time Analytics & Visualization)
+- [x] Create /services/data-analytics/ml-ai subpage (Predictive Analytics & ML/AI)
+- [x] Create /services/data-analytics/engineering subpage (Data Engineering & Pipeline Development)
+- [x] Add routes for all data analytics pages in App.tsx
+- [ ] Update navigation to include Data Analytics & Intelligence service
+- [x] Test all data analytics pages and subpage navigation

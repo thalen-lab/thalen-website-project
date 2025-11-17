@@ -14,6 +14,7 @@ import Methodology from "./pages/Methodology";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
+import DataAnalyticsService from "./pages/services/DataAnalytics";
 import AnalyticsService from "./pages/services/Analytics";
 import CloudService from "./pages/services/Cloud";
 import CybersecurityService from "./pages/services/Cybersecurity";
@@ -25,6 +26,12 @@ import DigitalTransformationService from "./pages/services/DigitalTransformation
 import RPAService from "./pages/services/automation/RPA";
 import IntegrationService from "./pages/services/automation/Integration";
 import OrchestrationService from "./pages/services/automation/Orchestration";
+
+// Data Analytics Subpages
+import DataStrategyService from "./pages/services/data-analytics/Strategy";
+import VisualizationService from "./pages/services/data-analytics/Visualization";
+import MLAIService from "./pages/services/data-analytics/MLAI";
+import DataEngineeringService from "./pages/services/data-analytics/Engineering";
 
 // Industry Pages
 import FederalIndustry from "./pages/industries/FederalGovernment";
@@ -68,6 +75,11 @@ function Router() {
       <Route path={"/services/automation/rpa"} component={RPAService} />
       <Route path={"/services/automation/integration"} component={IntegrationService} />
       <Route path={"/services/automation/orchestration"} component={OrchestrationService} />
+      <Route path={"/services/data-analytics"} component={DataAnalyticsService} />
+      <Route path={"/services/data-analytics/strategy"} component={DataStrategyService} />
+      <Route path={"/services/data-analytics/visualization"} component={VisualizationService} />
+      <Route path={"/services/data-analytics/ml-ai"} component={MLAIService} />
+      <Route path={"/services/data-analytics/engineering"} component={DataEngineeringService} />
       <Route path={"/services/analytics"} component={AnalyticsService} />
       <Route path={"/services/cloud"} component={CloudService} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />
