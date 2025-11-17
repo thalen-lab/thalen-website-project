@@ -76,3 +76,132 @@ export const savedSearches = mysqlTable("saved_searches", {
 
 export type SavedSearch = typeof savedSearches.$inferSelect;
 export type InsertSavedSearch = typeof savedSearches.$inferInsert;
+
+/**
+ * Blog posts table for content management.
+ * Stores all blog post content with metadata.
+ */
+export const blogPosts = mysqlTable("blog_posts", {
+  id: int("id").autoincrement().primaryKey(),
+  /** URL-friendly slug for the blog post */
+  slug: varchar("slug", { length: 255 }).notNull().unique(),
+  /** Blog post title */
+  title: varchar("title", { length: 500 }).notNull(),
+  /** Short excerpt/summary */
+  excerpt: text("excerpt").notNull(),
+  /** Full blog post content (HTML from WYSIWYG editor) */
+  content: text("content").notNull(),
+  /** Featured image URL */
+  featuredImage: varchar("featuredImage", { length: 500 }),
+  /** Category (e.g., "Automation Strategy", "Cybersecurity") */
+  category: varchar("category", { length: 100 }).notNull(),
+  /** Comma-separated tags */
+  tags: text("tags"),
+  /** Author name */
+  authorName: varchar("authorName", { length: 255 }).notNull(),
+  /** Author slug for profile linking */
+  authorSlug: varchar("authorSlug", { length: 255 }).notNull(),
+  /** Estimated read time in minutes */
+  readTime: int("readTime").notNull(),
+  /** Publication status */
+  status: mysqlEnum("status", ["draft", "published", "archived"]).default("draft").notNull(),
+  /** SEO meta description */
+  metaDescription: varchar("metaDescription", { length: 500 }),
+  /** User ID of the author/creator */
+  createdBy: int("createdBy").notNull(),
+  publishedAt: timestamp("publishedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type BlogPost = typeof blogPosts.$inferSelect;
+export type InsertBlogPost = typeof blogPosts.$inferInsert;
+
+/**
+ * Case studies table for content management.
+ * Stores all case study content with metrics and outcomes.
+ */
+export const caseStudies = mysqlTable("case_studies", {
+  id: int("id").autoincrement().primaryKey(),
+  /** URL-friendly slug for the case study */
+  slug: varchar("slug", { length: 255 }).notNull().unique(),
+  /** Case study title */
+  title: varchar("title", { length: 500 }).notNull(),
+  /** Client/company name (can be anonymized) */
+  clientName: varchar("clientName", { length: 255 }).notNull(),
+  /** Industry (e.g., "Federal Government", "Healthcare") */
+  industry: varchar("industry", { length: 100 }).notNull(),
+  /** Service category (e.g., "Automation", "Cloud") */
+  service: varchar("service", { length: 100 }).notNull(),
+  /** Short summary */
+  summary: text("summary").notNull(),
+  /** Full case study content (HTML from WYSIWYG editor) */
+  content: text("content").notNull(),
+  /** Featured image URL */
+  featuredImage: varchar("featuredImage", { length: 500 }),
+  /** Key metric 1 value (e.g., "85%") */
+  metric1Value: varchar("metric1Value", { length: 50 }),
+  /** Key metric 1 label (e.g., "Process Automation") */
+  metric1Label: varchar("metric1Label", { length: 255 }),
+  /** Key metric 2 value */
+  metric2Value: varchar("metric2Value", { length: 50 }),
+  /** Key metric 2 label */
+  metric2Label: varchar("metric2Label", { length: 255 }),
+  /** Key metric 3 value */
+  metric3Value: varchar("metric3Value", { length: 50 }),
+  /** Key metric 3 label */
+  metric3Label: varchar("metric3Label", { length: 255 }),
+  /** Comma-separated tags */
+  tags: text("tags"),
+  /** Publication status */
+  status: mysqlEnum("status", ["draft", "published", "archived"]).default("draft").notNull(),
+  /** User ID of the creator */
+  createdBy: int("createdBy").notNull(),
+  publishedAt: timestamp("publishedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type CaseStudy = typeof caseStudies.$inferSelect;
+export type InsertCaseStudy = typeof caseStudies.$inferInsert;
+
+/**
+ * Events table for content management.
+ * Stores webinars, conferences, and other events.
+ */
+export const events = mysqlTable("events", {
+  id: int("id").autoincrement().primaryKey(),
+  /** URL-friendly slug for the event */
+  slug: varchar("slug", { length: 255 }).notNull().unique(),
+  /** Event title */
+  title: varchar("title", { length: 500 }).notNull(),
+  /** Event type (e.g., "Webinar", "Conference", "Workshop") */
+  eventType: varchar("eventType", { length: 100 }).notNull(),
+  /** Short description */
+  description: text("description").notNull(),
+  /** Full event details (HTML from WYSIWYG editor) */
+  content: text("content").notNull(),
+  /** Event banner/featured image URL */
+  featuredImage: varchar("featuredImage", { length: 500 }),
+  /** Event start date and time */
+  startDate: timestamp("startDate").notNull(),
+  /** Event end date and time */
+  endDate: timestamp("endDate"),
+  /** Event location (or "Virtual") */
+  location: varchar("location", { length: 255 }),
+  /** Registration URL */
+  registrationUrl: varchar("registrationUrl", { length: 500 }),
+  /** Speaker names (comma-separated) */
+  speakers: text("speakers"),
+  /** Comma-separated tags */
+  tags: text("tags"),
+  /** Event status */
+  status: mysqlEnum("status", ["upcoming", "ongoing", "completed", "cancelled"]).default("upcoming").notNull(),
+  /** User ID of the creator */
+  createdBy: int("createdBy").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Event = typeof events.$inferSelect;
+export type InsertEvent = typeof events.$inferInsert;

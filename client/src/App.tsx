@@ -65,6 +65,12 @@ import ChangeManagementInsight from "./pages/insights/ChangeManagement";
 import RealTimeAnalyticsInsight from "./pages/insights/RealTimeAnalytics";
 import AuthorProfile from "./pages/AuthorProfile";
 
+// Admin Pages
+import AdminDashboard from "./pages/admin/Dashboard";
+import AdminBlogPosts from "./pages/admin/BlogPosts";
+import BlogPostForm from "./pages/admin/BlogPostForm";
+import ProtectedRoute from "./components/ProtectedRoute";
+
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -127,6 +133,36 @@ function Router() {
       
       {/* Author Profile Routes */}
       <Route path={"/authors/:slug"} component={AuthorProfile} />
+      
+      {/* Admin Routes */}
+      <Route path={"/admin"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <AdminDashboard />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/blog-posts"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <AdminBlogPosts />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/blog-posts/new"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <BlogPostForm />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/blog-posts/:id/edit"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <BlogPostForm />
+          </ProtectedRoute>
+        )}
+      </Route>
       
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
