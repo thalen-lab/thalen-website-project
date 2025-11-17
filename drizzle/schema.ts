@@ -25,4 +25,31 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
+/**
+ * Comments table for blog post discussions.
+ * Supports nested threading via parentId for replies.
+ */
+export const comments = mysqlTable("comments", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Article slug to identify which blog post this comment belongs to */
+  articleSlug: varchar("articleSlug", { length: 255 }).notNull(),
+  /** User ID from users table (nullable for guest comments) */
+  userId: int("userId"),
+  /** Display name for the commenter */
+  userName: varchar("userName", { length: 255 }).notNull(),
+  /** Email address (not displayed publicly) */
+  userEmail: varchar("userEmail", { length: 320 }),
+  /** Comment content */
+  content: text("content").notNull(),
+  /** Parent comment ID for nested replies (null for top-level comments) */
+  parentId: int("parentId"),
+  /** Moderation status */
+  status: mysqlEnum("status", ["pending", "approved", "rejected"]).default("approved").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Comment = typeof comments.$inferSelect;
+export type InsertComment = typeof comments.$inferInsert;
+
 // TODO: Add your tables here

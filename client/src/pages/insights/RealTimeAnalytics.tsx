@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedArticles from '@/components/RelatedArticles';
 import SocialShare from '@/components/SocialShare';
+import CommentSection from '@/components/CommentSection';
 import { ArrowRight, Download, Zap, BarChart3, Database, CheckCircle2 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -373,6 +374,13 @@ export default function RealTimeAnalytics() {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Comments Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container max-w-4xl">
+          <CommentSection articleSlug="real-time-analytics" />
         </div>
       </section>
 

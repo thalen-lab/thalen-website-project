@@ -4,6 +4,9 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { notifyOwner } from "./_core/notification";
+import { getDb } from "./db";
+import { comments } from "../drizzle/schema";
+import { eq, and, isNull, desc } from "drizzle-orm";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -17,6 +20,99 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
+  }),
+
+  comments: router({
+    // Get all comments for a specific article
+    list: publicProcedure
+      .input(z.object({ articleSlug: z.string() }))
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return [];
+        
+        const allComments = await db
+          .select()
+          .from(comments)
+          .where(
+            and(
+              eq(comments.articleSlug, input.articleSlug),
+              eq(comments.status, "approved")
+            )
+          )
+          .orderBy(desc(comments.createdAt));
+        
+        return allComments;
+      }),
+
+    // Create a new comment
+    create: publicProcedure
+      .input(
+        z.object({
+          articleSlug: z.string(),
+          content: z.string().min(1, "Comment cannot be empty").max(2000, "Comment too long"),
+          parentId: z.number().optional(),
+        })
+      )
+      .mutation(async ({ input, ctx }) => {
+        // Require authentication to comment
+        if (!ctx.user) {
+          throw new Error("You must be logged in to comment");
+        }
+
+        const db = await getDb();
+        if (!db) {
+          throw new Error("Database not available");
+        }
+
+        const result = await db.insert(comments).values({
+          articleSlug: input.articleSlug,
+          userId: ctx.user.id,
+          userName: ctx.user.name || "Anonymous",
+          userEmail: ctx.user.email || undefined,
+          content: input.content,
+          parentId: input.parentId || null,
+          status: "approved", // Auto-approve for now, can add moderation later
+        });
+
+        return {
+          success: true,
+          commentId: Number(result[0].insertId),
+        };
+      }),
+
+    // Delete a comment (user can delete their own, admin can delete any)
+    delete: publicProcedure
+      .input(z.object({ commentId: z.number() }))
+      .mutation(async ({ input, ctx }) => {
+        if (!ctx.user) {
+          throw new Error("You must be logged in to delete comments");
+        }
+
+        const db = await getDb();
+        if (!db) {
+          throw new Error("Database not available");
+        }
+
+        // Get the comment to check ownership
+        const [comment] = await db
+          .select()
+          .from(comments)
+          .where(eq(comments.id, input.commentId))
+          .limit(1);
+
+        if (!comment) {
+          throw new Error("Comment not found");
+        }
+
+        // Check if user owns the comment or is admin
+        if (comment.userId !== ctx.user.id && ctx.user.role !== "admin") {
+          throw new Error("You don't have permission to delete this comment");
+        }
+
+        await db.delete(comments).where(eq(comments.id, input.commentId));
+
+        return { success: true };
+      }),
   }),
 
   contact: router({

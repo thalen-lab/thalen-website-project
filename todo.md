@@ -319,3 +319,16 @@
 - [x] Add copy link functionality for easy sharing
 - [x] Test all sharing buttons on different blog posts
 - [x] Verify sharing links work correctly on social platforms
+
+## Phase 44: Implement Blog Post Commenting System
+- [x] Create database schema for comments table (id, articleSlug, userId, userName, userEmail, content, parentId, createdAt, updatedAt)
+- [x] Add database migration for comments table
+- [x] Create tRPC procedures for comment operations (create, list, reply, delete)
+- [x] Implement authentication check for comment posting
+- [x] Create CommentSection component with comment list and form
+- [x] Create Comment component with reply functionality
+- [x] Add nested comment threading support
+- [x] Implement comment form with validation
+- [x] Add comments section to all 6 blog post pages
+- [x] Test comment posting, replies, and display
+- [x] Add comment moderation capabilities (admin only)
