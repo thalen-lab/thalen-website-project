@@ -105,54 +105,28 @@ export default function ApplicationDevelopment() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3djFoLTd6TTI1IDEzNGg3djFoLTd6TTE2IDEzNGg3djFoLTd6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
-        
-        <div className="container relative z-10">
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
+        <div className="container">
           <div className="max-w-4xl">
             <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Core Service • FedRAMP Authorized
+              Core Service
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Application Development & Integration
             </h1>
             
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
               Mission-critical applications for federal agencies. Our TS/SCI cleared development teams deliver FedRAMP-authorized solutions with full ATO support, ensuring your applications meet the highest security and compliance standards.
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
                 <Link href="/contact">Schedule Consultation</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <Link href="/compare-services">Compare Services</Link>
               </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Metrics */}
-      <section className="py-12 bg-secondary">
-        <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">100+</div>
-              <div className="text-sm text-muted-foreground">Applications Delivered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">95%</div>
-              <div className="text-sm text-muted-foreground">On-Time Delivery Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">FedRAMP ATOs Achieved</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Application Support</div>
             </div>
           </div>
         </div>
