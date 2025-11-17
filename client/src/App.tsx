@@ -69,6 +69,10 @@ import AuthorProfile from "./pages/AuthorProfile";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AdminBlogPosts from "./pages/admin/BlogPosts";
 import BlogPostForm from "./pages/admin/BlogPostForm";
+import AdminCaseStudies from "./pages/admin/CaseStudies";
+import CaseStudyForm from "./pages/admin/CaseStudyForm";
+import AdminEvents from "./pages/admin/Events";
+import EventForm from "./pages/admin/EventForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function Router() {
@@ -160,6 +164,48 @@ function Router() {
         {() => (
           <ProtectedRoute requireAdmin>
             <BlogPostForm />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/case-studies"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <AdminCaseStudies />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/case-studies/new"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <CaseStudyForm />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/case-studies/:id/edit"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <CaseStudyForm />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/events"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <AdminEvents />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/events/new"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <EventForm />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/events/:id/edit"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <EventForm />
           </ProtectedRoute>
         )}
       </Route>
