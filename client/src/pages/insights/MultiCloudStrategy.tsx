@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShare from '@/components/SocialShare';
 import { ArrowRight, Download, Cloud, Network, Shield, CheckCircle2 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -39,6 +40,14 @@ export default function MultiCloudStrategy() {
       {/* Article Content */}
       <section className="py-20">
         <div className="container max-w-4xl">
+          {/* Social Share */}
+          <div className="mb-8 pb-8 border-b">
+            <SocialShare 
+              title="Multi-Cloud Strategy: Avoiding Vendor Lock-In While Maximizing Cloud Benefits"
+              url="/insights/multi-cloud"
+              description="How to design cloud architectures that maintain flexibility across AWS, Azure, and Google Cloud."
+            />
+          </div>
           <div className="prose prose-lg max-w-none">
             
             {/* Introduction */}

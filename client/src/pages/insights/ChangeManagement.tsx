@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShare from '@/components/SocialShare';
 import { ArrowRight, Download, Users, TrendingUp, Target, CheckCircle2 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -39,6 +40,14 @@ export default function ChangeManagement() {
       {/* Article Content */}
       <section className="py-20">
         <div className="container max-w-4xl">
+          {/* Social Share */}
+          <div className="mb-8 pb-8 border-b">
+            <SocialShare 
+              title="Change Management for Digital Transformation: Why Technology Projects Fail Without It"
+              url="/insights/change-management"
+              description="The human dimension of transformation and why 70% of digital initiatives fail without proper change management."
+            />
+          </div>
           <div className="prose prose-lg max-w-none">
             
             {/* Introduction */}

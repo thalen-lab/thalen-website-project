@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShare from '@/components/SocialShare';
 import { ArrowRight, Download, Shield, Lock, Eye, CheckCircle2 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -39,6 +40,14 @@ export default function ZeroTrustArchitecture() {
       {/* Article Content */}
       <section className="py-20">
         <div className="container max-w-4xl">
+          {/* Social Share */}
+          <div className="mb-8 pb-8 border-b">
+            <SocialShare 
+              title="Zero-Trust Architecture for Federal Agencies: A Comprehensive Implementation Guide"
+              url="/insights/zero-trust"
+              description="Implementation strategies for zero-trust security in government environments with FedRAMP compliance."
+            />
+          </div>
           <div className="prose prose-lg max-w-none">
             
             {/* Introduction */}

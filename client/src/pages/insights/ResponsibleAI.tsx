@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShare from '@/components/SocialShare';
 import { ArrowRight, Download, Brain, Scale, Shield, CheckCircle2 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -39,6 +40,14 @@ export default function ResponsibleAI() {
       {/* Article Content */}
       <section className="py-20">
         <div className="container max-w-4xl">
+          {/* Social Share */}
+          <div className="mb-8 pb-8 border-b">
+            <SocialShare 
+              title="Responsible AI Implementation: Balancing Innovation with Accountability in Government"
+              url="/insights/responsible-ai"
+              description="Best practices for deploying AI systems that maintain transparency, accountability, and ethical standards."
+            />
+          </div>
           <div className="prose prose-lg max-w-none">
             
             {/* Introduction */}

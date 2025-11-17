@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShare from '@/components/SocialShare';
 import { ArrowRight, Download, Zap, BarChart3, Database, CheckCircle2 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -39,6 +40,14 @@ export default function RealTimeAnalytics() {
       {/* Article Content */}
       <section className="py-20">
         <div className="container max-w-4xl">
+          {/* Social Share */}
+          <div className="mb-8 pb-8 border-b">
+            <SocialShare 
+              title="Real-Time Analytics at Government Scale: From Batch Reports to Instant Intelligence"
+              url="/insights/real-time-analytics"
+              description="Architectural patterns and technologies for implementing real-time analytics in government environments."
+            />
+          </div>
           <div className="prose prose-lg max-w-none">
             
             {/* Introduction */}

@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShare from '@/components/SocialShare';
 import { ArrowRight, Download, User, Clock, Share2 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -40,6 +41,14 @@ export default function ROIMethodology() {
       {/* Article Content */}
       <section className="py-20">
         <div className="container max-w-4xl">
+          {/* Social Share */}
+          <div className="mb-8 pb-8 border-b">
+            <SocialShare 
+              title="The ROI Methodology: Measuring Automation Success"
+              url="/insights/roi-methodology"
+              description="A comprehensive framework for calculating and tracking return on investment in intelligent automation initiatives."
+            />
+          </div>
           <article className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold mb-4">Introduction</h2>
             <p className="text-lg text-muted-foreground mb-6">
