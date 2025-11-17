@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight, CheckCircle2, Cloud, Shield, Zap, Database, Clock, Server, Lock, RefreshCw } from 'lucide-react';
 
 export default function CloudMigration() {
@@ -250,6 +251,31 @@ export default function CloudMigration() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Cloud Security & Compliance',
+            description: 'Implement FedRAMP-compliant security controls and continuous monitoring to protect migrated workloads.',
+            href: '/services/cloud-security',
+            icon: Shield
+          },
+          {
+            title: 'Disaster Recovery & Business Continuity',
+            description: 'Ensure mission continuity with automated failover, backup strategies, and recovery time objectives under 4 hours.',
+            href: '/services/disaster-recovery',
+            icon: RefreshCw
+          },
+          {
+            title: 'Infrastructure as Code',
+            description: 'Automate infrastructure provisioning and configuration management for consistent, repeatable deployments.',
+            href: '/services/infrastructure-as-code',
+            icon: Server
+          }
+        ]}
+        title="Enhance Your Cloud Migration"
+        description="Strengthen your cloud migration strategy with these complementary services."
+      />
 
       <Footer />
     </div>

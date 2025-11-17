@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Server, Shield, Zap, Cloud, Database, Globe, Lock } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, Cloud, Layers, Shield, Zap, Network, Database, TrendingUp, Lock, RefreshCw, Server, Globe } from 'lucide-react';
 
 export default function MultiCloud() {
   const benefits = [
@@ -223,6 +224,31 @@ export default function MultiCloud() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Cloud Optimization & FinOps',
+            description: 'Reduce multi-cloud costs by 40% with intelligent workload placement, reserved capacity, and automated rightsizing.',
+            href: '/services/cloud-optimization',
+            icon: TrendingUp
+          },
+          {
+            title: 'Cloud Security & Compliance',
+            description: 'Unified security policies and compliance monitoring across AWS, Azure, and GCP environments.',
+            href: '/services/cloud-security',
+            icon: Lock
+          },
+          {
+            title: 'Disaster Recovery & Business Continuity',
+            description: 'Multi-cloud disaster recovery strategies with cross-cloud failover and geo-redundant backups.',
+            href: '/services/disaster-recovery',
+            icon: RefreshCw
+          }
+        ]}
+        title="Strengthen Your Multi-Cloud Strategy"
+        description="Enhance multi-cloud capabilities with cost optimization, security, and resilience services."
+      />
 
       <Footer />
     </div>

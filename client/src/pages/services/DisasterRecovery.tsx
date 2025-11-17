@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Shield, Clock, Database, RefreshCw, Server, Lock, AlertTriangle, FileCheck } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, RefreshCw, Shield, Clock, Database, AlertTriangle, Server, Cloud, Lock, Code } from 'lucide-react';
 
 export default function DisasterRecovery() {
   const benefits = [
@@ -271,6 +272,31 @@ export default function DisasterRecovery() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Cloud Migration & Transition',
+            description: 'Build disaster recovery capabilities into your cloud migration with automated failover and geo-redundancy.',
+            href: '/services/cloud-migration',
+            icon: Cloud
+          },
+          {
+            title: 'Cloud Security & Compliance',
+            description: 'Secure backup encryption, access controls, and compliance-ready recovery procedures for federal data.',
+            href: '/services/cloud-security',
+            icon: Lock
+          },
+          {
+            title: 'Multi-Cloud Strategy & Management',
+            description: 'Cross-cloud disaster recovery with failover between AWS, Azure, and GCP for maximum resilience.',
+            href: '/services/multi-cloud',
+            icon: Server
+          }
+        ]}
+        title="Comprehensive Business Continuity"
+        description="Integrate disaster recovery with migration, security, and multi-cloud strategies for mission-critical resilience."
+      />
 
       <Footer />
     </div>

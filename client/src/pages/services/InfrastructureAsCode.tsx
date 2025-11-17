@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, GitBranch, Zap, Shield, Code, RefreshCw, FileCode, Server, Lock } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, Code, GitBranch, Shield, Zap, FileCode, Cloud, TrendingUp, RefreshCw, Server } from 'lucide-react';
 
 export default function InfrastructureAsCode() {
   const benefits = [
@@ -265,6 +266,31 @@ export default function InfrastructureAsCode() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Cloud Migration & Transition',
+            description: 'Automate infrastructure provisioning during migration with Terraform and CloudFormation templates.',
+            href: '/services/cloud-migration',
+            icon: Cloud
+          },
+          {
+            title: 'Cloud Optimization & FinOps',
+            description: 'Codify cost-optimized configurations and automate rightsizing policies for continuous savings.',
+            href: '/services/cloud-optimization',
+            icon: TrendingUp
+          },
+          {
+            title: 'Disaster Recovery & Business Continuity',
+            description: 'Automate disaster recovery infrastructure deployment with version-controlled recovery procedures.',
+            href: '/services/disaster-recovery',
+            icon: RefreshCw
+          }
+        ]}
+        title="Automate Your Cloud Infrastructure"
+        description="Combine IaC with migration, optimization, and disaster recovery for fully automated cloud operations."
+      />
 
       <Footer />
     </div>

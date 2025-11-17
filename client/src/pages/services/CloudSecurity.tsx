@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Shield, Lock, Eye, AlertTriangle, FileCheck, Users, Server, Key } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, Shield, Lock, Eye, AlertTriangle, FileCheck, Network, Cloud, RefreshCw, Server, Users, Key } from 'lucide-react';
 
 export default function CloudSecurity() {
   const benefits = [
@@ -259,6 +260,31 @@ export default function CloudSecurity() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Cloud Migration & Transition',
+            description: 'Migrate to FedRAMP-authorized cloud environments with built-in security controls and compliance validation.',
+            href: '/services/cloud-migration',
+            icon: Cloud
+          },
+          {
+            title: 'Multi-Cloud Strategy & Management',
+            description: 'Implement consistent security policies across AWS, Azure, and GCP with unified threat detection.',
+            href: '/services/multi-cloud',
+            icon: Server
+          },
+          {
+            title: 'Disaster Recovery & Business Continuity',
+            description: 'Secure backup and recovery strategies with encrypted data replication and compliance-ready restoration.',
+            href: '/services/disaster-recovery',
+            icon: RefreshCw
+          }
+        ]}
+        title="Complete Cloud Security"
+        description="Integrate security across migration, multi-cloud management, and disaster recovery for comprehensive protection."
+      />
 
       <Footer />
     </div>

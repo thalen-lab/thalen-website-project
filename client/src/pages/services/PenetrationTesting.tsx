@@ -1,8 +1,8 @@
-import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight, CheckCircle2, AlertTriangle, Bug, Shield, Target, Code, Wifi } from 'lucide-react';
 
 export default function PenetrationTesting() {
@@ -73,13 +73,13 @@ export default function PenetrationTesting() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <Link href="/services/cybersecurity">
-              <div className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-4 text-sm">
-                <span>Cybersecurity & Compliance</span>
-                <span className="mx-2">/</span>
-                <span>Penetration Testing & Vulnerability Management</span>
-              </div>
-            </Link>
+            <Breadcrumb 
+              items={[
+                { label: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
+                { label: 'Penetration Testing & Vulnerability Management' }
+              ]}
+              className="text-primary-foreground/80 hover:text-primary-foreground mb-4"
+            />
             <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Offensive Security • Continuous Scanning
             </div>

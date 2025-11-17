@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, TrendingUp, DollarSign, Gauge, Shield, Clock, BarChart3, Zap, Database } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, TrendingUp, DollarSign, Gauge, Shield, Clock, BarChart3, Zap, Database, Cloud, Server, Lock } from 'lucide-react';
 
 export default function CloudOptimization() {
   const benefits = [
@@ -253,6 +254,31 @@ export default function CloudOptimization() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Multi-Cloud Strategy & Management',
+            description: 'Optimize costs and performance across AWS, Azure, and GCP with unified management and workload placement strategies.',
+            href: '/services/multi-cloud',
+            icon: Cloud
+          },
+          {
+            title: 'Cloud Security & Compliance',
+            description: 'Maintain FedRAMP compliance while optimizing resources with automated security controls and continuous monitoring.',
+            href: '/services/cloud-security',
+            icon: Lock
+          },
+          {
+            title: 'Infrastructure as Code',
+            description: 'Codify optimized configurations for consistent deployment and automated cost management across environments.',
+            href: '/services/infrastructure-as-code',
+            icon: Server
+          }
+        ]}
+        title="Maximize Cloud Value"
+        description="Combine optimization with these services for comprehensive cloud cost and performance management."
+      />
 
       <Footer />
     </div>
