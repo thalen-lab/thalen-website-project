@@ -349,3 +349,13 @@
 - [x] Add empty state when no case studies match filters
 - [x] Test all filter combinations
 - [x] Verify responsive design on mobile devices
+
+## Phase 47: Add Case Study Search Functionality
+- [x] Add search input field above the filter buttons
+- [x] Implement search state with useState hook
+- [x] Create search logic to filter across titles, descriptions, and tags
+- [x] Combine search with existing industry and service filters
+- [x] Update results count to show search query
+- [x] Add search icon and clear button to search input
+- [x] Test search functionality with various keywords
+- [x] Verify search works with filter combinations

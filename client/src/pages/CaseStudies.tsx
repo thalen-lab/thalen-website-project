@@ -4,11 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Search, X } from 'lucide-react';
 
 export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedService, setSelectedService] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const caseStudies = [
     {
@@ -115,13 +116,22 @@ export default function CaseStudies() {
   const industries = ['All', 'Federal Government', 'Healthcare', 'Manufacturing', 'Financial Services', 'Defense', 'Energy'];
   const services = ['All', 'Automation', 'Analytics', 'Cloud', 'Cybersecurity', 'AI', 'Security'];
 
-  // Filter case studies based on selected industry and service
+  // Filter case studies based on search query, industry, and service
   const filteredCaseStudies = caseStudies.filter(study => {
     const matchesIndustry = selectedIndustry === 'All' || study.category === selectedIndustry;
     const matchesService = selectedService === 'All' || study.tags.some(tag => 
       tag.toLowerCase() === selectedService.toLowerCase()
     );
-    return matchesIndustry && matchesService;
+    
+    // Search across title, description, category, and tags
+    const searchLower = searchQuery.toLowerCase();
+    const matchesSearch = searchQuery === '' || 
+      study.title.toLowerCase().includes(searchLower) ||
+      study.description.toLowerCase().includes(searchLower) ||
+      study.category.toLowerCase().includes(searchLower) ||
+      study.tags.some(tag => tag.toLowerCase().includes(searchLower));
+    
+    return matchesIndustry && matchesService && matchesSearch;
   });
 
   return (
@@ -164,6 +174,29 @@ export default function CaseStudies() {
       {/* Filters */}
       <section className="py-8 bg-background border-b">
         <div className="container">
+          {/* Search Bar */}
+          <div className="mb-8">
+            <div className="relative max-w-2xl">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <input
+                type="text"
+                placeholder="Search case studies by keyword, industry, or service..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-12 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="Clear search"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              )}
+            </div>
+          </div>
+
           {/* Industry Filters */}
           <div className="mb-6">
             <h3 className="text-sm font-semibold text-muted-foreground mb-3">Filter by Industry</h3>
@@ -207,6 +240,7 @@ export default function CaseStudies() {
             ) : (
               <>
                 Showing {filteredCaseStudies.length} case {filteredCaseStudies.length === 1 ? 'study' : 'studies'}
+                {searchQuery && ` matching "${searchQuery}"`}
                 {selectedIndustry !== 'All' && ` in ${selectedIndustry}`}
                 {selectedService !== 'All' && ` for ${selectedService}`}
               </>
@@ -227,6 +261,7 @@ export default function CaseStudies() {
               </p>
               <Button
                 onClick={() => {
+                  setSearchQuery('');
                   setSelectedIndustry('All');
                   setSelectedService('All');
                 }}
