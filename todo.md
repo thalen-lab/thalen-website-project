@@ -632,3 +632,9 @@
 - [x] Verify all routes are properly configured in App.tsx (all 6 subpages have correct routes)
 - [x] Fix homepage link to Application Development (changed from /services/app-development to /services/application-development)
 - [x] Save checkpoint after fixes
+
+## Phase 72: Fix Nested Anchor Tag Error on About Page
+- [x] Read About.tsx to find nested anchor tags
+- [x] Fix nested anchor tags (updated "View Open Positions" button to use asChild pattern with Link to /careers)
+- [x] Test About page to verify error is resolved (no console errors, all buttons working correctly)
+- [x] Save checkpoint

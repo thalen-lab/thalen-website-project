@@ -347,9 +347,11 @@ export default function About() {
               <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
                 We're always looking for talented automation engineers, cybersecurity professionals, and strategy consultants who are passionate about transforming mission-critical operations.
               </p>
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                View Open Positions
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90">
+                <Link href="/careers">
+                  View Open Positions
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </CardContent>
           </Card>
