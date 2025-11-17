@@ -54,6 +54,7 @@ import VAPredictiveAnalyticsCase from "./pages/case-studies/VAPredictiveAnalytic
 import DODDataPipelinesCase from "./pages/case-studies/DODDataPipelines";
 import HHSPublicHealthCase from "./pages/case-studies/HHSPublicHealth";
 import AerospaceDigitalTwinCase from "./pages/case-studies/AerospaceDigitalTwin";
+import CaseStudies from "./pages/CaseStudies";
 
 // Insights Pages
 import ROIMethodologyInsight from "./pages/insights/ROIMethodology";
@@ -102,6 +103,7 @@ function Router() {
       <Route path={"/industries/financial"} component={FinancialIndustry} />
       
       {/* Case Study Routes */}
+      <Route path={"/case-studies"} component={CaseStudies} />
       <Route path={"/case-studies/federal-automation"} component={FederalAutomationCase} />
       <Route path={"/case-studies/healthcare-ai"} component={HealthcareAICase} />
       <Route path={"/case-studies/defense-cloud"} component={DefenseCloudCase} />
