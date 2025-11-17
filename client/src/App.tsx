@@ -17,7 +17,7 @@ import Methodology from "./pages/Methodology";
 import AutomationService from "./pages/services/Automation";
 import DataAnalyticsService from "./pages/services/DataAnalytics";
 import AnalyticsService from "./pages/services/Analytics";
-import CloudService from "./pages/services/Cloud";
+import CloudService from "./pages/CloudServices";
 import CybersecurityService from "./pages/services/Cybersecurity";
 import AppDevelopmentService from "./pages/services/AppDevelopment";
 import CustomSoftwareService from "./pages/services/CustomSoftware";
@@ -30,6 +30,14 @@ import OrchestrationService from "./pages/services/automation/Orchestration";
 
 // Data Analytics Subpages
 import DataStrategyService from "./pages/services/data-analytics/Strategy";
+
+// Cloud Service Subpages
+import CloudMigration from "./pages/services/CloudMigration";
+import CloudOptimization from "./pages/services/CloudOptimization";
+import MultiCloud from "./pages/services/MultiCloud";
+import CloudSecurity from "./pages/services/CloudSecurity";
+import InfrastructureAsCode from "./pages/services/InfrastructureAsCode";
+import DisasterRecovery from "./pages/services/DisasterRecovery";
 import VisualizationService from "./pages/services/data-analytics/Visualization";
 import MLAIService from "./pages/services/data-analytics/MLAI";
 import DataEngineeringService from "./pages/services/data-analytics/Engineering";
@@ -103,6 +111,12 @@ function Router() {
       <Route path={"/services/data-analytics/assessment"} component={DataAssessment} />
       <Route path={"/services/analytics"} component={AnalyticsService} />
       <Route path={"/services/cloud"} component={CloudService} />
+      <Route path={"/services/cloud/migration"} component={CloudMigration} />
+      <Route path={"/services/cloud/optimization"} component={CloudOptimization} />
+      <Route path={"/services/cloud/multi-cloud"} component={MultiCloud} />
+      <Route path={"/services/cloud/security"} component={CloudSecurity} />
+      <Route path={"/services/cloud/infrastructure-as-code"} component={InfrastructureAsCode} />
+      <Route path={"/services/cloud/disaster-recovery"} component={DisasterRecovery} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />
       <Route path={"/services/app-development"} component={AppDevelopmentService} />
       <Route path={"/services/custom-software"} component={CustomSoftwareService} />
