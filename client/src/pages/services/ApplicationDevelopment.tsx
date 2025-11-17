@@ -198,8 +198,106 @@ export default function ApplicationDevelopment() {
         </div>
       </section>
 
-      {/* Why NexDyne */}
+      {/* Technology Stack Showcase */}
       <section className="py-20 bg-white">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Modern Technology Stack</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We leverage cutting-edge frameworks, cloud platforms, and enterprise tools to build scalable, secure applications for federal missions.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {/* Frontend & Backend */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-center">Frontend & Backend Frameworks</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                {[
+                  { name: "React", category: "Frontend" },
+                  { name: "Angular", category: "Frontend" },
+                  { name: "Vue.js", category: "Frontend" },
+                  { name: "Node.js", category: "Backend" },
+                  { name: "Python", category: "Backend" },
+                  { name: "Java", category: "Backend" },
+                  { name: ".NET", category: "Backend" },
+                  { name: "Go", category: "Backend" },
+                ].map((tech, index) => (
+                  <div key={index} className="bg-secondary rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                    <div className="text-4xl mb-3">⚡</div>
+                    <div className="font-bold">{tech.name}</div>
+                    <div className="text-sm text-muted-foreground mt-1">{tech.category}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Cloud Platforms */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-center">Cloud Platforms & Infrastructure</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {[
+                  { name: "AWS", icon: "☁️" },
+                  { name: "Azure", icon: "☁️" },
+                  { name: "Google Cloud", icon: "☁️" },
+                  { name: "Docker", icon: "📦" },
+                  { name: "Kubernetes", icon: "⚙️" },
+                ].map((platform, index) => (
+                  <div key={index} className="bg-secondary rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                    <div className="text-4xl mb-3">{platform.icon}</div>
+                    <div className="font-bold">{platform.name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Databases & Tools */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-center">Databases & Development Tools</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                {[
+                  { name: "PostgreSQL", icon: "🗄️" },
+                  { name: "MongoDB", icon: "🗄️" },
+                  { name: "Redis", icon: "⚡" },
+                  { name: "Elasticsearch", icon: "🔍" },
+                  { name: "Git", icon: "📝" },
+                  { name: "Jenkins", icon: "🔧" },
+                ].map((tool, index) => (
+                  <div key={index} className="bg-secondary rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                    <div className="text-4xl mb-3">{tool.icon}</div>
+                    <div className="font-bold">{tool.name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Certifications & Partnerships */}
+            <div className="bg-gradient-to-br from-navy-900 to-blue-900 rounded-2xl p-12">
+              <h3 className="text-2xl font-bold mb-8 text-center text-white">Certifications & Partnerships</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {[
+                  { name: "FedRAMP Authorized", badge: "🛡️" },
+                  { name: "AWS Partner", badge: "☁️" },
+                  { name: "Microsoft Partner", badge: "💼" },
+                  { name: "ISO 27001", badge: "✓" },
+                  { name: "CMMI Level 3", badge: "⭐" },
+                  { name: "SOC 2 Type II", badge: "🔒" },
+                  { name: "Section 508", badge: "♿" },
+                  { name: "NIST 800-53", badge: "📋" },
+                ].map((cert, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur rounded-lg p-6 text-center text-white hover:bg-white/20 transition-colors">
+                    <div className="text-4xl mb-3">{cert.badge}</div>
+                    <div className="font-bold text-sm">{cert.name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why NexDyne */}
+      <section className="py-20 bg-secondary">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

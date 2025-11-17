@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -20,6 +20,8 @@ interface AssessmentFormProps {
   serviceType?: string;
 }
 
+const STORAGE_KEY = "nexdyne_assessment_form";
+
 export default function AssessmentForm({ 
   title = "Request Free Assessment",
   description = "Get a complimentary consultation with our experts. We'll analyze your requirements and provide tailored recommendations.",
@@ -38,6 +40,29 @@ export default function AssessmentForm({
     description: ""
   });
 
+  // Load saved form data from localStorage on mount
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsedData = JSON.parse(saved);
+        setFormData(parsedData);
+        console.log("Loaded saved form data from localStorage");
+      }
+    } catch (error) {
+      console.error("Error loading form data from localStorage:", error);
+    }
+  }, []);
+
+  // Save form data to localStorage whenever it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+    } catch (error) {
+      console.error("Error saving form data to localStorage:", error);
+    }
+  }, [formData]);
+
   const handleChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
@@ -50,6 +75,14 @@ export default function AssessmentForm({
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     console.log("Assessment request submitted:", { ...formData, serviceType });
+    
+    // Clear saved form data from localStorage on successful submission
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+      console.log("Cleared saved form data from localStorage");
+    } catch (error) {
+      console.error("Error clearing form data from localStorage:", error);
+    }
     
     setIsSubmitting(false);
     setIsSubmitted(true);
