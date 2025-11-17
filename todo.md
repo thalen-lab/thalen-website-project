@@ -490,3 +490,10 @@
 - [x] Add routes for all cloud service pages
 - [x] Update navigation to link to cloud service pages
 - [x] Test all cloud service pages and subpage navigation
+
+## Phase 60: Integrate Cloud Pages into Website Layout
+- [x] Review existing service page layout structure (Automation, Analytics, etc.)
+- [x] Update CloudServices.tsx to include Navigation, Navbar, and Footer
+- [x] Update all 6 cloud service subpages with full website layout
+- [x] Test navigation menu and footer links on cloud pages
+- [x] Verify responsive design and styling consistency

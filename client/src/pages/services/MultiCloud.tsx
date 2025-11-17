@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Server, Shield, Zap, CheckCircle2, ArrowRight, Cloud, Database } from "lucide-react";
 import { Link } from "wouter";
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function MultiCloud() {
   const benefits = [
@@ -46,7 +48,8 @@ export default function MultiCloud() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="container">
           <div className="max-w-4xl">

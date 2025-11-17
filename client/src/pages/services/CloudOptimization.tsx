@@ -12,6 +12,8 @@ import {
   Clock,
 } from "lucide-react";
 import { Link } from "wouter";
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function CloudOptimization() {
   const benefits = [
@@ -103,7 +105,8 @@ export default function CloudOptimization() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="container">

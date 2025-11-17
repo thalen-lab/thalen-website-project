@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Lock, Eye, CheckCircle2, ArrowRight, AlertTriangle, FileCheck } from "lucide-react";
 import { Link } from "wouter";
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function CloudSecurity() {
   const securityLayers = [
@@ -39,7 +41,8 @@ export default function CloudSecurity() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="container">
           <div className="max-w-4xl">
