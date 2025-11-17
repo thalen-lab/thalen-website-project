@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Database, GitBranch, Shield, Zap, TrendingUp, AlertCircle } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, Database, GitBranch, Shield, Zap, TrendingUp, AlertCircle, Search, BarChart3, Cloud } from 'lucide-react';
 
 export default function Engineering() {
   const engineeringBenefits = [
@@ -431,6 +432,31 @@ export default function Engineering() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Data Assessment & Architecture Review',
+            description: 'Evaluate current data infrastructure and design optimal architecture for your pipelines.',
+            href: '/services/data-analytics/assessment',
+            icon: Search
+          },
+          {
+            title: 'Data Visualization & BI',
+            description: 'Turn engineered data into actionable insights with interactive dashboards and analytics.',
+            href: '/services/data-analytics/visualization',
+            icon: BarChart3
+          },
+          {
+            title: 'Cloud Infrastructure & Modernization',
+            description: 'Deploy data pipelines on scalable cloud infrastructure with automated provisioning.',
+            href: '/services/cloud',
+            icon: Cloud
+          }
+        ]}
+        title="Complete Data Infrastructure"
+        description="Enhance your data engineering capabilities with assessment, visualization, and cloud services."
+      />
 
       <Footer />
     </div>

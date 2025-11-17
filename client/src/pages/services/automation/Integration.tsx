@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Network, Gauge, Sliders, TrendingUp, Database, Workflow, GitMerge, Cloud, Server } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, Network, Zap, Shield, Database, Cloud, Lock, GitBranch, Code, Bot, Workflow, GitMerge, Server } from 'lucide-react';
 
 export default function Integration() {
   const capabilities = [
@@ -293,6 +294,31 @@ export default function Integration() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Robotic Process Automation (RPA)',
+            description: 'Automate repetitive tasks across integrated systems with intelligent bots that work 24/7 without errors.',
+            href: '/services/automation/rpa',
+            icon: Bot
+          },
+          {
+            title: 'Workflow Automation & Orchestration',
+            description: 'Orchestrate complex multi-system workflows that leverage your integrated enterprise architecture.',
+            href: '/services/automation/orchestration',
+            icon: Workflow
+          },
+          {
+            title: 'Data Analytics & Intelligence',
+            description: 'Unlock insights from integrated data sources with advanced analytics and business intelligence.',
+            href: '/services/data-analytics',
+            icon: Database
+          }
+        ]}
+        title="Maximize Integration Value"
+        description="Leverage your integrated systems with these complementary automation and analytics services."
+      />
 
       <Footer />
     </div>

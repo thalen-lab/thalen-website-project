@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Bot, Clock, Shield, Zap, TrendingUp, Users, FileText, Lock, BarChart3 } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, Bot, Clock, Shield, Zap, TrendingUp, Users, FileText, Lock, BarChart3, Workflow, Network, FileSearch } from 'lucide-react';
 
 export default function RPA() {
   const benefits = [
@@ -300,6 +301,31 @@ export default function RPA() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Workflow Automation & Orchestration',
+            description: 'Coordinate complex multi-step processes across systems and teams with intelligent workflow orchestration.',
+            href: '/services/automation/orchestration',
+            icon: Workflow
+          },
+          {
+            title: 'System Integration & APIs',
+            description: 'Connect RPA bots seamlessly with enterprise systems through custom integrations and API development.',
+            href: '/services/automation/integration',
+            icon: Network
+          },
+          {
+            title: 'Document Processing & OCR',
+            description: 'Extract and process data from unstructured documents with AI-powered OCR and intelligent document processing.',
+            href: '/services/document-processing',
+            icon: FileSearch
+          }
+        ]}
+        title="Enhance Your RPA Implementation"
+        description="Combine RPA with these complementary automation services for end-to-end process transformation."
+      />
 
       <Footer />
     </div>

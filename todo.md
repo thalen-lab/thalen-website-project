@@ -552,3 +552,28 @@
 - [x] Add "Related Services" section to Disaster Recovery subpage
 - [x] Test breadcrumb navigation across all subpages
 - [x] Test related services links and navigation
+
+## Phase 66: Advanced Features - Related Services, Comparison Matrix, Package Builder
+- [x] Identify all Automation subpages (RPA, Workflow, Document Processing, etc.)
+- [x] Add Related Services section to RPA subpage
+- [x] Add Related Services section to Workflow Automation subpage
+- [x] Add Related Services section to Document Processing subpage
+- [x] Add Related Services section to other Automation subpages
+- [x] Identify all Data Analytics subpages (Predictive Analytics, BI, etc.)
+- [x] Add Related Services section to Predictive Analytics subpage
+- [x] Add Related Services section to Business Intelligence subpage
+- [x] Add Related Services section to other Data Analytics subpages
+- [x] Design Service Comparison Matrix structure and data model
+- [x] Create Service Comparison Matrix page component
+- [x] Add comparison data for Cloud services (Migration vs Multi-Cloud vs Optimization)
+- [x] Add comparison data for Security services (Assessment vs Pen Testing vs IAM)
+- [x] Add route for Service Comparison Matrix page
+- [x] Design Service Package Builder UI and logic
+- [x] Create Package Builder page component
+- [x] Implement service selection interface
+- [x] Add pricing calculation logic
+- [x] Add timeline estimation logic
+- [x] Add route for Package Builder page
+- [x] Test all Related Services links
+- [x] Test Service Comparison Matrix functionality
+- [x] Test Package Builder configurator

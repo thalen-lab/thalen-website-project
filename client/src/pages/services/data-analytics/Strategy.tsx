@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Target, TrendingUp, Users, FileText, Lightbulb, BarChart3 } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, Target, TrendingUp, Users, FileText, Lightbulb, BarChart3, Search, Database, Bot } from 'lucide-react';
 
 export default function DataStrategy() {
   const strategyBenefits = [
@@ -351,6 +352,31 @@ export default function DataStrategy() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Data Assessment & Readiness',
+            description: 'Evaluate your current data landscape and identify gaps before implementing your strategy.',
+            href: '/services/data-analytics/assessment',
+            icon: Search
+          },
+          {
+            title: 'Data Engineering & Infrastructure',
+            description: 'Build the technical foundation to execute your data strategy with modern data pipelines.',
+            href: '/services/data-analytics/engineering',
+            icon: Database
+          },
+          {
+            title: 'Intelligent Automation',
+            description: 'Leverage data insights to drive automated decision-making and process optimization.',
+            href: '/services/automation',
+            icon: Bot
+          }
+        ]}
+        title="Execute Your Data Strategy"
+        description="Transform strategy into reality with these complementary data and automation services."
+      />
 
       <Footer />
     </div>

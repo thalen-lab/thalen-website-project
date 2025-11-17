@@ -12,6 +12,8 @@ import Resources from "./pages/Resources";
 import Events from "./pages/Events";
 import Insights from "./pages/Insights";
 import Methodology from "./pages/Methodology";
+import ServiceComparison from "./pages/ServiceComparison";
+import PackageBuilder from "./pages/PackageBuilder";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -105,6 +107,8 @@ function Router() {
       <Route path={"/events"} component={Events} />
       <Route path={"/insights"} component={Insights} />
       <Route path={"/methodology"} component={Methodology} />
+      <Route path={"/compare-services"} component={ServiceComparison} />
+      <Route path={"/package-builder"} component={PackageBuilder} />
       
       {/* Service Routes */}
       <Route path={"/services/automation"} component={AutomationService} />

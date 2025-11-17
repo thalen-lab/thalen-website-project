@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, GitBranch, Search, ThumbsUp, Users, TrendingUp, Zap, Layers, Target, Activity } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, Workflow, GitBranch, Shield, Zap, Clock, BarChart3, Network, Bot, Code, Target, Activity, Users, Search, Layers } from 'lucide-react';
 
 export default function Orchestration() {
   const orchestrationBenefits = [
@@ -335,6 +336,31 @@ export default function Orchestration() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Robotic Process Automation (RPA)',
+            description: 'Deploy intelligent bots within orchestrated workflows for end-to-end process automation.',
+            href: '/services/automation/rpa',
+            icon: Bot
+          },
+          {
+            title: 'System Integration & APIs',
+            description: 'Connect disparate systems that your workflows orchestrate with seamless integrations.',
+            href: '/services/automation/integration',
+            icon: Network
+          },
+          {
+            title: 'Process Mining & Optimization',
+            description: 'Discover optimization opportunities in your workflows with AI-powered process mining and analysis.',
+            href: '/services/process-optimization',
+            icon: BarChart3
+          }
+        ]}
+        title="Complete Workflow Automation"
+        description="Enhance orchestration capabilities with RPA, integration, and process optimization services."
+      />
 
       <Footer />
     </div>

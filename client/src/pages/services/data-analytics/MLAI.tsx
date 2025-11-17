@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Brain, AlertTriangle, TrendingUp, Shield, Eye, Zap } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, Brain, AlertTriangle, TrendingUp, Shield, Eye, Zap, Database, Bot } from 'lucide-react';
 
 export default function MLAI() {
   const mlBenefits = [
@@ -375,6 +376,31 @@ export default function MLAI() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Data Engineering & Infrastructure',
+            description: 'Build scalable data pipelines that power your machine learning models.',
+            href: '/services/data-analytics/engineering',
+            icon: Database
+          },
+          {
+            title: 'Predictive Analytics & Forecasting',
+            description: 'Apply ML models to predict outcomes, forecast trends, and optimize operations.',
+            href: '/services/predictive-analytics',
+            icon: TrendingUp
+          },
+          {
+            title: 'Intelligent Automation',
+            description: 'Integrate AI models into automated workflows for intelligent decision-making.',
+            href: '/services/automation',
+            icon: Bot
+          }
+        ]}
+        title="Complete AI/ML Solutions"
+        description="Combine machine learning with data engineering, analytics, and automation for end-to-end AI capabilities."
+      />
 
       <Footer />
     </div>

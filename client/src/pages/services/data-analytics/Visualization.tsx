@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, LineChart, Activity, Gauge, Eye, Zap, Shield } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, CheckCircle2, LineChart, Activity, Gauge, Eye, Zap, Shield, Database, Brain, TrendingUp } from 'lucide-react';
 
 export default function Visualization() {
   const visualizationBenefits = [
@@ -360,6 +361,31 @@ export default function Visualization() {
           </div>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Data Engineering & Pipelines',
+            description: 'Build reliable data pipelines that feed your visualization and BI platforms.',
+            href: '/services/data-analytics/engineering',
+            icon: Database
+          },
+          {
+            title: 'Machine Learning & AI',
+            description: 'Enhance visualizations with predictive analytics and AI-powered insights.',
+            href: '/services/data-analytics/ml-ai',
+            icon: Brain
+          },
+          {
+            title: 'Business Intelligence Strategy',
+            description: 'Develop comprehensive BI strategy that aligns analytics with organizational goals.',
+            href: '/services/business-intelligence',
+            icon: TrendingUp
+          }
+        ]}
+        title="Enhance Your Analytics"
+        description="Combine visualization with data engineering, ML/AI, and BI strategy for complete analytics solutions."
+      />
 
       <Footer />
     </div>

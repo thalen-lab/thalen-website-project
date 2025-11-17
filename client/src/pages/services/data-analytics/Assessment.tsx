@@ -321,6 +321,31 @@ export default function DataMaturityAssessment() {
           </div>
         </section>
 
+      <RelatedServices 
+        services={[
+          {
+            title: 'Data Strategy & Roadmap',
+            description: 'Develop a comprehensive data strategy based on assessment findings and organizational goals.',
+            href: '/services/data-analytics/strategy',
+            icon: Target
+          },
+          {
+            title: 'Data Engineering & Pipelines',
+            description: 'Build robust data infrastructure to address gaps identified in your assessment.',
+            href: '/services/data-analytics/engineering',
+            icon: Database
+          },
+          {
+            title: 'Data Governance & Compliance',
+            description: 'Implement governance frameworks to manage data quality, security, and regulatory compliance.',
+            href: '/services/data-governance',
+            icon: Shield
+          }
+        ]}
+        title="Act on Assessment Insights"
+        description="Transform assessment findings into actionable improvements with these data services."
+      />
+
         <Footer />
       </div>
     );
@@ -406,6 +431,31 @@ export default function DataMaturityAssessment() {
           </Card>
         </div>
       </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Data Strategy & Roadmap',
+            description: 'Develop a comprehensive data strategy based on assessment findings and organizational goals.',
+            href: '/services/data-analytics/strategy',
+            icon: Target
+          },
+          {
+            title: 'Data Engineering & Pipelines',
+            description: 'Build robust data infrastructure to address gaps identified in your assessment.',
+            href: '/services/data-analytics/engineering',
+            icon: Database
+          },
+          {
+            title: 'Data Governance & Compliance',
+            description: 'Implement governance frameworks to manage data quality, security, and regulatory compliance.',
+            href: '/services/data-governance',
+            icon: Shield
+          }
+        ]}
+        title="Act on Assessment Insights"
+        description="Transform assessment findings into actionable improvements with these data services."
+      />
 
       <Footer />
     </div>
