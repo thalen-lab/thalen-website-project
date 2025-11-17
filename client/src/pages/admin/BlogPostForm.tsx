@@ -18,6 +18,7 @@ import { trpc } from "@/lib/trpc";
 import { ArrowLeft, Save } from "lucide-react";
 import { Link } from "wouter";
 import { toast } from "sonner";
+import { MediaPicker } from "@/components/MediaPicker";
 
 export default function BlogPostForm() {
   const [, params] = useRoute("/admin/blog-posts/:id/edit");
@@ -338,20 +339,16 @@ export default function BlogPostForm() {
                 <CardTitle>Media & SEO</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div>
-                  <Label htmlFor="featuredImage">Featured Image URL</Label>
-                  <Input
-                    id="featuredImage"
-                    value={formData.featuredImage}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        featuredImage: e.target.value,
-                      })
-                    }
-                    placeholder="https://example.com/image.jpg"
-                  />
-                </div>
+                <MediaPicker
+                  value={formData.featuredImage}
+                  onChange={(url) =>
+                    setFormData({
+                      ...formData,
+                      featuredImage: url,
+                    })
+                  }
+                  label="Featured Image"
+                />
 
                 <div>
                   <Label htmlFor="metaDescription">Meta Description</Label>

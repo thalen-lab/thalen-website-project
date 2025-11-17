@@ -73,6 +73,7 @@ import AdminCaseStudies from "./pages/admin/CaseStudies";
 import CaseStudyForm from "./pages/admin/CaseStudyForm";
 import AdminEvents from "./pages/admin/Events";
 import EventForm from "./pages/admin/EventForm";
+import AdminMediaLibrary from "./pages/admin/MediaLibrary";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function Router() {
@@ -206,6 +207,13 @@ function Router() {
         {() => (
           <ProtectedRoute requireAdmin>
             <EventForm />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/media"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <AdminMediaLibrary />
           </ProtectedRoute>
         )}
       </Route>

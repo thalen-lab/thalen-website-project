@@ -16,6 +16,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft, Save } from 'lucide-react';
 import { toast } from 'sonner';
 import RichTextEditor from '@/components/RichTextEditor';
+import { MediaPicker } from '@/components/MediaPicker';
 
 export default function EventForm() {
   const [, params] = useRoute('/admin/events/:id/edit');
@@ -310,15 +311,11 @@ export default function EventForm() {
               <CardTitle>Media</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="featuredImage">Featured Image URL</Label>
-                <Input
-                  id="featuredImage"
-                  value={formData.featuredImage}
-                  onChange={(e) => setFormData({ ...formData, featuredImage: e.target.value })}
-                  placeholder="https://example.com/image.jpg"
-                />
-              </div>
+              <MediaPicker
+                value={formData.featuredImage}
+                onChange={(url) => setFormData({ ...formData, featuredImage: url })}
+                label="Featured Image"
+              />
             </CardContent>
           </Card>
 

@@ -1,8 +1,9 @@
 import { router, publicProcedure } from "./_core/trpc";
 import { z } from "zod";
 import { getDb } from "./db";
-import { blogPosts, caseStudies, events } from "../drizzle/schema";
+import { blogPosts, caseStudies, events, media } from "../drizzle/schema";
 import { eq, desc, like, or, inArray } from "drizzle-orm";
+import { storagePut } from "./storage";
 import { TRPCError } from "@trpc/server";
 
 // Middleware to check if user is admin
@@ -712,6 +713,134 @@ export const adminRouter = router({
             message: `Import failed: ${error.message}` 
           });
         }
+      }),
+  }),
+
+  // Media Library Management
+  media: router({
+    list: adminProcedure
+      .input(z.object({ 
+        search: z.string().optional(),
+      }))
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return [];
+        
+        let query = db.select().from(media).orderBy(desc(media.createdAt));
+        
+        if (input.search) {
+          query = query.where(
+            or(
+              like(media.filename, `%${input.search}%`),
+              like(media.altText, `%${input.search}%`)
+            )
+          ) as any;
+        }
+        
+        return await query;
+      }),
+
+    upload: adminProcedure
+      .input(z.object({
+        filename: z.string(),
+        base64Data: z.string(),
+        mimeType: z.string(),
+        altText: z.string().optional(),
+        caption: z.string().optional(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        try {
+          // Convert base64 to buffer
+          const base64Content = input.base64Data.split(',')[1] || input.base64Data;
+          const buffer = Buffer.from(base64Content, 'base64');
+          
+          // Generate unique S3 key
+          const timestamp = Date.now();
+          const sanitizedFilename = input.filename.replace(/[^a-zA-Z0-9.-]/g, '_');
+          const s3Key = `media/${timestamp}-${sanitizedFilename}`;
+          
+          // Upload to S3
+          const { url } = await storagePut(s3Key, buffer, input.mimeType);
+          
+          // Get image dimensions if it's an image
+          let width: number | null = null;
+          let height: number | null = null;
+          
+          if (input.mimeType.startsWith('image/')) {
+            // For now, we'll skip dimension detection
+            // In production, you'd use a library like 'sharp' or 'image-size'
+          }
+          
+          // Save to database
+          const [result] = await db.insert(media).values({
+            filename: input.filename,
+            s3Key,
+            url,
+            mimeType: input.mimeType,
+            fileSize: buffer.length,
+            width,
+            height,
+            altText: input.altText || null,
+            caption: input.caption || null,
+            uploadedBy: ctx.user.id,
+          });
+          
+          // Fetch and return the created media
+          const [created] = await db.select().from(media).where(eq(media.id, result.insertId));
+          return created;
+        } catch (error: any) {
+          throw new TRPCError({ 
+            code: "INTERNAL_SERVER_ERROR", 
+            message: `Upload failed: ${error.message}` 
+          });
+        }
+      }),
+
+    update: adminProcedure
+      .input(z.object({
+        id: z.number(),
+        altText: z.string().optional(),
+        caption: z.string().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        await db.update(media)
+          .set({
+            altText: input.altText || null,
+            caption: input.caption || null,
+          })
+          .where(eq(media.id, input.id));
+        
+        return { success: true };
+      }),
+
+    delete: adminProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        // Note: We're not deleting from S3 here to avoid orphaned references
+        // In production, you'd want to track usage and implement cleanup
+        await db.delete(media).where(eq(media.id, input.id));
+        
+        return { success: true };
+      }),
+
+    bulkDelete: adminProcedure
+      .input(z.object({ ids: z.array(z.number()) }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        await db.delete(media).where(inArray(media.id, input.ids));
+        
+        return { success: true, count: input.ids.length };
       }),
   }),
 

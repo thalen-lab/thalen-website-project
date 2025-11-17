@@ -5,6 +5,7 @@ import {
   FileText,
   Briefcase,
   Calendar,
+  Image,
   LogOut,
   Menu,
   X,
@@ -32,6 +33,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     { href: "/admin/blog-posts", label: "Blog Posts", icon: FileText },
     { href: "/admin/case-studies", label: "Case Studies", icon: Briefcase },
     { href: "/admin/events", label: "Events", icon: Calendar },
+    { href: "/admin/media", label: "Media Library", icon: Image },
   ];
 
   return (

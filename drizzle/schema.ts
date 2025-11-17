@@ -205,3 +205,36 @@ export const events = mysqlTable("events", {
 
 export type Event = typeof events.$inferSelect;
 export type InsertEvent = typeof events.$inferInsert;
+
+/**
+ * Media library table for S3-stored assets.
+ * Tracks uploaded images and files for content management.
+ */
+export const media = mysqlTable("media", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Original filename */
+  filename: varchar("filename", { length: 255 }).notNull(),
+  /** S3 object key (path in bucket) */
+  s3Key: varchar("s3Key", { length: 500 }).notNull().unique(),
+  /** Public URL to access the file */
+  url: varchar("url", { length: 1000 }).notNull(),
+  /** MIME type (e.g., "image/jpeg", "image/png") */
+  mimeType: varchar("mimeType", { length: 100 }).notNull(),
+  /** File size in bytes */
+  fileSize: int("fileSize").notNull(),
+  /** Image width in pixels (null for non-images) */
+  width: int("width"),
+  /** Image height in pixels (null for non-images) */
+  height: int("height"),
+  /** Alt text for accessibility */
+  altText: text("altText"),
+  /** Optional caption */
+  caption: text("caption"),
+  /** User ID of the uploader */
+  uploadedBy: int("uploadedBy").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Media = typeof media.$inferSelect;
+export type InsertMedia = typeof media.$inferInsert;
