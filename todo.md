@@ -382,3 +382,9 @@
 - [x] Add unsubscribe link to notification emails
 - [x] Test notification matching logic with various search combinations
 - [x] Verify email delivery and template rendering
+
+## Phase 50: Fix Vite WebSocket Connection Error
+- [x] Update Vite configuration to fix HMR WebSocket connection
+- [x] Configure HMR to use the correct proxied URL
+- [x] Restart dev server
+- [x] Verify WebSocket connection works on /contact page
