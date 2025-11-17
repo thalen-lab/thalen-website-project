@@ -518,3 +518,10 @@
 - [x] Add detailed benefits/features lists with checkmarks inside cards
 - [x] Match card layout and structure to Automation and Data Analytics pages
 - [x] Test visual consistency with other service pages
+
+## Phase 63: Fix Cloud Subpage Routes
+- [x] Check current routes in App.tsx for cloud subpages
+- [x] Check links in Cloud.tsx main page for cloud subpages
+- [x] Update App.tsx routes to match Cloud.tsx links (remove /cloud/ prefix or update links)
+- [x] Test navigation from Cloud main page to all 6 subpages
+- [x] Verify all "Learn More" buttons work correctly

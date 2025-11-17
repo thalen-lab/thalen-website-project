@@ -111,12 +111,12 @@ function Router() {
       <Route path={"/services/data-analytics/assessment"} component={DataAssessment} />
       <Route path={"/services/analytics"} component={AnalyticsService} />
       <Route path={"/services/cloud"} component={Cloud} />
-      <Route path={"/services/cloud/migration"} component={CloudMigration} />
-      <Route path={"/services/cloud/optimization"} component={CloudOptimization} />
-      <Route path={"/services/cloud/multi-cloud"} component={MultiCloud} />
-      <Route path={"/services/cloud/security"} component={CloudSecurity} />
-      <Route path={"/services/cloud/infrastructure-as-code"} component={InfrastructureAsCode} />
-      <Route path={"/services/cloud/disaster-recovery"} component={DisasterRecovery} />
+      <Route path={"/services/cloud-migration"} component={CloudMigration} />
+      <Route path={"/services/cloud-optimization"} component={CloudOptimization} />
+      <Route path={"/services/multi-cloud"} component={MultiCloud} />
+      <Route path={"/services/cloud-security"} component={CloudSecurity} />
+      <Route path={"/services/infrastructure-as-code"} component={InfrastructureAsCode} />
+      <Route path={"/services/disaster-recovery"} component={DisasterRecovery} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />
       <Route path={"/services/app-development"} component={AppDevelopmentService} />
       <Route path={"/services/custom-software"} component={CustomSoftwareService} />
