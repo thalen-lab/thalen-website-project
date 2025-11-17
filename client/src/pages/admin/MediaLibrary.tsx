@@ -293,9 +293,10 @@ export default function AdminMediaLibrary() {
 
                   {/* Image */}
                   <img
-                    src={media.url}
+                    src={media.thumbnailUrl || media.url}
                     alt={media.altText || media.filename}
                     className="w-full h-48 object-cover"
+                    loading="lazy"
                   />
 
                   {/* Overlay with actions */}
@@ -351,9 +352,10 @@ export default function AdminMediaLibrary() {
           {editingMedia && (
             <div className="space-y-4">
               <img
-                src={editingMedia.url}
+                src={editingMedia.mediumUrl || editingMedia.url}
                 alt={editingMedia.altText || editingMedia.filename}
                 className="w-full h-48 object-cover rounded-lg"
+                loading="lazy"
               />
 
               <div>

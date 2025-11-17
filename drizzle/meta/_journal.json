@@ -43,6 +43,13 @@
       "when": 1763357552217,
       "tag": "0005_hesitant_lightspeed",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1763358373117,
+      "tag": "0006_red_the_renegades",
+      "breakpoints": true
     }
   ]
 }

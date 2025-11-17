@@ -5,6 +5,7 @@ import { blogPosts, caseStudies, events, media } from "../drizzle/schema";
 import { eq, desc, like, or, inArray } from "drizzle-orm";
 import { storagePut } from "./storage";
 import { TRPCError } from "@trpc/server";
+import { optimizeImage, generateVariantFilenames } from "./imageOptimizer";
 
 // Middleware to check if user is admin
 const adminProcedure = publicProcedure.use(async ({ ctx, next }) => {
@@ -757,32 +758,62 @@ export const adminRouter = router({
           const base64Content = input.base64Data.split(',')[1] || input.base64Data;
           const buffer = Buffer.from(base64Content, 'base64');
           
-          // Generate unique S3 key
-          const timestamp = Date.now();
-          const sanitizedFilename = input.filename.replace(/[^a-zA-Z0-9.-]/g, '_');
-          const s3Key = `media/${timestamp}-${sanitizedFilename}`;
-          
-          // Upload to S3
-          const { url } = await storagePut(s3Key, buffer, input.mimeType);
-          
-          // Get image dimensions if it's an image
-          let width: number | null = null;
-          let height: number | null = null;
-          
-          if (input.mimeType.startsWith('image/')) {
-            // For now, we'll skip dimension detection
-            // In production, you'd use a library like 'sharp' or 'image-size'
+          // Check if it's an image
+          if (!input.mimeType.startsWith('image/')) {
+            // For non-images, upload as-is
+            const timestamp = Date.now();
+            const sanitizedFilename = input.filename.replace(/[^a-zA-Z0-9.-]/g, '_');
+            const s3Key = `media/${timestamp}-${sanitizedFilename}`;
+            const { url } = await storagePut(s3Key, buffer, input.mimeType);
+            
+            const [result] = await db.insert(media).values({
+              filename: input.filename,
+              s3Key,
+              url,
+              mimeType: input.mimeType,
+              fileSize: buffer.length,
+              width: null,
+              height: null,
+              thumbnailUrl: null,
+              mediumUrl: null,
+              largeUrl: null,
+              altText: input.altText || null,
+              caption: input.caption || null,
+              uploadedBy: ctx.user.id,
+            });
+            
+            const [created] = await db.select().from(media).where(eq(media.id, result.insertId));
+            return created;
           }
           
-          // Save to database
+          // Optimize image and generate variants
+          const optimizedImages = await optimizeImage(buffer, { quality: 85, format: 'webp' });
+          const filenames = generateVariantFilenames(input.filename, 'webp');
+          
+          // Upload all variants to S3
+          const [thumbnailResult, mediumResult, largeResult, originalResult] = await Promise.all([
+            storagePut(`media/thumbnails/${filenames.thumbnail}`, optimizedImages.thumbnail, 'image/webp'),
+            storagePut(`media/medium/${filenames.medium}`, optimizedImages.medium, 'image/webp'),
+            storagePut(`media/large/${filenames.large}`, optimizedImages.large, 'image/webp'),
+            storagePut(`media/original/${filenames.original}`, optimizedImages.original, 'image/webp'),
+          ]);
+          
+          // Get dimensions from Sharp metadata
+          const sharp = (await import('sharp')).default;
+          const metadata = await sharp(buffer).metadata();
+          
+          // Save to database with all variant URLs
           const [result] = await db.insert(media).values({
             filename: input.filename,
-            s3Key,
-            url,
-            mimeType: input.mimeType,
+            s3Key: `media/original/${filenames.original}`,
+            url: originalResult.url,
+            thumbnailUrl: thumbnailResult.url,
+            mediumUrl: mediumResult.url,
+            largeUrl: largeResult.url,
+            mimeType: 'image/webp',
             fileSize: buffer.length,
-            width,
-            height,
+            width: metadata.width || null,
+            height: metadata.height || null,
             altText: input.altText || null,
             caption: input.caption || null,
             uploadedBy: ctx.user.id,

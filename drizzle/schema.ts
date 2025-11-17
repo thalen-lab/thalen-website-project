@@ -216,8 +216,14 @@ export const media = mysqlTable("media", {
   filename: varchar("filename", { length: 255 }).notNull(),
   /** S3 object key (path in bucket) */
   s3Key: varchar("s3Key", { length: 500 }).notNull().unique(),
-  /** Public URL to access the file */
+  /** Public URL to access the file (original) */
   url: varchar("url", { length: 1000 }).notNull(),
+  /** Thumbnail URL (300x300) */
+  thumbnailUrl: varchar("thumbnailUrl", { length: 1000 }),
+  /** Medium size URL (800x800) */
+  mediumUrl: varchar("mediumUrl", { length: 1000 }),
+  /** Large size URL (1920x1920) */
+  largeUrl: varchar("largeUrl", { length: 1000 }),
   /** MIME type (e.g., "image/jpeg", "image/png") */
   mimeType: varchar("mimeType", { length: 100 }).notNull(),
   /** File size in bytes */
