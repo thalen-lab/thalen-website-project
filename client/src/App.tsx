@@ -32,6 +32,7 @@ import DataStrategyService from "./pages/services/data-analytics/Strategy";
 import VisualizationService from "./pages/services/data-analytics/Visualization";
 import MLAIService from "./pages/services/data-analytics/MLAI";
 import DataEngineeringService from "./pages/services/data-analytics/Engineering";
+import DataAssessment from "./pages/services/data-analytics/Assessment";
 
 // Industry Pages
 import FederalIndustry from "./pages/industries/FederalGovernment";
@@ -83,6 +84,7 @@ function Router() {
       <Route path={"/services/data-analytics/visualization"} component={VisualizationService} />
       <Route path={"/services/data-analytics/ml-ai"} component={MLAIService} />
       <Route path={"/services/data-analytics/engineering"} component={DataEngineeringService} />
+      <Route path={"/services/data-analytics/assessment"} component={DataAssessment} />
       <Route path={"/services/analytics"} component={AnalyticsService} />
       <Route path={"/services/cloud"} component={CloudService} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />

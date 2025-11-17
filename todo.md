@@ -236,3 +236,13 @@
 - [x] Create HHS case study: "HHS Achieves Real-Time Public Health Surveillance with Analytics Platform"
 - [x] Add case study showcase sections to Data Analytics service pages
 - [x] Add routes for all case study pages in App.tsx
+
+## Phase 35: Create Data Maturity Assessment Tool
+- [x] Create /services/data-analytics/assessment page with multi-step questionnaire
+- [x] Implement 8-10 questions evaluating data governance, infrastructure, analytics, and skills
+- [x] Build scoring logic to calculate maturity level (Initial, Developing, Defined, Managed, Optimized)
+- [x] Create personalized results page with maturity score visualization
+- [x] Generate service recommendations based on assessment results
+- [x] Calculate estimated ROI and implementation timeline
+- [x] Add route for assessment page in App.tsx
+- [x] Test complete assessment flow from start to results
