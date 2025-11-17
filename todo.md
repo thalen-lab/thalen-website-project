@@ -266,3 +266,14 @@
 - [x] Update Insights page to link to individual blog post pages
 - [x] Add routes for all blog post pages in App.tsx
 - [x] Test all blog post pages and navigation
+
+## Phase 39: Add Blog Post Filtering and Search
+- [x] Add search bar to Insights page for keyword filtering
+- [x] Add category filter buttons (All, Automation Strategy, Cybersecurity, AI & Machine Learning, Cloud Modernization, Digital Transformation, Data Analytics)
+- [x] Implement useState hooks for search query and selected category
+- [x] Create filtering logic to filter insights based on search and category
+- [x] Add visual feedback for active category filter
+- [x] Display "No results found" message when filters return empty
+- [x] Test search functionality with various keywords
+- [x] Test category filtering with all categories
+- [x] Verify responsive design on mobile devices

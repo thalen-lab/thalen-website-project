@@ -1,11 +1,15 @@
+import { useState } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Clock, User } from 'lucide-react';
+import { ArrowRight, Clock, User, Search } from 'lucide-react';
 
 export default function Insights() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const insights = [
     {
       category: 'Automation Strategy',
@@ -69,6 +73,20 @@ export default function Insights() {
     }
   ];
 
+  const categories = ['All', 'Automation Strategy', 'Cybersecurity', 'AI & Machine Learning', 'Cloud Modernization', 'Digital Transformation', 'Data Analytics'];
+
+  // Filter insights based on search query and selected category
+  const filteredInsights = insights.filter(insight => {
+    const matchesCategory = selectedCategory === 'All' || insight.category === selectedCategory;
+    const matchesSearch = searchQuery === '' || 
+      insight.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      insight.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      insight.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      insight.author.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    return matchesCategory && matchesSearch;
+  });
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -117,54 +135,116 @@ export default function Insights() {
         </div>
       </section>
 
-      {/* Insights Grid */}
+      {/* Insights Grid with Filtering */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest Insights</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Stay informed with expert analysis and practical guidance from NexDyne's thought leaders.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {insights.map((insight, index) => (
-              <Link key={index} href={insight.href}>
-                <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer">
-                  <CardContent className="p-8 flex flex-col flex-1">
-                    <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
-                      {insight.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <input
+                type="text"
+                placeholder="Search insights by title, topic, or author..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+            </div>
+          </div>
 
-                    <div className="flex items-center text-sm text-muted-foreground mb-4">
-                      <User className="h-4 w-4 mr-2" />
-                      <span className="mr-4">{insight.author}</span>
-                      <Clock className="h-4 w-4 mr-2" />
-                      <span>{insight.readTime}</span>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {insight.tags.map((tag, idx) => (
-                        <span key={idx} className="text-xs bg-background px-3 py-1 rounded-full border border-border">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">{insight.date}</span>
-                      <Button variant="ghost" size="sm" className="group-hover:text-accent">
-                        Read More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
+          {/* Category Filters */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
+                  selectedCategory === category
+                    ? 'bg-accent text-accent-foreground shadow-md'
+                    : 'bg-background border border-border hover:border-accent hover:text-accent'
+                }`}
+              >
+                {category}
+              </button>
             ))}
           </div>
+
+          {/* Results Count */}
+          <div className="text-center mb-8">
+            <p className="text-muted-foreground">
+              Showing {filteredInsights.length} {filteredInsights.length === 1 ? 'article' : 'articles'}
+              {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+              {searchQuery && ` matching "${searchQuery}"`}
+            </p>
+          </div>
+
+          {/* Insights Grid */}
+          {filteredInsights.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredInsights.map((insight, index) => (
+                <Link key={index} href={insight.href}>
+                  <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer">
+                    <CardContent className="p-8 flex flex-col flex-1">
+                      <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                        {insight.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
+
+                      <div className="flex items-center text-sm text-muted-foreground mb-4">
+                        <User className="h-4 w-4 mr-2" />
+                        <span className="mr-4">{insight.author}</span>
+                        <Clock className="h-4 w-4 mr-2" />
+                        <span>{insight.readTime}</span>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {insight.tags.map((tag, idx) => (
+                          <span key={idx} className="text-xs bg-background px-3 py-1 rounded-full border border-border">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-muted-foreground">{insight.date}</span>
+                        <Button variant="ghost" size="sm" className="group-hover:text-accent">
+                          Read More
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <div className="max-w-md mx-auto">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold mb-2">No articles found</h3>
+                <p className="text-muted-foreground mb-6">
+                  Try adjusting your search or filter to find what you're looking for.
+                </p>
+                <Button
+                  onClick={() => {
+                    setSearchQuery('');
+                    setSelectedCategory('All');
+                  }}
+                  variant="outline"
+                >
+                  Clear Filters
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
