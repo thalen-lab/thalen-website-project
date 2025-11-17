@@ -218,5 +218,5 @@
 - [x] Create /services/data-analytics/ml-ai subpage (Predictive Analytics & ML/AI)
 - [x] Create /services/data-analytics/engineering subpage (Data Engineering & Pipeline Development)
 - [x] Add routes for all data analytics pages in App.tsx
-- [ ] Update navigation to include Data Analytics & Intelligence service
+- [x] Update Navigation component Services dropdown to include Data Analytics & Intelligence link
 - [x] Test all data analytics pages and subpage navigation

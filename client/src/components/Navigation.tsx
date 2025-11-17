@@ -11,7 +11,7 @@ export default function Navigation() {
 
   const services = [
     { name: 'Intelligent Automation & Process Optimization', href: '/services/automation' },
-    { name: 'Data Analytics & Intelligence', href: '/services/analytics' },
+    { name: 'Data Analytics & Intelligence', href: '/services/data-analytics' },
     { name: 'Cloud Infrastructure & Modernization', href: '/services/cloud' },
     { name: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
     { name: 'Application Development & Integration', href: '/services/app-development' },
