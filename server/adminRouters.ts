@@ -23,7 +23,7 @@ export const adminRouter = router({
   blogPosts: router({
     list: adminProcedure
       .input(z.object({ 
-        status: z.enum(["draft", "published", "archived"]).optional(),
+        status: z.enum(["draft", "published", "archived", "scheduled"]).optional(),
         search: z.string().optional(),
       }))
       .query(async ({ input }) => {
@@ -76,7 +76,8 @@ export const adminRouter = router({
         authorName: z.string(),
         authorSlug: z.string(),
         readTime: z.number(),
-        status: z.enum(["draft", "published", "archived"]),
+        status: z.enum(["draft", "published", "archived", "scheduled"]),
+        scheduledPublishAt: z.date().optional().nullable(),
         metaDescription: z.string().optional(),
       }))
       .mutation(async ({ input, ctx }) => {
@@ -105,7 +106,8 @@ export const adminRouter = router({
         authorName: z.string(),
         authorSlug: z.string(),
         readTime: z.number(),
-        status: z.enum(["draft", "published", "archived"]),
+        status: z.enum(["draft", "published", "archived", "scheduled"]),
+        scheduledPublishAt: z.date().optional().nullable(),
         metaDescription: z.string().optional(),
       }))
       .mutation(async ({ input }) => {
@@ -139,7 +141,8 @@ export const adminRouter = router({
     bulkUpdateStatus: adminProcedure
       .input(z.object({
         ids: z.array(z.number()),
-        status: z.enum(["draft", "published", "archived"]),
+        status: z.enum(["draft", "published", "archived", "scheduled"]),
+        scheduledPublishAt: z.date().optional().nullable(),
       }))
       .mutation(async ({ input }) => {
         const db = await getDb();
@@ -256,7 +259,7 @@ export const adminRouter = router({
   caseStudies: router({
     list: adminProcedure
       .input(z.object({ 
-        status: z.enum(["draft", "published", "archived"]).optional(),
+        status: z.enum(["draft", "published", "archived", "scheduled"]).optional(),
         search: z.string().optional(),
       }))
       .query(async ({ input }) => {
@@ -314,7 +317,8 @@ export const adminRouter = router({
         metric3Value: z.string().optional(),
         metric3Label: z.string().optional(),
         tags: z.string().optional(),
-        status: z.enum(["draft", "published", "archived"]),
+        status: z.enum(["draft", "published", "archived", "scheduled"]),
+        scheduledPublishAt: z.date().optional().nullable(),
       }))
       .mutation(async ({ input, ctx }) => {
         const db = await getDb();
@@ -347,7 +351,8 @@ export const adminRouter = router({
         metric3Value: z.string().optional(),
         metric3Label: z.string().optional(),
         tags: z.string().optional(),
-        status: z.enum(["draft", "published", "archived"]),
+        status: z.enum(["draft", "published", "archived", "scheduled"]),
+        scheduledPublishAt: z.date().optional().nullable(),
       }))
       .mutation(async ({ input }) => {
         const db = await getDb();
@@ -380,7 +385,8 @@ export const adminRouter = router({
     bulkUpdateStatus: adminProcedure
       .input(z.object({
         ids: z.array(z.number()),
-        status: z.enum(["draft", "published", "archived"]),
+        status: z.enum(["draft", "published", "archived", "scheduled"]),
+        scheduledPublishAt: z.date().optional().nullable(),
       }))
       .mutation(async ({ input }) => {
         const db = await getDb();
@@ -494,7 +500,7 @@ export const adminRouter = router({
   events: router({
     list: adminProcedure
       .input(z.object({ 
-        status: z.enum(["upcoming", "ongoing", "completed", "cancelled"]).optional(),
+        status: z.enum(["upcoming", "ongoing", "completed", "cancelled", "scheduled"]).optional(),
         search: z.string().optional(),
       }))
       .query(async ({ input }) => {
@@ -549,7 +555,8 @@ export const adminRouter = router({
         registrationUrl: z.string().optional(),
         speakers: z.string().optional(),
         tags: z.string().optional(),
-        status: z.enum(["upcoming", "ongoing", "completed", "cancelled"]),
+        status: z.enum(["upcoming", "ongoing", "completed", "cancelled", "scheduled"]),
+        scheduledPublishAt: z.date().optional().nullable(),
       }))
       .mutation(async ({ input, ctx }) => {
         const db = await getDb();
@@ -578,7 +585,8 @@ export const adminRouter = router({
         registrationUrl: z.string().optional(),
         speakers: z.string().optional(),
         tags: z.string().optional(),
-        status: z.enum(["upcoming", "ongoing", "completed", "cancelled"]),
+        status: z.enum(["upcoming", "ongoing", "completed", "cancelled", "scheduled"]),
+        scheduledPublishAt: z.date().optional().nullable(),
       }))
       .mutation(async ({ input }) => {
         const db = await getDb();
@@ -608,7 +616,8 @@ export const adminRouter = router({
     bulkUpdateStatus: adminProcedure
       .input(z.object({
         ids: z.array(z.number()),
-        status: z.enum(["upcoming", "ongoing", "completed", "cancelled"]),
+        status: z.enum(["upcoming", "ongoing", "completed", "cancelled", "scheduled"]),
+        scheduledPublishAt: z.date().optional().nullable(),
       }))
       .mutation(async ({ input }) => {
         const db = await getDb();

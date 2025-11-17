@@ -6,6 +6,7 @@ import {
   Briefcase,
   Calendar,
   Image,
+  Clock,
   LogOut,
   Menu,
   X,
@@ -34,6 +35,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     { href: "/admin/case-studies", label: "Case Studies", icon: Briefcase },
     { href: "/admin/events", label: "Events", icon: Calendar },
     { href: "/admin/media", label: "Media Library", icon: Image },
+    { href: "/admin/scheduled", label: "Scheduled Content", icon: Clock },
   ];
 
   return (

@@ -37,7 +37,8 @@ export default function BlogPostForm() {
     authorName: "",
     authorSlug: "",
     readTime: 5,
-    status: "draft" as "draft" | "published" | "archived",
+    status: "draft" as "draft" | "published" | "archived" | "scheduled",
+    scheduledPublishAt: null as Date | null,
     metaDescription: "",
   });
 
@@ -80,6 +81,7 @@ export default function BlogPostForm() {
         authorSlug: existingPost.authorSlug,
         readTime: existingPost.readTime,
         status: existingPost.status,
+        scheduledPublishAt: existingPost.scheduledPublishAt ? new Date(existingPost.scheduledPublishAt) : null,
         metaDescription: existingPost.metaDescription || "",
       });
     }
@@ -245,9 +247,26 @@ export default function BlogPostForm() {
                       <SelectItem value="draft">Draft</SelectItem>
                       <SelectItem value="published">Published</SelectItem>
                       <SelectItem value="archived">Archived</SelectItem>
+                      <SelectItem value="scheduled">Scheduled</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
+
+                {formData.status === 'scheduled' && (
+                  <div>
+                    <Label htmlFor="scheduledPublishAt">Scheduled Publish Date & Time *</Label>
+                    <Input
+                      id="scheduledPublishAt"
+                      type="datetime-local"
+                      value={formData.scheduledPublishAt ? new Date(formData.scheduledPublishAt.getTime() - formData.scheduledPublishAt.getTimezoneOffset() * 60000).toISOString().slice(0, 16) : ''}
+                      onChange={(e) => setFormData({ ...formData, scheduledPublishAt: e.target.value ? new Date(e.target.value) : null })}
+                      required
+                    />
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Content will be automatically published at this time
+                    </p>
+                  </div>
+                )}
 
                 <div>
                   <Label htmlFor="category">Category *</Label>

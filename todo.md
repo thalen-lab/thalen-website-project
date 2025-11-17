@@ -464,3 +464,14 @@
 - [x] Update frontend components to use responsive image URLs
 - [x] Test image upload with automatic optimization
 - [x] Verify S3 storage of all image variants
+
+## Phase 58: Content Scheduling System
+- [x] Update database schema to add scheduledPublishAt timestamp field to blog_posts, case_studies, events tables
+- [x] Add "scheduled" status to all content type enums
+- [x] Create API endpoints for scheduling content (schedule, reschedule, cancel schedule)
+- [x] Add date/time picker components to blog post, case study, and event forms
+- [x] Create background job system to check and auto-publish scheduled content
+- [x] Add scheduled content view in admin dashboard showing upcoming publications
+- [x] Implement timezone handling for scheduled publishing
+- [x] Test scheduling content for future dates
+- [x] Verify auto-publish functionality works correctly

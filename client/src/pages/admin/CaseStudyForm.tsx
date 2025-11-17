@@ -40,7 +40,8 @@ export default function CaseStudyForm() {
     metric3Value: '',
     metric3Label: '',
     tags: '',
-    status: 'draft' as 'draft' | 'published' | 'archived',
+    status: 'draft' as 'draft' | 'published' | 'archived' | 'scheduled',
+    scheduledPublishAt: null as Date | null,
   });
 
   // Fetch existing case study if editing
@@ -68,6 +69,7 @@ export default function CaseStudyForm() {
         metric3Label: existingCaseStudy.metric3Label || '',
         tags: existingCaseStudy.tags || '',
         status: existingCaseStudy.status,
+        scheduledPublishAt: existingCaseStudy.scheduledPublishAt ? new Date(existingCaseStudy.scheduledPublishAt) : null,
       });
     }
   }, [existingCaseStudy]);
@@ -297,9 +299,26 @@ export default function CaseStudyForm() {
                     <SelectItem value="draft">Draft</SelectItem>
                     <SelectItem value="published">Published</SelectItem>
                     <SelectItem value="archived">Archived</SelectItem>
+                    <SelectItem value="scheduled">Scheduled</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
+
+              {formData.status === 'scheduled' && (
+                <div className="space-y-2">
+                  <Label htmlFor="scheduledPublishAt">Scheduled Publish Date & Time *</Label>
+                  <Input
+                    id="scheduledPublishAt"
+                    type="datetime-local"
+                    value={formData.scheduledPublishAt ? new Date(formData.scheduledPublishAt.getTime() - formData.scheduledPublishAt.getTimezoneOffset() * 60000).toISOString().slice(0, 16) : ''}
+                    onChange={(e) => setFormData({ ...formData, scheduledPublishAt: e.target.value ? new Date(e.target.value) : null })}
+                    required
+                  />
+                  <p className="text-sm text-muted-foreground">
+                    Content will be automatically published at this time
+                  </p>
+                </div>
+              )}
 
               <div className="space-y-2">
                 <Label htmlFor="industry">Industry *</Label>

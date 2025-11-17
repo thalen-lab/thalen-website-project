@@ -2,6 +2,7 @@ import express from "express";
 import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
+import { startScheduler } from "./scheduler.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -27,6 +28,19 @@ async function startServer() {
 
   server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
+    
+    // Start content scheduler for auto-publishing
+    const stopScheduler = startScheduler();
+    
+    // Cleanup on server shutdown
+    process.on('SIGTERM', () => {
+      console.log('SIGTERM received, stopping scheduler...');
+      stopScheduler();
+      server.close(() => {
+        console.log('Server closed');
+        process.exit(0);
+      });
+    });
   });
 }
 

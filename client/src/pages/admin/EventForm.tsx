@@ -37,7 +37,8 @@ export default function EventForm() {
     registrationUrl: '',
     speakers: '',
     tags: '',
-    status: 'upcoming' as 'upcoming' | 'ongoing' | 'completed' | 'cancelled',
+    status: 'upcoming' as 'upcoming' | 'ongoing' | 'completed' | 'cancelled' | 'scheduled',
+    scheduledPublishAt: null as Date | null,
   });
 
   // Fetch existing event if editing
@@ -62,6 +63,7 @@ export default function EventForm() {
         speakers: existingEvent.speakers || '',
         tags: existingEvent.tags || '',
         status: existingEvent.status,
+        scheduledPublishAt: existingEvent.scheduledPublishAt ? new Date(existingEvent.scheduledPublishAt) : null,
       });
     }
   }, [existingEvent]);
@@ -290,9 +292,26 @@ export default function EventForm() {
                     <SelectItem value="ongoing">Ongoing</SelectItem>
                     <SelectItem value="completed">Completed</SelectItem>
                     <SelectItem value="cancelled">Cancelled</SelectItem>
+                    <SelectItem value="scheduled">Scheduled</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
+
+              {formData.status === 'scheduled' && (
+                <div className="space-y-2">
+                  <Label htmlFor="scheduledPublishAt">Scheduled Publish Date & Time *</Label>
+                  <Input
+                    id="scheduledPublishAt"
+                    type="datetime-local"
+                    value={formData.scheduledPublishAt ? new Date(formData.scheduledPublishAt.getTime() - formData.scheduledPublishAt.getTimezoneOffset() * 60000).toISOString().slice(0, 16) : ''}
+                    onChange={(e) => setFormData({ ...formData, scheduledPublishAt: e.target.value ? new Date(e.target.value) : null })}
+                    required
+                  />
+                  <p className="text-sm text-muted-foreground">
+                    Event will be automatically published at this time
+                  </p>
+                </div>
+              )}
 
               <div className="space-y-2">
                 <Label htmlFor="tags">Tags</Label>

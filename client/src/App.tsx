@@ -74,6 +74,7 @@ import CaseStudyForm from "./pages/admin/CaseStudyForm";
 import AdminEvents from "./pages/admin/Events";
 import EventForm from "./pages/admin/EventForm";
 import AdminMediaLibrary from "./pages/admin/MediaLibrary";
+import AdminScheduledContent from "./pages/admin/ScheduledContent";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function Router() {
@@ -214,6 +215,13 @@ function Router() {
         {() => (
           <ProtectedRoute requireAdmin>
             <AdminMediaLibrary />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/scheduled"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <AdminScheduledContent />
           </ProtectedRoute>
         )}
       </Route>

@@ -104,7 +104,9 @@ export const blogPosts = mysqlTable("blog_posts", {
   /** Estimated read time in minutes */
   readTime: int("readTime").notNull(),
   /** Publication status */
-  status: mysqlEnum("status", ["draft", "published", "archived"]).default("draft").notNull(),
+  status: mysqlEnum("status", ["draft", "published", "archived", "scheduled"]).default("draft").notNull(),
+  /** Scheduled publish date/time (null if not scheduled) */
+  scheduledPublishAt: timestamp("scheduledPublishAt"),
   /** SEO meta description */
   metaDescription: varchar("metaDescription", { length: 500 }),
   /** User ID of the author/creator */
@@ -154,7 +156,9 @@ export const caseStudies = mysqlTable("case_studies", {
   /** Comma-separated tags */
   tags: text("tags"),
   /** Publication status */
-  status: mysqlEnum("status", ["draft", "published", "archived"]).default("draft").notNull(),
+  status: mysqlEnum("status", ["draft", "published", "archived", "scheduled"]).default("draft").notNull(),
+  /** Scheduled publish date/time (null if not scheduled) */
+  scheduledPublishAt: timestamp("scheduledPublishAt"),
   /** User ID of the creator */
   createdBy: int("createdBy").notNull(),
   publishedAt: timestamp("publishedAt"),
@@ -196,7 +200,9 @@ export const events = mysqlTable("events", {
   /** Comma-separated tags */
   tags: text("tags"),
   /** Event status */
-  status: mysqlEnum("status", ["upcoming", "ongoing", "completed", "cancelled"]).default("upcoming").notNull(),
+  status: mysqlEnum("status", ["upcoming", "ongoing", "completed", "cancelled", "scheduled"]).default("upcoming").notNull(),
+  /** Scheduled publish date/time (null if not scheduled) */
+  scheduledPublishAt: timestamp("scheduledPublishAt"),
   /** User ID of the creator */
   createdBy: int("createdBy").notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
