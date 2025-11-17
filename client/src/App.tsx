@@ -48,6 +48,15 @@ import IdentityAccessManagement from "./pages/services/IdentityAccessManagement"
 import SecurityOperationsCenter from "./pages/services/SecurityOperationsCenter";
 import IncidentResponse from "./pages/services/IncidentResponse";
 import ZeroTrustArchitecture from "./pages/services/ZeroTrustArchitecture";
+
+// Application Development Subpages
+import ApplicationDevelopment from "./pages/services/ApplicationDevelopment";
+import CustomApplicationDevelopment from "./pages/services/CustomApplicationDevelopment";
+import LowCodeDevelopment from "./pages/services/LowCodeDevelopment";
+import LegacyModernization from "./pages/services/LegacyModernization";
+import EnterprisePortals from "./pages/services/EnterprisePortals";
+import SystemIntegration from "./pages/services/SystemIntegration";
+import ApplicationSecurity from "./pages/services/ApplicationSecurity";
 import VisualizationService from "./pages/services/data-analytics/Visualization";
 import MLAIService from "./pages/services/data-analytics/MLAI";
 import DataEngineeringService from "./pages/services/data-analytics/Engineering";
@@ -136,6 +145,13 @@ function Router() {
       <Route path={"/services/security-operations-center"} component={SecurityOperationsCenter} />
       <Route path={"/services/incident-response"} component={IncidentResponse} />
       <Route path={"/services/zero-trust-architecture"} component={ZeroTrustArchitecture} />
+      <Route path={"/services/application-development"} component={ApplicationDevelopment} />
+      <Route path={"/services/custom-application-development"} component={CustomApplicationDevelopment} />
+      <Route path={"/services/low-code-development"} component={LowCodeDevelopment} />
+      <Route path={"/services/legacy-modernization"} component={LegacyModernization} />
+      <Route path={"/services/enterprise-portals"} component={EnterprisePortals} />
+      <Route path={"/services/system-integration"} component={SystemIntegration} />
+      <Route path={"/services/application-security"} component={ApplicationSecurity} />
       <Route path={"/services/app-development"} component={AppDevelopmentService} />
       <Route path={"/services/custom-software"} component={CustomSoftwareService} />
       <Route path={"/services/digital-transformation"} component={DigitalTransformationService} />
