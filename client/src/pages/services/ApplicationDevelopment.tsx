@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AssessmentForm from "@/components/AssessmentForm";
+import ArchitectureDiagram from "@/components/ArchitectureDiagram";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -359,10 +360,21 @@ export default function ApplicationDevelopment() {
           </div>
         </div>
       </section>
+      {/* Architecture Diagrams Section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Integration Architecture</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Explore how NexDyne's solutions integrate with your existing federal infrastructure. Click on any layer to see detailed implementation approaches.
+            </p>
+          </div>
+          <ArchitectureDiagram />
+        </div>
+      </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
+      <section className="py-20 bg-secondary/30">       <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Proven Federal Success Stories</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
