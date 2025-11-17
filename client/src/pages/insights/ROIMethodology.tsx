@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import RelatedArticles from '@/components/RelatedArticles';
 import { ArrowRight, Download, User, Clock, Share2 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -259,6 +260,8 @@ export default function ROIMethodology() {
           </Link>
         </div>
       </section>
+
+      <RelatedArticles currentArticleHref="/insights/roi-methodology" />
 
       <Footer />
     </div>

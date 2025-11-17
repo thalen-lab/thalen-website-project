@@ -298,3 +298,13 @@
 - [x] Link author names from blog posts to their profile pages
 - [x] Add routes for all author profile pages in App.tsx
 - [x] Test all author profile pages and navigation
+
+## Phase 42: Implement Related Articles Recommendations
+- [x] Create shared insights data file for reusability across pages
+- [x] Create recommendation algorithm based on matching tags and categories
+- [x] Create RelatedArticles component with card layout
+- [x] Add related articles section to all 6 blog post pages
+- [x] Ensure current article is excluded from recommendations
+- [x] Prioritize articles with matching tags over matching categories
+- [x] Limit recommendations to 3-4 articles
+- [x] Test recommendations on all blog post pages

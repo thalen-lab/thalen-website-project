@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import RelatedArticles from '@/components/RelatedArticles';
 import { ArrowRight, Download, Cloud, Network, Shield, CheckCircle2 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -350,6 +351,8 @@ export default function MultiCloudStrategy() {
           </div>
         </div>
       </section>
+
+      <RelatedArticles currentArticleHref="/insights/multi-cloud" />
 
       <Footer />
     </div>
