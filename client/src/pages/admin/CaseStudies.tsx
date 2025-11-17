@@ -33,6 +33,7 @@ import {
 import { Plus, Search, Edit, Trash2, Eye } from 'lucide-react';
 import { toast } from 'sonner';
 import { format } from 'date-fns';
+import { ImportExportButtons } from '@/components/ImportExportButtons';
 
 export default function AdminCaseStudies() {
   const [statusFilter, setStatusFilter] = useState<'draft' | 'published' | 'archived' | 'all'>('all');
@@ -55,6 +56,14 @@ export default function AdminCaseStudies() {
     },
     onError: (error) => {
       toast.error(`Failed to delete case study: ${error.message}`);
+    },
+  });
+
+  const utils = trpc.useUtils();
+  
+  const importMutation = trpc.admin.caseStudies.import.useMutation({
+    onSuccess: () => {
+      refetch();
     },
   });
 
@@ -150,12 +159,23 @@ export default function AdminCaseStudies() {
             Manage your case studies and client success stories
           </p>
         </div>
-        <Link href="/admin/case-studies/new">
-          <Button className="bg-orange-gradient hover:opacity-90">
-            <Plus className="h-4 w-4 mr-2" />
-            New Case Study
-          </Button>
-        </Link>
+        <div className="flex gap-2">
+          <ImportExportButtons
+            onExport={async (format) => {
+              return await utils.admin.caseStudies.export.fetch({ format });
+            }}
+            onImport={async (format, data) => {
+              return await importMutation.mutateAsync({ format, data });
+            }}
+            contentType="case studies"
+          />
+          <Link href="/admin/case-studies/new">
+            <Button className="bg-orange-gradient hover:opacity-90">
+              <Plus className="h-4 w-4 mr-2" />
+              New Case Study
+            </Button>
+          </Link>
+        </div>
       </div>
 
       {/* Filters and Bulk Actions */}

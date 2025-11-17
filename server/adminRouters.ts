@@ -164,6 +164,90 @@ export const adminRouter = router({
         
         return { success: true, count: input.ids.length };
       }),
+
+    export: adminProcedure
+      .input(z.object({ format: z.enum(["csv", "json"]) }))
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return { data: "" };
+        
+        const posts = await db.select().from(blogPosts).orderBy(desc(blogPosts.createdAt));
+        
+        if (input.format === "json") {
+          return { data: JSON.stringify(posts, null, 2) };
+        } else {
+          // CSV format
+          if (posts.length === 0) return { data: "" };
+          
+          const headers = Object.keys(posts[0]).join(",");
+          const rows = posts.map(post => 
+            Object.values(post).map(val => 
+              typeof val === "string" && val.includes(",") ? `"${val}"` : val
+            ).join(",")
+          );
+          
+          return { data: [headers, ...rows].join("\n") };
+        }
+      }),
+
+    import: adminProcedure
+      .input(z.object({
+        format: z.enum(["csv", "json"]),
+        data: z.string(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        let posts: any[] = [];
+        
+        try {
+          if (input.format === "json") {
+            posts = JSON.parse(input.data);
+          } else {
+            // Parse CSV
+            const lines = input.data.split("\n").filter(line => line.trim());
+            if (lines.length < 2) throw new Error("Invalid CSV format");
+            
+            const headers = lines[0].split(",");
+            posts = lines.slice(1).map(line => {
+              const values = line.split(",");
+              const post: any = {};
+              headers.forEach((header, i) => {
+                post[header.trim()] = values[i]?.replace(/^"|"$/g, "") || null;
+              });
+              return post;
+            });
+          }
+          
+          // Validate and insert posts
+          let imported = 0;
+          for (const post of posts) {
+            // Skip if ID exists (to avoid duplicates)
+            if (post.id) {
+              const existing = await db.select().from(blogPosts).where(eq(blogPosts.id, post.id)).limit(1);
+              if (existing.length > 0) continue;
+            }
+            
+            // Remove id field for insert
+            const { id, createdAt, updatedAt, ...postData } = post;
+            
+            await db.insert(blogPosts).values({
+              ...postData,
+              createdBy: ctx.user.id,
+              publishedAt: postData.status === "published" ? new Date() : null,
+            });
+            imported++;
+          }
+          
+          return { success: true, imported, total: posts.length };
+        } catch (error: any) {
+          throw new TRPCError({ 
+            code: "BAD_REQUEST", 
+            message: `Import failed: ${error.message}` 
+          });
+        }
+      }),
   }),
 
   // Case Studies Management
@@ -318,6 +402,90 @@ export const adminRouter = router({
         
         return { success: true, count: input.ids.length };
       }),
+
+    export: adminProcedure
+      .input(z.object({ format: z.enum(["csv", "json"]) }))
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return { data: "" };
+        
+        const studies = await db.select().from(caseStudies).orderBy(desc(caseStudies.createdAt));
+        
+        if (input.format === "json") {
+          return { data: JSON.stringify(studies, null, 2) };
+        } else {
+          // CSV format
+          if (studies.length === 0) return { data: "" };
+          
+          const headers = Object.keys(studies[0]).join(",");
+          const rows = studies.map(study => 
+            Object.values(study).map(val => 
+              typeof val === "string" && val.includes(",") ? `"${val}"` : val
+            ).join(",")
+          );
+          
+          return { data: [headers, ...rows].join("\n") };
+        }
+      }),
+
+    import: adminProcedure
+      .input(z.object({
+        format: z.enum(["csv", "json"]),
+        data: z.string(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        let studies: any[] = [];
+        
+        try {
+          if (input.format === "json") {
+            studies = JSON.parse(input.data);
+          } else {
+            // Parse CSV
+            const lines = input.data.split("\n").filter(line => line.trim());
+            if (lines.length < 2) throw new Error("Invalid CSV format");
+            
+            const headers = lines[0].split(",");
+            studies = lines.slice(1).map(line => {
+              const values = line.split(",");
+              const study: any = {};
+              headers.forEach((header, i) => {
+                study[header.trim()] = values[i]?.replace(/^"|"$/g, "") || null;
+              });
+              return study;
+            });
+          }
+          
+          // Validate and insert studies
+          let imported = 0;
+          for (const study of studies) {
+            // Skip if ID exists (to avoid duplicates)
+            if (study.id) {
+              const existing = await db.select().from(caseStudies).where(eq(caseStudies.id, study.id)).limit(1);
+              if (existing.length > 0) continue;
+            }
+            
+            // Remove id field for insert
+            const { id, createdAt, updatedAt, ...studyData } = study;
+            
+            await db.insert(caseStudies).values({
+              ...studyData,
+              createdBy: ctx.user.id,
+              publishedAt: studyData.status === "published" ? new Date() : null,
+            });
+            imported++;
+          }
+          
+          return { success: true, imported, total: studies.length };
+        } catch (error: any) {
+          throw new TRPCError({ 
+            code: "BAD_REQUEST", 
+            message: `Import failed: ${error.message}` 
+          });
+        }
+      }),
   }),
 
   // Events Management
@@ -461,6 +629,89 @@ export const adminRouter = router({
         await db.delete(events).where(inArray(events.id, input.ids));
         
         return { success: true, count: input.ids.length };
+      }),
+
+    export: adminProcedure
+      .input(z.object({ format: z.enum(["csv", "json"]) }))
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return { data: "" };
+        
+        const eventsList = await db.select().from(events).orderBy(desc(events.createdAt));
+        
+        if (input.format === "json") {
+          return { data: JSON.stringify(eventsList, null, 2) };
+        } else {
+          // CSV format
+          if (eventsList.length === 0) return { data: "" };
+          
+          const headers = Object.keys(eventsList[0]).join(",");
+          const rows = eventsList.map(event => 
+            Object.values(event).map(val => 
+              typeof val === "string" && val.includes(",") ? `"${val}"` : val
+            ).join(",")
+          );
+          
+          return { data: [headers, ...rows].join("\n") };
+        }
+      }),
+
+    import: adminProcedure
+      .input(z.object({
+        format: z.enum(["csv", "json"]),
+        data: z.string(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const db = await getDb();
+        if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+        
+        let eventsList: any[] = [];
+        
+        try {
+          if (input.format === "json") {
+            eventsList = JSON.parse(input.data);
+          } else {
+            // Parse CSV
+            const lines = input.data.split("\n").filter(line => line.trim());
+            if (lines.length < 2) throw new Error("Invalid CSV format");
+            
+            const headers = lines[0].split(",");
+            eventsList = lines.slice(1).map(line => {
+              const values = line.split(",");
+              const event: any = {};
+              headers.forEach((header, i) => {
+                event[header.trim()] = values[i]?.replace(/^"|"$/g, "") || null;
+              });
+              return event;
+            });
+          }
+          
+          // Validate and insert events
+          let imported = 0;
+          for (const event of eventsList) {
+            // Skip if ID exists (to avoid duplicates)
+            if (event.id) {
+              const existing = await db.select().from(events).where(eq(events.id, event.id)).limit(1);
+              if (existing.length > 0) continue;
+            }
+            
+            // Remove id field for insert
+            const { id, createdAt, updatedAt, ...eventData } = event;
+            
+            await db.insert(events).values({
+              ...eventData,
+              createdBy: ctx.user.id,
+            });
+            imported++;
+          }
+          
+          return { success: true, imported, total: eventsList.length };
+        } catch (error: any) {
+          throw new TRPCError({ 
+            code: "BAD_REQUEST", 
+            message: `Import failed: ${error.message}` 
+          });
+        }
       }),
   }),
 

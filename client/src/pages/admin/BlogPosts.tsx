@@ -33,6 +33,7 @@ import {
 import { Plus, Search, Edit, Trash2, Eye, CheckSquare, Square } from 'lucide-react';
 import { toast } from 'sonner';
 import { format } from 'date-fns';
+import { ImportExportButtons } from '@/components/ImportExportButtons';
 
 export default function AdminBlogPosts() {
   const [statusFilter, setStatusFilter] = useState<'draft' | 'published' | 'archived' | 'all'>('all');
@@ -67,6 +68,14 @@ export default function AdminBlogPosts() {
     },
     onError: (error) => {
       toast.error(`Failed to update blog posts: ${error.message}`);
+    },
+  });
+
+  const utils = trpc.useUtils();
+  
+  const importMutation = trpc.admin.blogPosts.import.useMutation({
+    onSuccess: () => {
+      refetch();
     },
   });
 
@@ -150,12 +159,23 @@ export default function AdminBlogPosts() {
             Manage your blog content and articles
           </p>
         </div>
-        <Link href="/admin/blog-posts/new">
-          <Button className="bg-orange-gradient hover:opacity-90">
-            <Plus className="h-4 w-4 mr-2" />
-            New Blog Post
-          </Button>
-        </Link>
+        <div className="flex gap-2">
+          <ImportExportButtons
+            onExport={async (format) => {
+              return await utils.admin.blogPosts.export.fetch({ format });
+            }}
+            onImport={async (format, data) => {
+              return await importMutation.mutateAsync({ format, data });
+            }}
+            contentType="blog posts"
+          />
+          <Link href="/admin/blog-posts/new">
+            <Button className="bg-orange-gradient hover:opacity-90">
+              <Plus className="h-4 w-4 mr-2" />
+              New Blog Post
+            </Button>
+          </Link>
+        </div>
       </div>
 
       {/* Filters and Bulk Actions */}

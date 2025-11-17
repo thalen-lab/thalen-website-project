@@ -427,3 +427,18 @@
 - [x] Update Events.tsx with checkbox selection and bulk action toolbar
 - [x] Test bulk publish, archive, and delete operations
 - [x] Add confirmation dialogs for bulk delete operations
+
+## Phase 55: Import/Export Functionality
+- [x] Add export API endpoints for blog posts (CSV and JSON)
+- [x] Add export API endpoints for case studies (CSV and JSON)
+- [x] Add export API endpoints for events (CSV and JSON)
+- [x] Add import API endpoints with validation for blog posts
+- [x] Add import API endpoints with validation for case studies
+- [x] Add import API endpoints with validation for events
+- [x] Create ImportExportButtons component for reusable UI
+- [x] Add import/export buttons to BlogPosts.tsx
+- [x] Add import/export buttons to CaseStudies.tsx
+- [x] Add import/export buttons to Events.tsx
+- [x] Test CSV export and import with sample data
+- [x] Test JSON export and import with sample data
+- [x] Add error handling and validation feedback

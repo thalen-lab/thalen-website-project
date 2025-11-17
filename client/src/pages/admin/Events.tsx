@@ -33,6 +33,7 @@ import {
 import { Plus, Search, Edit, Trash2, Eye } from 'lucide-react';
 import { toast } from 'sonner';
 import { format } from 'date-fns';
+import { ImportExportButtons } from '@/components/ImportExportButtons';
 
 export default function AdminEvents() {
   const [statusFilter, setStatusFilter] = useState<'upcoming' | 'ongoing' | 'completed' | 'cancelled' | 'all'>('all');
@@ -55,6 +56,14 @@ export default function AdminEvents() {
     },
     onError: (error) => {
       toast.error(`Failed to delete event: ${error.message}`);
+    },
+  });
+
+  const utils = trpc.useUtils();
+  
+  const importMutation = trpc.admin.events.import.useMutation({
+    onSuccess: () => {
+      refetch();
     },
   });
 
@@ -151,12 +160,23 @@ export default function AdminEvents() {
             Manage webinars, conferences, and other events
           </p>
         </div>
-        <Link href="/admin/events/new">
-          <Button className="bg-orange-gradient hover:opacity-90">
-            <Plus className="h-4 w-4 mr-2" />
-            New Event
-          </Button>
-        </Link>
+        <div className="flex gap-2">
+          <ImportExportButtons
+            onExport={async (format) => {
+              return await utils.admin.events.export.fetch({ format });
+            }}
+            onImport={async (format, data) => {
+              return await importMutation.mutateAsync({ format, data });
+            }}
+            contentType="events"
+          />
+          <Link href="/admin/events/new">
+            <Button className="bg-orange-gradient hover:opacity-90">
+              <Plus className="h-4 w-4 mr-2" />
+              New Event
+            </Button>
+          </Link>
+        </div>
       </div>
 
       {/* Filters and Bulk Actions */}
