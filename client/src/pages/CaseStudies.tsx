@@ -4,12 +4,26 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Search, X } from 'lucide-react';
+import { ArrowRight, Search, X, Bookmark } from 'lucide-react';
+import SaveSearchDialog from '@/components/SaveSearchDialog';
+import SavedSearchesDropdown from '@/components/SavedSearchesDropdown';
+import { trpc } from '@/lib/trpc';
 
 export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedService, setSelectedService] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
+
+  const { data: user } = trpc.auth.me.useQuery();
+
+  const hasActiveFilters = searchQuery !== '' || selectedIndustry !== 'All' || selectedService !== 'All';
+
+  const handleLoadSearch = (search: { searchQuery: string; industry: string; service: string }) => {
+    setSearchQuery(search.searchQuery);
+    setSelectedIndustry(search.industry);
+    setSelectedService(search.service);
+  };
 
   const caseStudies = [
     {
@@ -176,7 +190,8 @@ export default function CaseStudies() {
         <div className="container">
           {/* Search Bar */}
           <div className="mb-8">
-            <div className="relative max-w-2xl">
+            <div className="flex gap-3 items-start">
+              <div className="relative flex-1 max-w-2xl">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <input
                 type="text"
@@ -194,6 +209,21 @@ export default function CaseStudies() {
                   <X className="h-5 w-5" />
                 </button>
               )}
+              </div>
+              
+              {/* Save/Load Search Buttons */}
+              <div className="flex gap-2">
+                {user && <SavedSearchesDropdown onLoadSearch={handleLoadSearch} />}
+                {user && hasActiveFilters && (
+                  <Button
+                    variant="outline"
+                    onClick={() => setSaveDialogOpen(true)}
+                  >
+                    <Bookmark className="h-4 w-4 mr-2" />
+                    Save Search
+                  </Button>
+                )}
+              </div>
             </div>
           </div>
 
@@ -325,6 +355,15 @@ export default function CaseStudies() {
       </section>
 
       <Footer />
+      
+      {/* Save Search Dialog */}
+      <SaveSearchDialog
+        open={saveDialogOpen}
+        onOpenChange={setSaveDialogOpen}
+        searchQuery={searchQuery}
+        industry={selectedIndustry}
+        service={selectedService}
+      />
     </div>
   );
 }

@@ -359,3 +359,15 @@
 - [x] Add search icon and clear button to search input
 - [x] Test search functionality with various keywords
 - [x] Verify search works with filter combinations
+
+## Phase 48: Implement Save Search Functionality
+- [x] Create database schema for saved_searches table (id, userId, name, searchQuery, industry, service, createdAt)
+- [x] Add database migration for saved_searches table
+- [x] Create tRPC router for saved search operations (create, list, delete)
+- [x] Add "Save Search" button to case studies page (visible when filters/search active)
+- [x] Create save search dialog/modal for naming saved searches
+- [x] Add "Saved Searches" dropdown menu to quickly load saved combinations
+- [x] Implement authentication check (only logged-in users can save searches)
+- [x] Add delete option for each saved search in dropdown
+- [x] Test saving, loading, and deleting saved searches
+- [x] Verify saved searches persist across sessions

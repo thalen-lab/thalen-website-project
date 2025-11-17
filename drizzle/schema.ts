@@ -53,3 +53,24 @@ export type Comment = typeof comments.$inferSelect;
 export type InsertComment = typeof comments.$inferInsert;
 
 // TODO: Add your tables here
+/**
+ * Saved searches table for case study filtering.
+ * Allows users to save their favorite search/filter combinations for quick access.
+ */
+export const savedSearches = mysqlTable("saved_searches", {
+  id: int("id").autoincrement().primaryKey(),
+  /** User ID from users table */
+  userId: int("userId").notNull(),
+  /** User-defined name for the saved search */
+  name: varchar("name", { length: 255 }).notNull(),
+  /** Search query string (can be empty) */
+  searchQuery: varchar("searchQuery", { length: 255 }).default(""),
+  /** Selected industry filter */
+  industry: varchar("industry", { length: 100 }).default("All"),
+  /** Selected service filter */
+  service: varchar("service", { length: 100 }).default("All"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type SavedSearch = typeof savedSearches.$inferSelect;
+export type InsertSavedSearch = typeof savedSearches.$inferInsert;

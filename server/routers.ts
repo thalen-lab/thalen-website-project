@@ -5,7 +5,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { notifyOwner } from "./_core/notification";
 import { getDb } from "./db";
-import { comments } from "../drizzle/schema";
+import { comments, savedSearches } from "../drizzle/schema";
 import { eq, and, isNull, desc } from "drizzle-orm";
 
 export const appRouter = router({
@@ -110,6 +110,81 @@ export const appRouter = router({
         }
 
         await db.delete(comments).where(eq(comments.id, input.commentId));
+
+        return { success: true };
+      }),
+  }),
+
+  savedSearches: router({
+    // Get all saved searches for the current user
+    list: publicProcedure.query(async ({ ctx }) => {
+      if (!ctx.user) return [];
+      
+      const db = await getDb();
+      if (!db) return [];
+      
+      const searches = await db
+        .select()
+        .from(savedSearches)
+        .where(eq(savedSearches.userId, ctx.user.id))
+        .orderBy(desc(savedSearches.createdAt));
+      
+      return searches;
+    }),
+
+    // Create a new saved search
+    create: publicProcedure
+      .input(
+        z.object({
+          name: z.string().min(1, "Name is required"),
+          searchQuery: z.string().default(""),
+          industry: z.string().default("All"),
+          service: z.string().default("All"),
+        })
+      )
+      .mutation(async ({ input, ctx }) => {
+        if (!ctx.user) {
+          throw new Error("You must be logged in to save searches");
+        }
+
+        const db = await getDb();
+        if (!db) {
+          throw new Error("Database not available");
+        }
+
+        const result = await db.insert(savedSearches).values({
+          userId: ctx.user.id,
+          name: input.name,
+          searchQuery: input.searchQuery,
+          industry: input.industry,
+          service: input.service,
+        });
+
+        return { success: true, id: Number((result as any).insertId || 0) };
+      }),
+
+    // Delete a saved search
+    delete: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input, ctx }) => {
+        if (!ctx.user) {
+          throw new Error("You must be logged in to delete saved searches");
+        }
+
+        const db = await getDb();
+        if (!db) {
+          throw new Error("Database not available");
+        }
+
+        // Only allow users to delete their own saved searches
+        await db
+          .delete(savedSearches)
+          .where(
+            and(
+              eq(savedSearches.id, input.id),
+              eq(savedSearches.userId, ctx.user.id)
+            )
+          );
 
         return { success: true };
       }),
