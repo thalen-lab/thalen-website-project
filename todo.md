@@ -251,3 +251,18 @@
 - [x] Create /insights landing page showcasing all blog posts/insights
 - [x] Add /insights route to App.tsx
 - [x] Test insights route and verify it loads correctly
+
+## Phase 37: Add Insights Link to Navigation Menu
+- [x] Add "Insights" link to main navigation menu in Navigation component (already exists)
+- [x] Test navigation link and verify it works correctly
+
+## Phase 38: Create Individual Blog Post Pages
+- [x] Create /insights/roi-methodology blog post page with full content
+- [x] Create /insights/zero-trust blog post page with full content
+- [x] Create /insights/responsible-ai blog post page with full content
+- [x] Create /insights/multi-cloud blog post page with full content
+- [x] Create /insights/change-management blog post page with full content
+- [x] Create /insights/real-time-analytics blog post page with full content
+- [x] Update Insights page to link to individual blog post pages
+- [x] Add routes for all blog post pages in App.tsx
+- [x] Test all blog post pages and navigation

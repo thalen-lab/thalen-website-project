@@ -14,7 +14,8 @@ export default function Insights() {
       author: 'Sarah Chen',
       date: 'Nov 10, 2024',
       readTime: '8 min read',
-      tags: ['ROI', 'Strategy', 'Automation']
+      tags: ['ROI', 'Strategy', 'Automation'],
+      href: '/insights/roi-methodology'
     },
     {
       category: 'Cybersecurity',
@@ -23,7 +24,8 @@ export default function Insights() {
       author: 'Michael Rodriguez',
       date: 'Nov 8, 2024',
       readTime: '10 min read',
-      tags: ['Security', 'Federal', 'Compliance']
+      tags: ['Security', 'Federal', 'Compliance'],
+      href: '/insights/zero-trust'
     },
     {
       category: 'AI & Machine Learning',
@@ -32,7 +34,8 @@ export default function Insights() {
       author: 'Dr. Jennifer Park',
       date: 'Nov 5, 2024',
       readTime: '12 min read',
-      tags: ['AI', 'Ethics', 'Government']
+      tags: ['AI', 'Ethics', 'Government'],
+      href: '/insights/responsible-ai'
     },
     {
       category: 'Cloud Modernization',
@@ -41,7 +44,8 @@ export default function Insights() {
       author: 'David Thompson',
       date: 'Nov 1, 2024',
       readTime: '9 min read',
-      tags: ['Cloud', 'Strategy', 'Architecture']
+      tags: ['Cloud', 'Strategy', 'Architecture'],
+      href: '/insights/multi-cloud'
     },
     {
       category: 'Digital Transformation',
@@ -50,7 +54,8 @@ export default function Insights() {
       author: 'Lisa Martinez',
       date: 'Oct 28, 2024',
       readTime: '11 min read',
-      tags: ['Transformation', 'Change Management', 'Leadership']
+      tags: ['Transformation', 'Change Management', 'Leadership'],
+      href: '/insights/change-management'
     },
     {
       category: 'Data Analytics',
@@ -59,7 +64,8 @@ export default function Insights() {
       author: 'James Wilson',
       date: 'Oct 25, 2024',
       readTime: '10 min read',
-      tags: ['Analytics', 'Big Data', 'Architecture']
+      tags: ['Analytics', 'Big Data', 'Architecture'],
+      href: '/insights/real-time-analytics'
     }
   ];
 
@@ -123,38 +129,40 @@ export default function Insights() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {insights.map((insight, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all flex flex-col">
-                <CardContent className="p-8 flex flex-col flex-1">
-                  <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
-                    {insight.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
+              <Link key={index} href={insight.href}>
+                <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer">
+                  <CardContent className="p-8 flex flex-col flex-1">
+                    <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                      {insight.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
 
-                  <div className="flex items-center text-sm text-muted-foreground mb-4">
-                    <User className="h-4 w-4 mr-2" />
-                    <span className="mr-4">{insight.author}</span>
-                    <Clock className="h-4 w-4 mr-2" />
-                    <span>{insight.readTime}</span>
-                  </div>
+                    <div className="flex items-center text-sm text-muted-foreground mb-4">
+                      <User className="h-4 w-4 mr-2" />
+                      <span className="mr-4">{insight.author}</span>
+                      <Clock className="h-4 w-4 mr-2" />
+                      <span>{insight.readTime}</span>
+                    </div>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {insight.tags.map((tag, idx) => (
-                      <span key={idx} className="text-xs bg-background px-3 py-1 rounded-full border border-border">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {insight.tags.map((tag, idx) => (
+                        <span key={idx} className="text-xs bg-background px-3 py-1 rounded-full border border-border">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">{insight.date}</span>
-                    <Button variant="ghost" size="sm" className="group-hover:text-accent">
-                      Read More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground">{insight.date}</span>
+                      <Button variant="ghost" size="sm" className="group-hover:text-accent">
+                        Read More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
