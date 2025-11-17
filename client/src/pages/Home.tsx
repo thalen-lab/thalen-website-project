@@ -73,7 +73,7 @@ export default function Home() {
       icon: Code,
       title: 'Application Development & Integration',
       description: 'Custom applications, seamless integrations, and workflow automation for enhanced productivity.',
-      href: '/services/app-development',
+      href: '/services/application-development',
       stats: ['API Development', 'Microservices']
     },
     {

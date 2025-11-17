@@ -1,7 +1,8 @@
-import { CheckCircle2, Code2, Zap, Shield, GitBranch, Lock, Rocket } from "lucide-react";
+import { Code2, Zap, Rocket, Shield, GitBranch, Lock, CheckCircle2, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function ApplicationDevelopment() {
   const services = [
@@ -143,37 +144,31 @@ export default function ApplicationDevelopment() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white border-2 border-border rounded-lg p-8 hover:border-accent transition-all duration-300 hover:shadow-lg"
-                >
-                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-accent" />
-                  </div>
-                  
-                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+            {services.map((service, index) => (
+              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
+                <CardContent className="p-8">
+                  <service.icon className="h-16 w-16 text-accent mb-6" />
+                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p className="text-muted-foreground mb-6">{service.description}</p>
                   
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <li key={idx} className="flex items-start text-sm">
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link href={service.link}>
-                    <Button variant="outline" className="w-full border-dashed">
-                      Learn More →
+                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
-                </div>
-              );
-            })}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
