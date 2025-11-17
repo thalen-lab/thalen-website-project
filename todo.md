@@ -497,3 +497,16 @@
 - [x] Update all 6 cloud service subpages with full website layout
 - [x] Test navigation menu and footer links on cloud pages
 - [x] Verify responsive design and styling consistency
+
+## Phase 61: Update Cloud Infrastructure Pages Design Consistency
+- [x] Review Intelligent Automation page design patterns
+- [x] Review Data Analytics page design patterns
+- [x] Identify design differences between cloud pages and other service pages
+- [x] Update Cloud Infrastructure main page to match design consistency
+- [x] Update Cloud Migration subpage design
+- [x] Update Cloud Optimization subpage design
+- [x] Update Multi-Cloud subpage design
+- [x] Update Cloud Security subpage design
+- [x] Update Infrastructure as Code subpage design
+- [x] Update Disaster Recovery subpage design
+- [x] Test visual consistency across all service pages

@@ -1,216 +1,180 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Cloud,
-  Shield,
-  Zap,
-  CheckCircle2,
-  ArrowRight,
-  Database,
-  Server,
-  Lock,
-  Clock,
-} from "lucide-react";
-import { Link } from "wouter";
+import { Link } from 'wouter';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { ArrowRight, CheckCircle2, Cloud, Shield, Zap, Database, Clock, Server, Lock, RefreshCw } from 'lucide-react';
 
 export default function CloudMigration() {
   const benefits = [
     {
       icon: Zap,
-      title: "Zero Downtime Migration",
-      description: "Proven strategies ensuring 99.99% uptime during transition with automated failover and rollback capabilities.",
+      title: 'Zero Downtime Migration',
+      description: 'Proven strategies ensuring 99.99% uptime during transition with automated failover and rollback capabilities for mission-critical federal systems.'
     },
     {
       icon: Shield,
-      title: "FedRAMP Compliant",
-      description: "End-to-end migration to FedRAMP High, Moderate, or Low authorized cloud environments with continuous compliance monitoring.",
+      title: 'FedRAMP Compliant Process',
+      description: 'End-to-end migration to FedRAMP High, Moderate, or Low authorized cloud environments with continuous compliance monitoring and ATO support.'
     },
     {
       icon: Database,
-      title: "Complete Data Integrity",
-      description: "Automated validation and verification processes ensuring 100% data accuracy and consistency throughout migration.",
-    },
-    {
-      icon: Clock,
-      title: "Rapid Deployment",
-      description: "30-day migration framework vs. industry average of 6-12 months, accelerating your cloud transformation timeline.",
-    },
+      title: 'Complete Data Integrity',
+      description: 'Automated validation and verification processes ensuring 100% data accuracy and consistency throughout migration with audit trails.'
+    }
   ];
 
   const process = [
     {
-      step: "01",
-      title: "Assessment & Planning",
-      description: "Comprehensive analysis of current infrastructure, applications, and dependencies with detailed migration roadmap.",
-      deliverables: ["Infrastructure inventory", "Dependency mapping", "Risk assessment", "Migration strategy document"],
+      step: '01',
+      title: 'Assessment & Planning',
+      description: 'Comprehensive analysis of current infrastructure, applications, and dependencies with detailed migration roadmap and risk assessment.',
+      deliverables: ['Infrastructure inventory', 'Dependency mapping', 'Risk assessment', 'Migration strategy document']
     },
     {
-      step: "02",
-      title: "Architecture Design",
-      description: "Design target cloud architecture optimized for performance, security, and cost-efficiency with FedRAMP compliance.",
-      deliverables: ["Cloud architecture diagrams", "Security controls matrix", "Cost optimization plan", "Disaster recovery design"],
+      step: '02',
+      title: 'Architecture Design',
+      description: 'Design target cloud architecture optimized for performance, security, and cost-efficiency with FedRAMP compliance built-in.',
+      deliverables: ['Cloud architecture diagrams', 'Security controls matrix', 'Cost optimization plan', 'Disaster recovery design']
     },
     {
-      step: "03",
-      title: "Migration Execution",
-      description: "Phased migration with automated tools, continuous monitoring, and real-time validation ensuring zero data loss.",
-      deliverables: ["Automated migration scripts", "Validation reports", "Performance benchmarks", "Rollback procedures"],
+      step: '03',
+      title: 'Migration Execution',
+      description: 'Phased migration with automated tools, continuous monitoring, and real-time validation ensuring zero data loss and operational continuity.',
+      deliverables: ['Automated migration scripts', 'Validation reports', 'Performance benchmarks', 'Rollback procedures']
     },
     {
-      step: "04",
-      title: "Optimization & Handoff",
-      description: "Post-migration optimization, performance tuning, and comprehensive knowledge transfer to your team.",
-      deliverables: ["Performance optimization report", "Operations runbooks", "Training materials", "Support transition plan"],
-    },
+      step: '04',
+      title: 'Optimization & Handoff',
+      description: 'Post-migration optimization, performance tuning, and comprehensive knowledge transfer to your team with ongoing support.',
+      deliverables: ['Performance optimization report', 'Operations runbooks', 'Training materials', 'Support transition plan']
+    }
   ];
 
   const migrationTypes = [
     {
-      title: "Rehost (Lift & Shift)",
-      description: "Rapidly migrate applications to cloud with minimal changes, ideal for time-sensitive migrations.",
-      useCase: "Legacy systems requiring quick cloud adoption",
+      title: 'Rehost (Lift & Shift)',
+      description: 'Rapidly migrate applications to cloud with minimal changes, ideal for time-sensitive migrations and legacy system modernization.',
+      useCase: 'Legacy systems requiring quick cloud adoption',
+      icon: Server
     },
     {
-      title: "Replatform",
-      description: "Optimize applications during migration by leveraging cloud-native services without full redesign.",
-      useCase: "Applications needing performance improvements",
+      title: 'Replatform',
+      description: 'Optimize applications during migration by leveraging cloud-native services without full redesign for improved performance.',
+      useCase: 'Applications needing performance improvements',
+      icon: RefreshCw
     },
     {
-      title: "Refactor/Re-architect",
-      description: "Redesign applications to fully leverage cloud-native capabilities for maximum efficiency.",
-      useCase: "Critical systems requiring modernization",
+      title: 'Refactor/Re-architect',
+      description: 'Redesign applications to fully leverage cloud-native capabilities for maximum efficiency, scalability, and cost optimization.',
+      useCase: 'Critical systems requiring modernization',
+      icon: Cloud
     },
     {
-      title: "Hybrid Migration",
-      description: "Maintain on-premises infrastructure while migrating select workloads to cloud environments.",
-      useCase: "Agencies with regulatory or operational constraints",
-    },
+      title: 'Hybrid Migration',
+      description: 'Maintain on-premises infrastructure while migrating select workloads to cloud environments for maximum flexibility.',
+      useCase: 'Agencies with regulatory or operational constraints',
+      icon: Lock
+    }
   ];
 
   const technologies = [
-    "AWS Migration Hub",
-    "Azure Migrate",
-    "Google Cloud Migrate",
-    "CloudEndure",
-    "Terraform",
-    "Ansible",
-    "Kubernetes",
-    "Docker",
+    'AWS Migration Hub', 'Azure Migrate', 'Google Cloud Migrate', 'CloudEndure',
+    'Terraform', 'Ansible', 'Kubernetes', 'Docker'
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
+          <nav className="text-sm mb-6 opacity-80">
+            <Link href="/services/cloud" className="hover:text-accent">Cloud Infrastructure & Modernization</Link>
+            <span className="mx-2">/</span>
+            <span>Cloud Migration & Transition</span>
+          </nav>
+          
           <div className="max-w-4xl">
-            <Link href="/services/cloud">
-              <Button variant="ghost" className="text-blue-200 hover:text-white mb-6 -ml-4">
-                <ArrowRight className="w-4 h-4 mr-2 rotate-180" />
-                Back to Cloud Services
-              </Button>
-            </Link>
-
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-2 mb-6">
-              <Cloud className="w-4 h-4" />
-              <span className="text-sm font-medium">Cloud Migration & Transition</span>
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+              FedRAMP Authorized • Zero Downtime Guaranteed
             </div>
-
-            <h1 className="text-5xl font-bold mb-6 leading-tight">
-              Seamless Cloud Migration with Zero Downtime
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Cloud Migration & Transition
             </h1>
-
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Migrate mission-critical systems to FedRAMP-compliant cloud environments with proven strategies 
-              that ensure complete data integrity, zero downtime, and accelerated timelines.
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              Migrate mission-critical systems to FedRAMP-compliant cloud environments with proven strategies that ensure complete data integrity, zero downtime, and accelerated timelines. NexDyne's migration framework reduces typical 6-12 month timelines to 30-60 days while maintaining 100% operational continuity.
             </p>
-
-            <Link href="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
                 Schedule Migration Assessment
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </Link>
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                Download Migration Guide
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Migration Benefits
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Proven migration strategies designed for federal mission success
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Choose NexDyne Migration</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Unlike commercial migration services, we understand federal compliance requirements, security clearances, and mission continuity imperatives.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-orange-500 hover:shadow-lg transition-all">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="grid md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="border-2 hover:border-accent transition-colors">
+                <CardContent className="p-8">
+                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Migration Process */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Migration Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Structured, repeatable methodology ensuring successful cloud transitions
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Migration Process</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Structured, repeatable methodology ensuring successful cloud transitions with zero business disruption.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {process.map((phase, index) => (
-              <Card key={index} className="border-2">
+              <Card key={index} className="relative overflow-hidden group hover:shadow-xl transition-shadow">
                 <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="text-4xl font-bold text-orange-500">{phase.step}</div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        {phase.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4">
-                        {phase.description}
-                      </p>
-                    </div>
+                  <div className="absolute top-0 right-0 text-8xl font-bold text-accent/10 -mr-4 -mt-4">
+                    {phase.step}
                   </div>
-                  
-                  <div className="border-t pt-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Deliverables:</h4>
-                    <ul className="space-y-1">
-                      {phase.deliverables.map((deliverable, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
-                          {deliverable}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="relative">
+                    <div className="text-5xl font-bold text-accent mb-2">{phase.step}</div>
+                    <h3 className="text-xl font-bold mb-2">{phase.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">{phase.description}</p>
+                    <div className="border-t pt-4">
+                      <h4 className="font-semibold mb-2">Key Deliverables:</h4>
+                      <ul className="space-y-2">
+                        {phase.deliverables.map((deliverable, idx) => (
+                          <li key={idx} className="flex items-start text-sm">
+                            <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                            <span>{deliverable}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -219,31 +183,26 @@ export default function CloudMigration() {
         </div>
       </section>
 
-      {/* Migration Types */}
-      <section className="py-20 bg-white">
+      {/* Migration Strategies */}
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Migration Strategies
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tailored approaches based on your agency's specific needs and constraints
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Migration Strategies</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Tailored approaches based on your agency's specific needs, constraints, and mission requirements.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {migrationTypes.map((type, index) => (
-              <Card key={index} className="border-2 hover:border-blue-500 hover:shadow-lg transition-all">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {type.title}
-                  </h3>
-                  <p className="text-gray-600 mb-3">
-                    {type.description}
-                  </p>
-                  <div className="bg-blue-50 border-l-4 border-blue-500 p-3 rounded">
-                    <p className="text-sm font-medium text-blue-900">
-                      <span className="text-blue-600">Best for:</span> {type.useCase}
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-xl transition-all">
+                <CardContent className="p-8">
+                  <type.icon className="h-12 w-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-3">{type.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{type.description}</p>
+                  <div className="bg-accent/10 border-l-4 border-accent p-3 rounded">
+                    <p className="text-sm font-medium">
+                      <span className="text-accent font-semibold">Best for:</span> {type.useCase}
                     </p>
                   </div>
                 </CardContent>
@@ -254,57 +213,45 @@ export default function CloudMigration() {
       </section>
 
       {/* Technologies */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
+      <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Migration Technologies & Tools
-            </h2>
-            <p className="text-xl text-blue-100 mb-12">
-              Enterprise-grade tools and automation for reliable, repeatable migrations
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Migration Technologies</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Enterprise-grade tools and platforms for secure, efficient cloud migration.
             </p>
+          </div>
 
-            <div className="flex flex-wrap gap-4 justify-center">
-              {technologies.map((tech, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg px-6 py-3"
-                >
-                  <span className="font-semibold">{tech}</span>
-                </div>
-              ))}
-            </div>
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {technologies.map((tech, index) => (
+              <span key={index} className="bg-card border-2 border-border px-6 py-3 rounded-lg font-semibold hover:border-accent transition-colors">
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Ready to Start Your Cloud Migration?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Schedule a complimentary migration assessment to discover how NexDyne can 
-              accelerate your cloud transition with zero downtime.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
-                  Schedule Assessment
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-              <Link href="/case-studies">
-                <Button size="lg" variant="outline">
-                  View Migration Case Studies
-                </Button>
-              </Link>
-            </div>
+      {/* CTA */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Migrate to the Cloud?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Start with a comprehensive migration assessment and discover how NexDyne can deliver zero-downtime cloud adoption with FedRAMP compliance.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              Schedule Migration Assessment
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              View Migration Case Studies
+            </Button>
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

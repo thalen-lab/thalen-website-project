@@ -1,143 +1,158 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { RefreshCw, Shield, Clock, CheckCircle2, ArrowRight, Database, Server } from "lucide-react";
-import { Link } from "wouter";
+import { Link } from 'wouter';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { ArrowRight, CheckCircle2, Shield, Clock, Database, RefreshCw, Server, Lock, AlertTriangle, FileCheck } from 'lucide-react';
 
 export default function DisasterRecovery() {
   const benefits = [
     {
       icon: Clock,
-      title: "Rapid Recovery",
-      description: "RTO of 1-4 hours and RPO of 15 minutes for mission-critical systems with automated failover.",
+      title: '< 15 Min RTO Guaranteed',
+      description: 'Recovery Time Objective (RTO) under 15 minutes for mission-critical systems with automated failover and tested recovery procedures.'
+    },
+    {
+      icon: Database,
+      title: 'Geo-Redundant Backups',
+      description: 'Multi-region backup replication across AWS, Azure, and Google Cloud with automated verification and compliance documentation.'
     },
     {
       icon: Shield,
-      title: "Data Protection",
-      description: "Multi-region backup with encryption at rest and in transit, ensuring complete data integrity.",
-    },
-    {
-      icon: RefreshCw,
-      title: "Automated Failover",
-      description: "Continuous health monitoring with automatic failover to secondary regions during outages.",
-    },
-    {
-      icon: Server,
-      title: "Business Continuity",
-      description: "Comprehensive BC/DR plans with regular testing and validation for mission assurance.",
-    },
+      title: 'FedRAMP-Compliant DR',
+      description: 'Disaster recovery architecture meeting FedRAMP High requirements with continuous monitoring and federal continuity standards.'
+    }
   ];
 
-  const strategies = [
+  const drCapabilities = [
     {
-      title: "Backup & Restore",
-      rto: "24 hours",
-      rpo: "24 hours",
-      description: "Cost-effective solution for non-critical systems with daily backups to cloud storage.",
+      title: 'Automated Failover',
+      icon: RefreshCw,
+      description: 'Intelligent traffic routing and automated failover across cloud providers and regions ensuring continuous availability.',
+      features: [
+        'Health monitoring and automated detection',
+        'DNS-based traffic routing',
+        'Application-level failover',
+        'Database replication and sync'
+      ]
     },
     {
-      title: "Pilot Light",
-      rto: "4-8 hours",
-      rpo: "1 hour",
-      description: "Minimal infrastructure running in DR site, rapidly scaled during disaster events.",
+      title: 'Backup & Recovery',
+      icon: Database,
+      description: 'Automated backup with point-in-time recovery, geo-redundant storage, and compliance-ready retention policies.',
+      features: [
+        'Automated backup scheduling',
+        'Point-in-time recovery (PITR)',
+        'Cross-region replication',
+        'Backup verification testing'
+      ]
     },
     {
-      title: "Warm Standby",
-      rto: "1-4 hours",
-      rpo: "15 minutes",
-      description: "Scaled-down version of production running continuously with real-time data replication.",
+      title: 'Business Continuity',
+      icon: Server,
+      description: 'Comprehensive business continuity planning with documented procedures, regular testing, and compliance validation.',
+      features: [
+        'Business impact analysis (BIA)',
+        'Recovery procedure documentation',
+        'Regular DR testing and drills',
+        'Compliance reporting'
+      ]
     },
     {
-      title: "Hot Standby (Active-Active)",
-      rto: "Minutes",
-      rpo: "Near-zero",
-      description: "Full production environment running in multiple regions with automatic load balancing.",
+      title: 'Security & Compliance',
+      icon: Lock,
+      description: 'Encrypted backups, access controls, and audit trails meeting federal security and privacy requirements.',
+      features: [
+        'Encryption at rest and in transit',
+        'Role-based access control',
+        'Audit logging and monitoring',
+        'Compliance documentation'
+      ]
+    }
+  ];
+
+  const drStrategies = [
+    {
+      title: 'Hot Standby (Active-Active)',
+      rto: '< 1 minute',
+      rpo: 'Near-zero',
+      description: 'Fully redundant infrastructure running in multiple regions with real-time synchronization for mission-critical systems.',
+      useCase: 'Mission-critical systems requiring continuous availability'
     },
+    {
+      title: 'Warm Standby (Active-Passive)',
+      rto: '< 15 minutes',
+      rpo: '< 5 minutes',
+      description: 'Scaled-down infrastructure in secondary region with automated scaling and failover for rapid recovery.',
+      useCase: 'Production systems with moderate recovery requirements'
+    },
+    {
+      title: 'Cold Standby (Backup & Restore)',
+      rto: '< 4 hours',
+      rpo: '< 1 hour',
+      description: 'Infrastructure-as-code templates and automated backup restoration for cost-effective disaster recovery.',
+      useCase: 'Non-critical systems with flexible recovery timelines'
+    }
+  ];
+
+  const complianceStandards = [
+    'FedRAMP High', 'FISMA', 'NIST 800-34', 'DoD Continuity',
+    'COOP Requirements', 'FEMA Guidelines', 'OMB Circular A-130'
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
+
+      {/* Hero Section */}
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
+          <nav className="text-sm mb-6 opacity-80">
+            <Link href="/services/cloud" className="hover:text-accent">Cloud Infrastructure & Modernization</Link>
+            <span className="mx-2">/</span>
+            <span>Disaster Recovery & Business Continuity</span>
+          </nav>
+          
           <div className="max-w-4xl">
-            <Link href="/services/cloud">
-              <Button variant="ghost" className="text-blue-200 hover:text-white mb-6 -ml-4">
-                <ArrowRight className="w-4 h-4 mr-2 rotate-180" />
-                Back to Cloud Services
-              </Button>
-            </Link>
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-2 mb-6">
-              <RefreshCw className="w-4 h-4" />
-              <span className="text-sm font-medium">Disaster Recovery & Business Continuity</span>
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+              &lt; 15 Min RTO • Geo-Redundant • FedRAMP-Compliant
             </div>
-            <h1 className="text-5xl font-bold mb-6 leading-tight">
-              Mission-Critical Disaster Recovery
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Disaster Recovery & Business Continuity
             </h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Ensure business continuity with robust DR/BC strategies featuring automated failover, 
-              multi-region backup, and rapid recovery for mission-critical federal operations.
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              Enterprise-grade DR solutions with automated failover, geo-redundant backups, and guaranteed RTOs meeting federal continuity requirements. NexDyne delivers disaster recovery architecture ensuring mission continuity with &lt; 15 minute recovery times and FedRAMP High compliance.
             </p>
-            <Link href="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
-                Schedule DR Assessment
-                <ArrowRight className="ml-2 w-5 h-5" />
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Request DR Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </Link>
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                Download DR Planning Guide
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      {/* Benefits Section */}
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">DR/BC Benefits</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive disaster recovery and business continuity for federal missions
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Enterprise Disaster Recovery Benefits</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Mission-critical disaster recovery capabilities ensuring operational continuity and federal compliance.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-orange-500 hover:shadow-lg transition-all">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">DR Strategies</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tailored disaster recovery approaches based on your RTO/RPO requirements
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {strategies.map((strategy, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{strategy.title}</h3>
-                  <div className="flex gap-4 mb-3">
-                    <div className="bg-blue-50 border border-blue-200 rounded px-3 py-1">
-                      <span className="text-xs font-semibold text-blue-900">RTO: {strategy.rto}</span>
-                    </div>
-                    <div className="bg-green-50 border border-green-200 rounded px-3 py-1">
-                      <span className="text-xs font-semibold text-green-900">RPO: {strategy.rpo}</span>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 text-sm">{strategy.description}</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="border-2 hover:border-accent transition-colors">
+                <CardContent className="p-8">
+                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -145,22 +160,119 @@ export default function DisasterRecovery() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
+      {/* DR Capabilities */}
+      <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Protect Your Mission-Critical Operations</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Schedule a complimentary DR assessment to evaluate your current capabilities and design a robust recovery strategy.
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive DR Capabilities</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              End-to-end disaster recovery capabilities from automated failover to business continuity planning.
             </p>
-            <Link href="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
-                Schedule DR Assessment
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {drCapabilities.map((capability, index) => (
+              <Card key={index} className="border-2 hover:shadow-xl transition-all">
+                <CardContent className="p-8">
+                  <capability.icon className="h-12 w-12 text-accent mb-4" />
+                  <h3 className="text-2xl font-bold mb-3">{capability.title}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{capability.description}</p>
+                  <ul className="space-y-2">
+                    {capability.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-sm">
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* DR Strategies */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Disaster Recovery Strategies</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Tailored DR approaches based on your agency's recovery objectives, budget, and mission requirements.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {drStrategies.map((strategy, index) => (
+              <Card key={index} className="border-2 hover:shadow-xl transition-all">
+                <CardContent className="p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold">{strategy.title}</h3>
+                    <AlertTriangle className="h-8 w-8 text-accent" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="bg-accent/10 p-3 rounded">
+                      <div className="text-xs text-muted-foreground mb-1">RTO</div>
+                      <div className="text-lg font-bold text-accent">{strategy.rto}</div>
+                    </div>
+                    <div className="bg-accent/10 p-3 rounded">
+                      <div className="text-xs text-muted-foreground mb-1">RPO</div>
+                      <div className="text-lg font-bold text-accent">{strategy.rpo}</div>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{strategy.description}</p>
+                  <div className="bg-accent/10 border-l-4 border-accent p-3 rounded">
+                    <p className="text-xs font-medium">
+                      <span className="text-accent font-semibold">Best for:</span> {strategy.useCase}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Standards */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Federal Continuity Compliance</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Disaster recovery architecture meeting all federal continuity and resilience requirements.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {complianceStandards.map((standard, index) => (
+              <span key={index} className="bg-card border-2 border-border px-6 py-3 rounded-lg font-semibold hover:border-accent transition-colors">
+                {standard}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Ensure Mission Continuity?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Start with a comprehensive disaster recovery assessment and discover how NexDyne can deliver &lt; 15 minute RTOs with FedRAMP-compliant architecture.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              Request DR Assessment
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              View DR Case Studies
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }

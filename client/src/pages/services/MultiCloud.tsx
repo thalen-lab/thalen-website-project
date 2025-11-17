@@ -1,136 +1,159 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Server, Shield, Zap, CheckCircle2, ArrowRight, Cloud, Database } from "lucide-react";
-import { Link } from "wouter";
+import { Link } from 'wouter';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { ArrowRight, CheckCircle2, Server, Shield, Zap, Cloud, Database, Globe, Lock } from 'lucide-react';
 
 export default function MultiCloud() {
   const benefits = [
     {
       icon: Shield,
-      title: "Vendor Independence",
-      description: "Avoid vendor lock-in with portable architectures across AWS, Azure, and Google Cloud platforms.",
+      title: 'Vendor Independence',
+      description: 'Avoid vendor lock-in with portable architectures across AWS, Azure, and Google Cloud platforms using cloud-agnostic tools and standards.'
     },
     {
       icon: Zap,
-      title: "High Availability",
-      description: "99.99% uptime with automated failover across multiple cloud providers and regions.",
+      title: '99.99% High Availability',
+      description: 'Mission-critical uptime with automated failover across multiple cloud providers and geographic regions for operational resilience.'
     },
     {
       icon: Database,
-      title: "Disaster Recovery",
-      description: "Geographic redundancy and automated backup across cloud providers for mission-critical data.",
-    },
-    {
-      icon: Server,
-      title: "Workload Optimization",
-      description: "Deploy workloads to the most cost-effective and performant cloud platform for each use case.",
-    },
+      title: 'Geographic Redundancy',
+      description: 'Disaster recovery and automated backup across cloud providers ensuring mission-critical data protection and business continuity.'
+    }
   ];
 
   const architectures = [
     {
-      title: "Multi-Cloud Strategy",
-      description: "Distribute workloads across multiple public cloud providers (AWS, Azure, GCP) for resilience and flexibility.",
-      useCases: ["Mission-critical applications", "Geographic redundancy", "Vendor diversification"],
+      title: 'Multi-Cloud Strategy',
+      icon: Globe,
+      description: 'Distribute workloads across multiple public cloud providers (AWS, Azure, GCP) for resilience, flexibility, and vendor diversification.',
+      useCases: ['Mission-critical applications', 'Geographic redundancy', 'Vendor diversification', 'Cost optimization']
     },
     {
-      title: "Hybrid Cloud",
-      description: "Seamlessly integrate on-premises infrastructure with public cloud for regulatory compliance and data sovereignty.",
-      useCases: ["Classified workloads", "Data residency requirements", "Legacy system integration"],
+      title: 'Hybrid Cloud',
+      icon: Lock,
+      description: 'Seamlessly integrate on-premises infrastructure with public cloud for regulatory compliance, data sovereignty, and classified workloads.',
+      useCases: ['Classified workloads', 'Data residency requirements', 'Legacy system integration', 'SCIF connectivity']
     },
     {
-      title: "Cloud-Agnostic Design",
-      description: "Build portable applications using Kubernetes, Terraform, and cloud-agnostic services for maximum flexibility.",
-      useCases: ["Long-term vendor independence", "Portable applications", "Cost optimization"],
+      title: 'Cloud-Agnostic Design',
+      icon: Cloud,
+      description: 'Build portable applications using Kubernetes, Terraform, and cloud-agnostic services for maximum flexibility and long-term independence.',
+      useCases: ['Long-term vendor independence', 'Portable applications', 'Cost optimization', 'Technology flexibility']
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: 'Unified Management',
+      description: 'Single pane of glass for managing resources across AWS GovCloud, Azure Government, and Google Cloud with centralized monitoring and cost tracking.'
     },
+    {
+      title: 'Workload Portability',
+      description: 'Containerized applications with Kubernetes enabling seamless workload migration between cloud providers without code changes.'
+    },
+    {
+      title: 'Automated Failover',
+      description: 'Intelligent traffic routing and automated failover across cloud providers ensuring continuous availability during outages.'
+    },
+    {
+      title: 'Cost Optimization',
+      description: 'Deploy each workload to the most cost-effective cloud platform while maintaining consistent security and compliance standards.'
+    }
+  ];
+
+  const tools = [
+    'Kubernetes', 'Terraform', 'Ansible', 'HashiCorp Consul',
+    'Istio Service Mesh', 'ArgoCD', 'Prometheus', 'Grafana'
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
+
+      {/* Hero Section */}
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
+          <nav className="text-sm mb-6 opacity-80">
+            <Link href="/services/cloud" className="hover:text-accent">Cloud Infrastructure & Modernization</Link>
+            <span className="mx-2">/</span>
+            <span>Multi-Cloud & Hybrid Solutions</span>
+          </nav>
+          
           <div className="max-w-4xl">
-            <Link href="/services/cloud">
-              <Button variant="ghost" className="text-blue-200 hover:text-white mb-6 -ml-4">
-                <ArrowRight className="w-4 h-4 mr-2 rotate-180" />
-                Back to Cloud Services
-              </Button>
-            </Link>
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-2 mb-6">
-              <Server className="w-4 h-4" />
-              <span className="text-sm font-medium">Multi-Cloud & Hybrid Solutions</span>
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+              99.99% Uptime • Vendor-Agnostic Architecture
             </div>
-            <h1 className="text-5xl font-bold mb-6 leading-tight">
-              Resilient Multi-Cloud & Hybrid Architectures
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Multi-Cloud & Hybrid Solutions
             </h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Deploy mission-critical workloads across multiple cloud providers and on-premises infrastructure 
-              for maximum resilience, flexibility, and vendor independence.
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              Vendor-agnostic architecture across AWS, Azure, and Google Cloud with unified management, disaster recovery, and seamless workload portability. NexDyne delivers multi-cloud strategies that maximize flexibility, minimize lock-in, and ensure 99.99% availability for mission-critical federal operations.
             </p>
-            <Link href="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
-                Schedule Architecture Review
-                <ArrowRight className="ml-2 w-5 h-5" />
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Request Multi-Cloud Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </Link>
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                Download Architecture Guide
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      {/* Benefits Section */}
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Multi-Cloud Benefits</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Strategic advantages of multi-cloud and hybrid architectures
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Choose Multi-Cloud</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Strategic advantages of multi-cloud architecture for mission-critical federal operations and long-term technology independence.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-orange-500 hover:shadow-lg transition-all">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="border-2 hover:border-accent transition-colors">
+                <CardContent className="p-8">
+                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      {/* Architecture Approaches */}
+      <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Architecture Approaches</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tailored multi-cloud and hybrid strategies for federal agencies
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Multi-Cloud Architecture Approaches</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Tailored multi-cloud strategies based on your agency's specific requirements, constraints, and mission objectives.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+          <div className="grid md:grid-cols-3 gap-8">
             {architectures.map((arch, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{arch.title}</h3>
-                  <p className="text-gray-600 mb-4">{arch.description}</p>
-                  <div className="border-t pt-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
-                    <ul className="space-y-2">
-                      {arch.useCases.map((useCase, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                          <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                          {useCase}
-                        </li>
-                      ))}
-                    </ul>
+              <Card key={index} className="border-2 hover:shadow-xl transition-all">
+                <CardContent className="p-8">
+                  <arch.icon className="h-14 w-14 text-accent mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">{arch.title}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{arch.description}</p>
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-sm">Use Cases:</h4>
+                    {arch.useCases.map((useCase, idx) => (
+                      <div key={idx} className="flex items-start text-sm">
+                        <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <span>{useCase}</span>
+                      </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -139,23 +162,69 @@ export default function MultiCloud() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
+      {/* Key Capabilities */}
+      <section className="py-20">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Build a Resilient Multi-Cloud Strategy?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Schedule a complimentary architecture review to explore multi-cloud and hybrid solutions 
-              tailored for your agency's mission requirements.
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Multi-Cloud Capabilities</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Enterprise-grade capabilities for managing complex multi-cloud environments with unified control and visibility.
             </p>
-            <Link href="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
-                Schedule Architecture Review
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {capabilities.map((capability, index) => (
+              <Card key={index} className="border-2 hover:border-accent transition-colors">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-bold mb-3">{capability.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{capability.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Tools & Technologies */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Multi-Cloud Tools & Platforms</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Cloud-agnostic tools for unified management, orchestration, and monitoring across all cloud providers.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {tools.map((tool, index) => (
+              <span key={index} className="bg-card border-2 border-border px-6 py-3 rounded-lg font-semibold hover:border-accent transition-colors">
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Embrace Multi-Cloud Strategy?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Start with a comprehensive multi-cloud assessment and discover how NexDyne can deliver vendor independence with 99.99% availability.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              Request Multi-Cloud Assessment
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              View Architecture Examples
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
