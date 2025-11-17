@@ -1,7 +1,8 @@
-import { Code2, Zap, Rocket, Shield, GitBranch, Lock, CheckCircle2, ArrowRight } from "lucide-react";
+import { Code2, Zap, Rocket, Shield, GitBranch, Lock, CheckCircle2, ArrowRight, TrendingUp, Users, Clock, Award } from "lucide-react";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AssessmentForm from "@/components/AssessmentForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -250,15 +251,126 @@ export default function ApplicationDevelopment() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-slate-900 to-blue-900 rounded-2xl p-12 text-white">
-              <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Operations?</h3>
-              <p className="text-blue-100 mb-8">
-                Schedule a complimentary consultation with our application development experts to discuss your mission requirements and explore how we can help.
-              </p>
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white w-full">
-                <Link href="/contact">Schedule Free Consultation</Link>
-              </Button>
+            <div>
+              <AssessmentForm 
+                title="Request Your Free Assessment"
+                description="Get expert analysis of your application development needs. Our TS/SCI cleared consultants will provide tailored recommendations for your federal mission."
+                serviceType="Application Development"
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Proven Federal Success Stories</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Real-world results from our Application Development engagements with federal agencies.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Case Study 1 */}
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                  Defense Agency
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Mission-Critical Portal Modernization</h3>
+                <p className="text-muted-foreground mb-6">
+                  Transformed legacy COBOL system into modern cloud-native portal serving 50,000+ users with FedRAMP High authorization.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-5 w-5 text-accent" />
+                    <span className="text-sm"><strong>85%</strong> faster processing time</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users className="h-5 w-5 text-accent" />
+                    <span className="text-sm"><strong>50K+</strong> active users</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="h-5 w-5 text-accent" />
+                    <span className="text-sm"><strong>8 months</strong> to ATO</span>
+                  </div>
+                </div>
+                <Button asChild variant="outline" className="w-full">
+                  <Link href="/case-studies/defense-portal">
+                    Read Case Study
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Case Study 2 */}
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                  Civilian Agency
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Low-Code Citizen Services Platform</h3>
+                <p className="text-muted-foreground mb-6">
+                  Deployed Section 508 compliant self-service portal using low-code platform, reducing development time by 70%.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-5 w-5 text-accent" />
+                    <span className="text-sm"><strong>70%</strong> faster development</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users className="h-5 w-5 text-accent" />
+                    <span className="text-sm"><strong>2M+</strong> transactions/year</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Award className="h-5 w-5 text-accent" />
+                    <span className="text-sm"><strong>100%</strong> 508 compliant</span>
+                  </div>
+                </div>
+                <Button asChild variant="outline" className="w-full">
+                  <Link href="/case-studies/citizen-portal">
+                    Read Case Study
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Case Study 3 */}
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                  Intelligence Community
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Secure API Integration Platform</h3>
+                <p className="text-muted-foreground mb-6">
+                  Built microservices architecture connecting 15+ legacy systems with real-time data synchronization for TS/SCI environment.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-5 w-5 text-accent" />
+                    <span className="text-sm"><strong>15+</strong> systems integrated</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="h-5 w-5 text-accent" />
+                    <span className="text-sm"><strong>Real-time</strong> sync</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Shield className="h-5 w-5 text-accent" />
+                    <span className="text-sm"><strong>TS/SCI</strong> cleared team</span>
+                  </div>
+                </div>
+                <Button asChild variant="outline" className="w-full">
+                  <Link href="/case-studies/api-integration">
+                    Read Case Study
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
