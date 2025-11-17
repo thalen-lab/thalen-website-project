@@ -17,7 +17,7 @@ import Methodology from "./pages/Methodology";
 import AutomationService from "./pages/services/Automation";
 import DataAnalyticsService from "./pages/services/DataAnalytics";
 import AnalyticsService from "./pages/services/Analytics";
-import CloudService from "./pages/CloudServices";
+import Cloud from "./pages/services/Cloud";
 import CybersecurityService from "./pages/services/Cybersecurity";
 import AppDevelopmentService from "./pages/services/AppDevelopment";
 import CustomSoftwareService from "./pages/services/CustomSoftware";
@@ -110,7 +110,7 @@ function Router() {
       <Route path={"/services/data-analytics/engineering"} component={DataEngineeringService} />
       <Route path={"/services/data-analytics/assessment"} component={DataAssessment} />
       <Route path={"/services/analytics"} component={AnalyticsService} />
-      <Route path={"/services/cloud"} component={CloudService} />
+      <Route path={"/services/cloud"} component={Cloud} />
       <Route path={"/services/cloud/migration"} component={CloudMigration} />
       <Route path={"/services/cloud/optimization"} component={CloudOptimization} />
       <Route path={"/services/cloud/multi-cloud"} component={MultiCloud} />
