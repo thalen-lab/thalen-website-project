@@ -1,4 +1,4 @@
-import { CheckCircle2, Code2, Shield, Server, Database, GitBranch, Lock, Rocket } from "lucide-react";
+import { Shield, Lock, CheckCircle2, Rocket, Server, Database, Cloud, Users, Zap, Code2, ArrowRight, GitBranch } from "lucide-react";
 import { Link } from "wouter";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
