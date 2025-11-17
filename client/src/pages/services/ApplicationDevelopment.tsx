@@ -1,5 +1,6 @@
 import { Code2, Zap, Rocket, Shield, GitBranch, Lock, CheckCircle2, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -105,6 +106,7 @@ export default function ApplicationDevelopment() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
