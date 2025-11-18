@@ -64,87 +64,72 @@ export default function Contact() {
       </section>
 
       {/* Ways to Reach Us */}
-      <section className="py-20 bg-secondary">
+      <section className="py-16 bg-background">
         <div className="container">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">Ways to Reach Us</h2>
-              <p className="text-xl text-muted-foreground">
-                Choose the contact channel that best fits your needs
-              </p>
+              <h2 className="text-3xl font-bold mb-3">Ways to Reach Us</h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-0">
               {/* Strategic Partnerships */}
               <Link href="/contact/partnerships">
-                <Card className="h-full hover:border-accent hover:shadow-lg transition-all cursor-pointer group">
-                  <CardContent className="p-8">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="p-3 bg-accent/10 rounded-lg">
-                        <Shield className="h-6 w-6 text-accent" />
-                      </div>
-                      <ArrowRight className="h-5 w-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="group py-6 border-b border-border hover:bg-accent/5 transition-colors cursor-pointer">
+                  <div className="grid md:grid-cols-2 gap-4 items-center">
+                    <h3 className="text-xl font-semibold group-hover:text-accent transition-colors">Strategic Partnerships</h3>
+                    <div className="flex items-center justify-between">
+                      <p className="text-muted-foreground text-sm">
+                        Inquire about enterprise automation consulting and strategic transformation initiatives
+                      </p>
+                      <ArrowRight className="h-5 w-5 text-accent ml-4 flex-shrink-0" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3">Strategic Partnerships</h3>
-                    <p className="text-muted-foreground">
-                      Inquire about enterprise automation consulting and strategic transformation initiatives
-                    </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </Link>
 
               {/* Government Relations */}
               <Link href="/contact/government">
-                <Card className="h-full hover:border-accent hover:shadow-lg transition-all cursor-pointer group">
-                  <CardContent className="p-8">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="p-3 bg-accent/10 rounded-lg">
-                        <MapPin className="h-6 w-6 text-accent" />
-                      </div>
-                      <ArrowRight className="h-5 w-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="group py-6 border-b border-border hover:bg-accent/5 transition-colors cursor-pointer">
+                  <div className="grid md:grid-cols-2 gap-4 items-center">
+                    <h3 className="text-xl font-semibold group-hover:text-accent transition-colors">Government Relations</h3>
+                    <div className="flex items-center justify-between">
+                      <p className="text-muted-foreground text-sm">
+                        Connect with our federal contracting and security clearance specialists
+                      </p>
+                      <ArrowRight className="h-5 w-5 text-accent ml-4 flex-shrink-0" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3">Government Relations</h3>
-                    <p className="text-muted-foreground">
-                      Connect with our federal contracting and security clearance specialists
-                    </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </Link>
 
               {/* Emergency Support */}
               <Link href="/contact/emergency">
-                <Card className="h-full hover:border-red-500 hover:shadow-lg transition-all cursor-pointer group">
-                  <CardContent className="p-8">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="p-3 bg-red-500/10 rounded-lg">
-                        <AlertCircle className="h-6 w-6 text-red-500" />
-                      </div>
-                      <ArrowRight className="h-5 w-5 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="group py-6 border-b border-border hover:bg-red-500/5 transition-colors cursor-pointer">
+                  <div className="grid md:grid-cols-2 gap-4 items-center">
+                    <h3 className="text-xl font-semibold group-hover:text-red-500 transition-colors">Emergency Support</h3>
+                    <div className="flex items-center justify-between">
+                      <p className="text-muted-foreground text-sm">
+                        24/7 critical incident response for mission-critical system failures
+                      </p>
+                      <ArrowRight className="h-5 w-5 text-red-500 ml-4 flex-shrink-0" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3">Emergency Support</h3>
-                    <p className="text-muted-foreground">
-                      24/7 critical incident response for mission-critical system failures
-                    </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </Link>
 
               {/* Technical Advisory */}
               <Link href="/contact/advisory">
-                <Card className="h-full hover:border-accent hover:shadow-lg transition-all cursor-pointer group">
-                  <CardContent className="p-8">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="p-3 bg-accent/10 rounded-lg">
-                        <Code className="h-6 w-6 text-accent" />
-                      </div>
-                      <ArrowRight className="h-5 w-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="group py-6 border-b border-border hover:bg-accent/5 transition-colors cursor-pointer">
+                  <div className="grid md:grid-cols-2 gap-4 items-center">
+                    <h3 className="text-xl font-semibold group-hover:text-accent transition-colors">Technical Advisory</h3>
+                    <div className="flex items-center justify-between">
+                      <p className="text-muted-foreground text-sm">
+                        Get expert guidance on automation technology stack and implementation strategy
+                      </p>
+                      <ArrowRight className="h-5 w-5 text-accent ml-4 flex-shrink-0" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3">Technical Advisory</h3>
-                    <p className="text-muted-foreground">
-                      Get expert guidance on automation technology stack and implementation strategy
-                    </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </Link>
             </div>
           </div>
