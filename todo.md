@@ -717,3 +717,10 @@
 - [x] Add routes for all 6 subpages in App.tsx (fixed duplicate LegacyModernization import by renaming to CustomSoftwareLegacyModernization)
 - [x] Test all subpage navigation and content (tested Business Apps and Mobile Apps - working perfectly)
 - [x] Save checkpoint
+
+## Phase 79: Fix Nested Anchor Tag Error on Homepage
+- [x] Navigate to homepage to reproduce error (found duplicate CTA buttons in carousel)
+- [x] Search Home.tsx for nested anchor tags (found buttons rendered inside each carousel slide)
+- [x] Fix all nested anchor instances (moved CTA buttons outside carousel to prevent 6 duplicate renders)
+- [x] Test homepage to verify error is resolved (now only 2 buttons instead of 6, no console errors)
+- [x] Save checkpoint

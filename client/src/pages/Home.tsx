@@ -176,7 +176,16 @@ export default function Home() {
               <div className="max-w-2xl text-primary-foreground">
                 <h1 className="text-5xl md:text-6xl font-bold mb-4">{slide.title}</h1>
                 <p className="text-xl md:text-2xl mb-8 opacity-90">{slide.subtitle}</p>
-                <div className="flex flex-wrap gap-4">
+              </div>
+            </div>
+          </div>
+        ))}
+        
+        {/* CTA Buttons - Outside carousel to prevent duplicates */}
+        <div className="absolute bottom-24 left-0 right-0">
+          <div className="container">
+            <div className="max-w-2xl">
+              <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
                   <Link href="/contact">
                     Schedule Strategic Assessment
@@ -186,11 +195,10 @@ export default function Home() {
                 <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   <Link href="/methodology">View ROI Methodology</Link>
                 </Button>
-                </div>
               </div>
             </div>
           </div>
-        ))}
+        </div>
         
         {/* Hero Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
