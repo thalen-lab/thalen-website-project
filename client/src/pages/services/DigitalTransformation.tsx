@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Users, Target, TrendingUp, BookOpen } from 'lucide-react';
+import { Link } from 'wouter';
 
 export default function DigitalTransformation() {
   return (
@@ -30,16 +31,19 @@ export default function DigitalTransformation() {
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Target, title: 'Strategy Development', desc: 'Comprehensive roadmaps aligned with business objectives' },
-              { icon: Users, title: 'Change Management', desc: 'Structured approach to organizational transformation' },
-              { icon: BookOpen, title: 'Training & Enablement', desc: 'Comprehensive programs for user adoption' },
-              { icon: TrendingUp, title: 'Success Metrics', desc: 'KPIs and dashboards to track transformation ROI' }
+              { icon: Target, title: 'Strategy Development', desc: 'Comprehensive roadmaps aligned with business objectives', href: '/services/digital-transformation/strategy-development' },
+              { icon: Users, title: 'Change Management', desc: 'Structured approach to organizational transformation', href: '/services/digital-transformation/change-management' },
+              { icon: BookOpen, title: 'Training & Enablement', desc: 'Comprehensive programs for user adoption', href: '/services/digital-transformation/training-enablement' },
+              { icon: TrendingUp, title: 'Success Metrics', desc: 'KPIs and dashboards to track transformation ROI', href: '/services/digital-transformation/success-metrics' }
             ].map((item, index) => (
               <Card key={index} className="hover:shadow-xl transition-all">
                 <CardContent className="p-8 text-center">
                   <item.icon className="h-12 w-12 text-accent mx-auto mb-4" />
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.desc}</p>
+                  <p className="text-muted-foreground text-sm mb-4">{item.desc}</p>
+                  <Link href={item.href} className="text-sm text-accent hover:underline flex items-center justify-center gap-1">
+                    Learn More <ArrowRight className="h-3 w-3" />
+                  </Link>
                 </CardContent>
               </Card>
             ))}

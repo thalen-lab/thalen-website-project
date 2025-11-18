@@ -34,6 +34,12 @@ import MobileApps from "./pages/services/custom-software/MobileApps";
 import CustomSoftwareLegacyModernization from "./pages/services/custom-software/LegacyModernization";
 import DigitalTransformationService from "./pages/services/DigitalTransformation";
 
+// Digital Transformation Subpages
+import StrategyDevelopment from "./pages/services/digital-transformation/StrategyDevelopment";
+import ChangeManagement from "./pages/services/digital-transformation/ChangeManagement";
+import TrainingEnablement from "./pages/services/digital-transformation/TrainingEnablement";
+import SuccessMetrics from "./pages/services/digital-transformation/SuccessMetrics";
+
 // Automation Subpages
 import RPAService from "./pages/services/automation/RPA";
 import IntegrationService from "./pages/services/automation/Integration";
@@ -170,6 +176,10 @@ function Router() {
       <Route path={"/services/custom-software/mobile-apps"} component={MobileApps} />
       <Route path={"/services/custom-software/legacy-modernization"} component={CustomSoftwareLegacyModernization} />
       <Route path={"/services/digital-transformation"} component={DigitalTransformationService} />
+      <Route path={"/services/digital-transformation/strategy-development"} component={StrategyDevelopment} />
+      <Route path={"/services/digital-transformation/change-management"} component={ChangeManagement} />
+      <Route path={"/services/digital-transformation/training-enablement"} component={TrainingEnablement} />
+      <Route path={"/services/digital-transformation/success-metrics"} component={SuccessMetrics} />
       
       {/* Industry Routes */}
       <Route path={"/industries/federal"} component={FederalIndustry} />
