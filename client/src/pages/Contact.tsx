@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, ArrowRight, Shield, AlertCircle, Code } from 'lucide-react';
+import { Link } from 'wouter';
 import { toast } from 'sonner';
 import { trpc } from '@/lib/trpc';
 
@@ -58,6 +59,94 @@ export default function Contact() {
             <p className="text-xl md:text-2xl opacity-90">
               Ready to transform your operations? Let's discuss how NexDyne can help achieve your strategic objectives.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Ways to Reach Us */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">Ways to Reach Us</h2>
+              <p className="text-xl text-muted-foreground">
+                Choose the contact channel that best fits your needs
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Strategic Partnerships */}
+              <Link href="/contact/partnerships">
+                <Card className="h-full hover:border-accent hover:shadow-lg transition-all cursor-pointer group">
+                  <CardContent className="p-8">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="p-3 bg-accent/10 rounded-lg">
+                        <Shield className="h-6 w-6 text-accent" />
+                      </div>
+                      <ArrowRight className="h-5 w-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3">Strategic Partnerships</h3>
+                    <p className="text-muted-foreground">
+                      Inquire about enterprise automation consulting and strategic transformation initiatives
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Government Relations */}
+              <Link href="/contact/government">
+                <Card className="h-full hover:border-accent hover:shadow-lg transition-all cursor-pointer group">
+                  <CardContent className="p-8">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="p-3 bg-accent/10 rounded-lg">
+                        <MapPin className="h-6 w-6 text-accent" />
+                      </div>
+                      <ArrowRight className="h-5 w-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3">Government Relations</h3>
+                    <p className="text-muted-foreground">
+                      Connect with our federal contracting and security clearance specialists
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Emergency Support */}
+              <Link href="/contact/emergency">
+                <Card className="h-full hover:border-red-500 hover:shadow-lg transition-all cursor-pointer group">
+                  <CardContent className="p-8">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="p-3 bg-red-500/10 rounded-lg">
+                        <AlertCircle className="h-6 w-6 text-red-500" />
+                      </div>
+                      <ArrowRight className="h-5 w-5 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3">Emergency Support</h3>
+                    <p className="text-muted-foreground">
+                      24/7 critical incident response for mission-critical system failures
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Technical Advisory */}
+              <Link href="/contact/advisory">
+                <Card className="h-full hover:border-accent hover:shadow-lg transition-all cursor-pointer group">
+                  <CardContent className="p-8">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="p-3 bg-accent/10 rounded-lg">
+                        <Code className="h-6 w-6 text-accent" />
+                      </div>
+                      <ArrowRight className="h-5 w-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3">Technical Advisory</h3>
+                    <p className="text-muted-foreground">
+                      Get expert guidance on automation technology stack and implementation strategy
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

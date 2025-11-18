@@ -10,6 +10,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
+import ContactPartnerships from "./pages/contact/Partnerships";
+import ContactGovernment from "./pages/contact/Government";
+import ContactEmergency from "./pages/contact/Emergency";
+import ContactAdvisory from "./pages/contact/Advisory";
 import Partners from "./pages/Partners";
 import Resources from "./pages/Resources";
 import Events from "./pages/Events";
@@ -129,6 +133,10 @@ function Router() {
       <Route path={"/about"} component={About} />
       <Route path={"/team"} component={Team} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/contact/partnerships"} component={ContactPartnerships} />
+      <Route path={"/contact/government"} component={ContactGovernment} />
+      <Route path={"/contact/emergency"} component={ContactEmergency} />
+      <Route path={"/contact/advisory"} component={ContactAdvisory} />
       <Route path={"/partners"} component={Partners} />
       <Route path={"/resources"} component={Resources} />
       <Route path={"/events"} component={Events} />
