@@ -859,4 +859,10 @@
 - [x] Copy rocket image to client/public directory with hashed filename
 - [x] Update CaseStudyShowcase component to use new image for Federal Agency card
 - [x] Test the updated card on homepage
+- [x] Save checkpoint
+
+## Phase 90: Update Manufacturing Giant Case Study Card Image
+- [x] Copy manufacturing image to client/public directory
+- [x] Update CaseStudyShowcase component to use new image for Manufacturing card
+- [x] Test the updated card on homepage
 - [ ] Save checkpoint

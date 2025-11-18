@@ -26,7 +26,7 @@ const caseStudies: CaseStudy[] = [
     id: "manufacturing-uptime",
     title: "Manufacturing Giant Achieves 99.2% Uptime",
     description: "Cybersecurity and predictive maintenance eliminated 75% of unplanned downtime across 50+ facilities, saving $18M annually through IoT sensors and AI-powered analytics.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
+    image: "/manufacturing-security.jpg",
     link: "/case-studies/manufacturing-uptime",
     category: "Manufacturing"
   },
