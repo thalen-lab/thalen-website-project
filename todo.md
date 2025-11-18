@@ -886,4 +886,17 @@
 - [x] Update Home.tsx to remove circular icon backgrounds from certification badges
 - [x] Keep card styling, hover effects, and tooltips intact
 - [x] Test the updated badges on homepage (tooltips working perfectly)
+- [x] Save checkpoint
+
+## Phase 94: Add Remaining Case Study Images and Scroll Animations
+- [x] Search for Financial Institution fraud detection/banking image
+- [x] Search for Defense Agency cloud/security image
+- [x] Search for Energy Company grid/substation image
+- [x] Copy images to client/public directory with hashed filenames
+- [x] Update CaseStudyShowcase component with new images
+- [x] Install framer-motion library for scroll animations
+- [x] Implement scroll animations for case studies section
+- [x] Implement scroll animations for certifications section
+- [x] Implement scroll animations for methodology section
+- [x] Test all animations and images on homepage (all 6 case study images displaying, scroll animations working)
 - [ ] Save checkpoint

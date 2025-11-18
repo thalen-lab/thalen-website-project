@@ -25,6 +25,7 @@ import {
   Heart
 } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
@@ -312,26 +313,40 @@ export default function Home() {
       {/* Certifications Section */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="text-center mb-12">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise & Government Security & Compliance</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {certifications.map((cert, index) => {
               return (
-                <Tooltip key={index}>
-                  <TooltipTrigger asChild>
-                    <div className="bg-card border-2 border-border hover:border-accent rounded-lg p-6 text-center flex flex-col items-center justify-center transition-all hover:shadow-lg cursor-help min-h-[100px]">
-                      <div className="text-sm font-semibold leading-tight">{cert.name}</div>
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent className="max-w-xs">
-                    <p className="text-sm">{cert.description}</p>
-                  </TooltipContent>
-                </Tooltip>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="bg-card border-2 border-border hover:border-accent rounded-lg p-6 text-center flex flex-col items-center justify-center transition-all hover:shadow-lg cursor-help min-h-[100px]">
+                        <div className="text-sm font-semibold leading-tight">{cert.name}</div>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs">
+                      <p className="text-sm">{cert.description}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </motion.div>
               );
             })}
           </div>
@@ -341,13 +356,19 @@ export default function Home() {
       {/* Methodology Section - RAPID Framework */}
       <section className="py-20 bg-muted">
         <div className="container">
-          <div className="text-center mb-16">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
             <p className="text-sm font-semibold text-accent mb-2">Our Methodology</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne RAPID Framework</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Results-Accelerated Process Intelligence & Delivery: Our proven 4-phase methodology delivering measurable ROI in 30 days
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Phase 1 */}

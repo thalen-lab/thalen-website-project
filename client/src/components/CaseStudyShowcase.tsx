@@ -1,8 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { motion } from 'framer-motion';
 
 interface CaseStudy {
   id: string;
@@ -42,7 +43,7 @@ const caseStudies: CaseStudy[] = [
     id: "bank-fraud",
     title: "Financial Institution Detects $50M in Fraud",
     description: "Real-time ML-powered fraud detection system processes 10M+ daily transactions, reducing false positives by 80% and preventing $50M in fraudulent activities annually.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
+    image: "/financial-fraud-soc.a8f3d9e2.jpg",
     link: "/case-studies/bank-fraud",
     category: "Financial Services"
   },
@@ -50,7 +51,7 @@ const caseStudies: CaseStudy[] = [
     id: "defense-cloud",
     title: "Defense Agency Migrates to Secure Cloud",
     description: "Zero-downtime migration of mission-critical systems to FedRAMP High cloud infrastructure, achieving IL5 compliance while reducing infrastructure costs by 40%.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
+    image: "/defense-cyber-ops.b7c4e1f3.jpg",
     link: "/case-studies/defense-cloud",
     category: "Federal Government"
   },
@@ -58,7 +59,7 @@ const caseStudies: CaseStudy[] = [
     id: "energy-grid",
     title: "Energy Company Optimizes Grid Performance",
     description: "Real-time analytics platform monitors 500+ substations, predicting equipment failures 30 days in advance and reducing outages by 65% across the distribution network.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
+    image: "/energy-grid-control.c9d5f2a4.jpg",
     link: "/case-studies/energy-grid",
     category: "Energy"
   }
@@ -91,7 +92,13 @@ export default function CaseStudyShowcase() {
     <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="container">
         {/* Header */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <motion.div 
+          className="grid lg:grid-cols-2 gap-8 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <div>
             <p className="text-sm font-medium text-orange-600 mb-3">Case Studies</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
@@ -131,10 +138,16 @@ export default function CaseStudyShowcase() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Case Study Cards */}
-        <div 
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <div 
           ref={containerRef}
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
           style={{ 
@@ -178,6 +191,7 @@ export default function CaseStudyShowcase() {
             </Card>
           ))}
         </div>
+        </motion.div>
       </div>
 
       <style>{`
