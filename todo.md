@@ -922,4 +922,12 @@
 - [x] Update Mission section to use correct concise statement: "To deliver strategic automation that amplifies organizational capability while maintaining mission-critical security."
 - [x] Remove the longer content from Mission section (it's already in Vision section)
 - [x] Test the updated About page (Mission now displays correct concise statement)
+- [x] Save checkpoint
+
+## Phase 97: Fix CTA Routes on About Page
+
+- [x] Check current routes for "Our Automation Strategy" and "Meet Our Experts" buttons
+- [x] Determine correct destinations (existing pages or need to create new pages)
+- [x] Update button hrefs: "Our Automation Strategy" → /services/automation, "Meet Our Experts" → /contact
+- [x] Test both CTAs to ensure they navigate correctly (both working perfectly)
 - [ ] Save checkpoint

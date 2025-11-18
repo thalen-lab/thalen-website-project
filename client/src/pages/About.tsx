@@ -197,7 +197,7 @@ export default function About() {
                 Every engagement begins with deep process analysis to identify the highest-impact automation opportunities. We then deploy proven frameworks that integrate seamlessly with existing operations, ensuring zero disruption while delivering transformational results that scale with organizational growth.
               </p>
               
-              <Link href="/services">
+              <Link href="/services/automation">
                 <Button variant="outline" size="lg" className="group">
                   Our Automation Strategy
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -347,7 +347,7 @@ export default function About() {
                 </p>
               </div>
 
-              <Link href="/team">
+              <Link href="/contact">
                 <Button variant="outline" size="lg" className="mt-8 group">
                   Meet Our Experts
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
