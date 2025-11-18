@@ -18,7 +18,7 @@ const caseStudies: CaseStudy[] = [
     id: "federal-automation",
     title: "Federal Agency Achieves 85% Process Automation",
     description: "Transformed manual workflows into intelligent automation, reducing processing time from 6 weeks to 2 days while maintaining government-grade security and compliance.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
+    image: "/rocket-federal.webp",
     link: "/case-studies/federal-automation",
     category: "Federal Government"
   },

@@ -853,4 +853,10 @@
 - [x] Check case study URLs and ensure they match existing case study pages
 - [x] Fix href links in the component
 - [x] Test navigation by clicking "Read more" buttons on all visible case studies
+- [x] Save checkpoint
+
+## Phase 89: Update Federal Agency Case Study Card Image
+- [x] Copy rocket image to client/public directory with hashed filename
+- [x] Update CaseStudyShowcase component to use new image for Federal Agency card
+- [x] Test the updated card on homepage
 - [ ] Save checkpoint
