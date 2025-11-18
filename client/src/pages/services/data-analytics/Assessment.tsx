@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { ArrowRight, ArrowLeft, CheckCircle2, TrendingUp, Target, DollarSign } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, TrendingUp, Target, DollarSign, Shield, Database } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 import { Link } from "wouter";
 
 interface Question {

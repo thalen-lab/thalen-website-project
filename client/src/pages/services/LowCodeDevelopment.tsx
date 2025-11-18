@@ -79,19 +79,19 @@ export default function LowCodeDevelopment() {
     {
       title: "Custom Application Development",
       description: "For complex requirements that need full custom coding and advanced architecture.",
-      link: "/services/custom-application-development",
+      href: "/services/custom-application-development",
       icon: Code2
     },
     {
       title: "System Integration",
       description: "Connect your low-code applications with legacy systems and external services.",
-      link: "/services/system-integration",
+      href: "/services/system-integration",
       icon: Zap
     },
     {
       title: "Enterprise Portals",
       description: "Build citizen-facing portals and self-service platforms with low-code speed.",
-      link: "/services/enterprise-portals",
+      href: "/services/enterprise-portals",
       icon: Shield
     }
   ];

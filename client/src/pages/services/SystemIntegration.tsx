@@ -21,9 +21,9 @@ export default function SystemIntegration() {
   ];
 
   const relatedServices = [
-    { title: "Custom Application Development", description: "Build custom integrations and middleware for complex requirements.", link: "/services/custom-application-development", icon: Code2 },
-    { title: "Legacy Modernization", description: "Modernize legacy systems to enable easier integration with modern applications.", link: "/services/legacy-modernization", icon: Database },
-    { title: "Cloud Infrastructure", description: "Deploy integration platforms on FedRAMP-authorized cloud infrastructure.", link: "/services/cloud", icon: Cloud }
+    { title: "Custom Application Development", description: "Build custom integrations and middleware for complex requirements.", href: "/services/custom-application-development", icon: Code2 },
+    { title: "Legacy Modernization", description: "Modernize legacy systems to enable easier integration with modern applications.", href: "/services/legacy-modernization", icon: Database },
+    { title: "Cloud Infrastructure", description: "Deploy integration platforms on FedRAMP-authorized cloud infrastructure.", href: "/services/cloud", icon: Cloud }
   ];
 
   return (

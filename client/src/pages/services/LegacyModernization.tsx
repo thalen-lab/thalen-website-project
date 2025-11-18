@@ -87,19 +87,19 @@ export default function LegacyModernization() {
     {
       title: "Cloud Infrastructure",
       description: "Migrate modernized applications to FedRAMP-authorized cloud platforms.",
-      link: "/services/cloud",
+      href: "/services/cloud",
       icon: Cloud
     },
     {
       title: "Custom Application Development",
       description: "Rebuild legacy systems as modern, mission-critical applications.",
-      link: "/services/custom-application-development",
+      href: "/services/custom-application-development",
       icon: Code2
     },
     {
       title: "System Integration",
       description: "Connect modernized applications with remaining legacy systems during transition.",
-      link: "/services/system-integration",
+      href: "/services/system-integration",
       icon: Database
     }
   ];
