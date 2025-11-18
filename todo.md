@@ -990,4 +990,11 @@
 - [x] Update Featured Article card on Insights page to use RPA image
 - [x] Update Featured Article content to match RPA theme
 - [x] Test Insights page with new image
+- [x] Save checkpoint
+
+## Phase 104: Fix Nested Anchor Tag Error on Insights Page
+
+- [x] Identify nested anchor tags in Insights page
+- [x] Remove nested Link/anchor components
+- [x] Test Insights page to verify error is resolved
 - [ ] Save checkpoint

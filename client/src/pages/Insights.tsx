@@ -269,9 +269,7 @@ export default function Insights() {
 
                         <div className="flex items-center text-sm text-muted-foreground mb-4">
                           <User className="h-4 w-4 mr-2" />
-                          <Link href={`/authors/${insight.authorSlug}`}>
-                            <span className="mr-4 hover:text-accent transition-colors cursor-pointer">{insight.author}</span>
-                          </Link>
+                          <span className="mr-4">{insight.author}</span>
                           <Clock className="h-4 w-4 mr-2" />
                           <span>{insight.readTime}</span>
                         </div>
