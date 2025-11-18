@@ -865,4 +865,10 @@
 - [x] Copy manufacturing image to client/public directory
 - [x] Update CaseStudyShowcase component to use new image for Manufacturing card
 - [x] Test the updated card on homepage
+- [x] Save checkpoint
+
+## Phase 91: Update Healthcare System Case Study Card Image
+- [x] Copy legacy IT infrastructure image to client/public directory
+- [x] Update CaseStudyShowcase component to use new image for Healthcare card
+- [x] Test the updated card on homepage
 - [ ] Save checkpoint

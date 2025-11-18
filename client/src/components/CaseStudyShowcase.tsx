@@ -34,7 +34,7 @@ const caseStudies: CaseStudy[] = [
     id: "healthcare-ai",
     title: "Healthcare System Integrates 12 Legacy Platforms",
     description: "Unified patient data across disparate systems, reducing administrative burden by 60% and improving care coordination for 2M+ patients while ensuring HIPAA compliance.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
+    image: "/healthcare-legacy-it.jpg",
     link: "/case-studies/healthcare-ai",
     category: "Healthcare"
   },
