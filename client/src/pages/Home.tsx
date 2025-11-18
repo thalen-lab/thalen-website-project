@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
+import CaseStudyShowcase from '@/components/CaseStudyShowcase';
 import Footer from '@/components/Footer';
 import { 
   ArrowRight, 
@@ -266,79 +267,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Case Studies Section */}
-      <section className="py-20 diagonal-top">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Proven Transformation Results</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real-world case studies demonstrating how NexDyne's strategic automation delivers measurable ROI across mission-critical environments.
-            </p>
-          </div>
-
-          <div className="relative max-w-5xl mx-auto">
-            <Card className="overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid md:grid-cols-2">
-                  <div className="bg-primary text-primary-foreground p-12 flex flex-col justify-center">
-                    <div className="text-sm font-semibold text-accent mb-2">{caseStudies[currentCaseStudy].category}</div>
-                    <h3 className="text-3xl font-bold mb-4">{caseStudies[currentCaseStudy].title}</h3>
-                    <p className="text-primary-foreground/90 mb-6">{caseStudies[currentCaseStudy].description}</p>
-                  <Button asChild className="bg-orange-gradient hover:opacity-90 w-fit">
-                    <Link href={caseStudies[currentCaseStudy].href}>
-                      Read Case Study
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                  </div>
-                  <div className="bg-accent/10 p-12 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-7xl font-bold text-accent mb-2">{caseStudies[currentCaseStudy].metric}</div>
-                      <div className="text-lg text-muted-foreground">{caseStudies[currentCaseStudy].metricLabel}</div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevCaseStudy}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-primary text-primary-foreground p-3 rounded-full hover:bg-accent transition-colors"
-            >
-              <ChevronLeft className="h-6 w-6" />
-            </button>
-            <button
-              onClick={nextCaseStudy}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-primary text-primary-foreground p-3 rounded-full hover:bg-accent transition-colors"
-            >
-              <ChevronRight className="h-6 w-6" />
-            </button>
-
-            {/* Indicators */}
-            <div className="flex justify-center space-x-2 mt-8">
-              {caseStudies.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentCaseStudy(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentCaseStudy ? 'bg-accent w-8' : 'bg-border'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button asChild variant="outline" size="lg">
-              <Link href="/case-studies">
-                View All Case Studies
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Case Studies Section - Incentro Style */}
+      <CaseStudyShowcase />
 
       {/* Certifications Section */}
       <section className="py-20 bg-secondary">
