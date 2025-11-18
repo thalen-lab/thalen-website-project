@@ -847,3 +847,10 @@
 - [x] Fix placeholder images - replace /api/placeholder with working Unsplash image URLs
 - [x] Test updated section (verified - images loading, text updated, Incentro-style layout perfect)
 - [x] Save checkpoint
+
+## Phase 88: Fix Case Study Navigation Links
+- [x] Investigate CaseStudyShowcase component to identify routing issue
+- [x] Check case study URLs and ensure they match existing case study pages
+- [x] Fix href links in the component
+- [x] Test navigation by clicking "Read more" buttons on all visible case studies
+- [ ] Save checkpoint

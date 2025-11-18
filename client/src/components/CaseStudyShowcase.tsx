@@ -31,19 +31,19 @@ const caseStudies: CaseStudy[] = [
     category: "Manufacturing"
   },
   {
-    id: "healthcare-integration",
+    id: "healthcare-ai",
     title: "Healthcare System Integrates 12 Legacy Platforms",
     description: "Unified patient data across disparate systems, reducing administrative burden by 60% and improving care coordination for 2M+ patients while ensuring HIPAA compliance.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
-    link: "/case-studies/healthcare-integration",
+    link: "/case-studies/healthcare-ai",
     category: "Healthcare"
   },
   {
-    id: "financial-fraud",
+    id: "bank-fraud",
     title: "Financial Institution Detects $50M in Fraud",
     description: "Real-time ML-powered fraud detection system processes 10M+ daily transactions, reducing false positives by 80% and preventing $50M in fraudulent activities annually.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
-    link: "/case-studies/financial-fraud-detection",
+    link: "/case-studies/bank-fraud",
     category: "Financial Services"
   },
   {
@@ -51,15 +51,15 @@ const caseStudies: CaseStudy[] = [
     title: "Defense Agency Migrates to Secure Cloud",
     description: "Zero-downtime migration of mission-critical systems to FedRAMP High cloud infrastructure, achieving IL5 compliance while reducing infrastructure costs by 40%.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
-    link: "/case-studies/defense-cloud-migration",
+    link: "/case-studies/defense-cloud",
     category: "Federal Government"
   },
   {
-    id: "energy-analytics",
+    id: "energy-grid",
     title: "Energy Company Optimizes Grid Performance",
     description: "Real-time analytics platform monitors 500+ substations, predicting equipment failures 30 days in advance and reducing outages by 65% across the distribution network.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop",
-    link: "/case-studies/energy-grid-optimization",
+    link: "/case-studies/energy-grid",
     category: "Energy"
   }
 ];
