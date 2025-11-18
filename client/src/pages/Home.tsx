@@ -16,8 +16,15 @@ import {
   Code,
   Users,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  ShieldCheck,
+  Award,
+  FileCheck,
+  Lock,
+  Key,
+  Heart
 } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function Home() {
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
@@ -129,14 +136,46 @@ export default function Home() {
   ];
 
   const certifications = [
-    'FedRAMP Authorized',
-    'CMMC Level 3',
-    'ISO 27001:2022',
-    'NIST Framework v2.0',
-    'SOC 2 Type II',
-    'FISMA Moderate ATO',
-    'HIPAA BAA Ready',
-    'TS/SCI Cleared Team'
+    {
+      name: 'FedRAMP Authorized',
+      icon: Shield,
+      description: 'Federal Risk and Authorization Management Program - Authorized for government cloud services at Moderate and High impact levels.'
+    },
+    {
+      name: 'CMMC Level 3',
+      icon: ShieldCheck,
+      description: 'Cybersecurity Maturity Model Certification Level 3 - Certified to protect Controlled Unclassified Information (CUI) for defense contractors.'
+    },
+    {
+      name: 'ISO 27001:2022',
+      icon: Award,
+      description: 'International standard for information security management systems - Latest 2022 revision certified.'
+    },
+    {
+      name: 'NIST Framework v2.0',
+      icon: FileCheck,
+      description: 'National Institute of Standards and Technology Cybersecurity Framework v2.0 - Comprehensive security controls implementation.'
+    },
+    {
+      name: 'SOC 2 Type II',
+      icon: Lock,
+      description: 'Service Organization Control 2 Type II - Independent audit of security, availability, and confidentiality controls over 12+ months.'
+    },
+    {
+      name: 'FISMA Moderate ATO',
+      icon: Key,
+      description: 'Federal Information Security Management Act Authority to Operate at Moderate impact level for federal systems.'
+    },
+    {
+      name: 'HIPAA BAA Ready',
+      icon: Heart,
+      description: 'Health Insurance Portability and Accountability Act Business Associate Agreement ready - Compliant for protected health information (PHI).'
+    },
+    {
+      name: 'TS/SCI Cleared Team',
+      icon: Users,
+      description: 'Top Secret/Sensitive Compartmented Information cleared personnel available for classified government projects.'
+    }
   ];
 
   useEffect(() => {
@@ -280,15 +319,25 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-card border border-border rounded-lg p-6 text-center flex items-center justify-center">
-                <div>
-                  <CheckCircle2 className="h-8 w-8 text-accent mx-auto mb-2" />
-                  <div className="text-sm font-semibold">{cert}</div>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {certifications.map((cert, index) => {
+              const IconComponent = cert.icon;
+              return (
+                <Tooltip key={index}>
+                  <TooltipTrigger asChild>
+                    <div className="bg-card border-2 border-border hover:border-accent rounded-lg p-6 text-center flex flex-col items-center justify-center transition-all hover:shadow-lg cursor-help group">
+                      <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-accent/20 transition-colors">
+                        <IconComponent className="h-8 w-8 text-accent" />
+                      </div>
+                      <div className="text-sm font-semibold leading-tight">{cert.name}</div>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p className="text-sm">{cert.description}</p>
+                  </TooltipContent>
+                </Tooltip>
+              );
+            })}
           </div>
         </div>
       </section>
