@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Shield, CheckCircle2, Award } from 'lucide-react';
+import { ArrowRight, Shield, CheckCircle2, Award, Users, Clock, DollarSign, Target } from 'lucide-react';
 
 export default function FederalGovernment() {
   const capabilities = [
@@ -21,6 +21,48 @@ export default function FederalGovernment() {
     { name: 'State & Local Gov', projects: 'Nationwide' }
   ];
 
+  const challenges = [
+    {
+      title: 'Legacy System Modernization',
+      description: 'Federal agencies operate critical infrastructure on aging COBOL and mainframe systems that are expensive to maintain and difficult to integrate with modern technologies. These legacy systems create operational bottlenecks, security vulnerabilities, and limit the ability to deliver citizen services efficiently.'
+    },
+    {
+      title: 'Compliance & Security Requirements',
+      description: 'Meeting stringent federal security standards including FedRAMP, FISMA, NIST 800-53, and CMMC requires specialized expertise and continuous monitoring. Agencies must balance mission effectiveness with rigorous compliance requirements while protecting sensitive data and maintaining operational security.'
+    },
+    {
+      title: 'Budget Constraints & ROI Pressure',
+      description: 'Federal IT budgets face increasing scrutiny with mandates to demonstrate measurable ROI and cost savings. Agencies must modernize aging infrastructure while reducing operational costs, often with limited resources and competing priorities across multiple mission-critical systems.'
+    },
+    {
+      title: 'Workforce Transformation',
+      description: 'The federal workforce faces a skills gap as experienced personnel retire and new technologies emerge. Agencies must train existing staff on modern automation tools while competing with private sector for technical talent, all while maintaining continuity of mission-critical operations.'
+    }
+  ];
+
+  const solutions = [
+    {
+      icon: Shield,
+      title: 'Zero-Trust Security Architecture',
+      description: 'We implement comprehensive zero-trust frameworks that exceed federal security requirements while enabling operational agility. Our approach includes continuous authentication, micro-segmentation, and real-time threat detection across all network layers. Every solution is designed with FedRAMP High authorization in mind, incorporating defense-in-depth strategies that protect sensitive data while maintaining mission effectiveness.'
+    },
+    {
+      icon: Target,
+      title: 'Mission-Focused Automation',
+      description: 'Our automation strategies align directly with agency mission objectives, delivering measurable improvements in operational efficiency and citizen service delivery. We analyze existing workflows to identify high-impact automation opportunities that reduce manual processing time by an average of 85% while maintaining full compliance with federal regulations. Each implementation includes comprehensive change management to ensure successful adoption across the organization.'
+    },
+    {
+      icon: Users,
+      title: 'Cleared Team & ATO Support',
+      description: 'Our Top Secret/SCI cleared engineers and consultants have decades of combined federal experience, enabling us to work on classified systems and sensitive operations. We provide end-to-end ATO support including security control implementation, documentation preparation, and continuous monitoring setup. Our team has successfully achieved 50+ federal ATOs across multiple agencies and impact levels.'
+    },
+    {
+      icon: Clock,
+      title: 'Agile Delivery & Rapid Deployment',
+      description: 'We leverage agile methodologies tailored for federal environments, delivering working capabilities in 30-day sprints while maintaining full documentation and compliance requirements. Our RAPID Framework accelerates time-to-value through iterative development, continuous stakeholder engagement, and automated testing pipelines. This approach reduces typical project timelines by 40% compared to traditional waterfall methods.'
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -35,23 +77,101 @@ export default function FederalGovernment() {
               Federal Government Solutions
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Trusted partner for mission-critical automation and modernization across federal agencies. FedRAMP Authorized with Top Secret/SCI cleared teams.
+              Trusted partner for mission-critical automation and modernization across federal agencies. FedRAMP Authorized with Top Secret/SCI cleared teams delivering measurable results for defense, intelligence, and civilian operations.
             </p>
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Schedule Federal Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Schedule Federal Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                View Federal Case Studies
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Federal Experience Stats */}
+      <section className="py-16 bg-secondary">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">15+</div>
+              <div className="text-sm text-muted-foreground">Years Federal Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">50+</div>
+              <div className="text-sm text-muted-foreground">Successful ATOs</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">$2.3B+</div>
+              <div className="text-sm text-muted-foreground">Federal ROI Delivered</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">100%</div>
+              <div className="text-sm text-muted-foreground">Security Clearance Rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Federal Challenges */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Federal IT Challenges We Solve</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Federal agencies face unique operational, security, and budgetary challenges that require specialized expertise and proven methodologies. NexDyne delivers solutions that address these complex requirements while maintaining mission continuity.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {challenges.map((challenge, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-4 text-accent">{challenge.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{challenge.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Federal Solutions</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive automation and modernization services designed specifically for federal requirements, delivered by cleared professionals with deep government experience.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {solutions.map((solution, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-8">
+                  <solution.icon className="h-12 w-12 text-accent mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">{solution.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Security & Compliance */}
       <section className="py-20">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-6">Government-Grade Security & Compliance</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                NexDyne maintains the highest levels of federal security certifications and clearances, enabling us to support classified and mission-critical operations across the federal government.
+                NexDyne maintains the highest levels of federal security certifications and clearances, enabling us to support classified and mission-critical operations across the federal government. Our comprehensive compliance framework ensures that every solution meets or exceeds federal security requirements while maintaining operational efficiency.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6">
+                We provide end-to-end ATO support including security control implementation, documentation preparation, continuous monitoring setup, and ongoing compliance management. Our proven methodology has achieved a 100% success rate across 50+ federal ATOs spanning FedRAMP Moderate, FedRAMP High, and FISMA authorizations.
               </p>
               <ul className="space-y-3">
                 {capabilities.map((cap, index) => (
@@ -69,7 +189,7 @@ export default function FederalGovernment() {
                 { icon: Shield, title: 'TS/SCI', desc: 'Cleared Team' },
                 { icon: Award, title: 'FISMA', desc: 'ATO Approved' }
               ].map((item, index) => (
-                <Card key={index} className="text-center">
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <item.icon className="h-12 w-12 text-accent mx-auto mb-3" />
                     <div className="font-bold text-lg mb-1">{item.title}</div>
@@ -82,17 +202,18 @@ export default function FederalGovernment() {
         </div>
       </section>
 
+      {/* Agency Experience */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Federal Agency Experience</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record across defense, intelligence, and civilian agencies.
+              Proven track record across defense, intelligence, and civilian agencies. Our cleared teams have delivered mission-critical automation and modernization projects for agencies spanning the entire federal landscape, from Cabinet-level departments to independent agencies and state/local governments.
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {agencies.map((agency, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
                   <h3 className="font-bold text-lg mb-2">{agency.name}</h3>
                   <p className="text-accent font-semibold">{agency.projects}</p>
@@ -103,16 +224,26 @@ export default function FederalGovernment() {
         </div>
       </section>
 
+      {/* Case Study */}
       <section className="py-20">
         <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Federal Success Story</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Real-world results from our federal automation engagements demonstrate the measurable impact of strategic automation combined with deep compliance expertise.
+            </p>
+          </div>
           <Card className="overflow-hidden max-w-5xl mx-auto">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2">
                 <div className="bg-primary text-primary-foreground p-12 flex flex-col justify-center">
                   <div className="text-sm font-semibold text-accent mb-2">Featured Success</div>
                   <h3 className="text-3xl font-bold mb-4">Federal Agency Achieves 85% Process Automation</h3>
-                  <p className="text-primary-foreground/90 mb-6">
+                  <p className="text-primary-foreground/90 mb-4">
                     Transformed manual workflows into intelligent automation while maintaining Top Secret/SCI compliance, reducing processing time from 6 weeks to 2 days.
+                  </p>
+                  <p className="text-primary-foreground/90 mb-6">
+                    This large civilian agency was struggling with paper-based workflows that created bottlenecks across multiple departments. Our team implemented a comprehensive RPA solution with AI-assisted document processing, integrated with existing legacy systems through secure APIs. The solution achieved FedRAMP Moderate ATO in 8 months and delivered immediate operational improvements while maintaining full NIST 800-53 compliance.
                   </p>
                   <Button className="bg-orange-gradient hover:opacity-90 w-fit">
                     Read Case Study
@@ -122,7 +253,25 @@ export default function FederalGovernment() {
                 <div className="bg-accent/10 p-12 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-7xl font-bold text-accent mb-2">85%</div>
-                    <div className="text-lg text-muted-foreground">Automation Rate</div>
+                    <div className="text-lg text-muted-foreground mb-8">Automation Rate</div>
+                    <div className="grid grid-cols-2 gap-6 text-left">
+                      <div>
+                        <div className="text-3xl font-bold text-accent">6 weeks</div>
+                        <div className="text-sm text-muted-foreground">to 2 days</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-accent">$12M</div>
+                        <div className="text-sm text-muted-foreground">Annual Savings</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-accent">8 months</div>
+                        <div className="text-sm text-muted-foreground">to ATO</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-accent">Zero</div>
+                        <div className="text-sm text-muted-foreground">Security Incidents</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -131,11 +280,12 @@ export default function FederalGovernment() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Agency?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a federal automation assessment with our cleared experts.
+            Schedule a federal automation assessment with our cleared experts. We'll analyze your current operations, identify high-impact automation opportunities, and provide a detailed ROI projection tailored to your agency's mission objectives.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90">
             Schedule Federal Assessment

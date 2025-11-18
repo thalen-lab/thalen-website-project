@@ -182,10 +182,10 @@ function Router() {
       <Route path={"/services/digital-transformation/success-metrics"} component={SuccessMetrics} />
       
       {/* Industry Routes */}
-      <Route path={"/industries/federal"} component={FederalIndustry} />
+      <Route path={"/industries/federal-government"} component={FederalIndustry} />
       <Route path={"/industries/healthcare"} component={HealthcareIndustry} />
       <Route path={"/industries/manufacturing"} component={ManufacturingIndustry} />
-      <Route path={"/industries/financial"} component={FinancialIndustry} />
+      <Route path={"/industries/financial-services"} component={FinancialIndustry} />
       
       {/* Case Study Routes */}
       <Route path={"/case-studies"} component={CaseStudies} />
