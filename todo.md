@@ -973,4 +973,21 @@
 - [x] Use clean typography with arrow icons for navigation
 - [x] Reduce vertical spacing to make section more compact
 - [x] Test minimalist design on Contact page
+- [x] Save checkpoint
+
+## Phase 102: Add Bullet Points to Contact Subpage Service Lists
+
+- [ ] Update Strategic Partnerships page to use bullet points for service list
+- [ ] Update Government Relations page to use bullet points for service list
+- [ ] Update Emergency Support page to use bullet points for coverage list
+- [ ] Update Technical Advisory page to use bullet points for service list
+- [ ] Test all updated pages for improved readability
+- [ ] Save checkpoint
+
+## Phase 103: Add RPA Article Image to Insights Page
+
+- [x] Copy RPA article image to project public directory
+- [x] Update Featured Article card on Insights page to use RPA image
+- [x] Update Featured Article content to match RPA theme
+- [x] Test Insights page with new image
 - [ ] Save checkpoint

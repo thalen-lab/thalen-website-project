@@ -166,18 +166,21 @@ export default function Insights() {
           <Card className="overflow-hidden max-w-5xl mx-auto hover:shadow-xl transition-shadow">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2">
-                <div className="bg-accent/10 p-12 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-sm font-semibold text-accent mb-2">Featured Article</div>
-                    <div className="text-6xl font-bold text-accent mb-4">2024</div>
-                    <div className="text-lg font-semibold">Automation Trends Report</div>
-                  </div>
+                <div className="relative overflow-hidden">
+                  <img 
+                    src="/rpa-article.a7f3b2e1.png" 
+                    alt="Three Practical Recommendations to Secure Robotic Process Automation (RPA) in a Federal IT environment"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-12 flex flex-col justify-center">
-                  <div className="text-sm font-semibold text-accent mb-2">Industry Report</div>
-                  <h3 className="text-3xl font-bold mb-4">The State of Federal Automation</h3>
+                  <div className="text-sm font-semibold text-accent mb-2">Featured Article</div>
+                  <h3 className="text-3xl font-bold mb-4">Three Practical Recommendations to Secure RPA in Federal IT</h3>
                   <p className="text-muted-foreground mb-6">
-                    Our annual report analyzing automation adoption, ROI trends, and emerging technologies across federal agencies.
+                    This article provides three overarching recommendations for RPA Program Teams to support the successful implementation and operation of the program.
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    Written by Kearney Principal Mark Munster
                   </p>
                   <Button className="bg-orange-gradient hover:opacity-90 w-fit">
                     Download Report
