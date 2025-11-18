@@ -99,19 +99,19 @@ export default function CustomApplicationDevelopment() {
     {
       title: "Low-Code Development",
       description: "Accelerate delivery with visual development platforms for rapid application deployment.",
-      link: "/services/low-code-development",
+      href: "/services/low-code-development",
       icon: Zap
     },
     {
       title: "Application Security",
       description: "Secure SDLC practices with continuous security testing and compliance validation.",
-      link: "/services/application-security",
+      href: "/services/application-security",
       icon: Shield
     },
     {
       title: "System Integration",
       description: "Connect your custom applications with legacy systems and modern cloud services.",
-      link: "/services/system-integration",
+      href: "/services/system-integration",
       icon: GitBranch
     }
   ];

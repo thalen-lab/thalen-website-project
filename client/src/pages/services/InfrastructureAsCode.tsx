@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, CheckCircle2, Code, GitBranch, Shield, Zap, FileCode, Cloud, TrendingUp, RefreshCw, Server } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Code, GitBranch, Shield, Zap, FileCode, Cloud, TrendingUp, RefreshCw, Server, Lock as LockIcon } from 'lucide-react';
 
 export default function InfrastructureAsCode() {
   const benefits = [
@@ -61,7 +61,7 @@ export default function InfrastructureAsCode() {
     },
     {
       title: 'Security & Compliance',
-      icon: Lock,
+      icon: LockIcon,
       description: 'Policy-as-code enforcement with Sentinel, OPA, and automated compliance scanning for FedRAMP and NIST controls.',
       features: [
         'Policy-as-code enforcement',

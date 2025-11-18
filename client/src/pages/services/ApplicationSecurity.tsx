@@ -21,9 +21,9 @@ export default function ApplicationSecurity() {
   ];
 
   const relatedServices = [
-    { title: "Custom Application Development", description: "Build secure applications with security-first development practices from day one.", link: "/services/custom-application-development", icon: Code2 },
-    { title: "Security Assessment", description: "Comprehensive security assessments and compliance validation for existing applications.", link: "/services/security-assessment", icon: Shield },
-    { title: "Penetration Testing", description: "Offensive security testing to identify vulnerabilities before attackers do.", link: "/services/penetration-testing", icon: AlertTriangle }
+    { title: "Custom Application Development", description: "Build secure applications with security-first development practices from day one.", href: "/services/custom-application-development", icon: Code2 },
+    { title: "Security Assessment", description: "Comprehensive security assessments and compliance validation for existing applications.", href: "/services/security-assessment", icon: Shield },
+    { title: "Penetration Testing", description: "Offensive security testing to identify vulnerabilities before attackers do.", href: "/services/penetration-testing", icon: AlertTriangle }
   ];
 
   return (

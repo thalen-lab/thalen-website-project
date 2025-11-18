@@ -21,9 +21,9 @@ export default function EnterprisePortals() {
   ];
 
   const relatedServices = [
-    { title: "Custom Application Development", description: "Build complex portal features and integrations beyond standard capabilities.", link: "/services/custom-application-development", icon: Code2 },
-    { title: "Low-Code Development", description: "Rapidly deploy portal features using visual development platforms.", link: "/services/low-code-development", icon: Zap },
-    { title: "System Integration", description: "Connect portals with backend systems, databases, and external services.", link: "/services/system-integration", icon: Shield }
+    { title: "Custom Application Development", description: "Build complex portal features and integrations beyond standard capabilities.", href: "/services/custom-application-development", icon: Code2 },
+    { title: "Low-Code Development", description: "Rapidly deploy portal features using visual development platforms.", href: "/services/low-code-development", icon: Zap },
+    { title: "System Integration", description: "Connect portals with backend systems, databases, and external services.", href: "/services/system-integration", icon: Shield }
   ];
 
   return (
