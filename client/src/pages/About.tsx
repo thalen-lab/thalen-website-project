@@ -124,22 +124,8 @@ export default function About() {
           >
             <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wide">Our Mission</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Organizations around the world are using NexDyne to transform their most important operations.
+              To deliver strategic automation that amplifies organizational capability while maintaining mission-critical security.
             </h2>
-            
-            <div className="space-y-6 text-lg text-muted-foreground text-left mt-12">
-              <p>
-                With NexDyne's automation strategies, government agencies are achieving new levels of operational efficiency while maintaining the highest security standards. Federal departments are reducing processing times from weeks to hours, healthcare systems are improving patient outcomes through streamlined workflows, and critical infrastructure operators are enhancing reliability through predictive automation.
-              </p>
-              
-              <p>
-                Defense contractors are building stronger cases for mission readiness. Intelligence agencies are accelerating threat analysis capabilities. Healthcare organizations are directing resources more effectively to patient care. Manufacturing operations are optimizing supply chains with unprecedented precision. Financial institutions are strengthening compliance while improving service delivery.
-              </p>
-              
-              <p>
-                We are working to build a future in which government agencies, healthcare systems, and critical infrastructure operators can leverage automation to function as they were designed—to fulfill the missions with which they've been entrusted, to deliver maximum value to citizens, and to protect the systems most vital to our society.
-              </p>
-            </div>
           </motion.div>
         </div>
       </section>
