@@ -110,8 +110,8 @@ export default function Navigation() {
               Contact
             </Link>
             
-            <Button className="bg-orange-gradient hover:opacity-90 transition-opacity">
-              Schedule Assessment
+            <Button asChild className="bg-orange-gradient hover:opacity-90 transition-opacity">
+              <Link href="/contact">Schedule Assessment</Link>
             </Button>
           </div>
 
@@ -218,8 +218,8 @@ export default function Navigation() {
               Contact
             </Link>
             
-            <Button className="w-full bg-orange-gradient hover:opacity-90 transition-opacity mt-4">
-              Schedule Assessment
+            <Button asChild className="w-full bg-orange-gradient hover:opacity-90 transition-opacity mt-4">
+              <Link href="/contact">Schedule Assessment</Link>
             </Button>
           </div>
         )}
