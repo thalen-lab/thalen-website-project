@@ -54,43 +54,37 @@ export default function Home() {
       icon: Cpu,
       title: 'Intelligent Automation & Process Optimization',
       description: 'Comprehensive process assessment, strategic automation design, and AI-assisted implementation delivering measurable ROI.',
-      href: '/services/automation',
-      stats: ['85% Efficiency Gain', '12mo ROI Breakeven']
+      href: '/services/automation'
     },
     {
       icon: BarChart3,
       title: 'Data Analytics & Intelligence',
       description: 'Real-time analytics platforms with ML/AI models for intelligent automation and optimized performance at operational scale.',
-      href: '/services/data-analytics',
-      stats: ['Real-time Insights', 'Predictive Analytics']
+      href: '/services/data-analytics'
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure & Modernization',
       description: 'Zero-downtime migration and government-grade security with DevOps solutions that support and scale your business.',
-      href: '/services/cloud',
-      stats: ['Zero Downtime', 'Multi-Cloud Strategy']
+      href: '/services/cloud'
     },
     {
       icon: Shield,
       title: 'Cybersecurity & Compliance',
       description: 'FedRAMP, CMMC, ISO 27001 compliance solutions with zero-trust architecture and continuous monitoring.',
-      href: '/services/cybersecurity',
-      stats: ['FedRAMP Authorized', 'CMMC Level 3']
+      href: '/services/cybersecurity'
     },
     {
       icon: Code,
       title: 'Application Development & Integration',
       description: 'Custom applications, seamless integrations, and workflow automation for enhanced productivity.',
-      href: '/services/application-development',
-      stats: ['API Development', 'Microservices']
+      href: '/services/application-development'
     },
     {
       icon: Users,
       title: 'Digital Transformation Enablement',
       description: 'End-to-end transformation support including change management, training, and adoption strategies.',
-      href: '/services/digital-transformation',
-      stats: ['Change Management', 'Success Metrics']
+      href: '/services/digital-transformation'
     }
   ];
 
@@ -286,14 +280,7 @@ export default function Home() {
                 <CardContent className="p-6">
                   <service.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-semibold mb-3 text-primary-foreground">{service.title}</h3>
-                  <p className="text-primary-foreground/80 mb-4">{service.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {service.stats.map((stat, idx) => (
-                      <span key={idx} className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full">
-                        {stat}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-primary-foreground/80 mb-6">{service.description}</p>
                   <Button asChild variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all">
                     <Link href={service.href}>
                       Explore Service

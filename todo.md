@@ -997,4 +997,11 @@
 - [x] Identify nested anchor tags in Insights page
 - [x] Remove nested Link/anchor components
 - [x] Test Insights page to verify error is resolved
+- [x] Save checkpoint
+
+## Phase 105: Clean Up Homepage Service Cards
+
+- [x] Remove metrics from all six service cards on homepage
+- [x] Keep only title, description, and CTA button on each card
+- [x] Test homepage service cards design
 - [ ] Save checkpoint
