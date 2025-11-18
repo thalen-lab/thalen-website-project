@@ -24,6 +24,14 @@ import Cloud from "./pages/services/Cloud";
 import CybersecurityService from "./pages/services/Cybersecurity";
 import AppDevelopmentService from "./pages/services/AppDevelopment";
 import CustomSoftwareService from "./pages/services/CustomSoftware";
+
+// Custom Software Subpages
+import EnterpriseSaaS from "./pages/services/custom-software/EnterpriseSaaS";
+import StartupMVP from "./pages/services/custom-software/StartupMVP";
+import BusinessApps from "./pages/services/custom-software/BusinessApps";
+import APIMicroservices from "./pages/services/custom-software/APIMicroservices";
+import MobileApps from "./pages/services/custom-software/MobileApps";
+import CustomSoftwareLegacyModernization from "./pages/services/custom-software/LegacyModernization";
 import DigitalTransformationService from "./pages/services/DigitalTransformation";
 
 // Automation Subpages
@@ -155,6 +163,12 @@ function Router() {
       <Route path={"/services/application-security"} component={ApplicationSecurity} />
       <Route path={"/services/app-development"} component={AppDevelopmentService} />
       <Route path={"/services/custom-software"} component={CustomSoftwareService} />
+      <Route path={"/services/custom-software/enterprise-saas"} component={EnterpriseSaaS} />
+      <Route path={"/services/custom-software/startup-mvp"} component={StartupMVP} />
+      <Route path={"/services/custom-software/business-apps"} component={BusinessApps} />
+      <Route path={"/services/custom-software/api-microservices"} component={APIMicroservices} />
+      <Route path={"/services/custom-software/mobile-apps"} component={MobileApps} />
+      <Route path={"/services/custom-software/legacy-modernization"} component={CustomSoftwareLegacyModernization} />
       <Route path={"/services/digital-transformation"} component={DigitalTransformationService} />
       
       {/* Industry Routes */}

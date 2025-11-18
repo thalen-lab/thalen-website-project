@@ -19,7 +19,8 @@ export default function CustomSoftware() {
         "Subscription & billing",
         "Usage analytics",
         "API integrations"
-      ]
+      ],
+      link: "/services/custom-software/enterprise-saas"
     },
     {
       icon: Rocket,
@@ -30,7 +31,8 @@ export default function CustomSoftware() {
         "Agile sprints",
         "User feedback loops",
         "Scalable foundation"
-      ]
+      ],
+      link: "/services/custom-software/startup-mvp"
     },
     {
       icon: Code2,
@@ -41,7 +43,8 @@ export default function CustomSoftware() {
         "Custom workflows",
         "Role-based access",
         "Third-party integrations"
-      ]
+      ],
+      link: "/services/custom-software/business-apps"
     },
     {
       icon: Layers,
@@ -52,7 +55,8 @@ export default function CustomSoftware() {
         "Microservices architecture",
         "Real-time data sync",
         "Webhook integrations"
-      ]
+      ],
+      link: "/services/custom-software/api-microservices"
     },
     {
       icon: Smartphone,
@@ -63,7 +67,8 @@ export default function CustomSoftware() {
         "Cross-platform frameworks",
         "Offline-first design",
         "Push notifications"
-      ]
+      ],
+      link: "/services/custom-software/mobile-apps"
     },
     {
       icon: Database,
@@ -74,7 +79,8 @@ export default function CustomSoftware() {
         "Zero-downtime transition",
         "Cloud-native refactoring",
         "Performance optimization"
-      ]
+      ],
+      link: "/services/custom-software/legacy-modernization"
     }
   ];
 
@@ -184,12 +190,12 @@ export default function CustomSoftware() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all group">
                 <CardContent className="p-8">
                   <service.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
                   <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
@@ -197,6 +203,12 @@ export default function CustomSoftware() {
                       </li>
                     ))}
                   </ul>
+                  <Link href={service.link}>
+                    <a className="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all">
+                      Learn More
+                      <ArrowRight className="h-5 w-5" />
+                    </a>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
