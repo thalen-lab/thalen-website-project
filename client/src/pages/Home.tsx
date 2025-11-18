@@ -321,14 +321,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {certifications.map((cert, index) => {
-              const IconComponent = cert.icon;
               return (
                 <Tooltip key={index}>
                   <TooltipTrigger asChild>
-                    <div className="bg-card border-2 border-border hover:border-accent rounded-lg p-6 text-center flex flex-col items-center justify-center transition-all hover:shadow-lg cursor-help group">
-                      <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-accent/20 transition-colors">
-                        <IconComponent className="h-8 w-8 text-accent" />
-                      </div>
+                    <div className="bg-card border-2 border-border hover:border-accent rounded-lg p-6 text-center flex flex-col items-center justify-center transition-all hover:shadow-lg cursor-help min-h-[100px]">
                       <div className="text-sm font-semibold leading-tight">{cert.name}</div>
                     </div>
                   </TooltipTrigger>

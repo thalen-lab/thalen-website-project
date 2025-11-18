@@ -880,4 +880,10 @@
 - [x] Add visual icons/logos to certification badges
 - [x] Implement hover tooltips with explanations for each certification
 - [x] Test the enhanced badges on homepage (tooltips working perfectly)
+- [x] Save checkpoint
+
+## Phase 93: Remove Icons from Security Certification Badges
+- [x] Update Home.tsx to remove circular icon backgrounds from certification badges
+- [x] Keep card styling, hover effects, and tooltips intact
+- [x] Test the updated badges on homepage (tooltips working perfectly)
 - [ ] Save checkpoint
