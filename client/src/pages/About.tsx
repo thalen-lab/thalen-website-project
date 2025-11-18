@@ -347,7 +347,7 @@ export default function About() {
                 </p>
               </div>
 
-              <Link href="/contact">
+              <Link href="/team">
                 <Button variant="outline" size="lg" className="mt-8 group">
                   Meet Our Experts
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

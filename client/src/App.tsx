@@ -8,6 +8,7 @@ import LiveChat from "./components/LiveChat";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import Partners from "./pages/Partners";
 import Resources from "./pages/Resources";
@@ -126,6 +127,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/about"} component={About} />
+      <Route path={"/team"} component={Team} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/partners"} component={Partners} />
       <Route path={"/resources"} component={Resources} />
