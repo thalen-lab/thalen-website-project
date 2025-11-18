@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import LiveChat from "./components/LiveChat";
+import PWAInstallPrompt from "./components/PWAInstallPrompt";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -322,6 +323,7 @@ function App() {
           <Toaster />
           <Router />
           <LiveChat />
+          <PWAInstallPrompt />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

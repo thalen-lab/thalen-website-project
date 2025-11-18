@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - NexDyne Technology</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-center;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 600px;
+      text-align: center;
+    }
+    
+    .icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 30px;
+      background: #ff6b35;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-center;
+      font-size: 60px;
+      font-weight: bold;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+    
+    .button {
+      display: inline-block;
+      background: #ff6b35;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: opacity 0.2s;
+    }
+    
+    .button:hover {
+      opacity: 0.9;
+    }
+    
+    .cached-pages {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .cached-pages h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    
+    .cached-pages ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    
+    .cached-pages li a {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: background 0.2s;
+    }
+    
+    .cached-pages li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">ND</div>
+    <h1>You're Offline</h1>
+    <p>
+      It looks like you've lost your internet connection. Don't worry—some content may still be available from your cache.
+    </p>
+    <a href="/" class="button" onclick="window.location.reload(); return false;">Try Again</a>
+    
+    <div class="cached-pages">
+      <h2>Try these cached pages:</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/insights">Insights</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
