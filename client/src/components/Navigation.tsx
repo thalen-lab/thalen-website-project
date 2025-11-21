@@ -31,12 +31,8 @@ export default function Navigation() {
       <div className="container">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <img src={APP_LOGO} alt="NexDyne Technologies" className="h-12 w-12" />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold">NexDyne</span>
-              <span className="text-xs uppercase tracking-wider opacity-90">Technologies</span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <img src={APP_LOGO} alt="Incentro" className="h-24" />
           </Link>
 
           {/* Desktop Navigation */}

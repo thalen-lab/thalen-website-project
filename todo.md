@@ -1011,4 +1011,11 @@
 - [x] Copy Incentro logo to project public directory
 - [x] Update APP_LOGO constant in client/src/const.ts
 - [x] Test website with new logo
+- [x] Save checkpoint
+
+## Phase 107: Remove NexDyne Text and Increase Logo Size
+
+- [x] Remove "NexDyne TECHNOLOGIES" text from Navigation component
+- [x] Increase Incentro logo size to 2x
+- [x] Test updated navigation
 - [ ] Save checkpoint
