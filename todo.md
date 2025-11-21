@@ -1004,4 +1004,11 @@
 - [x] Remove metrics from all six service cards on homepage
 - [x] Keep only title, description, and CTA button on each card
 - [x] Test homepage service cards design
+- [x] Save checkpoint
+
+## Phase 106: Replace Logo with Incentro Logo
+
+- [x] Copy Incentro logo to project public directory
+- [x] Update APP_LOGO constant in client/src/const.ts
+- [x] Test website with new logo
 - [ ] Save checkpoint
