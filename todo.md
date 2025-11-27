@@ -1027,4 +1027,11 @@
 - [x] Adjust navigation bar height for better visual balance
 - [x] Add subtle hover effect to logo
 - [x] Test all branding updates
+- [x] Save checkpoint
+
+## Phase 109: Reduce Hero Section Overlay Opacity
+
+- [x] Find hero section overlay opacity settings
+- [x] Reduce dark overlay opacity to make background images more visible
+- [x] Test hero section on multiple pages
 - [ ] Save checkpoint

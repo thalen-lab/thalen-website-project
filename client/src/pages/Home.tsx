@@ -205,7 +205,7 @@ export default function Home() {
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/70" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/50" />
             </div>
             <div className="relative container h-full flex items-center">
               <div className="max-w-2xl text-primary-foreground">
