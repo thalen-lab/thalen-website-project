@@ -29,10 +29,10 @@ export default function Navigation() {
   return (
     <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
       <div className="container">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img src={APP_LOGO} alt="Incentro" className="h-24" />
+            <img src={APP_LOGO} alt="Incentro" className="h-20 transition-transform duration-300 hover:scale-105" />
           </Link>
 
           {/* Desktop Navigation */}

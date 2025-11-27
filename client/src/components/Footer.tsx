@@ -9,12 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <img src={APP_LOGO} alt="NexDyne Technologies" className="h-10 w-10" />
-              <div className="flex flex-col">
-                <span className="text-lg font-bold">NexDyne</span>
-                <span className="text-xs uppercase tracking-wider opacity-90">Technologies</span>
-              </div>
+            <div className="mb-4">
+              <img src={APP_LOGO} alt="Incentro" className="h-16" />
             </div>
             <p className="text-sm opacity-90 mb-4 max-w-sm">
               Intelligence, Delivered. The Automation Strategy Authority for government and enterprise.
@@ -95,7 +91,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-75">
-          <p>© 2024 NexDyne Technologies. All rights reserved.</p>
+          <p>© 2024 Incentro. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>
