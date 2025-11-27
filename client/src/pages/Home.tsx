@@ -202,10 +202,16 @@ export default function Home() {
             }`}
           >
             <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              className="absolute inset-0 bg-cover bg-center bg-fixed"
+              style={{ 
+                backgroundImage: `url(${slide.image})`,
+                transform: 'translateZ(0)',
+                willChange: 'transform'
+              }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/50" />
+              {/* Vignette effect */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,transparent_50%,rgba(0,0,0,0.3)_100%)]" />
             </div>
             <div className="relative container h-full flex items-center">
               <div className="max-w-2xl text-primary-foreground">

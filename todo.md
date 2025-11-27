@@ -1034,4 +1034,11 @@
 - [x] Find hero section overlay opacity settings
 - [x] Reduce dark overlay opacity to make background images more visible
 - [x] Test hero section on multiple pages
+- [x] Save checkpoint
+
+## Phase 110: Add Parallax and Vignette Effects to Hero Section
+
+- [x] Implement parallax scrolling effect on hero background images
+- [x] Add subtle vignette effect around hero section edges
+- [x] Test visual effects on hero section
 - [ ] Save checkpoint
