@@ -1364,3 +1364,8 @@
 - [x] Replace orange checkmark circles with simple black bullet points in all 4 phases
 - [x] Remove CheckCircle2 icon imports
 - [x] Test cleaner design
+
+## Phase 90: Minimize Orange Color Usage in RAPID Framework
+- [x] Replace orange numbered circles (bg-accent) with subtle gray/white bordered circles
+- [x] Update all 4 phase number styling to be less visually dominant
+- [x] Test updated design for professional appearance

@@ -358,7 +358,7 @@ export default function Home() {
             {/* Phase 1 */}
             <Card className="border-2 hover:border-accent transition-colors">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
                   1
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Research & Assessment</h3>
@@ -385,7 +385,7 @@ export default function Home() {
             {/* Phase 2 */}
             <Card className="border-2 hover:border-accent transition-colors">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
                   2
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Architecture & Planning</h3>
@@ -412,7 +412,7 @@ export default function Home() {
             {/* Phase 3 */}
             <Card className="border-2 hover:border-accent transition-colors">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
                   3
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Implementation & Delivery</h3>
@@ -439,7 +439,7 @@ export default function Home() {
             {/* Phase 4 */}
             <Card className="border-2 hover:border-accent transition-colors">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
                   4
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Performance & Optimization</h3>
