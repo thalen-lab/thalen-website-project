@@ -1381,3 +1381,11 @@
 - [x] Add PDF download button to methodology page
 - [x] Update navigation to link to methodology page
 - [x] Test methodology page and PDF download
+
+## Phase 92: Add Request Methodology Assessment Form
+- [x] Add assessment form section to methodology page
+- [x] Create form with agency name, contact info, authorization status, compliance framework fields
+- [x] Pre-populate subject with "RAPID Framework Assessment"
+- [x] Use clean, minimal design matching page style
+- [x] Add form submission handling
+- [x] Test form submission and validation

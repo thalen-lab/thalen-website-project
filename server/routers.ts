@@ -5,7 +5,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { notifyOwner } from "./_core/notification";
 import { getDb } from "./db";
-import { comments, savedSearches } from "../drizzle/schema";
+import { comments, savedSearches, methodologyAssessments } from "../drizzle/schema";
 import { eq, and, isNull, desc } from "drizzle-orm";
 import { adminRouter } from "./adminRouters";
 
@@ -210,7 +210,7 @@ export const appRouter = router({
         try {
           // Send notification to owner
           const emailContent = `
-New Contact Form Submission from NexDyne Website
+New Contact Form Submission from Thalen Technologies Website
 
 Name: ${input.name}
 Email: ${input.email}
@@ -239,6 +239,71 @@ ${input.message}
         } catch (error) {
           console.error("[Contact Form] Error processing submission:", error);
           throw new Error("Failed to submit contact form. Please try again.");
+        }
+      }),
+  }),
+
+  methodologyAssessment: router({
+    submit: publicProcedure
+      .input(
+        z.object({
+          agencyName: z.string().min(1, "Agency name is required"),
+          contactName: z.string().min(1, "Contact name is required"),
+          email: z.string().email("Valid email is required"),
+          phone: z.string().optional(),
+          authStatus: z.string().min(1, "Authorization status is required"),
+          complianceFramework: z.string().min(1, "Compliance framework is required"),
+          details: z.string().optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        try {
+          // Save to database
+          const db = await getDb();
+          if (db) {
+            await db.insert(methodologyAssessments).values({
+              agencyName: input.agencyName,
+              contactName: input.contactName,
+              email: input.email,
+              phone: input.phone || null,
+              authStatus: input.authStatus,
+              complianceFramework: input.complianceFramework,
+              details: input.details || null,
+              status: "new",
+            });
+          }
+
+          // Send notification to owner
+          const emailContent = `
+New RAPID Framework Assessment Request from Thalen Technologies Website
+
+Agency: ${input.agencyName}
+Contact: ${input.contactName}
+Email: ${input.email}
+Phone: ${input.phone || 'Not provided'}
+Current Authorization Status: ${input.authStatus}
+Target Compliance Framework: ${input.complianceFramework}
+
+Additional Details:
+${input.details || 'Not provided'}
+          `.trim();
+
+          const notificationSent = await notifyOwner({
+            title: `New Assessment Request: ${input.agencyName}`,
+            content: emailContent,
+          });
+
+          if (!notificationSent) {
+            console.error("[Methodology Assessment] Failed to send notification");
+          }
+
+          return {
+            success: true,
+            message: "Thank you for your request. We'll respond within 1 business day to schedule your consultation.",
+          };
+        } catch (error) {
+          console.error("[Methodology Assessment] Error processing submission:", error);
+          throw new Error("Failed to submit assessment request. Please try again.");
         }
       }),
   }),
