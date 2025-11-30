@@ -111,9 +111,8 @@ export default function Engineering() {
       {/* The Engineering Problem */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Manual Data Processes Are Killing Your Analytics ROI</h2>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Manual Data Processes Are Killing Your Analytics ROI</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Most federal agencies have analysts who spend their days manually extracting data from legacy systems, cleaning it in Excel, and copying it into dashboards. This is not analytics work—this is data janitorial work. When data pipelines break, dashboards go stale. When data quality is poor, leadership loses trust in analytics. When data lineage is unknown, audits fail.
               </p>
@@ -142,10 +141,7 @@ export default function Engineering() {
                     <div className="text-sm text-muted-foreground">Track data from source to dashboard for compliance and troubleshooting</div>
                   </div>
                 </div>
-              </div>
             </div>
-
-
           </div>
         </div>
       </section>

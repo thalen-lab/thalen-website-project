@@ -111,9 +111,8 @@ export default function DataStrategy() {
       {/* The Strategy Problem */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">The Cost of No Strategy</h2>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">The Cost of No Strategy</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Federal agencies spend millions on analytics tools, data platforms, and dashboards—but without a coherent strategy, these investments fail to deliver value. Projects get funded based on who asks loudest, not what drives mission impact. Data quality problems persist because nobody owns governance. Analytics teams build solutions that leadership does not use because requirements were never aligned.
               </p>
@@ -142,10 +141,7 @@ export default function DataStrategy() {
                     <div className="text-sm text-muted-foreground">Every roadmap includes 3-6 month quick wins that demonstrate value immediately</div>
                   </div>
                 </div>
-              </div>
             </div>
-
-
           </div>
         </div>
       </section>

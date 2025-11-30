@@ -111,9 +111,8 @@ export default function Visualization() {
       {/* The Visualization Problem */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Commercial BI Tools Are Not Built for Federal Missions</h2>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Commercial BI Tools Are Not Built for Federal Missions</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Tableau and Power BI are excellent for sales dashboards and marketing reports. They are not designed for intelligence analysis, threat monitoring, or operational command and control. Commercial tools cannot handle classified data, lack real-time streaming capabilities, and provide no audit trails for congressional oversight.
               </p>
@@ -142,10 +141,7 @@ export default function Visualization() {
                     <div className="text-sm text-muted-foreground">Purpose-built dashboards for your mission—not generic templates</div>
                   </div>
                 </div>
-              </div>
             </div>
-
-
           </div>
         </div>
       </section>
