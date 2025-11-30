@@ -1359,3 +1359,8 @@
 - [x] Update Phase 3 to focus on ATO documentation and security controls
 - [x] Change bottom tagline from "30 days" to "90-day ATO timeline"
 - [x] Test updated framework section
+
+## Phase 89: Clean Up RAPID Framework Visual Design
+- [x] Replace orange checkmark circles with simple black bullet points in all 4 phases
+- [x] Remove CheckCircle2 icon imports
+- [x] Test cleaner design
