@@ -98,7 +98,7 @@ export default function CloudMigration() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
               FedRAMP Authorized • Zero Downtime Guaranteed
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
