@@ -1328,3 +1328,8 @@
 - [x] Add all 7 government case studies to the landing page (Federal Agency Automation, DoD Manufacturing, VA Healthcare, State Attorney General, State Energy Commission, County Health Department, Defense Cloud)
 - [x] Ensure filtering and search work correctly with new case studies
 - [x] Test all case study links navigate to correct detail pages
+
+## Phase 85: Clean Up Case Studies Landing Page Design
+- [x] Remove metric cards from case study cards to create cleaner design
+- [x] Keep only category, title, description, and tags on each card
+- [x] Test updated design and verify readability
