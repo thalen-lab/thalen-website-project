@@ -29,106 +29,84 @@ export default function CaseStudies() {
     {
       category: 'Federal Government',
       title: 'Federal Agency Achieves 85% Process Automation',
-      description: 'Transformed manual workflows into intelligent automation, reducing processing time from 6 weeks to 2 days while maintaining Top Secret/SCI compliance.',
+      description: 'Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
       metrics: [
         { value: '85%', label: 'Automation Rate' },
-        { value: '6 weeks → 2 days', label: 'Processing Time' }
+        { value: '$4.2M', label: 'Contract Value' }
       ],
-      tags: ['Automation', 'Compliance', 'Federal'],
+      tags: ['Automation', 'RPA', 'Federal', 'FedRAMP'],
       href: '/case-studies/federal-automation'
     },
     {
-      category: 'Healthcare',
-      title: 'Healthcare System Saves $12M Through AI Analytics',
-      description: 'Data intelligence platform delivered real-time insights improving patient outcomes by 40% while achieving full HIPAA compliance.',
+      category: 'Defense',
+      title: 'DoD Manufacturing Facility Achieves 99.2% Uptime',
+      description: 'Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.',
       metrics: [
-        { value: '$12M', label: 'Annual Savings' },
-        { value: '40%', label: 'Outcome Improvement' }
+        { value: '99.2%', label: 'System Uptime' },
+        { value: 'CMMC L3', label: 'Certified' }
       ],
-      tags: ['Analytics', 'AI', 'Healthcare'],
-      href: '/case-studies/healthcare-ai'
+      tags: ['Cybersecurity', 'IoT', 'Defense', 'CMMC'],
+      href: '/case-studies/dod-manufacturing'
+    },
+    {
+      category: 'Federal Government',
+      title: 'VA Medical Center Integrates 12 Legacy Systems',
+      description: 'Integrated 12 disparate healthcare systems using FedRAMP-authorized iPaaS platform. Reduced administrative burden by 60% for 8,500 staff members.',
+      metrics: [
+        { value: '12', label: 'Systems Integrated' },
+        { value: '60%', label: 'Admin Reduction' }
+      ],
+      tags: ['Integration', 'Healthcare', 'Federal', 'FedRAMP'],
+      href: '/case-studies/va-healthcare'
+    },
+    {
+      category: 'State Government',
+      title: 'State Attorney General Prevents $50M+ in Fraud',
+      description: 'Implemented AI-powered fraud detection system with CJIS compliance for state law enforcement. Analyzed 2.3M cases, prevented $50M+ in fraud.',
+      metrics: [
+        { value: '$50M+', label: 'Fraud Prevented' },
+        { value: '2.3M', label: 'Cases Analyzed' }
+      ],
+      tags: ['AI', 'Analytics', 'State', 'CJIS'],
+      href: '/case-studies/state-attorney-general'
+    },
+    {
+      category: 'State Government',
+      title: 'State Energy Commission Reduces Grid Outages 65%',
+      description: 'Deployed StateRAMP-authorized smart grid platform for state energy commission. Reduced outages by 65% across 4.2M customer service area.',
+      metrics: [
+        { value: '65%', label: 'Outage Reduction' },
+        { value: '4.2M', label: 'Customers Served' }
+      ],
+      tags: ['Automation', 'Energy', 'State', 'StateRAMP'],
+      href: '/case-studies/state-energy-commission'
+    },
+    {
+      category: 'County Government',
+      title: 'County Health Department Speeds Outbreak Response 40%',
+      description: 'Integrated 8 public health systems for county health department. Achieved 40% faster outbreak response with HIPAA-compliant data sharing.',
+      metrics: [
+        { value: '40%', label: 'Faster Response' },
+        { value: '8', label: 'Systems Integrated' }
+      ],
+      tags: ['Integration', 'Healthcare', 'County', 'HIPAA'],
+      href: '/case-studies/county-health-department'
     },
     {
       category: 'Defense',
       title: 'Defense Contractor: Zero-Downtime Cloud Migration',
-      description: 'Modernized entire infrastructure while achieving CMMC Level 3 certification with 100% operational continuity.',
+      description: 'Migrated 150+ applications and 500TB classified data to AWS GovCloud and Azure Government. Achieved CMMC Level 3 with 100% uptime and $4.5M annual savings.',
       metrics: [
         { value: '100%', label: 'Uptime Maintained' },
         { value: 'CMMC L3', label: 'Certified' }
       ],
-      tags: ['Cloud', 'Security', 'Defense'],
+      tags: ['Cloud', 'Security', 'Defense', 'CMMC'],
       href: '/case-studies/defense-cloud'
-    },
-    {
-      category: 'Manufacturing',
-      title: 'Manufacturing Giant Achieves 99.2% Uptime',
-      description: 'Cybersecurity and predictive maintenance eliminated 75% of unplanned downtime across 50+ facilities.',
-      metrics: [
-        { value: '99.2%', label: 'System Uptime' },
-        { value: '75%', label: 'Downtime Reduction' }
-      ],
-      tags: ['Cybersecurity', 'IoT', 'Manufacturing'],
-      href: '/case-studies/manufacturing-uptime'
-    },
-    {
-      category: 'Energy',
-      title: 'Energy Grid Automation Prevents $500M in Outage Costs',
-      description: 'Smart grid automation for regional utility serving 12M customers achieved 99.97% reliability through predictive maintenance.',
-      metrics: [
-        { value: '$500M', label: 'Costs Prevented' },
-        { value: '99.97%', label: 'Grid Reliability' }
-      ],
-      tags: ['Automation', 'Energy', 'IoT'],
-      href: '/case-studies/energy-grid'
-    },
-    {
-      category: 'Financial Services',
-      title: 'Bank Achieves Real-Time Fraud Detection at Scale',
-      description: 'AI-powered fraud detection processing 50M+ daily transactions with 99.9% accuracy and zero false positives.',
-      metrics: [
-        { value: '50M+', label: 'Daily Transactions' },
-        { value: '99.9%', label: 'Detection Accuracy' }
-      ],
-      tags: ['AI', 'Financial', 'Security'],
-      href: '/case-studies/bank-fraud'
-    },
-    {
-      category: 'Federal Government',
-      title: 'Intelligence Agency: Zero Security Incidents in 3 Years',
-      description: 'Comprehensive zero-trust architecture for classified information processing with FedRAMP High authorization.',
-      metrics: [
-        { value: '0', label: 'Security Incidents' },
-        { value: '3 Years', label: 'Perfect Record' }
-      ],
-      tags: ['Security', 'Compliance', 'Federal'],
-      href: '/case-studies/intelligence-security'
-    },
-    {
-      category: 'Healthcare',
-      title: 'Hospital Network Reduces Wait Times by 60%',
-      description: 'Process automation and patient flow optimization across 15 facilities serving 2M+ patients annually.',
-      metrics: [
-        { value: '60%', label: 'Wait Time Reduction' },
-        { value: '2M+', label: 'Patients Served' }
-      ],
-      tags: ['Automation', 'Healthcare', 'Operations'],
-      href: '/case-studies/hospital-wait-times'
-    },
-    {
-      category: 'Manufacturing',
-      title: 'Aerospace Manufacturer Achieves Digital Twin Integration',
-      description: 'Real-time digital twin platform optimizing production across 8 facilities with 35% efficiency gains.',
-      metrics: [
-        { value: '35%', label: 'Efficiency Gain' },
-        { value: '8', label: 'Facilities' }
-      ],
-      tags: ['Digital Twin', 'Manufacturing', 'IoT'],
-      href: '/case-studies/aerospace-digital-twin'
     }
   ];
 
-  const industries = ['All', 'Federal Government', 'Healthcare', 'Manufacturing', 'Financial Services', 'Defense', 'Energy'];
-  const services = ['All', 'Automation', 'Analytics', 'Cloud', 'Cybersecurity', 'AI', 'Security'];
+  const industries = ['All', 'Federal Government', 'State Government', 'County Government', 'Defense'];
+  const services = ['All', 'Automation', 'RPA', 'Integration', 'Analytics', 'AI', 'Cloud', 'Cybersecurity'];
 
   // Filter case studies based on search query, industry, and service
   const filteredCaseStudies = caseStudies.filter(study => {
@@ -160,7 +138,7 @@ export default function CaseStudies() {
               Proven Transformation Results
             </h1>
             <p className="text-xl md:text-2xl opacity-90">
-              Real-world case studies demonstrating how NexDyne's strategic automation delivers measurable ROI across mission-critical environments.
+              Real-world government case studies demonstrating FedRAMP and StateRAMP platform implementation expertise across federal, state, and local agencies.
             </p>
           </div>
         </div>
@@ -171,10 +149,10 @@ export default function CaseStudies() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '100+', label: 'Successful Projects' },
-              { value: '$2.3B+', label: 'Client ROI Delivered' },
-              { value: '85%', label: 'Avg Efficiency Gain' },
-              { value: '100%', label: 'Client Satisfaction' }
+              { value: '15+', label: 'Years Government Experience' },
+              { value: '$45M+', label: 'Government Contracts' },
+              { value: '50+', label: 'FedRAMP Platforms' },
+              { value: '100%', label: 'ATO Success Rate' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-accent mb-2">{stat.value}</div>

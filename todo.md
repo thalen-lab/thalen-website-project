@@ -1322,3 +1322,9 @@
 ## Phase 83: Complete Homepage Case Studies
 - [x] Create Defense Cloud (IL5) case study detail page
 - [x] Verify all 7 homepage case studies have working detail page links
+
+## Phase 84: Update Case Studies Landing Page
+- [x] Review current /case-studies page structure and existing case studies
+- [x] Add all 7 government case studies to the landing page (Federal Agency Automation, DoD Manufacturing, VA Healthcare, State Attorney General, State Energy Commission, County Health Department, Defense Cloud)
+- [x] Ensure filtering and search work correctly with new case studies
+- [x] Test all case study links navigate to correct detail pages
