@@ -96,7 +96,7 @@ export default function Cloud() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -158,7 +158,7 @@ export default function Cloud() {
                   <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -181,7 +181,7 @@ export default function Cloud() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                  <div className="h-2 w-2 rounded-full bg-foreground mr-4 mt-2 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
                     <p className="text-sm text-muted-foreground">{capability.description}</p>
@@ -237,7 +237,7 @@ export default function Cloud() {
                       <h3 className="text-2xl font-bold mb-2">{platform.provider}</h3>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {platform.platforms.map((p, idx) => (
-                          <span key={idx} className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full font-semibold">
+                          <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
                             {p}
                           </span>
                         ))}
@@ -294,7 +294,7 @@ export default function Cloud() {
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-12">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Success Story
             </div>
             <h2 className="text-4xl font-bold mb-4">See Government Cloud Migration in Action</h2>
@@ -305,7 +305,7 @@ export default function Cloud() {
           <Card className="max-w-4xl mx-auto overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
-                <div className="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
+                <div className="inline-block bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
                   Intelligence Community
                 </div>
                 <h3 className="text-3xl font-bold mb-4">Defense Agency Migrates to IL5 Cloud</h3>

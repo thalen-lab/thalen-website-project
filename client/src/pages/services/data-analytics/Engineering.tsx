@@ -184,7 +184,7 @@ export default function Engineering() {
                     <div className="text-sm font-semibold mb-2">Technologies:</div>
                     <div className="flex flex-wrap gap-2">
                       {capability.technologies.map((tech, idx) => (
-                        <span key={idx} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-semibold">
+                        <span key={idx} className="text-xs bg-muted text-foreground px-3 py-1 rounded-lg border border-border font-semibold">
                           {tech}
                         </span>
                       ))}

@@ -170,7 +170,7 @@ export default function CloudMigration() {
                       <ul className="space-y-2">
                         {phase.deliverables.map((deliverable, idx) => (
                           <li key={idx} className="flex items-start text-sm">
-                            <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                            <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                             <span>{deliverable}</span>
                           </li>
                         ))}

@@ -80,7 +80,7 @@ export default function PenetrationTesting() {
               ]}
               className="text-primary-foreground/80 hover:text-primary-foreground mb-4"
             />
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Offensive Security • Continuous Scanning
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -122,7 +122,7 @@ export default function PenetrationTesting() {
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}

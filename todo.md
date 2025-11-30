@@ -1436,3 +1436,14 @@
 - [x] Build Workflow Orchestration detail subpage
 - [x] Add routing for all three subpages
 - [x] Test all pages and navigation
+
+## Phase 99: Audit All Service Sections for Reduced-Orange Design
+- [x] Audit Cloud Migration landing page and subpages
+- [x] Audit Data Analytics landing page and subpages
+- [x] Audit Cybersecurity landing page and subpages
+- [x] Audit remaining service pages (Digital Transformation, Custom Software, etc.)
+- [x] Replace all orange bullets with neutral black dots
+- [x] Update all accent badges to muted styling
+- [x] Update all platform/technology badges to neutral bordered style
+- [x] Ensure orange is reserved only for primary CTAs
+- [x] Test all updated service pages

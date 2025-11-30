@@ -33,7 +33,7 @@ export default function ApplicationSecurity() {
         <div className="container relative z-10">
           <Breadcrumb items={[{ label: "Application Development & Integration", href: "/services/application-development" }, { label: "Application Security & Compliance" }]} />
           <div className="max-w-4xl mt-8">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">Secure SDLC • FedRAMP Validation</div>
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">Secure SDLC • FedRAMP Validation</div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">Application Security & Compliance</h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">Secure software development lifecycle practices with continuous security testing and compliance validation. Ensure your applications meet FedRAMP, NIST 800-53, and federal security requirements.</p>
             <div className="flex flex-wrap gap-4">

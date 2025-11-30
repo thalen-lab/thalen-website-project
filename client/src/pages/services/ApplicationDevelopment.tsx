@@ -113,7 +113,7 @@ export default function ApplicationDevelopment() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Core Service
             </div>
             
@@ -158,7 +158,7 @@ export default function ApplicationDevelopment() {
                   <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -386,7 +386,7 @@ export default function ApplicationDevelopment() {
             {/* Case Study 1 */}
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-muted text-foreground px-3 py-1 rounded-lg border border-border text-sm font-semibold mb-4">
                   Defense Agency
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Mission-Critical Portal Modernization</h3>
@@ -419,7 +419,7 @@ export default function ApplicationDevelopment() {
             {/* Case Study 2 */}
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-muted text-foreground px-3 py-1 rounded-lg border border-border text-sm font-semibold mb-4">
                   Civilian Agency
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Low-Code Citizen Services Platform</h3>
@@ -452,7 +452,7 @@ export default function ApplicationDevelopment() {
             {/* Case Study 3 */}
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-muted text-foreground px-3 py-1 rounded-lg border border-border text-sm font-semibold mb-4">
                   Intelligence Community
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Secure API Integration Platform</h3>

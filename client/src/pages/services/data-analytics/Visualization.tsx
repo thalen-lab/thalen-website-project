@@ -182,7 +182,7 @@ export default function Visualization() {
                   <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {useCase.metrics.map((metric, idx) => (
-                      <span key={idx} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-semibold">
+                      <span key={idx} className="text-xs bg-muted text-foreground px-3 py-1 rounded-lg border border-border font-semibold">
                         {metric}
                       </span>
                     ))}

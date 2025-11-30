@@ -175,7 +175,7 @@ export default function CloudSecurity() {
                   <ul className="space-y-3">
                     {layer.controls.map((control, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
                         <span>{control}</span>
                       </li>
                     ))}
@@ -210,7 +210,7 @@ export default function CloudSecurity() {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {item.levels.map((level, idx) => (
-                      <span key={idx} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-semibold">
+                      <span key={idx} className="text-xs bg-muted text-foreground px-3 py-1 rounded-lg border border-border font-semibold">
                         {level}
                       </span>
                     ))}
