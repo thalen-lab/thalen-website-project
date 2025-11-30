@@ -111,55 +111,37 @@ export default function DataStrategy() {
       {/* The Strategy Problem */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">The Cost of No Strategy</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Federal agencies spend millions on analytics tools, data platforms, and dashboards—but without a coherent strategy, these investments fail to deliver value. Projects get funded based on who asks loudest, not what drives mission impact. Data quality problems persist because nobody owns governance. Analytics teams build solutions that leadership does not use because requirements were never aligned.
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                Thalen Technologies's Data Strategy Basecamp is a 6-week engagement that gives you clarity. We assess your current state, define your target vision, and build a prioritized roadmap with quick wins and long-term transformational projects. You will know exactly what to build, in what order, and why it matters to your mission.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">6-Week Basecamp Engagement</div>
-                    <div className="text-sm text-muted-foreground">Rapid assessment and roadmap development—not a year-long consulting engagement</div>
-                  </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">The Cost of No Strategy</h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Federal agencies spend millions on analytics tools, data platforms, and dashboards—but without a coherent strategy, these investments fail to deliver value. Projects get funded based on who asks loudest, not what drives mission impact. Data quality problems persist because nobody owns governance. Analytics teams build solutions that leadership does not use because requirements were never aligned.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6">
+              Thalen Technologies's Data Strategy Basecamp is a 6-week engagement that gives you clarity. We assess your current state, define your target vision, and build a prioritized roadmap with quick wins and long-term transformational projects. You will know exactly what to build, in what order, and why it matters to your mission.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">6-Week Basecamp Engagement</div>
+                  <div className="text-sm text-muted-foreground">Rapid assessment and roadmap development—not a year-long consulting engagement</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Federal Data Maturity Model</div>
-                    <div className="text-sm text-muted-foreground">Benchmark your capabilities against peer agencies and identify improvement priorities</div>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Federal Data Maturity Model</div>
+                  <div className="text-sm text-muted-foreground">Benchmark your capabilities against peer agencies and identify improvement priorities</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Quick Wins Identified</div>
-                    <div className="text-sm text-muted-foreground">Every roadmap includes 3-6 month quick wins that demonstrate value immediately</div>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Quick Wins Identified</div>
+                  <div className="text-sm text-muted-foreground">Every roadmap includes 3-6 month quick wins that demonstrate value immediately</div>
                 </div>
               </div>
             </div>
-
-            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Lightbulb className="h-8 w-8 text-accent" />
-                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Federal Strategy Success</div>
-                </div>
-                <p className="text-lg mb-6 leading-relaxed">
-                  "We had 12 different analytics initiatives underway with no coordination. Three teams were building similar dashboards. Nobody owned data quality. Our CIO brought in Thalen Technologies for a data strategy engagement. In 6 weeks, they gave us a clear roadmap, consolidated our projects, and identified $2M in duplicate spending. One year later, we have a functioning data governance council, enterprise data platform, and analytics that leadership actually uses."
-                </p>
-                <div className="border-t border-accent/20 pt-4">
-                  <div className="font-semibold">Jennifer Martinez</div>
-                  <div className="text-sm text-muted-foreground">Chief Data Officer - Department of Transportation</div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

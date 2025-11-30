@@ -111,55 +111,37 @@ export default function Visualization() {
       {/* The Visualization Problem */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Commercial BI Tools Are Not Built for Federal Missions</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Tableau and Power BI are excellent for sales dashboards and marketing reports. They are not designed for intelligence analysis, threat monitoring, or operational command and control. Commercial tools cannot handle classified data, lack real-time streaming capabilities, and provide no audit trails for congressional oversight.
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                Thalen Technologies builds custom analytics platforms purpose-designed for federal missions. Our dashboards handle real-time sensor feeds, integrate classified and unclassified data, provide full audit trails, and meet FedRAMP High security requirements. You get intelligence platforms, not generic business intelligence tools.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Sub-Second Data Refresh</div>
-                    <div className="text-sm text-muted-foreground">Real-time streaming analytics with Apache Kafka, Flink, and Spark Streaming</div>
-                  </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Commercial BI Tools Are Not Built for Federal Missions</h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Tableau and Power BI are excellent for sales dashboards and marketing reports. They are not designed for intelligence analysis, threat monitoring, or operational command and control. Commercial tools cannot handle classified data, lack real-time streaming capabilities, and provide no audit trails for congressional oversight.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6">
+              Thalen Technologies builds custom analytics platforms purpose-designed for federal missions. Our dashboards handle real-time sensor feeds, integrate classified and unclassified data, provide full audit trails, and meet FedRAMP High security requirements. You get intelligence platforms, not generic business intelligence tools.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Sub-Second Data Refresh</div>
+                  <div className="text-sm text-muted-foreground">Real-time streaming analytics with Apache Kafka, Flink, and Spark Streaming</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Classified Data Handling</div>
-                    <div className="text-sm text-muted-foreground">Air-gapped deployments for TS/SCI environments with full security controls</div>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Classified Data Handling</div>
+                  <div className="text-sm text-muted-foreground">Air-gapped deployments for TS/SCI environments with full security controls</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Custom Visualizations</div>
-                    <div className="text-sm text-muted-foreground">Purpose-built dashboards for your mission—not generic templates</div>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Custom Visualizations</div>
+                  <div className="text-sm text-muted-foreground">Purpose-built dashboards for your mission—not generic templates</div>
                 </div>
               </div>
             </div>
-
-            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Zap className="h-8 w-8 text-accent" />
-                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Intelligence Analysis Success</div>
-                </div>
-                <p className="text-lg mb-6 leading-relaxed">
-                  "Our analysts were drowning in data from 40+ systems. They spent more time searching for information than analyzing it. Thalen Technologies built us a unified intelligence workbench that correlates SIGINT, HUMINT, and OSINT in real-time. Analysts can now query across all sources in seconds, visualize relationships, and brief leadership with confidence. Analysis time dropped 60%, and we are identifying threats we would have missed before."
-                </p>
-                <div className="border-t border-accent/20 pt-4">
-                  <div className="font-semibold">Colonel David Chen</div>
-                  <div className="text-sm text-muted-foreground">Director of Intelligence - U.S. Cyber Command</div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

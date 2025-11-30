@@ -119,55 +119,37 @@ export default function MLAI() {
       {/* The ML Problem */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Black-Box AI Is Not Acceptable for Government</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Commercial ML platforms are optimized for marketing and sales predictions where mistakes are tolerable. Federal applications—fraud detection, threat assessment, benefits eligibility—require explainability, bias detection, and accountability. You cannot tell Congress "the algorithm decided" when a decision is challenged.
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                Thalen Technologies builds explainable AI systems where every prediction includes transparent reasoning. Our ML implementations include bias detection, fairness metrics, model governance, and full audit trails. You will understand not just what the model predicts, but why—and you will have documentation to defend decisions under congressional oversight and IG audits.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Explainable AI (XAI)</div>
-                    <div className="text-sm text-muted-foreground">SHAP, LIME, and attention mechanisms provide transparent reasoning for every prediction</div>
-                  </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Black-Box AI Is Not Acceptable for Government</h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Commercial ML platforms are optimized for marketing and sales predictions where mistakes are tolerable. Federal applications—fraud detection, threat assessment, benefits eligibility—require explainability, bias detection, and accountability. You cannot tell Congress "the algorithm decided" when a decision is challenged.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6">
+              Thalen Technologies builds explainable AI systems where every prediction includes transparent reasoning. Our ML implementations include bias detection, fairness metrics, model governance, and full audit trails. You will understand not just what the model predicts, but why—and you will have documentation to defend decisions under congressional oversight and IG audits.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Explainable AI (XAI)</div>
+                  <div className="text-sm text-muted-foreground">SHAP, LIME, and attention mechanisms provide transparent reasoning for every prediction</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Bias Detection & Fairness</div>
-                    <div className="text-sm text-muted-foreground">Continuous monitoring for demographic bias, disparate impact, and fairness metrics</div>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Bias Detection & Fairness</div>
+                  <div className="text-sm text-muted-foreground">Continuous monitoring for demographic bias, disparate impact, and fairness metrics</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Model Governance & Audit Trails</div>
-                    <div className="text-sm text-muted-foreground">Full lineage tracking, version control, and audit logs for regulatory compliance</div>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Model Governance & Audit Trails</div>
+                  <div className="text-sm text-muted-foreground">Full lineage tracking, version control, and audit logs for regulatory compliance</div>
                 </div>
               </div>
             </div>
-
-            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Brain className="h-8 w-8 text-accent" />
-                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Fraud Detection Success</div>
-                </div>
-                <p className="text-lg mb-6 leading-relaxed">
-                  "We were losing $1.2B annually to benefits fraud. Manual review caught maybe 10% of fraudulent claims. Thalen Technologies deployed an ML system that analyzes claim patterns, applicant behavior, and third-party data to flag suspicious claims before payment. In the first year, we prevented $500M in fraud while maintaining a 95% accuracy rate. The system explains why each claim is flagged, so our investigators can focus on high-risk cases instead of chasing false positives."
-                </p>
-                <div className="border-t border-accent/20 pt-4">
-                  <div className="font-semibold">Maria Rodriguez</div>
-                  <div className="text-sm text-muted-foreground">Chief of Fraud Prevention - Social Security Administration</div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
