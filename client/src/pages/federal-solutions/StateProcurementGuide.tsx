@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Download, CheckCircle2, FileText, Shield, DollarSign, Clock } from 'lucide-react';
+import ProcurementTimeline from '@/components/ProcurementTimeline';
 
 export default function StateProcurementGuide() {
   const procurementPaths = [
@@ -351,6 +352,22 @@ export default function StateProcurementGuide() {
               </div>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Interactive Procurement Timeline Tool */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Interactive Tool
+            </div>
+            <h2 className="text-4xl font-bold mb-4">Find Your Optimal Procurement Path</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Answer 4 quick questions about your agency and project to get a personalized procurement recommendation with timeline and next steps.
+            </p>
+          </div>
+          <ProcurementTimeline />
         </div>
       </section>
 

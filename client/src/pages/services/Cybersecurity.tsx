@@ -324,6 +324,57 @@ export default function Cybersecurity() {
         </div>
       </section>
 
+      {/* Case Study CTA */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Success Story
+            </div>
+            <h2 className="text-4xl font-bold mb-4">See Government Cybersecurity in Action</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Learn how a DoD manufacturing facility achieved 99.2% uptime with FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics.
+            </p>
+          </div>
+          <Card className="max-w-4xl mx-auto overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
+                <div className="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
+                  Department of Defense
+                </div>
+                <h3 className="text-3xl font-bold mb-4">DoD Manufacturing Facility Achieves 99.2% Uptime</h3>
+                <p className="text-muted-foreground mb-6">
+                  Deployed FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics for defense manufacturing operations, eliminating 75% of unplanned downtime across 50+ production lines.
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div>
+                    <div className="text-3xl font-bold text-accent">99.2%</div>
+                    <div className="text-sm text-muted-foreground">System Uptime</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-accent">75%</div>
+                    <div className="text-sm text-muted-foreground">Downtime Reduction</div>
+                  </div>
+                </div>
+                <Link href="/case-studies/dod-manufacturing">
+                  <Button size="lg" className="bg-orange-gradient hover:opacity-90 w-full">
+                    View Full Case Study
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="relative h-64 md:h-auto">
+                <img 
+                  src="/manufacturing-security.jpg" 
+                  alt="DoD Manufacturing Cybersecurity"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

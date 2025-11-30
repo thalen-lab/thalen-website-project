@@ -1301,3 +1301,12 @@
 ## Phase 80: State/Local Content Discoverability
 - [x] Link homepage case study carousel to detailed state/local case study pages
 - [x] Add procurement guide CTA section to state/local landing page
+
+## Phase 81: Content Showcase & Engagement Enhancements
+- [x] Add County Health Department case study to homepage carousel
+- [x] Add case study CTA sections to RPA service page
+- [x] Add case study CTA sections to Data Analytics service page
+- [x] Add case study CTA sections to Cloud service page
+- [x] Add case study CTA sections to Cybersecurity service page
+- [x] Build interactive procurement timeline questionnaire tool
+- [x] Add procurement timeline tool to procurement guide page

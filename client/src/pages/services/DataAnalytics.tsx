@@ -292,6 +292,57 @@ export default function DataAnalytics() {
         </div>
       </section>
 
+      {/* Case Study CTA */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Success Story
+            </div>
+            <h2 className="text-4xl font-bold mb-4">See Government Data Analytics in Action</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Learn how a state attorney general's office prevented $50M in fraud with CJIS-compliant real-time ML analytics processing 10M+ daily transactions.
+            </p>
+          </div>
+          <Card className="max-w-4xl mx-auto overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
+                <div className="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
+                  State Government
+                </div>
+                <h3 className="text-3xl font-bold mb-4">State Attorney General Prevents $50M in Fraud</h3>
+                <p className="text-muted-foreground mb-6">
+                  Implemented CJIS-compliant fraud detection system processing 10M+ daily transactions with real-time ML analytics and preventing $50M in fraudulent activities annually.
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div>
+                    <div className="text-3xl font-bold text-accent">$50M+</div>
+                    <div className="text-sm text-muted-foreground">Annual Fraud Prevented</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-accent">10M+</div>
+                    <div className="text-sm text-muted-foreground">Daily Transactions</div>
+                  </div>
+                </div>
+                <Link href="/case-studies/state-attorney-general">
+                  <Button size="lg" className="bg-orange-gradient hover:opacity-90 w-full">
+                    View Full Case Study
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="relative h-64 md:h-auto">
+                <img 
+                  src="/financial-fraud-soc.a8f3d9e2.jpg" 
+                  alt="State Attorney General Fraud Detection"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

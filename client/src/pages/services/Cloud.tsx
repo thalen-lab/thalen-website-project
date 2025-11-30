@@ -290,6 +290,57 @@ export default function Cloud() {
         </div>
       </section>
 
+      {/* Case Study CTA */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Success Story
+            </div>
+            <h2 className="text-4xl font-bold mb-4">See Government Cloud Migration in Action</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Learn how a defense agency achieved zero-downtime migration to Impact Level 5 cloud infrastructure while reducing costs by 40%.
+            </p>
+          </div>
+          <Card className="max-w-4xl mx-auto overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
+                <div className="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
+                  Intelligence Community
+                </div>
+                <h3 className="text-3xl font-bold mb-4">Defense Agency Migrates to IL5 Cloud</h3>
+                <p className="text-muted-foreground mb-6">
+                  Zero-downtime migration of mission-critical intelligence systems to FedRAMP High cloud infrastructure, achieving Impact Level 5 compliance while reducing infrastructure costs by 40%.
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div>
+                    <div className="text-3xl font-bold text-accent">Zero</div>
+                    <div className="text-sm text-muted-foreground">Downtime Migration</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-accent">40%</div>
+                    <div className="text-sm text-muted-foreground">Cost Reduction</div>
+                  </div>
+                </div>
+                <Link href="/case-studies/defense-cloud">
+                  <Button size="lg" className="bg-orange-gradient hover:opacity-90 w-full">
+                    View Full Case Study
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="relative h-64 md:h-auto">
+                <img 
+                  src="/defense-cyber-ops.b7c4e1f3.jpg" 
+                  alt="Defense Agency Cloud Migration"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

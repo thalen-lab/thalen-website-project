@@ -62,6 +62,14 @@ const caseStudies: CaseStudy[] = [
     image: "/energy-grid-control.c9d5f2a4.jpg",
     link: "/case-studies/state-energy-commission",
     category: "State Government"
+  },
+  {
+    id: "county-health",
+    title: "County Health Department Accelerates Outbreak Response",
+    description: "Integrated 12 county health systems with state health department for real-time disease surveillance, reducing outbreak response time by 40% and enabling coordinated public health interventions across 2.5M residents.",
+    image: "/healthcare-legacy-it.jpg",
+    link: "/case-studies/county-health-department",
+    category: "Local Government"
   }
 ];
 
