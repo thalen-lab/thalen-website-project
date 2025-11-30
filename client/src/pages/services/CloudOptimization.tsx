@@ -117,7 +117,7 @@ export default function CloudOptimization() {
               Cloud Optimization & Cost Management
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Maximize cloud ROI through intelligent resource optimization, automated cost controls, and performance tuning. Thalen Technologies's optimization framework reduces cloud spending by 40-60% while improving application performance by 200-300%—delivering immediate financial impact and operational excellence.
+              We help agencies maximize cloud ROI across AWS GovCloud, Azure Government, and Google Cloud through intelligent resource optimization, automated cost controls, and performance tuning. Our optimization framework reduces cloud spending by 40-60% while improving application performance by 200-300%—delivering immediate financial impact and operational excellence.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -83,7 +83,7 @@ export default function IncidentResponse() {
               ]}
               className="text-primary-foreground/80 hover:text-primary-foreground mb-4"
             />
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
               &lt; 1 Hour Response • 24/7 Emergency Hotline
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">

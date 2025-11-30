@@ -97,7 +97,7 @@ export default function DataAnalytics() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -245,7 +245,7 @@ export default function DataAnalytics() {
                   <h3 className="text-xl font-bold mb-4">{category.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full font-semibold">
+                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
                         {platform}
                       </span>
                     ))}
@@ -296,7 +296,7 @@ export default function DataAnalytics() {
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-12">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Success Story
             </div>
             <h2 className="text-4xl font-bold mb-4">See Government Data Analytics in Action</h2>
@@ -307,7 +307,7 @@ export default function DataAnalytics() {
           <Card className="max-w-4xl mx-auto overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
-                <div className="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
+                <div className="inline-block bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
                   State Government
                 </div>
                 <h3 className="text-3xl font-bold mb-4">State Attorney General Prevents $50M in Fraud</h3>

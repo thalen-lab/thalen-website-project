@@ -119,7 +119,7 @@ export default function LegacyModernization() {
           />
           
           <div className="max-w-4xl mt-8">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Zero-Downtime Migration • Cloud-Native
             </div>
             
