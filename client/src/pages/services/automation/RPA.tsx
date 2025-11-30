@@ -97,7 +97,7 @@ export default function RPA() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -159,7 +159,7 @@ export default function RPA() {
                   <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -182,7 +182,7 @@ export default function RPA() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                  <div className="h-2 w-2 rounded-full bg-foreground mr-4 mt-2 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
                     <p className="text-sm text-muted-foreground">{capability.description}</p>
@@ -245,7 +245,7 @@ export default function RPA() {
                   <h3 className="text-xl font-bold mb-4">{category.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                      <span key={idx} className="bg-muted text-foreground px-3 py-1 rounded-lg text-sm font-medium border border-border">
                         {platform}
                       </span>
                     ))}
