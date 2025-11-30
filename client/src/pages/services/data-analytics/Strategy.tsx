@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, CheckCircle2, Target, TrendingUp, Users, FileText, Lightbulb, BarChart3, Search, Database, Bot } from 'lucide-react';
+import { ArrowRight, Target, TrendingUp, Users, FileText, Lightbulb, BarChart3, Search, Database, Bot } from 'lucide-react';
 
 export default function DataStrategy() {
   const strategyBenefits = [
@@ -62,7 +62,7 @@ export default function DataStrategy() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
               Strategic Planning
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -122,21 +122,21 @@ export default function DataStrategy() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <div className="font-semibold mb-1">6-Week Basecamp Engagement</div>
                     <div className="text-sm text-muted-foreground">Rapid assessment and roadmap development—not a year-long consulting engagement</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <div className="font-semibold mb-1">Federal Data Maturity Model</div>
                     <div className="text-sm text-muted-foreground">Benchmark your capabilities against peer agencies and identify improvement priorities</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <div className="font-semibold mb-1">Quick Wins Identified</div>
                     <div className="text-sm text-muted-foreground">Every roadmap includes 3-6 month quick wins that demonstrate value immediately</div>
@@ -190,7 +190,7 @@ export default function DataStrategy() {
                     <ul className="space-y-1">
                       {component.deliverables.map((deliverable, idx) => (
                         <li key={idx} className="text-sm text-muted-foreground flex items-start gap-2">
-                          <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                           {deliverable}
                         </li>
                       ))}

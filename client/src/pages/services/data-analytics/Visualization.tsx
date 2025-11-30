@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, CheckCircle2, LineChart, Activity, Gauge, Eye, Zap, Shield, Database, Brain, TrendingUp } from 'lucide-react';
+import { ArrowRight, LineChart, Activity, Gauge, Eye, Zap, Shield, Database, Brain, TrendingUp } from 'lucide-react';
 
 export default function Visualization() {
   const visualizationBenefits = [
@@ -62,7 +62,7 @@ export default function Visualization() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
               Mission-Critical Intelligence
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -122,21 +122,21 @@ export default function Visualization() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <div className="font-semibold mb-1">Sub-Second Data Refresh</div>
                     <div className="text-sm text-muted-foreground">Real-time streaming analytics with Apache Kafka, Flink, and Spark Streaming</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <div className="font-semibold mb-1">Classified Data Handling</div>
                     <div className="text-sm text-muted-foreground">Air-gapped deployments for TS/SCI environments with full security controls</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <div className="font-semibold mb-1">Custom Visualizations</div>
                     <div className="text-sm text-muted-foreground">Purpose-built dashboards for your mission—not generic templates</div>
@@ -210,19 +210,19 @@ export default function Visualization() {
                 <h3 className="text-xl font-bold mb-4">Streaming Data Processing</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>Apache Kafka for event streaming</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>Apache Flink for real-time processing</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>Spark Streaming for batch + streaming</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>Redis for sub-second caching</span>
                   </li>
                 </ul>
@@ -234,19 +234,19 @@ export default function Visualization() {
                 <h3 className="text-xl font-bold mb-4">Visualization & Dashboards</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>React + D3.js for custom viz</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>Grafana for operational monitoring</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>Mapbox for geospatial analysis</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>WebSockets for live updates</span>
                   </li>
                 </ul>
@@ -258,19 +258,19 @@ export default function Visualization() {
                 <h3 className="text-xl font-bold mb-4">Data Storage & Query</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>ClickHouse for OLAP queries</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>Elasticsearch for full-text search</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>TimescaleDB for time-series data</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                     <span>PostgreSQL for relational data</span>
                   </li>
                 </ul>
