@@ -92,34 +92,26 @@ export default function Home() {
     {
       category: 'Federal Government',
       title: 'Federal Agency Achieves 85% Process Automation',
-      description: 'Transformed manual workflows into intelligent automation, reducing processing time from 6 weeks to 2 days.',
+      description: 'Implemented UiPath Gov RPA platform with comprehensive ATO documentation, reducing claims processing time from 6 weeks to 2 days. $4.2M contract delivered 85% automation rate.',
       metric: '85%',
       metricLabel: 'Automation Rate',
       href: '/case-studies/federal-automation'
     },
     {
-      category: 'Healthcare',
-      title: 'Healthcare System Saves $12M Through AI Analytics',
-      description: 'Data intelligence platform delivered real-time insights improving patient outcomes by 40%.',
-      metric: '$12M',
-      metricLabel: 'Annual Savings',
-      href: '/case-studies/healthcare-ai'
-    },
-    {
-      category: 'Defense',
-      title: 'Defense Contractor: Zero-Downtime Cloud Migration',
-      description: 'Modernized entire infrastructure while achieving CMMC Level 3 certification with 100% uptime.',
-      metric: '100%',
-      metricLabel: 'Uptime Maintained',
-      href: '/case-studies/defense-cloud'
-    },
-    {
       category: 'Manufacturing',
       title: 'Manufacturing Giant Achieves 99.2% Uptime',
-      description: 'Cybersecurity and predictive maintenance eliminated 75% of unplanned downtime across 50+ facilities.',
+      description: 'Implemented FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics, eliminating 75% of unplanned downtime across 50+ facilities with measurable ROI.',
       metric: '99.2%',
       metricLabel: 'System Uptime',
       href: '/case-studies/manufacturing-uptime'
+    },
+    {
+      category: 'Healthcare',
+      title: 'Healthcare System Integrates 12 Legacy Systems',
+      description: 'Integrated 12 legacy healthcare systems with FedRAMP-authorized platforms, delivering real-time patient data access and $12M annual operational cost savings.',
+      metric: '$12M',
+      metricLabel: 'Annual Savings',
+      href: '/case-studies/hhs-public-health'
     }
   ];
 
