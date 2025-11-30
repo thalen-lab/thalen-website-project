@@ -34,7 +34,7 @@ export default function CaseStudies() {
         { value: '85%', label: 'Automation Rate' },
         { value: '$4.2M', label: 'Contract Value' }
       ],
-      tags: ['Automation', 'RPA', 'Federal', 'FedRAMP'],
+      tags: ['RPA', 'FedRAMP'],
       href: '/case-studies/federal-automation'
     },
     {
@@ -45,7 +45,7 @@ export default function CaseStudies() {
         { value: '99.2%', label: 'System Uptime' },
         { value: 'CMMC L3', label: 'Certified' }
       ],
-      tags: ['Cybersecurity', 'IoT', 'Defense', 'CMMC'],
+      tags: ['Cybersecurity', 'IoT', 'CMMC'],
       href: '/case-studies/dod-manufacturing'
     },
     {
@@ -56,7 +56,7 @@ export default function CaseStudies() {
         { value: '12', label: 'Systems Integrated' },
         { value: '60%', label: 'Admin Reduction' }
       ],
-      tags: ['Integration', 'Healthcare', 'Federal', 'FedRAMP'],
+      tags: ['Integration', 'HIPAA', 'FedRAMP'],
       href: '/case-studies/va-healthcare'
     },
     {
@@ -67,7 +67,7 @@ export default function CaseStudies() {
         { value: '$50M+', label: 'Fraud Prevented' },
         { value: '2.3M', label: 'Cases Analyzed' }
       ],
-      tags: ['AI', 'Analytics', 'State', 'CJIS'],
+      tags: ['AI', 'Analytics', 'CJIS'],
       href: '/case-studies/state-attorney-general'
     },
     {
@@ -78,7 +78,7 @@ export default function CaseStudies() {
         { value: '65%', label: 'Outage Reduction' },
         { value: '4.2M', label: 'Customers Served' }
       ],
-      tags: ['Automation', 'Energy', 'State', 'StateRAMP'],
+      tags: ['Automation', 'IoT', 'StateRAMP'],
       href: '/case-studies/state-energy-commission'
     },
     {
@@ -89,7 +89,7 @@ export default function CaseStudies() {
         { value: '40%', label: 'Faster Response' },
         { value: '8', label: 'Systems Integrated' }
       ],
-      tags: ['Integration', 'Healthcare', 'County', 'HIPAA'],
+      tags: ['Integration', 'HIPAA'],
       href: '/case-studies/county-health-department'
     },
     {
@@ -100,7 +100,7 @@ export default function CaseStudies() {
         { value: '100%', label: 'Uptime Maintained' },
         { value: 'CMMC L3', label: 'Certified' }
       ],
-      tags: ['Cloud', 'Security', 'Defense', 'CMMC'],
+      tags: ['Cloud', 'Cybersecurity', 'CMMC'],
       href: '/case-studies/defense-cloud'
     }
   ];
