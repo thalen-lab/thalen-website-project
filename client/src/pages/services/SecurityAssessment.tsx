@@ -91,7 +91,7 @@ export default function SecurityAssessment() {
               Security Assessment & Compliance
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Achieve FedRAMP, CMMC, and NIST compliance with expert assessment services that guide you from readiness to authorization. Thalen Technologies's proven methodology reduces typical 12-18 month timelines to 6-9 months while ensuring first-time assessment success.
+              We help agencies and contractors achieve FedRAMP, CMMC, and NIST compliance through expert gap assessments, security controls implementation, and ATO package preparation. Our proven methodology reduces typical 12-18 month timelines to 6-9 months while ensuring first-time assessment success.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">

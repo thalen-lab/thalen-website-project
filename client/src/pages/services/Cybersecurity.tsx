@@ -189,7 +189,7 @@ export default function Cybersecurity() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <div className="h-2 w-2 rounded-full bg-foreground mr-4 mt-2 flex-shrink-0" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
                     <p className="text-sm text-muted-foreground">{capability.description}</p>

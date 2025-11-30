@@ -250,36 +250,3 @@ export const media = mysqlTable("media", {
 
 export type Media = typeof media.$inferSelect;
 export type InsertMedia = typeof media.$inferInsert;
-
-/**
- * Methodology assessment requests table.
- * Stores form submissions from the RAPID Framework methodology page.
- */
-export const methodologyAssessments = mysqlTable("methodology_assessments", {
-  id: int("id").autoincrement().primaryKey(),
-  /** Agency name */
-  agencyName: varchar("agencyName", { length: 255 }).notNull(),
-  /** Contact person name */
-  contactName: varchar("contactName", { length: 255 }).notNull(),
-  /** Contact email address */
-  email: varchar("email", { length: 320 }).notNull(),
-  /** Contact phone number (optional) */
-  phone: varchar("phone", { length: 50 }),
-  /** Current authorization status */
-  authStatus: varchar("authStatus", { length: 100 }).notNull(),
-  /** Target compliance framework */
-  complianceFramework: varchar("complianceFramework", { length: 100 }).notNull(),
-  /** Additional details provided by the user */
-  details: text("details"),
-  /** Request status for tracking */
-  status: mysqlEnum("status", ["new", "contacted", "qualified", "converted", "closed"]).default("new").notNull(),
-  /** Notes from sales team (internal) */
-  internalNotes: text("internalNotes"),
-  /** Timestamp when follow-up reminder was sent (null if not sent yet) */
-  reminderSentAt: timestamp("reminderSentAt"),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-});
-
-export type MethodologyAssessment = typeof methodologyAssessments.$inferSelect;
-export type InsertMethodologyAssessment = typeof methodologyAssessments.$inferInsert;

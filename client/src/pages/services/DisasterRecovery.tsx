@@ -181,7 +181,7 @@ export default function DisasterRecovery() {
                   <ul className="space-y-2">
                     {capability.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}

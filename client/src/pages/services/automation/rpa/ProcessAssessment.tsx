@@ -158,7 +158,7 @@ export default function ProcessAssessment() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
               Foundation for RPA Success
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -198,11 +198,11 @@ export default function ProcessAssessment() {
               <Card key={index} className="border-2">
                 <CardContent className="pt-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-primary text-primary-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
                       {index + 1}
                     </div>
                     <div>
-                      <div className="text-sm text-muted-foreground font-semibold">{phase.phase}</div>
+                      <div className="text-sm text-accent font-semibold">{phase.phase}</div>
                       <h3 className="text-xl font-bold">{phase.title}</h3>
                       <div className="text-sm text-muted-foreground">Duration: {phase.duration}</div>
                     </div>
@@ -210,7 +210,7 @@ export default function ProcessAssessment() {
                   <div className="space-y-2">
                     {phase.activities.map((activity, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <div className="h-1.5 w-1.5 rounded-full bg-foreground flex-shrink-0 mt-1.5" />
+                        <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-1" />
                         <span className="text-sm">{activity}</span>
                       </div>
                     ))}
@@ -237,13 +237,13 @@ export default function ProcessAssessment() {
               return (
                 <Card key={index} className="border-2">
                   <CardContent className="pt-8">
-                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-foreground" />
+                    <div className="h-12 w-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                      <Icon className="h-6 w-6 text-accent" />
                     </div>
                     <h3 className="text-lg font-bold mb-2">{item.criterion}</h3>
                     <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
-                    <div className="bg-muted rounded-lg px-3 py-2 border border-border">
-                      <div className="text-xs text-muted-foreground font-semibold">Ideal State:</div>
+                    <div className="bg-accent/10 rounded-lg px-3 py-2">
+                      <div className="text-xs text-accent font-semibold">Ideal State:</div>
                       <div className="text-xs">{item.ideal}</div>
                     </div>
                   </CardContent>
@@ -300,12 +300,12 @@ export default function ProcessAssessment() {
                     </div>
                   </div>
                   <div>
-                    <div className="bg-muted rounded-lg p-6 border border-border">
+                    <div className="bg-accent/10 rounded-lg p-6">
                       <h4 className="font-bold text-lg mb-4">Future State (Automated)</h4>
                       <div className="space-y-3">
                         <div className="flex justify-between">
                           <span className="text-muted-foreground">Automation rate:</span>
-                          <span className="font-semibold">{roiExample.futureState.automationRate}</span>
+                          <span className="font-semibold text-accent">{roiExample.futureState.automationRate}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-muted-foreground">Time per invoice:</span>
@@ -317,11 +317,11 @@ export default function ProcessAssessment() {
                         </div>
                         <div className="border-t pt-2 flex justify-between">
                           <span className="font-semibold">Monthly savings:</span>
-                          <span className="font-bold text-lg">{roiExample.futureState.monthlySavings}</span>
+                          <span className="font-bold text-lg text-accent">{roiExample.futureState.monthlySavings}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="font-semibold">Annual savings:</span>
-                          <span className="font-bold text-xl">{roiExample.futureState.annualSavings}</span>
+                          <span className="font-bold text-xl text-accent">{roiExample.futureState.annualSavings}</span>
                         </div>
                         <div className="border-t pt-2 space-y-2 text-sm">
                           <div className="flex justify-between">
@@ -330,7 +330,7 @@ export default function ProcessAssessment() {
                           </div>
                           <div className="flex justify-between">
                             <span className="font-semibold">Payback period:</span>
-                            <span className="font-bold">{roiExample.futureState.paybackPeriod}</span>
+                            <span className="font-bold text-accent">{roiExample.futureState.paybackPeriod}</span>
                           </div>
                         </div>
                       </div>
@@ -357,13 +357,13 @@ export default function ProcessAssessment() {
               <Card key={index} className="border-2">
                 <CardContent className="pt-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary text-primary-foreground rounded-lg w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                    <div className="bg-accent text-accent-foreground rounded-lg w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
                       {index + 1}
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg font-bold mb-2">{deliverable.title}</h3>
                       <p className="text-sm text-muted-foreground mb-3">{deliverable.description}</p>
-                      <div className="text-xs text-muted-foreground font-semibold">{deliverable.pages}</div>
+                      <div className="text-xs text-accent font-semibold">{deliverable.pages}</div>
                     </div>
                   </div>
                 </CardContent>

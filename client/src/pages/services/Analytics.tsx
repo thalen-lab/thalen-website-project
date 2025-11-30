@@ -162,7 +162,7 @@ export default function Analytics() {
                   <p className="text-muted-foreground mb-4">{useCase.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {useCase.industries.map((industry, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full">
+                      <span key={idx} className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full">
                         {industry}
                       </span>
                     ))}

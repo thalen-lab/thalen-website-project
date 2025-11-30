@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, LineChart, Activity, Gauge, Eye, Zap, Shield, Database, Brain, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle2, LineChart, Activity, Gauge, Eye, Zap, Shield, Database, Brain, TrendingUp } from 'lucide-react';
 
 export default function Visualization() {
   const visualizationBenefits = [
@@ -62,7 +62,7 @@ export default function Visualization() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
               Mission-Critical Intelligence
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -111,8 +111,9 @@ export default function Visualization() {
       {/* The Visualization Problem */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Commercial BI Tools Are Not Built for Federal Missions</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Commercial BI Tools Are Not Built for Federal Missions</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Tableau and Power BI are excellent for sales dashboards and marketing reports. They are not designed for intelligence analysis, threat monitoring, or operational command and control. Commercial tools cannot handle classified data, lack real-time streaming capabilities, and provide no audit trails for congressional oversight.
               </p>
@@ -121,27 +122,44 @@ export default function Visualization() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold mb-1">Sub-Second Data Refresh</div>
                     <div className="text-sm text-muted-foreground">Real-time streaming analytics with Apache Kafka, Flink, and Spark Streaming</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold mb-1">Classified Data Handling</div>
                     <div className="text-sm text-muted-foreground">Air-gapped deployments for TS/SCI environments with full security controls</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold mb-1">Custom Visualizations</div>
                     <div className="text-sm text-muted-foreground">Purpose-built dashboards for your mission—not generic templates</div>
                   </div>
                 </div>
+              </div>
             </div>
+
+            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <Zap className="h-8 w-8 text-accent" />
+                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Intelligence Analysis Success</div>
+                </div>
+                <p className="text-lg mb-6 leading-relaxed">
+                  "Our analysts were drowning in data from 40+ systems. They spent more time searching for information than analyzing it. Thalen Technologies built us a unified intelligence workbench that correlates SIGINT, HUMINT, and OSINT in real-time. Analysts can now query across all sources in seconds, visualize relationships, and brief leadership with confidence. Analysis time dropped 60%, and we are identifying threats we would have missed before."
+                </p>
+                <div className="border-t border-accent/20 pt-4">
+                  <div className="font-semibold">Colonel David Chen</div>
+                  <div className="text-sm text-muted-foreground">Director of Intelligence - U.S. Cyber Command</div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -164,7 +182,7 @@ export default function Visualization() {
                   <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {useCase.metrics.map((metric, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-foreground px-3 py-1 rounded-lg border border-border font-semibold">
+                      <span key={idx} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-semibold">
                         {metric}
                       </span>
                     ))}
@@ -192,19 +210,19 @@ export default function Visualization() {
                 <h3 className="text-xl font-bold mb-4">Streaming Data Processing</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Apache Kafka for event streaming</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Apache Flink for real-time processing</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Spark Streaming for batch + streaming</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Redis for sub-second caching</span>
                   </li>
                 </ul>
@@ -216,19 +234,19 @@ export default function Visualization() {
                 <h3 className="text-xl font-bold mb-4">Visualization & Dashboards</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>React + D3.js for custom viz</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Grafana for operational monitoring</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Mapbox for geospatial analysis</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>WebSockets for live updates</span>
                   </li>
                 </ul>
@@ -240,19 +258,19 @@ export default function Visualization() {
                 <h3 className="text-xl font-bold mb-4">Data Storage & Query</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>ClickHouse for OLAP queries</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Elasticsearch for full-text search</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>TimescaleDB for time-series data</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>PostgreSQL for relational data</span>
                   </li>
                 </ul>

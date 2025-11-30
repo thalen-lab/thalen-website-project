@@ -35,7 +35,7 @@ export default function ApplicationSecurity() {
           <div className="max-w-4xl mt-8">
             <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">Secure SDLC • FedRAMP Validation</div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">Application Security & Compliance</h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">Secure software development lifecycle practices with continuous security testing and compliance validation. Ensure your applications meet FedRAMP, NIST 800-53, and federal security requirements.</p>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">We help agencies implement secure software development lifecycle (SDLC) practices with DevSecOps pipelines, automated security testing, and compliance validation tools. Ensure your applications meet FedRAMP, NIST 800-53, and federal security requirements through our proven implementation framework.</p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white"><Link href="/contact">Secure Your Apps</Link></Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10"><Link href="/package-builder">Build Service Package</Link></Button>

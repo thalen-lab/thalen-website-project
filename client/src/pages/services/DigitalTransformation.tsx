@@ -112,7 +112,7 @@ export default function DigitalTransformation() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
@@ -285,7 +285,7 @@ export default function DigitalTransformation() {
                         <div className="text-sm font-semibold mb-2">Key Deliverables:</div>
                         <div className="flex flex-wrap gap-2">
                           {phase.deliverables.map((deliverable, idx) => (
-                            <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full">
+                            <span key={idx} className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full">
                               {deliverable}
                             </span>
                           ))}

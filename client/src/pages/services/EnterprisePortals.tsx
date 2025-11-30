@@ -33,7 +33,7 @@ export default function EnterprisePortals() {
         <div className="container relative z-10">
           <Breadcrumb items={[{ label: "Application Development & Integration", href: "/services/application-development" }, { label: "Enterprise Portal Development" }]} />
           <div className="max-w-4xl mt-8">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">Section 508 Compliant • Mobile-Responsive</div>
+            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">Section 508 Compliant • Mobile-Responsive</div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">Enterprise Portal Development</h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">Citizen-facing portals and internal case management systems with 24/7 self-service capabilities. Build secure, accessible portals that improve constituent experience and reduce operational costs.</p>
             <div className="flex flex-wrap gap-4">

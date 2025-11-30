@@ -98,14 +98,14 @@ export default function CloudMigration() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
               FedRAMP Authorized • Zero Downtime Guaranteed
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Cloud Migration & Transition
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies migrate mission-critical systems to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) with proven strategies that ensure complete data integrity, zero downtime, and accelerated timelines. Our migration framework reduces typical 6-12 month timelines to 30-60 days while maintaining 100% operational continuity.
+              Migrate mission-critical systems to FedRAMP-compliant cloud environments with proven strategies that ensure complete data integrity, zero downtime, and accelerated timelines. Thalen Technologies's migration framework reduces typical 6-12 month timelines to 30-60 days while maintaining 100% operational continuity.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -170,7 +170,7 @@ export default function CloudMigration() {
                       <ul className="space-y-2">
                         {phase.deliverables.map((deliverable, idx) => (
                           <li key={idx} className="flex items-start text-sm">
-                            <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
                             <span>{deliverable}</span>
                           </li>
                         ))}

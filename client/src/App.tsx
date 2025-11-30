@@ -137,8 +137,6 @@ import AdminCaseStudies from "./pages/admin/CaseStudies";
 import CaseStudyForm from "./pages/admin/CaseStudyForm";
 import AdminEvents from "./pages/admin/Events";
 import EventForm from "./pages/admin/EventForm";
-import AdminAssessments from "./pages/admin/Assessments";
-import AdminAssessmentAnalytics from "./pages/admin/AssessmentAnalytics";
 import AdminMediaLibrary from "./pages/admin/MediaLibrary";
 import AdminScheduledContent from "./pages/admin/ScheduledContent";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -339,20 +337,6 @@ function Router() {
         {() => (
           <ProtectedRoute requireAdmin>
             <AdminScheduledContent />
-          </ProtectedRoute>
-        )}
-      </Route>
-      <Route path={"/admin/assessments"}>
-        {() => (
-          <ProtectedRoute requireAdmin>
-            <AdminAssessments />
-          </ProtectedRoute>
-        )}
-      </Route>
-      <Route path={"/admin/assessment-analytics"}>
-        {() => (
-          <ProtectedRoute requireAdmin>
-            <AdminAssessmentAnalytics />
           </ProtectedRoute>
         )}
       </Route>

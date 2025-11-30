@@ -3,44 +3,11 @@ import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Download, CheckCircle } from 'lucide-react';
-import { trpc } from '@/lib/trpc';
-import { toast } from 'sonner';
-import { useState } from 'react';
 
 export default function Methodology() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const submitAssessment = trpc.methodologyAssessment.submit.useMutation();
-
   const handleDownloadPDF = () => {
     // PDF will be generated and placed in public folder
     window.open('/rapid-framework-methodology.pdf', '_blank');
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      agencyName: formData.get('agencyName') as string,
-      contactName: formData.get('contactName') as string,
-      email: formData.get('email') as string,
-      phone: formData.get('phone') as string || undefined,
-      authStatus: formData.get('authStatus') as string,
-      complianceFramework: formData.get('complianceFramework') as string,
-      details: formData.get('details') as string || undefined,
-    };
-
-    try {
-      const result = await submitAssessment.mutateAsync(data);
-      toast.success(result.message);
-      // Reset form
-      e.currentTarget.reset();
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : 'Failed to submit request');
-    } finally {
-      setIsSubmitting(false);
-    }
   };
 
   return (
@@ -385,155 +352,19 @@ export default function Methodology() {
         </div>
       </section>
 
-      {/* Request Assessment Form Section */}
-      <section className="py-16 px-4">
-        <div className="container max-w-3xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              Request Methodology Assessment
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Schedule a consultation to discuss how the RAPID Framework can accelerate your agency's platform deployment and ATO timeline.
-            </p>
-          </div>
-
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="agencyName" className="block text-sm font-semibold mb-2">
-                  Agency Name *
-                </label>
-                <input
-                  type="text"
-                  id="agencyName"
-                  name="agencyName"
-                  required
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="e.g., Department of Veterans Affairs"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="contactName" className="block text-sm font-semibold mb-2">
-                  Contact Name *
-                </label>
-                <input
-                  type="text"
-                  id="contactName"
-                  name="contactName"
-                  required
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="Your full name"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="your.email@agency.gov"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="authStatus" className="block text-sm font-semibold mb-2">
-                  Current Authorization Status *
-                </label>
-                <select
-                  id="authStatus"
-                  name="authStatus"
-                  required
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                >
-                  <option value="">Select status...</option>
-                  <option value="no-ato">No ATO - Starting New</option>
-                  <option value="in-progress">ATO In Progress</option>
-                  <option value="existing-ato">Existing ATO - Renewal Needed</option>
-                  <option value="existing-ato-expansion">Existing ATO - Expansion/Migration</option>
-                  <option value="not-sure">Not Sure</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="complianceFramework" className="block text-sm font-semibold mb-2">
-                  Target Compliance Framework *
-                </label>
-                <select
-                  id="complianceFramework"
-                  name="complianceFramework"
-                  required
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                >
-                  <option value="">Select framework...</option>
-                  <option value="fedramp">FedRAMP (Moderate/High)</option>
-                  <option value="stateramp">StateRAMP</option>
-                  <option value="cmmc">CMMC (Level 1/2/3)</option>
-                  <option value="cjis">CJIS Security Policy</option>
-                  <option value="hipaa">HIPAA/HITECH</option>
-                  <option value="multiple">Multiple Frameworks</option>
-                  <option value="not-sure">Not Sure</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="details" className="block text-sm font-semibold mb-2">
-                Additional Details
-              </label>
-              <textarea
-                id="details"
-                name="details"
-                rows={4}
-                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Tell us about your current systems, timeline requirements, or specific challenges..."
-              />
-            </div>
-
-            <div className="text-center">
-              <Button type="submit" size="lg" className="px-12" disabled={isSubmitting}>
-                {isSubmitting ? 'Submitting...' : 'Request Assessment'}
-              </Button>
-              <p className="text-sm text-muted-foreground mt-4">
-                We'll respond within 1 business day to schedule your consultation.
-              </p>
-            </div>
-          </form>
-        </div>
-      </section>
-
       {/* CTA Section - Minimal */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="container max-w-4xl text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Or Download the Framework Overview
+            Ready to Implement the RAPID Framework?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get a detailed PDF overview of the RAPID Framework to share with your team.
+            Schedule a consultation to discuss how our proven methodology can deliver compliant, on-budget platform deployments for your agency.
           </p>
-          <div className="flex justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" asChild>
+              <Link href="/contact">Schedule Assessment</Link>
+            </Button>
             <Button 
               size="lg" 
               variant="outline"

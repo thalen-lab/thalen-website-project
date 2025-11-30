@@ -7,8 +7,6 @@ import {
   Calendar,
   Image,
   Clock,
-  ClipboardList,
-  BarChart3,
   LogOut,
   Menu,
   X,
@@ -36,8 +34,6 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     { href: "/admin/blog-posts", label: "Blog Posts", icon: FileText },
     { href: "/admin/case-studies", label: "Case Studies", icon: Briefcase },
     { href: "/admin/events", label: "Events", icon: Calendar },
-    { href: "/admin/assessments", label: "Assessments", icon: ClipboardList },
-    { href: "/admin/assessment-analytics", label: "Analytics", icon: BarChart3 },
     { href: "/admin/media", label: "Media Library", icon: Image },
     { href: "/admin/scheduled", label: "Scheduled Content", icon: Clock },
   ];

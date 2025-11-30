@@ -110,14 +110,14 @@ export default function CloudSecurity() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
               FedRAMP High • CMMC Level 3 • NIST 800-53
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Cloud Security & Compliance
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies implement government-grade security controls for FedRAMP High authorization, CMMC Level 3 certification, and zero-trust architecture on mission-critical workloads. Our team delivers defense-grade cloud security implementations meeting the most stringent federal compliance requirements while enabling operational agility.
+              Government-grade security with FedRAMP High authorization, CMMC Level 3 certification, and zero-trust architecture for mission-critical workloads. Thalen Technologies delivers defense-grade cloud security meeting the most stringent federal compliance requirements while enabling operational agility.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -175,7 +175,7 @@ export default function CloudSecurity() {
                   <ul className="space-y-3">
                     {layer.controls.map((control, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
                         <span>{control}</span>
                       </li>
                     ))}
@@ -210,7 +210,7 @@ export default function CloudSecurity() {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {item.levels.map((level, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-foreground px-3 py-1 rounded-lg border border-border font-semibold">
+                      <span key={idx} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-semibold">
                         {level}
                       </span>
                     ))}

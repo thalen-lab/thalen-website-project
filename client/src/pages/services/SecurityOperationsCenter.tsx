@@ -90,7 +90,7 @@ export default function SecurityOperationsCenter() {
               Security Operations Center (SOC)
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              24/7 security monitoring and threat detection with expert analysts, SIEM/SOAR integration, and automated response. Thalen Technologies's SOC delivers government-grade security operations with TS/SCI cleared personnel for classified environments.
+              We help agencies implement 24/7 security operations centers using FedRAMP-authorized SIEM/SOAR platforms (Splunk Gov, LogRhythm, Palo Alto Cortex) with automated threat detection and response. Our team delivers government-grade SOC implementation with TS/SCI cleared personnel for classified environments.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">

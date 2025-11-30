@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, Brain, AlertTriangle, TrendingUp, Shield, Eye, Zap, Database, Bot } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Brain, AlertTriangle, TrendingUp, Shield, Eye, Zap, Database, Bot } from 'lucide-react';
 
 export default function MLAI() {
   const mlBenefits = [
@@ -70,7 +70,7 @@ export default function MLAI() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
               AI-Powered Intelligence
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -119,8 +119,9 @@ export default function MLAI() {
       {/* The ML Problem */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Black-Box AI Is Not Acceptable for Government</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Black-Box AI Is Not Acceptable for Government</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Commercial ML platforms are optimized for marketing and sales predictions where mistakes are tolerable. Federal applications—fraud detection, threat assessment, benefits eligibility—require explainability, bias detection, and accountability. You cannot tell Congress "the algorithm decided" when a decision is challenged.
               </p>
@@ -129,27 +130,44 @@ export default function MLAI() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold mb-1">Explainable AI (XAI)</div>
                     <div className="text-sm text-muted-foreground">SHAP, LIME, and attention mechanisms provide transparent reasoning for every prediction</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold mb-1">Bias Detection & Fairness</div>
                     <div className="text-sm text-muted-foreground">Continuous monitoring for demographic bias, disparate impact, and fairness metrics</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold mb-1">Model Governance & Audit Trails</div>
                     <div className="text-sm text-muted-foreground">Full lineage tracking, version control, and audit logs for regulatory compliance</div>
                   </div>
                 </div>
+              </div>
             </div>
+
+            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <Brain className="h-8 w-8 text-accent" />
+                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Fraud Detection Success</div>
+                </div>
+                <p className="text-lg mb-6 leading-relaxed">
+                  "We were losing $1.2B annually to benefits fraud. Manual review caught maybe 10% of fraudulent claims. Thalen Technologies deployed an ML system that analyzes claim patterns, applicant behavior, and third-party data to flag suspicious claims before payment. In the first year, we prevented $500M in fraud while maintaining a 95% accuracy rate. The system explains why each claim is flagged, so our investigators can focus on high-risk cases instead of chasing false positives."
+                </p>
+                <div className="border-t border-accent/20 pt-4">
+                  <div className="font-semibold">Maria Rodriguez</div>
+                  <div className="text-sm text-muted-foreground">Chief of Fraud Prevention - Social Security Administration</div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -207,19 +225,19 @@ export default function MLAI() {
                 <h3 className="text-xl font-bold mb-4">ML Frameworks</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>TensorFlow & PyTorch</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Scikit-learn for classical ML</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>XGBoost & LightGBM</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Hugging Face Transformers</span>
                   </li>
                 </ul>
@@ -231,19 +249,19 @@ export default function MLAI() {
                 <h3 className="text-xl font-bold mb-4">Explainability & Governance</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>SHAP for feature importance</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>LIME for local explanations</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>MLflow for model tracking</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Fairlearn for bias detection</span>
                   </li>
                 </ul>
@@ -255,19 +273,19 @@ export default function MLAI() {
                 <h3 className="text-xl font-bold mb-4">Deployment & Monitoring</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Kubernetes for model serving</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>TensorFlow Serving & TorchServe</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Prometheus for model monitoring</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Evidently AI for drift detection</span>
                   </li>
                 </ul>

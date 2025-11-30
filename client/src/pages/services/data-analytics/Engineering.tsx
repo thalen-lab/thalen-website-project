@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, Database, GitBranch, Shield, Zap, TrendingUp, AlertCircle, Search, BarChart3, Cloud } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Database, GitBranch, Shield, Zap, TrendingUp, AlertCircle, Search, BarChart3, Cloud } from 'lucide-react';
 
 export default function Engineering() {
   const engineeringBenefits = [
@@ -62,7 +62,7 @@ export default function Engineering() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
               Data Infrastructure
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -111,8 +111,9 @@ export default function Engineering() {
       {/* The Engineering Problem */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Manual Data Processes Are Killing Your Analytics ROI</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Manual Data Processes Are Killing Your Analytics ROI</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Most federal agencies have analysts who spend their days manually extracting data from legacy systems, cleaning it in Excel, and copying it into dashboards. This is not analytics work—this is data janitorial work. When data pipelines break, dashboards go stale. When data quality is poor, leadership loses trust in analytics. When data lineage is unknown, audits fail.
               </p>
@@ -121,27 +122,44 @@ export default function Engineering() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold mb-1">Zero Manual Intervention</div>
                     <div className="text-sm text-muted-foreground">Pipelines run automatically on schedule with error handling and retry logic</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold mb-1">Built-In Data Quality Checks</div>
                     <div className="text-sm text-muted-foreground">Automated validation ensures only trusted data reaches analytics platforms</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-semibold mb-1">Full Lineage & Audit Trails</div>
                     <div className="text-sm text-muted-foreground">Track data from source to dashboard for compliance and troubleshooting</div>
                   </div>
                 </div>
+              </div>
             </div>
+
+            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <Database className="h-8 w-8 text-accent" />
+                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Pipeline Engineering Success</div>
+                </div>
+                <p className="text-lg mb-6 leading-relaxed">
+                  "Our analytics team was spending 30 hours per week manually extracting data from 15 legacy systems and cleaning it for dashboards. When someone went on vacation, dashboards went stale. Data quality was inconsistent. Leadership stopped trusting our reports. Thalen Technologies built automated pipelines that extract, validate, and load data from all 15 systems into our data warehouse every night. Our analysts now spend their time analyzing data instead of moving it around. Dashboard refresh time went from 3 days to 3 hours."
+                </p>
+                <div className="border-t border-accent/20 pt-4">
+                  <div className="font-semibold">Robert Thompson</div>
+                  <div className="text-sm text-muted-foreground">Director of Analytics - Department of Veterans Affairs</div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -166,7 +184,7 @@ export default function Engineering() {
                     <div className="text-sm font-semibold mb-2">Technologies:</div>
                     <div className="flex flex-wrap gap-2">
                       {capability.technologies.map((tech, idx) => (
-                        <span key={idx} className="text-xs bg-muted text-foreground px-3 py-1 rounded-lg border border-border font-semibold">
+                        <span key={idx} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-semibold">
                           {tech}
                         </span>
                       ))}
@@ -263,19 +281,19 @@ export default function Engineering() {
                 <h3 className="text-xl font-bold mb-4">Orchestration & Workflow</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Apache Airflow</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>AWS Step Functions</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Prefect</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Azure Data Factory</span>
                   </li>
                 </ul>
@@ -287,19 +305,19 @@ export default function Engineering() {
                 <h3 className="text-xl font-bold mb-4">Data Processing</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Apache Spark</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>dbt (data build tool)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>AWS Glue</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Python/Pandas</span>
                   </li>
                 </ul>
@@ -311,19 +329,19 @@ export default function Engineering() {
                 <h3 className="text-xl font-bold mb-4">Data Quality & Governance</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Great Expectations</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>Apache Atlas</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>DataHub</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span>dbt tests</span>
                   </li>
                 </ul>

@@ -110,14 +110,14 @@ export default function CloudOptimization() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
               40-60% Average Cost Reduction • 200-300% Performance Gains
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Cloud Optimization & Cost Management
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies maximize cloud ROI through intelligent resource optimization, automated cost controls, and performance tuning across AWS, Azure, and Google Cloud platforms. Our optimization framework reduces cloud spending by 40-60% while improving application performance by 200-300%—delivering immediate financial impact and operational excellence.
+              Maximize cloud ROI through intelligent resource optimization, automated cost controls, and performance tuning. Thalen Technologies's optimization framework reduces cloud spending by 40-60% while improving application performance by 200-300%—delivering immediate financial impact and operational excellence.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -175,7 +175,7 @@ export default function CloudOptimization() {
                   <ul className="space-y-3">
                     {area.items.map((item, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}

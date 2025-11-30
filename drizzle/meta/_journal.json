@@ -57,20 +57,6 @@
       "when": 1763359108038,
       "tag": "0007_damp_frank_castle",
       "breakpoints": true
-    },
-    {
-      "idx": 8,
-      "version": "5",
-      "when": 1764520190149,
-      "tag": "0008_tired_robin_chapel",
-      "breakpoints": true
-    },
-    {
-      "idx": 9,
-      "version": "5",
-      "when": 1764523409071,
-      "tag": "0009_dusty_toad_men",
-      "breakpoints": true
     }
   ]
 }
