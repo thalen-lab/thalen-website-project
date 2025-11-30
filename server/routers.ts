@@ -1,12 +1,12 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
+import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { notifyOwner } from "./_core/notification";
 import { getDb } from "./db";
 import { comments, savedSearches, methodologyAssessments } from "../drizzle/schema";
-import { eq, and, isNull, desc } from "drizzle-orm";
+import { eq, and, isNull, desc, sql, count } from "drizzle-orm";
 import { adminRouter } from "./adminRouters";
 
 export const appRouter = router({
@@ -107,49 +107,35 @@ export const appRouter = router({
         }
 
         // Check if user owns the comment or is admin
-        if (comment.userId !== ctx.user.id && ctx.user.role !== "admin") {
+        const isOwner = comment.userId === ctx.user.id;
+        const isAdmin = ctx.user.role === "admin";
+
+        if (!isOwner && !isAdmin) {
           throw new Error("You don't have permission to delete this comment");
         }
 
+        // Delete the comment
         await db.delete(comments).where(eq(comments.id, input.commentId));
 
-        return { success: true };
+        return {
+          success: true,
+        };
       }),
   }),
 
   savedSearches: router({
-    // Get all saved searches for the current user
-    list: publicProcedure.query(async ({ ctx }) => {
-      if (!ctx.user) return [];
-      
-      const db = await getDb();
-      if (!db) return [];
-      
-      const searches = await db
-        .select()
-        .from(savedSearches)
-        .where(eq(savedSearches.userId, ctx.user.id))
-        .orderBy(desc(savedSearches.createdAt));
-      
-      return searches;
-    }),
-
     // Create a new saved search
-    create: publicProcedure
+    create: protectedProcedure
       .input(
         z.object({
           name: z.string().min(1, "Name is required"),
           searchQuery: z.string().default(""),
           industry: z.string().default("All"),
           service: z.string().default("All"),
-          emailNotifications: z.number().default(1),
+          emailNotifications: z.boolean().default(true),
         })
       )
       .mutation(async ({ input, ctx }) => {
-        if (!ctx.user) {
-          throw new Error("You must be logged in to save searches");
-        }
-
         const db = await getDb();
         if (!db) {
           throw new Error("Database not available");
@@ -161,36 +147,51 @@ export const appRouter = router({
           searchQuery: input.searchQuery,
           industry: input.industry,
           service: input.service,
-          emailNotifications: input.emailNotifications,
+          emailNotifications: input.emailNotifications ? 1 : 0,
         });
 
-        return { success: true, id: Number((result as any).insertId || 0) };
+        return {
+          success: true,
+          searchId: Number(result[0].insertId),
+        };
       }),
 
-    // Delete a saved search
-    delete: publicProcedure
-      .input(z.object({ id: z.number() }))
-      .mutation(async ({ input, ctx }) => {
-        if (!ctx.user) {
-          throw new Error("You must be logged in to delete saved searches");
-        }
+    // Get all saved searches for current user
+    list: protectedProcedure.query(async ({ ctx }) => {
+      const db = await getDb();
+      if (!db) return [];
 
+      const searches = await db
+        .select()
+        .from(savedSearches)
+        .where(eq(savedSearches.userId, ctx.user.id))
+        .orderBy(desc(savedSearches.createdAt));
+
+      return searches;
+    }),
+
+    // Delete a saved search
+    delete: protectedProcedure
+      .input(z.object({ searchId: z.number() }))
+      .mutation(async ({ input, ctx }) => {
         const db = await getDb();
         if (!db) {
           throw new Error("Database not available");
         }
 
-        // Only allow users to delete their own saved searches
+        // Verify ownership before deleting
         await db
           .delete(savedSearches)
           .where(
             and(
-              eq(savedSearches.id, input.id),
+              eq(savedSearches.id, input.searchId),
               eq(savedSearches.userId, ctx.user.id)
             )
           );
 
-        return { success: true };
+        return {
+          success: true,
+        };
       }),
   }),
 
@@ -306,6 +307,169 @@ ${input.details || 'Not provided'}
           throw new Error("Failed to submit assessment request. Please try again.");
         }
       }),
+
+    // List all assessments (admin only)
+    list: protectedProcedure
+      .input(
+        z.object({
+          status: z.enum(["all", "new", "contacted", "qualified", "converted", "closed"]).default("all"),
+          search: z.string().optional(),
+        })
+      )
+      .query(async ({ input, ctx }) => {
+        // Check admin permission
+        if (ctx.user.role !== "admin") {
+          throw new Error("Unauthorized");
+        }
+
+        const db = await getDb();
+        if (!db) return [];
+
+        // Build where conditions
+        const conditions = [];
+
+        // Filter by status if not "all"
+        if (input.status !== "all") {
+          conditions.push(eq(methodologyAssessments.status, input.status));
+        }
+
+        // Add search filter if provided
+        if (input.search && input.search.trim()) {
+          const searchTerm = `%${input.search.trim()}%`;
+          conditions.push(
+            sql`${methodologyAssessments.agencyName} LIKE ${searchTerm} OR ${methodologyAssessments.contactName} LIKE ${searchTerm} OR ${methodologyAssessments.email} LIKE ${searchTerm}`
+          );
+        }
+
+        // Build and execute query
+        let query = db.select().from(methodologyAssessments);
+        
+        if (conditions.length > 0) {
+          query = query.where(and(...conditions)) as any;
+        }
+
+        const assessments = await query.orderBy(desc(methodologyAssessments.createdAt));
+
+        return assessments;
+      }),
+
+    // Update assessment status and notes
+    update: protectedProcedure
+      .input(
+        z.object({
+          id: z.number(),
+          status: z.enum(["new", "contacted", "qualified", "converted", "closed"]).optional(),
+          internalNotes: z.string().optional(),
+        })
+      )
+      .mutation(async ({ input, ctx }) => {
+        // Check admin permission
+        if (ctx.user.role !== "admin") {
+          throw new Error("Unauthorized");
+        }
+
+        const db = await getDb();
+        if (!db) {
+          throw new Error("Database not available");
+        }
+
+        const updates: any = {
+          updatedAt: new Date(),
+        };
+
+        if (input.status) {
+          updates.status = input.status;
+        }
+
+        if (input.internalNotes !== undefined) {
+          updates.internalNotes = input.internalNotes;
+        }
+
+        await db
+          .update(methodologyAssessments)
+          .set(updates)
+          .where(eq(methodologyAssessments.id, input.id));
+
+        return {
+          success: true,
+        };
+      }),
+
+    // Get analytics data
+    analytics: protectedProcedure.query(async ({ ctx }) => {
+      // Check admin permission
+      if (ctx.user.role !== "admin") {
+        throw new Error("Unauthorized");
+      }
+
+      const db = await getDb();
+      if (!db) {
+        return {
+          totalAssessments: 0,
+          byStatus: [],
+          byAgencyType: [],
+          byComplianceFramework: [],
+          byAuthStatus: [],
+          conversionRate: 0,
+          recentAssessments: [],
+        };
+      }
+
+      // Get total count
+      const [totalResult] = await db
+        .select({ count: count() })
+        .from(methodologyAssessments);
+
+      // Get counts by status
+      const statusCounts = await db
+        .select({
+          status: methodologyAssessments.status,
+          count: count(),
+        })
+        .from(methodologyAssessments)
+        .groupBy(methodologyAssessments.status);
+
+      // Get counts by compliance framework
+      const frameworkCounts = await db
+        .select({
+          framework: methodologyAssessments.complianceFramework,
+          count: count(),
+        })
+        .from(methodologyAssessments)
+        .groupBy(methodologyAssessments.complianceFramework);
+
+      // Get counts by authorization status
+      const authStatusCounts = await db
+        .select({
+          authStatus: methodologyAssessments.authStatus,
+          count: count(),
+        })
+        .from(methodologyAssessments)
+        .groupBy(methodologyAssessments.authStatus);
+
+      // Calculate conversion rate (qualified + converted / total)
+      const qualifiedCount = statusCounts.find(s => s.status === "qualified")?.count || 0;
+      const convertedCount = statusCounts.find(s => s.status === "converted")?.count || 0;
+      const conversionRate = totalResult.count > 0 
+        ? ((qualifiedCount + convertedCount) / totalResult.count) * 100 
+        : 0;
+
+      // Get recent assessments (last 10)
+      const recentAssessments = await db
+        .select()
+        .from(methodologyAssessments)
+        .orderBy(desc(methodologyAssessments.createdAt))
+        .limit(10);
+
+      return {
+        totalAssessments: totalResult.count,
+        byStatus: statusCounts,
+        byComplianceFramework: frameworkCounts,
+        byAuthStatus: authStatusCounts,
+        conversionRate: Math.round(conversionRate * 10) / 10,
+        recentAssessments,
+      };
+    }),
   }),
 });
 
