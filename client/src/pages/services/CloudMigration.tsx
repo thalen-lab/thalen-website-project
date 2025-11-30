@@ -105,7 +105,7 @@ export default function CloudMigration() {
               Cloud Migration & Transition
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Migrate mission-critical systems to FedRAMP-compliant cloud environments with proven strategies that ensure complete data integrity, zero downtime, and accelerated timelines. Thalen Technologies's migration framework reduces typical 6-12 month timelines to 30-60 days while maintaining 100% operational continuity.
+              We help agencies migrate mission-critical systems to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) with proven strategies that ensure complete data integrity, zero downtime, and accelerated timelines. Our migration framework reduces typical 6-12 month timelines to 30-60 days while maintaining 100% operational continuity.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
