@@ -1369,3 +1369,15 @@
 - [x] Replace orange numbered circles (bg-accent) with subtle gray/white bordered circles
 - [x] Update all 4 phase number styling to be less visually dominant
 - [x] Test updated design for professional appearance
+
+## Phase 91: Create RAPID Framework Methodology Page
+- [x] Create /methodology route in App.tsx
+- [x] Create Methodology.tsx page with clean, minimal design
+- [x] Add expanded descriptions for all 4 RAPID phases
+- [x] Add deliverables checklists for each phase
+- [x] Add sample documentation templates section
+- [x] Add case study examples for each phase
+- [x] Generate 2-page RAPID Framework PDF with methodology summary
+- [x] Add PDF download button to methodology page
+- [x] Update navigation to link to methodology page
+- [x] Test methodology page and PDF download
