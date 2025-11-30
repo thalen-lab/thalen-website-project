@@ -93,6 +93,10 @@ import LowCodeDevelopment from "./pages/services/LowCodeDevelopment";
 import LegacyModernization from "./pages/services/LegacyModernization";
 import EnterprisePortals from "./pages/services/EnterprisePortals";
 import SystemIntegration from "./pages/services/SystemIntegration";
+import FedRAMPIntegration from "./pages/services/FedRAMPIntegration";
+import LegacyIntegration from "./pages/services/LegacyIntegration";
+import HybridCloud from "./pages/services/HybridCloud";
+import APISecurity from "./pages/services/APISecurity";
 import ApplicationSecurity from "./pages/services/ApplicationSecurity";
 import VisualizationService from "./pages/services/data-analytics/Visualization";
 import MLAIService from "./pages/services/data-analytics/MLAI";
@@ -208,6 +212,10 @@ function Router() {
       <Route path={"/services/legacy-modernization"} component={LegacyModernization} />
       <Route path={"/services/enterprise-portals"} component={EnterprisePortals} />
       <Route path={"/services/system-integration"} component={SystemIntegration} />
+      <Route path={"/services/fedramp-integration"} component={FedRAMPIntegration} />
+      <Route path={"/services/legacy-integration"} component={LegacyIntegration} />
+      <Route path={"/services/hybrid-cloud"} component={HybridCloud} />
+      <Route path={"/services/api-security"} component={APISecurity} />
       <Route path={"/services/application-security"} component={ApplicationSecurity} />
       <Route path={"/services/app-development"} component={AppDevelopmentService} />
       <Route path={"/services/custom-software"} component={CustomSoftwareService} />

@@ -3,36 +3,36 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, GitBranch, Shield, Zap, Database, Cloud, Lock, Users, Award, Globe } from 'lucide-react';
+import { ArrowRight, GitBranch, Shield, Zap, Database, Cloud, Lock, Users, Award, Globe } from 'lucide-react';
 
 export default function SystemIntegration() {
   // Primary service offerings (reduced to 4 core capabilities)
   const primaryServices = [
     {
       icon: GitBranch,
-      title: 'FedRAMP Platform Integration',
-      description: 'Connect multiple FedRAMP-authorized platforms (Salesforce Government Cloud, ServiceNow, Workday, etc.) with secure APIs and unified data flows.',
+      title: 'FedRAMP & StateRAMP Platform Integration',
+      description: 'We help agencies connect multiple FedRAMP and StateRAMP-authorized platforms (Salesforce Government Cloud, ServiceNow, Workday, etc.) with secure APIs and unified data flows.',
       benefits: ['50+ FedRAMP platform connectors', 'ATO-compliant API gateways', 'Real-time data synchronization'],
       link: '/services/fedramp-integration'
     },
     {
       icon: Database,
       title: 'Legacy System Modernization',
-      description: 'Integrate mainframe, COBOL, and legacy databases with modern FedRAMP platforms using secure adapters, APIs, and middleware.',
+      description: 'We help agencies integrate mainframe, COBOL, and legacy databases with modern FedRAMP and StateRAMP platforms using secure adapters, APIs, and middleware.',
       benefits: ['Zero business disruption', 'Bidirectional data sync', 'Compliance-ready architecture'],
       link: '/services/legacy-integration'
     },
     {
       icon: Cloud,
       title: 'Hybrid Cloud Integration',
-      description: 'Connect on-premise systems with FedRAMP cloud platforms through secure tunnels, VPNs, and hybrid architecture patterns.',
+      description: 'We help agencies connect on-premise systems with FedRAMP and StateRAMP cloud platforms through secure tunnels, VPNs, and hybrid architecture patterns.',
       benefits: ['Multi-cloud orchestration', 'Secure hybrid connectivity', 'Workload portability'],
       link: '/services/hybrid-cloud'
     },
     {
       icon: Shield,
       title: 'API Security & Management',
-      description: 'Design and implement secure API gateways with authentication, rate limiting, encryption, and comprehensive monitoring for government workloads.',
+      description: 'We help agencies design and implement secure API gateways with authentication, rate limiting, encryption, and comprehensive monitoring for government workloads.',
       benefits: ['OAuth 2.0 / SAML implementation', 'API threat protection', 'Compliance logging'],
       link: '/services/api-security'
     }
@@ -43,14 +43,14 @@ export default function SystemIntegration() {
     { name: 'Enterprise Service Bus (ESB) Implementation', description: 'Message queuing and event-driven architecture for complex integrations' },
     { name: 'Data Integration & ETL Pipelines', description: 'Automated data transformation and synchronization across systems' },
     { name: 'Microservices Architecture', description: 'Build scalable, maintainable integrations using modern patterns' },
-    { name: 'Integration Platform as a Service (iPaaS)', description: 'Deploy and manage integrations on FedRAMP-authorized platforms' }
+    { name: 'Integration Platform as a Service (iPaaS)', description: 'Deploy and manage integrations on FedRAMP and StateRAMP-authorized platforms' }
   ];
 
   const keyDifferentiators = [
     {
       icon: Globe,
       title: 'Multi-Vendor Integration Expertise',
-      description: 'We integrate 50+ FedRAMP platforms including Salesforce Gov Cloud, ServiceNow, Workday, Adobe, and dozens of specialized government SaaS solutions.'
+      description: 'We integrate 50+ FedRAMP and StateRAMP platforms including Salesforce Gov Cloud, ServiceNow, Workday, Adobe, and dozens of specialized government SaaS solutions.'
     },
     {
       icon: Users,
@@ -108,7 +108,7 @@ export default function SystemIntegration() {
               Government Systems Integration & Interoperability
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
-              We integrate multiple FedRAMP-authorized platforms, legacy government systems, and agency-specific applications with secure APIs and compliant data flows. Vendor-neutral consulting that breaks down data silos.
+              We integrate multiple FedRAMP and StateRAMP-authorized platforms, legacy government systems, and agency-specific applications with secure APIs and compliant data flows. Vendor-neutral consulting that breaks down data silos.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -142,8 +142,8 @@ export default function SystemIntegration() {
               return (
                 <Card key={index} className="border-2 hover:border-accent transition-colors">
                   <CardContent className="pt-8">
-                    <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center mb-6">
-                      <Icon className="h-7 w-7 text-accent" />
+                    <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center mb-6">
+                      <Icon className="h-7 w-7 text-muted-foreground" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                     <p className="text-muted-foreground">{item.description}</p>
@@ -171,8 +171,8 @@ export default function SystemIntegration() {
                 <Card key={index} className="border-2 hover:border-accent transition-colors group">
                   <CardContent className="pt-8">
                     <div className="flex items-start gap-4 mb-6">
-                      <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-7 w-7 text-accent" />
+                      <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon className="h-7 w-7 text-muted-foreground" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
@@ -181,8 +181,8 @@ export default function SystemIntegration() {
                     </div>
                     <div className="space-y-2 mb-6">
                       {service.benefits.map((benefit, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <div key={idx} className="flex items-start gap-3">
+                          <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
                           <span className="text-sm">{benefit}</span>
                         </div>
                       ))}
@@ -205,7 +205,7 @@ export default function SystemIntegration() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
                   <div>
                     <div className="font-semibold mb-1">{capability.name}</div>
                     <div className="text-sm text-muted-foreground">{capability.description}</div>
@@ -249,9 +249,9 @@ export default function SystemIntegration() {
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP Platform Integration Expertise</h2>
+            <h2 className="text-4xl font-bold mb-4">FedRAMP & StateRAMP Platform Integration Expertise</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We've integrated 50+ FedRAMP-authorized platforms across every category
+              We've integrated 50+ FedRAMP and StateRAMP-authorized platforms across every category
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -259,8 +259,8 @@ export default function SystemIntegration() {
               <Card key={index} className="border-2">
                 <CardContent className="pt-8">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="h-12 w-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Cloud className="h-6 w-6 text-accent" />
+                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Cloud className="h-6 w-6 text-muted-foreground" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">{integration.category}</h3>
@@ -269,8 +269,8 @@ export default function SystemIntegration() {
                   </div>
                   <div className="space-y-2">
                     {integration.platforms.map((platform, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0" />
+                      <div key={idx} className="flex items-start gap-2 text-sm">
+                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
                         <span>{platform}</span>
                       </div>
                     ))}
