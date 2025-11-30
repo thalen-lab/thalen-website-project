@@ -283,6 +283,104 @@ export default function RPA() {
         </div>
       </section>
 
+      {/* Detailed RPA Services */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive RPA Implementation Services</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              End-to-end RPA services from process assessment to Center of Excellence setup
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/services/automation/rpa/process-assessment">
+              <Card className="border-2 hover:border-accent transition-colors group cursor-pointer h-full">
+                <CardContent className="pt-8">
+                  <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                    <FileSearch className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Process Assessment & Discovery</h3>
+                  <p className="text-muted-foreground mb-4">Comprehensive analysis of agency workflows to identify high-value automation opportunities with detailed ROI projections.</p>
+                  <div className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all">
+                    Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/automation/rpa/platform-selection">
+              <Card className="border-2 hover:border-accent transition-colors group cursor-pointer h-full">
+                <CardContent className="pt-8">
+                  <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                    <Shield className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">RPA Platform Selection & Implementation</h3>
+                  <p className="text-muted-foreground mb-4">Vendor-neutral evaluation and deployment of FedRAMP-authorized RPA platforms tailored to agency needs.</p>
+                  <div className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all">
+                    Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/automation/rpa/bot-development">
+              <Card className="border-2 hover:border-accent transition-colors group cursor-pointer h-full">
+                <CardContent className="pt-8">
+                  <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                    <Bot className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Bot Development & Deployment</h3>
+                  <p className="text-muted-foreground mb-4">Custom bot development following government security standards with comprehensive testing and production deployment.</p>
+                  <div className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all">
+                    Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/automation/rpa/ato-compliance">
+              <Card className="border-2 hover:border-accent transition-colors group cursor-pointer h-full">
+                <CardContent className="pt-8">
+                  <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                    <Lock className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">ATO & Compliance Documentation</h3>
+                  <p className="text-muted-foreground mb-4">Complete security documentation package for FISMA ATO processes including security controls and risk assessments.</p>
+                  <div className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all">
+                    Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/automation/rpa/coe-setup">
+              <Card className="border-2 hover:border-accent transition-colors group cursor-pointer h-full">
+                <CardContent className="pt-8">
+                  <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                    <Users className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">RPA Center of Excellence Setup</h3>
+                  <p className="text-muted-foreground mb-4">Establish governance frameworks, standards, and training programs to scale RPA across your agency sustainably.</p>
+                  <div className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all">
+                    Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/automation/rpa/maintenance">
+              <Card className="border-2 hover:border-accent transition-colors group cursor-pointer h-full">
+                <CardContent className="pt-8">
+                  <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                    <TrendingUp className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Bot Maintenance & Optimization</h3>
+                  <p className="text-muted-foreground mb-4">Ongoing bot monitoring, performance optimization, and enhancement services to ensure long-term RPA success and ROI.</p>
+                  <div className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all">
+                    Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">

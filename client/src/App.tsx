@@ -54,6 +54,7 @@ import SuccessMetrics from "./pages/services/digital-transformation/SuccessMetri
 
 // Automation Subpages
 import RPAService from "./pages/services/automation/RPA";
+import ProcessAssessment from "./pages/services/automation/rpa/ProcessAssessment";
 import IntegrationService from "./pages/services/automation/Integration";
 import OrchestrationService from "./pages/services/automation/Orchestration";
 
@@ -159,6 +160,7 @@ function Router() {
       {/* Service Routes */}
       <Route path={"/services/automation"} component={AutomationService} />
       <Route path={"/services/automation/rpa"} component={RPAService} />
+      <Route path={"/services/automation/rpa/process-assessment"} component={ProcessAssessment} />
       <Route path={"/services/automation/integration"} component={IntegrationService} />
       <Route path={"/services/automation/orchestration"} component={OrchestrationService} />
       <Route path={"/services/data-analytics"} component={DataAnalyticsService} />
