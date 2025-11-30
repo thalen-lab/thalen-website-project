@@ -1297,3 +1297,7 @@
 - [x] Create County Health Department integration case study page
 - [x] Build downloadable state procurement guide (PDF)
 - [x] Add procurement guide download link to state/local landing page
+
+## Phase 80: State/Local Content Discoverability
+- [x] Link homepage case study carousel to detailed state/local case study pages
+- [x] Add procurement guide CTA section to state/local landing page

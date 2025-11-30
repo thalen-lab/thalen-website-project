@@ -345,6 +345,92 @@ export default function StateLocal() {
         </div>
       </section>
 
+      {/* Procurement Guide CTA */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <Card className="border-2 border-accent">
+            <CardContent className="p-12">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    Procurement Resource
+                  </div>
+                  <h2 className="text-4xl font-bold mb-4">Streamlined State & Local Procurement</h2>
+                  <p className="text-xl text-muted-foreground mb-6">
+                    Reduce procurement time from 6-12 months to 1-4 weeks with cooperative purchasing contracts, state master agreements, and grant-funded project support.
+                  </p>
+                  <div className="space-y-3 mb-8">
+                    <div className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">NASPO ValuePoint, Sourcewell, OMNIA Partners cooperative contracts</span>
+                    </div>
+                    <div className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">12 state master agreements with pre-negotiated pricing</span>
+                    </div>
+                    <div className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">Traditional RFP support with state/local references</span>
+                    </div>
+                    <div className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">ARPA, BEAD, and state grant-funded project assistance</span>
+                    </div>
+                  </div>
+                  <Link href="/federal-solutions/state-local/procurement-guide">
+                    <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                      View Procurement Guide
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                </div>
+                <div className="bg-secondary p-8 rounded-lg">
+                  <h3 className="text-2xl font-bold mb-6">Procurement Paths</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-accent text-accent-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold mr-3 flex-shrink-0">
+                        1
+                      </div>
+                      <div>
+                        <p className="font-semibold">Cooperative Purchasing</p>
+                        <p className="text-sm text-muted-foreground">1-4 weeks • Pre-vetted vendor • No RFP required</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="bg-accent text-accent-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold mr-3 flex-shrink-0">
+                        2
+                      </div>
+                      <div>
+                        <p className="font-semibold">State Master Agreements</p>
+                        <p className="text-sm text-muted-foreground">1-4 weeks • State-specific terms • Pre-approved</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="bg-accent text-accent-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold mr-3 flex-shrink-0">
+                        3
+                      </div>
+                      <div>
+                        <p className="font-semibold">Traditional RFP</p>
+                        <p className="text-sm text-muted-foreground">4-6 weeks • Full response support • Local references</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="bg-accent text-accent-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold mr-3 flex-shrink-0">
+                        4
+                      </div>
+                      <div>
+                        <p className="font-semibold">Grant-Funded Projects</p>
+                        <p className="text-sm text-muted-foreground">ARPA, BEAD • Compliance tracking • Audit-ready</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">

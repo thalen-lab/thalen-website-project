@@ -41,10 +41,10 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "state-law-enforcement",
-    title: "State Law Enforcement Detects $50M in Fraud",
+    title: "State Attorney General Prevents $50M in Fraud",
     description: "Implemented CJIS-compliant fraud detection system for state attorney general's office, processing 10M+ daily transactions with real-time ML analytics and preventing $50M in fraudulent activities annually.",
     image: "/financial-fraud-soc.a8f3d9e2.jpg",
-    link: "/case-studies/state-law-enforcement",
+    link: "/case-studies/state-attorney-general",
     category: "State Government"
   },
   {
@@ -57,10 +57,10 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "state-energy",
-    title: "State Energy Commission Optimizes Grid Performance",
-    description: "Deployed StateRAMP-authorized analytics platform for state public utility commission, monitoring 500+ substations with predictive maintenance that reduced outages by 65% across the distribution network.",
+    title: "State Energy Commission Reduces Outages 65%",
+    description: "Deployed StateRAMP-authorized IoT platform monitoring 500+ substations with 15,000+ sensors and predictive maintenance analytics, reducing grid outages by 65% for 8.5 million residents.",
     image: "/energy-grid-control.c9d5f2a4.jpg",
-    link: "/case-studies/state-energy",
+    link: "/case-studies/state-energy-commission",
     category: "State Government"
   }
 ];
