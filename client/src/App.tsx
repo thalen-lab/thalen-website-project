@@ -26,6 +26,10 @@ import FederalSolutions from "./pages/FederalSolutions";
 import StateLocalSolutions from "./pages/federal-solutions/StateLocal";
 import StateROICalculator from "./pages/federal-solutions/StateROICalculator";
 import StateComplianceChecklist from "./pages/federal-solutions/StateComplianceChecklist";
+import StateProcurementGuide from "./pages/federal-solutions/StateProcurementGuide";
+import StateAttorneyGeneralCase from "./pages/case-studies/StateAttorneyGeneral";
+import StateEnergyCommissionCase from "./pages/case-studies/StateEnergyCommission";
+import CountyHealthDepartmentCase from "./pages/case-studies/CountyHealthDepartment";
 import CapabilityGenerator from "./pages/CapabilityGenerator";
 import GovernmentResources from "./pages/GovernmentResources";
 import ContractVehicleComparison from "./pages/ContractVehicleComparison";
@@ -158,6 +162,10 @@ function Router() {
       <Route path={"/federal-solutions/state-local"} component={StateLocalSolutions} />
       <Route path={"/federal-solutions/state-local/roi-calculator"} component={StateROICalculator} />
       <Route path={"/federal-solutions/state-local/compliance-checklist"} component={StateComplianceChecklist} />
+      <Route path={"/federal-solutions/state-local/procurement-guide"} component={StateProcurementGuide} />
+      <Route path={"/case-studies/state-attorney-general"} component={StateAttorneyGeneralCase} />
+      <Route path={"/case-studies/state-energy-commission"} component={StateEnergyCommissionCase} />
+      <Route path={"/case-studies/county-health-department"} component={CountyHealthDepartmentCase} />
       <Route path={"/capability-generator"} component={CapabilityGenerator} />
       <Route path={"/government-resources"} component={GovernmentResources} />
       <Route path={"/contract-vehicle-comparison"} component={ContractVehicleComparison} />

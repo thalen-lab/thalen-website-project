@@ -8,6 +8,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [federalSolutionsOpen, setFederalSolutionsOpen] = useState(false);
 
   const services = [
     { name: 'Intelligent Automation & Process Optimization', href: '/services/automation' },
@@ -93,9 +94,52 @@ export default function Navigation() {
             <Link href="/case-studies" className="hover:text-accent transition-colors">
               Case Studies
             </Link>
-            <Link href="/federal-solutions" className="hover:text-accent transition-colors">
-              Federal Solutions
-            </Link>
+            {/* Federal Solutions Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setFederalSolutionsOpen(true)}
+              onMouseLeave={() => setFederalSolutionsOpen(false)}
+            >
+              <button className="flex items-center space-x-1 hover:text-accent transition-colors">
+                <span>Federal Solutions</span>
+                <ChevronDown className="h-4 w-4" />
+              </button>
+              {federalSolutionsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
+                  <Link 
+                    href="/federal-solutions"
+                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors font-semibold"
+                  >
+                    Government Solutions Overview
+                  </Link>
+                  <div className="border-t border-border my-2"></div>
+                  <Link 
+                    href="/federal-solutions/state-local"
+                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    State & Local Government
+                  </Link>
+                  <Link 
+                    href="/capability-generator"
+                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    Capability Statement Generator
+                  </Link>
+                  <Link 
+                    href="/contract-vehicle-comparison"
+                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    Contract Vehicle Comparison
+                  </Link>
+                  <Link 
+                    href="/compliance-roadmap"
+                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    Compliance Roadmap Tool
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link href="/government-resources" className="hover:text-accent transition-colors">
               Resources
             </Link>

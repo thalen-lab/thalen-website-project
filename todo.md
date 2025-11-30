@@ -1289,3 +1289,11 @@
 - [x] Create state government ROI calculator tool
 - [x] Create state government compliance checklist tool
 - [x] Update navigation to include state/local government pages
+
+## Phase 79: State/Local Government Enhancements
+- [x] Update navigation dropdown to include State & Local Government submenu under Federal Solutions
+- [x] Create State Attorney General fraud detection case study page
+- [x] Create State Energy Commission grid optimization case study page
+- [x] Create County Health Department integration case study page
+- [x] Build downloadable state procurement guide (PDF)
+- [x] Add procurement guide download link to state/local landing page
