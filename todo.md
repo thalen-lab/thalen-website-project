@@ -1420,3 +1420,8 @@
 - [x] Remove gradient backgrounds from icon containers
 - [x] Use solid background colors for cleaner look
 - [x] Test updated design
+
+## Phase 97: Remove Icon Container Backgrounds
+- [x] Remove bg-accent/5 from all icon containers
+- [x] Keep only icon lines visible on transparent background
+- [x] Test final clean design

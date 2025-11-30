@@ -500,8 +500,8 @@ export default function Home() {
             {/* Process Automation Card */}
             <div className="group bg-card border border-border rounded-xl p-8 hover:shadow-lg hover:border-accent/50 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-accent/5 flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold">Process Automation</h3>
               </div>
@@ -521,8 +521,8 @@ export default function Home() {
             {/* Cloud Platforms Card */}
             <div className="group bg-card border border-border rounded-xl p-8 hover:shadow-lg hover:border-accent/50 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-accent/5 flex items-center justify-center">
-                  <Cloud className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <Cloud className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold">Cloud Platforms</h3>
               </div>
@@ -542,8 +542,8 @@ export default function Home() {
             {/* Data & Analytics Card */}
             <div className="group bg-card border border-border rounded-xl p-8 hover:shadow-lg hover:border-accent/50 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-accent/5 flex items-center justify-center">
-                  <Database className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <Database className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold">Data & Analytics</h3>
               </div>
@@ -563,8 +563,8 @@ export default function Home() {
             {/* Cybersecurity Card */}
             <div className="group bg-card border border-border rounded-xl p-8 hover:shadow-lg hover:border-accent/50 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-accent/5 flex items-center justify-center">
-                  <ShieldCheck className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <ShieldCheck className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold">Cybersecurity</h3>
               </div>
@@ -584,8 +584,8 @@ export default function Home() {
             {/* AI & Machine Learning Card */}
             <div className="group bg-card border border-border rounded-xl p-8 hover:shadow-lg hover:border-accent/50 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-accent/5 flex items-center justify-center">
-                  <Lightbulb className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <Lightbulb className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold">AI & Machine Learning</h3>
               </div>
@@ -605,8 +605,8 @@ export default function Home() {
             {/* Enterprise Software Card */}
             <div className="group bg-card border border-border rounded-xl p-8 hover:shadow-lg hover:border-accent/50 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-accent/5 flex items-center justify-center">
-                  <Building2 className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <Building2 className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold">Enterprise Software</h3>
               </div>
