@@ -30,6 +30,8 @@ import StateProcurementGuide from "./pages/federal-solutions/StateProcurementGui
 import StateAttorneyGeneralCase from "./pages/case-studies/StateAttorneyGeneral";
 import StateEnergyCommissionCase from "./pages/case-studies/StateEnergyCommission";
 import CountyHealthDepartmentCase from "./pages/case-studies/CountyHealthDepartment";
+import DoDManufacturingCase from "./pages/case-studies/DoDManufacturing";
+import VAHealthcareCase from "./pages/case-studies/VAHealthcare";
 import CapabilityGenerator from "./pages/CapabilityGenerator";
 import GovernmentResources from "./pages/GovernmentResources";
 import ContractVehicleComparison from "./pages/ContractVehicleComparison";
@@ -166,6 +168,8 @@ function Router() {
       <Route path={"/case-studies/state-attorney-general"} component={StateAttorneyGeneralCase} />
       <Route path={"/case-studies/state-energy-commission"} component={StateEnergyCommissionCase} />
       <Route path={"/case-studies/county-health-department"} component={CountyHealthDepartmentCase} />
+      <Route path={"/case-studies/dod-manufacturing"} component={DoDManufacturingCase} />
+      <Route path={"/case-studies/va-healthcare"} component={VAHealthcareCase} />
       <Route path={"/capability-generator"} component={CapabilityGenerator} />
       <Route path={"/government-resources"} component={GovernmentResources} />
       <Route path={"/contract-vehicle-comparison"} component={ContractVehicleComparison} />

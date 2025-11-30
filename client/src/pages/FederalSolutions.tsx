@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import FederalROICalculator from '@/components/FederalROICalculator';
 import { ArrowRight, CheckCircle2, Shield, FileText, Award, Users, Building2, Target, Clock, DollarSign } from 'lucide-react';
 
 export default function FederalSolutions() {
@@ -663,6 +664,13 @@ export default function FederalSolutions() {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Federal ROI Calculator */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <FederalROICalculator />
         </div>
       </section>
 
