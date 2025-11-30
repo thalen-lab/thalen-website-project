@@ -34,56 +34,56 @@ export default function Home() {
   const heroSlides = [
     {
       image: '/images/hero-datacenter.jpg',
-      title: 'Intelligence, Delivered',
-      subtitle: 'Strategic automation with AI-assisted implementation'
+      title: 'Implementing FedRAMP Solutions for Government',
+      subtitle: 'Vendor-neutral consulting and systems integration for federal, state, and local agencies'
     },
     {
       image: '/images/hero-automation.jpg',
-      title: 'Transform Operations',
-      subtitle: 'Measurable ROI and sustained business transformation'
+      title: 'Government IT Implementation Excellence',
+      subtitle: 'Deploy and optimize FedRAMP-authorized platforms with proven compliance expertise'
     },
     {
       image: '/images/hero-federal.jpg',
-      title: 'Government-Grade Security',
-      subtitle: 'FedRAMP, CMMC, and Top Secret/SCI certified'
+      title: 'Trusted Government IT Partner',
+      subtitle: 'Multi-vendor integration, ATO support, and mission-critical implementation services'
     }
   ];
 
   const services = [
     {
       icon: Cpu,
-      title: 'Intelligent Automation & Process Optimization',
-      description: 'Comprehensive process assessment, strategic automation design, and AI-assisted implementation delivering measurable ROI.',
+      title: 'RPA Implementation Services',
+      description: 'Deploy FedRAMP-authorized automation platforms (UiPath Gov, Automation Anywhere Gov) with process assessment, compliance documentation, and ATO support.',
       href: '/services/automation'
     },
     {
       icon: BarChart3,
-      title: 'Data Analytics & Intelligence',
-      description: 'Real-time analytics platforms with ML/AI models for intelligent automation and optimized performance at operational scale.',
+      title: 'Government Data Analytics Implementation',
+      description: 'Implement secure analytics solutions using FedRAMP-authorized BI tools with data governance, compliance controls, and agency-specific customization.',
       href: '/services/data-analytics'
     },
     {
       icon: Cloud,
-      title: 'Cloud Infrastructure & Modernization',
-      description: 'Zero-downtime migration and government-grade security with DevOps solutions that support and scale your business.',
+      title: 'FedRAMP Cloud Migration & Integration',
+      description: 'Migrate to AWS GovCloud, Azure Government, or Salesforce Gov Cloud with ATO support, security compliance, and multi-cloud orchestration.',
       href: '/services/cloud'
     },
     {
       icon: Shield,
-      title: 'Cybersecurity & Compliance',
-      description: 'FedRAMP, CMMC, ISO 27001 compliance solutions with zero-trust architecture and continuous monitoring.',
+      title: 'Compliance & Security Implementation',
+      description: 'Achieve FedRAMP, CMMC, and FISMA compliance through gap analysis, security controls implementation, and audit preparation support.',
       href: '/services/cybersecurity'
     },
     {
       icon: Code,
-      title: 'Application Development & Integration',
-      description: 'Custom applications, seamless integrations, and workflow automation for enhanced productivity.',
+      title: 'Systems Integration Services',
+      description: 'Integrate multiple FedRAMP-authorized platforms, legacy systems, and agency-specific applications with secure APIs and data flows.',
       href: '/services/application-development'
     },
     {
       icon: Users,
-      title: 'Digital Transformation Enablement',
-      description: 'End-to-end transformation support including change management, training, and adoption strategies.',
+      title: 'Government IT Transformation',
+      description: 'Guide agencies through modernization with vendor selection, implementation roadmaps, change management, and long-term optimization.',
       href: '/services/digital-transformation'
     }
   ];
@@ -124,52 +124,52 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: '15+', label: 'Years of Automation Strategy Expertise' },
-    { value: '$2.3B+', label: 'In Projected Client ROI' },
-    { value: '7+', label: 'Security Clearance Certifications' },
-    { value: '25+', label: 'Automation Technologies Mastered' }
+    { value: '15+', label: 'Years Implementing Government IT Solutions' },
+    { value: '$2.3B+', label: 'In Government Contract Value Delivered' },
+    { value: '50+', label: 'FedRAMP Platforms Integrated' },
+    { value: '100+', label: 'Agency Implementations Completed' }
   ];
 
   const certifications = [
     {
-      name: 'FedRAMP Authorized',
+      name: 'FedRAMP Implementation Expert',
       icon: Shield,
-      description: 'Federal Risk and Authorization Management Program - Authorized for government cloud services at Moderate and High impact levels.'
+      description: 'Deep expertise implementing FedRAMP-authorized platforms for federal agencies at Moderate and High impact levels with proven ATO support.'
     },
     {
-      name: 'CMMC Level 3',
+      name: 'CMMC Compliance Partner',
       icon: ShieldCheck,
-      description: 'Cybersecurity Maturity Model Certification Level 3 - Certified to protect Controlled Unclassified Information (CUI) for defense contractors.'
+      description: 'Certified to help defense contractors achieve CMMC Level 2 and Level 3 compliance through gap analysis, controls implementation, and audit preparation.'
     },
     {
-      name: 'ISO 27001:2022',
+      name: 'ISO 27001 Certified',
       icon: Award,
-      description: 'International standard for information security management systems - Latest 2022 revision certified.'
+      description: 'ISO 27001:2022 certified organization with proven methodologies for implementing information security management systems for government clients.'
     },
     {
-      name: 'NIST Framework v2.0',
+      name: 'NIST Framework Expertise',
       icon: FileCheck,
-      description: 'National Institute of Standards and Technology Cybersecurity Framework v2.0 - Comprehensive security controls implementation.'
+      description: 'Extensive experience implementing NIST Cybersecurity Framework v2.0 controls and security assessments for federal and defense agencies.'
     },
     {
-      name: 'SOC 2 Type II',
+      name: 'GSA Schedule Holder',
       icon: Lock,
-      description: 'Service Organization Control 2 Type II - Independent audit of security, availability, and confidentiality controls over 12+ months.'
+      description: 'GSA IT Schedule 70 contract holder providing streamlined procurement for federal agencies seeking implementation and integration services.'
     },
     {
-      name: 'FISMA Moderate ATO',
+      name: 'ATO Support Services',
       icon: Key,
-      description: 'Federal Information Security Management Act Authority to Operate at Moderate impact level for federal systems.'
+      description: 'Proven track record supporting agencies through FISMA Authority to Operate (ATO) processes with security documentation and compliance assessments.'
     },
     {
-      name: 'HIPAA BAA Ready',
+      name: 'Multi-Vendor Integration',
       icon: Heart,
-      description: 'Health Insurance Portability and Accountability Act Business Associate Agreement ready - Compliant for protected health information (PHI).'
+      description: 'Vendor-neutral consulting with expertise integrating 50+ FedRAMP-authorized platforms including Salesforce Gov, AWS GovCloud, and Azure Government.'
     },
     {
-      name: 'TS/SCI Cleared Team',
+      name: 'Cleared Personnel Available',
       icon: Users,
-      description: 'Top Secret/Sensitive Compartmented Information cleared personnel available for classified government projects.'
+      description: 'Top Secret/SCI cleared team members available for classified projects and sensitive government implementations requiring security clearances.'
     }
   ];
 

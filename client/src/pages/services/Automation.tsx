@@ -9,23 +9,23 @@ export default function Automation() {
   const subServices = [
     {
       icon: Bot,
-      title: 'Robotic Process Automation (RPA)',
-      description: 'Deploy AI-powered digital workers that execute repetitive tasks 24/7 with zero errors, freeing your team to focus on mission-critical work.',
-      benefits: ['24/7 automated processing', 'Zero-error execution', 'Rapid 4-6 week deployment', 'FedRAMP-compliant bots'],
+      title: 'RPA Implementation Services',
+      description: 'Deploy FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov) with comprehensive process assessment, bot development, and ATO documentation support.',
+      benefits: ['FedRAMP-authorized platforms', 'ATO documentation support', 'Process assessment included', 'Compliance-ready bots'],
       link: '/services/automation/rpa'
     },
     {
       icon: Network,
-      title: 'Enterprise Integration Platform',
-      description: 'Eliminate data silos and manual transfers by connecting all your systems through a secure, government-certified integration platform.',
-      benefits: ['Unified data landscape', 'Real-time synchronization', 'No custom APIs needed', 'CMMC Level 2 certified'],
+      title: 'Systems Integration Services',
+      description: 'Integrate multiple FedRAMP-authorized platforms and legacy government systems with secure APIs, data flows, and compliance controls.',
+      benefits: ['Multi-vendor integration', 'Legacy system connectivity', 'Secure API development', 'FISMA compliance'],
       link: '/services/automation/integration'
     },
     {
       icon: GitBranch,
-      title: 'Process Orchestration',
-      description: 'Automate complex, multi-system workflows from end to end with intelligent orchestration that adapts to your agency\'s unique processes.',
-      benefits: ['End-to-end automation', 'Cross-department workflows', 'Bottleneck identification', 'Continuous optimization'],
+      title: 'Workflow Orchestration Implementation',
+      description: 'Implement end-to-end workflow automation across multiple government systems with intelligent orchestration and process optimization.',
+      benefits: ['Cross-system workflows', 'Agency-specific customization', 'Process optimization', 'Change management support'],
       link: '/services/automation/orchestration'
     }
   ];
@@ -33,46 +33,46 @@ export default function Automation() {
   const methodology = [
     {
       number: '1',
-      title: 'Process Assessment',
-      subtitle: 'Comprehensive mapping & analysis',
+      title: 'Process Assessment & Platform Selection',
+      subtitle: 'Vendor-neutral evaluation',
       points: [
-        'End-to-end process mapping',
-        'Bottleneck identification',
-        'ROI opportunity analysis',
-        'Current state documentation'
+        'Current process documentation',
+        'FedRAMP platform evaluation',
+        'Compliance requirements analysis',
+        'Implementation roadmap development'
       ]
     },
     {
       number: '2',
-      title: 'ROI-Focused Design',
-      subtitle: 'Strategic automation planning',
+      title: 'Compliance & Security Planning',
+      subtitle: 'ATO preparation',
       points: [
-        'Architecture optimization',
-        'Technology stack selection',
-        'Implementation roadmap',
-        'Risk mitigation strategy'
+        'Security controls design',
+        'ATO documentation preparation',
+        'FISMA compliance planning',
+        'Risk assessment and mitigation'
       ]
     },
     {
       number: '3',
-      title: 'AI-Assisted Implementation',
-      subtitle: 'Intelligent pipeline development',
+      title: 'Platform Deployment & Integration',
+      subtitle: 'Secure implementation',
       points: [
-        'RPA deployment',
-        'ML model integration',
-        'Decision support systems',
-        'Workflow orchestration'
+        'FedRAMP platform deployment',
+        'Legacy system integration',
+        'Bot/workflow development',
+        'Security testing and validation'
       ]
     },
     {
       number: '4',
-      title: 'Performance Monitoring',
-      subtitle: 'Continuous optimization',
+      title: 'Training & Optimization',
+      subtitle: 'Long-term success',
       points: [
-        'Real-time dashboards',
-        'ROI tracking',
-        'Predictive analytics',
-        'Continuous improvement'
+        'Agency staff training',
+        'Change management support',
+        'Performance monitoring',
+        'Continuous optimization'
       ]
     }
   ];
@@ -80,18 +80,18 @@ export default function Automation() {
   const benefits = [
     {
       icon: TrendingUp,
-      title: '85% Average Efficiency Gain',
-      description: 'Proven track record of dramatically reducing processing time and operational costs'
+      title: '50+ FedRAMP Platforms Integrated',
+      description: 'Extensive experience implementing UiPath Gov, Automation Anywhere Gov, and other FedRAMP-authorized automation platforms'
     },
     {
       icon: Target,
-      title: '12-Month ROI Breakeven',
-      description: 'Fast return on investment with measurable business impact from day one'
+      title: 'Proven ATO Support',
+      description: 'Track record supporting agencies through FISMA ATO processes with comprehensive security documentation'
     },
     {
       icon: CheckCircle2,
-      title: '100% Security Compliance',
-      description: 'Maintained compliance across FedRAMP, CMMC, and ISO 27001 standards'
+      title: 'Vendor-Neutral Consulting',
+      description: 'Honest broker approach helping agencies select the right FedRAMP platforms for their specific mission needs'
     }
   ];
 
