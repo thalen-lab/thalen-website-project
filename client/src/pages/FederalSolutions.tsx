@@ -176,10 +176,10 @@ export default function FederalSolutions() {
               Government Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Federal Solutions & Contract Vehicles
+              Government Solutions & Contract Vehicles
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              NexDyne Technology is a trusted government IT implementation partner with GSA Schedule contracts, proven past performance, and cleared personnel ready to support federal, state, and local agencies.
+              NexDyne Technology is a trusted government IT implementation partner with GSA Schedule contracts, StateRAMP expertise, proven past performance, and cleared personnel ready to support federal, state, and local government agencies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -653,6 +653,15 @@ export default function FederalSolutions() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/federal-solutions/state-local">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Explore State & Local Solutions
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -23,6 +23,9 @@ import Methodology from "./pages/Methodology";
 import ServiceComparison from "./pages/ServiceComparison";
 import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
+import StateLocalSolutions from "./pages/federal-solutions/StateLocal";
+import StateROICalculator from "./pages/federal-solutions/StateROICalculator";
+import StateComplianceChecklist from "./pages/federal-solutions/StateComplianceChecklist";
 import CapabilityGenerator from "./pages/CapabilityGenerator";
 import GovernmentResources from "./pages/GovernmentResources";
 import ContractVehicleComparison from "./pages/ContractVehicleComparison";
@@ -152,6 +155,9 @@ function Router() {
       <Route path={"/compare-services"} component={ServiceComparison} />
       <Route path={"/package-builder"} component={PackageBuilder} />
       <Route path={"/federal-solutions"} component={FederalSolutions} />
+      <Route path={"/federal-solutions/state-local"} component={StateLocalSolutions} />
+      <Route path={"/federal-solutions/state-local/roi-calculator"} component={StateROICalculator} />
+      <Route path={"/federal-solutions/state-local/compliance-checklist"} component={StateComplianceChecklist} />
       <Route path={"/capability-generator"} component={CapabilityGenerator} />
       <Route path={"/government-resources"} component={GovernmentResources} />
       <Route path={"/contract-vehicle-comparison"} component={ContractVehicleComparison} />
