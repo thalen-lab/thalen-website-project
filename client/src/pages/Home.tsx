@@ -351,7 +351,7 @@ export default function Home() {
             <p className="text-sm font-semibold text-accent mb-2">Our Methodology</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies RAPID Framework</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Results-Accelerated Process Intelligence & Delivery: Our proven 4-phase methodology delivering measurable ROI in 30 days
+              Proven Government Implementation Methodology: Structured 4-phase approach delivering compliant, on-budget FedRAMP and StateRAMP platform deployments
             </p>
           </motion.div>
 
@@ -418,16 +418,16 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Implementation & Delivery</h3>
                 <p className="text-muted-foreground mb-4">
-                  AI-assisted implementation with RPA deployment, ML integration, and zero-downtime migration.
+                  Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
                 </p>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Agile development sprints</span>
+                    <span>Compliance documentation & ATO support</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Continuous testing & QA</span>
+                    <span>Security controls implementation</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
@@ -467,7 +467,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-lg text-muted-foreground mb-6">
-              <strong className="text-foreground">30 days to first results</strong> • <strong className="text-foreground">100% success rate</strong> • <strong className="text-foreground">Zero operational disruption</strong>
+              <strong className="text-foreground">90-day ATO timeline</strong> • <strong className="text-foreground">100% authorization success rate</strong> • <strong className="text-foreground">Zero operational disruption</strong>
             </p>
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:opacity-90">
               <Link href="/contact">
