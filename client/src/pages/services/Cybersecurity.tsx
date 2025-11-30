@@ -3,87 +3,97 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Shield, FileSearch, Lock, Eye, AlertTriangle, Network } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Shield, FileSearch, Lock, Eye, Network, Users, Award, Target } from 'lucide-react';
 
 export default function Cybersecurity() {
-  const subServices = [
+  // Primary service offerings (4 core capabilities)
+  const primaryServices = [
     {
       icon: FileSearch,
-      title: 'Security Assessment & Compliance',
-      description: 'Comprehensive security assessments and compliance audits for FedRAMP, CMMC, NIST 800-53/171, and ISO 27001 with gap analysis and remediation roadmaps.',
-      benefits: ['FedRAMP assessment support', 'CMMC Level 1-3 certification', 'NIST 800-53/171 compliance', 'Continuous compliance monitoring'],
+      title: 'CMMC & FedRAMP Compliance Implementation',
+      description: 'We help agencies and contractors achieve CMMC Level 2/3 certification and FedRAMP authorization through gap assessments, security control implementation, and ATO support.',
+      benefits: ['CMMC gap assessment', 'Security controls implementation', 'ATO package preparation'],
       link: '/services/security-assessment'
     },
     {
-      icon: AlertTriangle,
-      title: 'Penetration Testing & Vulnerability Management',
-      description: 'Offensive security testing and continuous vulnerability scanning to identify and remediate security weaknesses before adversaries exploit them.',
-      benefits: ['Annual penetration testing', 'Continuous vulnerability scanning', 'Exploit validation', 'Prioritized remediation'],
-      link: '/services/penetration-testing'
+      icon: Network,
+      title: 'Zero Trust Architecture Implementation',
+      description: 'Deploy NIST 800-207 Zero Trust frameworks using FedRAMP-authorized security platforms with micro-segmentation, continuous verification, and identity-centric controls.',
+      benefits: ['NIST 800-207 implementation', 'Micro-segmentation design', 'Identity-centric security'],
+      link: '/services/zero-trust-architecture'
+    },
+    {
+      icon: Eye,
+      title: 'Security Operations Center (SOC) Setup',
+      description: 'Implement 24/7 security monitoring using FedRAMP SIEM/SOAR platforms (Splunk Gov, LogRhythm, Palo Alto Cortex) with automated threat detection and response.',
+      benefits: ['24/7 threat monitoring', 'SIEM/SOAR deployment', 'Automated incident response'],
+      link: '/services/security-operations-center'
     },
     {
       icon: Lock,
       title: 'Identity & Access Management (IAM)',
-      description: 'Zero Trust identity solutions with multi-factor authentication, privileged access management, and identity governance for federal environments.',
-      benefits: ['Zero Trust implementation', 'MFA/PIV integration', 'Privileged access management', 'Identity governance'],
+      description: 'Deploy Zero Trust identity solutions using FedRAMP IAM platforms with PIV/CAC integration, privileged access management, and identity governance.',
+      benefits: ['PIV/CAC integration', 'Privileged access management', 'Identity governance frameworks'],
       link: '/services/identity-access-management'
-    },
-    {
-      icon: Eye,
-      title: 'Security Operations Center (SOC)',
-      description: '24/7 security monitoring and threat detection with SIEM, automated response, and expert security analysts protecting your critical assets.',
-      benefits: ['24/7 threat monitoring', 'SIEM/SOAR integration', 'Automated incident response', 'Threat intelligence'],
-      link: '/services/security-operations-center'
-    },
+    }
+  ];
+
+  // Additional capabilities (compact format)
+  const additionalCapabilities = [
+    { name: 'Penetration Testing & Red Team Exercises', description: 'Offensive security testing to identify vulnerabilities before adversaries' },
+    { name: 'Incident Response & Digital Forensics', description: 'Rapid breach containment and forensic analysis with <1 hour response time' },
+    { name: 'Vulnerability Management Programs', description: 'Continuous scanning and remediation tracking for FISMA compliance' },
+    { name: 'Security Awareness Training', description: 'Role-based security training for federal employees and contractors' }
+  ];
+
+  const keyDifferentiators = [
     {
       icon: Shield,
-      title: 'Incident Response & Forensics',
-      description: 'Rapid incident response and digital forensics services to contain breaches, investigate root causes, and restore operations with minimal impact.',
-      benefits: ['< 1 hour response time', 'Digital forensics analysis', 'Breach containment', 'Recovery planning'],
-      link: '/services/incident-response'
+      title: 'FedRAMP Security Platform Expertise',
+      description: 'Deep implementation experience with 40+ FedRAMP-authorized security tools including SIEM, EDR, IAM, and vulnerability management platforms.'
     },
     {
-      icon: Network,
-      title: 'Zero Trust Architecture',
-      description: 'Modern security framework implementation with micro-segmentation, continuous verification, and least-privilege access controls for federal networks.',
-      benefits: ['Micro-segmentation', 'Continuous verification', 'Least-privilege access', 'Policy-based controls'],
-      link: '/services/zero-trust-architecture'
+      icon: Users,
+      title: 'Cleared Security Professionals',
+      description: 'Team holds Secret and TS/SCI clearances with CISSP, CISM, and CEH certifications for sensitive government environments.'
+    },
+    {
+      icon: Award,
+      title: 'CMMC & ATO Success Record',
+      description: 'Proven track record achieving CMMC Level 2/3 certifications and FedRAMP ATOs with 100% success rate across 25+ agencies.'
     }
   ];
 
-  const certifications = [
-    { name: 'FedRAMP Authorized', level: 'Moderate & High' },
-    { name: 'CMMC Level 3', level: 'Expert' },
-    { name: 'ISO 27001:2022', level: 'Certified' },
-    { name: 'NIST Framework', level: 'Compliant' },
-    { name: 'SOC 2 Type II', level: 'Audited' },
-    { name: 'FISMA ATO', level: 'Authorized' },
-    { name: 'HIPAA BAA', level: 'Compliant' },
-    { name: 'TS/SCI Cleared', level: 'Verified' }
+  const complianceFrameworks = [
+    { framework: 'CMMC Level 2/3', controls: '110-130 controls', timeline: '6-12 months' },
+    { framework: 'FedRAMP Moderate/High', controls: '325-421 controls', timeline: '12-18 months' },
+    { framework: 'NIST 800-53 Rev 5', controls: '320+ controls', timeline: '9-15 months' },
+    { framework: 'NIST 800-171', controls: '110 controls', timeline: '6-9 months' }
   ];
 
-  const threatResponse = [
-    { metric: '<15min', label: 'Threat Detection' },
-    { metric: '24/7', label: 'SOC Monitoring' },
-    { metric: '99.9%', label: 'Threat Prevention' },
-    { metric: '<1hr', label: 'Incident Response' }
-  ];
-
-  const caseStudies = [
+  const fedrampSecurityPlatforms = [
     {
-      title: 'Federal Agency Achieves Zero Security Incidents',
-      description: 'Implemented comprehensive zero-trust architecture with continuous monitoring, achieving zero security incidents over 3 years while maintaining FedRAMP High authorization.',
-      metric: '0',
-      metricLabel: 'Security Incidents',
-      industry: 'Federal Government'
+      category: 'SIEM & Security Analytics',
+      platforms: ['Splunk Government', 'LogRhythm Government', 'Palo Alto Cortex', 'IBM QRadar Gov']
     },
     {
-      title: 'Defense Contractor Achieves CMMC Level 3',
-      description: 'Guided defense contractor through CMMC Level 3 certification process, implementing 130+ security controls and achieving certification in 6 months.',
-      metric: '6 Mo',
-      metricLabel: 'Certification Timeline',
-      industry: 'Defense'
+      category: 'Endpoint Detection & Response (EDR)',
+      platforms: ['CrowdStrike Government', 'SentinelOne Government', 'Microsoft Defender Gov', 'Trellix Gov']
+    },
+    {
+      category: 'Identity & Access Management',
+      platforms: ['Okta Government', 'Ping Identity Gov', 'Azure AD Government', 'CyberArk Government']
+    },
+    {
+      category: 'Vulnerability Management',
+      platforms: ['Tenable.sc Government', 'Qualys Government', 'Rapid7 Government', 'Nessus Professional']
     }
+  ];
+
+  const governmentExperience = [
+    { agency: 'Defense Contractors', project: 'CMMC Level 3 Certification', outcome: '15 contractors certified' },
+    { agency: 'Federal Civilian Agencies', project: 'FedRAMP ATO Support', outcome: '8 ATOs achieved' },
+    { agency: 'Intelligence Community', project: 'Zero Trust Implementation', outcome: 'TS/SCI environments secured' }
   ];
 
   return (
@@ -95,53 +105,58 @@ export default function Cybersecurity() {
         <div className="container">
           <div className="max-w-4xl">
             <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Core Service
+              Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Cybersecurity & Compliance
+              Federal Cybersecurity & Compliance Services
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              FedRAMP, CMMC, and NIST compliance solutions with zero-trust architecture, 24/7 security operations, and continuous monitoring. NexDyne delivers government-grade cybersecurity that protects mission-critical assets against evolving threats.
+              We help government agencies and defense contractors implement FedRAMP-authorized security platforms, achieve CMMC certification, and deploy Zero Trust architectures. Vendor-neutral consulting with cleared security professionals and proven ATO success.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Security Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Download Compliance Matrix
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                  Request Security Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/resources">
+                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                  Download CMMC Checklist
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Threat Response Metrics */}
-      <section className="py-16 bg-secondary">
+      {/* Key Differentiators */}
+      <section className="py-16 bg-background">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {threatResponse.map((item, index) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {keyDifferentiators.map((item, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-accent mb-2">{item.metric}</div>
-                <div className="text-sm text-muted-foreground">{item.label}</div>
+                <item.icon className="h-12 w-12 text-accent mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Cybersecurity Specializations */}
+      {/* Primary Security Services */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive Cybersecurity Services</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Cybersecurity Implementation Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end security capabilities from assessment to operations, designed for federal agencies and defense contractors with the most demanding security requirements.
+              End-to-end security capabilities from compliance assessment to Zero Trust deployment, designed for government agencies and defense contractors.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {subServices.map((service, index) => (
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {primaryServices.map((service, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
                 <CardContent className="p-8">
                   <service.icon className="h-16 w-16 text-accent mb-6" />
@@ -158,7 +173,7 @@ export default function Cybersecurity() {
                   </ul>
 
                   <Link href={service.link}>
-                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all">
+                    <Button variant="outline" className="w-full border-2 border-dashed border-primary/30 hover:border-accent hover:bg-accent/5">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -167,30 +182,43 @@ export default function Cybersecurity() {
               </Card>
             ))}
           </div>
+
+          {/* Additional Capabilities - Compact Format */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-8 text-center">Additional Security Capabilities</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {additionalCapabilities.map((capability, index) => (
+                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
+                  <CheckCircle2 className="h-6 w-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold mb-1">{capability.name}</h4>
+                    <p className="text-sm text-muted-foreground">{capability.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Security Certifications */}
-      <section className="py-20">
+      {/* Compliance Framework Expertise */}
+      <section className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Security Certifications & Authorizations</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Government Compliance Framework Expertise</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Certified and authorized across the most demanding federal security and compliance frameworks.
+              Deep expertise implementing security controls across all major federal compliance frameworks with proven ATO success.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {certifications.map((cert, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-center mb-4">
-                    <div className="h-16 w-16 bg-accent/20 rounded-full flex items-center justify-center">
-                      <Shield className="h-8 w-8 text-accent" />
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold mb-1 text-center">{cert.name}</h3>
-                  <div className="text-sm text-accent text-center">{cert.level}</div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {complianceFrameworks.map((framework, index) => (
+              <Card key={index} className="border-2">
+                <CardContent className="p-6 text-center">
+                  <Shield className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <h3 className="text-lg font-bold mb-2">{framework.framework}</h3>
+                  <p className="text-sm text-muted-foreground mb-1">{framework.controls}</p>
+                  <p className="text-xs text-accent font-semibold">{framework.timeline}</p>
                 </CardContent>
               </Card>
             ))}
@@ -198,87 +226,100 @@ export default function Cybersecurity() {
         </div>
       </section>
 
-      {/* Defense-in-Depth Framework */}
+      {/* Government Security Experience */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Defense-in-Depth Security Framework</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Government Security Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Multi-layered security approach that protects against evolving threats at every level.
+              Proven track record implementing security platforms and achieving compliance certifications across federal agencies and defense contractors.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-4 max-w-6xl mx-auto">
-            {[
-              { layer: 'Perimeter', desc: 'Firewall & IDS/IPS' },
-              { layer: 'Network', desc: 'Segmentation & Monitoring' },
-              { layer: 'Application', desc: 'WAF & Code Security' },
-              { layer: 'Data', desc: 'Encryption & DLP' },
-              { layer: 'Identity', desc: 'MFA & Zero-Trust' }
-            ].map((layer, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-shadow border-2">
-                <CardContent className="p-6">
-                  <div className="text-3xl font-bold text-accent mb-2">{index + 1}</div>
-                  <h3 className="text-lg font-bold mb-1">{layer.layer}</h3>
-                  <p className="text-xs text-muted-foreground">{layer.desc}</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {governmentExperience.map((exp, index) => (
+              <Card key={index} className="border-2">
+                <CardContent className="p-8">
+                  <Target className="h-12 w-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
+                  <p className="text-lg font-bold text-accent">{exp.outcome}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <Link href="/case-studies">
+              <Button variant="outline" size="lg">
+                View Security Case Studies
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-20">
+      {/* FedRAMP Security Platform Expertise */}
+      <section className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Proven Security Results</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Security Platform Expertise</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real-world success stories demonstrating NexDyne's cybersecurity expertise across federal agencies and defense contractors.
+              We implement and integrate FedRAMP-authorized security platforms from leading vendors, helping you build defense-in-depth architectures.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {caseStudies.map((study, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-shadow">
-                <CardContent className="p-0">
-                  <div className="bg-primary text-primary-foreground p-8">
-                    <div className="text-sm font-semibold text-accent mb-2">{study.industry}</div>
-                    <h3 className="text-2xl font-bold mb-4">{study.title}</h3>
-                    <p className="text-primary-foreground/90 mb-6">{study.description}</p>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="text-4xl font-bold text-accent">{study.metric}</div>
-                        <div className="text-sm text-primary-foreground/80">{study.metricLabel}</div>
-                      </div>
-                      <Button className="bg-orange-gradient hover:opacity-90">
-                        Read Case Study
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {fedrampSecurityPlatforms.map((category, index) => (
+              <Card key={index} className="border-2">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-bold mb-4">{category.category}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {category.platforms.map((platform, idx) => (
+                      <span key={idx} className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full font-semibold">
+                        {platform}
+                      </span>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-6">
+              Plus 30+ additional FedRAMP-authorized security platforms including firewalls, DLP, CASB, and threat intelligence tools.
+            </p>
+            <Link href="/partners">
+              <Button variant="outline" size="lg">
+                View All Security Platforms
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Protect Your Mission-Critical Assets</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Achieve CMMC or FedRAMP Compliance?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a comprehensive security assessment and discover how NexDyne can strengthen your cybersecurity posture with FedRAMP-authorized solutions.
+            Schedule a security assessment to discuss your compliance requirements, evaluate FedRAMP security platforms, and develop a roadmap for certification success.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Schedule Security Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              View Security Case Studies
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Request Security Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="/resources">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                Download CMMC Checklist
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

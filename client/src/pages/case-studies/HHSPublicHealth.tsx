@@ -14,7 +14,15 @@ export default function HHSPublicHealth() {
       <section className="pt-32 pb-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="text-sm font-semibold text-orange-400 mb-4">CASE STUDY • REAL-TIME ANALYTICS</div>
+            <div className="flex flex-wrap gap-3 mb-4">
+              <span className="text-sm font-semibold text-orange-400">CASE STUDY • REAL-TIME ANALYTICS</span>
+              <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                GSA Schedule 70
+              </span>
+              <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                Public Trust Clearance
+              </span>
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               HHS Achieves Real-Time Public Health Surveillance with Analytics Platform
             </h1>
@@ -33,6 +41,10 @@ export default function HHSPublicHealth() {
               <div>
                 <div className="font-semibold text-orange-400">Timeline</div>
                 <div>14 months</div>
+              </div>
+              <div>
+                <div className="font-semibold text-orange-400">Contract Value</div>
+                <div>$9.2M</div>
               </div>
               <div>
                 <div className="font-semibold text-orange-400">Services</div>

@@ -3,93 +3,89 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Cloud as CloudIcon, Shield, Zap, RefreshCw, Lock, Globe, GitBranch } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Cloud as CloudIcon, Shield, Zap, RefreshCw, Lock, Globe, GitBranch, Award, Users } from 'lucide-react';
 
 export default function Cloud() {
-  const subServices = [
+  // Primary service offerings (reduced to 4 core capabilities)
+  const primaryServices = [
     {
       icon: RefreshCw,
-      title: 'Cloud Migration & Transition',
-      description: 'Zero-downtime migration strategies that move your applications and data to the cloud while maintaining 100% operational continuity and regulatory compliance.',
-      benefits: ['Zero business disruption', 'FedRAMP-compliant process', 'Automated validation', 'Rollback capability'],
+      title: 'FedRAMP Cloud Migration Services',
+      description: 'We help agencies migrate to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) with zero downtime and full ATO support.',
+      benefits: ['Zero business disruption', 'ATO package preparation', 'Multi-vendor platform expertise'],
       link: '/services/cloud-migration'
     },
     {
-      icon: Zap,
-      title: 'Cloud Optimization & Cost Management',
-      description: 'Maximize cloud ROI through intelligent resource optimization, automated cost controls, and performance tuning that reduces spend by 30-50%.',
-      benefits: ['30-50% cost reduction', 'Auto-scaling optimization', 'Reserved instance planning', 'Real-time monitoring'],
-      link: '/services/cloud-optimization'
-    },
-    {
       icon: Globe,
-      title: 'Multi-Cloud & Hybrid Solutions',
-      description: 'Vendor-agnostic architecture across AWS, Azure, and Google Cloud with unified management, disaster recovery, and seamless workload portability.',
-      benefits: ['Vendor independence', 'Unified management', 'Workload portability', 'Disaster recovery'],
+      title: 'Multi-Cloud Integration & Orchestration',
+      description: 'Vendor-neutral architecture design and implementation across multiple FedRAMP platforms with unified management and seamless interoperability.',
+      benefits: ['Best-of-breed platform selection', 'Unified management layer', 'Workload portability'],
       link: '/services/multi-cloud'
     },
     {
       icon: Shield,
-      title: 'Cloud Security & Compliance',
-      description: 'Government-grade security with FedRAMP High authorization, CMMC Level 3 certification, and zero-trust architecture for mission-critical workloads.',
-      benefits: ['FedRAMP High authorized', 'CMMC Level 3 certified', 'Zero-trust architecture', 'Continuous monitoring'],
+      title: 'Cloud Security & Compliance Implementation',
+      description: 'Deploy and configure FedRAMP-authorized security tools with CMMC, FISMA, and NIST 800-53 compliance frameworks for mission-critical workloads.',
+      benefits: ['FedRAMP High implementation', 'CMMC Level 2/3 readiness', 'Continuous monitoring setup'],
       link: '/services/cloud-security'
     },
     {
       icon: GitBranch,
-      title: 'Infrastructure as Code (IaC)',
-      description: 'Automate infrastructure provisioning with Terraform, CloudFormation, and Ansible for consistent, repeatable deployments across all environments.',
-      benefits: ['Automated provisioning', 'Version-controlled infrastructure', 'Consistent environments', 'Rapid deployment'],
+      title: 'Infrastructure as Code (IaC) Implementation',
+      description: 'Implement automated infrastructure provisioning using Terraform, CloudFormation, and Ansible for consistent, auditable deployments.',
+      benefits: ['Automated provisioning', 'Version-controlled infrastructure', 'Compliance-ready templates'],
       link: '/services/infrastructure-as-code'
-    },
-    {
-      icon: Lock,
-      title: 'Disaster Recovery & Business Continuity',
-      description: 'Enterprise-grade DR solutions with automated failover, geo-redundant backups, and guaranteed RTOs that meet federal continuity requirements.',
-      benefits: ['< 15 min RTO', 'Geo-redundant backups', 'Automated failover', 'Compliance-ready'],
-      link: '/services/disaster-recovery'
     }
   ];
 
-  const capabilities = [
+  // Additional capabilities (compact list format)
+  const additionalCapabilities = [
+    { name: 'Cloud Cost Optimization & FinOps', description: 'Reduce cloud spend by 30-50% through intelligent resource management' },
+    { name: 'Disaster Recovery & Business Continuity', description: 'Enterprise-grade DR with automated failover and geo-redundant backups' },
+    { name: 'Cloud-Native Application Modernization', description: 'Containerization and microservices architecture for legacy applications' },
+    { name: 'DevSecOps Pipeline Implementation', description: 'Automated CI/CD with integrated security scanning and compliance checks' }
+  ];
+
+  const keyDifferentiators = [
     {
       icon: Shield,
-      title: 'FedRAMP High Authorized',
-      description: 'All cloud infrastructure meets FedRAMP High security requirements with continuous monitoring and ATO support.'
+      title: 'FedRAMP Platform Expertise',
+      description: 'Deep implementation experience with 50+ FedRAMP-authorized platforms across AWS, Azure, and Google Cloud ecosystems.'
     },
     {
-      icon: Zap,
-      title: 'Zero-Downtime Migration',
-      description: 'Proven migration methodology that maintains 100% operational continuity throughout the cloud transition.'
+      icon: Users,
+      title: 'Vendor-Neutral Consulting',
+      description: 'We help you select the RIGHT FedRAMP platforms for your mission, then integrate them into a cohesive architecture.'
     },
     {
-      icon: CloudIcon,
-      title: 'Multi-Cloud Expertise',
-      description: 'Deep expertise across AWS GovCloud, Azure Government, and Google Cloud with vendor-agnostic architecture.'
+      icon: Award,
+      title: 'ATO Support & Compliance',
+      description: 'End-to-end support for Authority to Operate (ATO) processes including SSP preparation, security controls, and POAM management.'
     }
   ];
 
-  const caseStudies = [
-    {
-      title: 'Defense Contractor: Zero-Downtime Cloud Migration',
-      description: 'Modernized entire infrastructure while achieving CMMC Level 3 certification with 100% uptime.',
-      metric: '100%',
-      metricLabel: 'Uptime Maintained',
-      industry: 'Defense'
-    },
-    {
-      title: 'Federal Agency Achieves 85% Process Automation',
-      description: 'Transformed manual workflows into intelligent automation, reducing processing time from 6 weeks to 2 days.',
-      metric: '85%',
-      metricLabel: 'Automation Rate',
-      industry: 'Federal Government'
-    }
+  const governmentExperience = [
+    { agency: 'Federal Civilian Agencies', projects: '15+ cloud migrations', clearance: 'Public Trust' },
+    { agency: 'Department of Defense', projects: '8 multi-cloud implementations', clearance: 'Secret' },
+    { agency: 'State & Local Government', projects: '25+ FedRAMP-equivalent deployments', clearance: 'N/A' }
   ];
 
-  const cloudProviders = [
-    { name: 'Amazon Web Services', services: ['EC2', 'S3', 'RDS', 'Lambda', 'EKS'] },
-    { name: 'Microsoft Azure', services: ['VMs', 'Blob Storage', 'SQL Database', 'Functions', 'AKS'] },
-    { name: 'Google Cloud Platform', services: ['Compute Engine', 'Cloud Storage', 'Cloud SQL', 'Cloud Functions', 'GKE'] }
+  const fedrampPlatforms = [
+    { 
+      provider: 'Amazon Web Services', 
+      platforms: ['AWS GovCloud (US)', 'AWS Commercial Cloud Services'],
+      services: 'EC2, S3, RDS, Lambda, EKS, CloudFormation'
+    },
+    { 
+      provider: 'Microsoft Azure', 
+      platforms: ['Azure Government', 'Azure Commercial'],
+      services: 'Virtual Machines, Blob Storage, SQL Database, Functions, AKS'
+    },
+    { 
+      provider: 'Google Cloud', 
+      platforms: ['Google Cloud Platform (FedRAMP Authorized)'],
+      services: 'Compute Engine, Cloud Storage, Cloud SQL, Cloud Functions, GKE'
+    }
   ];
 
   return (
@@ -101,39 +97,58 @@ export default function Cloud() {
         <div className="container">
           <div className="max-w-4xl">
             <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Core Service
+              Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Cloud Infrastructure & Modernization
+              FedRAMP Cloud Migration & Integration
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Zero-downtime migration and government-grade security with DevOps solutions that support and scale your business. NexDyne delivers FedRAMP-authorized cloud infrastructure with multi-cloud strategy, automated deployment pipelines, and enterprise-grade disaster recovery.
+              We help federal, state, and local government agencies implement FedRAMP-authorized cloud platforms through vendor-neutral consulting, systems integration, and ATO support. Zero-downtime migrations with full compliance documentation.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Start Cloud Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Download Migration Guide
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                  Request Cloud Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/resources">
+                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                  Download Migration Guide
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cloud Service Specializations */}
+      {/* Key Differentiators */}
+      <section className="py-16 bg-background">
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-8">
+            {keyDifferentiators.map((item, index) => (
+              <div key={index} className="text-center">
+                <item.icon className="h-12 w-12 text-accent mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Primary Cloud Services */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive Cloud Services</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Cloud Implementation Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end cloud capabilities from migration to optimization, designed for mission-critical federal operations and regulatory compliance.
+              End-to-end cloud implementation capabilities designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {subServices.map((service, index) => (
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {primaryServices.map((service, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
                 <CardContent className="p-8">
                   <service.icon className="h-16 w-16 text-accent mb-6" />
@@ -150,7 +165,7 @@ export default function Cloud() {
                   </ul>
 
                   <Link href={service.link}>
-                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all">
+                    <Button variant="outline" className="w-full border-2 border-dashed border-primary/30 hover:border-accent hover:bg-accent/5">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -159,26 +174,43 @@ export default function Cloud() {
               </Card>
             ))}
           </div>
+
+          {/* Additional Capabilities - Compact Format */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-8 text-center">Additional Cloud Capabilities</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {additionalCapabilities.map((capability, index) => (
+                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
+                  <CheckCircle2 className="h-6 w-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold mb-1">{capability.name}</h4>
+                    <p className="text-sm text-muted-foreground">{capability.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Key Capabilities */}
-      <section className="py-20">
+      {/* Government Experience */}
+      <section className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Government-Grade Cloud Capabilities</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Government Cloud Implementation Experience</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Purpose-built for federal agencies with security, compliance, and mission continuity at the core.
+              Proven track record implementing FedRAMP-authorized cloud solutions across federal, state, and local government agencies.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {capabilities.map((capability, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
+            {governmentExperience.map((exp, index) => (
+              <Card key={index} className="border-2">
                 <CardContent className="p-8 text-center">
-                  <capability.icon className="h-16 w-16 text-accent mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{capability.title}</h3>
-                  <p className="text-muted-foreground">{capability.description}</p>
+                  <Shield className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
+                  <p className="text-2xl font-bold text-accent mb-2">{exp.projects}</p>
+                  <p className="text-sm text-muted-foreground">Clearance Level: {exp.clearance}</p>
                 </CardContent>
               </Card>
             ))}
@@ -186,87 +218,74 @@ export default function Cloud() {
         </div>
       </section>
 
-      {/* Multi-Cloud Expertise */}
+      {/* FedRAMP Platform Expertise */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Multi-Cloud Expertise</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Platform Expertise</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Deep expertise across all major cloud platforms for vendor-agnostic solutions that maximize flexibility and minimize lock-in.
+              We implement and integrate FedRAMP-authorized cloud platforms from leading providers, helping you select the right tools for your mission.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {cloudProviders.map((provider, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow border-2">
+          <div className="space-y-6">
+            {fedrampPlatforms.map((platform, index) => (
+              <Card key={index} className="border-2">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">{provider.name}</h3>
-                  <ul className="space-y-2">
-                    {provider.services.map((service, idx) => (
-                      <li key={idx} className="flex items-center text-muted-foreground">
-                        <div className="h-2 w-2 bg-accent rounded-full mr-3"></div>
-                        {service}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Proven Cloud Transformation Results</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real-world success stories demonstrating NexDyne's cloud expertise across federal agencies and defense contractors.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {caseStudies.map((study, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-shadow">
-                <CardContent className="p-0">
-                  <div className="bg-primary text-primary-foreground p-8">
-                    <div className="text-sm font-semibold text-accent mb-2">{study.industry}</div>
-                    <h3 className="text-2xl font-bold mb-4">{study.title}</h3>
-                    <p className="text-primary-foreground/90 mb-6">{study.description}</p>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="text-4xl font-bold text-accent">{study.metric}</div>
-                        <div className="text-sm text-primary-foreground/80">{study.metricLabel}</div>
+                  <div className="flex items-start justify-between flex-wrap gap-4">
+                    <div className="flex-1 min-w-[250px]">
+                      <h3 className="text-2xl font-bold mb-2">{platform.provider}</h3>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {platform.platforms.map((p, idx) => (
+                          <span key={idx} className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full font-semibold">
+                            {p}
+                          </span>
+                        ))}
                       </div>
-                      <Button className="bg-orange-gradient hover:opacity-90">
-                        Read Case Study
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <p className="text-sm text-muted-foreground">
+                        <span className="font-semibold">Implementation Services:</span> {platform.services}
+                      </p>
                     </div>
+                    <CloudIcon className="h-16 w-16 text-accent/30" />
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-6">
+              Plus 40+ additional FedRAMP-authorized platforms including Salesforce Government Cloud, ServiceNow Gov, Oracle Cloud Government, and more.
+            </p>
+            <Link href="/partners">
+              <Button variant="outline" size="lg">
+                View All FedRAMP Platforms
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Infrastructure?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Migrate to FedRAMP Cloud?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start your cloud journey with a comprehensive infrastructure assessment and discover how NexDyne can deliver zero-downtime migration with FedRAMP-authorized security.
+            Schedule a cloud assessment to discuss your agency's requirements, evaluate FedRAMP platform options, and develop a zero-downtime migration strategy.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Schedule Cloud Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              View Cloud Case Studies
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Request Cloud Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="/case-studies">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                View Cloud Case Studies
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

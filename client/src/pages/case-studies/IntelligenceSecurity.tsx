@@ -14,8 +14,16 @@ export default function IntelligenceSecurity() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Intelligence Community Case Study
+            <div className="flex flex-wrap gap-3 mb-6">
+              <span className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold">
+                Intelligence Community Case Study
+              </span>
+              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+                IDIQ Contract
+              </span>
+              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+                TS/SCI Clearance
+              </span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Intelligence Agency: Secure Collaboration Platform
@@ -62,6 +70,20 @@ export default function IntelligenceSecurity() {
             <p className="text-lg text-muted-foreground mb-6">
               NexDyne designed and deployed a cross-domain collaboration platform with attribute-based access control, automated classification, and continuous monitoring, enabling secure information sharing across 5,000+ cleared personnel while maintaining zero security incidents over 3+ years of operation.
             </p>
+            <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
+              <div>
+                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Type</h3>
+                <p className="text-lg font-bold">IDIQ Task Order</p>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Value</h3>
+                <p className="text-lg font-bold">$22.3M (36 months)</p>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Security Clearance</h3>
+                <p className="text-lg font-bold">TS/SCI with Poly</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

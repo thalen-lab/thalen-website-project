@@ -14,7 +14,15 @@ export default function DODDataPipelines() {
       <section className="pt-32 pb-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="text-sm font-semibold text-orange-400 mb-4">CASE STUDY • DATA ENGINEERING</div>
+            <div className="flex flex-wrap gap-3 mb-4">
+              <span className="text-sm font-semibold text-orange-400">CASE STUDY • DATA ENGINEERING</span>
+              <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                IDIQ Contract
+              </span>
+              <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                Secret Clearance
+              </span>
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               DOD Saves $12M Annually with Automated Data Pipelines
             </h1>
@@ -33,6 +41,10 @@ export default function DODDataPipelines() {
               <div>
                 <div className="font-semibold text-orange-400">Timeline</div>
                 <div>24 months</div>
+              </div>
+              <div>
+                <div className="font-semibold text-orange-400">Contract Value</div>
+                <div>$18.5M</div>
               </div>
               <div>
                 <div className="font-semibold text-orange-400">Services</div>

@@ -21,6 +21,7 @@ import Insights from "./pages/Insights";
 import Methodology from "./pages/Methodology";
 import ServiceComparison from "./pages/ServiceComparison";
 import PackageBuilder from "./pages/PackageBuilder";
+import FederalSolutions from "./pages/FederalSolutions";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -144,6 +145,7 @@ function Router() {
       <Route path={"/methodology"} component={Methodology} />
       <Route path={"/compare-services"} component={ServiceComparison} />
       <Route path={"/package-builder"} component={PackageBuilder} />
+      <Route path={"/federal-solutions"} component={FederalSolutions} />
       
       {/* Service Routes */}
       <Route path={"/services/automation"} component={AutomationService} />

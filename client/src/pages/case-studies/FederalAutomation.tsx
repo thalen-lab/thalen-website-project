@@ -14,8 +14,16 @@ export default function FederalAutomation() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Federal Government Case Study
+            <div className="flex flex-wrap gap-3 mb-6">
+              <span className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold">
+                Federal Government Case Study
+              </span>
+              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+                GSA Schedule 70 Contract
+              </span>
+              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+                TS/SCI Clearance Required
+              </span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Federal Agency Achieves 85% Process Automation
@@ -39,7 +47,7 @@ export default function FederalAutomation() {
               { value: '85%', label: 'Automation Rate', icon: TrendingUp },
               { value: '6 weeks → 2 days', label: 'Processing Time', icon: Clock },
               { value: '$8.2M', label: 'Annual Savings', icon: TrendingUp },
-              { value: '250+', label: 'Users Trained', icon: Users }
+              { value: '6 months', label: 'ATO Timeline', icon: Clock }
             ].map((metric, index) => (
               <div key={index} className="text-center">
                 <metric.icon className="h-8 w-8 text-accent mx-auto mb-3" />
@@ -62,6 +70,20 @@ export default function FederalAutomation() {
             <p className="text-lg text-muted-foreground mb-6">
               NexDyne was selected through a competitive procurement process to design and implement an intelligent automation solution that would maintain the agency's strict Top Secret/SCI security requirements while dramatically improving operational efficiency.
             </p>
+            <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
+              <div>
+                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Type</h3>
+                <p className="text-lg font-bold">GSA Schedule 70 Task Order</p>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Value</h3>
+                <p className="text-lg font-bold">$4.2M (18 months)</p>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Clearance Level</h3>
+                <p className="text-lg font-bold">Top Secret/SCI</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
