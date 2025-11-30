@@ -34,13 +34,13 @@ export default function Home() {
   const heroSlides = [
     {
       image: '/images/hero-datacenter.jpg',
-      title: 'Implementing FedRAMP Solutions for Government',
-      subtitle: 'Vendor-neutral consulting and systems integration for federal, state, and local agencies'
+      title: 'Implementing FedRAMP & StateRAMP Solutions',
+      subtitle: 'Vendor-neutral consulting and systems integration for federal, state, and local government agencies'
     },
     {
       image: '/images/hero-automation.jpg',
       title: 'Government IT Implementation Excellence',
-      subtitle: 'Deploy and optimize FedRAMP-authorized platforms with proven compliance expertise'
+      subtitle: 'Deploy and optimize FedRAMP and StateRAMP-authorized platforms with proven compliance expertise'
     },
     {
       image: '/images/hero-federal.jpg',
@@ -124,9 +124,9 @@ export default function Home() {
 
   const certifications = [
     {
-      name: 'FedRAMP Implementation Expert',
+      name: 'FedRAMP & StateRAMP Expert',
       icon: Shield,
-      description: 'Deep expertise implementing FedRAMP-authorized platforms for federal agencies at Moderate and High impact levels with proven ATO support.'
+      description: 'Deep expertise implementing FedRAMP and StateRAMP-authorized platforms for federal, state, and local agencies at Moderate and High impact levels with proven ATO support.'
     },
     {
       name: 'CMMC Compliance Partner',
@@ -154,9 +154,9 @@ export default function Home() {
       description: 'Proven track record supporting agencies through FISMA Authority to Operate (ATO) processes with security documentation and compliance assessments.'
     },
     {
-      name: 'Multi-Vendor Integration',
+      name: 'CJIS & State Compliance',
       icon: Heart,
-      description: 'Vendor-neutral consulting with expertise integrating 50+ FedRAMP-authorized platforms including Salesforce Gov, AWS GovCloud, and Azure Government.'
+      description: 'CJIS-compliant implementations for state and local law enforcement agencies, plus expertise with state-specific compliance frameworks and data sovereignty requirements.'
     },
     {
       name: 'Cleared Personnel Available',

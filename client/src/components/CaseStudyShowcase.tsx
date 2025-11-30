@@ -18,50 +18,50 @@ const caseStudies: CaseStudy[] = [
   {
     id: "federal-automation",
     title: "Federal Agency Achieves 85% Process Automation",
-    description: "Transformed manual workflows into intelligent automation, reducing processing time from 6 weeks to 2 days while maintaining government-grade security and compliance.",
+    description: "Implemented UiPath Gov RPA platform with comprehensive ATO documentation, reducing claims processing time from 6 weeks to 2 days while maintaining Top Secret/SCI compliance.",
     image: "/rocket-federal.webp",
     link: "/case-studies/federal-automation",
     category: "Federal Government"
   },
   {
-    id: "manufacturing-uptime",
-    title: "Manufacturing Giant Achieves 99.2% Uptime",
-    description: "Cybersecurity and predictive maintenance eliminated 75% of unplanned downtime across 50+ facilities, saving $18M annually through IoT sensors and AI-powered analytics.",
+    id: "dod-manufacturing",
+    title: "DoD Manufacturing Facility Achieves 99.2% Uptime",
+    description: "Deployed FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics for defense manufacturing operations, eliminating 75% of unplanned downtime across 50+ production lines.",
     image: "/manufacturing-security.jpg",
-    link: "/case-studies/manufacturing-uptime",
-    category: "Manufacturing"
+    link: "/case-studies/dod-manufacturing",
+    category: "Department of Defense"
   },
   {
-    id: "healthcare-ai",
-    title: "Healthcare System Integrates 12 Legacy Platforms",
-    description: "Unified patient data across disparate systems, reducing administrative burden by 60% and improving care coordination for 2M+ patients while ensuring HIPAA compliance.",
+    id: "va-healthcare",
+    title: "VA Medical Center Integrates 12 Legacy Systems",
+    description: "Unified patient data across 12 disparate VA healthcare systems with FedRAMP-authorized integration platforms, reducing administrative burden by 60% and improving care coordination for 500K+ veterans.",
     image: "/healthcare-legacy-it.jpg",
-    link: "/case-studies/healthcare-ai",
-    category: "Healthcare"
+    link: "/case-studies/va-healthcare",
+    category: "Veterans Affairs"
   },
   {
-    id: "bank-fraud",
-    title: "Financial Institution Detects $50M in Fraud",
-    description: "Real-time ML-powered fraud detection system processes 10M+ daily transactions, reducing false positives by 80% and preventing $50M in fraudulent activities annually.",
+    id: "state-law-enforcement",
+    title: "State Law Enforcement Detects $50M in Fraud",
+    description: "Implemented CJIS-compliant fraud detection system for state attorney general's office, processing 10M+ daily transactions with real-time ML analytics and preventing $50M in fraudulent activities annually.",
     image: "/financial-fraud-soc.a8f3d9e2.jpg",
-    link: "/case-studies/bank-fraud",
-    category: "Financial Services"
+    link: "/case-studies/state-law-enforcement",
+    category: "State Government"
   },
   {
     id: "defense-cloud",
-    title: "Defense Agency Migrates to Secure Cloud",
-    description: "Zero-downtime migration of mission-critical systems to FedRAMP High cloud infrastructure, achieving IL5 compliance while reducing infrastructure costs by 40%.",
+    title: "Defense Agency Migrates to IL5 Cloud",
+    description: "Zero-downtime migration of mission-critical intelligence systems to FedRAMP High cloud infrastructure, achieving Impact Level 5 compliance while reducing infrastructure costs by 40%.",
     image: "/defense-cyber-ops.b7c4e1f3.jpg",
     link: "/case-studies/defense-cloud",
-    category: "Federal Government"
+    category: "Intelligence Community"
   },
   {
-    id: "energy-grid",
-    title: "Energy Company Optimizes Grid Performance",
-    description: "Real-time analytics platform monitors 500+ substations, predicting equipment failures 30 days in advance and reducing outages by 65% across the distribution network.",
+    id: "state-energy",
+    title: "State Energy Commission Optimizes Grid Performance",
+    description: "Deployed StateRAMP-authorized analytics platform for state public utility commission, monitoring 500+ substations with predictive maintenance that reduced outages by 65% across the distribution network.",
     image: "/energy-grid-control.c9d5f2a4.jpg",
-    link: "/case-studies/energy-grid",
-    category: "Energy"
+    link: "/case-studies/state-energy",
+    category: "State Government"
   }
 ];
 
@@ -102,12 +102,12 @@ export default function CaseStudyShowcase() {
           <div>
             <p className="text-sm font-medium text-orange-600 mb-3">Case Studies</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
-              Proven Transformation Results
+              Proven Government Results
             </h2>
           </div>
           <div className="flex flex-col justify-end">
             <p className="text-lg text-slate-600 mb-6">
-              Real-world case studies demonstrating measurable ROI across mission-critical environments.
+              Real-world case studies demonstrating measurable mission impact across federal, state, and local government agencies.
             </p>
             <div className="flex items-center gap-4">
               <Link href="/case-studies">
