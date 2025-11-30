@@ -1125,3 +1125,41 @@
 - [x] Add past performance section
 - [x] Include capability statement highlights
 - [x] Add federal procurement process information
+
+## Phase 3: Government Buyer Enhancements (Federal + State/Local)
+
+### Capability Statement Generator
+- [x] Create interactive form with agency type selection (Federal/State/Local)
+- [x] Add compliance requirements checkboxes (FedRAMP, StateRAMP, CMMC, CJIS)
+- [x] Add service needs multi-select (Cloud, Cybersecurity, Data Analytics, Automation)
+- [x] Filter relevant past performance based on selections
+- [x] Filter relevant contract vehicles based on agency type)
+- [x] Generate customized PDF capability statement
+- [x] Include company overview, certifications, past performance, contract vehicles
+- [x] Add download and email functionality
+
+### Federal Solutions - Teaming Partners Section
+- [x] Add "Teaming & Subcontracting" section to Federal Solutions page
+- [x] Highlight small business partnerships (8(a), SDVOSB, WOSB, HUBZone)
+- [x] Explain teaming benefits for set-aside contracts
+- [x] Add past teaming success stories
+- [x] Include teaming partner capabilities matrix
+
+### Federal Solutions - State/Local Enhancements
+- [x] Add state/local contract vehicles section (NASPO, Sourcewell, OMNIA)
+- [x] Add StateRAMP and state-specific compliance information
+- [x] Expand state/local past performance (currently 25+ contracts, $18M+)
+- [x] Add cooperative purchasing information
+- [x] Create state/local specific case study highlights
+
+### Government Buyer Resources Hub
+- [x] Create new "Resources Hub" page for government buyers
+- [x] Add FedRAMP ATO Process Guide (step-by-step)
+- [x] Add CMMC Readiness Checklist (interactive)
+- [x] Add StateRAMP Compliance Guide
+- [x] Add CJIS Compliance Checklist
+- [x] Create ROI Calculator for cloud migration
+- [x] Create ROI Calculator for automation implementation
+- [x] Add procurement process guides (federal vs state/local)
+- [x] Add compliance framework comparison chart
+- [x] Add downloadable templates and checklists

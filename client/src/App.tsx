@@ -22,6 +22,8 @@ import Methodology from "./pages/Methodology";
 import ServiceComparison from "./pages/ServiceComparison";
 import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
+import CapabilityGenerator from "./pages/CapabilityGenerator";
+import GovernmentResources from "./pages/GovernmentResources";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -146,6 +148,8 @@ function Router() {
       <Route path={"/compare-services"} component={ServiceComparison} />
       <Route path={"/package-builder"} component={PackageBuilder} />
       <Route path={"/federal-solutions"} component={FederalSolutions} />
+      <Route path={"/capability-generator"} component={CapabilityGenerator} />
+      <Route path={"/government-resources"} component={GovernmentResources} />
       
       {/* Service Routes */}
       <Route path={"/services/automation"} component={AutomationService} />
