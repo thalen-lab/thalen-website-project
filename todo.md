@@ -1221,3 +1221,10 @@
 - [x] Add FedRAMP platform selection and implementation
 - [x] Include change management for government agencies
 - [x] Add TMF (Technology Modernization Fund) eligibility messaging
+
+## Phase 6: Update Homepage Service Cards
+
+- [x] Update Systems Integration service card on homepage
+- [x] Update Government IT Transformation service card on homepage
+- [x] Ensure all service card descriptions match repositioned service pages
+- [x] Verify service card links are correct

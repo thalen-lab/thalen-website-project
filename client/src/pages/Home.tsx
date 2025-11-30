@@ -76,14 +76,14 @@ export default function Home() {
     },
     {
       icon: Code,
-      title: 'Systems Integration Services',
-      description: 'Integrate multiple FedRAMP-authorized platforms, legacy systems, and agency-specific applications with secure APIs and data flows.',
-      href: '/services/application-development'
+      title: 'Government Systems Integration',
+      description: 'Connect 50+ FedRAMP platforms (Salesforce Gov Cloud, ServiceNow, Workday) with legacy systems using secure APIs, vendor-neutral architecture, and ATO-ready patterns.',
+      href: '/services/system-integration'
     },
     {
       icon: Users,
-      title: 'Government IT Transformation',
-      description: 'Guide agencies through modernization with vendor selection, implementation roadmaps, change management, and long-term optimization.',
+      title: 'Federal IT Modernization',
+      description: 'Vendor-neutral platform selection, legacy system modernization, change management, and Technology Modernization Fund (TMF) support for agencies.',
       href: '/services/digital-transformation'
     }
   ];
