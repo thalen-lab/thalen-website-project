@@ -3,24 +3,24 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Target, Users, TrendingUp, Lightbulb, Shield, Award, Globe, DollarSign } from 'lucide-react';
+import { ArrowRight, Target, Users, TrendingUp, Lightbulb, Shield, Award, Globe, DollarSign } from 'lucide-react';
 
 export default function DigitalTransformation() {
   // Primary service offerings (reduced to 4 core capabilities)
   const primaryServices = [
     {
       icon: Target,
-      title: 'FedRAMP Platform Selection & Strategy',
-      description: 'Vendor-neutral assessment and selection of optimal FedRAMP platforms for your mission needs, with multi-year implementation roadmaps and TCO analysis.',
-      benefits: ['50+ FedRAMP platform evaluations', 'Vendor-neutral recommendations', 'Multi-year strategic roadmap'],
+      title: 'FedRAMP & StateRAMP Platform Selection',
+      description: 'We help agencies select optimal FedRAMP and StateRAMP platforms for their mission needs through vendor-neutral assessment, multi-year implementation roadmaps, and TCO analysis.',
+      benefits: ['50+ FedRAMP/StateRAMP platform evaluations', 'Vendor-neutral recommendations', 'Multi-year strategic roadmap'],
       link: '/services/platform-selection'
     },
     {
       icon: Lightbulb,
       title: 'Legacy System Modernization',
-      description: 'Migrate from mainframe and legacy systems to modern FedRAMP cloud platforms with zero business disruption and comprehensive change management.',
+      description: 'We help agencies migrate from mainframe and legacy systems to modern FedRAMP and StateRAMP cloud platforms with zero business disruption and comprehensive change management.',
       benefits: ['Zero downtime migrations', 'Data integrity validation', 'User adoption programs'],
-      link: '/services/legacy-modernization'
+      link: '/services/legacy-modernization-dt'
     },
     {
       icon: Users,
@@ -50,7 +50,7 @@ export default function DigitalTransformation() {
     {
       icon: Globe,
       title: 'Vendor-Neutral Modernization',
-      description: 'We don\'t sell platforms—we help you select the RIGHT FedRAMP solutions for your mission, then implement them successfully. No vendor lock-in, no hidden agendas.'
+      description: 'We don\'t sell platforms—we help you select the RIGHT FedRAMP and StateRAMP solutions for your mission, then implement them successfully. No vendor lock-in, no hidden agendas.'
     },
     {
       icon: Users,
@@ -77,7 +77,7 @@ export default function DigitalTransformation() {
       deliverables: ['Current state architecture', 'Technical debt analysis', 'Modernization roadmap']
     },
     { 
-      title: 'Select FedRAMP Platforms', 
+      title: 'Select FedRAMP & StateRAMP Platforms', 
       description: 'Vendor-neutral evaluation and selection of optimal cloud platforms and SaaS solutions',
       deliverables: ['Platform comparison matrix', 'TCO analysis', 'Vendor recommendations']
     },
@@ -153,8 +153,8 @@ export default function DigitalTransformation() {
               return (
                 <Card key={index} className="border-2 hover:border-accent transition-colors">
                   <CardContent className="pt-8">
-                    <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center mb-6">
-                      <Icon className="h-7 w-7 text-accent" />
+                    <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center mb-6">
+                      <Icon className="h-7 w-7 text-muted-foreground" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                     <p className="text-muted-foreground">{item.description}</p>
@@ -182,8 +182,8 @@ export default function DigitalTransformation() {
                 <Card key={index} className="border-2 hover:border-accent transition-colors group">
                   <CardContent className="pt-8">
                     <div className="flex items-start gap-4 mb-6">
-                      <div className="h-14 w-14 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-7 w-7 text-accent" />
+                      <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon className="h-7 w-7 text-muted-foreground" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
@@ -192,8 +192,8 @@ export default function DigitalTransformation() {
                     </div>
                     <div className="space-y-2 mb-6">
                       {service.benefits.map((benefit, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <div key={idx} className="flex items-start gap-3">
+                          <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
                           <span className="text-sm">{benefit}</span>
                         </div>
                       ))}
@@ -216,7 +216,7 @@ export default function DigitalTransformation() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
                   <div>
                     <div className="font-semibold mb-1">{capability.name}</div>
                     <div className="text-sm text-muted-foreground">{capability.description}</div>
@@ -314,8 +314,8 @@ export default function DigitalTransformation() {
               <Card key={index} className="border-2 hover:border-accent transition-colors">
                 <CardContent className="pt-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="h-12 w-12 bg-accent/20 rounded-lg flex items-center justify-center">
-                      <DollarSign className="h-6 w-6 text-accent" />
+                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center">
+                      <DollarSign className="h-6 w-6 text-muted-foreground" />
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-accent">{story.award}</div>

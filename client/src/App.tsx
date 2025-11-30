@@ -97,6 +97,10 @@ import FedRAMPIntegration from "./pages/services/FedRAMPIntegration";
 import LegacyIntegration from "./pages/services/LegacyIntegration";
 import HybridCloud from "./pages/services/HybridCloud";
 import APISecurity from "./pages/services/APISecurity";
+import PlatformSelection from "./pages/services/PlatformSelection";
+import LegacyModernizationDT from "./pages/services/LegacyModernizationDT";
+import ChangeManagementService from "./pages/services/ChangeManagement";
+import TMFSupport from "./pages/services/TMFSupport";
 import ApplicationSecurity from "./pages/services/ApplicationSecurity";
 import VisualizationService from "./pages/services/data-analytics/Visualization";
 import MLAIService from "./pages/services/data-analytics/MLAI";
@@ -226,6 +230,10 @@ function Router() {
       <Route path={"/services/custom-software/mobile-apps"} component={MobileApps} />
       <Route path={"/services/custom-software/legacy-modernization"} component={CustomSoftwareLegacyModernization} />
       <Route path={"/services/digital-transformation"} component={DigitalTransformationService} />
+      <Route path={"/services/platform-selection"} component={PlatformSelection} />
+      <Route path={"/services/legacy-modernization-dt"} component={LegacyModernizationDT} />
+      <Route path={"/services/change-management"} component={ChangeManagementService} />
+      <Route path={"/services/tmf-support"} component={TMFSupport} />
       <Route path={"/services/digital-transformation/strategy-development"} component={StrategyDevelopment} />
       <Route path={"/services/digital-transformation/change-management"} component={ChangeManagement} />
       <Route path={"/services/digital-transformation/training-enablement"} component={TrainingEnablement} />
