@@ -4,6 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import GovernmentChat from "./components/GovernmentChat";
 import LiveChat from "./components/LiveChat";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
 import Home from "./pages/Home";
@@ -24,6 +25,8 @@ import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
 import CapabilityGenerator from "./pages/CapabilityGenerator";
 import GovernmentResources from "./pages/GovernmentResources";
+import ContractVehicleComparison from "./pages/ContractVehicleComparison";
+import ComplianceRoadmap from "./pages/ComplianceRoadmap";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -150,6 +153,8 @@ function Router() {
       <Route path={"/federal-solutions"} component={FederalSolutions} />
       <Route path={"/capability-generator"} component={CapabilityGenerator} />
       <Route path={"/government-resources"} component={GovernmentResources} />
+      <Route path={"/contract-vehicle-comparison"} component={ContractVehicleComparison} />
+      <Route path={"/compliance-roadmap"} component={ComplianceRoadmap} />
       
       {/* Service Routes */}
       <Route path={"/services/automation"} component={AutomationService} />
@@ -338,8 +343,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
-          <LiveChat />
-          <PWAInstallPrompt />
+          <GovernmentChat />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

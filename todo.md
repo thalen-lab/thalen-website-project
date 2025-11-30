@@ -1163,3 +1163,39 @@
 - [x] Add procurement process guides (federal vs state/local)
 - [x] Add compliance framework comparison chart
 - [x] Add downloadable templates and checklists
+
+## Phase 4: Advanced Government Buyer Tools
+
+### Live Chat Widget for Government Buyers
+- [x] Create chat widget component with floating button
+- [x] Implement pre-qualification form (agency type, procurement timeline)
+- [x] Add intelligent routing logic (federal → cleared personnel, state/local → regional specialists)
+- [x] Create chat interface with message history
+- [x] Add specialist profiles and availability status
+- [x] Implement form validation and error handling
+- [x] Add mobile-responsive design
+- [x] Integrate with contact form backend
+
+### Contract Vehicle Comparison Tool
+- [x] Create comparison tool page with input form
+- [x] Add agency type selection (Federal/State-Local)
+- [x] Add contract size input field
+- [x] Add timeline/urgency selector
+- [x] Build recommendation engine logic
+- [x] Create comparison matrix for contract vehicles
+- [x] Add estimated procurement timelines
+- [x] Include past win rates and success metrics
+- [x] Add detailed explanations for each vehicle
+- [x] Create downloadable comparison report
+
+### Compliance Roadmap Generator
+- [x] Create roadmap generator page
+- [x] Add compliance framework selector (FedRAMP/CMMC/StateRAMP)
+- [x] Add current maturity level assessment
+- [x] Build dynamic timeline visualization
+- [x] Create milestone cards with dependencies
+- [x] Add estimated costs per phase
+- [x] Include resource requirements (personnel, tools)
+- [x] Add interactive Gantt chart or timeline view
+- [x] Create downloadable roadmap PDF
+- [x] Add "Get Expert Help" CTAs at each milestone
