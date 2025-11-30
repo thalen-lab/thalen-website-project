@@ -113,7 +113,7 @@ export default function DODDataPipelines() {
       {/* Solution Section */}
       <section className="py-20 bg-muted/30">
         <div className="container max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">The NexDyne Solution</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">The Thalen Technologies Solution</h2>
           <div className="space-y-6">
             <Card>
               <CardContent className="p-6">
@@ -271,7 +271,7 @@ export default function DODDataPipelines() {
             <CardContent className="p-8">
               <div className="text-3xl text-accent mb-6">"</div>
               <p className="text-xl mb-6 italic">
-                NexDyne's data engineering expertise transformed our supply chain operations. We went from waiting 18 hours for stale reports to having real-time visibility across 47 systems. The automated pipelines are rock-solid—they just work. Our analysts are finally doing analysis instead of data janitorial work.
+                Thalen Technologies's data engineering expertise transformed our supply chain operations. We went from waiting 18 hours for stale reports to having real-time visibility across 47 systems. The automated pipelines are rock-solid—they just work. Our analysts are finally doing analysis instead of data janitorial work.
               </p>
               <div className="flex items-center gap-4">
                 <div>
@@ -290,7 +290,7 @@ export default function DODDataPipelines() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Services Used in This Project</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explore the NexDyne capabilities that delivered these results
+              Explore the Thalen Technologies capabilities that delivered these results
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">

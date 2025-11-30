@@ -68,7 +68,7 @@ export default function FederalAutomation() {
               A major federal agency responsible for processing thousands of mission-critical applications annually faced severe bottlenecks due to manual, paper-based workflows. Processing times averaged 6 weeks, with error rates exceeding 12%, creating operational inefficiencies and impacting mission readiness.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              NexDyne was selected through a competitive procurement process to design and implement an intelligent automation solution that would maintain the agency's strict Top Secret/SCI security requirements while dramatically improving operational efficiency.
+              Thalen Technologies was selected through a competitive procurement process to design and implement an intelligent automation solution that would maintain the agency's strict Top Secret/SCI security requirements while dramatically improving operational efficiency.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
               <div>
@@ -197,7 +197,7 @@ export default function FederalAutomation() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                NexDyne transformed our operations while maintaining the highest security standards. The 85% automation rate exceeded our expectations, and the 2-day processing time has dramatically improved our mission readiness. Their team's expertise in federal compliance was invaluable.
+                Thalen Technologies transformed our operations while maintaining the highest security standards. The 85% automation rate exceeded our expectations, and the 2-day processing time has dramatically improved our mission readiness. Their team's expertise in federal compliance was invaluable.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -249,7 +249,7 @@ export default function FederalAutomation() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Agency?</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's proven federal automation methodology can deliver similar results for your organization.
+            Discover how Thalen Technologies's proven federal automation methodology can deliver similar results for your organization.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

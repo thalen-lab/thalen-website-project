@@ -68,7 +68,7 @@ export default function DefenseCloud() {
               A major defense contractor with $2B+ in annual DoD contracts operated on aging on-premises infrastructure that limited agility and increased security risks. The company needed to modernize to cloud infrastructure while maintaining 100% operational continuity and achieving CMMC Level 3 certification required for future DoD contracts.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              NexDyne designed and executed a phased cloud migration strategy that modernized 150+ applications and 500TB of classified data across AWS GovCloud and Azure Government, achieving zero downtime and full CMMC Level 3 compliance within 18 months.
+              Thalen Technologies designed and executed a phased cloud migration strategy that modernized 150+ applications and 500TB of classified data across AWS GovCloud and Azure Government, achieving zero downtime and full CMMC Level 3 compliance within 18 months.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
               <div>
@@ -201,7 +201,7 @@ export default function DefenseCloud() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                NexDyne's expertise in both cloud architecture and defense compliance was exceptional. They delivered a zero-downtime migration while achieving CMMC Level 3 certification on the first audit. The $4.5M in annual savings exceeded our projections, and our team is now fully enabled to operate in the cloud.
+                Thalen Technologies's expertise in both cloud architecture and defense compliance was exceptional. They delivered a zero-downtime migration while achieving CMMC Level 3 certification on the first audit. The $4.5M in annual savings exceeded our projections, and our team is now fully enabled to operate in the cloud.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -253,7 +253,7 @@ export default function DefenseCloud() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Infrastructure?</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's proven cloud migration methodology can deliver zero-downtime modernization with full compliance.
+            Discover how Thalen Technologies's proven cloud migration methodology can deliver zero-downtime modernization with full compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

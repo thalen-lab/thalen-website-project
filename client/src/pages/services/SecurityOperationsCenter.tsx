@@ -90,7 +90,7 @@ export default function SecurityOperationsCenter() {
               Security Operations Center (SOC)
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              24/7 security monitoring and threat detection with expert analysts, SIEM/SOAR integration, and automated response. NexDyne's SOC delivers government-grade security operations with TS/SCI cleared personnel for classified environments.
+              24/7 security monitoring and threat detection with expert analysts, SIEM/SOAR integration, and automated response. Thalen Technologies's SOC delivers government-grade security operations with TS/SCI cleared personnel for classified environments.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -230,7 +230,7 @@ export default function SecurityOperationsCenter() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Protect Your Assets 24/7</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a SOC consultation and discover how NexDyne can deliver continuous security monitoring and threat detection for your mission-critical environment.
+            Schedule a SOC consultation and discover how Thalen Technologies can deliver continuous security monitoring and threat detection for your mission-critical environment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

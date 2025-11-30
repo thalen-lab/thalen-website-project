@@ -60,7 +60,7 @@ export default function ManufacturingUptime() {
               A Fortune 500 manufacturing company with 50+ facilities across North America faced chronic unplanned downtime costing $72M annually. Equipment failures, cybersecurity vulnerabilities, and reactive maintenance practices created operational inefficiencies and safety risks.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              NexDyne deployed an integrated solution combining industrial cybersecurity, IoT sensor networks, and AI-powered predictive maintenance, reducing unplanned downtime by 75% and achieving 99.2% system uptime across all facilities.
+              Thalen Technologies deployed an integrated solution combining industrial cybersecurity, IoT sensor networks, and AI-powered predictive maintenance, reducing unplanned downtime by 75% and achieving 99.2% system uptime across all facilities.
             </p>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function ManufacturingUptime() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                The transformation NexDyne delivered goes beyond the numbers. We've shifted from reactive firefighting to proactive optimization. The 99.2% uptime has enabled us to take on new contracts we couldn't have supported before, and our team's confidence in our systems has never been higher.
+                The transformation Thalen Technologies delivered goes beyond the numbers. We've shifted from reactive firefighting to proactive optimization. The 99.2% uptime has enabled us to take on new contracts we couldn't have supported before, and our team's confidence in our systems has never been higher.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -231,7 +231,7 @@ export default function ManufacturingUptime() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Eliminate Unplanned Downtime</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's predictive maintenance and industrial cybersecurity solutions can transform your operations.
+            Discover how Thalen Technologies's predictive maintenance and industrial cybersecurity solutions can transform your operations.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

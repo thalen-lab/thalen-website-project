@@ -91,7 +91,7 @@ export default function MultiCloud() {
               Multi-Cloud & Hybrid Solutions
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Vendor-agnostic architecture across AWS, Azure, and Google Cloud with unified management, disaster recovery, and seamless workload portability. NexDyne delivers multi-cloud strategies that maximize flexibility, minimize lock-in, and ensure 99.99% availability for mission-critical federal operations.
+              Vendor-agnostic architecture across AWS, Azure, and Google Cloud with unified management, disaster recovery, and seamless workload portability. Thalen Technologies delivers multi-cloud strategies that maximize flexibility, minimize lock-in, and ensure 99.99% availability for mission-critical federal operations.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -211,7 +211,7 @@ export default function MultiCloud() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Embrace Multi-Cloud Strategy?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive multi-cloud assessment and discover how NexDyne can deliver vendor independence with 99.99% availability.
+            Start with a comprehensive multi-cloud assessment and discover how Thalen Technologies can deliver vendor independence with 99.99% availability.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -198,7 +198,7 @@ export default function VAHealthcare() {
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">NexDyne Solution</h2>
+            <h2 className="text-4xl font-bold mb-4">Thalen Technologies Solution</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Enterprise integration platform unifying 12 healthcare systems with HIPAA and FedRAMP compliance.
             </p>
@@ -249,7 +249,7 @@ export default function VAHealthcare() {
               <div className="text-center mb-8">
                 <div className="text-6xl text-accent mb-4">"</div>
                 <p className="text-2xl font-medium mb-6">
-                  NexDyne's integration solution has fundamentally transformed how we deliver care to veterans. The unified patient view across all 12 systems has eliminated dangerous data gaps, reduced appointment wait times by 77%, and freed our clinical staff to focus on patient care instead of system navigation. The $18M annual savings and zero HIPAA violations demonstrate their exceptional healthcare IT and compliance expertise.
+                  Thalen Technologies's integration solution has fundamentally transformed how we deliver care to veterans. The unified patient view across all 12 systems has eliminated dangerous data gaps, reduced appointment wait times by 77%, and freed our clinical staff to focus on patient care instead of system navigation. The $18M annual savings and zero HIPAA violations demonstrate their exceptional healthcare IT and compliance expertise.
                 </p>
                 <div className="border-t pt-6">
                   <p className="font-bold text-lg">Chief Medical Information Officer</p>

@@ -60,7 +60,7 @@ export default function EnergyGrid() {
               A regional utility serving 3M+ customers across 50,000 square miles faced aging grid infrastructure, increasing renewable energy integration challenges, and rising customer expectations for reliability. The utility committed $500M to smart grid modernization to address these challenges.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              NexDyne designed and implemented a comprehensive smart grid solution combining IoT sensors, AI-powered analytics, and automated grid management, reducing outages by 60% while enabling 45% renewable energy integration and delivering $85M in annual operational savings.
+              Thalen Technologies designed and implemented a comprehensive smart grid solution combining IoT sensors, AI-powered analytics, and automated grid management, reducing outages by 60% while enabling 45% renewable energy integration and delivering $85M in annual operational savings.
             </p>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function EnergyGrid() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                NexDyne's smart grid solution transformed our operations and customer experience. The 60% reduction in outages has dramatically improved reliability, and the AI-powered renewable integration enables us to meet our sustainability goals while maintaining grid stability. This is the foundation for our next 40 years.
+                Thalen Technologies's smart grid solution transformed our operations and customer experience. The 60% reduction in outages has dramatically improved reliability, and the AI-powered renewable integration enables us to meet our sustainability goals while maintaining grid stability. This is the foundation for our next 40 years.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -231,7 +231,7 @@ export default function EnergyGrid() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Modernize Your Energy Infrastructure</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's smart grid solutions can improve reliability and enable renewable energy integration.
+            Discover how Thalen Technologies's smart grid solutions can improve reliability and enable renewable energy integration.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

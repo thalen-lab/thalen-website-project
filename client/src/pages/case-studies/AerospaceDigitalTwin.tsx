@@ -60,7 +60,7 @@ export default function AerospaceDigitalTwin() {
               A major aerospace manufacturer operating a fleet of 250+ commercial aircraft faced escalating maintenance costs ($240M+ annually) and frequent unscheduled maintenance events disrupting operations and customer satisfaction. Traditional time-based maintenance approaches were inefficient and costly.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              NexDyne designed and deployed a comprehensive digital twin platform integrating real-time sensor data, physics-based models, and AI analytics to enable predictive maintenance. The solution reduced maintenance costs by 40% ($95M annually), cut unscheduled maintenance by 70%, and improved aircraft availability by 12%.
+              Thalen Technologies designed and deployed a comprehensive digital twin platform integrating real-time sensor data, physics-based models, and AI analytics to enable predictive maintenance. The solution reduced maintenance costs by 40% ($95M annually), cut unscheduled maintenance by 70%, and improved aircraft availability by 12%.
             </p>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function AerospaceDigitalTwin() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                NexDyne's digital twin platform has revolutionized our maintenance operations. The 70% reduction in unscheduled maintenance has dramatically improved our operational reliability, and the $95M in annual savings exceeded our business case. We now have unprecedented visibility into our fleet's health and can optimize maintenance like never before.
+                Thalen Technologies's digital twin platform has revolutionized our maintenance operations. The 70% reduction in unscheduled maintenance has dramatically improved our operational reliability, and the $95M in annual savings exceeded our business case. We now have unprecedented visibility into our fleet's health and can optimize maintenance like never before.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -231,7 +231,7 @@ export default function AerospaceDigitalTwin() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Transform Your Maintenance Operations</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's digital twin solutions can enable predictive maintenance and reduce costs.
+            Discover how Thalen Technologies's digital twin solutions can enable predictive maintenance and reduce costs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

@@ -57,7 +57,7 @@ export default function Contact() {
               Get In Touch
             </h1>
             <p className="text-xl md:text-2xl opacity-90">
-              Ready to transform your operations? Let's discuss how NexDyne can help achieve your strategic objectives.
+              Ready to transform your operations? Let's discuss how Thalen Technologies can help achieve your strategic objectives.
             </p>
           </div>
         </div>

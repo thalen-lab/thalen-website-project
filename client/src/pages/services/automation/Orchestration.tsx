@@ -67,7 +67,7 @@ export default function Orchestration() {
               Process Orchestration for Federal Agencies
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Your most important work involves multiple departments, systems, and decision points. Approvals get stuck in email chains. Work sits in queues waiting for the next step. Nobody has visibility into where things stand. NexDyne Process Orchestration automates these complex, multi-step workflows from end to end—routing work intelligently, enforcing policy automatically, and giving you real-time visibility into every process.
+              Your most important work involves multiple departments, systems, and decision points. Approvals get stuck in email chains. Work sits in queues waiting for the next step. Nobody has visibility into where things stand. Thalen Technologies Process Orchestration automates these complex, multi-step workflows from end to end—routing work intelligently, enforcing policy automatically, and giving you real-time visibility into every process.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -147,7 +147,7 @@ export default function Orchestration() {
 
               <Card className="bg-accent/10 border-accent/30">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 text-accent">With NexDyne Orchestration</h3>
+                  <h3 className="text-xl font-bold mb-4 text-accent">With Thalen Technologies Orchestration</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
@@ -185,7 +185,7 @@ export default function Orchestration() {
                   <div className="text-sm font-semibold text-accent uppercase tracking-wide">Federal Transformation Story</div>
                 </div>
                 <p className="text-lg mb-6 leading-relaxed">
-                  "Our procurement process involved 47 separate steps across 8 departments. Average cycle time was 120 days, and we had zero visibility into where requests were stuck. NexDyne orchestrated the entire workflow—from requisition through contract award. Now our average cycle time is 35 days, we have real-time visibility into every request, and we have not missed a single FAR compliance requirement since go-live."
+                  "Our procurement process involved 47 separate steps across 8 departments. Average cycle time was 120 days, and we had zero visibility into where requests were stuck. Thalen Technologies orchestrated the entire workflow—from requisition through contract award. Now our average cycle time is 35 days, we have real-time visibility into every request, and we have not missed a single FAR compliance requirement since go-live."
                 </p>
                 <div className="border-t border-accent/20 pt-4">
                   <div className="font-semibold">David Richardson</div>
@@ -203,7 +203,7 @@ export default function Orchestration() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Common Orchestration Scenarios</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From procurement to case management, federal agencies orchestrate their most complex processes with NexDyne.
+              From procurement to case management, federal agencies orchestrate their most complex processes with Thalen Technologies.
             </p>
           </div>
 
@@ -250,12 +250,12 @@ export default function Orchestration() {
         </div>
       </section>
 
-      {/* The NexDyne Approach */}
+      {/* The Thalen Technologies Approach */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne Orchestration Framework</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies Orchestration Framework</h2>
               <p className="text-xl text-muted-foreground">
                 We do not just automate your current process—we optimize it first.
               </p>

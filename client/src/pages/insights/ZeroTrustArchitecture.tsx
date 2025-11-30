@@ -24,7 +24,7 @@ export default function ZeroTrustArchitecture() {
               Zero-Trust Architecture for Federal Agencies: A Comprehensive Implementation Guide
             </h1>
             <div className="flex items-center gap-6 text-sm opacity-90 mb-8">
-              <span>By NexDyne Security Team</span>
+              <span>By Thalen Technologies Security Team</span>
               <span>•</span>
               <span>15 min read</span>
               <span>•</span>
@@ -54,7 +54,7 @@ export default function ZeroTrustArchitecture() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                The federal government's cybersecurity landscape has fundamentally shifted. With Executive Order 14028 mandating zero-trust architecture adoption across all federal agencies, organizations face the complex challenge of transforming legacy security models while maintaining operational continuity. This comprehensive guide provides a proven roadmap for federal agencies implementing zero-trust architecture, drawing from NexDyne's experience deploying zero-trust solutions across 15+ federal agencies.
+                The federal government's cybersecurity landscape has fundamentally shifted. With Executive Order 14028 mandating zero-trust architecture adoption across all federal agencies, organizations face the complex challenge of transforming legacy security models while maintaining operational continuity. This comprehensive guide provides a proven roadmap for federal agencies implementing zero-trust architecture, drawing from Thalen Technologies's experience deploying zero-trust solutions across 15+ federal agencies.
               </p>
             </div>
 
@@ -249,7 +249,7 @@ export default function ZeroTrustArchitecture() {
                 The federal mandate for zero-trust adoption creates both challenge and opportunity. Agencies that embrace this transformation thoughtfully—balancing security requirements with operational realities—will emerge with more resilient, adaptable, and mission-effective security postures. Those that treat zero-trust as merely a compliance checkbox risk implementing ineffective solutions that provide neither security nor operational value.
               </p>
               <p className="text-muted-foreground mb-6">
-                NexDyne's experience implementing zero-trust across federal agencies demonstrates that success requires equal parts technical expertise, organizational change management, and executive commitment. With proper planning, phased implementation, and continuous refinement, federal agencies can achieve the security transformation that zero-trust promises while maintaining the operational effectiveness their missions demand.
+                Thalen Technologies's experience implementing zero-trust across federal agencies demonstrates that success requires equal parts technical expertise, organizational change management, and executive commitment. With proper planning, phased implementation, and continuous refinement, federal agencies can achieve the security transformation that zero-trust promises while maintaining the operational effectiveness their missions demand.
               </p>
             </div>
 
@@ -291,7 +291,7 @@ export default function ZeroTrustArchitecture() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Implement Zero-Trust Architecture?</h2>
           <p className="text-xl opacity-90 mb-8">
-            NexDyne's proven zero-trust methodology has helped 15+ federal agencies achieve security transformation while maintaining operational continuity.
+            Thalen Technologies's proven zero-trust methodology has helped 15+ federal agencies achieve security transformation while maintaining operational continuity.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

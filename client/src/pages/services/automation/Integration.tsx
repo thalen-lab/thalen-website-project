@@ -64,7 +64,7 @@ export default function Integration() {
               Enterprise Integration Platform
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Your agency runs on dozens of disconnected systems. Financial data lives in one place, HR records in another, and mission-critical information is scattered across legacy mainframes and modern cloud apps. The result? Your team wastes hours manually transferring data, reconciling spreadsheets, and chasing down information. NexDyne's integration platform connects everything—securely, automatically, and without expensive system replacements.
+              Your agency runs on dozens of disconnected systems. Financial data lives in one place, HR records in another, and mission-critical information is scattered across legacy mainframes and modern cloud apps. The result? Your team wastes hours manually transferring data, reconciling spreadsheets, and chasing down information. Thalen Technologies's integration platform connects everything—securely, automatically, and without expensive system replacements.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -113,7 +113,7 @@ export default function Integration() {
                 Commercial integration platforms assume you're working with modern, API-enabled systems in a single cloud environment. That's not reality for federal agencies. You're running mission-critical applications on mainframes from the 1980s alongside cutting-edge AI tools. You have air-gapped networks, strict data residency requirements, and systems that were never designed to communicate.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                NexDyne's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs. And we do it all while maintaining FedRAMP High authorization and full audit trails.
+                Thalen Technologies's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs. And we do it all while maintaining FedRAMP High authorization and full audit trails.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -147,7 +147,7 @@ export default function Integration() {
                   <div className="text-sm font-semibold text-accent uppercase tracking-wide">Defense Integration Success</div>
                 </div>
                 <p className="text-lg mb-6 leading-relaxed">
-                  "We had 14 separate systems supporting our logistics operation—everything from 40-year-old inventory databases to modern supply chain analytics. Our team spent 30% of their time just moving data between systems. NexDyne integrated all 14 systems in 90 days. Now data flows automatically, and we've reallocated 12 FTEs to strategic planning instead of data entry."
+                  "We had 14 separate systems supporting our logistics operation—everything from 40-year-old inventory databases to modern supply chain analytics. Our team spent 30% of their time just moving data between systems. Thalen Technologies integrated all 14 systems in 90 days. Now data flows automatically, and we've reallocated 12 FTEs to strategic planning instead of data entry."
                 </p>
                 <div className="border-t border-accent/20 pt-4">
                   <div className="font-semibold">Lt. Col. Marcus Johnson, USAF</div>
@@ -165,7 +165,7 @@ export default function Integration() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Common Integration Challenges We Solve</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From defense contractors to civilian agencies, organizations trust NexDyne to connect their most complex systems.
+              From defense contractors to civilian agencies, organizations trust Thalen Technologies to connect their most complex systems.
             </p>
           </div>
 
@@ -208,12 +208,12 @@ export default function Integration() {
         </div>
       </section>
 
-      {/* The NexDyne Approach */}
+      {/* The Thalen Technologies Approach */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne Integration Methodology</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies Integration Methodology</h2>
               <p className="text-xl text-muted-foreground">
                 We don't just connect systems—we architect sustainable integration ecosystems.
               </p>

@@ -198,7 +198,7 @@ export default function DoDManufacturing() {
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">NexDyne Solution</h2>
+            <h2 className="text-4xl font-bold mb-4">Thalen Technologies Solution</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive cybersecurity, predictive maintenance, and compliance solution for defense manufacturing.
             </p>
@@ -249,7 +249,7 @@ export default function DoDManufacturing() {
               <div className="text-center mb-8">
                 <div className="text-6xl text-accent mb-4">"</div>
                 <p className="text-2xl font-medium mb-6">
-                  NexDyne's solution transformed our manufacturing operations from reactive firefighting to proactive optimization. The 99.2% uptime achievement and CMMC Level 3 certification have positioned us as a model facility within the DoD manufacturing ecosystem. The $12.5M annual savings and zero security incidents demonstrate their exceptional technical and compliance expertise.
+                  Thalen Technologies's solution transformed our manufacturing operations from reactive firefighting to proactive optimization. The 99.2% uptime achievement and CMMC Level 3 certification have positioned us as a model facility within the DoD manufacturing ecosystem. The $12.5M annual savings and zero security incidents demonstrate their exceptional technical and compliance expertise.
                 </p>
                 <div className="border-t pt-6">
                   <p className="font-bold text-lg">Facility Director</p>

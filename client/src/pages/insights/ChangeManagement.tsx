@@ -24,7 +24,7 @@ export default function ChangeManagement() {
               Change Management for Digital Transformation: Why Technology Projects Fail Without It
             </h1>
             <div className="flex items-center gap-6 text-sm opacity-90 mb-8">
-              <span>By NexDyne Transformation Team</span>
+              <span>By Thalen Technologies Transformation Team</span>
               <span>•</span>
               <span>14 min read</span>
               <span>•</span>
@@ -54,7 +54,7 @@ export default function ChangeManagement() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Digital transformation projects fail at alarming rates—studies consistently show 70% of transformation initiatives fail to achieve their objectives. The culprit is rarely technology. Modern cloud platforms, AI systems, and automation tools work as advertised. The failure lies in the human dimension: resistance to change, inadequate training, misaligned incentives, and organizational inertia. This comprehensive guide examines change management for digital transformation in government, providing a framework for addressing the human factors that determine success or failure. Drawing from NexDyne's experience leading transformations across federal agencies, we explore why change management is not optional—it is the difference between transformation and expensive technology deployment.
+                Digital transformation projects fail at alarming rates—studies consistently show 70% of transformation initiatives fail to achieve their objectives. The culprit is rarely technology. Modern cloud platforms, AI systems, and automation tools work as advertised. The failure lies in the human dimension: resistance to change, inadequate training, misaligned incentives, and organizational inertia. This comprehensive guide examines change management for digital transformation in government, providing a framework for addressing the human factors that determine success or failure. Drawing from Thalen Technologies's experience leading transformations across federal agencies, we explore why change management is not optional—it is the difference between transformation and expensive technology deployment.
               </p>
             </div>
 
@@ -285,7 +285,7 @@ export default function ChangeManagement() {
                 Government organizations that invest in change management alongside technology investment position themselves for transformation success. Those that treat change management as afterthought or communications exercise join the 70% of failed transformations. The difference is not luck or technology choice—it is deliberate, disciplined attention to the human dimension of change.
               </p>
               <p className="text-muted-foreground mb-6">
-                NexDyne's transformation methodology integrates change management from the beginning, not as separate workstream but as core element of transformation strategy. We recognize that delivering technology is necessary but insufficient—delivering organizational change is what creates lasting value. This is the foundation for transformation that endures beyond project completion and delivers the mission outcomes government agencies seek.
+                Thalen Technologies's transformation methodology integrates change management from the beginning, not as separate workstream but as core element of transformation strategy. We recognize that delivering technology is necessary but insufficient—delivering organizational change is what creates lasting value. This is the foundation for transformation that endures beyond project completion and delivers the mission outcomes government agencies seek.
               </p>
             </div>
 
@@ -327,7 +327,7 @@ export default function ChangeManagement() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Transform Your Organization Successfully</h2>
           <p className="text-xl opacity-90 mb-8">
-            NexDyne's proven change management methodology addresses the human factors that determine transformation success.
+            Thalen Technologies's proven change management methodology addresses the human factors that determine transformation success.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

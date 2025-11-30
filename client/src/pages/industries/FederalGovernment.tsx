@@ -122,7 +122,7 @@ export default function FederalGovernment() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Federal IT Challenges We Solve</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Federal agencies face unique operational, security, and budgetary challenges that require specialized expertise and proven methodologies. NexDyne delivers solutions that address these complex requirements while maintaining mission continuity.
+              Federal agencies face unique operational, security, and budgetary challenges that require specialized expertise and proven methodologies. Thalen Technologies delivers solutions that address these complex requirements while maintaining mission continuity.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -168,7 +168,7 @@ export default function FederalGovernment() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Government-Grade Security & Compliance</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                NexDyne maintains the highest levels of federal security certifications and clearances, enabling us to support classified and mission-critical operations across the federal government. Our comprehensive compliance framework ensures that every solution meets or exceeds federal security requirements while maintaining operational efficiency.
+                Thalen Technologies maintains the highest levels of federal security certifications and clearances, enabling us to support classified and mission-critical operations across the federal government. Our comprehensive compliance framework ensures that every solution meets or exceeds federal security requirements while maintaining operational efficiency.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
                 We provide end-to-end ATO support including security control implementation, documentation preparation, continuous monitoring setup, and ongoing compliance management. Our proven methodology has achieved a 100% success rate across 50+ federal ATOs spanning FedRAMP Moderate, FedRAMP High, and FISMA authorizations.

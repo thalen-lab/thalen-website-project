@@ -161,7 +161,7 @@ export default function Events() {
       recording: true,
       slides: true,
       presenter: 'Marcus Williams, CTO',
-      description: 'Introduction to NexDyne\'s proprietary RAPID Framework delivering average 312% ROI through structured automation implementation.'
+      description: 'Introduction to Thalen Technologies\'s proprietary RAPID Framework delivering average 312% ROI through structured automation implementation.'
     },
     {
       id: 'past-multi-cloud',

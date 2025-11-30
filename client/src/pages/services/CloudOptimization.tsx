@@ -117,7 +117,7 @@ export default function CloudOptimization() {
               Cloud Optimization & Cost Management
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Maximize cloud ROI through intelligent resource optimization, automated cost controls, and performance tuning. NexDyne's optimization framework reduces cloud spending by 40-60% while improving application performance by 200-300%—delivering immediate financial impact and operational excellence.
+              Maximize cloud ROI through intelligent resource optimization, automated cost controls, and performance tuning. Thalen Technologies's optimization framework reduces cloud spending by 40-60% while improving application performance by 200-300%—delivering immediate financial impact and operational excellence.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -138,7 +138,7 @@ export default function CloudOptimization() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Measurable Optimization Results</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Federal agencies achieve dramatic cost savings and performance improvements through NexDyne's data-driven optimization approach.
+              Federal agencies achieve dramatic cost savings and performance improvements through Thalen Technologies's data-driven optimization approach.
             </p>
           </div>
 
@@ -241,7 +241,7 @@ export default function CloudOptimization() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Optimize Your Cloud Spending?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive cost optimization assessment and discover how much your agency can save with NexDyne's proven optimization framework.
+            Start with a comprehensive cost optimization assessment and discover how much your agency can save with Thalen Technologies's proven optimization framework.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

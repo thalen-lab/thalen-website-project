@@ -297,12 +297,12 @@ export default function ApplicationDevelopment() {
         </div>
       </section>
 
-      {/* Why NexDyne */}
+      {/* Why Thalen Technologies */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">Why Choose NexDyne for Application Development?</h2>
+              <h2 className="text-4xl font-bold mb-6">Why Choose Thalen Technologies for Application Development?</h2>
               <p className="text-lg text-muted-foreground mb-8">
                 We combine deep federal expertise with cutting-edge development practices to deliver applications that meet the unique challenges of government missions.
               </p>
@@ -366,7 +366,7 @@ export default function ApplicationDevelopment() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Integration Architecture</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore how NexDyne's solutions integrate with your existing federal infrastructure. Click on any layer to see detailed implementation approaches.
+              Explore how Thalen Technologies's solutions integrate with your existing federal infrastructure. Click on any layer to see detailed implementation approaches.
             </p>
           </div>
           <ArchitectureDiagram />

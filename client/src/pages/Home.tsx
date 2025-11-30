@@ -349,7 +349,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-sm font-semibold text-accent mb-2">Our Methodology</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne RAPID Framework</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies RAPID Framework</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Results-Accelerated Process Intelligence & Delivery: Our proven 4-phase methodology delivering measurable ROI in 30 days
             </p>

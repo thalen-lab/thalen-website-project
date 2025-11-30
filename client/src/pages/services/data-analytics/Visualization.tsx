@@ -28,7 +28,7 @@ export default function Visualization() {
   const useCases = [
     {
       title: 'Intelligence Analysis Workbenches',
-      description: 'Analysts need to correlate data from dozens of sources, identify patterns, and brief leadership—all under time pressure. NexDyne builds custom intelligence workbenches that integrate SIGINT, HUMINT, OSINT, and other data streams into unified visual analysis environments.',
+      description: 'Analysts need to correlate data from dozens of sources, identify patterns, and brief leadership—all under time pressure. Thalen Technologies builds custom intelligence workbenches that integrate SIGINT, HUMINT, OSINT, and other data streams into unified visual analysis environments.',
       metrics: ['50+ data sources integrated', '3-second query response', 'Classified data handling']
     },
     {
@@ -69,7 +69,7 @@ export default function Visualization() {
               Real-Time Analytics & Visualization
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Federal operations do not run on last night's batch reports. When threats emerge, operations unfold, or crises develop, decision-makers need real-time intelligence—not data that is hours or days old. NexDyne builds mission-critical analytics platforms that deliver actionable insights in real-time with government-grade security. From intelligence analysis to operational command centers, our dashboards turn massive data streams into clear, actionable intelligence.
+              Federal operations do not run on last night's batch reports. When threats emerge, operations unfold, or crises develop, decision-makers need real-time intelligence—not data that is hours or days old. Thalen Technologies builds mission-critical analytics platforms that deliver actionable insights in real-time with government-grade security. From intelligence analysis to operational command centers, our dashboards turn massive data streams into clear, actionable intelligence.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -118,7 +118,7 @@ export default function Visualization() {
                 Tableau and Power BI are excellent for sales dashboards and marketing reports. They are not designed for intelligence analysis, threat monitoring, or operational command and control. Commercial tools cannot handle classified data, lack real-time streaming capabilities, and provide no audit trails for congressional oversight.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                NexDyne builds custom analytics platforms purpose-designed for federal missions. Our dashboards handle real-time sensor feeds, integrate classified and unclassified data, provide full audit trails, and meet FedRAMP High security requirements. You get intelligence platforms, not generic business intelligence tools.
+                Thalen Technologies builds custom analytics platforms purpose-designed for federal missions. Our dashboards handle real-time sensor feeds, integrate classified and unclassified data, provide full audit trails, and meet FedRAMP High security requirements. You get intelligence platforms, not generic business intelligence tools.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -152,7 +152,7 @@ export default function Visualization() {
                   <div className="text-sm font-semibold text-accent uppercase tracking-wide">Intelligence Analysis Success</div>
                 </div>
                 <p className="text-lg mb-6 leading-relaxed">
-                  "Our analysts were drowning in data from 40+ systems. They spent more time searching for information than analyzing it. NexDyne built us a unified intelligence workbench that correlates SIGINT, HUMINT, and OSINT in real-time. Analysts can now query across all sources in seconds, visualize relationships, and brief leadership with confidence. Analysis time dropped 60%, and we are identifying threats we would have missed before."
+                  "Our analysts were drowning in data from 40+ systems. They spent more time searching for information than analyzing it. Thalen Technologies built us a unified intelligence workbench that correlates SIGINT, HUMINT, and OSINT in real-time. Analysts can now query across all sources in seconds, visualize relationships, and brief leadership with confidence. Analysis time dropped 60%, and we are identifying threats we would have missed before."
                 </p>
                 <div className="border-t border-accent/20 pt-4">
                   <div className="font-semibold">Colonel David Chen</div>
@@ -170,7 +170,7 @@ export default function Visualization() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Mission-Critical Analytics Use Cases</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              NexDyne has built real-time analytics platforms for intelligence, operations, fraud detection, and executive decision support.
+              Thalen Technologies has built real-time analytics platforms for intelligence, operations, fraud detection, and executive decision support.
             </p>
           </div>
 
@@ -309,7 +309,7 @@ export default function Visualization() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Enhance your analytics capabilities with these related NexDyne offerings
+              Enhance your analytics capabilities with these related Thalen Technologies offerings
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">

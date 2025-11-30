@@ -91,7 +91,7 @@ export default function SecurityAssessment() {
               Security Assessment & Compliance
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Achieve FedRAMP, CMMC, and NIST compliance with expert assessment services that guide you from readiness to authorization. NexDyne's proven methodology reduces typical 12-18 month timelines to 6-9 months while ensuring first-time assessment success.
+              Achieve FedRAMP, CMMC, and NIST compliance with expert assessment services that guide you from readiness to authorization. Thalen Technologies's proven methodology reduces typical 12-18 month timelines to 6-9 months while ensuring first-time assessment success.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -110,7 +110,7 @@ export default function SecurityAssessment() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Choose NexDyne</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Choose Thalen Technologies</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Unlike generic compliance consultants, we understand federal authorization processes, security clearances, and mission continuity imperatives.
             </p>
@@ -205,7 +205,7 @@ export default function SecurityAssessment() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Achieve Compliance?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive readiness assessment and discover how NexDyne can accelerate your path to FedRAMP, CMMC, or NIST compliance.
+            Start with a comprehensive readiness assessment and discover how Thalen Technologies can accelerate your path to FedRAMP, CMMC, or NIST compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

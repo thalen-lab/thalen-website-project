@@ -151,7 +151,7 @@ export default function StateEnergyCommissionCaseStudy() {
           <div className="mb-12">
             <h2 className="text-4xl font-bold mb-4">Our Solution</h2>
             <p className="text-xl text-muted-foreground">
-              NexDyne designed and implemented a StateRAMP-authorized IoT and predictive analytics platform with 15,000+ sensors, real-time monitoring dashboards, and machine learning models for proactive equipment maintenance.
+              Thalen Technologies designed and implemented a StateRAMP-authorized IoT and predictive analytics platform with 15,000+ sensors, real-time monitoring dashboards, and machine learning models for proactive equipment maintenance.
             </p>
           </div>
 
@@ -307,7 +307,7 @@ export default function StateEnergyCommissionCaseStudy() {
         <div className="container max-w-4xl text-center">
           <div className="text-6xl mb-6">"</div>
           <blockquote className="text-2xl md:text-3xl font-medium mb-8 italic">
-            NexDyne's grid optimization platform has been transformational for our state's energy infrastructure. The 65% reduction in outages has dramatically improved service reliability for millions of residents, and the predictive maintenance capabilities have shifted us from reactive firefighting to proactive planning. Their StateRAMP expertise ensured we met all compliance requirements while delivering cutting-edge IoT analytics.
+            Thalen Technologies's grid optimization platform has been transformational for our state's energy infrastructure. The 65% reduction in outages has dramatically improved service reliability for millions of residents, and the predictive maintenance capabilities have shifted us from reactive firefighting to proactive planning. Their StateRAMP expertise ensured we met all compliance requirements while delivering cutting-edge IoT analytics.
           </blockquote>
           <div className="font-semibold text-xl">Executive Director</div>
           <div className="text-accent">State Energy Commission</div>
@@ -319,7 +319,7 @@ export default function StateEnergyCommissionCaseStudy() {
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your State Agency?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Learn how NexDyne can help your state or local government agency implement StateRAMP-authorized IoT and analytics solutions with proven results.
+            Learn how Thalen Technologies can help your state or local government agency implement StateRAMP-authorized IoT and analytics solutions with proven results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

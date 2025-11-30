@@ -151,7 +151,7 @@ export default function CountyHealthDepartmentCaseStudy() {
           <div className="mb-12">
             <h2 className="text-4xl font-bold mb-4">Our Solution</h2>
             <p className="text-xl text-muted-foreground">
-              NexDyne designed and implemented a HIPAA-compliant health data integration platform connecting 12 county systems with real-time disease surveillance, automated state reporting, and public health analytics dashboards.
+              Thalen Technologies designed and implemented a HIPAA-compliant health data integration platform connecting 12 county systems with real-time disease surveillance, automated state reporting, and public health analytics dashboards.
             </p>
           </div>
 
@@ -307,7 +307,7 @@ export default function CountyHealthDepartmentCaseStudy() {
         <div className="container max-w-4xl text-center">
           <div className="text-6xl mb-6">"</div>
           <blockquote className="text-2xl md:text-3xl font-medium mb-8 italic">
-            NexDyne's health data integration platform has revolutionized our public health response capabilities. The 40% improvement in outbreak detection time has been critical for protecting our 2.5 million residents, and the automated state reporting has eliminated countless hours of manual work. Their deep understanding of HIPAA requirements and health IT standards was essential to our success.
+            Thalen Technologies's health data integration platform has revolutionized our public health response capabilities. The 40% improvement in outbreak detection time has been critical for protecting our 2.5 million residents, and the automated state reporting has eliminated countless hours of manual work. Their deep understanding of HIPAA requirements and health IT standards was essential to our success.
           </blockquote>
           <div className="font-semibold text-xl">Director of Public Health</div>
           <div className="text-accent">County Health Department</div>
@@ -319,7 +319,7 @@ export default function CountyHealthDepartmentCaseStudy() {
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your County Agency?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Learn how NexDyne can help your county or local government agency implement HIPAA-compliant health IT integration and analytics solutions with proven results.
+            Learn how Thalen Technologies can help your county or local government agency implement HIPAA-compliant health IT integration and analytics solutions with proven results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

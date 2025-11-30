@@ -314,7 +314,7 @@ export default function CaseStudies() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Write Your Success Story?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Discover how NexDyne's proven methodology can deliver transformative results for your organization.
+            Discover how Thalen Technologies's proven methodology can deliver transformative results for your organization.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90">
             Schedule Strategic Assessment

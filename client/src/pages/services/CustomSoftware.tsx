@@ -348,7 +348,7 @@ export default function CustomSoftware() {
       <section className="py-20 bg-secondary/30">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose NexDyne?</h2>
+            <h2 className="text-4xl font-bold mb-4">Why Choose Thalen Technologies?</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

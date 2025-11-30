@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { APP_LOGO } from '@/const';
+
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,8 +32,8 @@ export default function Navigation() {
       <div className="container">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <img src={APP_LOGO} alt="Incentro" className="h-20 transition-transform duration-300 hover:scale-105" />
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <span className="text-2xl font-bold">Thalen Technologies - Govern Smart</span>
           </Link>
 
           {/* Desktop Navigation */}

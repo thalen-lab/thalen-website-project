@@ -103,7 +103,7 @@ export default function PWAInstallPrompt() {
             <div className="flex-1 min-w-0">
               <div className="flex items-start justify-between gap-2">
                 <h3 className="font-semibold text-white text-sm">
-                  Install NexDyne App
+                  Install Thalen Technologies App
                 </h3>
                 <button
                   onClick={handleDismiss}

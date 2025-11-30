@@ -24,7 +24,7 @@ export default function MultiCloudStrategy() {
               Multi-Cloud Strategy for Government: Avoiding Vendor Lock-In While Maintaining Security
             </h1>
             <div className="flex items-center gap-6 text-sm opacity-90 mb-8">
-              <span>By NexDyne Cloud Architecture Team</span>
+              <span>By Thalen Technologies Cloud Architecture Team</span>
               <span>•</span>
               <span>16 min read</span>
               <span>•</span>
@@ -54,7 +54,7 @@ export default function MultiCloudStrategy() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Federal agencies face a strategic dilemma in cloud adoption: commit to a single cloud provider for simplicity and deep integration, or embrace multi-cloud complexity to avoid vendor lock-in and leverage best-of-breed capabilities. The stakes are high—cloud infrastructure decisions made today will shape agency IT capabilities for decades. This comprehensive guide examines multi-cloud strategy for government, providing a framework for balancing flexibility, security, cost, and operational complexity based on NexDyne's experience architecting multi-cloud solutions for federal agencies.
+                Federal agencies face a strategic dilemma in cloud adoption: commit to a single cloud provider for simplicity and deep integration, or embrace multi-cloud complexity to avoid vendor lock-in and leverage best-of-breed capabilities. The stakes are high—cloud infrastructure decisions made today will shape agency IT capabilities for decades. This comprehensive guide examines multi-cloud strategy for government, providing a framework for balancing flexibility, security, cost, and operational complexity based on Thalen Technologies's experience architecting multi-cloud solutions for federal agencies.
               </p>
             </div>
 
@@ -302,7 +302,7 @@ export default function MultiCloudStrategy() {
                 Successful multi-cloud adoption requires honest assessment of organizational capabilities, clear strategic objectives, and commitment to the operational discipline multi-cloud demands. Agencies that embrace multi-cloud without adequate preparation risk creating expensive, complex environments that deliver neither the benefits of multi-cloud nor the simplicity of single-cloud.
               </p>
               <p className="text-muted-foreground mb-6">
-                The future of government cloud is likely hybrid and multi-cloud for most agencies—not because every workload needs multi-cloud, but because diverse mission requirements will drive adoption of different providers for different purposes. The key is making these choices strategically, with clear governance, and with operational practices that manage complexity rather than being overwhelmed by it. This is the multi-cloud maturity NexDyne helps agencies achieve.
+                The future of government cloud is likely hybrid and multi-cloud for most agencies—not because every workload needs multi-cloud, but because diverse mission requirements will drive adoption of different providers for different purposes. The key is making these choices strategically, with clear governance, and with operational practices that manage complexity rather than being overwhelmed by it. This is the multi-cloud maturity Thalen Technologies helps agencies achieve.
               </p>
             </div>
 
@@ -344,7 +344,7 @@ export default function MultiCloudStrategy() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Navigate Multi-Cloud Complexity</h2>
           <p className="text-xl opacity-90 mb-8">
-            NexDyne's multi-cloud architecture expertise helps agencies balance flexibility, security, and operational efficiency.
+            Thalen Technologies's multi-cloud architecture expertise helps agencies balance flexibility, security, and operational efficiency.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

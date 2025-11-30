@@ -1339,3 +1339,16 @@
 - [x] Keep only service type tags (RPA, Integration, Analytics, AI, Cloud, Cybersecurity)
 - [x] Keep only compliance framework tags (FedRAMP, StateRAMP, CMMC, CJIS, HIPAA)
 - [x] Test updated tags and verify cleaner design
+
+## Phase 87: Rebrand Website to Thalen Technologies
+- [x] Create new logo for Thalen Technologies (text-based wordmark)
+- [x] Update all "NexDyne" references to "Thalen Technologies" across all pages
+- [x] Update tagline from "Intelligence, Delivered" to "Govern Smart" across all pages
+- [x] Update page titles and metadata
+- [x] Update Navigation component with new branding
+- [x] Update Footer component with new branding
+- [x] Update all case study pages with new company name
+- [x] Update all service pages with new company name
+- [x] Update all industry pages with new company name
+- [x] Update blog posts and insights with new company name
+- [x] Test rebranded website thoroughly

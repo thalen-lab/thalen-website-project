@@ -68,7 +68,7 @@ export default function IntelligenceSecurity() {
               A major intelligence agency needed to enable secure collaboration across 15 partner agencies while maintaining strict compartmentalization of Top Secret/Sensitive Compartmented Information (TS/SCI). Legacy systems created information silos that hindered mission-critical intelligence sharing.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              NexDyne designed and deployed a cross-domain collaboration platform with attribute-based access control, automated classification, and continuous monitoring, enabling secure information sharing across 5,000+ cleared personnel while maintaining zero security incidents over 3+ years of operation.
+              Thalen Technologies designed and deployed a cross-domain collaboration platform with attribute-based access control, automated classification, and continuous monitoring, enabling secure information sharing across 5,000+ cleared personnel while maintaining zero security incidents over 3+ years of operation.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
               <div>
@@ -201,7 +201,7 @@ export default function IntelligenceSecurity() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                NexDyne's cross-domain collaboration platform has fundamentally transformed how we share intelligence across the IC. The platform maintains the strictest security standards while enabling the collaboration our mission requires. Three years of zero security incidents speaks to the quality of their security architecture and implementation.
+                Thalen Technologies's cross-domain collaboration platform has fundamentally transformed how we share intelligence across the IC. The platform maintains the strictest security standards while enabling the collaboration our mission requires. Three years of zero security incidents speaks to the quality of their security architecture and implementation.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -253,7 +253,7 @@ export default function IntelligenceSecurity() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Secure Your Classified Operations</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's intelligence community solutions can enable secure collaboration at the highest classification levels.
+            Discover how Thalen Technologies's intelligence community solutions can enable secure collaboration at the highest classification levels.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

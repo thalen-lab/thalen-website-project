@@ -24,7 +24,7 @@ export default function RealTimeAnalytics() {
               Real-Time Analytics at Government Scale: From Batch Reports to Instant Intelligence
             </h1>
             <div className="flex items-center gap-6 text-sm opacity-90 mb-8">
-              <span>By NexDyne Data Engineering Team</span>
+              <span>By Thalen Technologies Data Engineering Team</span>
               <span>•</span>
               <span>17 min read</span>
               <span>•</span>
@@ -54,7 +54,7 @@ export default function RealTimeAnalytics() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Government decision-making has traditionally relied on batch-processed reports—monthly summaries, quarterly analyses, and annual reviews that provide historical perspective but limited ability to respond to emerging situations. Real-time analytics transforms this paradigm, enabling government agencies to detect patterns as they emerge, respond to threats immediately, and make data-driven decisions at the speed of mission requirements. This comprehensive guide examines real-time analytics for government, addressing the architectural patterns, technologies, and organizational changes required to move from historical reporting to instant intelligence. Drawing from NexDyne's experience implementing real-time analytics across federal agencies, we explore how to build systems that process millions of events per second while maintaining the security, compliance, and reliability government missions demand.
+                Government decision-making has traditionally relied on batch-processed reports—monthly summaries, quarterly analyses, and annual reviews that provide historical perspective but limited ability to respond to emerging situations. Real-time analytics transforms this paradigm, enabling government agencies to detect patterns as they emerge, respond to threats immediately, and make data-driven decisions at the speed of mission requirements. This comprehensive guide examines real-time analytics for government, addressing the architectural patterns, technologies, and organizational changes required to move from historical reporting to instant intelligence. Drawing from Thalen Technologies's experience implementing real-time analytics across federal agencies, we explore how to build systems that process millions of events per second while maintaining the security, compliance, and reliability government missions demand.
               </p>
             </div>
 
@@ -317,7 +317,7 @@ export default function RealTimeAnalytics() {
                 However, real-time is not appropriate for all analytics. The complexity, cost, and operational burden of real-time systems should be justified by clear business value. Agencies should adopt real-time analytics strategically, deploying it where immediate insights enable better outcomes while maintaining batch processing for use cases well-served by historical analysis.
               </p>
               <p className="text-muted-foreground mb-6">
-                Success requires both technical excellence and organizational change. The most sophisticated stream processing architecture delivers no value if insights don't translate to action. NexDyne's approach integrates technology implementation with organizational transformation, ensuring real-time analytics capabilities align with decision-making processes and mission requirements. This is how government agencies transform data into action at the speed of mission needs.
+                Success requires both technical excellence and organizational change. The most sophisticated stream processing architecture delivers no value if insights don't translate to action. Thalen Technologies's approach integrates technology implementation with organizational transformation, ensuring real-time analytics capabilities align with decision-making processes and mission requirements. This is how government agencies transform data into action at the speed of mission needs.
               </p>
             </div>
 
@@ -359,7 +359,7 @@ export default function RealTimeAnalytics() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Transform Data into Instant Intelligence</h2>
           <p className="text-xl opacity-90 mb-8">
-            NexDyne's real-time analytics expertise helps government agencies move from historical reporting to instant, actionable insights.
+            Thalen Technologies's real-time analytics expertise helps government agencies move from historical reporting to instant, actionable insights.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

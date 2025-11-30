@@ -13,7 +13,7 @@ export default function Footer() {
               <img src={APP_LOGO} alt="Incentro" className="h-16" />
             </div>
             <p className="text-sm opacity-90 mb-4 max-w-sm">
-              Intelligence, Delivered. The Automation Strategy Authority for government and enterprise.
+              Govern Smart. The Automation Strategy Authority for government and enterprise.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">

@@ -69,7 +69,7 @@ export default function Engineering() {
               Data Engineering & Pipeline Development
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Analytics platforms are only as good as the data that feeds them. If your data is stuck in legacy systems, updated manually, or riddled with quality issues, your analytics will fail. NexDyne builds enterprise-grade data pipelines that automate data movement, enforce quality standards, and deliver trusted data to your analytics platforms—24/7, with zero manual intervention. From batch ETL to real-time streaming, we engineer the data infrastructure that powers mission-critical analytics.
+              Analytics platforms are only as good as the data that feeds them. If your data is stuck in legacy systems, updated manually, or riddled with quality issues, your analytics will fail. Thalen Technologies builds enterprise-grade data pipelines that automate data movement, enforce quality standards, and deliver trusted data to your analytics platforms—24/7, with zero manual intervention. From batch ETL to real-time streaming, we engineer the data infrastructure that powers mission-critical analytics.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -118,7 +118,7 @@ export default function Engineering() {
                 Most federal agencies have analysts who spend their days manually extracting data from legacy systems, cleaning it in Excel, and copying it into dashboards. This is not analytics work—this is data janitorial work. When data pipelines break, dashboards go stale. When data quality is poor, leadership loses trust in analytics. When data lineage is unknown, audits fail.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                NexDyne builds automated data pipelines that eliminate manual data work. We extract data from your legacy systems (mainframes, Oracle, SQL Server, flat files), transform it into analytics-ready formats, validate quality, and load it into modern data platforms—all automatically, with monitoring and alerting. Your analysts can finally focus on analysis instead of data plumbing.
+                Thalen Technologies builds automated data pipelines that eliminate manual data work. We extract data from your legacy systems (mainframes, Oracle, SQL Server, flat files), transform it into analytics-ready formats, validate quality, and load it into modern data platforms—all automatically, with monitoring and alerting. Your analysts can finally focus on analysis instead of data plumbing.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -152,7 +152,7 @@ export default function Engineering() {
                   <div className="text-sm font-semibold text-accent uppercase tracking-wide">Pipeline Engineering Success</div>
                 </div>
                 <p className="text-lg mb-6 leading-relaxed">
-                  "Our analytics team was spending 30 hours per week manually extracting data from 15 legacy systems and cleaning it for dashboards. When someone went on vacation, dashboards went stale. Data quality was inconsistent. Leadership stopped trusting our reports. NexDyne built automated pipelines that extract, validate, and load data from all 15 systems into our data warehouse every night. Our analysts now spend their time analyzing data instead of moving it around. Dashboard refresh time went from 3 days to 3 hours."
+                  "Our analytics team was spending 30 hours per week manually extracting data from 15 legacy systems and cleaning it for dashboards. When someone went on vacation, dashboards went stale. Data quality was inconsistent. Leadership stopped trusting our reports. Thalen Technologies built automated pipelines that extract, validate, and load data from all 15 systems into our data warehouse every night. Our analysts now spend their time analyzing data instead of moving it around. Dashboard refresh time went from 3 days to 3 hours."
                 </p>
                 <div className="border-t border-accent/20 pt-4">
                   <div className="font-semibold">Robert Thompson</div>
@@ -197,12 +197,12 @@ export default function Engineering() {
         </div>
       </section>
 
-      {/* The NexDyne Approach */}
+      {/* The Thalen Technologies Approach */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne Data Engineering Approach</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies Data Engineering Approach</h2>
               <p className="text-xl text-muted-foreground">
                 We follow a proven methodology for building production-grade data pipelines.
               </p>
@@ -380,7 +380,7 @@ export default function Engineering() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Build a complete data infrastructure with these related NexDyne offerings
+              Build a complete data infrastructure with these related Thalen Technologies offerings
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">

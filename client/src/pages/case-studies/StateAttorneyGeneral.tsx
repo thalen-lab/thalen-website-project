@@ -151,7 +151,7 @@ export default function StateAttorneyGeneralCaseStudy() {
           <div className="mb-12">
             <h2 className="text-4xl font-bold mb-4">Our Solution</h2>
             <p className="text-xl text-muted-foreground">
-              NexDyne designed and implemented a CJIS-compliant, StateRAMP-authorized real-time fraud detection platform with machine learning analytics, multi-agency data integration, and comprehensive compliance controls.
+              Thalen Technologies designed and implemented a CJIS-compliant, StateRAMP-authorized real-time fraud detection platform with machine learning analytics, multi-agency data integration, and comprehensive compliance controls.
             </p>
           </div>
 
@@ -307,7 +307,7 @@ export default function StateAttorneyGeneralCaseStudy() {
         <div className="container max-w-4xl text-center">
           <div className="text-6xl mb-6">"</div>
           <blockquote className="text-2xl md:text-3xl font-medium mb-8 italic">
-            NexDyne delivered a game-changing fraud detection system that's already saved taxpayers over $50 million. Their deep understanding of CJIS compliance requirements and ability to implement sophisticated ML analytics on a tight timeline was exceptional. This platform has transformed how we protect state programs from fraud.
+            Thalen Technologies delivered a game-changing fraud detection system that's already saved taxpayers over $50 million. Their deep understanding of CJIS compliance requirements and ability to implement sophisticated ML analytics on a tight timeline was exceptional. This platform has transformed how we protect state programs from fraud.
           </blockquote>
           <div className="font-semibold text-xl">Chief Deputy Attorney General</div>
           <div className="text-accent">Financial Crimes Division</div>
@@ -319,7 +319,7 @@ export default function StateAttorneyGeneralCaseStudy() {
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your State Agency?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Learn how NexDyne can help your state or local government agency implement CJIS-compliant, StateRAMP-authorized solutions with proven results.
+            Learn how Thalen Technologies can help your state or local government agency implement CJIS-compliant, StateRAMP-authorized solutions with proven results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

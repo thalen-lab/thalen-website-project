@@ -56,7 +56,7 @@ export default function ROIMethodology() {
               Measuring the return on investment (ROI) of automation initiatives is critical for justifying technology investments and demonstrating business value. However, many organizations struggle to accurately quantify both the costs and benefits of automation projects, leading to underinvestment or misallocated resources.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              At NexDyne, we've developed a comprehensive ROI methodology based on 15+ years of automation implementations across federal agencies and enterprise organizations. This framework provides a structured approach to measuring automation success across multiple dimensions.
+              At Thalen Technologies, we've developed a comprehensive ROI methodology based on 15+ years of automation implementations across federal agencies and enterprise organizations. This framework provides a structured approach to measuring automation success across multiple dimensions.
             </p>
 
             <Card className="my-8 bg-accent/10 border-accent/20">
@@ -194,7 +194,7 @@ export default function ROIMethodology() {
               Measuring automation ROI requires a comprehensive framework that captures both quantitative and qualitative benefits across the entire project lifecycle. By following this methodology, organizations can make data-driven investment decisions, set realistic expectations, and demonstrate the business value of automation initiatives.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              At NexDyne, we work with clients to establish ROI measurement frameworks before project kickoff, ensuring clear success criteria and ongoing value tracking. Our typical clients achieve 12-18 month payback periods with sustained 3-5x ROI over three years.
+              At Thalen Technologies, we work with clients to establish ROI measurement frameworks before project kickoff, ensuring clear success criteria and ongoing value tracking. Our typical clients achieve 12-18 month payback periods with sustained 3-5x ROI over three years.
             </p>
           </article>
 

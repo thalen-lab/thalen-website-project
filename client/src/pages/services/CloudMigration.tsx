@@ -105,7 +105,7 @@ export default function CloudMigration() {
               Cloud Migration & Transition
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Migrate mission-critical systems to FedRAMP-compliant cloud environments with proven strategies that ensure complete data integrity, zero downtime, and accelerated timelines. NexDyne's migration framework reduces typical 6-12 month timelines to 30-60 days while maintaining 100% operational continuity.
+              Migrate mission-critical systems to FedRAMP-compliant cloud environments with proven strategies that ensure complete data integrity, zero downtime, and accelerated timelines. Thalen Technologies's migration framework reduces typical 6-12 month timelines to 30-60 days while maintaining 100% operational continuity.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -124,7 +124,7 @@ export default function CloudMigration() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Choose NexDyne Migration</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Choose Thalen Technologies Migration</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Unlike commercial migration services, we understand federal compliance requirements, security clearances, and mission continuity imperatives.
             </p>
@@ -238,7 +238,7 @@ export default function CloudMigration() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Migrate to the Cloud?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive migration assessment and discover how NexDyne can deliver zero-downtime cloud adoption with FedRAMP compliance.
+            Start with a comprehensive migration assessment and discover how Thalen Technologies can deliver zero-downtime cloud adoption with FedRAMP compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

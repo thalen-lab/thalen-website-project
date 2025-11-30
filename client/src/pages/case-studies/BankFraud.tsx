@@ -60,7 +60,7 @@ export default function BankFraud() {
               A top-10 U.S. bank processing 500M+ transactions annually faced escalating fraud losses ($60M+ annually) and customer friction from rule-based fraud detection generating 35% false positive rates. The bank needed a modern fraud detection system balancing security and customer experience.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              NexDyne designed and deployed an AI-powered fraud detection platform using advanced machine learning and behavioral analytics, reducing fraud losses by 75% ($45M prevented annually) while cutting false positives by 80% and improving customer satisfaction scores by 28 points.
+              Thalen Technologies designed and deployed an AI-powered fraud detection platform using advanced machine learning and behavioral analytics, reducing fraud losses by 75% ($45M prevented annually) while cutting false positives by 80% and improving customer satisfaction scores by 28 points.
             </p>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function BankFraud() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                NexDyne's AI fraud detection platform delivered results beyond our expectations. The $45M in prevented fraud is significant, but the 80% reduction in false positives has transformed our customer experience. Our fraud analysts now focus on sophisticated cases instead of reviewing false alarms, and customer satisfaction has never been higher.
+                Thalen Technologies's AI fraud detection platform delivered results beyond our expectations. The $45M in prevented fraud is significant, but the 80% reduction in false positives has transformed our customer experience. Our fraud analysts now focus on sophisticated cases instead of reviewing false alarms, and customer satisfaction has never been higher.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -231,7 +231,7 @@ export default function BankFraud() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Protect Your Institution from Fraud</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's AI fraud detection solutions can reduce losses while improving customer experience.
+            Discover how Thalen Technologies's AI fraud detection solutions can reduce losses while improving customer experience.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

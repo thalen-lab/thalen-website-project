@@ -10,7 +10,7 @@ export default function About() {
   const principles = [
     {
       number: '01',
-      title: 'Intelligence, Delivered',
+      title: 'Govern Smart',
       description: 'Every automation strategy is designed to augment human decision-making with intelligent insights, not replace critical thinking. We believe the most powerful transformations happen when technology amplifies human expertise.'
     },
     {
@@ -105,7 +105,7 @@ export default function About() {
               </p>
               
               <p>
-                We saw a need for a different kind of automation strategy company, and we knew it would take a different kind of approach to build it. That's why we founded NexDyne Technologies.
+                We saw a need for a different kind of automation strategy company, and we knew it would take a different kind of approach to build it. That's why we founded Thalen Technologies Technologies.
               </p>
             </div>
           </motion.div>
@@ -391,12 +391,12 @@ export default function About() {
           >
             <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wide">Our Vision for the Future</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Organizations around the world are using NexDyne to transform their most important operations.
+              Organizations around the world are using Thalen Technologies to transform their most important operations.
             </h2>
             
             <div className="space-y-6 text-lg opacity-90">
               <p>
-                With NexDyne's automation strategies, government agencies are achieving new levels of operational efficiency while maintaining the highest security standards. Federal departments are reducing processing times from weeks to hours, healthcare systems are improving patient outcomes through streamlined workflows, and critical infrastructure operators are enhancing reliability through predictive automation.
+                With Thalen Technologies's automation strategies, government agencies are achieving new levels of operational efficiency while maintaining the highest security standards. Federal departments are reducing processing times from weeks to hours, healthcare systems are improving patient outcomes through streamlined workflows, and critical infrastructure operators are enhancing reliability through predictive automation.
               </p>
               
               <p>

@@ -117,7 +117,7 @@ export default function CloudSecurity() {
               Cloud Security & Compliance
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Government-grade security with FedRAMP High authorization, CMMC Level 3 certification, and zero-trust architecture for mission-critical workloads. NexDyne delivers defense-grade cloud security meeting the most stringent federal compliance requirements while enabling operational agility.
+              Government-grade security with FedRAMP High authorization, CMMC Level 3 certification, and zero-trust architecture for mission-critical workloads. Thalen Technologies delivers defense-grade cloud security meeting the most stringent federal compliance requirements while enabling operational agility.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -247,7 +247,7 @@ export default function CloudSecurity() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Secure Your Cloud Infrastructure?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive security assessment and discover how NexDyne can deliver FedRAMP-authorized, CMMC-certified cloud security.
+            Start with a comprehensive security assessment and discover how Thalen Technologies can deliver FedRAMP-authorized, CMMC-certified cloud security.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

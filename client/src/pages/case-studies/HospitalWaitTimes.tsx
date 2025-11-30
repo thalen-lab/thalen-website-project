@@ -60,7 +60,7 @@ export default function HospitalWaitTimes() {
               A 500-bed urban hospital with 150,000+ annual ER visits faced chronic overcrowding with average wait times exceeding 4 hours. Patient satisfaction scores ranked in the bottom 10th percentile nationally, and the hospital faced CMS penalties for excessive wait times.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              NexDyne deployed an AI-powered patient flow optimization platform that reduced average ER wait times by 65% (from 4.2 hours to 1.5 hours), improved patient satisfaction scores by 42 points, and eliminated CMS penalties while handling 15% more patient volume.
+              Thalen Technologies deployed an AI-powered patient flow optimization platform that reduced average ER wait times by 65% (from 4.2 hours to 1.5 hours), improved patient satisfaction scores by 42 points, and eliminated CMS penalties while handling 15% more patient volume.
             </p>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function HospitalWaitTimes() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                The patient flow optimization platform from NexDyne has been transformational. We've cut wait times by 65% while handling 15% more patients. Our staff is more efficient, our patients are happier, and we've eliminated CMS penalties. This is the future of hospital operations.
+                The patient flow optimization platform from Thalen Technologies has been transformational. We've cut wait times by 65% while handling 15% more patients. Our staff is more efficient, our patients are happier, and we've eliminated CMS penalties. This is the future of hospital operations.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -231,7 +231,7 @@ export default function HospitalWaitTimes() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Optimize Your Patient Flow</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's patient flow optimization solutions can reduce wait times and improve patient satisfaction.
+            Discover how Thalen Technologies's patient flow optimization solutions can reduce wait times and improve patient satisfaction.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

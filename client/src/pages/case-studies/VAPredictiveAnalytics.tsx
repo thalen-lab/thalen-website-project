@@ -113,7 +113,7 @@ export default function VAPredictiveAnalytics() {
       {/* Solution Section */}
       <section className="py-20 bg-muted/30">
         <div className="container max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">The NexDyne Solution</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">The Thalen Technologies Solution</h2>
           <div className="space-y-6">
             <Card>
               <CardContent className="p-6">
@@ -254,7 +254,7 @@ export default function VAPredictiveAnalytics() {
             <CardContent className="p-8">
               <div className="text-3xl text-accent mb-6">"</div>
               <p className="text-xl mb-6 italic">
-                NexDyne's predictive analytics platform transformed how we serve veterans. We are processing claims faster than ever while maintaining the accuracy and fairness that veterans deserve. The machine learning models give our adjudicators superpowers—they can focus on complex decisions while simple cases move through the system quickly.
+                Thalen Technologies's predictive analytics platform transformed how we serve veterans. We are processing claims faster than ever while maintaining the accuracy and fairness that veterans deserve. The machine learning models give our adjudicators superpowers—they can focus on complex decisions while simple cases move through the system quickly.
               </p>
               <div className="flex items-center gap-4">
                 <div>
@@ -273,7 +273,7 @@ export default function VAPredictiveAnalytics() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Services Used in This Project</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explore the NexDyne capabilities that delivered these results
+              Explore the Thalen Technologies capabilities that delivered these results
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">

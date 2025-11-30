@@ -24,7 +24,7 @@ export default function ResponsibleAI() {
               Responsible AI Implementation: Balancing Innovation with Accountability in Government
             </h1>
             <div className="flex items-center gap-6 text-sm opacity-90 mb-8">
-              <span>By NexDyne AI Ethics Team</span>
+              <span>By Thalen Technologies AI Ethics Team</span>
               <span>•</span>
               <span>18 min read</span>
               <span>•</span>
@@ -54,7 +54,7 @@ export default function ResponsibleAI() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Artificial intelligence offers transformative potential for government operations—from automating routine tasks to enabling data-driven policy decisions. However, the deployment of AI in government contexts carries unique responsibilities and risks. Unlike private sector applications, government AI systems directly impact citizens' rights, access to services, and fundamental fairness. This comprehensive guide provides a framework for responsible AI implementation in government, drawing from NexDyne's experience deploying AI solutions across federal, state, and local agencies while maintaining accountability, transparency, and ethical standards.
+                Artificial intelligence offers transformative potential for government operations—from automating routine tasks to enabling data-driven policy decisions. However, the deployment of AI in government contexts carries unique responsibilities and risks. Unlike private sector applications, government AI systems directly impact citizens' rights, access to services, and fundamental fairness. This comprehensive guide provides a framework for responsible AI implementation in government, drawing from Thalen Technologies's experience deploying AI solutions across federal, state, and local agencies while maintaining accountability, transparency, and ethical standards.
               </p>
             </div>
 
@@ -303,7 +303,7 @@ export default function ResponsibleAI() {
                 The path to responsible AI requires commitment from leadership, investment in governance structures, and cultural change within agencies. It demands collaboration between technical teams, policy experts, legal counsel, and affected communities. It requires humility about AI's limitations and willingness to modify or halt systems that aren't working as intended.
               </p>
               <p className="text-muted-foreground mb-6">
-                Government agencies that embrace responsible AI principles position themselves to lead in the AI era—not by deploying the most advanced algorithms, but by deploying AI systems that are fair, transparent, accountable, and worthy of public trust. This is the standard to which government AI should be held, and the standard NexDyne is committed to helping agencies achieve.
+                Government agencies that embrace responsible AI principles position themselves to lead in the AI era—not by deploying the most advanced algorithms, but by deploying AI systems that are fair, transparent, accountable, and worthy of public trust. This is the standard to which government AI should be held, and the standard Thalen Technologies is committed to helping agencies achieve.
               </p>
             </div>
 
@@ -345,7 +345,7 @@ export default function ResponsibleAI() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Deploy AI Responsibly</h2>
           <p className="text-xl opacity-90 mb-8">
-            NexDyne's responsible AI framework helps government agencies harness AI's benefits while maintaining fairness, transparency, and accountability.
+            Thalen Technologies's responsible AI framework helps government agencies harness AI's benefits while maintaining fairness, transparency, and accountability.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

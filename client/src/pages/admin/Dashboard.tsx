@@ -63,7 +63,7 @@ export default function AdminDashboard() {
         <div>
           <h1 className="text-3xl font-bold text-navy-900">Dashboard</h1>
           <p className="text-gray-600 mt-2">
-            Welcome to the NexDyne content management system
+            Welcome to the Thalen Technologies content management system
           </p>
         </div>
 

@@ -142,7 +142,7 @@ export default function DigitalTransformation() {
       <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Agencies Choose NexDyne for Modernization</h2>
+            <h2 className="text-4xl font-bold mb-4">Why Agencies Choose Thalen Technologies for Modernization</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We're not a platform vendor—we're modernization specialists who help you select and implement the right solutions for your mission.
             </p>

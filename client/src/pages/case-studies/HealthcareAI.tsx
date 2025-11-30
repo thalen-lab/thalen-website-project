@@ -60,7 +60,7 @@ export default function HealthcareAI() {
               A regional healthcare system serving 2M+ patients across 15 facilities struggled with fragmented data systems, leading to delayed diagnoses, suboptimal treatment plans, and operational inefficiencies costing millions annually.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              NexDyne designed and deployed an AI-powered analytics platform that unified patient data across all facilities, providing real-time clinical insights while maintaining strict HIPAA compliance and achieving measurable improvements in both patient outcomes and operational efficiency.
+              Thalen Technologies designed and deployed an AI-powered analytics platform that unified patient data across all facilities, providing real-time clinical insights while maintaining strict HIPAA compliance and achieving measurable improvements in both patient outcomes and operational efficiency.
             </p>
           </div>
         </div>
@@ -175,7 +175,7 @@ export default function HealthcareAI() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                The AI analytics platform from NexDyne has fundamentally transformed how we deliver care. Real-time insights have enabled our clinicians to make faster, more informed decisions, directly improving patient outcomes. The $12M in savings was significant, but the improvement in care quality is priceless.
+                The AI analytics platform from Thalen Technologies has fundamentally transformed how we deliver care. Real-time insights have enabled our clinicians to make faster, more informed decisions, directly improving patient outcomes. The $12M in savings was significant, but the improvement in care quality is priceless.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -227,7 +227,7 @@ export default function HealthcareAI() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Transform Healthcare Delivery</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's healthcare analytics solutions can improve patient outcomes and operational efficiency.
+            Discover how Thalen Technologies's healthcare analytics solutions can improve patient outcomes and operational efficiency.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
