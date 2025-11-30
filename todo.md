@@ -1255,3 +1255,10 @@
 - [ ] Include compliance frameworks (FedRAMP, FISMA, NIST)
 - [ ] Add ROI metrics and cost savings examples
 - [ ] Include clearance levels and agency experience
+
+## Phase 8: Update Homepage RPA Service Card
+
+- [x] Update RPA Implementation Services card on homepage
+- [x] Match messaging to repositioned RPA service page
+- [x] Emphasize FedRAMP platform implementation (not product sales)
+- [x] Include government-specific automation metrics
