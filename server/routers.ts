@@ -6,7 +6,8 @@ import { z } from "zod";
 import { notifyOwner } from "./_core/notification";
 import { getDb } from "./db";
 import { comments, savedSearches, methodologyAssessments } from "../drizzle/schema";
-import { eq, and, isNull, desc, sql, count } from "drizzle-orm";
+import { eq, and, isNull, desc, sql, count, lt } from "drizzle-orm";
+import { checkAssessmentReminders } from "./jobs/assessment-reminders";
 import { adminRouter } from "./adminRouters";
 
 export const appRouter = router({
@@ -394,6 +395,25 @@ ${input.details || 'Not provided'}
           success: true,
         };
       }),
+
+    // Manually trigger reminder check (admin only)
+    triggerReminders: protectedProcedure.mutation(async ({ ctx }) => {
+      // Check admin permission
+      if (ctx.user.role !== "admin") {
+        throw new Error("Unauthorized");
+      }
+
+      try {
+        await checkAssessmentReminders();
+        return {
+          success: true,
+          message: "Reminder check completed successfully",
+        };
+      } catch (error) {
+        console.error("[Manual Reminder Trigger] Error:", error);
+        throw new Error("Failed to trigger reminders");
+      }
+    }),
 
     // Get analytics data
     analytics: protectedProcedure.query(async ({ ctx }) => {

@@ -275,6 +275,8 @@ export const methodologyAssessments = mysqlTable("methodology_assessments", {
   status: mysqlEnum("status", ["new", "contacted", "qualified", "converted", "closed"]).default("new").notNull(),
   /** Notes from sales team (internal) */
   internalNotes: text("internalNotes"),
+  /** Timestamp when follow-up reminder was sent (null if not sent yet) */
+  reminderSentAt: timestamp("reminderSentAt"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });

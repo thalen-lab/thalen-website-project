@@ -1398,3 +1398,11 @@
 - [x] Add email notification system for new submissions
 - [x] Create analytics dashboard with trends and conversion metrics
 - [x] Test all assessment management features
+
+## Phase 94: Automated Follow-up Reminder System
+- [x] Design reminder tracking system (track when reminders are sent)
+- [x] Create scheduled job to check assessments older than 24 hours in "new" status
+- [x] Implement email reminder notification with assessment details
+- [x] Add manual trigger button in admin dashboard
+- [x] Test reminder system with various scenarios
+- [x] Document reminder system for team

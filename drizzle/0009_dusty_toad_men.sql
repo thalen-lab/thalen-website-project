@@ -1,0 +1,1 @@
+ALTER TABLE `methodology_assessments` ADD `reminderSentAt` timestamp;

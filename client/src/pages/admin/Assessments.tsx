@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/dialog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Search, Mail, Phone, Building, Shield, FileText, Calendar } from "lucide-react";
+import { Search, Mail, Phone, Building, Shield, FileText, Calendar, Bell } from "lucide-react";
 import { toast } from "sonner";
 import { format } from "date-fns";
 
@@ -47,6 +47,15 @@ export default function Assessments() {
     },
     onError: (error) => {
       toast.error(error.message || "Failed to update assessment");
+    },
+  });
+
+  const triggerRemindersMutation = trpc.methodologyAssessment.triggerReminders.useMutation({
+    onSuccess: () => {
+      toast.success("Reminder check completed successfully");
+    },
+    onError: (error) => {
+      toast.error(error.message || "Failed to trigger reminders");
     },
   });
 
@@ -103,11 +112,22 @@ export default function Assessments() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold">Assessment Requests</h1>
-        <p className="text-muted-foreground mt-2">
-          Manage RAPID Framework methodology assessment submissions
-        </p>
+      <div className="flex items-start justify-between">
+        <div>
+          <h1 className="text-3xl font-bold">Assessment Requests</h1>
+          <p className="text-muted-foreground mt-2">
+            Manage RAPID Framework methodology assessment submissions
+          </p>
+        </div>
+        <Button
+          onClick={() => triggerRemindersMutation.mutate()}
+          disabled={triggerRemindersMutation.isPending}
+          variant="outline"
+          className="flex items-center gap-2"
+        >
+          <Bell className="h-4 w-4" />
+          {triggerRemindersMutation.isPending ? "Checking..." : "Check Reminders Now"}
+        </Button>
       </div>
 
       {/* Filters */}
