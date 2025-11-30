@@ -1199,3 +1199,25 @@
 - [x] Add interactive Gantt chart or timeline view
 - [x] Create downloadable roadmap PDF
 - [x] Add "Get Expert Help" CTAs at each milestone
+
+## Phase 5: Update Remaining Service Pages
+
+### Systems Integration Services Page
+- [x] Reposition as "Government Systems Integration & Interoperability"
+- [x] Update hero section with FedRAMP platform integration messaging
+- [x] Reduce subcategory cards to 4 primary services
+- [x] Add "Additional Capabilities" section for remaining services
+- [x] Emphasize multi-vendor FedRAMP platform integration
+- [x] Add government agency experience section
+- [x] Include API integration and data flow security messaging
+- [x] Add legacy system modernization with FedRAMP platforms
+
+### Government IT Transformation Page
+- [x] Reposition as "Federal IT Modernization & Transformation"
+- [x] Update hero section with government modernization focus
+- [x] Reduce subcategory cards to 4 primary services
+- [x] Add "Additional Capabilities" section
+- [x] Emphasize vendor-neutral consulting approach
+- [x] Add FedRAMP platform selection and implementation
+- [x] Include change management for government agencies
+- [x] Add TMF (Technology Modernization Fund) eligibility messaging
