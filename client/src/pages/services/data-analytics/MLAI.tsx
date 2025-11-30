@@ -153,21 +153,7 @@ export default function MLAI() {
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Brain className="h-8 w-8 text-accent" />
-                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Fraud Detection Success</div>
-                </div>
-                <p className="text-lg mb-6 leading-relaxed">
-                  "We were losing $1.2B annually to benefits fraud. Manual review caught maybe 10% of fraudulent claims. Thalen Technologies deployed an ML system that analyzes claim patterns, applicant behavior, and third-party data to flag suspicious claims before payment. In the first year, we prevented $500M in fraud while maintaining a 95% accuracy rate. The system explains why each claim is flagged, so our investigators can focus on high-risk cases instead of chasing false positives."
-                </p>
-                <div className="border-t border-accent/20 pt-4">
-                  <div className="font-semibold">Maria Rodriguez</div>
-                  <div className="text-sm text-muted-foreground">Chief of Fraud Prevention - Social Security Administration</div>
-                </div>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </section>

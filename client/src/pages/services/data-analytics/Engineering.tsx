@@ -145,21 +145,7 @@ export default function Engineering() {
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Database className="h-8 w-8 text-accent" />
-                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Pipeline Engineering Success</div>
-                </div>
-                <p className="text-lg mb-6 leading-relaxed">
-                  "Our analytics team was spending 30 hours per week manually extracting data from 15 legacy systems and cleaning it for dashboards. When someone went on vacation, dashboards went stale. Data quality was inconsistent. Leadership stopped trusting our reports. Thalen Technologies built automated pipelines that extract, validate, and load data from all 15 systems into our data warehouse every night. Our analysts now spend their time analyzing data instead of moving it around. Dashboard refresh time went from 3 days to 3 hours."
-                </p>
-                <div className="border-t border-accent/20 pt-4">
-                  <div className="font-semibold">Robert Thompson</div>
-                  <div className="text-sm text-muted-foreground">Director of Analytics - Department of Veterans Affairs</div>
-                </div>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </section>

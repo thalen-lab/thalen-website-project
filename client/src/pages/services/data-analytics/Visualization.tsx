@@ -145,21 +145,7 @@ export default function Visualization() {
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Zap className="h-8 w-8 text-accent" />
-                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Intelligence Analysis Success</div>
-                </div>
-                <p className="text-lg mb-6 leading-relaxed">
-                  "Our analysts were drowning in data from 40+ systems. They spent more time searching for information than analyzing it. Thalen Technologies built us a unified intelligence workbench that correlates SIGINT, HUMINT, and OSINT in real-time. Analysts can now query across all sources in seconds, visualize relationships, and brief leadership with confidence. Analysis time dropped 60%, and we are identifying threats we would have missed before."
-                </p>
-                <div className="border-t border-accent/20 pt-4">
-                  <div className="font-semibold">Colonel David Chen</div>
-                  <div className="text-sm text-muted-foreground">Director of Intelligence - U.S. Cyber Command</div>
-                </div>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </section>
