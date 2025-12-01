@@ -1,5 +1,6 @@
-import { CheckCircle2, Shield, Lock, AlertTriangle, Code2, Zap, Database } from "lucide-react";
+import { CheckCircle2, Shield, Lock, AlertTriangle, Code2, Zap, Database, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -9,7 +10,7 @@ export default function ApplicationSecurity() {
   const benefits = [
     { icon: Shield, title: "Secure SDLC Implementation", description: "Security built into every phase of development—from requirements to deployment and beyond." },
     { icon: Lock, title: "Continuous Security Testing", description: "Automated vulnerability scanning, static analysis, dynamic testing, and penetration testing throughout development." },
-    { icon: CheckCircle2, title: "FedRAMP Compliance Validation", description: "Ensure applications meet FedRAMP, NIST 800-53, and federal security requirements with comprehensive documentation." },
+    { icon: CheckCircle2, title: "FedRAMP Compliance Validation", description: "Ensure applications meet FedRAMP, StateRAMP, NIST 800-53, and government security requirements (federal, state, local) with comprehensive documentation." },
     { icon: AlertTriangle, title: "Vulnerability Remediation", description: "Rapid identification and remediation of security vulnerabilities with prioritized risk-based approach." }
   ];
 
@@ -28,23 +29,46 @@ export default function ApplicationSecurity() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3djFoLTd6TTI1IDEzNGg3djFoLTd6TTE2IDEzNGg3djFoLTd6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
-        <div className="container relative z-10">
-          <Breadcrumb items={[{ label: "Application Development & Integration", href: "/services/application-development" }, { label: "Application Security & Compliance" }]} />
-          <div className="max-w-4xl mt-8">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">Secure SDLC • FedRAMP Validation</div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">Application Security & Compliance</h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">We help agencies implement secure software development lifecycle (SDLC) practices with DevSecOps pipelines, automated security testing, and compliance validation tools. Ensure your applications meet FedRAMP, NIST 800-53, and federal security requirements through our proven implementation framework.</p>
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
+        <div className="container">
+          <div className="max-w-4xl">
+            <Breadcrumb 
+              items={[
+                { label: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
+                { label: 'Application Security & Compliance' }
+              ]}
+              className="text-primary-foreground/80 hover:text-primary-foreground mb-4"
+            />
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              Secure SDLC • FedRAMP Validation
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Application Security & Compliance
+            </h1>
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              We help agencies implement secure software development lifecycle (SDLC) practices with DevSecOps pipelines, automated security testing, and compliance validation tools. Ensure your applications meet FedRAMP, StateRAMP, NIST 800-53, and government security requirements (federal, state, local) through our proven implementation framework.
+            </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white"><Link href="/contact">Secure Your Apps</Link></Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10"><Link href="/package-builder">Build Service Package</Link></Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                  Secure Your Apps
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/resources">
+                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                  Download Security Guide
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Application Security Matters</h2>
@@ -75,7 +99,7 @@ export default function ApplicationSecurity() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {securityPractices.map((practice, index) => (
-              <div key={index} className="bg-white rounded-lg p-8">
+              <div key={index} className="bg-background rounded-lg p-8 border-2 border-border hover:border-accent transition-colors">
                 <h3 className="text-2xl font-bold mb-3">{practice.title}</h3>
                 <p className="text-muted-foreground">{practice.description}</p>
               </div>
@@ -84,11 +108,26 @@ export default function ApplicationSecurity() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
+      {/* CTA */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Secure Your Applications?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Schedule a consultation to explore how we can help you build security into your development process.</p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-white"><Link href="/contact">Schedule Free Consultation</Link></Button>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Secure Your Applications?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Schedule a consultation to explore how we can help you build security into your development process.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Schedule Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="/case-studies">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                View Security Case Studies
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

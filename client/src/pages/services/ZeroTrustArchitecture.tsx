@@ -192,7 +192,7 @@ export default function ZeroTrustArchitecture() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Zero Trust Frameworks & Standards</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Implementation aligned with federal and industry Zero Trust frameworks and best practices.
+              Implementation aligned with government (federal, state, local) and industry Zero Trust frameworks and best practices.
             </p>
           </div>
 

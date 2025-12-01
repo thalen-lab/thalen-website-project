@@ -43,7 +43,7 @@ export default function Cybersecurity() {
     { name: 'Penetration Testing & Red Team Exercises', description: 'Offensive security testing to identify vulnerabilities before adversaries' },
     { name: 'Incident Response & Digital Forensics', description: 'Rapid breach containment and forensic analysis with <1 hour response time' },
     { name: 'Vulnerability Management Programs', description: 'Continuous scanning and remediation tracking for FISMA compliance' },
-    { name: 'Security Awareness Training', description: 'Role-based security training for federal employees and contractors' }
+    { name: 'Security Awareness Training', description: 'Role-based security training for government employees and contractors' }
   ];
 
   const keyDifferentiators = [
@@ -92,7 +92,7 @@ export default function Cybersecurity() {
 
   const governmentExperience = [
     { agency: 'Defense Contractors', project: 'CMMC Level 3 Certification', outcome: '15 contractors certified' },
-    { agency: 'Federal Civilian Agencies', project: 'FedRAMP ATO Support', outcome: '8 ATOs achieved' },
+    { agency: 'Government Civilian Agencies', project: 'FedRAMP/StateRAMP ATO Support', outcome: '8 ATOs achieved' },
     { agency: 'Intelligence Community', project: 'Zero Trust Implementation', outcome: 'TS/SCI environments secured' }
   ];
 
@@ -108,7 +108,7 @@ export default function Cybersecurity() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Federal Cybersecurity & Compliance Services
+              Government Cybersecurity & Compliance Services
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
               We help government agencies and defense contractors implement FedRAMP-authorized security platforms, achieve CMMC certification, and deploy Zero Trust architectures. Vendor-neutral consulting with cleared security professionals and proven ATO success.
@@ -207,7 +207,7 @@ export default function Cybersecurity() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Compliance Framework Expertise</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Deep expertise implementing security controls across all major federal compliance frameworks with proven ATO success.
+              Deep expertise implementing security controls across all major government compliance frameworks (FedRAMP, StateRAMP, CJIS) with proven ATO success.
             </p>
           </div>
 

@@ -11,7 +11,7 @@ export default function IdentityAccessManagement() {
     {
       icon: Key,
       title: 'Multi-Factor Authentication (MFA)',
-      description: 'Implement PIV/CAC card authentication, hardware tokens, and biometric MFA to meet federal identity assurance requirements.',
+      description: 'Implement PIV/CAC card authentication, hardware tokens, and biometric MFA to meet government identity assurance requirements (NIST 800-63).',
       benefits: ['PIV/CAC integration', 'Hardware token support', 'Biometric authentication', 'FIPS 140-2 compliant']
     },
     {
@@ -90,7 +90,7 @@ export default function IdentityAccessManagement() {
               Identity & Access Management (IAM)
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Implement Zero Trust identity solutions with PIV/CAC authentication, privileged access management, and automated governance. Thalen Technologies delivers federal-grade IAM that meets NIST 800-63 identity assurance requirements while improving user experience.
+              Implement Zero Trust identity solutions with PIV/CAC authentication, privileged access management, and automated governance. Thalen Technologies delivers government-grade IAM that meets NIST 800-63 identity assurance requirements (federal, state, local) while improving user experience.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -111,7 +111,7 @@ export default function IdentityAccessManagement() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive IAM Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end identity and access management from authentication to governance, designed for federal security requirements.
+              End-to-end identity and access management from authentication to governance, designed for government security requirements across all levels.
             </p>
           </div>
 
@@ -230,7 +230,7 @@ export default function IdentityAccessManagement() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Implement Zero Trust Identity</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule an IAM assessment and discover how Thalen Technologies can deliver secure, compliant identity and access management for your federal environment.
+            Schedule an IAM assessment and discover how Thalen Technologies can deliver secure, compliant identity and access management for your government environment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

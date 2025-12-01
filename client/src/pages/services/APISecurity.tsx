@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight, Shield, Lock, Zap, Eye, FileCheck, AlertTriangle, Network, Key } from 'lucide-react';
 
 export default function APISecurity() {
@@ -97,11 +98,13 @@ export default function APISecurity() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <Link href="/services/system-integration">
-              <Button variant="ghost" className="mb-6 text-primary-foreground hover:bg-primary-foreground/10">
-                ← Back to Systems Integration
-              </Button>
-            </Link>
+            <Breadcrumb 
+              items={[
+                { label: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
+                { label: 'API Security & Management' }
+              ]}
+              className="text-primary-foreground/80 hover:text-primary-foreground mb-4"
+            />
             <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
               API Security
             </div>

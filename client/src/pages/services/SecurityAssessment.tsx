@@ -22,7 +22,7 @@ export default function SecurityAssessment() {
     {
       icon: ClipboardCheck,
       title: 'NIST 800-53/171 Compliance',
-      description: 'NIST framework implementation and assessment for both federal civilian (800-53) and defense contractor (800-171) requirements.',
+      description: 'NIST framework implementation and assessment for government agencies (800-53) and defense contractors (800-171) across federal, state, and local levels.',
       benefits: ['Control implementation', 'Compliance gap analysis', 'POA&M management', 'Continuous monitoring']
     },
     {
@@ -110,9 +110,9 @@ export default function SecurityAssessment() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Choose Thalen Technologies</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose Thalen Technologies</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Unlike generic compliance consultants, we understand federal authorization processes, security clearances, and mission continuity imperatives.
+              Unlike generic compliance consultants, we understand government authorization processes (FedRAMP, StateRAMP, CJIS), security clearances, and mission continuity imperatives.
             </p>
           </div>
 
@@ -183,7 +183,7 @@ export default function SecurityAssessment() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Supported Compliance Frameworks</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Expert assessment and certification support across all major federal and commercial security frameworks.
+              Expert assessment and certification support across all major government security frameworks (FedRAMP, StateRAMP, CMMC, CJIS).
             </p>
           </div>
 

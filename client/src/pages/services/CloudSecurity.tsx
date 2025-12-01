@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight, CheckCircle2, Shield, Lock, Eye, AlertTriangle, FileCheck, Network, Cloud, RefreshCw, Server, Users, Key } from 'lucide-react';
 
@@ -72,7 +73,7 @@ export default function CloudSecurity() {
     {
       framework: 'FedRAMP',
       levels: ['High', 'Moderate', 'Low'],
-      description: 'Federal Risk and Authorization Management Program for cloud services'
+      description: 'Federal Risk and Authorization Management Program (FedRAMP) for cloud services'
     },
     {
       framework: 'CMMC',
@@ -87,7 +88,7 @@ export default function CloudSecurity() {
     {
       framework: 'FISMA',
       levels: ['High', 'Moderate', 'Low'],
-      description: 'Federal Information Security Management Act compliance'
+      description: 'Federal Information Security Management Act (FISMA) compliance'
     }
   ];
 
@@ -103,21 +104,22 @@ export default function CloudSecurity() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/cloud" className="hover:text-accent">Cloud Infrastructure & Modernization</Link>
-            <span className="mx-2">/</span>
-            <span>Cloud Security & Compliance</span>
-          </nav>
-          
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
+            <Breadcrumb 
+              items={[
+                { label: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
+                { label: 'Cloud Security & Compliance' }
+              ]}
+              className="text-primary-foreground/80 hover:text-primary-foreground mb-4"
+            />
+            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-6">
               FedRAMP High • CMMC Level 3 • NIST 800-53
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Cloud Security & Compliance
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies implement government-grade security controls for FedRAMP High authorization, StateRAMP, CMMC Level 3 certification, and zero-trust architecture for mission-critical workloads. Our team delivers defense-grade cloud security implementation meeting the most stringent government compliance requirements (federal, state, local) while enabling operational agility.
+              We help agencies implement government-grade security controls for FedRAMP High authorization, StateRAMP, CMMC Level 3 certification, and zero-trust architecture for mission-critical workloads. Our team delivers defense-grade cloud security implementation meeting the most stringent government compliance requirements across federal, state, and local levels while enabling operational agility.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">

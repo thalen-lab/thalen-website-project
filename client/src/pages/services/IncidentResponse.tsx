@@ -111,7 +111,7 @@ export default function IncidentResponse() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive Incident Response Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end incident response from detection to recovery, designed for mission-critical federal environments.
+              End-to-end incident response from detection to recovery, designed for mission-critical government environments (federal, state, local).
             </p>
           </div>
 
@@ -182,7 +182,7 @@ export default function IncidentResponse() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Digital Forensics Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Court-admissible forensic analysis across all digital evidence types for federal investigations.
+              Court-admissible forensic analysis across all digital evidence types for government investigations (federal, state, local).
             </p>
           </div>
 
