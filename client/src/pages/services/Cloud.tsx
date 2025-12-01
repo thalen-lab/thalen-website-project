@@ -246,7 +246,7 @@ export default function Cloud() {
                         <span className="font-semibold">Implementation Services:</span> {platform.services}
                       </p>
                     </div>
-                    <CloudIcon className="h-16 w-16 text-accent/30" />
+                    <CloudIcon className="h-16 w-16 text-primary" />
                   </div>
                 </CardContent>
               </Card>
