@@ -140,21 +140,7 @@ export default function Integration() {
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Network className="h-8 w-8 text-primary" />
-                  <div className="text-sm font-semibold text-primary uppercase tracking-wide">Defense Integration Success</div>
-                </div>
-                <p className="text-lg mb-6 leading-relaxed">
-                  "We had 14 separate systems supporting our logistics operation—everything from 40-year-old inventory databases to modern supply chain analytics. Our team spent 30% of their time just moving data between systems. Thalen Technologies integrated all 14 systems in 90 days. Now data flows automatically, and we've reallocated 12 FTEs to strategic planning instead of data entry."
-                </p>
-                <div className="border-t border-accent/20 pt-4">
-                  <div className="font-semibold">Lt. Col. Marcus Johnson, USAF</div>
-                  <div className="text-sm text-muted-foreground">Director of Logistics - Air Force Materiel Command</div>
-                </div>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </section>
