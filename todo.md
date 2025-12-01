@@ -1475,4 +1475,18 @@
 - [x] Add hover:border-accent to integration challenge cards
 - [x] Update RelatedServices component icons from orange to blue (text-accent → text-primary)
 - [x] Verify hover effects work on all card types across all 4 Automation pages
-- [ ] Save checkpoint after hover effect updates
+- [x] Save checkpoint after hover effect updates
+
+## Phase 116: Remove Hidden Cost Section from Orchestration Page
+- [ ] Remove "The Hidden Cost of Manual Process Management" section from Orchestration.tsx
+- [ ] Remove before/after comparison table (Without Orchestration vs With Thalen Technologies)
+- [ ] Remove testimonial from David Richardson (DHS Chief Procurement Officer)
+- [ ] Verify page layout remains clean after section removal
+- [ ] Save checkpoint after content removal
+
+## Phase 116: Remove Hidden Cost Section from Orchestration Page - COMPLETE
+- [x] Remove "The Hidden Cost of Manual Process Management" section from Orchestration.tsx
+- [x] Remove before/after comparison table (Without Orchestration vs With Thalen Technologies)
+- [x] Remove testimonial from David Richardson (DHS Chief Procurement Officer)
+- [x] Verify page layout remains clean after section removal
+- [ ] Save checkpoint after content removal
