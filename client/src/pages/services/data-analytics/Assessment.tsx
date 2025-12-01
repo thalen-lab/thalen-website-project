@@ -247,7 +247,7 @@ export default function DataMaturityAssessment() {
         <section className="py-16">
           <div className="container max-w-4xl">
             <div className="flex items-center gap-3 mb-8">
-              <Target className="h-8 w-8 text-accent" />
+              <Target className="h-8 w-8 text-primary" />
               <h2 className="text-3xl font-bold">Recommended Next Steps</h2>
             </div>
             <div className="grid gap-4 mb-12">
@@ -255,7 +255,7 @@ export default function DataMaturityAssessment() {
                 <Card key={index}>
                   <CardContent className="p-6 flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-muted text-accent font-bold">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-card border-2 border-border text-foreground font-bold">
                         {index + 1}
                       </div>
                       <div>
@@ -381,7 +381,7 @@ export default function DataMaturityAssessment() {
         <div className="container max-w-3xl">
           <Card>
             <CardContent className="p-8">
-              <div className="text-sm font-semibold text-accent mb-4">{question.category}</div>
+              <div className="text-sm font-semibold text-muted-foreground mb-4">{question.category}</div>
               <h2 className="text-2xl font-bold mb-8">{question.question}</h2>
               
               <div className="space-y-3 mb-8">

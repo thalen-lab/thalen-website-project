@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, CheckCircle2, Database, GitBranch, Shield, Zap, TrendingUp, AlertCircle, Search, BarChart3, Cloud } from 'lucide-react';
+import { ArrowRight, Database, GitBranch, Shield, Zap, TrendingUp, AlertCircle, Search, BarChart3, Cloud } from 'lucide-react';
 
 export default function Engineering() {
   const engineeringBenefits = [
@@ -98,7 +98,7 @@ export default function Engineering() {
             {engineeringBenefits.map((benefit, index) => (
               <Card key={index} className="border-2 hover:border-accent transition-colors">
                 <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
@@ -166,7 +166,7 @@ export default function Engineering() {
                     <div className="text-sm font-semibold mb-2">Technologies:</div>
                     <div className="flex flex-wrap gap-2">
                       {capability.technologies.map((tech, idx) => (
-                        <span key={idx} className="text-xs bg-muted text-accent px-3 py-1 rounded-full font-semibold">
+                        <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
                           {tech}
                         </span>
                       ))}
@@ -194,11 +194,11 @@ export default function Engineering() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Data Source Analysis</h3>
                       <p className="text-muted-foreground mb-3">We inventory your data sources, understand schemas, assess data quality, and identify integration challenges. You receive a comprehensive data landscape report with recommendations for pipeline architecture.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Data Source Inventory & Integration Assessment</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Data Source Inventory & Integration Assessment</div>
                     </div>
                   </div>
                 </CardContent>
@@ -207,11 +207,11 @@ export default function Engineering() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Pipeline Architecture Design</h3>
                       <p className="text-muted-foreground mb-3">We design the optimal pipeline architecture for your use case—batch vs. streaming, ETL vs. ELT, orchestration tools, data quality frameworks. The architecture balances performance, cost, and maintainability.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Pipeline Architecture Document & Technology Selection</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Pipeline Architecture Document & Technology Selection</div>
                     </div>
                   </div>
                 </CardContent>
@@ -220,11 +220,11 @@ export default function Engineering() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Pipeline Development & Testing</h3>
                       <p className="text-muted-foreground mb-3">We build the pipelines with automated testing, error handling, and monitoring. Every pipeline includes data quality checks, retry logic, and alerting. We test with production data volumes to ensure performance.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Production-Ready Data Pipelines with Test Results</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Production-Ready Data Pipelines with Test Results</div>
                     </div>
                   </div>
                 </CardContent>
@@ -233,11 +233,11 @@ export default function Engineering() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Deployment & Knowledge Transfer</h3>
                       <p className="text-muted-foreground mb-3">We deploy pipelines to production with monitoring dashboards, runbooks, and documentation. Your team receives training on pipeline operations, troubleshooting, and extending pipelines for new data sources.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Production Deployment with Operations Documentation</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Production Deployment with Operations Documentation</div>
                     </div>
                   </div>
                 </CardContent>

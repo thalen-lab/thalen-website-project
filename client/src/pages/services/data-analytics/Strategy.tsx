@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, CheckCircle2, Target, TrendingUp, Users, FileText, Lightbulb, BarChart3, Search, Database, Bot } from 'lucide-react';
+import { ArrowRight, Target, TrendingUp, Users, FileText, Lightbulb, BarChart3, Search, Database, Bot } from 'lucide-react';
 
 export default function DataStrategy() {
   const strategyBenefits = [
@@ -88,7 +88,7 @@ export default function DataStrategy() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Need a Data Strategy</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Need a Data Strategy</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Without a clear strategy, data initiatives fail to deliver ROI, duplicate efforts waste resources, and agencies miss opportunities to improve mission outcomes.
             </p>
@@ -98,7 +98,7 @@ export default function DataStrategy() {
             {strategyBenefits.map((benefit, index) => (
               <Card key={index} className="border-2 hover:border-accent transition-colors">
                 <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
@@ -161,7 +161,7 @@ export default function DataStrategy() {
               <Card key={index} className="group hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">
                       {index + 1}
                     </div>
                     <h3 className="text-2xl font-bold">{component.title}</h3>
@@ -223,11 +223,11 @@ export default function DataStrategy() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Discovery & Assessment (Week 1-2)</h3>
                       <p className="text-muted-foreground mb-3">We interview stakeholders across your agency, inventory data systems, review existing analytics initiatives, and assess data governance maturity. You receive a comprehensive current state report with maturity scoring across data strategy, architecture, governance, quality, and culture.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Current State Assessment & Maturity Scorecard</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Current State Assessment & Maturity Scorecard</div>
                     </div>
                   </div>
                 </CardContent>
@@ -236,11 +236,11 @@ export default function DataStrategy() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Vision & Prioritization (Week 3-4)</h3>
                       <p className="text-muted-foreground mb-3">Through collaborative workshops, we define your target data capabilities, identify high-impact use cases, and prioritize initiatives based on mission value, feasibility, and dependencies. Leadership reviews and approves the strategic direction before roadmap development.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Target Vision & Prioritized Use Case Portfolio</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Target Vision & Prioritized Use Case Portfolio</div>
                     </div>
                   </div>
                 </CardContent>
@@ -249,11 +249,11 @@ export default function DataStrategy() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Roadmap Development (Week 5)</h3>
                       <p className="text-muted-foreground mb-3">We build a phased 3-year roadmap with quick wins (3-6 months), foundational projects (6-18 months), and transformational initiatives (18-36 months). Each project includes scope, resource estimates, dependencies, and success metrics.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: 3-Year Strategic Roadmap with Project Charters</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: 3-Year Strategic Roadmap with Project Charters</div>
                     </div>
                   </div>
                 </CardContent>
@@ -262,11 +262,11 @@ export default function DataStrategy() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Governance & Presentation (Week 6)</h3>
                       <p className="text-muted-foreground mb-3">We design your data governance operating model including roles, decision rights, policies, and oversight structures. The final week includes executive presentation of the strategy, roadmap, and governance framework with Q&A and refinement.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Governance Framework & Executive Presentation</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Governance Framework & Executive Presentation</div>
                     </div>
                   </div>
                 </CardContent>

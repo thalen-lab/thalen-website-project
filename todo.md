@@ -1568,3 +1568,27 @@
 - [x] Re-audit all RPA subpages for RUXI Rule #3 (visual design - icons, colors, bullets)
 - [x] Verify all routes and navigation links
 - [x] Test all subpages functionality
+
+
+## Data Analytics RUXI Re-Audit
+
+### Phase 1: Identify Pages
+- [x] List all Data Analytics service pages (landing + subpages)
+- [x] Document current RUXI compliance status for each page)
+
+### Phase 2: RUXI Rule #2 (Government Agencies Positioning)
+- [x] Audit landing page for "federal agencies" → "government agencies"
+- [x] Audit all subpages for positioning language
+- [x] Verify FedRAMP + StateRAMP references present
+
+### Phase 3: RUXI Rule #3 (Visual Design Standards)
+- [x] Replace orange CheckCircle2 icons with neutral dots on all pages
+- [x] Update icon colors (orange → blue on light backgrounds)
+- [x] Update badge styling (orange → muted)
+- [x] Update platform badges (orange pills → neutral bordered rectangles)
+- [x] Verify orange reserved for CTAs and hover effects only
+
+### Phase 4: Testing & Checkpoint
+- [x] Test all page routes
+- [x] Verify visual consistency across all pages
+- [x] Save checkpoint with audit results

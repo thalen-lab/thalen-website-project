@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, CheckCircle2, LineChart, Activity, Gauge, Eye, Zap, Shield, Database, Brain, TrendingUp } from 'lucide-react';
+import { ArrowRight, LineChart, Activity, Gauge, Eye, Zap, Shield, Database, Brain, TrendingUp } from 'lucide-react';
 
 export default function Visualization() {
   const visualizationBenefits = [
@@ -98,7 +98,7 @@ export default function Visualization() {
             {visualizationBenefits.map((benefit, index) => (
               <Card key={index} className="border-2 hover:border-accent transition-colors">
                 <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
@@ -164,7 +164,7 @@ export default function Visualization() {
                   <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {useCase.metrics.map((metric, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-accent px-3 py-1 rounded-full font-semibold">
+                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
                         {metric}
                       </span>
                     ))}

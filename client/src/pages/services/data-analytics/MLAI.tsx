@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, CheckCircle2, Brain, AlertTriangle, TrendingUp, Shield, Eye, Zap, Database, Bot } from 'lucide-react';
+import { ArrowRight, Brain, AlertTriangle, TrendingUp, Shield, Eye, Zap, Database, Bot } from 'lucide-react';
 
 export default function MLAI() {
   const mlBenefits = [
@@ -96,7 +96,7 @@ export default function MLAI() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Need Predictive Analytics</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Need Predictive Analytics</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Reactive analytics tell you what happened. Predictive analytics tell you what will happen—giving you time to prevent problems before they occur.
             </p>
@@ -106,7 +106,7 @@ export default function MLAI() {
             {mlBenefits.map((benefit, index) => (
               <Card key={index} className="border-2 hover:border-accent transition-colors">
                 <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
@@ -158,7 +158,7 @@ export default function MLAI() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Proven ML/AI Use Cases for Federal Agencies</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Proven ML/AI Use Cases for Government Agencies</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Thalen Technologies has deployed production ML systems for fraud detection, predictive maintenance, threat intelligence, and operational optimization.
             </p>
@@ -172,15 +172,15 @@ export default function MLAI() {
                   <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
                   <div className="grid grid-cols-3 gap-4 bg-secondary rounded-lg p-4">
                     <div>
-                      <div className="text-2xl font-bold text-accent">{useCase.impact}</div>
+                      <div className="text-2xl font-bold text-primary">{useCase.impact}</div>
                       <div className="text-xs text-muted-foreground">Business Impact</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-accent">{useCase.accuracy}</div>
+                      <div className="text-2xl font-bold text-primary">{useCase.accuracy}</div>
                       <div className="text-xs text-muted-foreground">Model Accuracy</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-accent">{useCase.falsePositives || useCase.savings || useCase.response || useCase.planning}</div>
+                      <div className="text-2xl font-bold text-primary">{useCase.falsePositives || useCase.savings || useCase.response || useCase.planning}</div>
                       <div className="text-xs text-muted-foreground">Additional Metric</div>
                     </div>
                   </div>
