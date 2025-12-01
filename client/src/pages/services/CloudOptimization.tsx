@@ -138,15 +138,15 @@ export default function CloudOptimization() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Measurable Optimization Results</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Government agencies achieve dramatic cost savings and performance improvements through Thalen Technologies's data-driven optimization approach.
+              Government agencies achieve dramatic cost savings and performance improvements through NexDyne's data-driven optimization approach.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
@@ -168,9 +168,9 @@ export default function CloudOptimization() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {optimizationAreas.map((area, index) => (
-              <Card key={index} className="border-2 hover:shadow-xl transition-shadow">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <area.icon className="h-12 w-12 text-accent mb-4" />
+                  <area.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-4">{area.title}</h3>
                   <ul className="space-y-3">
                     {area.items.map((item, idx) => (
@@ -199,13 +199,13 @@ export default function CloudOptimization() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((phase, index) => (
-              <Card key={index} className="relative overflow-hidden group hover:shadow-xl transition-shadow">
+              <Card key={index} className="relative overflow-hidden group hover:shadow-xl hover:border-accent transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <div className="absolute top-0 right-0 text-8xl font-bold text-accent/10 -mr-4 -mt-4">
+                  <div className="absolute top-0 right-0 text-8xl font-bold text-muted/20 -mr-4 -mt-4">
                     {phase.step}
                   </div>
                   <div className="relative">
-                    <div className="text-5xl font-bold text-accent mb-2">{phase.step}</div>
+                    <div className="text-5xl font-bold text-primary mb-2">{phase.step}</div>
                     <h3 className="text-xl font-bold mb-2">{phase.title}</h3>
                     <p className="text-sm text-muted-foreground">{phase.description}</p>
                   </div>

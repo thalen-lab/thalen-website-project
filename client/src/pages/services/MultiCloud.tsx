@@ -91,7 +91,7 @@ export default function MultiCloud() {
               Multi-Cloud & Hybrid Solutions
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Vendor-agnostic architecture across AWS, Azure, and Google Cloud with unified management, disaster recovery, and seamless workload portability. Thalen Technologies delivers multi-cloud strategies that maximize flexibility, minimize lock-in, and ensure 99.99% availability for mission-critical federal operations.
+              Vendor-agnostic architecture across AWS, Azure, and Google Cloud with unified management, disaster recovery, and seamless workload portability. NexDyne delivers multi-cloud strategies that maximize flexibility, minimize lock-in, and ensure 99.99% availability for mission-critical government operations.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -110,7 +110,7 @@ export default function MultiCloud() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Choose Multi-Cloud</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose Multi-Cloud</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Strategic advantages of multi-cloud architecture for mission-critical federal operations and long-term technology independence.
             </p>
@@ -118,9 +118,9 @@ export default function MultiCloud() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
@@ -142,9 +142,9 @@ export default function MultiCloud() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {architectures.map((arch, index) => (
-              <Card key={index} className="border-2 hover:shadow-xl transition-all active:scale-95">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <arch.icon className="h-14 w-14 text-accent mb-4" />
+                  <arch.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-4">{arch.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{arch.description}</p>
                   <div className="space-y-2">
@@ -175,7 +175,7 @@ export default function MultiCloud() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {capabilities.map((capability, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold mb-3">{capability.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{capability.description}</p>
@@ -211,7 +211,7 @@ export default function MultiCloud() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Embrace Multi-Cloud Strategy?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive multi-cloud assessment and discover how Thalen Technologies can deliver vendor independence with 99.99% availability.
+            Start with a comprehensive multi-cloud assessment and discover how NexDyne can deliver vendor independence with 99.99% availability.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -128,7 +128,7 @@ export default function Cloud() {
           <div className="grid md:grid-cols-3 gap-8">
             {keyDifferentiators.map((item, index) => (
               <div key={index} className="text-center">
-                <item.icon className="h-12 w-12 text-accent mx-auto mb-4" />
+                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
@@ -149,9 +149,9 @@ export default function Cloud() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {primaryServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
+              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent active:scale-95">
                 <CardContent className="p-8">
-                  <service.icon className="h-16 w-16 text-accent mb-6" />
+                  <service.icon className="h-16 w-16 text-primary mb-6" />
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p className="text-muted-foreground mb-6">{service.description}</p>
                   
@@ -205,11 +205,11 @@ export default function Cloud() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {governmentExperience.map((exp, index) => (
-              <Card key={index} className="border-2">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-8 text-center">
-                  <Shield className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
-                  <p className="text-2xl font-bold text-accent mb-2">{exp.projects}</p>
+                  <p className="text-2xl font-bold text-primary mb-2">{exp.projects}</p>
                   <p className="text-sm text-muted-foreground">Clearance Level: {exp.clearance}</p>
                 </CardContent>
               </Card>
@@ -230,7 +230,7 @@ export default function Cloud() {
 
           <div className="space-y-6">
             {fedrampPlatforms.map((platform, index) => (
-              <Card key={index} className="border-2">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-8">
                   <div className="flex items-start justify-between flex-wrap gap-4">
                     <div className="flex-1 min-w-[250px]">

@@ -149,9 +149,9 @@ export default function DisasterRecovery() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
@@ -173,9 +173,9 @@ export default function DisasterRecovery() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {drCapabilities.map((capability, index) => (
-              <Card key={index} className="border-2 hover:shadow-xl transition-all active:scale-95">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <capability.icon className="h-12 w-12 text-accent mb-4" />
+                  <capability.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{capability.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{capability.description}</p>
                   <ul className="space-y-2">
@@ -205,26 +205,26 @@ export default function DisasterRecovery() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {drStrategies.map((strategy, index) => (
-              <Card key={index} className="border-2 hover:shadow-xl transition-all active:scale-95">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold">{strategy.title}</h3>
-                    <AlertTriangle className="h-8 w-8 text-accent" />
+                    <AlertTriangle className="h-8 w-8 text-primary" />
                   </div>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="bg-muted p-3 rounded">
                       <div className="text-xs text-muted-foreground mb-1">RTO</div>
-                      <div className="text-lg font-bold text-accent">{strategy.rto}</div>
+                      <div className="text-lg font-bold text-primary">{strategy.rto}</div>
                     </div>
                     <div className="bg-muted p-3 rounded">
                       <div className="text-xs text-muted-foreground mb-1">RPO</div>
-                      <div className="text-lg font-bold text-accent">{strategy.rpo}</div>
+                      <div className="text-lg font-bold text-primary">{strategy.rpo}</div>
                     </div>
                   </div>
                   <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{strategy.description}</p>
-                  <div className="bg-muted border-l-4 border-accent p-3 rounded">
+                  <div className="bg-muted border-l-4 border-primary p-3 rounded">
                     <p className="text-xs font-medium">
-                      <span className="text-accent font-semibold">Best for:</span> {strategy.useCase}
+                      <span className="text-primary font-semibold">Best for:</span> {strategy.useCase}
                     </p>
                   </div>
                 </CardContent>

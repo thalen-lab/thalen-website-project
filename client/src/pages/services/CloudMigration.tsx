@@ -124,7 +124,7 @@ export default function CloudMigration() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Federal Agencies Choose Thalen Technologies Migration</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose NexDyne Migration</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Unlike commercial migration services, we understand federal compliance requirements, security clearances, and mission continuity imperatives.
             </p>
@@ -132,9 +132,9 @@ export default function CloudMigration() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
@@ -156,13 +156,13 @@ export default function CloudMigration() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {process.map((phase, index) => (
-              <Card key={index} className="relative overflow-hidden group hover:shadow-xl transition-shadow">
+              <Card key={index} className="relative overflow-hidden group hover:shadow-xl hover:border-accent transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <div className="absolute top-0 right-0 text-8xl font-bold text-accent/10 -mr-4 -mt-4">
+                  <div className="absolute top-0 right-0 text-8xl font-bold text-muted/20 -mr-4 -mt-4">
                     {phase.step}
                   </div>
                   <div className="relative">
-                    <div className="text-5xl font-bold text-accent mb-2">{phase.step}</div>
+                    <div className="text-5xl font-bold text-primary mb-2">{phase.step}</div>
                     <h3 className="text-xl font-bold mb-2">{phase.title}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{phase.description}</p>
                     <div className="border-t pt-4">
@@ -198,12 +198,12 @@ export default function CloudMigration() {
             {migrationTypes.map((type, index) => (
               <Card key={index} className="border-2 hover:border-accent hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
-                  <type.icon className="h-12 w-12 text-accent mb-4" />
+                  <type.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-3">{type.title}</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">{type.description}</p>
-                  <div className="bg-muted border-l-4 border-accent p-3 rounded">
+                  <div className="bg-muted border-l-4 border-primary p-3 rounded">
                     <p className="text-sm font-medium">
-                      <span className="text-accent font-semibold">Best for:</span> {type.useCase}
+                      <span className="text-primary font-semibold">Best for:</span> {type.useCase}
                     </p>
                   </div>
                 </CardContent>
@@ -238,7 +238,7 @@ export default function CloudMigration() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Migrate to the Cloud?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive migration assessment and discover how Thalen Technologies can deliver zero-downtime cloud adoption with FedRAMP compliance.
+            Start with a comprehensive migration assessment and discover how NexDyne can deliver zero-downtime cloud adoption with FedRAMP compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">
