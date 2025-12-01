@@ -468,7 +468,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground mb-6">
               <strong className="text-foreground">90-day ATO timeline</strong> • <strong className="text-foreground">100% authorization success rate</strong> • <strong className="text-foreground">Zero operational disruption</strong>
             </p>
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:opacity-90">
+            <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
               <Link href="/contact">
                 Learn More About RAPID
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -516,15 +516,15 @@ export default function Home() {
           <div id="partners-carousel" className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4">
             {/* Process Automation Card */}
             <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-6 text-accent">Process Automation</h3>
+              <h3 className="text-xl font-bold mb-6 text-foreground">Process Automation</h3>
               <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   UiPath
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Automation Anywhere
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Blue Prism
                 </span>
               </div>
@@ -532,15 +532,15 @@ export default function Home() {
 
             {/* Cloud Platforms Card */}
             <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-6 text-accent">Cloud Platforms</h3>
+              <h3 className="text-xl font-bold mb-6 text-foreground">Cloud Platforms</h3>
               <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   AWS GovCloud
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Azure Government
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Google Cloud
                 </span>
               </div>
@@ -548,15 +548,15 @@ export default function Home() {
 
             {/* Data & Analytics Card */}
             <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-6 text-accent">Data & Analytics</h3>
+              <h3 className="text-xl font-bold mb-6 text-foreground">Data & Analytics</h3>
               <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Snowflake
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Databricks
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Tableau
                 </span>
               </div>
@@ -564,15 +564,15 @@ export default function Home() {
 
             {/* Cybersecurity Card */}
             <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-6 text-accent">Cybersecurity</h3>
+              <h3 className="text-xl font-bold mb-6 text-foreground">Cybersecurity</h3>
               <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Palo Alto Networks
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   CrowdStrike
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Splunk
                 </span>
               </div>
@@ -580,15 +580,15 @@ export default function Home() {
 
             {/* AI & Machine Learning Card */}
             <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-6 text-accent">AI & Machine Learning</h3>
+              <h3 className="text-xl font-bold mb-6 text-foreground">AI & Machine Learning</h3>
               <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   OpenAI
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Anthropic
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   DataRobot
                 </span>
               </div>
@@ -596,15 +596,15 @@ export default function Home() {
 
             {/* Enterprise Software Card */}
             <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-6 text-accent">Enterprise Software</h3>
+              <h3 className="text-xl font-bold mb-6 text-foreground">Enterprise Software</h3>
               <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   ServiceNow
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   Salesforce
                 </span>
-                <span className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
                   SAP
                 </span>
               </div>
