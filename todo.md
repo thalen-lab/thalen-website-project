@@ -1468,4 +1468,11 @@
 - [x] Audit Process Orchestration subpage (/services/automation/orchestration) for RUXI compliance
 - [x] Apply color corrections (icons: orange→blue, checkmarks→black dots, badges→neutral, numbered steps→neutral)
 - [x] Verify government positioning (Federal + State/Local, FedRAMP + StateRAMP already present)
-- [ ] Save checkpoint after all Automation service updates
+- [x] Save checkpoint after all Automation service updates
+
+## Phase 115: RUXI - Add Missing Hover Effects to Automation Cards
+- [x] Add hover:border-accent to orchestration scenario cards (Multi-Agency, Procurement, Case Management)
+- [x] Add hover:border-accent to integration challenge cards
+- [x] Update RelatedServices component icons from orange to blue (text-accent → text-primary)
+- [x] Verify hover effects work on all card types across all 4 Automation pages
+- [ ] Save checkpoint after hover effect updates

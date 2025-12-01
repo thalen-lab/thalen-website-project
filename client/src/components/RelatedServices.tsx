@@ -35,7 +35,7 @@ export default function RelatedServices({
             <Link key={index} href={service.href}>
               <Card className="border-2 hover:border-accent transition-all hover:shadow-xl cursor-pointer h-full group">
                 <CardContent className="p-8">
-                  <service.icon className="h-12 w-12 text-accent mb-4 group-hover:scale-110 transition-transform" />
+                  <service.icon className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
                   <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
                     {service.title}
                   </h3>

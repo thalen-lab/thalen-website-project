@@ -209,7 +209,7 @@ export default function Orchestration() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {orchestrationScenarios.map((scenario, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300">
+              <Card key={index} className="group hover:shadow-2xl hover:border-accent transition-all duration-300 border-2">
                 <CardContent className="p-8">
                   <div className="bg-muted rounded-lg p-4 w-fit mb-4">
                     <scenario.icon className="h-10 w-10 text-primary" />
