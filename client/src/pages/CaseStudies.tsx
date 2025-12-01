@@ -30,10 +30,6 @@ export default function CaseStudies() {
       category: 'Federal Government',
       title: 'Federal Agency Achieves 85% Process Automation',
       description: 'Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
-      metrics: [
-        { value: '85%', label: 'Automation Rate' },
-        { value: '$4.2M', label: 'Contract Value' }
-      ],
       tags: ['RPA', 'FedRAMP'],
       href: '/case-studies/federal-automation'
     },
@@ -41,10 +37,6 @@ export default function CaseStudies() {
       category: 'Defense',
       title: 'DoD Manufacturing Facility Achieves 99.2% Uptime',
       description: 'Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.',
-      metrics: [
-        { value: '99.2%', label: 'System Uptime' },
-        { value: 'CMMC L3', label: 'Certified' }
-      ],
       tags: ['Cybersecurity', 'IoT', 'CMMC'],
       href: '/case-studies/dod-manufacturing'
     },
@@ -52,10 +44,6 @@ export default function CaseStudies() {
       category: 'Federal Government',
       title: 'VA Medical Center Integrates 12 Legacy Systems',
       description: 'Integrated 12 disparate healthcare systems using FedRAMP-authorized iPaaS platform. Reduced administrative burden by 60% for 8,500 staff members.',
-      metrics: [
-        { value: '12', label: 'Systems Integrated' },
-        { value: '60%', label: 'Admin Reduction' }
-      ],
       tags: ['Integration', 'HIPAA', 'FedRAMP'],
       href: '/case-studies/va-healthcare'
     },
@@ -63,10 +51,6 @@ export default function CaseStudies() {
       category: 'State Government',
       title: 'State Attorney General Prevents $50M+ in Fraud',
       description: 'Implemented AI-powered fraud detection system with CJIS compliance for state law enforcement. Analyzed 2.3M cases, prevented $50M+ in fraud.',
-      metrics: [
-        { value: '$50M+', label: 'Fraud Prevented' },
-        { value: '2.3M', label: 'Cases Analyzed' }
-      ],
       tags: ['AI', 'Analytics', 'CJIS'],
       href: '/case-studies/state-attorney-general'
     },
@@ -74,10 +58,6 @@ export default function CaseStudies() {
       category: 'State Government',
       title: 'State Energy Commission Reduces Grid Outages 65%',
       description: 'Deployed StateRAMP-authorized smart grid platform for state energy commission. Reduced outages by 65% across 4.2M customer service area.',
-      metrics: [
-        { value: '65%', label: 'Outage Reduction' },
-        { value: '4.2M', label: 'Customers Served' }
-      ],
       tags: ['Automation', 'IoT', 'StateRAMP'],
       href: '/case-studies/state-energy-commission'
     },
@@ -85,10 +65,6 @@ export default function CaseStudies() {
       category: 'County Government',
       title: 'County Health Department Speeds Outbreak Response 40%',
       description: 'Integrated 8 public health systems for county health department. Achieved 40% faster outbreak response with HIPAA-compliant data sharing.',
-      metrics: [
-        { value: '40%', label: 'Faster Response' },
-        { value: '8', label: 'Systems Integrated' }
-      ],
       tags: ['Integration', 'HIPAA'],
       href: '/case-studies/county-health-department'
     },
@@ -96,17 +72,97 @@ export default function CaseStudies() {
       category: 'Defense',
       title: 'Defense Contractor: Zero-Downtime Cloud Migration',
       description: 'Migrated 150+ applications and 500TB classified data to AWS GovCloud and Azure Government. Achieved CMMC Level 3 with 100% uptime and $4.5M annual savings.',
-      metrics: [
-        { value: '100%', label: 'Uptime Maintained' },
-        { value: 'CMMC L3', label: 'Certified' }
-      ],
       tags: ['Cloud', 'Cybersecurity', 'CMMC'],
       href: '/case-studies/defense-cloud'
+    },
+    {
+      category: 'Healthcare',
+      title: 'Healthcare System Saves $12M Through AI Analytics',
+      description: 'Data intelligence platform delivered real-time insights improving patient outcomes by 40% while achieving full HIPAA compliance across 15 facilities.',
+      tags: ['AI', 'Analytics', 'HIPAA'],
+      href: '/case-studies/healthcare-ai'
+    },
+    {
+      category: 'Manufacturing',
+      title: 'Manufacturing Giant Achieves 99.2% Uptime',
+      description: 'Cybersecurity and predictive maintenance eliminated 75% of unplanned downtime across 50+ facilities.',
+      tags: ['Cybersecurity', 'IoT', 'Predictive Analytics'],
+      href: '/case-studies/manufacturing-uptime'
+    },
+    {
+      category: 'Energy',
+      title: 'Energy Company Deploys $500M Smart Grid',
+      description: 'Modernized energy infrastructure serving 8M customers with real-time monitoring and automated response systems.',
+      tags: ['IoT', 'Cloud', 'Automation'],
+      href: '/case-studies/energy-grid'
+    },
+    {
+      category: 'Financial Services',
+      title: 'Bank Prevents $45M in Fraud with AI',
+      description: 'Real-time fraud detection system analyzing 50M+ transactions daily with 99.7% accuracy and sub-second response times.',
+      tags: ['AI', 'Cybersecurity', 'Analytics'],
+      href: '/case-studies/bank-fraud'
+    },
+    {
+      category: 'Defense',
+      title: 'Intelligence Agency Achieves TS/SCI Collaboration',
+      description: 'Secure collaboration platform enabling real-time intelligence sharing across 12 agencies with zero security incidents.',
+      tags: ['Cybersecurity', 'Cloud', 'TS/SCI'],
+      href: '/case-studies/intelligence-security'
+    },
+    {
+      category: 'Healthcare',
+      title: 'Hospital Reduces Wait Times 65%',
+      description: 'Patient flow optimization platform reduced ER wait times from 4.5 hours to 1.5 hours while improving satisfaction scores by 85%.',
+      tags: ['Analytics', 'Automation', 'HIPAA'],
+      href: '/case-studies/hospital-wait-times'
+    },
+    {
+      category: 'Defense',
+      title: 'Aerospace Contractor Implements Digital Twin',
+      description: 'Digital twin platform reduced design costs by 40% and accelerated time-to-market by 6 months for next-gen aircraft.',
+      tags: ['AI', 'IoT', 'Cloud'],
+      href: '/case-studies/aerospace-digital-twin'
+    },
+    {
+      category: 'Federal Government',
+      title: 'VA Reduces Claims Processing Time 60% with Predictive Analytics',
+      description: 'Predictive analytics platform processing 2M+ claims annually with 60% faster processing and 95% accuracy.',
+      tags: ['AI', 'Analytics', 'FedRAMP'],
+      href: '/case-studies/va-predictive-analytics'
+    },
+    {
+      category: 'Defense',
+      title: 'DOD Saves $12M Annually with Automated Data Pipelines',
+      description: 'Automated data pipelines processing 500TB+ classified data daily with 99.9% uptime and $12M annual savings.',
+      tags: ['Cloud', 'Automation', 'CMMC'],
+      href: '/case-studies/dod-data-pipelines'
+    },
+    {
+      category: 'Federal Government',
+      title: 'HHS Achieves Real-Time Public Health Surveillance',
+      description: 'Real-time surveillance platform monitoring 50 states with 78% faster outbreak detection and automated alerting.',
+      tags: ['Analytics', 'Cloud', 'FedRAMP'],
+      href: '/case-studies/hhs-public-health'
+    },
+    {
+      category: 'State Government',
+      title: 'State DOT Modernizes Asset Management with 92% Efficiency Gain',
+      description: 'Migrated 40-year-old COBOL mainframe to Salesforce Government Cloud, achieving 92% efficiency improvement and $3.8M annual savings.',
+      tags: ['Cloud', 'Integration', 'StateRAMP'],
+      href: '/case-studies/state-dot'
+    },
+    {
+      category: 'County Government',
+      title: 'County Health Department Achieves 78% Faster Disease Surveillance',
+      description: 'Real-time public health surveillance platform for 1.2M residents with 78% faster outbreak detection and 95% data accuracy.',
+      tags: ['Analytics', 'Integration', 'HIPAA'],
+      href: '/case-studies/county-health'
     }
   ];
 
-  const industries = ['All', 'Federal Government', 'State Government', 'County Government', 'Defense'];
-  const services = ['All', 'Automation', 'RPA', 'Integration', 'Analytics', 'AI', 'Cloud', 'Cybersecurity'];
+  const industries = ['All', 'Federal Government', 'State Government', 'County Government', 'Defense', 'Healthcare', 'Manufacturing', 'Energy', 'Financial Services'];
+  const services = ['All', 'Automation', 'RPA', 'Integration', 'Analytics', 'AI', 'Cloud', 'Cybersecurity', 'IoT', 'Predictive Analytics', 'TS/SCI'];
 
   // Filter case studies based on search query, industry, and service
   const filteredCaseStudies = caseStudies.filter(study => {

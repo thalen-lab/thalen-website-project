@@ -1760,3 +1760,19 @@
 - [x] Add StateRAMP compliance badge to About page (added dedicated Certifications section with StateRAMP badge)
 - [x] Test all new case study pages and badge displays
 - [x] Verify navigation and links work correctly
+
+
+## Phase 69: Case Studies Landing Page Audit & Update
+- [x] Audit all existing case study pages in the project
+  - [x] List all case study files in /src/pages/case-studies/ (19 case studies found)
+  - [x] Verify routes in App.tsx for each case study (all routes present)
+  - [x] Check homepage carousel case studies (3 case studies in carousel)
+- [x] Update Case Studies landing page (/case-studies)
+  - [x] Add all missing case studies to the landing page (updated from 7 to 19 case studies)
+  - [x] Ensure proper categorization (Federal, State, County, Defense, Healthcare, Manufacturing, Energy, Financial Services)
+  - [x] Add correct tags and descriptions (all tags updated)
+- [x] Verify all navigation and links
+  - [x] Test links from landing page to detail pages (Federal Automation tested - working)
+  - [x] Test links from homepage to case studies (State Attorney General tested - working)
+  - [x] Verify filtering and search functionality (Healthcare filter tested - showing 2 case studies correctly)
+- [x] Test and save checkpoint
