@@ -515,7 +515,7 @@ export default function Home() {
 
           <div id="partners-carousel" className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4">
             {/* Process Automation Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
               <h3 className="text-xl font-bold mb-6 text-foreground">Process Automation</h3>
               <div className="flex flex-wrap gap-3">
                 <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
@@ -531,7 +531,7 @@ export default function Home() {
             </div>
 
             {/* Cloud Platforms Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
               <h3 className="text-xl font-bold mb-6 text-foreground">Cloud Platforms</h3>
               <div className="flex flex-wrap gap-3">
                 <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
@@ -547,7 +547,7 @@ export default function Home() {
             </div>
 
             {/* Data & Analytics Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
               <h3 className="text-xl font-bold mb-6 text-foreground">Data & Analytics</h3>
               <div className="flex flex-wrap gap-3">
                 <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
@@ -563,7 +563,7 @@ export default function Home() {
             </div>
 
             {/* Cybersecurity Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
               <h3 className="text-xl font-bold mb-6 text-foreground">Cybersecurity</h3>
               <div className="flex flex-wrap gap-3">
                 <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
@@ -579,7 +579,7 @@ export default function Home() {
             </div>
 
             {/* AI & Machine Learning Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
               <h3 className="text-xl font-bold mb-6 text-foreground">AI & Machine Learning</h3>
               <div className="flex flex-wrap gap-3">
                 <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
@@ -595,7 +595,7 @@ export default function Home() {
             </div>
 
             {/* Enterprise Software Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8">
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
               <h3 className="text-xl font-bold mb-6 text-foreground">Enterprise Software</h3>
               <div className="flex flex-wrap gap-3">
                 <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">

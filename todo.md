@@ -1454,4 +1454,9 @@
 - [x] Apply color corrections to RAPID Framework (already compliant - no changes needed)
 - [x] Apply color corrections to Partners section (category titles: orange → black, partner pills: orange bg → neutral with blue text)
 - [x] Verify CTA button styling consistency (updated RAPID CTA to orange gradient)
-- [ ] Save checkpoint after all homepage RUXI updates complete
+- [x] Save checkpoint after all homepage RUXI updates complete
+
+## Phase 113: RUXI - Add Orange Hover Effect to Partner Category Cards
+- [x] Add orange border hover effect to partner category cards (Process Automation, Cloud Platforms, etc.)
+- [x] Test hover interaction on all 6 partner category cards
+- [ ] Save checkpoint after updates
