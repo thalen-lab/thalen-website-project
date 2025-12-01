@@ -62,7 +62,7 @@ export default function About() {
       icon: Users,
       title: 'Mastery',
       letter: 'M',
-      description: 'Deep expertise across the full automation stack. Our team maintains elite certifications (FedRAMP, CMMC, AWS, Azure) and 15+ years of specialized experience in government and enterprise transformation.'
+      description: 'Deep expertise across the full automation stack. Our team maintains elite certifications (FedRAMP, StateRAMP, CMMC, AWS, Azure) and 15+ years of specialized experience in federal, state, and local government transformation.'
     }
   ];
 
@@ -376,6 +376,118 @@ export default function About() {
               ))}
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Certifications & Compliance */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-2">Certifications & Compliance</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Government-Grade Security & Compliance</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Certified expertise across federal, state, and local government compliance frameworks with proven track record in the most demanding security environments.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <Card className="text-center hover:shadow-xl transition-shadow h-full">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-8 w-8 text-blue-500" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">FedRAMP Expert</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Deep expertise implementing FedRAMP-authorized platforms at Moderate and High impact levels with proven ATO support.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <Card className="text-center hover:shadow-xl transition-shadow h-full border-2 border-accent/30">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-8 w-8 text-accent" />
+                  </div>
+                  <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                    STATE & LOCAL
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">StateRAMP Authorized</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Certified expertise implementing StateRAMP-authorized platforms for state agencies and municipal governments with full compliance support.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Card className="text-center hover:shadow-xl transition-shadow h-full">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-8 w-8 text-blue-500" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">CMMC Certified</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Certified to help defense contractors achieve CMMC Level 2 and Level 3 compliance through gap analysis and controls implementation.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <Card className="text-center hover:shadow-xl transition-shadow h-full">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-8 w-8 text-blue-500" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">CJIS Compliant</h3>
+                  <p className="text-sm text-muted-foreground">
+                    CJIS-compliant implementations for state and local law enforcement agencies with full FBI security policy adherence.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            className="mt-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <p className="text-muted-foreground mb-4">
+              Additional certifications: ISO 27001:2022, NIST Cybersecurity Framework v2.0, GSA Schedule 70, Top Secret/SCI cleared personnel available
+            </p>
+          </motion.div>
         </div>
       </section>
 
