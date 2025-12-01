@@ -64,6 +64,9 @@ import SuccessMetrics from "./pages/services/digital-transformation/SuccessMetri
 // Automation Subpages
 import RPAService from "./pages/services/automation/RPA";
 import ProcessAssessment from "./pages/services/automation/rpa/ProcessAssessment";
+import PlatformImplementation from "./pages/services/automation/rpa/PlatformImplementation";
+import ATOCompliance from "./pages/services/automation/rpa/ATOCompliance";
+import CoESetup from "./pages/services/automation/rpa/CoESetup";
 import IntegrationService from "./pages/services/automation/Integration";
 import OrchestrationService from "./pages/services/automation/Orchestration";
 
@@ -189,6 +192,9 @@ function Router() {
       <Route path={"/services/automation"} component={AutomationService} />
       <Route path={"/services/automation/rpa"} component={RPAService} />
       <Route path={"/services/automation/rpa/process-assessment"} component={ProcessAssessment} />
+      <Route path={"/services/automation/rpa/platform-implementation"} component={PlatformImplementation} />
+      <Route path={"/services/automation/rpa/ato-compliance"} component={ATOCompliance} />
+      <Route path={"/services/automation/rpa/coe-setup"} component={CoESetup} />
       <Route path={"/services/automation/integration"} component={IntegrationService} />
       <Route path={"/services/automation/orchestration"} component={OrchestrationService} />
       <Route path={"/services/data-analytics"} component={DataAnalyticsService} />
