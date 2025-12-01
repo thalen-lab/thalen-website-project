@@ -226,7 +226,7 @@ export default function DataMaturityAssessment() {
         {/* Maturity Score */}
         <section className="py-12 bg-muted/30">
           <div className="container max-w-4xl">
-            <Card>
+            <Card className="hover:shadow-lg transition-all">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
                   <div className="text-6xl font-bold mb-2">{totalScore}/40</div>
@@ -252,7 +252,7 @@ export default function DataMaturityAssessment() {
             </div>
             <div className="grid gap-4 mb-12">
               {maturityResult.services.map((service, index) => (
-                <Card key={index}>
+                <Card key={index} className="hover:border-accent hover:shadow-lg transition-all border-2">
                   <CardContent className="p-6 flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-card border-2 border-border text-foreground font-bold">
@@ -272,7 +272,7 @@ export default function DataMaturityAssessment() {
 
             {/* ROI & Timeline */}
             <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <Card>
+              <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <DollarSign className="h-6 w-6 text-green-600" />
@@ -285,7 +285,7 @@ export default function DataMaturityAssessment() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <TrendingUp className="h-6 w-6 text-blue-600" />
@@ -300,7 +300,7 @@ export default function DataMaturityAssessment() {
             </div>
 
             {/* CTA */}
-            <Card className="bg-navy-gradient text-primary-foreground">
+            <Card className="bg-navy-gradient text-primary-foreground hover:shadow-2xl transition-all">
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-bold mb-4">Ready to Accelerate Your Data Maturity?</h3>
                 <p className="mb-6 opacity-90">
@@ -379,7 +379,7 @@ export default function DataMaturityAssessment() {
       {/* Question */}
       <section className="py-16 flex-1">
         <div className="container max-w-3xl">
-          <Card>
+          <Card className="hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="text-sm font-semibold text-muted-foreground mb-4">{question.category}</div>
               <h2 className="text-2xl font-bold mb-8">{question.question}</h2>

@@ -158,7 +158,7 @@ export default function Engineering() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {engineeringCapabilities.map((capability, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300">
+              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4">{capability.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{capability.description}</p>
@@ -191,7 +191,7 @@ export default function Engineering() {
             </div>
 
             <div className="space-y-6">
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
@@ -204,7 +204,7 @@ export default function Engineering() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
@@ -217,7 +217,7 @@ export default function Engineering() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
@@ -230,7 +230,7 @@ export default function Engineering() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
@@ -258,7 +258,7 @@ export default function Engineering() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card>
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Orchestration & Workflow</h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -282,7 +282,7 @@ export default function Engineering() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Data Processing</h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -306,7 +306,7 @@ export default function Engineering() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Data Quality & Governance</h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -331,7 +331,7 @@ export default function Engineering() {
             </Card>
           </div>
 
-          <Card className="bg-navy-gradient text-primary-foreground border-0">
+          <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all">
             <CardContent className="p-8 md:p-12">
               <div className="grid md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -366,7 +366,7 @@ export default function Engineering() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">Cloud Infrastructure & Modernization</h3>
                 <p className="text-muted-foreground mb-4">
@@ -379,7 +379,7 @@ export default function Engineering() {
                 </Link>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">Application Development & Integration</h3>
                 <p className="text-muted-foreground mb-4">

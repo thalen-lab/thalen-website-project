@@ -158,7 +158,7 @@ export default function DataStrategy() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {strategyComponents.map((component, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300">
+              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">
@@ -183,7 +183,7 @@ export default function DataStrategy() {
             ))}
           </div>
 
-          <Card className="bg-navy-gradient text-primary-foreground border-0">
+            <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all">
             <CardContent className="p-8 md:p-12">
               <div className="grid md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -220,7 +220,7 @@ export default function DataStrategy() {
             </div>
 
             <div className="space-y-6">
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
@@ -233,7 +233,7 @@ export default function DataStrategy() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
@@ -246,7 +246,7 @@ export default function DataStrategy() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
@@ -259,7 +259,7 @@ export default function DataStrategy() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
@@ -286,7 +286,7 @@ export default function DataStrategy() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">Digital Transformation Enablement</h3>
                 <p className="text-muted-foreground mb-4">
@@ -299,7 +299,7 @@ export default function DataStrategy() {
                 </Link>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">Cybersecurity & Compliance</h3>
                 <p className="text-muted-foreground mb-4">

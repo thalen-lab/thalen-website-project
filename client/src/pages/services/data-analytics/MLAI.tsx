@@ -166,7 +166,7 @@ export default function MLAI() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {mlUseCases.map((useCase, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300">
+              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
@@ -202,7 +202,7 @@ export default function MLAI() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card>
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">ML Frameworks</h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -226,7 +226,7 @@ export default function MLAI() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Explainability & Governance</h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -250,7 +250,7 @@ export default function MLAI() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Deployment & Monitoring</h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -275,7 +275,7 @@ export default function MLAI() {
             </Card>
           </div>
 
-          <Card className="bg-navy-gradient text-primary-foreground border-0">
+          <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all">
             <CardContent className="p-8 md:p-12">
               <div className="grid md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -310,7 +310,7 @@ export default function MLAI() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">Intelligent Automation & Process Optimization</h3>
                 <p className="text-muted-foreground mb-4">
@@ -323,7 +323,7 @@ export default function MLAI() {
                 </Link>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">Application Development & Integration</h3>
                 <p className="text-muted-foreground mb-4">
