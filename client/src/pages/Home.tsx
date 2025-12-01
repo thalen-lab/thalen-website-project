@@ -218,7 +218,7 @@ export default function Home() {
           <div className="container">
             <div className="max-w-2xl">
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
+                <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
                   <Link href="/contact">
                     Schedule Strategic Assessment
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -278,7 +278,7 @@ export default function Home() {
                   <service.icon className="h-12 w-12 text-primary-foreground mb-4" />
                   <h3 className="text-xl font-semibold mb-3 text-primary-foreground">{service.title}</h3>
                   <p className="text-primary-foreground/80 mb-6">{service.description}</p>
-                  <Button asChild variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all">
+                  <Button asChild variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all active:scale-95">
                     <Link href={service.href}>
                       Explore Service
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -468,7 +468,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground mb-6">
               <strong className="text-foreground">90-day ATO timeline</strong> • <strong className="text-foreground">100% authorization success rate</strong> • <strong className="text-foreground">Zero operational disruption</strong>
             </p>
-            <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
+            <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
               <Link href="/contact">
                 Learn More About RAPID
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -621,7 +621,7 @@ export default function Home() {
             Schedule a comprehensive automation assessment and discover how our proven methodology can deliver measurable ROI for your organization.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
+            <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
               <Link href="/contact">
                 Schedule Strategic Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />

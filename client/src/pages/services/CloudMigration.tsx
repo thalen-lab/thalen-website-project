@@ -196,7 +196,7 @@ export default function CloudMigration() {
 
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {migrationTypes.map((type, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-xl transition-all">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <type.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{type.title}</h3>

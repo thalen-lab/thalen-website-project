@@ -183,7 +183,7 @@ export default function DataStrategy() {
             ))}
           </div>
 
-            <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all">
+            <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all active:scale-95">
             <CardContent className="p-8 md:p-12">
               <div className="grid md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -220,7 +220,7 @@ export default function DataStrategy() {
             </div>
 
             <div className="space-y-6">
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
@@ -233,7 +233,7 @@ export default function DataStrategy() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
@@ -246,7 +246,7 @@ export default function DataStrategy() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
@@ -259,7 +259,7 @@ export default function DataStrategy() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>

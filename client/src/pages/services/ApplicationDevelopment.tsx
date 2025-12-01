@@ -165,7 +165,7 @@ export default function ApplicationDevelopment() {
                   </ul>
 
                   <Link href={service.link}>
-                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all">
+                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all active:scale-95">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>

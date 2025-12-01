@@ -115,7 +115,7 @@ export default function LegacyModernization() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {approaches.map((approach, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <approach.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{approach.title}</h3>
@@ -248,7 +248,7 @@ export default function LegacyModernization() {
               { title: "Database Modernization", desc: "Migrate from legacy databases to modern SQL/NoSQL solutions" },
               { title: "API-First Architecture", desc: "Add API layer to legacy systems for modern integrations" }
             ].map((scenario, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold mb-3">{scenario.title}</h3>
                   <p className="text-muted-foreground">{scenario.desc}</p>
@@ -308,7 +308,7 @@ export default function LegacyModernization() {
               { tier: "Refactoring", price: "$150K - $500K", desc: "Code restructuring and architecture improvements" },
               { tier: "Rearchitecting", price: "$500K+", desc: "Full microservices transformation" }
             ].map((tier, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8 text-center">
                   <h3 className="text-2xl font-bold mb-2">{tier.tier}</h3>
                   <div className="text-3xl font-bold text-accent mb-4">{tier.price}</div>

@@ -176,7 +176,7 @@ export default function InfrastructureAsCode() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {capabilities.map((capability, index) => (
-              <Card key={index} className="border-2 hover:shadow-xl transition-all">
+              <Card key={index} className="border-2 hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <capability.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{capability.title}</h3>

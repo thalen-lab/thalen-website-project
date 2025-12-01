@@ -487,7 +487,7 @@ export default function Events() {
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             We offer private workshops and customized training programs tailored to your organization's specific automation and security needs.
           </p>
-          <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
+          <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
             <Link href="/contact">
               Request Custom Training
               <ArrowRight className="ml-2 h-5 w-5" />

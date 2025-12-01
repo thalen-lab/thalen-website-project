@@ -377,7 +377,7 @@ export default function Resources() {
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Our automation strategy experts are ready to provide personalized recommendations for your organization's unique challenges.
           </p>
-          <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 transition-opacity">
+          <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
             <Link href="/contact">
               Schedule Strategic Assessment
               <ArrowRight className="ml-2 h-5 w-5" />

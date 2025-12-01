@@ -142,7 +142,7 @@ export default function MultiCloud() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {architectures.map((arch, index) => (
-              <Card key={index} className="border-2 hover:shadow-xl transition-all">
+              <Card key={index} className="border-2 hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <arch.icon className="h-14 w-14 text-accent mb-4" />
                   <h3 className="text-2xl font-bold mb-4">{arch.title}</h3>

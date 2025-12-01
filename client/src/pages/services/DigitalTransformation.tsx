@@ -277,7 +277,7 @@ export default function DigitalTransformation() {
                     {index + 1}
                   </div>
                   
-                  <Card className="border-2">
+                  <Card className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
                     <CardContent className="pt-6">
                       <h3 className="text-xl font-bold mb-2">{phase.title}</h3>
                       <p className="text-muted-foreground mb-4">{phase.description}</p>

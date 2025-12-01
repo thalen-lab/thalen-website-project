@@ -168,7 +168,7 @@ export default function CloudSecurity() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {securityLayers.map((layer, index) => (
-              <Card key={index} className="border-2 hover:shadow-xl transition-all">
+              <Card key={index} className="border-2 hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <layer.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-2xl font-bold mb-4">{layer.title}</h3>

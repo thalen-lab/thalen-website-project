@@ -113,7 +113,7 @@ export default function APIMicroservices() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <service.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
@@ -241,7 +241,7 @@ export default function APIMicroservices() {
               { title: "Monitoring & Logging", desc: "Real-time alerts, error tracking, and performance metrics" },
               { title: "Testing & QA", desc: "Unit tests, integration tests, and load testing" }
             ].map((practice, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold mb-3">{practice.title}</h3>
                   <p className="text-muted-foreground">{practice.desc}</p>
@@ -268,7 +268,7 @@ export default function APIMicroservices() {
               { tier: "Complex API", price: "$50K - $120K", desc: "Multiple endpoints, integrations, webhooks, and monitoring" },
               { tier: "Microservices", price: "$120K+", desc: "Full microservices architecture with event-driven design" }
             ].map((tier, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8 text-center">
                   <h3 className="text-2xl font-bold mb-2">{tier.tier}</h3>
                   <div className="text-3xl font-bold text-accent mb-4">{tier.price}</div>

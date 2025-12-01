@@ -166,7 +166,7 @@ export default function StartupMVP() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <benefit.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
@@ -190,7 +190,7 @@ export default function StartupMVP() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((item, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <div className="text-sm text-accent font-semibold mb-2">{item.week}</div>
                   <h3 className="text-xl font-bold mb-4">{item.phase}</h3>

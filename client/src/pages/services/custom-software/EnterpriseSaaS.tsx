@@ -107,7 +107,7 @@ export default function EnterpriseSaaS() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <feature.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
@@ -260,7 +260,7 @@ export default function EnterpriseSaaS() {
                 features: ["Reduced upfront cost", "Shared success model", "Long-term partnership", "Strategic guidance", "Revenue share"]
               }
             ].map((model, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-2">{model.title}</h3>
                   <div className="text-3xl font-bold text-accent mb-2">{model.price}</div>

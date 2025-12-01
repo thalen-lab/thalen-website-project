@@ -97,7 +97,7 @@ export default function MobileApps() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {platforms.map((platform, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <platform.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{platform.title}</h3>
@@ -235,7 +235,7 @@ export default function MobileApps() {
               { title: "FinTech Apps", examples: ["Mobile banking", "Payment processing", "Investment platforms", "Expense tracking"] },
               { title: "HealthTech Apps", examples: ["Telemedicine", "Fitness tracking", "Patient portals", "Medication reminders"] }
             ].map((type, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold mb-4">{type.title}</h3>
                   <ul className="space-y-2">
@@ -281,7 +281,7 @@ export default function MobileApps() {
                 features: ["Native iOS + Android", "Complex workflows", "Enterprise integrations", "Custom backend", "6+ months timeline"]
               }
             ].map((tier, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-2">{tier.tier}</h3>
                   <div className="text-3xl font-bold text-accent mb-6">{tier.price}</div>

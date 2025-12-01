@@ -260,7 +260,7 @@ export default function Visualization() {
             </Card>
           </div>
 
-          <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all">
+          <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all active:scale-95">
             <CardContent className="p-8 md:p-12">
               <div className="grid md:grid-cols-4 gap-8 text-center">
                 <div>

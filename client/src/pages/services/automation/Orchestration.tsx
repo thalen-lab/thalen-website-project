@@ -94,7 +94,7 @@ export default function Orchestration() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {orchestrationBenefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-8">
                   <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
@@ -173,7 +173,7 @@ export default function Orchestration() {
             </div>
 
             <div className="space-y-6">
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
@@ -186,7 +186,7 @@ export default function Orchestration() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
@@ -199,7 +199,7 @@ export default function Orchestration() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
@@ -212,7 +212,7 @@ export default function Orchestration() {
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-accent">
+              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>

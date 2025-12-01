@@ -296,7 +296,7 @@ export default function CaseStudies() {
                     </div>
 
                     <Link href={study.href}>
-                      <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all">
+                      <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all active:scale-95">
                         Read Case Study
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>

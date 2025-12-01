@@ -204,7 +204,7 @@ export default function CustomSoftware() {
                     ))}
                   </ul>
                   <Link href={service.link}>
-                    <a className="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all">
+                    <a className="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all active:scale-95">
                       Learn More
                       <ArrowRight className="h-5 w-5" />
                     </a>
@@ -296,7 +296,7 @@ export default function CustomSoftware() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <div className="text-sm text-accent font-semibold mb-2">{study.industry}</div>
                   <h3 className="text-2xl font-bold mb-4">{study.title}</h3>
@@ -328,7 +328,7 @@ export default function CustomSoftware() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {engagementModels.map((model, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8 text-center">
                   <model.icon className="h-12 w-12 text-accent mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{model.title}</h3>

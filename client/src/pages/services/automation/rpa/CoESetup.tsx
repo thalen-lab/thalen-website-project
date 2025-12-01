@@ -397,7 +397,7 @@ export default function CoESetup() {
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <Card className="border-2">
+            <Card className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
               <CardContent className="p-8">
                 <div className="space-y-4">
                   {coeRoles.map((item, index) => (

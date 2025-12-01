@@ -106,7 +106,7 @@ export default function BusinessApps() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <solution.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
@@ -267,7 +267,7 @@ export default function BusinessApps() {
                 examples: ["Full ERP suite", "Complex workflows", "Advanced analytics", "Unlimited users"]
               }
             ].map((tier, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-2">{tier.tier}</h3>
                   <div className="text-3xl font-bold text-accent mb-6">{tier.price}</div>

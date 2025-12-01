@@ -264,7 +264,7 @@ export default function ProcessAssessment() {
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
-            <Card className="border-2">
+            <Card className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-center">{roiExample.process}</h3>
                 <div className="grid md:grid-cols-2 gap-8">

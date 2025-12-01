@@ -113,7 +113,7 @@ export default function AppDevelopment() {
                   description: "2-week sprints from requirements to working software, with continuous stakeholder feedback and course correction"
                 }
               ].map((item, index) => (
-                <Card key={index} className="hover:shadow-xl transition-all">
+                <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                   <CardContent className="p-8">
                     <CheckCircle2 className="h-10 w-10 text-foreground mb-4" />
                     <h3 className="text-xl font-bold mb-3">{item.title}</h3>
@@ -168,7 +168,7 @@ export default function AppDevelopment() {
                 metrics: "60% reduction in email volume"
               }
             ].map((useCase, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all">
+              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
                   <p className="text-muted-foreground mb-4">{useCase.description}</p>
@@ -219,7 +219,7 @@ export default function AppDevelopment() {
                 deliverable: "Production Application + Trained Internal Team"
               }
             ].map((phase, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 hover:shadow-xl transition-all">
+              <div key={index} className="bg-white rounded-lg p-8 hover:shadow-xl transition-all active:scale-95">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
                   {phase.number}
                 </div>
@@ -267,7 +267,7 @@ export default function AppDevelopment() {
                 <h3 className="text-xl font-bold mb-4 text-center">{stack.category}</h3>
                 <div className="flex flex-wrap justify-center gap-3">
                   {stack.technologies.map((tech) => (
-                    <div key={tech} className="bg-secondary border border-border rounded-lg px-4 py-2 font-medium text-sm hover:shadow-md transition-all">
+                    <div key={tech} className="bg-secondary border border-border rounded-lg px-4 py-2 font-medium text-sm hover:shadow-md transition-all active:scale-95">
                       {tech}
                     </div>
                   ))}

@@ -206,7 +206,7 @@ export default function DataAnalytics() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {governmentExperience.map((exp, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <TrendingUp className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
@@ -240,7 +240,7 @@ export default function DataAnalytics() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {fedrampPlatforms.map((category, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold mb-4">{category.category}</h3>
                   <div className="flex flex-wrap gap-2">
@@ -304,7 +304,7 @@ export default function DataAnalytics() {
               Learn how a state attorney general's office prevented $50M in fraud with CJIS-compliant real-time ML analytics processing 10M+ daily transactions.
             </p>
           </div>
-          <Card className="max-w-4xl mx-auto overflow-hidden hover:shadow-2xl transition-all">
+          <Card className="max-w-4xl mx-auto overflow-hidden hover:shadow-2xl transition-all active:scale-95">
             <div className="grid md:grid-cols-2">
               <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
                 <div className="inline-block bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
