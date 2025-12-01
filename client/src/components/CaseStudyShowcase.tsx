@@ -118,14 +118,15 @@ export default function CaseStudyShowcase() {
               Real-world case studies demonstrating measurable mission impact across federal, state, and local government agencies.
             </p>
             <div className="flex items-center gap-4">
-              <Link href="/case-studies">
-                <Button 
-                  variant="default"
-                  className="bg-slate-900 hover:bg-slate-800 text-white"
-                >
+              <Button 
+                asChild
+                variant="default"
+                className="bg-slate-900 hover:bg-slate-800 text-white"
+              >
+                <Link href="/case-studies">
                   All cases
-                </Button>
-              </Link>
+                </Link>
+              </Button>
               <div className="flex gap-2">
                 <button
                   onClick={() => scroll('left')}
@@ -190,10 +191,8 @@ export default function CaseStudyShowcase() {
                 <p className="text-slate-600 mb-6 line-clamp-3">
                   {study.description}
                 </p>
-                <Link href={study.link}>
-                  <button className="w-12 h-12 rounded-full border-2 border-slate-900 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors group/btn">
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
+                <Link href={study.link} className="w-12 h-12 rounded-full border-2 border-slate-900 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors group/btn">
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             </Card>

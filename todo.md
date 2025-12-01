@@ -1821,3 +1821,10 @@
   - [x] All RUXI Rule #3 violations fixed (Blue icons, neutral bullets)
   - [x] All company name errors fixed (Thalen → NexDyne)
 - [x] Save checkpoint
+
+## Phase 71: Fix Nested Anchor Tag Error on Homepage
+- [x] Identify nested anchor tags in CaseStudyShowcase component
+- [x] Fix "All cases" button (Link wrapping Button)
+- [x] Fix case study card arrow buttons (Link wrapping button element)
+- [x] Test homepage for console errors
+- [x] Verify no nested anchor tag errors in browser console
