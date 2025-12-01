@@ -175,7 +175,7 @@ export default function CloudOptimization() {
                   <ul className="space-y-3">
                     {area.items.map((item, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-2"></span>
                         <span>{item}</span>
                       </li>
                     ))}

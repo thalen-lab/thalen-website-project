@@ -151,7 +151,7 @@ export default function MultiCloud() {
                     <h4 className="font-semibold text-sm">Use Cases:</h4>
                     {arch.useCases.map((useCase, idx) => (
                       <div key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-2"></span>
                         <span>{useCase}</span>
                       </div>
                     ))}
