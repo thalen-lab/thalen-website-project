@@ -122,7 +122,7 @@ export default function Automation() {
           <div className="grid md:grid-cols-3 gap-8">
             {keyDifferentiators.map((item, index) => (
               <div key={index} className="text-center">
-                <item.icon className="h-12 w-12 text-accent mx-auto mb-4" />
+                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
@@ -145,14 +145,14 @@ export default function Automation() {
             {primaryServices.map((service, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
                 <CardContent className="p-8">
-                  <service.icon className="h-16 w-16 text-accent mb-6" />
+                  <service.icon className="h-16 w-16 text-primary mb-6" />
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p className="text-muted-foreground mb-6">{service.description}</p>
                   
                   <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -175,7 +175,7 @@ export default function Automation() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 mr-4 flex-shrink-0"></span>
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
                     <p className="text-sm text-muted-foreground">{capability.description}</p>
@@ -201,10 +201,10 @@ export default function Automation() {
             {governmentExperience.map((exp, index) => (
               <Card key={index} className="border-2">
                 <CardContent className="p-8">
-                  <TrendingUp className="h-12 w-12 text-accent mb-4" />
+                  <TrendingUp className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
-                  <p className="text-lg font-bold text-accent">{exp.outcome}</p>
+                  <p className="text-lg font-bold text-primary">{exp.outcome}</p>
                 </CardContent>
               </Card>
             ))}
@@ -238,7 +238,7 @@ export default function Automation() {
                   <h3 className="text-xl font-bold mb-4">{category.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">
+                      <span key={idx} className="bg-card border border-border text-primary px-3 py-1 rounded-full text-sm font-medium">
                         {platform}
                       </span>
                     ))}

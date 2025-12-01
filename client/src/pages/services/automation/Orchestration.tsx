@@ -60,7 +60,7 @@ export default function Orchestration() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
               Enterprise Workflow Automation
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -96,7 +96,7 @@ export default function Orchestration() {
             {orchestrationBenefits.map((benefit, index) => (
               <Card key={index} className="border-2 hover:border-accent transition-colors">
                 <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-accent mb-4" />
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
@@ -145,32 +145,32 @@ export default function Orchestration() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-accent/10 border-accent/30">
+              <Card className="bg-muted border-border">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 text-accent">With Thalen Technologies Orchestration</h3>
+                  <h3 className="text-xl font-bold mb-4 text-foreground">With Thalen Technologies Orchestration</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                       <span className="text-sm">Work routes automatically to the right person at the right time</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                       <span className="text-sm">Real-time dashboards show status of every request</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                       <span className="text-sm">SLA violations trigger automatic escalations</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                       <span className="text-sm">Policy rules are enforced automatically at every step</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                       <span className="text-sm">Performance metrics update in real-time</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                       <span className="text-sm">Process changes deploy in hours through visual configuration</span>
                     </li>
                   </ul>
@@ -181,8 +181,8 @@ export default function Orchestration() {
             <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <Zap className="h-8 w-8 text-accent" />
-                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Federal Transformation Story</div>
+                  <Zap className="h-8 w-8 text-primary" />
+                  <div className="text-sm font-semibold text-primary uppercase tracking-wide">Federal Transformation Story</div>
                 </div>
                 <p className="text-lg mb-6 leading-relaxed">
                   "Our procurement process involved 47 separate steps across 8 departments. Average cycle time was 120 days, and we had zero visibility into where requests were stuck. Thalen Technologies orchestrated the entire workflow—from requisition through contract award. Now our average cycle time is 35 days, we have real-time visibility into every request, and we have not missed a single FAR compliance requirement since go-live."
@@ -211,13 +211,13 @@ export default function Orchestration() {
             {orchestrationScenarios.map((scenario, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8">
-                  <div className="bg-accent/10 rounded-lg p-4 w-fit mb-4">
-                    <scenario.icon className="h-10 w-10 text-accent" />
+                  <div className="bg-muted rounded-lg p-4 w-fit mb-4">
+                    <scenario.icon className="h-10 w-10 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{scenario.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{scenario.description}</p>
                   <div className="bg-secondary rounded-lg p-4">
-                    <div className="text-2xl font-bold text-accent mb-1">{scenario.metric}</div>
+                    <div className="text-2xl font-bold text-primary mb-1">{scenario.metric}</div>
                     <div className="text-sm text-muted-foreground">Typical improvement</div>
                   </div>
                 </CardContent>
@@ -265,11 +265,11 @@ export default function Orchestration() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Process Mining & Analysis</h3>
                       <p className="text-muted-foreground mb-3">We analyze your current process by interviewing stakeholders, reviewing documentation, and observing actual workflows. You will receive a detailed process map showing every step, decision point, and handoff—plus recommendations for optimization before automation.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Current State Process Map & Optimization Recommendations</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Current State Process Map & Optimization Recommendations</div>
                     </div>
                   </div>
                 </CardContent>
@@ -278,11 +278,11 @@ export default function Orchestration() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Workflow Design & Policy Encoding</h3>
                       <p className="text-muted-foreground mb-3">We design the optimized workflow with your team, encoding business rules, approval hierarchies, and compliance requirements. Every decision point is documented, and exception handling is built in from the start.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Future State Workflow Design & Business Rules Documentation</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Future State Workflow Design & Business Rules Documentation</div>
                     </div>
                   </div>
                 </CardContent>
@@ -291,11 +291,11 @@ export default function Orchestration() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Platform Configuration & Integration</h3>
                       <p className="text-muted-foreground mb-3">We configure the orchestration platform to match your workflow design, integrate with your existing systems (ERP, case management, email, etc.), and build dashboards for process monitoring. Your team validates the configuration in a test environment.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Configured platform with full system integration</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Configured platform with full system integration</div>
                     </div>
                   </div>
                 </CardContent>
@@ -304,11 +304,11 @@ export default function Orchestration() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Deployment & Continuous Improvement</h3>
                       <p className="text-muted-foreground mb-3">The orchestrated process goes live with full monitoring and support. We track performance metrics, identify bottlenecks, and continuously refine workflows based on actual usage data. Your team can make configuration changes without developer involvement.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Production workflow + ongoing optimization support</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Production workflow + ongoing optimization support</div>
                     </div>
                   </div>
                 </CardContent>

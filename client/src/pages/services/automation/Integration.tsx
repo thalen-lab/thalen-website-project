@@ -57,7 +57,7 @@ export default function Integration() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
               FedRAMP High Authorized • FIPS 140-2 Compliant
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -93,7 +93,7 @@ export default function Integration() {
             {capabilities.map((capability, index) => (
               <Card key={index} className="border-2 hover:border-accent transition-colors">
                 <CardContent className="p-8">
-                  <capability.icon className="h-14 w-14 text-accent mb-4" />
+                  <capability.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{capability.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{capability.description}</p>
                 </CardContent>
@@ -117,21 +117,21 @@ export default function Integration() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <div className="font-semibold mb-1">No System Left Behind</div>
                     <div className="text-sm text-muted-foreground">Connect legacy mainframes, COTS products, and modern SaaS—all through one platform</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <div className="font-semibold mb-1">Air-Gap Ready</div>
                     <div className="text-sm text-muted-foreground">Secure data transfer between classified and unclassified environments</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <div className="font-semibold mb-1">Compliance Automation</div>
                     <div className="text-sm text-muted-foreground">Automated FISMA reporting, continuous ATO monitoring, and audit-ready logs</div>
@@ -143,8 +143,8 @@ export default function Integration() {
             <Card className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <Network className="h-8 w-8 text-accent" />
-                  <div className="text-sm font-semibold text-accent uppercase tracking-wide">Defense Integration Success</div>
+                  <Network className="h-8 w-8 text-primary" />
+                  <div className="text-sm font-semibold text-primary uppercase tracking-wide">Defense Integration Success</div>
                 </div>
                 <p className="text-lg mb-6 leading-relaxed">
                   "We had 14 separate systems supporting our logistics operation—everything from 40-year-old inventory databases to modern supply chain analytics. Our team spent 30% of their time just moving data between systems. Thalen Technologies integrated all 14 systems in 90 days. Now data flows automatically, and we've reallocated 12 FTEs to strategic planning instead of data entry."
@@ -173,8 +173,8 @@ export default function Integration() {
             {integrationChallenges.map((challenge, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8">
-                  <div className="bg-accent/10 rounded-lg p-4 w-fit mb-4">
-                    <challenge.icon className="h-10 w-10 text-accent" />
+                  <div className="bg-muted rounded-lg p-4 w-fit mb-4">
+                    <challenge.icon className="h-10 w-10 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{challenge.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{challenge.description}</p>
@@ -223,11 +223,11 @@ export default function Integration() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">System Inventory & Data Flow Mapping</h3>
                       <p className="text-muted-foreground mb-3">We document every system in your environment, map current data flows (manual and automated), and identify integration pain points. You'll receive a comprehensive architecture diagram showing exactly how information moves through your organization today.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Current State Architecture & Integration Gap Analysis</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Current State Architecture & Integration Gap Analysis</div>
                     </div>
                   </div>
                 </CardContent>
@@ -236,11 +236,11 @@ export default function Integration() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Integration Architecture Design</h3>
                       <p className="text-muted-foreground mb-3">We design a future-state architecture that connects your systems through our FedRAMP-authorized platform. This includes data transformation rules, security controls, error handling, and scalability planning. Every integration is documented and approved before implementation.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Target Architecture Blueprint & Security Plan</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Target Architecture Blueprint & Security Plan</div>
                     </div>
                   </div>
                 </CardContent>
@@ -249,11 +249,11 @@ export default function Integration() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Phased Implementation & Testing</h3>
                       <p className="text-muted-foreground mb-3">We implement integrations in priority order, starting with your highest-impact data flows. Each integration is thoroughly tested in a sandbox environment before production deployment. Your team validates data accuracy at every step.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Production integrations with full test documentation</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Production integrations with full test documentation</div>
                     </div>
                   </div>
                 </CardContent>
@@ -262,11 +262,11 @@ export default function Integration() {
               <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Monitoring & Continuous Optimization</h3>
                       <p className="text-muted-foreground mb-3">Once live, you gain access to real-time monitoring dashboards showing data flow health, error rates, and performance metrics. We continuously optimize integrations based on usage patterns and provide quarterly architecture reviews.</p>
-                      <div className="text-sm font-semibold text-accent">Deliverable: Operational platform + ongoing support & optimization</div>
+                      <div className="text-sm font-semibold text-primary">Deliverable: Operational platform + ongoing support & optimization</div>
                     </div>
                   </div>
                 </CardContent>
