@@ -7,7 +7,9 @@ import { ArrowRight, Shield, CheckCircle2, Award, Users, Clock, DollarSign, Targ
 export default function FederalGovernment() {
   const capabilities = [
     'FedRAMP Authorized (Moderate & High)',
+    'StateRAMP Authorized Platforms',
     'FISMA Moderate ATO',
+    'CJIS Compliant (Law Enforcement)',
     'Top Secret/SCI Cleared Team',
     'NIST 800-171 Compliance',
     'Continuous Monitoring (ConMon)',
@@ -74,18 +76,18 @@ export default function FederalGovernment() {
               Core Competency
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Federal Government Solutions
+              Government Agency Solutions
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Trusted partner for mission-critical automation and modernization across government agencies. FedRAMP Authorized with Top Secret/SCI cleared teams delivering measurable results for defense, intelligence, and civilian operations.
+              Trusted partner for mission-critical automation and modernization across federal, state, and local government agencies. FedRAMP and StateRAMP authorized with Top Secret/SCI cleared teams delivering measurable results for defense, intelligence, civilian, and public sector operations.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Federal Assessment
+                Schedule Government Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Federal Case Studies
+                View Government Case Studies
               </Button>
             </div>
           </div>
@@ -220,6 +222,166 @@ export default function FederalGovernment() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* StateRAMP Explainer */}
+      <section className="py-20 bg-gradient-to-br from-secondary to-background">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                State & Local Compliance
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Understanding StateRAMP</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                StateRAMP (State Risk and Authorization Management Program) is the state and local government equivalent of FedRAMP, providing a standardized approach to security assessment and authorization for cloud services.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="border-2">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-4">What is StateRAMP?</h3>
+                  <p className="text-muted-foreground mb-4">
+                    StateRAMP is a nonprofit organization that provides a standardized approach for state and local governments to assess and authorize cloud service providers. It was created to address the unique security and compliance needs of state and local agencies while reducing duplication of effort across jurisdictions.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      'Based on FedRAMP framework but tailored for state/local needs',
+                      'Recognized by 20+ states as acceptable security framework',
+                      'Reduces time and cost for state agencies to adopt cloud services',
+                      'Provides reciprocity across participating states'
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
+                        <span className="text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-4">Why StateRAMP Matters</h3>
+                  <p className="text-muted-foreground mb-4">
+                    State and local governments face similar security challenges as federal agencies but often lack the resources to conduct independent security assessments of cloud providers. StateRAMP authorization signals that a platform has been rigorously vetted for government use.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      'Accelerates procurement by providing pre-vetted platforms',
+                      'Ensures consistent security standards across jurisdictions',
+                      'Reduces cost of security assessments for state agencies',
+                      'Enables data sovereignty and in-state residency requirements'
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
+                        <span className="text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="border-2 border-accent">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-6">StateRAMP vs. FedRAMP: Key Differences</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b-2 border-border">
+                        <th className="text-left py-3 px-4 font-semibold">Aspect</th>
+                        <th className="text-left py-3 px-4 font-semibold">FedRAMP</th>
+                        <th className="text-left py-3 px-4 font-semibold">StateRAMP</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-border">
+                      <tr>
+                        <td className="py-3 px-4 font-medium">Target Audience</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">Federal agencies</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">State & local governments</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3 px-4 font-medium">Authorization Levels</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">Low, Moderate, High</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">Level 1, Level 2</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3 px-4 font-medium">Security Controls</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">NIST 800-53 (federal)</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">NIST 800-53 (adapted for state/local)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3 px-4 font-medium">Data Residency</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">US-based (GovCloud)</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">State-specific options available</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3 px-4 font-medium">Reciprocity</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">Across federal agencies</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">Across participating states</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3 px-4 font-medium">Cost & Timeline</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">$500K-$5M, 12-24 months</td>
+                        <td className="py-3 px-4 text-sm text-muted-foreground">$100K-$1M, 6-12 months</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="mt-12 grid md:grid-cols-3 gap-6">
+              <Card className="border-2">
+                <CardContent className="p-6">
+                  <div className="text-3xl font-bold text-accent mb-2">20+</div>
+                  <div className="text-sm text-muted-foreground mb-3">States Participating</div>
+                  <p className="text-xs text-muted-foreground">Growing number of states recognizing StateRAMP as acceptable security framework</p>
+                </CardContent>
+              </Card>
+              <Card className="border-2">
+                <CardContent className="p-6">
+                  <div className="text-3xl font-bold text-accent mb-2">50+</div>
+                  <div className="text-sm text-muted-foreground mb-3">Authorized Platforms</div>
+                  <p className="text-xs text-muted-foreground">Cloud services that have achieved StateRAMP authorization</p>
+                </CardContent>
+              </Card>
+              <Card className="border-2">
+                <CardContent className="p-6">
+                  <div className="text-3xl font-bold text-accent mb-2">60%</div>
+                  <div className="text-sm text-muted-foreground mb-3">Faster Procurement</div>
+                  <p className="text-xs text-muted-foreground">Average reduction in time-to-authorization for state agencies</p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="mt-12 bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-4">Thalen Technologies StateRAMP Expertise</h3>
+                <p className="text-lg text-muted-foreground mb-6">
+                  We help state and local agencies implement StateRAMP-authorized platforms and navigate the authorization process for custom solutions. Our team has successfully deployed StateRAMP-authorized infrastructure for DOTs, health departments, law enforcement agencies, and municipal governments across multiple states.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {[
+                    'StateRAMP-authorized platform implementation (Salesforce Gov Cloud, AWS GovCloud, Azure Government)',
+                    'State-specific data residency and sovereignty requirements',
+                    'CJIS compliance for law enforcement integration',
+                    'StateRAMP authorization support for custom applications',
+                    'Multi-state reciprocity planning and documentation',
+                    'Continuous monitoring and compliance maintenance'
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
+                      <span className="text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

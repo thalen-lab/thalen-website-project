@@ -126,6 +126,8 @@ import VAPredictiveAnalyticsCase from "./pages/case-studies/VAPredictiveAnalytic
 import DODDataPipelinesCase from "./pages/case-studies/DODDataPipelines";
 import HHSPublicHealthCase from "./pages/case-studies/HHSPublicHealth";
 import AerospaceDigitalTwinCase from "./pages/case-studies/AerospaceDigitalTwin";
+import StateDOTCase from "./pages/case-studies/StateDOT";
+import CountyHealthCase from "./pages/case-studies/CountyHealth";
 import CaseStudies from "./pages/CaseStudies";
 
 // Insights Pages
@@ -259,6 +261,8 @@ function Router() {
       <Route path={"/case-studies/va-predictive-analytics"} component={VAPredictiveAnalyticsCase} />
       <Route path={"/case-studies/dod-data-pipelines"} component={DODDataPipelinesCase} />
       <Route path={"/case-studies/hhs-public-health"} component={HHSPublicHealthCase} />
+      <Route path={"/case-studies/state-dot"} component={StateDOTCase} />
+      <Route path={"/case-studies/county-health"} component={CountyHealthCase} />
       
       {/* Insights Routes */}
       <Route path={"/insights/roi-methodology"} component={ROIMethodologyInsight} />
