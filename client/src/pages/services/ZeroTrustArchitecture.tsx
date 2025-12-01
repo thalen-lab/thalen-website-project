@@ -100,7 +100,7 @@ export default function ZeroTrustArchitecture() {
               Zero Trust Architecture
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Implement modern Zero Trust security framework with micro-segmentation, continuous verification, and least-privilege access controls. Thalen Technologies delivers NIST 800-207 and DoD Zero Trust Reference Architecture implementations for government agencies eliminating implicit trust.
+              Implement modern Zero Trust security framework with micro-segmentation, continuous verification, and least-privilege access controls. NexDyne delivers NIST 800-207 and DoD Zero Trust Reference Architecture implementations for government agencies (federal, state, local) eliminating implicit trust.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -129,13 +129,13 @@ export default function ZeroTrustArchitecture() {
             {ztPillars.map((pillar, index) => (
               <Card key={index} className="border-2 hover:border-accent transition-colors hover:shadow-xl">
                 <CardContent className="p-8">
-                  <pillar.icon className="h-16 w-16 text-accent mb-4" />
+                  <pillar.icon className="h-16 w-16 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{pillar.title}</h3>
                   <p className="text-muted-foreground mb-6">{pillar.description}</p>
                   <ul className="space-y-2">
                     {pillar.capabilities.map((capability, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
                         <span>{capability}</span>
                       </li>
                     ))}
@@ -162,7 +162,7 @@ export default function ZeroTrustArchitecture() {
               <Card key={index} className="hover:shadow-xl transition-shadow border-2">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-4">
-                    <div className="h-12 w-12 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-xl mr-4">
+                    <div className="h-12 w-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl mr-4">
                       {index + 1}
                     </div>
                     <h3 className="text-2xl font-bold">{phase.phase}</h3>
@@ -173,7 +173,7 @@ export default function ZeroTrustArchitecture() {
                     <div className="grid grid-cols-2 gap-3">
                       {phase.deliverables.map((deliverable, idx) => (
                         <div key={idx} className="flex items-center text-sm">
-                          <div className="h-2 w-2 bg-accent rounded-full mr-2"></div>
+                          <div className="h-2 w-2 bg-foreground rounded-full mr-2"></div>
                           <span>{deliverable}</span>
                         </div>
                       ))}
@@ -200,7 +200,7 @@ export default function ZeroTrustArchitecture() {
             {ztFrameworks.map((framework, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">
-                  <Shield className="h-10 w-10 text-accent mx-auto mb-3" />
+                  <Shield className="h-10 w-10 text-primary mx-auto mb-3" />
                   <div className="font-semibold text-sm">{framework}</div>
                 </CardContent>
               </Card>
@@ -227,7 +227,7 @@ export default function ZeroTrustArchitecture() {
               { metric: '100%', label: 'NIST 800-207 Alignment' }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="text-5xl font-bold text-accent mb-2">{item.metric}</div>
+                <div className="text-5xl font-bold text-primary mb-2">{item.metric}</div>
                 <div className="text-sm text-muted-foreground">{item.label}</div>
               </div>
             ))}
@@ -240,7 +240,7 @@ export default function ZeroTrustArchitecture() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Implement Zero Trust Security</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a Zero Trust assessment and discover how Thalen Technologies can help you eliminate implicit trust and implement modern security architecture.
+            Schedule a Zero Trust assessment and discover how NexDyne can help you eliminate implicit trust and implement modern security architecture.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -91,7 +91,7 @@ export default function SecurityAssessment() {
               Security Assessment & Compliance
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies and contractors achieve FedRAMP, CMMC, and NIST compliance through expert gap assessments, security controls implementation, and ATO package preparation. Our proven methodology reduces typical 12-18 month timelines to 6-9 months while ensuring first-time assessment success.
+              We help government agencies (federal, state, local) and defense contractors achieve FedRAMP, StateRAMP, CMMC, and NIST compliance through expert gap assessments, security controls implementation, and ATO package preparation. Our proven methodology reduces typical 12-18 month timelines to 6-9 months while ensuring first-time assessment success.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -110,7 +110,7 @@ export default function SecurityAssessment() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose Thalen Technologies</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose NexDyne</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Unlike generic compliance consultants, we understand government authorization processes (FedRAMP, StateRAMP, CJIS), security clearances, and mission continuity imperatives.
             </p>
@@ -120,7 +120,7 @@ export default function SecurityAssessment() {
             {capabilities.map((capability, index) => (
               <Card key={index} className="border-2 hover:border-accent transition-colors hover:shadow-xl">
                 <CardContent className="p-8">
-                  <capability.icon className="h-16 w-16 text-accent mb-4" />
+                  <capability.icon className="h-16 w-16 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{capability.title}</h3>
                   <p className="text-muted-foreground mb-6">{capability.description}</p>
                   <ul className="space-y-2">
@@ -153,7 +153,7 @@ export default function SecurityAssessment() {
               <Card key={index} className="hover:shadow-xl transition-shadow border-2">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-4">
-                    <div className="h-12 w-12 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-xl mr-4">
+                    <div className="h-12 w-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl mr-4">
                       {index + 1}
                     </div>
                     <h3 className="text-2xl font-bold">{step.phase}</h3>
@@ -164,7 +164,7 @@ export default function SecurityAssessment() {
                     <ul className="space-y-2">
                       {step.deliverables.map((deliverable, idx) => (
                         <li key={idx} className="flex items-start text-sm">
-                          <div className="h-1.5 w-1.5 bg-accent rounded-full mr-2 mt-1.5"></div>
+                          <div className="h-1.5 w-1.5 bg-foreground rounded-full mr-2 mt-1.5"></div>
                           <span>{deliverable}</span>
                         </li>
                       ))}
@@ -191,7 +191,7 @@ export default function SecurityAssessment() {
             {frameworks.map((framework, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">
-                  <Shield className="h-8 w-8 text-accent mx-auto mb-3" />
+                  <Shield className="h-8 w-8 text-primary mx-auto mb-3" />
                   <div className="text-sm font-semibold">{framework}</div>
                 </CardContent>
               </Card>
@@ -205,7 +205,7 @@ export default function SecurityAssessment() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Achieve Compliance?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive readiness assessment and discover how Thalen Technologies can accelerate your path to FedRAMP, CMMC, or NIST compliance.
+            Start with a comprehensive readiness assessment and discover how NexDyne can accelerate your path to FedRAMP, StateRAMP, CMMC, or NIST compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

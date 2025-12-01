@@ -111,7 +111,7 @@ export default function Cybersecurity() {
               Government Cybersecurity & Compliance Services
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies and defense contractors implement FedRAMP-authorized security platforms, achieve CMMC certification, and deploy Zero Trust architectures. Vendor-neutral consulting with cleared security professionals and proven ATO success.
+              We help government agencies (federal, state, and local) and defense contractors implement FedRAMP and StateRAMP-authorized security platforms, achieve CMMC certification, and deploy Zero Trust architectures. Vendor-neutral consulting with cleared security professionals and proven ATO success.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -136,7 +136,7 @@ export default function Cybersecurity() {
           <div className="grid md:grid-cols-3 gap-8">
             {keyDifferentiators.map((item, index) => (
               <div key={index} className="text-center">
-                <item.icon className="h-12 w-12 text-accent mx-auto mb-4" />
+                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
@@ -151,7 +151,7 @@ export default function Cybersecurity() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Cybersecurity Implementation Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end security capabilities from compliance assessment to Zero Trust deployment, designed for government agencies and defense contractors.
+              End-to-end security capabilities from compliance assessment to Zero Trust deployment, designed for government agencies (federal, state, local) and defense contractors.
             </p>
           </div>
 
@@ -159,7 +159,7 @@ export default function Cybersecurity() {
             {primaryServices.map((service, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
                 <CardContent className="p-8">
-                  <service.icon className="h-16 w-16 text-accent mb-6" />
+                  <service.icon className="h-16 w-16 text-primary mb-6" />
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p className="text-muted-foreground mb-6">{service.description}</p>
                   
@@ -207,7 +207,7 @@ export default function Cybersecurity() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Compliance Framework Expertise</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Deep expertise implementing security controls across all major government compliance frameworks (FedRAMP, StateRAMP, CJIS) with proven ATO success.
+              Deep expertise implementing security controls across all major government compliance frameworks including FedRAMP (federal), StateRAMP (state/local), CMMC (defense), and CJIS (law enforcement) with proven ATO success.
             </p>
           </div>
 
@@ -215,10 +215,10 @@ export default function Cybersecurity() {
             {complianceFrameworks.map((framework, index) => (
               <Card key={index} className="border-2">
                 <CardContent className="p-6 text-center">
-                  <Shield className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="text-lg font-bold mb-2">{framework.framework}</h3>
                   <p className="text-sm text-muted-foreground mb-1">{framework.controls}</p>
-                  <p className="text-xs text-accent font-semibold">{framework.timeline}</p>
+                  <p className="text-xs text-primary font-semibold">{framework.timeline}</p>
                 </CardContent>
               </Card>
             ))}
@@ -240,10 +240,10 @@ export default function Cybersecurity() {
             {governmentExperience.map((exp, index) => (
               <Card key={index} className="border-2">
                 <CardContent className="p-8">
-                  <Target className="h-12 w-12 text-accent mb-4" />
+                  <Target className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
-                  <p className="text-lg font-bold text-accent">{exp.outcome}</p>
+                  <p className="text-lg font-bold text-primary">{exp.outcome}</p>
                 </CardContent>
               </Card>
             ))}
@@ -348,11 +348,11 @@ export default function Cybersecurity() {
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div>
-                    <div className="text-3xl font-bold text-accent">99.2%</div>
+                    <div className="text-3xl font-bold text-primary">99.2%</div>
                     <div className="text-sm text-muted-foreground">System Uptime</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-accent">75%</div>
+                    <div className="text-3xl font-bold text-primary">75%</div>
                     <div className="text-sm text-muted-foreground">Downtime Reduction</div>
                   </div>
                 </div>

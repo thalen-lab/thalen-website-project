@@ -90,7 +90,7 @@ export default function SecurityOperationsCenter() {
               Security Operations Center (SOC)
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies implement 24/7 security operations centers using FedRAMP-authorized SIEM/SOAR platforms (Splunk Gov, LogRhythm, Palo Alto Cortex) with automated threat detection and response. Our team delivers government-grade SOC implementation with TS/SCI cleared personnel for classified environments.
+              We help government agencies (federal, state, local) implement 24/7 security operations centers using FedRAMP-authorized SIEM/SOAR platforms (Splunk Gov, LogRhythm, Palo Alto Cortex) with automated threat detection and response. Our team delivers government-grade SOC implementation with TS/SCI cleared personnel for classified environments.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -119,7 +119,7 @@ export default function SecurityOperationsCenter() {
             {socCapabilities.map((capability, index) => (
               <Card key={index} className="border-2 hover:border-accent transition-colors hover:shadow-xl">
                 <CardContent className="p-8">
-                  <capability.icon className="h-16 w-16 text-accent mb-4" />
+                  <capability.icon className="h-16 w-16 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{capability.title}</h3>
                   <p className="text-muted-foreground mb-6">{capability.description}</p>
                   <ul className="space-y-2">
@@ -152,7 +152,7 @@ export default function SecurityOperationsCenter() {
               <Card key={index} className="hover:shadow-xl transition-shadow border-2">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-4">
-                    <div className="h-12 w-12 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-xl mr-4">
+                    <div className="h-12 w-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl mr-4">
                       {index + 1}
                     </div>
                     <h3 className="text-2xl font-bold">{service.tier}</h3>
@@ -163,7 +163,7 @@ export default function SecurityOperationsCenter() {
                     <div className="grid grid-cols-2 gap-3">
                       {service.responsibilities.map((resp, idx) => (
                         <div key={idx} className="flex items-center text-sm">
-                          <div className="h-2 w-2 bg-accent rounded-full mr-2"></div>
+                          <div className="h-2 w-2 bg-foreground rounded-full mr-2"></div>
                           <span>{resp}</span>
                         </div>
                       ))}
@@ -190,7 +190,7 @@ export default function SecurityOperationsCenter() {
             {socTools.map((tool, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">
-                  <Activity className="h-10 w-10 text-accent mx-auto mb-3" />
+                  <Activity className="h-10 w-10 text-primary mx-auto mb-3" />
                   <div className="font-semibold text-sm">{tool}</div>
                 </CardContent>
               </Card>
@@ -217,7 +217,7 @@ export default function SecurityOperationsCenter() {
               { metric: '24/7', label: 'Monitoring Coverage' }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="text-5xl font-bold text-accent mb-2">{item.metric}</div>
+                <div className="text-5xl font-bold text-primary mb-2">{item.metric}</div>
                 <div className="text-sm text-muted-foreground">{item.label}</div>
               </div>
             ))}
@@ -230,7 +230,7 @@ export default function SecurityOperationsCenter() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Protect Your Assets 24/7</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a SOC consultation and discover how Thalen Technologies can deliver continuous security monitoring and threat detection for your mission-critical environment.
+            Schedule a SOC consultation and discover how NexDyne can deliver continuous security monitoring and threat detection for your mission-critical government environment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">
