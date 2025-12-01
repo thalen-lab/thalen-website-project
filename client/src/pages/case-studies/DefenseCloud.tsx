@@ -15,7 +15,7 @@ export default function DefenseCloud() {
         <div className="container">
           <div className="max-w-4xl">
             <div className="flex flex-wrap gap-3 mb-6">
-              <span className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold">
                 Defense Contractor Case Study
               </span>
               <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
@@ -156,7 +156,7 @@ export default function DefenseCloud() {
               <Card key={index} className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-6 w-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                    <CheckCircle2 className="h-6 w-6 text-foreground mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
                       <p className="text-muted-foreground">{solution.description}</p>
@@ -170,7 +170,7 @@ export default function DefenseCloud() {
       </section>
 
       {/* Results */}
-      <section className="py-20 bg-accent/10">
+      <section className="py-20 bg-muted">
         <div className="container max-w-4xl">
           <h2 className="text-4xl font-bold mb-8">Measurable Results</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -204,7 +204,7 @@ export default function DefenseCloud() {
                 Thalen Technologies's expertise in both cloud architecture and defense compliance was exceptional. They delivered a zero-downtime migration while achieving CMMC Level 3 certification on the first audit. The $4.5M in annual savings exceeded our projections, and our team is now fully enabled to operate in the cloud.
               </blockquote>
               <div className="flex items-center">
-                <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
+                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
                   MR
                 </div>
                 <div>

@@ -130,7 +130,7 @@ export default function Analytics() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
-                <div className="bg-accent/10 p-12 flex items-center justify-center">
+                <div className="bg-muted p-12 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-7xl font-bold text-accent mb-2">$12M</div>
                     <div className="text-lg text-muted-foreground mb-4">Annual Savings</div>

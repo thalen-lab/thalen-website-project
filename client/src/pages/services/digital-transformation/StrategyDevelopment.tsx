@@ -77,7 +77,7 @@ export default function StrategyDevelopment() {
       <section className="bg-navy-gradient text-primary-foreground py-20">
         <div className="container">
           <div className="max-w-3xl">
-            <div className="inline-block px-4 py-1 bg-accent/20 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block px-4 py-1 bg-muted rounded-full text-sm font-semibold mb-6">
               Strategic Planning • Roadmap Development
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -118,7 +118,7 @@ export default function StrategyDevelopment() {
               <Card key={index} className="border-2 hover:border-accent transition-colors">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
+                    <div className="p-3 bg-muted rounded-lg">
                       <approach.icon className="h-8 w-8 text-accent" />
                     </div>
                     <div className="flex-1">
@@ -129,7 +129,7 @@ export default function StrategyDevelopment() {
                         <ul className="space-y-1">
                           {approach.deliverables.map((deliverable, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm">
-                              <CheckCircle2 className="h-4 w-4 text-accent" />
+                              <CheckCircle2 className="h-4 w-4 text-foreground" />
                               {deliverable}
                             </li>
                           ))}
@@ -160,7 +160,7 @@ export default function StrategyDevelopment() {
             {keyComponents.map((component, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <div className="inline-flex p-4 bg-accent/10 rounded-full mb-4">
+                  <div className="inline-flex p-4 bg-muted rounded-full mb-4">
                     <component.icon className="h-8 w-8 text-accent" />
                   </div>
                   <h3 className="text-lg font-bold mb-2">{component.title}</h3>

@@ -166,14 +166,14 @@ export default function ProcurementTimeline() {
       <Card className="max-w-4xl mx-auto">
         <CardContent className="p-12">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 mb-4">
-              <CheckCircle2 className="h-8 w-8 text-accent" />
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
+              <CheckCircle2 className="h-8 w-8 text-foreground" />
             </div>
             <h3 className="text-3xl font-bold mb-2">Recommended Procurement Path</h3>
             <p className="text-muted-foreground">Based on your agency profile and requirements</p>
           </div>
 
-          <div className="bg-accent/10 border-2 border-accent rounded-lg p-8 mb-8">
+          <div className="bg-muted border-2 border-accent rounded-lg p-8 mb-8">
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h4 className="text-2xl font-bold mb-2">{recommendation.path}</h4>

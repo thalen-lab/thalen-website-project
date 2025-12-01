@@ -335,7 +335,7 @@ export default function ServiceComparison() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               Service Selection Guide
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -361,7 +361,7 @@ export default function ServiceComparison() {
                   className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all ${
                     activeCategory === category.id
                       ? 'bg-accent text-accent-foreground shadow-lg'
-                      : 'bg-background hover:bg-accent/10'
+                      : 'bg-background hover:bg-muted'
                   }`}
                 >
                   <Icon className="h-5 w-5" />
@@ -383,7 +383,7 @@ export default function ServiceComparison() {
                 <Card key={index} className="border-2 hover:border-accent transition-all duration-300 hover:shadow-xl">
                   <CardHeader className="border-b bg-secondary/30">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="bg-accent/10 rounded-lg p-3">
+                      <div className="bg-muted rounded-lg p-3">
                         <Icon className="h-8 w-8 text-accent" />
                       </div>
                       <div className="text-right">
@@ -411,7 +411,7 @@ export default function ServiceComparison() {
                       <ul className="space-y-2">
                         {service.bestFor.map((use, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm">
-                            <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-0.5" />
                             <span>{use}</span>
                           </li>
                         ))}
@@ -427,7 +427,7 @@ export default function ServiceComparison() {
                       <ul className="space-y-2">
                         {service.keyFeatures.map((feature, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm">
-                            <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-0.5" />
                             <span>{feature}</span>
                           </li>
                         ))}

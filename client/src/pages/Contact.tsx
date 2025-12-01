@@ -184,7 +184,7 @@ export default function Contact() {
                 </Card>
               </div>
 
-              <div className="mt-8 p-6 bg-accent/10 rounded-lg">
+              <div className="mt-8 p-6 bg-muted rounded-lg">
                 <h3 className="font-semibold mb-2">Security Clearances</h3>
                 <p className="text-sm text-muted-foreground">
                   Our team maintains active Top Secret/SCI clearances and is available for classified discussions in secure facilities.

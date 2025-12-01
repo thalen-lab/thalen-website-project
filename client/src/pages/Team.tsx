@@ -64,7 +64,7 @@ const teamMembers = [
     certifications: ["AWS DevOps Professional", "Kubernetes CKA", "Terraform Associate"],
     clearance: "Secret",
     experience: "16+ years",
-    bio: "Specialized in zero-downtime migrations and IL5-compliant infrastructure for defense contractors and federal agencies."
+    bio: "Specialized in zero-downtime migrations and IL5-compliant infrastructure for defense contractors and government agencies."
   }
 ];
 
@@ -92,7 +92,7 @@ export default function Team() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <span className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               OUR TEAM
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -223,7 +223,7 @@ export default function Team() {
                       {member.specializations.map((spec) => (
                         <span
                           key={spec}
-                          className="text-xs bg-accent/10 text-accent px-2 py-1 rounded"
+                          className="text-xs bg-muted text-accent px-2 py-1 rounded"
                         >
                           {spec}
                         </span>

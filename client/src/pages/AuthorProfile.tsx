@@ -10,7 +10,7 @@ const authors = {
   'sarah-chen': {
     name: 'Sarah Chen',
     title: 'Director of Automation Strategy',
-    bio: 'Sarah Chen leads Thalen Technologies\'s automation strategy practice with over 15 years of experience helping federal agencies achieve measurable ROI through intelligent automation. She specializes in RPA implementation, process optimization, and change management for large-scale government transformations.',
+    bio: 'Sarah Chen leads Thalen Technologies\'s automation strategy practice with over 15 years of experience helping government agencies achieve measurable ROI through intelligent automation. She specializes in RPA implementation, process optimization, and change management for large-scale government transformations.',
     expertise: ['Intelligent Automation', 'ROI Measurement', 'Process Optimization', 'Change Management'],
     credentials: ['Certified Automation Professional (CAP)', 'PMP', 'Six Sigma Black Belt'],
     social: {
@@ -44,7 +44,7 @@ const authors = {
   'jennifer-park': {
     name: 'Dr. Jennifer Park',
     title: 'AI Ethics & Governance Lead',
-    bio: 'Dr. Jennifer Park leads Thalen Technologies\'s responsible AI practice, ensuring government AI deployments maintain transparency, accountability, and ethical standards. With a Ph.D. in Computer Science and 12 years in AI governance, she advises federal agencies on AI policy, bias mitigation, and explainability frameworks.',
+    bio: 'Dr. Jennifer Park leads Thalen Technologies\'s responsible AI practice, ensuring government AI deployments maintain transparency, accountability, and ethical standards. With a Ph.D. in Computer Science and 12 years in AI governance, she advises government agencies on AI policy, bias mitigation, and explainability frameworks.',
     expertise: ['Responsible AI', 'AI Governance', 'Machine Learning', 'Bias Mitigation'],
     credentials: ['Ph.D. Computer Science', 'Certified AI Ethics Professional', 'IEEE Senior Member'],
     social: {
@@ -61,7 +61,7 @@ const authors = {
   'david-thompson': {
     name: 'David Thompson',
     title: 'Cloud Architecture Principal',
-    bio: 'David Thompson is a Cloud Architecture Principal at Thalen Technologies with 14 years of experience designing multi-cloud strategies for federal agencies. He specializes in avoiding vendor lock-in while maintaining security and compliance across AWS, Azure, and Google Cloud platforms.',
+    bio: 'David Thompson is a Cloud Architecture Principal at Thalen Technologies with 14 years of experience designing multi-cloud strategies for government agencies. He specializes in avoiding vendor lock-in while maintaining security and compliance across AWS, Azure, and Google Cloud platforms.',
     expertise: ['Multi-Cloud Architecture', 'Cloud Migration', 'Infrastructure as Code', 'DevSecOps'],
     credentials: ['AWS Solutions Architect Professional', 'Azure Solutions Architect Expert', 'GCP Professional Architect'],
     social: {
@@ -78,7 +78,7 @@ const authors = {
   'lisa-martinez': {
     name: 'Lisa Martinez',
     title: 'Digital Transformation Director',
-    bio: 'Lisa Martinez directs digital transformation initiatives at Thalen Technologies, bringing 16 years of experience in change management and organizational transformation. She has led successful transformations at multiple federal agencies, focusing on stakeholder engagement, communication strategies, and sustainable adoption.',
+    bio: 'Lisa Martinez directs digital transformation initiatives at Thalen Technologies, bringing 16 years of experience in change management and organizational transformation. She has led successful transformations at multiple government agencies, focusing on stakeholder engagement, communication strategies, and sustainable adoption.',
     expertise: ['Change Management', 'Digital Transformation', 'Stakeholder Engagement', 'Organizational Design'],
     credentials: ['Prosci Certified Change Practitioner', 'PMP', 'Certified ScrumMaster'],
     social: {
@@ -218,7 +218,7 @@ export default function AuthorProfile() {
             <div className="flex flex-col md:flex-row gap-8 items-start">
               {/* Author Image */}
               <div className="flex-shrink-0">
-                <div className="w-40 h-40 rounded-full bg-accent/20 flex items-center justify-center text-6xl font-bold">
+                <div className="w-40 h-40 rounded-full bg-muted flex items-center justify-center text-6xl font-bold">
                   {author.name.split(' ').map(n => n[0]).join('')}
                 </div>
               </div>
@@ -282,7 +282,7 @@ export default function AuthorProfile() {
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {author.expertise.map((skill, index) => (
-                      <span key={index} className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold">
+                      <span key={index} className="px-4 py-2 bg-muted text-accent rounded-full text-sm font-semibold">
                         {skill}
                       </span>
                     ))}

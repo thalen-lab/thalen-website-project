@@ -138,7 +138,7 @@ export default function GovernmentChat() {
           {/* Header */}
           <div className="bg-navy-gradient text-primary-foreground p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
+              <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center">
                 <MessageCircle className="h-5 w-5 text-accent" />
               </div>
               <div>
@@ -271,7 +271,7 @@ export default function GovernmentChat() {
               {/* Specialist Info */}
               <div className="p-3 border-b bg-secondary/50">
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center font-bold text-accent">
+                  <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center font-bold text-accent">
                     {assignedSpecialist.avatar}
                   </div>
                   <div className="flex-1">

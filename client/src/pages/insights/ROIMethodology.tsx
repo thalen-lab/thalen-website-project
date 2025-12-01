@@ -16,7 +16,7 @@ export default function ROIMethodology() {
       {/* Hero */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container max-w-4xl">
-          <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
             Automation Strategy
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -56,10 +56,10 @@ export default function ROIMethodology() {
               Measuring the return on investment (ROI) of automation initiatives is critical for justifying technology investments and demonstrating business value. However, many organizations struggle to accurately quantify both the costs and benefits of automation projects, leading to underinvestment or misallocated resources.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              At Thalen Technologies, we've developed a comprehensive ROI methodology based on 15+ years of automation implementations across federal agencies and enterprise organizations. This framework provides a structured approach to measuring automation success across multiple dimensions.
+              At Thalen Technologies, we've developed a comprehensive ROI methodology based on 15+ years of automation implementations across government agencies and enterprise organizations. This framework provides a structured approach to measuring automation success across multiple dimensions.
             </p>
 
-            <Card className="my-8 bg-accent/10 border-accent/20">
+            <Card className="my-8 bg-muted border-accent/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Key Takeaway</h3>
                 <p className="text-lg">
@@ -201,7 +201,7 @@ export default function ROIMethodology() {
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
+                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
                   SC
                 </div>
                 <div>

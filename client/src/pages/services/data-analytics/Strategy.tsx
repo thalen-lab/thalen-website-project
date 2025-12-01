@@ -62,7 +62,7 @@ export default function DataStrategy() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               Strategic Planning
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -114,7 +114,7 @@ export default function DataStrategy() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">The Cost of No Strategy</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Federal agencies spend millions on analytics tools, data platforms, and dashboards—but without a coherent strategy, these investments fail to deliver value. Projects get funded based on who asks loudest, not what drives mission impact. Data quality problems persist because nobody owns governance. Analytics teams build solutions that leadership does not use because requirements were never aligned.
+              Government agencies spend millions on analytics tools, data platforms, and dashboards—but without a coherent strategy, these investments fail to deliver value. Projects get funded based on who asks loudest, not what drives mission impact. Data quality problems persist because nobody owns governance. Analytics teams build solutions that leadership does not use because requirements were never aligned.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
               Thalen Technologies's Data Strategy Basecamp is a 6-week engagement that gives you clarity. We assess your current state, define your target vision, and build a prioritized roadmap with quick wins and long-term transformational projects. You will know exactly what to build, in what order, and why it matters to your mission.

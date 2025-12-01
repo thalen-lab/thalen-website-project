@@ -121,7 +121,7 @@ export default function APIMicroservices() {
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
                         <span className="text-sm">{feature}</span>
                       </li>
                     ))}
@@ -150,7 +150,7 @@ export default function APIMicroservices() {
                 <ul className="space-y-2">
                   {stack.tech.map((tech, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0" />
+                      <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0" />
                       <span>{tech}</span>
                     </li>
                   ))}

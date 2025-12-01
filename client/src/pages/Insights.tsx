@@ -370,7 +370,7 @@ export default function Insights() {
       {/* Newsletter CTA */}
       <section className="py-20">
         <div className="container">
-          <Card className="max-w-4xl mx-auto bg-accent/10 border-accent/20">
+          <Card className="max-w-4xl mx-auto bg-muted border-accent/20">
             <CardContent className="p-12 text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Subscribe to Our Newsletter</h2>
               <p className="text-lg text-muted-foreground mb-8">

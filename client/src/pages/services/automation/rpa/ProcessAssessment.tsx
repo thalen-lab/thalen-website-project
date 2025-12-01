@@ -158,7 +158,7 @@ export default function ProcessAssessment() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               Foundation for RPA Success
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -210,7 +210,7 @@ export default function ProcessAssessment() {
                   <div className="space-y-2">
                     {phase.activities.map((activity, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-1" />
+                        <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-1" />
                         <span className="text-sm">{activity}</span>
                       </div>
                     ))}
@@ -237,12 +237,12 @@ export default function ProcessAssessment() {
               return (
                 <Card key={index} className="border-2">
                   <CardContent className="pt-8">
-                    <div className="h-12 w-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
                       <Icon className="h-6 w-6 text-accent" />
                     </div>
                     <h3 className="text-lg font-bold mb-2">{item.criterion}</h3>
                     <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
-                    <div className="bg-accent/10 rounded-lg px-3 py-2">
+                    <div className="bg-muted rounded-lg px-3 py-2">
                       <div className="text-xs text-accent font-semibold">Ideal State:</div>
                       <div className="text-xs">{item.ideal}</div>
                     </div>
@@ -300,7 +300,7 @@ export default function ProcessAssessment() {
                     </div>
                   </div>
                   <div>
-                    <div className="bg-accent/10 rounded-lg p-6">
+                    <div className="bg-muted rounded-lg p-6">
                       <h4 className="font-bold text-lg mb-4">Future State (Automated)</h4>
                       <div className="space-y-3">
                         <div className="flex justify-between">

@@ -74,7 +74,7 @@ export default function AppDevelopment() {
               }
             ].map((item, index) => (
               <div key={index} className="flex gap-6">
-                <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-7 h-7 text-accent" />
                 </div>
                 <div>
@@ -94,7 +94,7 @@ export default function AppDevelopment() {
             <h2 className="text-4xl font-bold mb-6 text-center">What Makes Government Application Development Different?</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground text-center mb-12">
-                Building applications for federal agencies isn't just about writing code—it's about navigating complex compliance frameworks, integrating with legacy systems, and delivering solutions that meet mission-critical security standards while providing modern user experiences.
+                Building applications for government agencies isn't just about writing code—it's about navigating complex compliance frameworks, integrating with legacy systems, and delivering solutions that meet mission-critical security standards while providing modern user experiences.
               </p>
             </div>
             
@@ -115,7 +115,7 @@ export default function AppDevelopment() {
               ].map((item, index) => (
                 <Card key={index} className="hover:shadow-xl transition-all">
                   <CardContent className="p-8">
-                    <CheckCircle2 className="h-10 w-10 text-accent mb-4" />
+                    <CheckCircle2 className="h-10 w-10 text-foreground mb-4" />
                     <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                     <p className="text-muted-foreground text-sm">{item.description}</p>
                   </CardContent>
@@ -172,7 +172,7 @@ export default function AppDevelopment() {
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
                   <p className="text-muted-foreground mb-4">{useCase.description}</p>
-                  <div className="bg-accent/10 rounded-lg p-4 mt-4">
+                  <div className="bg-muted rounded-lg p-4 mt-4">
                     <p className="text-sm font-semibold text-accent">Average Impact:</p>
                     <p className="text-lg font-bold">{useCase.metrics}</p>
                   </div>

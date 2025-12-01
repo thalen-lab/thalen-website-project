@@ -107,7 +107,7 @@ export default function Comment({
           {/* Comment Header */}
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
+              <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center">
                 <span className="text-accent font-semibold">
                   {comment.userName.charAt(0).toUpperCase()}
                 </span>

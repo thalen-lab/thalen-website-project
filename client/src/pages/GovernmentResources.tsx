@@ -162,7 +162,7 @@ export default function GovernmentResources() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Government Buyer Resources
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -240,27 +240,27 @@ export default function GovernmentResources() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-muted-foreground">
-                  Comprehensive guide to achieving FedRAMP Authorization to Operate (ATO) for cloud service providers and federal agencies implementing cloud solutions.
+                  Comprehensive guide to achieving FedRAMP Authorization to Operate (ATO) for cloud service providers and government agencies implementing cloud solutions.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">FedRAMP authorization levels (Low, Moderate, High)</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">System Security Plan (SSP) development</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Security assessment and authorization process</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Continuous monitoring requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Timeline and cost estimates</span>
                   </div>
                 </div>
@@ -292,23 +292,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">CMMC Level 2 and Level 3 requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">NIST 800-171 compliance mapping</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Gap assessment and remediation planning</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Third-party assessment preparation</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Cost and timeline planning</span>
                   </div>
                 </div>
@@ -340,23 +340,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">StateRAMP authorization process overview</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Differences from FedRAMP requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">State-specific compliance requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Security control implementation</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Assessment and authorization timeline</span>
                   </div>
                 </div>
@@ -388,23 +388,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">CJIS Security Policy requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Personnel screening and training</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Advanced authentication requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Audit logging and monitoring</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Cloud service provider compliance</span>
                   </div>
                 </div>
@@ -795,23 +795,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">GSA Schedule procurement process</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">IDIQ and BPA contract vehicles</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Set-aside contracts (8(a), SDVOSB, WOSB)</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Past performance evaluation criteria</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Compliance and security requirements</span>
                   </div>
                 </div>
@@ -832,23 +832,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Cooperative purchasing contracts (NASPO, Sourcewell)</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">State master agreement process</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Local vendor preferences and requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">State-specific compliance (StateRAMP, CJIS)</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">RFP response best practices</span>
                   </div>
                 </div>

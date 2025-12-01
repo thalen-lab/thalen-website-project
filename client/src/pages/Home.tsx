@@ -145,7 +145,7 @@ export default function Home() {
     {
       name: 'GSA Schedule Holder',
       icon: Lock,
-      description: 'GSA IT Schedule 70 contract holder providing streamlined procurement for federal agencies seeking implementation and integration services.'
+      description: 'GSA IT Schedule 70 contract holder providing streamlined procurement for government agencies seeking implementation and integration services.'
     },
     {
       name: 'ATO Support Services',

@@ -116,7 +116,7 @@ export default function Advisory() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-accent/10">
+              <Card className="bg-muted">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-2">Expert Architects</h3>
                   <p className="text-sm">

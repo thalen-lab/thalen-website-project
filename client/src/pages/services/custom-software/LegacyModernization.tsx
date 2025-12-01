@@ -281,8 +281,8 @@ export default function LegacyModernization() {
               { title: "Stakeholder Communication", desc: "Regular updates and demos" }
             ].map((strategy, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle2 className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle2 className="h-8 w-8 text-foreground" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">{strategy.title}</h3>
                 <p className="text-sm text-muted-foreground">{strategy.desc}</p>

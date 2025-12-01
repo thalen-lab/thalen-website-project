@@ -311,7 +311,7 @@ export default function About() {
               >
                 <Card className="text-center hover:shadow-xl transition-shadow h-full">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
                       <value.icon className="h-8 w-8 text-accent" />
                     </div>
                     <div className="text-5xl font-bold text-accent/20 mb-2">{value.letter}</div>

@@ -140,7 +140,7 @@ export default function CapabilityGenerator() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Interactive Tool
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -173,7 +173,7 @@ export default function CapabilityGenerator() {
                       <RadioGroupItem value="federal" id="federal" />
                       <Label htmlFor="federal" className="cursor-pointer flex-1">
                         <div className="font-semibold">Federal Government</div>
-                        <div className="text-sm text-muted-foreground">Federal agencies, DoD, Intelligence Community</div>
+                        <div className="text-sm text-muted-foreground">Government agencies, DoD, Intelligence Community</div>
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2 p-4 border rounded-lg hover:border-accent transition-colors cursor-pointer">
@@ -272,7 +272,7 @@ export default function CapabilityGenerator() {
                           const option = complianceOptions[agencyType].find(o => o.id === id);
                           return (
                             <div key={id} className="text-sm flex items-center">
-                              <CheckCircle2 className="h-3 w-3 text-accent mr-2" />
+                              <CheckCircle2 className="h-3 w-3 text-foreground mr-2" />
                               {option?.label}
                             </div>
                           );
@@ -289,7 +289,7 @@ export default function CapabilityGenerator() {
                           const option = serviceOptions.find(o => o.id === id);
                           return (
                             <div key={id} className="text-sm flex items-center">
-                              <CheckCircle2 className="h-3 w-3 text-accent mr-2" />
+                              <CheckCircle2 className="h-3 w-3 text-foreground mr-2" />
                               {option?.label}
                             </div>
                           );
@@ -373,7 +373,7 @@ export default function CapabilityGenerator() {
                       const service = serviceOptions.find(s => s.id === id);
                       return (
                         <div key={id} className="flex items-start p-4 bg-background rounded-lg">
-                          <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
                           <div>
                             <div className="font-semibold">{service?.label}</div>
                           </div>
@@ -442,7 +442,7 @@ export default function CapabilityGenerator() {
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {perf.services.map((service: string, sidx: number) => (
-                            <span key={sidx} className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">
+                            <span key={sidx} className="text-xs bg-muted text-accent px-2 py-1 rounded">
                               {service}
                             </span>
                           ))}

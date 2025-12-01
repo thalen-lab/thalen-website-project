@@ -62,7 +62,7 @@ export default function Visualization() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               Mission-Critical Intelligence
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -164,7 +164,7 @@ export default function Visualization() {
                   <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {useCase.metrics.map((metric, idx) => (
-                      <span key={idx} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-semibold">
+                      <span key={idx} className="text-xs bg-muted text-accent px-3 py-1 rounded-full font-semibold">
                         {metric}
                       </span>
                     ))}
@@ -330,7 +330,7 @@ export default function Visualization() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Real-Time Analytics for Your Mission?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a demo. We will show you live examples of real-time analytics platforms we have built for federal agencies and discuss your specific requirements.
+            Schedule a demo. We will show you live examples of real-time analytics platforms we have built for government agencies and discuss your specific requirements.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

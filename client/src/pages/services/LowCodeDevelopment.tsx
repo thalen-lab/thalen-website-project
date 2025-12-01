@@ -150,7 +150,7 @@ export default function LowCodeDevelopment() {
               const Icon = benefit.icon;
               return (
                 <div key={index} className="flex gap-6">
-                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon className="w-7 h-7 text-accent" />
                   </div>
                   <div>
@@ -179,7 +179,7 @@ export default function LowCodeDevelopment() {
               const Icon = useCase.icon;
               return (
                 <div key={index} className="bg-white rounded-lg p-6">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-accent" />
                   </div>
                   <h3 className="font-bold mb-2">{useCase.title}</h3>
@@ -209,7 +209,7 @@ export default function LowCodeDevelopment() {
                 <div className="grid grid-cols-2 gap-3">
                   {platform.capabilities.map((capability, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-foreground flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{capability}</span>
                     </div>
                   ))}

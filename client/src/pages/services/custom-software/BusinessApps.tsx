@@ -114,7 +114,7 @@ export default function BusinessApps() {
                   <ul className="space-y-2">
                     {solution.examples.map((example, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
                         <span className="text-sm">{example}</span>
                       </li>
                     ))}
@@ -274,7 +274,7 @@ export default function BusinessApps() {
                   <ul className="space-y-3">
                     {tier.examples.map((example, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
                         <span className="text-sm">{example}</span>
                       </li>
                     ))}

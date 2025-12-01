@@ -84,7 +84,7 @@ export default function MultiCloud() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               99.99% Uptime • Vendor-Agnostic Architecture
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -151,7 +151,7 @@ export default function MultiCloud() {
                     <h4 className="font-semibold text-sm">Use Cases:</h4>
                     {arch.useCases.map((useCase, idx) => (
                       <div key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{useCase}</span>
                       </div>
                     ))}

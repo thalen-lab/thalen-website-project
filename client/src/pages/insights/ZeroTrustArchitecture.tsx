@@ -17,7 +17,7 @@ export default function ZeroTrustArchitecture() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Cybersecurity & Compliance
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -54,19 +54,19 @@ export default function ZeroTrustArchitecture() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                The federal government's cybersecurity landscape has fundamentally shifted. With Executive Order 14028 mandating zero-trust architecture adoption across all federal agencies, organizations face the complex challenge of transforming legacy security models while maintaining operational continuity. This comprehensive guide provides a proven roadmap for federal agencies implementing zero-trust architecture, drawing from Thalen Technologies's experience deploying zero-trust solutions across 15+ federal agencies.
+                The federal government's cybersecurity landscape has fundamentally shifted. With Executive Order 14028 mandating zero-trust architecture adoption across all government agencies, organizations face the complex challenge of transforming legacy security models while maintaining operational continuity. This comprehensive guide provides a proven roadmap for government agencies implementing zero-trust architecture, drawing from Thalen Technologies's experience deploying zero-trust solutions across 15+ government agencies.
               </p>
             </div>
 
             {/* Key Takeaways */}
-            <Card className="bg-accent/10 border-l-4 border-l-accent mb-12">
+            <Card className="bg-muted border-l-4 border-l-accent mb-12">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4 flex items-center">
-                  <CheckCircle2 className="mr-3 h-6 w-6 text-accent" />
+                  <CheckCircle2 className="mr-3 h-6 w-6 text-foreground" />
                   Key Takeaways
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Zero-trust implementation requires 18-36 months for federal agencies with legacy infrastructure</li>
+                  <li>• Zero-trust implementation requires 18-36 months for government agencies with legacy infrastructure</li>
                   <li>• Phased approach reduces risk and enables learning while maintaining operational continuity</li>
                   <li>• Identity and access management (IAM) modernization is the critical foundation</li>
                   <li>• Continuous monitoring and automation are essential for sustainable zero-trust operations</li>
@@ -85,7 +85,7 @@ export default function ZeroTrustArchitecture() {
                 Zero-trust architecture represents a fundamental paradigm shift from traditional perimeter-based security. Rather than assuming trust based on network location, zero-trust operates on the principle of "never trust, always verify." Every access request—regardless of origin—must be authenticated, authorized, and continuously validated before granting access to resources.
               </p>
               <p className="text-muted-foreground mb-6">
-                The <a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">NIST SP 800-207 Zero Trust Architecture</a> framework defines seven core tenets that guide implementation. These principles emphasize continuous verification, least-privilege access, micro-segmentation, and the assumption that breaches will occur. For federal agencies, these principles align directly with <a href="https://www.cisa.gov/zero-trust-maturity-model" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">CISA's Zero Trust Maturity Model</a>, which provides a roadmap for progressive capability development.
+                The <a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">NIST SP 800-207 Zero Trust Architecture</a> framework defines seven core tenets that guide implementation. These principles emphasize continuous verification, least-privilege access, micro-segmentation, and the assumption that breaches will occur. For government agencies, these principles align directly with <a href="https://www.cisa.gov/zero-trust-maturity-model" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">CISA's Zero Trust Maturity Model</a>, which provides a roadmap for progressive capability development.
               </p>
               <p className="text-muted-foreground mb-6">
                 The transition to zero-trust is not merely a technology upgrade—it requires organizational transformation. Legacy assumptions about trusted internal networks must be dismantled, and security teams must embrace a mindset where every user, device, and application is treated as potentially compromised. This cultural shift often proves more challenging than the technical implementation.
@@ -101,7 +101,7 @@ export default function ZeroTrustArchitecture() {
               
               <h3 className="text-2xl font-bold mt-8 mb-4">1. Identity and Access Management (IAM)</h3>
               <p className="text-muted-foreground mb-4">
-                Identity serves as the new perimeter in zero-trust architecture. Federal agencies must implement robust IAM systems supporting multi-factor authentication (MFA), continuous authentication, and risk-based access decisions. The transition from PIV cards to phishing-resistant MFA methods (such as FIDO2 security keys) represents a critical modernization step.
+                Identity serves as the new perimeter in zero-trust architecture. Government agencies must implement robust IAM systems supporting multi-factor authentication (MFA), continuous authentication, and risk-based access decisions. The transition from PIV cards to phishing-resistant MFA methods (such as FIDO2 security keys) represents a critical modernization step.
               </p>
               <p className="text-muted-foreground mb-6">
                 Attribute-based access control (ABAC) enables fine-grained authorization decisions based on user attributes, device posture, location, and contextual factors. For agencies handling classified information, integration with existing PKI infrastructure and special access program (SAP) controls requires careful architectural planning to maintain compartmentalization while enabling zero-trust principles.
@@ -120,7 +120,7 @@ export default function ZeroTrustArchitecture() {
                 Traditional network perimeters must be replaced with granular segmentation limiting lateral movement. Software-defined networking (SDN) and software-defined perimeter (SDP) technologies enable dynamic, policy-driven network access. Each application, workload, and data resource should be protected by its own security perimeter.
               </p>
               <p className="text-muted-foreground mb-6">
-                For federal agencies operating classified networks, cross-domain solutions (CDS) must be integrated into zero-trust architecture to enable controlled information flow between classification levels while maintaining strict separation. The challenge lies in balancing security requirements with operational efficiency—overly restrictive segmentation can impede mission effectiveness.
+                For government agencies operating classified networks, cross-domain solutions (CDS) must be integrated into zero-trust architecture to enable controlled information flow between classification levels while maintaining strict separation. The challenge lies in balancing security requirements with operational efficiency—overly restrictive segmentation can impede mission effectiveness.
               </p>
 
               <h3 className="text-2xl font-bold mt-8 mb-4">4. Application and Workload Security</h3>
@@ -188,7 +188,7 @@ export default function ZeroTrustArchitecture() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-3">Challenge: Legacy System Integration</h3>
                   <p className="text-muted-foreground mb-3">
-                    <strong>Problem:</strong> Many federal agencies operate mission-critical systems that are decades old and cannot be easily modified to support modern authentication and authorization protocols.
+                    <strong>Problem:</strong> Many government agencies operate mission-critical systems that are decades old and cannot be easily modified to support modern authentication and authorization protocols.
                   </p>
                   <p className="text-muted-foreground">
                     <strong>Solution:</strong> Deploy application proxies and reverse proxies that provide zero-trust capabilities without requiring application modification. Use privileged access management (PAM) solutions for legacy administrative access. Plan for gradual application modernization or replacement aligned with zero-trust principles.
@@ -249,7 +249,7 @@ export default function ZeroTrustArchitecture() {
                 The federal mandate for zero-trust adoption creates both challenge and opportunity. Agencies that embrace this transformation thoughtfully—balancing security requirements with operational realities—will emerge with more resilient, adaptable, and mission-effective security postures. Those that treat zero-trust as merely a compliance checkbox risk implementing ineffective solutions that provide neither security nor operational value.
               </p>
               <p className="text-muted-foreground mb-6">
-                Thalen Technologies's experience implementing zero-trust across federal agencies demonstrates that success requires equal parts technical expertise, organizational change management, and executive commitment. With proper planning, phased implementation, and continuous refinement, federal agencies can achieve the security transformation that zero-trust promises while maintaining the operational effectiveness their missions demand.
+                Thalen Technologies's experience implementing zero-trust across government agencies demonstrates that success requires equal parts technical expertise, organizational change management, and executive commitment. With proper planning, phased implementation, and continuous refinement, government agencies can achieve the security transformation that zero-trust promises while maintaining the operational effectiveness their missions demand.
               </p>
             </div>
 
@@ -291,7 +291,7 @@ export default function ZeroTrustArchitecture() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Implement Zero-Trust Architecture?</h2>
           <p className="text-xl opacity-90 mb-8">
-            Thalen Technologies's proven zero-trust methodology has helped 15+ federal agencies achieve security transformation while maintaining operational continuity.
+            Thalen Technologies's proven zero-trust methodology has helped 15+ government agencies achieve security transformation while maintaining operational continuity.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

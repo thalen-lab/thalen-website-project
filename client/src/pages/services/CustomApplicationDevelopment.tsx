@@ -140,7 +140,7 @@ export default function CustomApplicationDevelopment() {
             </h1>
             
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Mission-critical applications built specifically for federal agencies. Our TS/SCI cleared development teams deliver FedRAMP-authorized solutions that meet the unique challenges of government operations, from case management to emergency response systems.
+              Mission-critical applications built specifically for government agencies. Our TS/SCI cleared development teams deliver FedRAMP-authorized solutions that meet the unique challenges of government operations, from case management to emergency response systems.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -170,7 +170,7 @@ export default function CustomApplicationDevelopment() {
               const Icon = benefit.icon;
               return (
                 <div key={index} className="flex gap-6">
-                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon className="w-7 h-7 text-accent" />
                   </div>
                   <div>
@@ -199,14 +199,14 @@ export default function CustomApplicationDevelopment() {
               const Icon = capability.icon;
               return (
                 <div key={index} className="bg-white rounded-lg p-6">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-accent" />
                   </div>
                   <h3 className="font-bold mb-4">{capability.title}</h3>
                   <ul className="space-y-2">
                     {capability.items.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-foreground flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}

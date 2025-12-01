@@ -83,7 +83,7 @@ export default function CountyHealthDepartmentCaseStudy() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               County Government Case Study
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -93,10 +93,10 @@ export default function CountyHealthDepartmentCaseStudy() {
               How a county health department improved outbreak response time by 40% with HIPAA-compliant integration of 12 health systems and real-time disease surveillance for 2.5 million residents.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">County Government</span>
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">HIPAA Compliance</span>
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">Health IT Integration</span>
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">Public Health</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">County Government</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">HIPAA Compliance</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">Health IT Integration</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">Public Health</span>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function CountyHealthDepartmentCaseStudy() {
             {solutions.map((solution, index) => (
               <Card key={index} className="border-2">
                 <CardContent className="p-8">
-                  <CheckCircle2 className="h-10 w-10 text-accent mb-4" />
+                  <CheckCircle2 className="h-10 w-10 text-foreground mb-4" />
                   <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
                   <p className="text-sm text-muted-foreground">{solution.description}</p>
                 </CardContent>
@@ -187,9 +187,9 @@ export default function CountyHealthDepartmentCaseStudy() {
                       Conducted comprehensive HIPAA compliance assessment, documented security controls for PHI protection, inventoried all 12 health systems (EHR, lab, immunization, vital records), and established data governance framework.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">HIPAA Assessment</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">System Inventory</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Data Governance</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">HIPAA Assessment</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">System Inventory</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Data Governance</span>
                     </div>
                   </div>
                 </div>
@@ -208,9 +208,9 @@ export default function CountyHealthDepartmentCaseStudy() {
                       Built HIPAA-compliant integration hub on Azure Government, implemented HL7 FHIR interfaces for each system, established secure data pipelines with PHI encryption, and validated data quality and completeness.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Integration Hub</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">HL7 FHIR</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">PHI Encryption</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Integration Hub</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">HL7 FHIR</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">PHI Encryption</span>
                     </div>
                   </div>
                 </div>
@@ -229,9 +229,9 @@ export default function CountyHealthDepartmentCaseStudy() {
                       Developed real-time disease surveillance algorithms, built automated state health department reporting workflows, created public health analytics dashboards with role-based access, and integrated with state HIE.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Disease Surveillance</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">State Reporting</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Analytics Dashboards</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Disease Surveillance</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">State Reporting</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Analytics Dashboards</span>
                     </div>
                   </div>
                 </div>
@@ -250,9 +250,9 @@ export default function CountyHealthDepartmentCaseStudy() {
                       Trained 200+ county health workers (epidemiologists, nurses, administrators) on new platform, validated HIPAA compliance with county privacy officer, and launched production system with 24/7 monitoring.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">User Training</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">HIPAA Validation</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Production Launch</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">User Training</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">HIPAA Validation</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Production Launch</span>
                     </div>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export default function CountyHealthDepartmentCaseStudy() {
               <div className="grid md:grid-cols-3 gap-4">
                 {technologies.map((tech, index) => (
                   <div key={index} className="flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-foreground mr-2 flex-shrink-0" />
                     <span className="text-sm">{tech}</span>
                   </div>
                 ))}

@@ -90,7 +90,7 @@ export default function IncidentResponse() {
               Incident Response & Forensics
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Rapid incident response and digital forensics services to contain breaches, investigate root causes, and restore operations with minimal impact. Thalen Technologies's TS/SCI cleared team delivers court-admissible forensic analysis and expert breach response for federal agencies.
+              Rapid incident response and digital forensics services to contain breaches, investigate root causes, and restore operations with minimal impact. Thalen Technologies's TS/SCI cleared team delivers court-admissible forensic analysis and expert breach response for government agencies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -125,7 +125,7 @@ export default function IncidentResponse() {
                   <ul className="space-y-2">
                     {capability.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -143,7 +143,7 @@ export default function IncidentResponse() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">NIST-Aligned Incident Response Process</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Structured incident response methodology following NIST SP 800-61 guidelines for federal agencies.
+              Structured incident response methodology following NIST SP 800-61 guidelines for government agencies.
             </p>
           </div>
 

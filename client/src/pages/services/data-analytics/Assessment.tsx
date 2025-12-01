@@ -255,7 +255,7 @@ export default function DataMaturityAssessment() {
                 <Card key={index}>
                   <CardContent className="p-6 flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 text-accent font-bold">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-muted text-accent font-bold">
                         {index + 1}
                       </div>
                       <div>
@@ -391,7 +391,7 @@ export default function DataMaturityAssessment() {
                     onClick={() => handleAnswer(option.score)}
                     className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
                       currentAnswer === option.score
-                        ? "border-accent bg-accent/10"
+                        ? "border-accent bg-muted"
                         : "border-border hover:border-accent/50"
                     }`}
                   >

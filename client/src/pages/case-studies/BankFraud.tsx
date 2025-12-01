@@ -14,7 +14,7 @@ export default function BankFraud() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Financial Services Case Study
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -134,7 +134,7 @@ export default function BankFraud() {
               <Card key={index} className="border-l-4 border-l-accent">
                 <CardContent className="p-6">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-6 w-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                    <CheckCircle2 className="h-6 w-6 text-foreground mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
                       <p className="text-muted-foreground">{solution.description}</p>
@@ -148,7 +148,7 @@ export default function BankFraud() {
       </section>
 
       {/* Results */}
-      <section className="py-20 bg-accent/10">
+      <section className="py-20 bg-muted">
         <div className="container max-w-4xl">
           <h2 className="text-4xl font-bold mb-8">Measurable Results</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -182,7 +182,7 @@ export default function BankFraud() {
                 Thalen Technologies's AI fraud detection platform delivered results beyond our expectations. The $45M in prevented fraud is significant, but the 80% reduction in false positives has transformed our customer experience. Our fraud analysts now focus on sophisticated cases instead of reviewing false alarms, and customer satisfaction has never been higher.
               </blockquote>
               <div className="flex items-center">
-                <div className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl mr-4">
+                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
                   RP
                 </div>
                 <div>

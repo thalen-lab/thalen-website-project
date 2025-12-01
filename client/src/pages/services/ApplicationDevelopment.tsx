@@ -12,7 +12,7 @@ export default function ApplicationDevelopment() {
     {
       icon: Code2,
       title: "Custom Application Development",
-      description: "Mission-critical applications built for federal agencies with FedRAMP authorization and TS/SCI cleared teams.",
+      description: "Mission-critical applications built for government agencies with FedRAMP authorization and TS/SCI cleared teams.",
       link: "/services/custom-application-development",
       benefits: [
         "FedRAMP-authorized development",
@@ -122,7 +122,7 @@ export default function ApplicationDevelopment() {
             </h1>
             
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Mission-critical applications for federal agencies. Our TS/SCI cleared development teams deliver FedRAMP-authorized solutions with full ATO support, ensuring your applications meet the highest security and compliance standards.
+              Mission-critical applications for government agencies. Our TS/SCI cleared development teams deliver FedRAMP-authorized solutions with full ATO support, ensuring your applications meet the highest security and compliance standards.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -143,7 +143,7 @@ export default function ApplicationDevelopment() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Comprehensive Application Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From custom development to legacy modernization, we provide end-to-end application services tailored for federal agencies.
+              From custom development to legacy modernization, we provide end-to-end application services tailored for government agencies.
             </p>
           </div>
 
@@ -158,7 +158,7 @@ export default function ApplicationDevelopment() {
                   <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -309,7 +309,7 @@ export default function ApplicationDevelopment() {
               
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
                     <Shield className="w-6 h-6 text-accent" />
                   </div>
                   <div>
@@ -319,8 +319,8 @@ export default function ApplicationDevelopment() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-6 h-6 text-foreground" />
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">FedRAMP Authorized</h3>
@@ -329,7 +329,7 @@ export default function ApplicationDevelopment() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
                     <Rocket className="w-6 h-6 text-accent" />
                   </div>
                   <div>
@@ -339,7 +339,7 @@ export default function ApplicationDevelopment() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
                     <Code2 className="w-6 h-6 text-accent" />
                   </div>
                   <div>
@@ -378,7 +378,7 @@ export default function ApplicationDevelopment() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Proven Federal Success Stories</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real-world results from our Application Development engagements with federal agencies.
+              Real-world results from our Application Development engagements with government agencies.
             </p>
           </div>
 
@@ -386,7 +386,7 @@ export default function ApplicationDevelopment() {
             {/* Case Study 1 */}
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-muted text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
                   Defense Agency
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Mission-Critical Portal Modernization</h3>
@@ -419,7 +419,7 @@ export default function ApplicationDevelopment() {
             {/* Case Study 2 */}
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-muted text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
                   Civilian Agency
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Low-Code Citizen Services Platform</h3>
@@ -452,7 +452,7 @@ export default function ApplicationDevelopment() {
             {/* Case Study 3 */}
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-muted text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
                   Intelligence Community
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Secure API Integration Platform</h3>

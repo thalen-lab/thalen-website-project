@@ -154,7 +154,7 @@ export default function CustomSoftware() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-6">
               Commercial & Enterprise Solutions
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -198,7 +198,7 @@ export default function CustomSoftware() {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
                         <span className="text-sm">{feature}</span>
                       </li>
                     ))}

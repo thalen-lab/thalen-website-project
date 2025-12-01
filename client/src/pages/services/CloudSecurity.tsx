@@ -110,7 +110,7 @@ export default function CloudSecurity() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               FedRAMP High • CMMC Level 3 • NIST 800-53
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -175,7 +175,7 @@ export default function CloudSecurity() {
                   <ul className="space-y-3">
                     {layer.controls.map((control, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{control}</span>
                       </li>
                     ))}
@@ -210,7 +210,7 @@ export default function CloudSecurity() {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {item.levels.map((level, idx) => (
-                      <span key={idx} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-semibold">
+                      <span key={idx} className="text-xs bg-muted text-accent px-3 py-1 rounded-full font-semibold">
                         {level}
                       </span>
                     ))}

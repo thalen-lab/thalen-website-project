@@ -208,15 +208,15 @@ export default function Events() {
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-accent" />
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
                 <span>Free Registration</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-accent" />
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
                 <span>Live Q&A Sessions</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-accent" />
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
                 <span>CPE Credits Available</span>
               </div>
             </div>
@@ -259,7 +259,7 @@ export default function Events() {
                     <div className="flex flex-col lg:flex-row gap-8">
                       <div className="flex-1">
                         <div className="flex items-start gap-3 mb-4">
-                          <div className="p-3 bg-accent/10 rounded-lg">
+                          <div className="p-3 bg-muted rounded-lg">
                             <Calendar className="h-6 w-6 text-accent" />
                           </div>
                           <div className="flex-1">
@@ -279,7 +279,7 @@ export default function Events() {
                               </div>
                             </div>
                             <div className="flex flex-wrap gap-2 mb-4">
-                              <span className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full font-semibold">
+                              <span className="text-xs bg-muted text-accent px-3 py-1 rounded-full font-semibold">
                                 {event.format}
                               </span>
                               <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">
@@ -298,7 +298,7 @@ export default function Events() {
                           <ul className="space-y-1">
                             {event.topics.map((topic, idx) => (
                               <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                                <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                                <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-0.5" />
                                 <span>{topic}</span>
                               </li>
                             ))}
@@ -339,7 +339,7 @@ export default function Events() {
                 <Card key={event.id} className="hover:shadow-xl transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3 mb-4">
-                      <div className="p-2 bg-accent/10 rounded-lg">
+                      <div className="p-2 bg-muted rounded-lg">
                         <Video className="h-5 w-5 text-accent" />
                       </div>
                       <div className="flex-1">
@@ -390,7 +390,7 @@ export default function Events() {
           <Card className="max-w-lg w-full">
             <CardContent className="p-8">
               <div className="text-center mb-6">
-                <div className="inline-flex p-4 bg-accent/10 rounded-full mb-4">
+                <div className="inline-flex p-4 bg-muted rounded-full mb-4">
                   <Calendar className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Register for Event</h3>

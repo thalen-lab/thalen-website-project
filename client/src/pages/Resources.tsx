@@ -39,7 +39,7 @@ export default function Resources() {
       id: 'wp-gov-automation',
       category: 'whitepapers',
       title: 'Government Automation Strategy Guide',
-      description: 'Comprehensive 45-page guide covering automation assessment, vendor selection, implementation roadmap, and change management for federal agencies.',
+      description: 'Comprehensive 45-page guide covering automation assessment, vendor selection, implementation roadmap, and change management for government agencies.',
       icon: FileText,
       pages: 45,
       type: 'PDF Whitepaper',
@@ -149,7 +149,7 @@ export default function Resources() {
       id: 'report-federal-2024',
       category: 'reports',
       title: '2024 Federal Automation Trends Report',
-      description: 'Annual report analyzing automation adoption across 50+ federal agencies, budget trends, technology preferences, and ROI benchmarks.',
+      description: 'Annual report analyzing automation adoption across 50+ government agencies, budget trends, technology preferences, and ROI benchmarks.',
       icon: BarChart3,
       pages: 67,
       type: 'PDF Report',
@@ -244,11 +244,11 @@ export default function Resources() {
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-accent" />
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
                 <span>17 Premium Resources</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-accent" />
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
                 <span>Free Downloads</span>
               </div>
 
@@ -283,7 +283,7 @@ export default function Resources() {
               <Card key={resource.id} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
+                    <div className="p-3 bg-muted rounded-lg">
                       <resource.icon className="h-8 w-8 text-accent" />
                     </div>
                     {resource.popular && (
@@ -323,7 +323,7 @@ export default function Resources() {
           <Card className="max-w-md w-full">
             <CardContent className="p-8">
               <div className="text-center mb-6">
-                <div className="inline-flex p-4 bg-accent/10 rounded-full mb-4">
+                <div className="inline-flex p-4 bg-muted rounded-full mb-4">
                   <Mail className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Get Your Free Resource</h3>

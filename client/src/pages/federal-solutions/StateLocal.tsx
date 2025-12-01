@@ -132,7 +132,7 @@ export default function StateLocal() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               State & Local Government Solutions
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -194,7 +194,7 @@ export default function StateLocal() {
                   <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -289,7 +289,7 @@ export default function StateLocal() {
                   <h3 className="text-xl font-bold mb-4">{category.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">
+                      <span key={idx} className="bg-muted text-accent px-3 py-1 rounded-full text-sm font-medium">
                         {platform}
                       </span>
                     ))}
@@ -333,7 +333,7 @@ export default function StateLocal() {
                   <ul className="space-y-3">
                     {path.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -352,7 +352,7 @@ export default function StateLocal() {
             <CardContent className="p-12">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
                     Procurement Resource
                   </div>
                   <h2 className="text-4xl font-bold mb-4">Streamlined State & Local Procurement</h2>
@@ -361,19 +361,19 @@ export default function StateLocal() {
                   </p>
                   <div className="space-y-3 mb-8">
                     <div className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-sm">NASPO ValuePoint, Sourcewell, OMNIA Partners cooperative contracts</span>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-sm">12 state master agreements with pre-negotiated pricing</span>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-sm">Traditional RFP support with state/local references</span>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-sm">ARPA, BEAD, and state grant-funded project assistance</span>
                     </div>
                   </div>

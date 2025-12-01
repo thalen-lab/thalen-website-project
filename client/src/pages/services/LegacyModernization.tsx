@@ -158,7 +158,7 @@ export default function LegacyModernization() {
               const Icon = benefit.icon;
               return (
                 <div key={index} className="flex gap-6">
-                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon className="w-7 h-7 text-accent" />
                   </div>
                   <div>

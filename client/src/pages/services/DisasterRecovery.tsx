@@ -115,7 +115,7 @@ export default function DisasterRecovery() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               &lt; 15 Min RTO • Geo-Redundant • FedRAMP-Compliant
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -181,7 +181,7 @@ export default function DisasterRecovery() {
                   <ul className="space-y-2">
                     {capability.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -212,17 +212,17 @@ export default function DisasterRecovery() {
                     <AlertTriangle className="h-8 w-8 text-accent" />
                   </div>
                   <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div className="bg-accent/10 p-3 rounded">
+                    <div className="bg-muted p-3 rounded">
                       <div className="text-xs text-muted-foreground mb-1">RTO</div>
                       <div className="text-lg font-bold text-accent">{strategy.rto}</div>
                     </div>
-                    <div className="bg-accent/10 p-3 rounded">
+                    <div className="bg-muted p-3 rounded">
                       <div className="text-xs text-muted-foreground mb-1">RPO</div>
                       <div className="text-lg font-bold text-accent">{strategy.rpo}</div>
                     </div>
                   </div>
                   <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{strategy.description}</p>
-                  <div className="bg-accent/10 border-l-4 border-accent p-3 rounded">
+                  <div className="bg-muted border-l-4 border-accent p-3 rounded">
                     <p className="text-xs font-medium">
                       <span className="text-accent font-semibold">Best for:</span> {strategy.useCase}
                     </p>

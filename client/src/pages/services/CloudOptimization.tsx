@@ -110,7 +110,7 @@ export default function CloudOptimization() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               40-60% Average Cost Reduction • 200-300% Performance Gains
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -138,7 +138,7 @@ export default function CloudOptimization() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Measurable Optimization Results</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Federal agencies achieve dramatic cost savings and performance improvements through Thalen Technologies's data-driven optimization approach.
+              Government agencies achieve dramatic cost savings and performance improvements through Thalen Technologies's data-driven optimization approach.
             </p>
           </div>
 
@@ -175,7 +175,7 @@ export default function CloudOptimization() {
                   <ul className="space-y-3">
                     {area.items.map((item, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}

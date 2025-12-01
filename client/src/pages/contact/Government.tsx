@@ -119,7 +119,7 @@ export default function Government() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-accent/10">
+              <Card className="bg-muted">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-2">Security Clearances</h3>
                   <p className="text-sm">

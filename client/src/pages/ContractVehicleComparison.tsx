@@ -51,7 +51,7 @@ export default function ContractVehicleComparison() {
       pros: [
         'Fast procurement (2-4 weeks)',
         'Pre-competed and approved',
-        'Available to all federal agencies',
+        'Available to all government agencies',
         'State/local can also use',
         'Flexible task order structure'
       ],
@@ -136,7 +136,7 @@ export default function ContractVehicleComparison() {
       typicalContractSize: '$500K - $10M',
       pros: [
         'Fast procurement process',
-        'Available to all federal agencies',
+        'Available to all government agencies',
         'Flexible for products and services',
         'Competitive pricing'
       ],
@@ -164,7 +164,7 @@ export default function ContractVehicleComparison() {
       pros: [
         'Large contract ceiling',
         'Health IT specialization',
-        'Available to all federal agencies',
+        'Available to all government agencies',
         'Comprehensive IT services'
       ],
       cons: [
@@ -372,7 +372,7 @@ export default function ContractVehicleComparison() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Interactive Tool
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -482,7 +482,7 @@ export default function ContractVehicleComparison() {
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center font-bold text-accent text-lg">
+                          <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center font-bold text-accent text-lg">
                             #{index + 1}
                           </div>
                           <div>
@@ -527,7 +527,7 @@ export default function ContractVehicleComparison() {
                       <h4 className="font-semibold mb-3">Best For:</h4>
                       <div className="flex flex-wrap gap-2">
                         {vehicle.bestFor.map((item, idx) => (
-                          <span key={idx} className="text-sm bg-accent/20 text-accent px-3 py-1 rounded-full">
+                          <span key={idx} className="text-sm bg-muted text-accent px-3 py-1 rounded-full">
                             {item}
                           </span>
                         ))}
@@ -535,7 +535,7 @@ export default function ContractVehicleComparison() {
                     </div>
 
                     {/* Competitive Advantage */}
-                    <div className="p-4 bg-accent/10 rounded-lg">
+                    <div className="p-4 bg-muted rounded-lg">
                       <div className="flex items-start">
                         <AlertCircle className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
                         <div>

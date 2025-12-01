@@ -83,7 +83,7 @@ export default function StateEnergyCommissionCaseStudy() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               State Government Case Study
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -93,10 +93,10 @@ export default function StateEnergyCommissionCaseStudy() {
               How a state Energy Commission reduced power outages by 65% with a StateRAMP-authorized IoT platform monitoring 500+ substations and 15,000+ sensors with predictive maintenance analytics.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">State Government</span>
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">StateRAMP</span>
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">IoT & Sensors</span>
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">Predictive Analytics</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">State Government</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">StateRAMP</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">IoT & Sensors</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">Predictive Analytics</span>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function StateEnergyCommissionCaseStudy() {
             {solutions.map((solution, index) => (
               <Card key={index} className="border-2">
                 <CardContent className="p-8">
-                  <CheckCircle2 className="h-10 w-10 text-accent mb-4" />
+                  <CheckCircle2 className="h-10 w-10 text-foreground mb-4" />
                   <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
                   <p className="text-sm text-muted-foreground">{solution.description}</p>
                 </CardContent>
@@ -187,9 +187,9 @@ export default function StateEnergyCommissionCaseStudy() {
                       Conducted StateRAMP compliance assessment, selected Azure Government as StateRAMP-authorized platform, documented security controls, and developed phased sensor deployment plan for 500+ substations.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">StateRAMP Assessment</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Platform Selection</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Deployment Planning</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">StateRAMP Assessment</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Platform Selection</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Deployment Planning</span>
                     </div>
                   </div>
                 </div>
@@ -208,9 +208,9 @@ export default function StateEnergyCommissionCaseStudy() {
                       Deployed 15,000+ IoT sensors across 500+ substations in phased rollout, integrated sensor data with Azure IoT Hub, connected legacy SCADA systems, and established real-time data pipelines.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Sensor Installation</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">IoT Integration</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">SCADA Connection</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Sensor Installation</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">IoT Integration</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">SCADA Connection</span>
                     </div>
                   </div>
                 </div>
@@ -229,9 +229,9 @@ export default function StateEnergyCommissionCaseStudy() {
                       Developed predictive maintenance ML models using historical failure data, built real-time monitoring dashboards with Power BI Gov, implemented automated alerting, and created mobile app for field technicians.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">ML Model Training</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Dashboard Development</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Mobile App</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">ML Model Training</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Dashboard Development</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Mobile App</span>
                     </div>
                   </div>
                 </div>
@@ -250,9 +250,9 @@ export default function StateEnergyCommissionCaseStudy() {
                       Trained 120 grid operators and field technicians on new platform, established 24/7 monitoring center, validated StateRAMP compliance, and launched production system with continuous model refinement.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">User Training</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">24/7 Operations</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Production Launch</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">User Training</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">24/7 Operations</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Production Launch</span>
                     </div>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export default function StateEnergyCommissionCaseStudy() {
               <div className="grid md:grid-cols-3 gap-4">
                 {technologies.map((tech, index) => (
                   <div key={index} className="flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-foreground mr-2 flex-shrink-0" />
                     <span className="text-sm">{tech}</span>
                   </div>
                 ))}

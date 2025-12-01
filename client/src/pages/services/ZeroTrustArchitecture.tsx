@@ -100,7 +100,7 @@ export default function ZeroTrustArchitecture() {
               Zero Trust Architecture
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Implement modern Zero Trust security framework with micro-segmentation, continuous verification, and least-privilege access controls. Thalen Technologies delivers NIST 800-207 and DoD Zero Trust Reference Architecture implementations for federal agencies eliminating implicit trust.
+              Implement modern Zero Trust security framework with micro-segmentation, continuous verification, and least-privilege access controls. Thalen Technologies delivers NIST 800-207 and DoD Zero Trust Reference Architecture implementations for government agencies eliminating implicit trust.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -135,7 +135,7 @@ export default function ZeroTrustArchitecture() {
                   <ul className="space-y-2">
                     {pillar.capabilities.map((capability, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{capability}</span>
                       </li>
                     ))}

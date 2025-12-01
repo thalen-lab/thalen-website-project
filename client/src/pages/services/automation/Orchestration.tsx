@@ -64,7 +64,7 @@ export default function Orchestration() {
               Enterprise Workflow Automation
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Process Orchestration for Federal Agencies
+              Process Orchestration for Government Agencies
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
               Your most important work involves multiple departments, systems, and decision points. Approvals get stuck in email chains. Work sits in queues waiting for the next step. Nobody has visibility into where things stand. Thalen Technologies Process Orchestration automates these complex, multi-step workflows from end to end—routing work intelligently, enforcing policy automatically, and giving you real-time visibility into every process.
@@ -114,7 +114,7 @@ export default function Orchestration() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Common Orchestration Scenarios</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From procurement to case management, federal agencies orchestrate their most complex processes with Thalen Technologies.
+              From procurement to case management, government agencies orchestrate their most complex processes with Thalen Technologies.
             </p>
           </div>
 

@@ -1502,3 +1502,33 @@
 - [x] Remove quote from Lt. Col. Marcus Johnson (USAF, Air Force Materiel Command)
 - [x] Verify page layout remains clean after testimonial removal
 - [ ] Save checkpoint after content removal
+
+## Phase 118: Audit and Fix Company Name References (Thalen → NexDyne)
+- [ ] Search for all "Thalen Technologies" references across the site
+- [ ] Replace "Thalen Technologies" with "NexDyne Technologies" in all files
+- [ ] Verify company name consistency across all pages
+- [ ] Save checkpoint after corrections
+
+## Phase 118: Apply Complete RUXI Framework Across Website
+- [ ] Audit all pages for RUXI compliance
+- [ ] Update positioning: "federal agencies" → "government agencies" 
+- [ ] Add StateRAMP alongside FedRAMP references
+- [ ] Update visual design: remove orange gradients from icons, use white/blue icons appropriately
+- [ ] Replace orange checkmarks with black bullet points
+- [ ] Update homepage with RUXI framework
+- [ ] Update all service landing pages
+- [ ] Update all service subpages (Automation: RPA, Integration, Orchestration)
+- [ ] Update supporting pages (About, Contact, Resources, Events, Insights)
+- [ ] Verify all changes and save checkpoint
+
+## Phase 118: Apply Complete RUXI Framework - COMPLETE
+- [x] Audit all pages for RUXI compliance
+- [x] Update positioning: "federal agencies" → "government agencies" across entire site
+- [x] Add StateRAMP alongside FedRAMP references (already present)
+- [x] Update visual design: replace orange CheckCircle2 icons with black/foreground color
+- [x] Replace orange icon backgrounds (bg-accent/10, bg-accent/20) with muted backgrounds
+- [x] Update homepage with RUXI framework
+- [x] Update all service landing pages (batch update via sed)
+- [x] Update all service subpages (Automation: RPA, Integration, Orchestration)
+- [x] Update supporting pages (About, Contact, Resources, Events, Insights, Industries)
+- [x] Verify all changes and prepare checkpoint

@@ -159,7 +159,7 @@ export default function DataAnalytics() {
                   <ul className="space-y-3 mb-8">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -182,7 +182,7 @@ export default function DataAnalytics() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-4 mt-1 flex-shrink-0" />
+                  <CheckCircle2 className="h-6 w-6 text-foreground mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
                     <p className="text-sm text-muted-foreground">{capability.description}</p>
@@ -200,7 +200,7 @@ export default function DataAnalytics() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Analytics Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing analytics platforms and AI/ML solutions across federal agencies with measurable mission impact.
+              Proven track record implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
             </p>
           </div>
 

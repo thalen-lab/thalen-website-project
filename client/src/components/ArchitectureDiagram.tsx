@@ -178,7 +178,7 @@ export default function ArchitectureDiagram() {
           >
             <CardContent className="p-6">
               {/* Layer Number */}
-              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-sm font-bold text-accent">
+              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-muted flex items-center justify-center text-sm font-bold text-accent">
                 {index + 1}
               </div>
 
@@ -242,7 +242,7 @@ export default function ArchitectureDiagram() {
             </div>
           </div>
 
-          <div className="mt-6 p-4 bg-accent/10 rounded-lg">
+          <div className="mt-6 p-4 bg-muted rounded-lg">
             <p className="text-sm text-muted-foreground">
               <strong>Need help with this layer?</strong> Our TS/SCI cleared solution architects can provide detailed technical consultation tailored to your agency's requirements.
             </p>

@@ -17,7 +17,7 @@ export default function MultiCloudStrategy() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Cloud Infrastructure & Strategy
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -54,15 +54,15 @@ export default function MultiCloudStrategy() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Federal agencies face a strategic dilemma in cloud adoption: commit to a single cloud provider for simplicity and deep integration, or embrace multi-cloud complexity to avoid vendor lock-in and leverage best-of-breed capabilities. The stakes are high—cloud infrastructure decisions made today will shape agency IT capabilities for decades. This comprehensive guide examines multi-cloud strategy for government, providing a framework for balancing flexibility, security, cost, and operational complexity based on Thalen Technologies's experience architecting multi-cloud solutions for federal agencies.
+                Government agencies face a strategic dilemma in cloud adoption: commit to a single cloud provider for simplicity and deep integration, or embrace multi-cloud complexity to avoid vendor lock-in and leverage best-of-breed capabilities. The stakes are high—cloud infrastructure decisions made today will shape agency IT capabilities for decades. This comprehensive guide examines multi-cloud strategy for government, providing a framework for balancing flexibility, security, cost, and operational complexity based on Thalen Technologies's experience architecting multi-cloud solutions for government agencies.
               </p>
             </div>
 
             {/* Key Takeaways */}
-            <Card className="bg-accent/10 border-l-4 border-l-accent mb-12">
+            <Card className="bg-muted border-l-4 border-l-accent mb-12">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4 flex items-center">
-                  <CheckCircle2 className="mr-3 h-6 w-6 text-accent" />
+                  <CheckCircle2 className="mr-3 h-6 w-6 text-foreground" />
                   Key Takeaways
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">

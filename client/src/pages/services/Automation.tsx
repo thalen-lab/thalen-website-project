@@ -193,7 +193,7 @@ export default function Automation() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Automation Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing automation platforms and solutions across federal agencies with measurable mission impact.
+              Proven track record implementing automation platforms and solutions across government agencies with measurable mission impact.
             </p>
           </div>
 

@@ -24,7 +24,7 @@ export default function FederalGovernment() {
   const challenges = [
     {
       title: 'Legacy System Modernization',
-      description: 'Federal agencies operate critical infrastructure on aging COBOL and mainframe systems that are expensive to maintain and difficult to integrate with modern technologies. These legacy systems create operational bottlenecks, security vulnerabilities, and limit the ability to deliver citizen services efficiently.'
+      description: 'Government agencies operate critical infrastructure on aging COBOL and mainframe systems that are expensive to maintain and difficult to integrate with modern technologies. These legacy systems create operational bottlenecks, security vulnerabilities, and limit the ability to deliver citizen services efficiently.'
     },
     {
       title: 'Compliance & Security Requirements',
@@ -70,14 +70,14 @@ export default function FederalGovernment() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Core Competency
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Federal Government Solutions
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Trusted partner for mission-critical automation and modernization across federal agencies. FedRAMP Authorized with Top Secret/SCI cleared teams delivering measurable results for defense, intelligence, and civilian operations.
+              Trusted partner for mission-critical automation and modernization across government agencies. FedRAMP Authorized with Top Secret/SCI cleared teams delivering measurable results for defense, intelligence, and civilian operations.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -122,7 +122,7 @@ export default function FederalGovernment() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Federal IT Challenges We Solve</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Federal agencies face unique operational, security, and budgetary challenges that require specialized expertise and proven methodologies. Thalen Technologies delivers solutions that address these complex requirements while maintaining mission continuity.
+              Government agencies face unique operational, security, and budgetary challenges that require specialized expertise and proven methodologies. Thalen Technologies delivers solutions that address these complex requirements while maintaining mission continuity.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -176,7 +176,7 @@ export default function FederalGovernment() {
               <ul className="space-y-3">
                 {capabilities.map((cap, index) => (
                   <li key={index} className="flex items-start">
-                    <CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-6 w-6 text-foreground mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-lg">{cap}</span>
                   </li>
                 ))}
@@ -250,7 +250,7 @@ export default function FederalGovernment() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
-                <div className="bg-accent/10 p-12 flex items-center justify-center">
+                <div className="bg-muted p-12 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-7xl font-bold text-accent mb-2">85%</div>
                     <div className="text-lg text-muted-foreground mb-8">Automation Rate</div>

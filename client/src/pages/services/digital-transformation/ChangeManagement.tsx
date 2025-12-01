@@ -81,7 +81,7 @@ export default function ChangeManagement() {
       <section className="bg-navy-gradient text-primary-foreground py-20">
         <div className="container">
           <div className="max-w-3xl">
-            <div className="inline-block px-4 py-1 bg-accent/20 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block px-4 py-1 bg-muted rounded-full text-sm font-semibold mb-6">
               Organizational Change • Adoption Strategy
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -123,7 +123,7 @@ export default function ChangeManagement() {
                 <CardContent className="p-8">
                   <div className="flex items-start gap-6">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                      <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center">
                         <phase.icon className="h-8 w-8 text-accent" />
                       </div>
                     </div>
@@ -136,7 +136,7 @@ export default function ChangeManagement() {
                       <div className="grid md:grid-cols-2 gap-3">
                         {phase.activities.map((activity, idx) => (
                           <div key={idx} className="flex items-center gap-2">
-                            <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0" />
                             <span className="text-sm">{activity}</span>
                           </div>
                         ))}
@@ -166,7 +166,7 @@ export default function ChangeManagement() {
             {changeCapabilities.map((capability, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <div className="inline-flex p-3 bg-accent/10 rounded-lg mb-4">
+                  <div className="inline-flex p-3 bg-muted rounded-lg mb-4">
                     <capability.icon className="h-6 w-6 text-accent" />
                   </div>
                   <h3 className="text-lg font-bold mb-2">{capability.title}</h3>
@@ -234,15 +234,15 @@ export default function ChangeManagement() {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-accent" />
+                      <CheckCircle2 className="h-4 w-4 text-foreground" />
                       Individual change assessment
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-accent" />
+                      <CheckCircle2 className="h-4 w-4 text-foreground" />
                       Targeted interventions
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-accent" />
+                      <CheckCircle2 className="h-4 w-4 text-foreground" />
                       Progress tracking
                     </li>
                   </ul>
@@ -256,15 +256,15 @@ export default function ChangeManagement() {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-accent" />
+                      <CheckCircle2 className="h-4 w-4 text-foreground" />
                       Create urgency and vision
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-accent" />
+                      <CheckCircle2 className="h-4 w-4 text-foreground" />
                       Build coalition and empower
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-accent" />
+                      <CheckCircle2 className="h-4 w-4 text-foreground" />
                       Generate wins and anchor change
                     </li>
                   </ul>

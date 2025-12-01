@@ -273,7 +273,7 @@ export default function PackageBuilder() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               Custom Service Packages
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -358,7 +358,7 @@ export default function PackageBuilder() {
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
                 <Card className="border-2 border-accent">
-                  <CardHeader className="bg-accent/10">
+                  <CardHeader className="bg-muted">
                     <CardTitle className="flex items-center gap-2">
                       <Package className="h-5 w-5" />
                       Package Summary
@@ -378,7 +378,7 @@ export default function PackageBuilder() {
                           <div className="space-y-2">
                             {selectedServiceObjects.map(service => (
                               <div key={service.id} className="flex items-start gap-2 text-sm">
-                                <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                                <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-0.5" />
                                 <span>{service.name}</span>
                               </div>
                             ))}
@@ -419,7 +419,7 @@ export default function PackageBuilder() {
 
                         {/* Recommendations */}
                         {recommendations.length > 0 && (
-                          <div className="bg-accent/10 rounded-lg p-4 border border-accent/30">
+                          <div className="bg-muted rounded-lg p-4 border border-accent/30">
                             <h4 className="font-semibold mb-3 text-sm flex items-center gap-2">
                               <FileText className="h-4 w-4" />
                               Recommendations

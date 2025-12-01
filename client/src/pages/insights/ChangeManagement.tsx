@@ -17,7 +17,7 @@ export default function ChangeManagement() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Digital Transformation & Leadership
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -54,15 +54,15 @@ export default function ChangeManagement() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Digital transformation projects fail at alarming rates—studies consistently show 70% of transformation initiatives fail to achieve their objectives. The culprit is rarely technology. Modern cloud platforms, AI systems, and automation tools work as advertised. The failure lies in the human dimension: resistance to change, inadequate training, misaligned incentives, and organizational inertia. This comprehensive guide examines change management for digital transformation in government, providing a framework for addressing the human factors that determine success or failure. Drawing from Thalen Technologies's experience leading transformations across federal agencies, we explore why change management is not optional—it is the difference between transformation and expensive technology deployment.
+                Digital transformation projects fail at alarming rates—studies consistently show 70% of transformation initiatives fail to achieve their objectives. The culprit is rarely technology. Modern cloud platforms, AI systems, and automation tools work as advertised. The failure lies in the human dimension: resistance to change, inadequate training, misaligned incentives, and organizational inertia. This comprehensive guide examines change management for digital transformation in government, providing a framework for addressing the human factors that determine success or failure. Drawing from Thalen Technologies's experience leading transformations across government agencies, we explore why change management is not optional—it is the difference between transformation and expensive technology deployment.
               </p>
             </div>
 
             {/* Key Takeaways */}
-            <Card className="bg-accent/10 border-l-4 border-l-accent mb-12">
+            <Card className="bg-muted border-l-4 border-l-accent mb-12">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4 flex items-center">
-                  <CheckCircle2 className="mr-3 h-6 w-6 text-accent" />
+                  <CheckCircle2 className="mr-3 h-6 w-6 text-foreground" />
                   Key Takeaways
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">

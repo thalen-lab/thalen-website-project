@@ -62,7 +62,7 @@ export default function Engineering() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               Data Infrastructure
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -114,7 +114,7 @@ export default function Engineering() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Manual Data Processes Are Killing Your Analytics ROI</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Most federal agencies have analysts who spend their days manually extracting data from legacy systems, cleaning it in Excel, and copying it into dashboards. This is not analytics work—this is data janitorial work. When data pipelines break, dashboards go stale. When data quality is poor, leadership loses trust in analytics. When data lineage is unknown, audits fail.
+              Most government agencies have analysts who spend their days manually extracting data from legacy systems, cleaning it in Excel, and copying it into dashboards. This is not analytics work—this is data janitorial work. When data pipelines break, dashboards go stale. When data quality is poor, leadership loses trust in analytics. When data lineage is unknown, audits fail.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
               Thalen Technologies builds automated data pipelines that eliminate manual data work. We extract data from your legacy systems (mainframes, Oracle, SQL Server, flat files), transform it into analytics-ready formats, validate quality, and load it into modern data platforms—all automatically, with monitoring and alerting. Your analysts can finally focus on analysis instead of data plumbing.
@@ -166,7 +166,7 @@ export default function Engineering() {
                     <div className="text-sm font-semibold mb-2">Technologies:</div>
                     <div className="flex flex-wrap gap-2">
                       {capability.technologies.map((tech, idx) => (
-                        <span key={idx} className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-semibold">
+                        <span key={idx} className="text-xs bg-muted text-accent px-3 py-1 rounded-full font-semibold">
                           {tech}
                         </span>
                       ))}

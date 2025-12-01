@@ -98,7 +98,7 @@ export default function CloudMigration() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               FedRAMP Authorized • Zero Downtime Guaranteed
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -170,7 +170,7 @@ export default function CloudMigration() {
                       <ul className="space-y-2">
                         {phase.deliverables.map((deliverable, idx) => (
                           <li key={idx} className="flex items-start text-sm">
-                            <CheckCircle2 className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                             <span>{deliverable}</span>
                           </li>
                         ))}
@@ -201,7 +201,7 @@ export default function CloudMigration() {
                   <type.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{type.title}</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">{type.description}</p>
-                  <div className="bg-accent/10 border-l-4 border-accent p-3 rounded">
+                  <div className="bg-muted border-l-4 border-accent p-3 rounded">
                     <p className="text-sm font-medium">
                       <span className="text-accent font-semibold">Best for:</span> {type.useCase}
                     </p>

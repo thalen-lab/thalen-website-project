@@ -49,7 +49,7 @@ export default function MLAI() {
     },
     {
       title: 'Budget Forecasting & Resource Optimization',
-      description: 'Federal agencies struggle with budget forecasting due to complex variables and political uncertainty. We built ML models that analyze historical spending patterns, program performance, economic indicators, and policy changes to forecast budget needs with 95% accuracy. Leadership can now make data-driven resource allocation decisions instead of relying on gut instinct.',
+      description: 'Government agencies struggle with budget forecasting due to complex variables and political uncertainty. We built ML models that analyze historical spending patterns, program performance, economic indicators, and policy changes to forecast budget needs with 95% accuracy. Leadership can now make data-driven resource allocation decisions instead of relying on gut instinct.',
       impact: '$50M budget optimization',
       accuracy: '95% forecast accuracy',
       planning: '18-month forecast horizon'
@@ -70,7 +70,7 @@ export default function MLAI() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               AI-Powered Intelligence
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">

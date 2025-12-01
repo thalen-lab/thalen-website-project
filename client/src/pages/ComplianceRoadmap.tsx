@@ -743,7 +743,7 @@ export default function ComplianceRoadmap() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Interactive Tool
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -930,7 +930,7 @@ export default function ComplianceRoadmap() {
                           {/* Deliverables */}
                           <div>
                             <h4 className="font-semibold mb-2 flex items-center">
-                              <CheckCircle2 className="h-4 w-4 text-accent mr-2" />
+                              <CheckCircle2 className="h-4 w-4 text-foreground mr-2" />
                               Key Deliverables
                             </h4>
                             <ul className="grid md:grid-cols-2 gap-2">
@@ -951,7 +951,7 @@ export default function ComplianceRoadmap() {
                             </h4>
                             <div className="flex flex-wrap gap-2">
                               {milestone.resources.map((resource, idx) => (
-                                <span key={idx} className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full">
+                                <span key={idx} className="text-xs bg-muted text-accent px-3 py-1 rounded-full">
                                   {resource}
                                 </span>
                               ))}

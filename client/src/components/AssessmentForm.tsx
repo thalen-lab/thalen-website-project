@@ -93,8 +93,8 @@ export default function AssessmentForm({
     return (
       <Card className="border-2 border-accent">
         <CardContent className="p-12 text-center">
-          <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle2 className="h-8 w-8 text-accent" />
+          <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle2 className="h-8 w-8 text-foreground" />
           </div>
           <h3 className="text-2xl font-bold mb-4">Thank You!</h3>
           <p className="text-muted-foreground mb-6">

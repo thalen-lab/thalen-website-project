@@ -173,7 +173,7 @@ export default function FederalSolutions() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Government Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -205,7 +205,7 @@ export default function FederalSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Government Contract Vehicles</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Pre-approved contract vehicles enabling streamlined procurement for federal agencies and simplified acquisition processes.
+              Pre-approved contract vehicles enabling streamlined procurement for government agencies and simplified acquisition processes.
             </p>
           </div>
 
@@ -279,7 +279,7 @@ export default function FederalSolutions() {
                     <div className="md:col-span-2">
                       <h3 className="text-2xl font-bold mb-2">{performance.agency}</h3>
                       <div className="flex flex-wrap gap-2">
-                        <span className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full font-semibold">
+                        <span className="text-xs bg-muted text-accent px-3 py-1 rounded-full font-semibold">
                           {performance.clearance}
                         </span>
                       </div>
@@ -354,7 +354,7 @@ export default function FederalSolutions() {
                   <ul className="space-y-3">
                     {capability.services.map((service, idx) => (
                       <li key={idx} className="flex items-start">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-sm">{service}</span>
                       </li>
                     ))}
@@ -388,7 +388,7 @@ export default function FederalSolutions() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <Card className="border-2 text-center">
               <CardContent className="p-8">
-                <div className="h-16 w-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="h-16 w-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">8(a) Partners</h3>
@@ -397,7 +397,7 @@ export default function FederalSolutions() {
             </Card>
             <Card className="border-2 text-center">
               <CardContent className="p-8">
-                <div className="h-16 w-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="h-16 w-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">SDVOSB Partners</h3>
@@ -406,7 +406,7 @@ export default function FederalSolutions() {
             </Card>
             <Card className="border-2 text-center">
               <CardContent className="p-8">
-                <div className="h-16 w-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="h-16 w-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">WOSB Partners</h3>
@@ -415,7 +415,7 @@ export default function FederalSolutions() {
             </Card>
             <Card className="border-2 text-center">
               <CardContent className="p-8">
-                <div className="h-16 w-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="h-16 w-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
                   <Building2 className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">HUBZone Partners</h3>
@@ -430,7 +430,7 @@ export default function FederalSolutions() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold mb-3 flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                    <CheckCircle2 className="h-5 w-5 text-foreground mr-2" />
                     Set-Aside Contract Eligibility
                   </h4>
                   <p className="text-sm text-muted-foreground ml-7">
@@ -439,7 +439,7 @@ export default function FederalSolutions() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-3 flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                    <CheckCircle2 className="h-5 w-5 text-foreground mr-2" />
                     Complementary Expertise
                   </h4>
                   <p className="text-sm text-muted-foreground ml-7">
@@ -448,7 +448,7 @@ export default function FederalSolutions() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-3 flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                    <CheckCircle2 className="h-5 w-5 text-foreground mr-2" />
                     Proven Teaming Success
                   </h4>
                   <p className="text-sm text-muted-foreground ml-7">
@@ -457,7 +457,7 @@ export default function FederalSolutions() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-3 flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                    <CheckCircle2 className="h-5 w-5 text-foreground mr-2" />
                     Mentor-Protégé Programs
                   </h4>
                   <p className="text-sm text-muted-foreground ml-7">
@@ -599,9 +599,9 @@ export default function FederalSolutions() {
                   </div>
                   <p className="text-sm mb-3">Cloud migration, real-time analytics for traffic management, and data integration across legacy systems.</p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Cloud Migration</span>
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Data Analytics</span>
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Integration</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Cloud Migration</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Data Analytics</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Integration</span>
                   </div>
                 </CardContent>
               </Card>
@@ -615,9 +615,9 @@ export default function FederalSolutions() {
                   </div>
                   <p className="text-sm mb-3">CJIS-compliant cloud infrastructure, cybersecurity assessments, and secure data sharing platforms.</p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">CJIS Compliance</span>
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Cybersecurity</span>
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Cloud</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">CJIS Compliance</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Cybersecurity</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Cloud</span>
                   </div>
                 </CardContent>
               </Card>
@@ -631,9 +631,9 @@ export default function FederalSolutions() {
                   </div>
                   <p className="text-sm mb-3">Public health surveillance analytics, HIPAA-compliant cloud solutions, and data visualization dashboards.</p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Data Analytics</span>
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">HIPAA</span>
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Cloud</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Data Analytics</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">HIPAA</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Cloud</span>
                   </div>
                 </CardContent>
               </Card>
@@ -647,9 +647,9 @@ export default function FederalSolutions() {
                   </div>
                   <p className="text-sm mb-3">Process automation for permitting, cloud-based constituent services, and legacy system modernization.</p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Automation</span>
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Cloud</span>
-                    <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Modernization</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Automation</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Cloud</span>
+                    <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Modernization</span>
                   </div>
                 </CardContent>
               </Card>

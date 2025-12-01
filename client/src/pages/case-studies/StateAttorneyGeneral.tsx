@@ -83,7 +83,7 @@ export default function StateAttorneyGeneralCaseStudy() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               State Government Case Study
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -93,10 +93,10 @@ export default function StateAttorneyGeneralCaseStudy() {
               How a state Attorney General's office prevented $50M+ in annual fraud with a CJIS-compliant real-time ML analytics platform processing 10M+ daily transactions across multiple state agencies.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">State Government</span>
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">CJIS Compliance</span>
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">Machine Learning</span>
-              <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm">Fraud Detection</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">State Government</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">CJIS Compliance</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">Machine Learning</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">Fraud Detection</span>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function StateAttorneyGeneralCaseStudy() {
             {solutions.map((solution, index) => (
               <Card key={index} className="border-2">
                 <CardContent className="p-8">
-                  <CheckCircle2 className="h-10 w-10 text-accent mb-4" />
+                  <CheckCircle2 className="h-10 w-10 text-foreground mb-4" />
                   <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
                   <p className="text-sm text-muted-foreground">{solution.description}</p>
                 </CardContent>
@@ -187,9 +187,9 @@ export default function StateAttorneyGeneralCaseStudy() {
                       Conducted comprehensive CJIS Security Policy gap analysis, documented security controls, completed background checks for all project personnel, and established CJIS-compliant development environment.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">CJIS Gap Analysis</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Background Checks</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Security Controls</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">CJIS Gap Analysis</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Background Checks</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Security Controls</span>
                     </div>
                   </div>
                 </div>
@@ -208,9 +208,9 @@ export default function StateAttorneyGeneralCaseStudy() {
                       Built secure data pipelines from 8 state agencies and 12 financial institutions, developed ML fraud detection models using historical data, and implemented real-time streaming analytics with sub-100ms latency.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Data Integration</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">ML Model Training</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Real-Time Streaming</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Data Integration</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">ML Model Training</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Real-Time Streaming</span>
                     </div>
                   </div>
                 </div>
@@ -229,9 +229,9 @@ export default function StateAttorneyGeneralCaseStudy() {
                       Deployed StateRAMP-authorized cloud infrastructure, conducted CJIS compliance validation with state CISO, performed penetration testing, and completed user acceptance testing with fraud investigators.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Cloud Deployment</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">CJIS Validation</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Penetration Testing</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Cloud Deployment</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">CJIS Validation</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Penetration Testing</span>
                     </div>
                   </div>
                 </div>
@@ -250,9 +250,9 @@ export default function StateAttorneyGeneralCaseStudy() {
                       Trained 45 fraud investigators and analysts on the new platform, established 24/7 monitoring and support processes, and launched production system processing 10M+ daily transactions with continuous ML model refinement.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">User Training</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">24/7 Monitoring</span>
-                      <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Production Launch</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">User Training</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">24/7 Monitoring</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Production Launch</span>
                     </div>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export default function StateAttorneyGeneralCaseStudy() {
               <div className="grid md:grid-cols-3 gap-4">
                 {technologies.map((tech, index) => (
                   <div key={index} className="flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-foreground mr-2 flex-shrink-0" />
                     <span className="text-sm">{tech}</span>
                   </div>
                 ))}

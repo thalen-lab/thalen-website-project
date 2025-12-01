@@ -87,7 +87,7 @@ export default function TrainingEnablement() {
       <section className="bg-navy-gradient text-primary-foreground py-20">
         <div className="container">
           <div className="max-w-3xl">
-            <div className="inline-block px-4 py-1 bg-accent/20 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block px-4 py-1 bg-muted rounded-full text-sm font-semibold mb-6">
               User Training • Knowledge Transfer • Adoption Support
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -128,7 +128,7 @@ export default function TrainingEnablement() {
               <Card key={index} className="border-2 hover:border-accent transition-colors">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
+                    <div className="p-3 bg-muted rounded-lg">
                       <approach.icon className="h-8 w-8 text-accent" />
                     </div>
                     <div className="flex-1">
@@ -139,7 +139,7 @@ export default function TrainingEnablement() {
                         <ul className="space-y-1">
                           {approach.formats.map((format, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm">
-                              <CheckCircle2 className="h-4 w-4 text-accent" />
+                              <CheckCircle2 className="h-4 w-4 text-foreground" />
                               {format}
                             </li>
                           ))}
@@ -170,7 +170,7 @@ export default function TrainingEnablement() {
             {trainingServices.map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <div className="inline-flex p-3 bg-accent/10 rounded-lg mb-4">
+                  <div className="inline-flex p-3 bg-muted rounded-lg mb-4">
                     <service.icon className="h-6 w-6 text-accent" />
                   </div>
                   <h3 className="text-lg font-bold mb-2">{service.title}</h3>

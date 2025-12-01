@@ -70,7 +70,7 @@ export default function DoDManufacturing() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container relative z-10">
           <div className="max-w-4xl">
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Department of Defense Case Study
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -109,7 +109,7 @@ export default function DoDManufacturing() {
             {metrics.map((metric, index) => (
               <Card key={index}>
                 <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
                     <metric.icon className="h-8 w-8 text-accent" />
                   </div>
                   <div className="text-4xl font-bold text-accent mb-2">{metric.value}</div>
@@ -130,31 +130,31 @@ export default function DoDManufacturing() {
               <h2 className="text-4xl font-bold mb-6">Facility Overview</h2>
               <div className="space-y-4 text-lg">
                 <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <strong>Organization:</strong> Department of Defense manufacturing facility
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <strong>Mission:</strong> Critical defense component manufacturing for military systems
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <strong>Scale:</strong> 50 production lines across 850,000 sq ft facility
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <strong>Workforce:</strong> 1,200 manufacturing and engineering personnel
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <strong>Compliance:</strong> CMMC Level 3, NIST 800-171, DFARS 252.204-7012
                   </div>
@@ -233,7 +233,7 @@ export default function DoDManufacturing() {
           <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {outcomes.map((outcome, index) => (
               <div key={index} className="flex items-start">
-                <CheckCircle2 className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-lg">{outcome}</p>
               </div>
             ))}
@@ -242,7 +242,7 @@ export default function DoDManufacturing() {
       </section>
 
       {/* Testimonial */}
-      <section className="py-20 bg-accent/10">
+      <section className="py-20 bg-muted">
         <div className="container">
           <Card className="max-w-4xl mx-auto">
             <CardContent className="p-12">
