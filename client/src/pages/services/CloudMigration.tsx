@@ -11,7 +11,7 @@ export default function CloudMigration() {
     {
       icon: Zap,
       title: 'Zero Downtime Migration',
-      description: 'Proven strategies ensuring 99.99% uptime during transition with automated failover and rollback capabilities for mission-critical federal systems.'
+      description: 'Proven strategies ensuring 99.99% uptime during transition with automated failover and rollback capabilities for mission-critical government systems.'
     },
     {
       icon: Shield,
@@ -126,7 +126,7 @@ export default function CloudMigration() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose NexDyne Migration</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Unlike commercial migration services, we understand federal compliance requirements, security clearances, and mission continuity imperatives.
+              Unlike commercial migration services, we understand government compliance requirements (FedRAMP, StateRAMP, CJIS), security clearances, and mission continuity imperatives.
             </p>
           </div>
 

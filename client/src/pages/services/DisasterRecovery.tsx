@@ -21,7 +21,7 @@ export default function DisasterRecovery() {
     {
       icon: Shield,
       title: 'FedRAMP-Compliant DR',
-      description: 'Disaster recovery architecture meeting FedRAMP High requirements with continuous monitoring and federal continuity standards.'
+      description: 'Disaster recovery architecture meeting FedRAMP High requirements with continuous monitoring and government continuity standards.'
     }
   ];
 
@@ -62,7 +62,7 @@ export default function DisasterRecovery() {
     {
       title: 'Security & Compliance',
       icon: Lock,
-      description: 'Encrypted backups, access controls, and audit trails meeting federal security and privacy requirements.',
+      description: 'Encrypted backups, access controls, and audit trails meeting government security and privacy requirements.',
       features: [
         'Encryption at rest and in transit',
         'Role-based access control',
@@ -116,13 +116,13 @@ export default function DisasterRecovery() {
           
           <div className="max-w-4xl">
             <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
-              &lt; 15 Min RTO • Geo-Redundant • FedRAMP-Compliant
+              &lt; 15 Min RTO | Geo-Redundant | FedRAMP-Compliant
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Disaster Recovery & Business Continuity
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Enterprise-grade DR solutions with automated failover, geo-redundant backups, and guaranteed RTOs meeting federal continuity requirements. Thalen Technologies delivers disaster recovery architecture ensuring mission continuity with &lt; 15 minute recovery times and FedRAMP High compliance.
+              Enterprise-grade DR solutions with automated failover, geo-redundant backups, and guaranteed RTOs meeting government continuity requirements. Thalen Technologies delivers disaster recovery architecture ensuring mission continuity with &lt; 15 minute recovery times and FedRAMP/StateRAMP compliance.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -143,7 +143,7 @@ export default function DisasterRecovery() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Enterprise Disaster Recovery Benefits</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Mission-critical disaster recovery capabilities ensuring operational continuity and federal compliance.
+              Mission-critical disaster recovery capabilities ensuring operational continuity and government compliance.
             </p>
           </div>
 
@@ -240,7 +240,7 @@ export default function DisasterRecovery() {
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Federal Continuity Compliance</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Disaster recovery architecture meeting all federal continuity and resilience requirements.
+              Disaster recovery architecture meeting all government continuity and resilience requirements (federal, state, local).
             </p>
           </div>
 
@@ -283,7 +283,7 @@ export default function DisasterRecovery() {
           },
           {
             title: 'Cloud Security & Compliance',
-            description: 'Secure backup encryption, access controls, and compliance-ready recovery procedures for federal data.',
+            description: 'Secure backup encryption, access controls, and compliance-ready recovery procedures for government data.',
             href: '/services/cloud-security',
             icon: Lock
           },

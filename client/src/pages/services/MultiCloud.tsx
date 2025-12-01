@@ -112,7 +112,7 @@ export default function MultiCloud() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose Multi-Cloud</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Strategic advantages of multi-cloud architecture for mission-critical federal operations and long-term technology independence.
+              Strategic advantages of multi-cloud architecture for mission-critical government operations and long-term technology independence.
             </p>
           </div>
 

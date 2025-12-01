@@ -117,7 +117,7 @@ export default function CloudSecurity() {
               Cloud Security & Compliance
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies implement government-grade security controls for FedRAMP High authorization, CMMC Level 3 certification, and zero-trust architecture for mission-critical workloads. Our team delivers defense-grade cloud security implementation meeting the most stringent federal compliance requirements while enabling operational agility.
+              We help agencies implement government-grade security controls for FedRAMP High authorization, StateRAMP, CMMC Level 3 certification, and zero-trust architecture for mission-critical workloads. Our team delivers defense-grade cloud security implementation meeting the most stringent government compliance requirements (federal, state, local) while enabling operational agility.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -138,7 +138,7 @@ export default function CloudSecurity() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Government-Grade Cloud Security</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Defense-grade security controls meeting the most stringent federal compliance requirements for classified and sensitive workloads.
+              Defense-grade security controls meeting the most stringent government compliance requirements for classified and sensitive workloads.
             </p>
           </div>
 
@@ -191,9 +191,9 @@ export default function CloudSecurity() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Federal Compliance Frameworks</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Government Compliance Frameworks</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive compliance support across all major federal security and privacy frameworks.
+              Comprehensive compliance support across all major government security and privacy frameworks (FedRAMP, StateRAMP, CJIS).
             </p>
           </div>
 
