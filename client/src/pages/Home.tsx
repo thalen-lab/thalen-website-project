@@ -275,7 +275,7 @@ export default function Home() {
             {services.map((service, index) => (
               <Card key={index} className="bg-card/10 border-primary-foreground/20 backdrop-blur hover:bg-card/20 transition-all group">
                 <CardContent className="p-6">
-                  <service.icon className="h-12 w-12 text-accent mb-4" />
+                  <service.icon className="h-12 w-12 text-primary-foreground mb-4" />
                   <h3 className="text-xl font-semibold mb-3 text-primary-foreground">{service.title}</h3>
                   <p className="text-primary-foreground/80 mb-6">{service.description}</p>
                   <Button asChild variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all">
