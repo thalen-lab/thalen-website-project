@@ -36,6 +36,8 @@ import CapabilityGenerator from "./pages/CapabilityGenerator";
 import GovernmentResources from "./pages/GovernmentResources";
 import ContractVehicleComparison from "./pages/ContractVehicleComparison";
 import ComplianceRoadmap from "./pages/ComplianceRoadmap";
+import MobileContact from "./pages/MobileContact";
+import MobileAssessment from "./pages/MobileAssessment";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -162,6 +164,8 @@ function Router() {
       <Route path={"/about"} component={About} />
       <Route path={"/team"} component={Team} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/m/contact"} component={MobileContact} />
+      <Route path={"/m/assessment"} component={MobileAssessment} />
       <Route path={"/contact/partnerships"} component={ContactPartnerships} />
       <Route path={"/contact/government"} component={ContactGovernment} />
       <Route path={"/contact/emergency"} component={ContactEmergency} />

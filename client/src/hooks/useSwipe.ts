@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import { triggerHaptic } from '@/lib/haptics';
 
 interface SwipeHandlers {
   onSwipeLeft?: () => void;
@@ -65,6 +66,9 @@ export function useSwipe(
 
       if (isHorizontalSwipe) {
         if (Math.abs(deltaX) > minSwipeDistance) {
+          // Trigger haptic feedback for swipe gesture
+          triggerHaptic('selection');
+          
           if (deltaX > 0) {
             handlers.onSwipeLeft?.();
           } else {
@@ -73,6 +77,9 @@ export function useSwipe(
         }
       } else {
         if (Math.abs(deltaY) > minSwipeDistance) {
+          // Trigger haptic feedback for swipe gesture
+          triggerHaptic('selection');
+          
           if (deltaY > 0) {
             handlers.onSwipeUp?.();
           } else {
