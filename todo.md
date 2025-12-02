@@ -1861,3 +1861,6 @@
 
 ## Phase 53: Update Responsible AI Image
 - [x] Update Responsible AI insight card image to new circuit board design with digital human head profile
+
+## Phase 93: Update Zero-Trust Architecture Insight Card Image
+- [x] Replace Zero-Trust Architecture insight card image with Capitol Building image featuring code overlay

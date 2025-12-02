@@ -34,7 +34,7 @@ export default function Insights() {
       date: 'Nov 8, 2024',
       readTime: '10 min read',
       tags: ['Security', 'Compliance'],
-      image: '/insights-zero-trust.png',
+      image: '/zero-trust-capitol.png',
       href: '/insights/zero-trust'
     },
     {
