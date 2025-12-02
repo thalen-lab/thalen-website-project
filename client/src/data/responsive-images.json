@@ -129,7 +129,9 @@
       "mobile_webp": "optimized/kearney-rpa-security/mobile.webp",
       "mobile_jpeg": "optimized/kearney-rpa-security/mobile.jpg",
       "tablet_webp": "optimized/kearney-rpa-security/tablet.webp",
-      "tablet_jpeg": "optimized/kearney-rpa-security/tablet.jpg"
+      "tablet_jpeg": "optimized/kearney-rpa-security/tablet.jpg",
+      "desktop_webp": "optimized/kearney-rpa-security/desktop.webp",
+      "desktop_jpeg": "optimized/kearney-rpa-security/desktop.jpg"
     }
   },
   "/images/multi-cloud-architecture.png": {
