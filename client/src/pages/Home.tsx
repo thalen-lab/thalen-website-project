@@ -51,7 +51,7 @@ export default function Home() {
   const services = [
     {
       icon: Cpu,
-      title: 'Government RPA Implementation',
+      title: 'Government Process Automation',
       description: 'Implement FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov, Blue Prism Gov) with process discovery, bot development, ATO documentation, and Center of Excellence setup.',
       href: '/services/automation'
     },
