@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Clock, User, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Insights() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -265,48 +265,27 @@ export default function Insights() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 {paginatedInsights.map((insight, index) => (
                   <Link key={index} href={insight.href}>
-                    <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer overflow-hidden">
+                    <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2">
                       {/* Image */}
-                      <div className="relative h-48 overflow-hidden bg-muted">
+                      <div className="relative h-64 overflow-hidden">
                         <img
                           src={insight.image}
                           alt={insight.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
-                        <div className="absolute top-4 left-4">
-                          <span className="text-xs font-semibold text-white bg-accent px-3 py-1 rounded-full">
-                            {insight.category}
-                          </span>
-                        </div>
                       </div>
 
                       <CardContent className="p-6 flex flex-col flex-1">
                         <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
                           {insight.title}
                         </h3>
-                        <p className="text-muted-foreground mb-4 flex-1">{insight.excerpt}</p>
+                        <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
 
-                        <div className="flex items-center text-sm text-muted-foreground mb-4">
-                          <User className="h-4 w-4 mr-2" />
-                          <span className="mr-4">{insight.author}</span>
+                        <div className="flex items-center text-sm text-muted-foreground">
                           <Clock className="h-4 w-4 mr-2" />
-                          <span>{insight.readTime}</span>
-                        </div>
-
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {insight.tags.map((tag, idx) => (
-                            <span key={idx} className="text-xs bg-muted px-3 py-1 rounded-full text-muted-foreground">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-
-                        <div className="flex items-center justify-between pt-4 border-t border-border">
-                          <span className="text-sm text-muted-foreground">{insight.date}</span>
-                          <Button variant="ghost" size="sm" className="group-hover:text-accent">
-                            Read More
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
+                          <span className="mr-4">{insight.readTime}</span>
+                          <span>•</span>
+                          <span className="ml-4">{insight.date}</span>
                         </div>
                       </CardContent>
                     </Card>

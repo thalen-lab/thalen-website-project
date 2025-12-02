@@ -1873,3 +1873,11 @@
 - [x] Update Featured Article section with Kearney RPA security article
 - [x] Replace featured article image with professional circuit board image
 - [x] Update article title, description, and author attribution
+
+## Phase 96: Clean Up Insight Cards Design
+- [x] Remove category tags above card titles (e.g., "Automation Strategy")
+- [x] Remove tags below descriptions (e.g., "ROI", "Automation")
+- [x] Remove author names from cards
+- [x] Reposition images to fill cards properly with no white space
+- [x] Use sharp edges on cards (no rounded corners)
+- [x] Verify all links and routes still work correctly
