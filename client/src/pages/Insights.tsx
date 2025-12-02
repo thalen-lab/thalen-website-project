@@ -174,8 +174,8 @@ export default function Insights() {
               <div className="grid md:grid-cols-2">
                 <div className="relative overflow-hidden">
                   <img 
-                    src="/rpa-article.a7f3b2e1.png" 
-                    alt="Three Practical Recommendations to Secure Robotic Process Automation (RPA) in a Federal IT environment"
+                    src="/kearney-rpa-security.png" 
+                    alt="Three Practical Recommendations to Secure RPA in Federal IT"
                     className="w-full h-full object-cover"
                   />
                 </div>
