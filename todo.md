@@ -1889,3 +1889,8 @@
 - [x] Ensure image extends to the top edge without white space
 - [x] Apply same clean design as regular insight cards
 - [x] Verify the card maintains its featured styling while matching the clean format
+
+## Phase 98: Fix Featured Article Card - Sharp Edges and Restore Author
+- [x] Add sharp edges to Featured Article card (rounded-none with border-2)
+- [x] Restore author attribution ("Written by Kearney Principal Mark Munster")
+- [x] Verify card maintains clean professional appearance
