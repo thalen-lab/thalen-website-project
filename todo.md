@@ -1900,3 +1900,12 @@
 - [x] Position author text cleanly below title
 - [x] Ensure consistent styling across all cards
 - [x] Verify professional appearance
+
+## Phase 121: Apply Clean Design to Case Studies Landing Page
+- [x] Review current case study card design
+- [x] Add sharp edges (rounded-none border-2) to case study cards
+- [x] Remove card padding (p-0) to allow images to extend to edges
+- [x] Simplify card content layout
+- [x] Ensure consistent styling with Insights page
+- [x] Preserve all routes, links, and functionality
+- [x] Test filtering and search functionality

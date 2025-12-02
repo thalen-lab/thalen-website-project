@@ -337,28 +337,23 @@ export default function CaseStudies() {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredCaseStudies.map((study, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all flex flex-col">
-                  <CardContent className="p-8 flex flex-col flex-1">
-                    <div className="text-sm font-semibold text-accent mb-3">{study.category}</div>
-                    <h3 className="text-xl font-bold mb-3">{study.title}</h3>
-                    <p className="text-muted-foreground mb-6 flex-1">{study.description}</p>
+                <Link key={index} href={study.href}>
+                  <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
+                    <CardContent className="p-6 flex flex-col flex-1">
+                      <div className="text-sm font-semibold text-accent mb-3">{study.category}</div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">{study.title}</h3>
+                      <p className="text-muted-foreground mb-6 flex-1">{study.description}</p>
 
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {study.tags.map((tag, idx) => (
-                        <span key={idx} className="text-xs bg-secondary px-3 py-1 rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <Link href={study.href}>
-                      <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all active:scale-95">
-                        Read Case Study
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
+                      <div className="flex flex-wrap gap-2">
+                        {study.tags.map((tag, idx) => (
+                          <span key={idx} className="text-xs bg-secondary px-3 py-1 rounded-full">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           )}
