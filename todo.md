@@ -1917,3 +1917,14 @@
 - [x] Apply image loaders to Case Studies page cards
 - [x] Apply image loaders to Insights page cards
 - [x] Test loading states on slower connections
+
+
+## Phase 123: Implement Lazy Loading and LQIP for Images
+- [x] Enhance ImageWithLoader component with intersection observer
+- [x] Add lazy loading logic to only load images near viewport
+- [x] Implement LQIP (Low-Quality Image Placeholder) support
+- [x] Generate tiny base64 LQIP versions of all case study images
+- [x] Generate tiny base64 LQIP versions of all insight images
+- [x] Test lazy loading behavior on Case Studies page
+- [x] Test lazy loading behavior on Insights page
+- [x] Verify performance improvements with browser DevTools

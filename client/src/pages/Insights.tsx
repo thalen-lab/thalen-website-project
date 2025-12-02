@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
+import { useLQIP } from '@/hooks/useLQIP';
 import Footer from '@/components/Footer';
 import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -177,6 +178,7 @@ export default function Insights() {
                   <ImageWithLoader
                     src="/kearney-rpa-security.png" 
                     alt="Three Practical Recommendations to Secure RPA in Federal IT"
+                    lqip={useLQIP('/kearney-rpa-security.png')}
                     className="w-full h-full object-cover"
                     skeletonClassName="h-full"
                   />
@@ -273,6 +275,7 @@ export default function Insights() {
                         <ImageWithLoader
                           src={insight.image}
                           alt={insight.title}
+                          lqip={useLQIP(insight.image)}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           skeletonClassName="h-64"
                         />
