@@ -31,6 +31,7 @@ export default function CaseStudies() {
       title: 'Federal Agency Achieves 85% Process Automation',
       description: 'Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
       tags: ['RPA', 'FedRAMP'],
+      image: '/rocket-federal.webp',
       href: '/case-studies/federal-automation'
     },
     {
@@ -38,6 +39,7 @@ export default function CaseStudies() {
       title: 'DoD Manufacturing Facility Achieves 99.2% Uptime',
       description: 'Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.',
       tags: ['Cybersecurity', 'IoT', 'CMMC'],
+      image: '/manufacturing-security.jpg',
       href: '/case-studies/dod-manufacturing'
     },
     {
@@ -45,6 +47,7 @@ export default function CaseStudies() {
       title: 'VA Medical Center Integrates 12 Legacy Systems',
       description: 'Integrated 12 disparate healthcare systems using FedRAMP-authorized iPaaS platform. Reduced administrative burden by 60% for 8,500 staff members.',
       tags: ['Integration', 'HIPAA', 'FedRAMP'],
+      image: '/healthcare-legacy-it.jpg',
       href: '/case-studies/va-healthcare'
     },
     {
@@ -52,6 +55,7 @@ export default function CaseStudies() {
       title: 'State Attorney General Prevents $50M+ in Fraud',
       description: 'Implemented AI-powered fraud detection system with CJIS compliance for state law enforcement. Analyzed 2.3M cases, prevented $50M+ in fraud.',
       tags: ['AI', 'Analytics', 'CJIS'],
+      image: '/images/case-studies/state-law-enforcement.jpg',
       href: '/case-studies/state-attorney-general'
     },
     {
@@ -59,6 +63,7 @@ export default function CaseStudies() {
       title: 'State Energy Commission Reduces Grid Outages 65%',
       description: 'Deployed StateRAMP-authorized smart grid platform for state energy commission. Reduced outages by 65% across 4.2M customer service area.',
       tags: ['Automation', 'IoT', 'StateRAMP'],
+      image: '/images/case-studies/energy-grid-control.jpg',
       href: '/case-studies/state-energy-commission'
     },
     {
@@ -66,6 +71,7 @@ export default function CaseStudies() {
       title: 'County Health Department Speeds Outbreak Response 40%',
       description: 'Integrated 8 public health systems for county health department. Achieved 40% faster outbreak response with HIPAA-compliant data sharing.',
       tags: ['Integration', 'HIPAA'],
+      image: '/images/case-studies/public-health-data.jpg',
       href: '/case-studies/county-health-department'
     },
     {
@@ -73,6 +79,7 @@ export default function CaseStudies() {
       title: 'Defense Contractor: Zero-Downtime Cloud Migration',
       description: 'Migrated 150+ applications and 500TB classified data to AWS GovCloud and Azure Government. Achieved CMMC Level 3 with 100% uptime and $4.5M annual savings.',
       tags: ['Cloud', 'Cybersecurity', 'CMMC'],
+      image: '/images/case-studies/defense-cyber-ops.jpg',
       href: '/case-studies/defense-cloud'
     },
     {
@@ -80,6 +87,7 @@ export default function CaseStudies() {
       title: 'Healthcare System Saves $12M Through AI Analytics',
       description: 'Data intelligence platform delivered real-time insights improving patient outcomes by 40% while achieving full HIPAA compliance across 15 facilities.',
       tags: ['AI', 'Analytics', 'HIPAA'],
+      image: '/images/case-studies/healthcare-analytics.jpg',
       href: '/case-studies/healthcare-ai'
     },
     {
@@ -87,6 +95,7 @@ export default function CaseStudies() {
       title: 'Manufacturing Giant Achieves 99.2% Uptime',
       description: 'Cybersecurity and predictive maintenance eliminated 75% of unplanned downtime across 50+ facilities.',
       tags: ['Cybersecurity', 'IoT', 'Predictive Analytics'],
+      image: '/images/case-studies/manufacturing-facility.jpg',
       href: '/case-studies/manufacturing-uptime'
     },
     {
@@ -94,6 +103,7 @@ export default function CaseStudies() {
       title: 'Energy Company Deploys $500M Smart Grid',
       description: 'Modernized energy infrastructure serving 8M customers with real-time monitoring and automated response systems.',
       tags: ['IoT', 'Cloud', 'Automation'],
+      image: '/images/case-studies/smart-grid.jpg',
       href: '/case-studies/energy-grid'
     },
     {
@@ -101,6 +111,7 @@ export default function CaseStudies() {
       title: 'Bank Prevents $45M in Fraud with AI',
       description: 'Real-time fraud detection system analyzing 50M+ transactions daily with 99.7% accuracy and sub-second response times.',
       tags: ['AI', 'Cybersecurity', 'Analytics'],
+      image: '/images/case-studies/financial-security.jpg',
       href: '/case-studies/bank-fraud'
     },
     {
@@ -108,6 +119,7 @@ export default function CaseStudies() {
       title: 'Intelligence Agency Achieves TS/SCI Collaboration',
       description: 'Secure collaboration platform enabling real-time intelligence sharing across 12 agencies with zero security incidents.',
       tags: ['Cybersecurity', 'Cloud', 'TS/SCI'],
+      image: '/images/case-studies/intelligence-ops.jpg',
       href: '/case-studies/intelligence-security'
     },
     {
@@ -115,6 +127,7 @@ export default function CaseStudies() {
       title: 'Hospital Reduces Wait Times 65%',
       description: 'Patient flow optimization platform reduced ER wait times from 4.5 hours to 1.5 hours while improving satisfaction scores by 85%.',
       tags: ['Analytics', 'Automation', 'HIPAA'],
+      image: '/images/case-studies/hospital-operations.jpg',
       href: '/case-studies/hospital-wait-times'
     },
     {
@@ -122,6 +135,7 @@ export default function CaseStudies() {
       title: 'Aerospace Contractor Implements Digital Twin',
       description: 'Digital twin platform reduced design costs by 40% and accelerated time-to-market by 6 months for next-gen aircraft.',
       tags: ['AI', 'IoT', 'Cloud'],
+      image: '/images/case-studies/aerospace-engineering.jpg',
       href: '/case-studies/aerospace-digital-twin'
     },
     {
@@ -129,6 +143,7 @@ export default function CaseStudies() {
       title: 'VA Reduces Claims Processing Time 60% with Predictive Analytics',
       description: 'Predictive analytics platform processing 2M+ claims annually with 60% faster processing and 95% accuracy.',
       tags: ['AI', 'Analytics', 'FedRAMP'],
+      image: '/images/case-studies/va-analytics.jpg',
       href: '/case-studies/va-predictive-analytics'
     },
     {
@@ -136,6 +151,7 @@ export default function CaseStudies() {
       title: 'DOD Saves $12M Annually with Automated Data Pipelines',
       description: 'Automated data pipelines processing 500TB+ classified data daily with 99.9% uptime and $12M annual savings.',
       tags: ['Cloud', 'Automation', 'CMMC'],
+      image: '/images/case-studies/dod-data-center.jpg',
       href: '/case-studies/dod-data-pipelines'
     },
     {
@@ -143,6 +159,7 @@ export default function CaseStudies() {
       title: 'HHS Achieves Real-Time Public Health Surveillance',
       description: 'Real-time surveillance platform monitoring 50 states with 78% faster outbreak detection and automated alerting.',
       tags: ['Analytics', 'Cloud', 'FedRAMP'],
+      image: '/images/case-studies/public-health-monitoring.jpg',
       href: '/case-studies/hhs-public-health'
     },
     {
@@ -150,6 +167,7 @@ export default function CaseStudies() {
       title: 'State DOT Modernizes Asset Management with 92% Efficiency Gain',
       description: 'Migrated 40-year-old COBOL mainframe to Salesforce Government Cloud, achieving 92% efficiency improvement and $3.8M annual savings.',
       tags: ['Cloud', 'Integration', 'StateRAMP'],
+      image: '/images/case-studies/dot-infrastructure.jpg',
       href: '/case-studies/state-dot'
     },
     {
@@ -157,6 +175,7 @@ export default function CaseStudies() {
       title: 'County Health Department Achieves 78% Faster Disease Surveillance',
       description: 'Real-time public health surveillance platform for 1.2M residents with 78% faster outbreak detection and 95% data accuracy.',
       tags: ['Analytics', 'Integration', 'HIPAA'],
+      image: '/images/case-studies/county-health-system.jpg',
       href: '/case-studies/county-health'
     }
   ];
@@ -339,8 +358,22 @@ export default function CaseStudies() {
               {filteredCaseStudies.map((study, index) => (
                 <Link key={index} href={study.href}>
                   <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
+                    {/* Image */}
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={study.image}
+                        alt={study.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      {/* Category badge overlay */}
+                      <div className="absolute top-4 left-4">
+                        <span className="text-xs font-semibold bg-accent text-accent-foreground px-3 py-1.5 rounded-full shadow-lg">
+                          {study.category}
+                        </span>
+                      </div>
+                    </div>
+
                     <CardContent className="p-6 flex flex-col flex-1">
-                      <div className="text-sm font-semibold text-accent mb-3">{study.category}</div>
                       <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">{study.title}</h3>
                       <p className="text-muted-foreground mb-6 flex-1">{study.description}</p>
 
