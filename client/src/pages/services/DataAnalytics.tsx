@@ -49,8 +49,8 @@ export default function DataAnalytics() {
   const keyDifferentiators = [
     {
       icon: Shield,
-      title: 'FedRAMP Analytics Platforms',
-      description: 'Deep implementation experience with 30+ FedRAMP-authorized analytics, BI, and AI/ML platforms across all major vendors.'
+      title: 'FedRAMP & StateRAMP Analytics Platforms',
+      description: 'Deep implementation experience with 30+ FedRAMP and StateRAMP-authorized analytics, BI, and AI/ML platforms across all major vendors.'
     },
     {
       icon: Users,
@@ -104,7 +104,7 @@ export default function DataAnalytics() {
               Government Data Analytics & Intelligence
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies implement FedRAMP-authorized analytics platforms, AI/ML models, and data pipelines that transform massive datasets into mission-critical intelligence. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
+              We help government agencies (federal, state, and local) implement FedRAMP and StateRAMP-authorized analytics platforms, AI/ML models, and data pipelines that transform massive datasets into mission-critical intelligence. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -144,7 +144,7 @@ export default function DataAnalytics() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Analytics Implementation Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end analytics capabilities from strategy to deployment, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
+              End-to-end analytics capabilities from strategy to deployment, designed for government agencies (federal, state, and local) requiring FedRAMP and StateRAMP compliance and mission-critical reliability.
             </p>
           </div>
 

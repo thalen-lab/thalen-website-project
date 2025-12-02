@@ -69,7 +69,7 @@ export default function DataStrategy() {
               Data Strategy & Roadmap
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Your agency collects massive amounts of data, but are you using it to drive mission outcomes? Most federal organizations lack a coherent data strategy—analytics projects happen in silos, data quality is inconsistent, and nobody owns data governance. Thalen Technologies builds comprehensive data strategies that align analytics investments with mission priorities, establish sustainable governance, and deliver measurable results within 12 months.
+              Your agency collects massive amounts of data, but are you using it to drive mission outcomes? Most government agencies (federal, state, and local) lack a coherent data strategy—analytics projects happen in silos, data quality is inconsistent, and nobody owns data governance. Thalen Technologies builds comprehensive data strategies that align analytics investments with mission priorities, establish sustainable governance, and deliver measurable results within 12 months.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -303,7 +303,7 @@ export default function DataStrategy() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">Cybersecurity & Compliance</h3>
                 <p className="text-muted-foreground mb-4">
-                  Protect your data assets with FedRAMP-authorized security controls. We implement data classification, access governance, and compliance frameworks aligned to your strategy.
+                  Protect your data assets with FedRAMP and StateRAMP-authorized security controls. We implement data classification, access governance, and compliance frameworks aligned to your strategy.
                 </p>
                 <Link href="/services/cybersecurity">
                   <Button variant="outline" className="w-full">

@@ -77,7 +77,7 @@ export default function MLAI() {
               Predictive Analytics & ML/AI
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Stop reacting to problems after they happen. Thalen Technologies deploys machine learning models and AI-powered analytics that predict fraud, forecast failures, detect threats, and optimize operations before issues escalate. Our ML implementations are not black boxes—every prediction includes transparent reasoning, bias detection, and model governance to meet federal accountability standards. From fraud detection to predictive maintenance, we turn your data into actionable foresight.
+              Stop reacting to problems after they happen. Thalen Technologies deploys machine learning models and AI-powered analytics using FedRAMP and StateRAMP-authorized platforms that predict fraud, forecast failures, detect threats, and optimize operations before issues escalate. Our ML implementations are not black boxes—every prediction includes transparent reasoning, bias detection, and model governance to meet government accountability standards (federal, state, and local). From fraud detection to predictive maintenance, we turn your data into actionable foresight.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
