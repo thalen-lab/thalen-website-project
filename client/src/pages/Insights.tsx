@@ -46,7 +46,7 @@ export default function Insights() {
       date: 'Nov 5, 2024',
       readTime: '12 min read',
       tags: ['AI', 'Ethics'],
-      image: '/insights-responsible-ai.png',
+      image: '/responsible-ai-circuit.png',
       href: '/insights/responsible-ai'
     },
     {
