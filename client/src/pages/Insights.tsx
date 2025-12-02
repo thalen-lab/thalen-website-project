@@ -58,7 +58,7 @@ export default function Insights() {
       date: 'Nov 1, 2024',
       readTime: '9 min read',
       tags: ['Cloud', 'Architecture'],
-      image: '/insights-multi-cloud.png',
+      image: '/images/insights/multi-cloud-team.png',
       href: '/insights/multi-cloud'
     },
     {
