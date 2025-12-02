@@ -26,10 +26,21 @@ import {
 } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { motion } from 'framer-motion';
+import { useSwipe } from '@/hooks/useSwipe';
 
 export default function Home() {
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [currentCaseStudy, setCurrentCaseStudy] = useState(0);
+
+  // Swipe handlers for hero carousel
+  const heroSwipeRef = useSwipe({
+    onSwipeLeft: () => {
+      setCurrentHeroIndex((prev) => (prev + 1) % heroSlides.length);
+    },
+    onSwipeRight: () => {
+      setCurrentHeroIndex((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    },
+  });
 
   const heroSlides = [
     {
@@ -185,7 +196,7 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section with Rotating Images */}
-      <section className="relative h-[600px] overflow-hidden">
+      <section ref={heroSwipeRef} className="relative h-[600px] overflow-hidden touch-pan-y">
         {heroSlides.map((slide, index) => (
           <div
             key={index}
@@ -217,13 +228,13 @@ export default function Home() {
           <div className="container">
             <div className="max-w-2xl">
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
+                <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all touch-feedback">
                   <Link href="/contact">
                     Schedule Strategic Assessment
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary touch-feedback">
                   <Link href="/methodology">View ROI Methodology</Link>
                 </Button>
               </div>
@@ -237,7 +248,8 @@ export default function Home() {
             <button
               key={index}
               onClick={() => setCurrentHeroIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
+              aria-label={`Go to slide ${index + 1}`}
+              className={`w-3 h-3 rounded-full transition-all touch-feedback min-h-[44px] min-w-[44px] flex items-center justify-center ${
                 index === currentHeroIndex ? 'bg-accent w-8' : 'bg-primary-foreground/50'
               }`}
             />
@@ -277,7 +289,7 @@ export default function Home() {
                   <service.icon className="h-12 w-12 text-primary-foreground mb-4" />
                   <h3 className="text-xl font-semibold mb-3 text-primary-foreground">{service.title}</h3>
                   <p className="text-primary-foreground/80 mb-6">{service.description}</p>
-                  <Button asChild variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all active:scale-95">
+                  <Button asChild variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all active:scale-95 touch-feedback">
                     <Link href={service.href}>
                       Explore Service
                       <ArrowRight className="ml-2 h-4 w-4" />

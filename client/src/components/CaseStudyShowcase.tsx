@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { motion } from 'framer-motion';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
 import { prefetchImage } from '@/lib/prefetch';
+import { useSwipe } from '@/hooks/useSwipe';
 
 interface CaseStudy {
   id: string;
@@ -78,6 +79,12 @@ const caseStudies: CaseStudy[] = [
 export default function CaseStudyShowcase() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Swipe handlers for case study carousel
+  const swipeRef = useSwipe({
+    onSwipeLeft: () => scroll('right'),
+    onSwipeRight: () => scroll('left'),
+  });
 
   const scroll = (direction: 'left' | 'right') => {
     if (!containerRef.current) return;
@@ -159,8 +166,13 @@ export default function CaseStudyShowcase() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <div 
-          ref={containerRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
+          ref={(el) => {
+            containerRef.current = el;
+            if (swipeRef.current !== el) {
+              (swipeRef as any).current = el;
+            }
+          }}
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 touch-pan-y"
           style={{ 
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
