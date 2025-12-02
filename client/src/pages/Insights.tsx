@@ -22,7 +22,7 @@ export default function Insights() {
       date: 'Nov 10, 2024',
       readTime: '8 min read',
       tags: ['ROI', 'Automation'],
-      image: '/insights-roi-methodology.png',
+      image: '/roi-analytics.png',
       href: '/insights/roi-methodology'
     },
     {

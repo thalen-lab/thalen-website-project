@@ -1864,3 +1864,6 @@
 
 ## Phase 93: Update Zero-Trust Architecture Insight Card Image
 - [x] Replace Zero-Trust Architecture insight card image with Capitol Building image featuring code overlay
+
+## Phase 94: Update ROI Methodology Insight Card Image
+- [x] Replace ROI Methodology insight card image with futuristic analytics visualization
