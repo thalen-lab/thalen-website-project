@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import GovernmentChat from "./components/GovernmentChat";
 import LiveChat from "./components/LiveChat";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
+import { NotificationBanner } from "./components/NotificationBanner";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Team from "./pages/Team";
@@ -394,6 +395,7 @@ function App() {
           <Toaster />
           <Router />
           <GovernmentChat />
+          <NotificationBanner />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

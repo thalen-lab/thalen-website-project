@@ -2080,3 +2080,41 @@
 - [x] Test autofill and autocomplete functionality
 - [x] Measure Core Web Vitals on mobile (LCP, FID, CLS)
 - [x] Save checkpoint with all advanced mobile features
+
+## Phase 126: Web Push Notifications & PWA App Shortcuts
+
+### Web Push Notification Infrastructure
+- [x] Generate VAPID keys for push notification authentication
+- [x] Create push notification database schema (subscriptions table)
+- [x] Implement service worker push event handler
+- [x] Create notification utility functions (subscribe, unsubscribe, send)
+- [x] Build tRPC API endpoints for subscription management
+- [x] Add notification permission request UI component
+- [x] Implement notification preferences (case studies, events, assessments)
+
+### Notification Triggers
+- [x] Create notification trigger for new case studies
+- [x] Create notification trigger for upcoming events
+- [x] Create notification trigger for assessment reminders (24h, 7d, 30d)
+- [x] Implement personalized notification content
+- [x] Add notification click handlers (deep links to content)
+- [ ] Create admin dashboard for sending custom notifications
+- [ ] Test notification delivery on iOS Safari and Android Chrome
+
+### PWA App Shortcuts
+- [x] Update manifest.json with app shortcuts
+- [x] Add ROI Calculator shortcut
+- [x] Add Compliance Checklist shortcut
+- [x] Add Case Studies shortcut
+- [x] Add Contact/Assessment shortcut
+- [ ] Test shortcuts on iOS Safari (long-press app icon)
+- [ ] Test shortcuts on Android Chrome (long-press app icon)
+
+### Testing & Verification
+- [ ] Test push notification subscription flow
+- [ ] Test notification delivery on mobile devices
+- [ ] Verify notification click handlers navigate correctly
+- [ ] Test notification preferences (enable/disable categories)
+- [ ] Test app shortcuts on iOS and Android
+- [ ] Verify deep links work correctly from shortcuts
+- [ ] Save checkpoint with push notifications and app shortcuts
