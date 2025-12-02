@@ -52,7 +52,7 @@ export default function Home() {
     {
       icon: Cpu,
       title: 'Government Process Automation',
-      description: 'Implement FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov, Blue Prism Gov) with process discovery, bot development, ATO documentation, and Center of Excellence setup.',
+      description: 'Comprehensive automation services including RPA implementation, FedRAMP platform integration (50+ connectors), and workflow orchestration across government agencies with ATO documentation and compliance support.',
       href: '/services/automation'
     },
     {
