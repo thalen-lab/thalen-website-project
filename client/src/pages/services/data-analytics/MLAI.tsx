@@ -170,7 +170,7 @@ export default function MLAI() {
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
-                  <div className="grid grid-cols-3 gap-4 bg-secondary rounded-lg p-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 bg-secondary rounded-lg p-4">
                     <div>
                       <div className="text-2xl font-bold text-primary">{useCase.impact}</div>
                       <div className="text-xs text-muted-foreground">Business Impact</div>

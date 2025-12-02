@@ -206,7 +206,7 @@ export default function LowCodeDevelopment() {
               <div key={index} className="border-2 border-border rounded-lg p-8">
                 <h3 className="text-2xl font-bold mb-3">{platform.name}</h3>
                 <p className="text-muted-foreground mb-6">{platform.description}</p>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {platform.capabilities.map((capability, idx) => (
                     <div key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-foreground flex-shrink-0 mt-0.5" />

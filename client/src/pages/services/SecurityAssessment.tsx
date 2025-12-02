@@ -187,7 +187,7 @@ export default function SecurityAssessment() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {frameworks.map((framework, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">

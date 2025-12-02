@@ -231,7 +231,7 @@ export default function About() {
                   This approach allows us to deliver automation strategies that integrate seamlessly with existing workflows, maintain operational security, and scale with your organization's evolving needs. Every solution is battle-tested in real-world environments before full deployment.
                 </p>
                 
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {operationalStats.map((stat, index) => (
                     <div key={index} className="text-center">
                       <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
@@ -356,7 +356,7 @@ export default function About() {
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-2 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}

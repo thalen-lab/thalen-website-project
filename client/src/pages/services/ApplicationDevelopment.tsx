@@ -213,7 +213,7 @@ export default function ApplicationDevelopment() {
             {/* Frontend & Backend */}
             <div>
               <h3 className="text-xl font-bold mb-6 text-center">Frontend & Backend Frameworks</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {[
                   { name: "React", category: "Frontend" },
                   { name: "Angular", category: "Frontend" },
@@ -236,7 +236,7 @@ export default function ApplicationDevelopment() {
             {/* Cloud Platforms */}
             <div>
               <h3 className="text-xl font-bold mb-6 text-center">Cloud Platforms & Infrastructure</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
                 {[
                   { name: "AWS", icon: "☁️" },
                   { name: "Azure", icon: "☁️" },
@@ -255,7 +255,7 @@ export default function ApplicationDevelopment() {
             {/* Databases & Tools */}
             <div>
               <h3 className="text-xl font-bold mb-6 text-center">Databases & Development Tools</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {[
                   { name: "PostgreSQL", icon: "🗄️" },
                   { name: "MongoDB", icon: "🗄️" },
@@ -275,7 +275,7 @@ export default function ApplicationDevelopment() {
             {/* Certifications & Partnerships */}
             <div className="bg-gradient-to-br from-navy-900 to-blue-900 rounded-2xl p-12">
               <h3 className="text-2xl font-bold mb-8 text-center text-white">Certifications & Partnerships</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   { name: "FedRAMP Authorized", badge: "🛡️" },
                   { name: "AWS Partner", badge: "☁️" },

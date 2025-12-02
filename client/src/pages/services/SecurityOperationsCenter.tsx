@@ -160,7 +160,7 @@ export default function SecurityOperationsCenter() {
                   <p className="text-muted-foreground mb-6">{service.description}</p>
                   <div className="border-t pt-4">
                     <h4 className="font-semibold mb-3 text-sm">Key Responsibilities:</h4>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {service.responsibilities.map((resp, idx) => (
                         <div key={idx} className="flex items-center text-sm">
                           <div className="h-2 w-2 bg-foreground rounded-full mr-2"></div>
@@ -186,7 +186,7 @@ export default function SecurityOperationsCenter() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {socTools.map((tool, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">

@@ -155,7 +155,7 @@ export default function PenetrationTesting() {
                     <h3 className="text-2xl font-bold">{step.phase}</h3>
                   </div>
                   <p className="text-muted-foreground mb-6">{step.description}</p>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {step.metrics.map((metric, idx) => (
                       <div key={idx} className="flex items-center text-sm">
                         <div className="h-2 w-2 bg-foreground rounded-full mr-2"></div>
@@ -180,7 +180,7 @@ export default function PenetrationTesting() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {testingMethodologies.map((methodology, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">

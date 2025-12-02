@@ -583,7 +583,7 @@ export default function GovernmentResources() {
                   <CardContent>
                     {cloudROI ? (
                       <div className="space-y-6">
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <div className="text-center p-4 bg-secondary rounded-lg">
                             <DollarSign className="h-6 w-6 text-accent mx-auto mb-2" />
                             <div className="text-2xl font-bold text-accent">${parseInt(cloudROI.totalAnnualSavings).toLocaleString()}</div>
@@ -711,7 +711,7 @@ export default function GovernmentResources() {
                   <CardContent>
                     {automationROI ? (
                       <div className="space-y-6">
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <div className="text-center p-4 bg-secondary rounded-lg">
                             <DollarSign className="h-6 w-6 text-accent mx-auto mb-2" />
                             <div className="text-2xl font-bold text-accent">${parseInt(automationROI.totalAnnualSavings).toLocaleString()}</div>
