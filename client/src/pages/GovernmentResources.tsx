@@ -245,7 +245,7 @@ export default function GovernmentResources() {
               </Link>
               <Link href="#guides">
                 <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                  View Compliance Guides
+                  <span className="transition-colors duration-300 group-hover:text-accent">HIPAA Compliance Guide</span>
                   <BookOpen className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -310,11 +310,11 @@ export default function GovernmentResources() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* FedRAMP ATO Guide */}
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Shield className="h-6 w-6 text-foreground mr-3" />
-                  FedRAMP ATO Process Guide
+                  <Shield className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
+                  <span className="transition-colors duration-300 group-hover:text-accent">FedRAMP ATO Process Guide</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -323,23 +323,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">FedRAMP authorization levels (Low, Moderate, High)</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">System Security Plan (SSP) development</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Security assessment and authorization process</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Continuous monitoring requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Timeline and cost estimates</span>
                   </div>
                 </div>
@@ -358,11 +358,11 @@ export default function GovernmentResources() {
             </Card>
 
             {/* CMMC Readiness Guide */}
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Lock className="h-6 w-6 text-foreground mr-3" />
-                  CMMC Readiness Guide
+                  <Lock className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
+                  <span className="transition-colors duration-300 group-hover:text-accent">CMMC Readiness Guide</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -371,23 +371,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">CMMC Level 2 and Level 3 requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">NIST 800-171 compliance mapping</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Gap assessment and remediation planning</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Third-party assessment preparation</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Cost and timeline planning</span>
                   </div>
                 </div>
@@ -406,11 +406,11 @@ export default function GovernmentResources() {
             </Card>
 
             {/* StateRAMP Guide */}
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Shield className="h-6 w-6 text-foreground mr-3" />
-                  StateRAMP Compliance Guide
+                  <Shield className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
+                  <span className="transition-colors duration-300 group-hover:text-accent">StateRAMP Compliance Guide</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -419,23 +419,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">StateRAMP authorization process overview</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Differences from FedRAMP requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">State-specific compliance requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Security control implementation</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Assessment and authorization timeline</span>
                   </div>
                 </div>
@@ -454,11 +454,11 @@ export default function GovernmentResources() {
             </Card>
 
             {/* CJIS Compliance Guide */}
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Lock className="h-6 w-6 text-foreground mr-3" />
-                  CJIS Compliance Guide
+                  <Lock className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
+                  <span className="transition-colors duration-300 group-hover:text-accent">CJIS Compliance Guide</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -467,23 +467,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">CJIS Security Policy requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Personnel screening and training</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Advanced authentication requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Audit logging and monitoring</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Cloud service provider compliance</span>
                   </div>
                 </div>
@@ -516,11 +516,11 @@ export default function GovernmentResources() {
 
           {/* Overview Cards */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Shield className="h-6 w-6 text-foreground mr-3" />
-                  FedRAMP (Federal)
+                  <Shield className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
+                  <span className="transition-colors duration-300 group-hover:text-accent">FedRAMP (Federal)</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -529,34 +529,34 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm"><strong>Mandatory</strong> for federal agencies</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Managed by GSA (General Services Administration)</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Timeline: <strong>12-18 months</strong> typical</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Cost: <strong>$250K-$3M+</strong> (by impact level)</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Access to $50B+ federal cloud market</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Building2 className="h-6 w-6 text-foreground mr-3" />
-                  StateRAMP (State & Local)
+                  <Building2 className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
+                  <span className="transition-colors duration-300 group-hover:text-accent">StateRAMP (State & Local)</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -565,23 +565,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm"><strong>Preferred</strong> by state/local agencies</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Managed by non-profit organization</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Timeline: <strong>4-6 months</strong> typical</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Cost: <strong>30-50% less</strong> than FedRAMP</span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">"Authorize once, use many times" across states</span>
                   </div>
                 </div>
@@ -658,7 +658,7 @@ export default function GovernmentResources() {
 
           {/* Decision Guide */}
           <div className="grid md:grid-cols-2 gap-8 mt-12">
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Target className="h-6 w-6 text-foreground mr-3" />
@@ -668,26 +668,26 @@ export default function GovernmentResources() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span>Serving federal agencies (mandatory requirement)</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span>Targeting broad federal market access</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span>Handling federal data classification needs</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span>Multi-year federal contracts</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Target className="h-6 w-6 text-foreground mr-3" />
@@ -697,19 +697,19 @@ export default function GovernmentResources() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span>Serving state and local government agencies</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span>Cost-effective authorization pathway</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span>Faster market entry (4-6 months)</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span>Regional or state-specific operations</span>
                   </li>
                 </ul>
@@ -918,10 +918,10 @@ export default function GovernmentResources() {
             {/* Cloud Migration Calculator */}
             <TabsContent value="cloud">
               <div className="grid lg:grid-cols-2 gap-8">
-                <Card className="border-2">
+                <Card className="border-2 transition-all duration-300 hover:border-accent group">
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <Cloud className="h-6 w-6 text-foreground mr-3" />
+                      <Cloud className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
                       Cloud Migration Inputs
                     </CardTitle>
                   </CardHeader>
@@ -973,10 +973,10 @@ export default function GovernmentResources() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2">
+                <Card className="border-2 transition-all duration-300 hover:border-accent group">
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <TrendingUp className="h-6 w-6 text-foreground mr-3" />
+                      <TrendingUp className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
                       Projected ROI Results
                     </CardTitle>
                   </CardHeader>
@@ -1053,7 +1053,7 @@ export default function GovernmentResources() {
             {/* Automation Calculator */}
             <TabsContent value="automation">
               <div className="grid lg:grid-cols-2 gap-8">
-                <Card className="border-2">
+                <Card className="border-2 transition-all duration-300 hover:border-accent group">
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <Users className="h-6 w-6 text-foreground mr-3" />
@@ -1108,10 +1108,10 @@ export default function GovernmentResources() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2">
+                <Card className="border-2 transition-all duration-300 hover:border-accent group">
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <TrendingUp className="h-6 w-6 text-foreground mr-3" />
+                      <TrendingUp className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
                       Projected ROI Results
                     </CardTitle>
                   </CardHeader>
@@ -1199,9 +1199,9 @@ export default function GovernmentResources() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
-                <CardTitle>Federal Procurement Process</CardTitle>
+                <CardTitle className="transition-colors duration-300 group-hover:text-accent">Federal Procurement Process</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -1209,23 +1209,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">GSA Schedule procurement process</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">IDIQ and BPA contract vehicles</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Set-aside contracts (8(a), SDVOSB, WOSB)</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Past performance evaluation criteria</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Compliance and security requirements</span>
                   </div>
                 </div>
@@ -1236,9 +1236,9 @@ export default function GovernmentResources() {
               </CardContent>
             </Card>
 
-            <Card className="border-2">
+            <Card className="border-2 transition-all duration-300 hover:border-accent group">
               <CardHeader>
-                <CardTitle>State & Local Procurement Process</CardTitle>
+                <CardTitle className="transition-colors duration-300 group-hover:text-accent">State & Local Procurement Process</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -1246,23 +1246,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Cooperative purchasing contracts (NASPO, Sourcewell)</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">State master agreement process</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">Local vendor preferences and requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">State-specific compliance (StateRAMP, CJIS)</span>
                   </div>
                   <div className="flex items-start">
-                    <Circle className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
                     <span className="text-sm">RFP response best practices</span>
                   </div>
                 </div>
