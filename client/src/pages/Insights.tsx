@@ -22,7 +22,7 @@ export default function Insights() {
       date: 'Nov 10, 2024',
       readTime: '8 min read',
       tags: ['ROI', 'Automation'],
-      image: '/images/roi-dashboard.jpg',
+      image: '/insights-roi-methodology.png',
       href: '/insights/roi-methodology'
     },
     {
@@ -34,7 +34,7 @@ export default function Insights() {
       date: 'Nov 8, 2024',
       readTime: '10 min read',
       tags: ['Security', 'Compliance'],
-      image: '/images/zero-trust-architecture.png',
+      image: '/insights-zero-trust.png',
       href: '/insights/zero-trust'
     },
     {
@@ -46,7 +46,7 @@ export default function Insights() {
       date: 'Nov 5, 2024',
       readTime: '12 min read',
       tags: ['AI', 'Ethics'],
-      image: '/images/ai-transparency.jpg',
+      image: '/insights-responsible-ai.png',
       href: '/insights/responsible-ai'
     },
     {
@@ -58,7 +58,7 @@ export default function Insights() {
       date: 'Nov 1, 2024',
       readTime: '9 min read',
       tags: ['Cloud', 'Architecture'],
-      image: '/images/multi-cloud-architecture.png',
+      image: '/insights-multi-cloud.png',
       href: '/insights/multi-cloud'
     },
     {
@@ -70,7 +70,7 @@ export default function Insights() {
       date: 'Oct 28, 2024',
       readTime: '11 min read',
       tags: ['Transformation', 'Leadership'],
-      image: '/images/change-management.webp',
+      image: '/insights-change-management.png',
       href: '/insights/change-management'
     },
     {
@@ -82,7 +82,7 @@ export default function Insights() {
       date: 'Oct 25, 2024',
       readTime: '10 min read',
       tags: ['Analytics', 'Architecture'],
-      image: '/images/real-time-analytics.png',
+      image: '/insights-realtime-analytics.png',
       href: '/insights/real-time-analytics'
     }
   ];
