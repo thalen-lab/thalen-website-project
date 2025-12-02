@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
+import { ImageWithLoader } from '@/components/ImageWithLoader';
 import Footer from '@/components/Footer';
 import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -173,10 +174,11 @@ export default function Insights() {
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <ImageWithLoader
                     src="/kearney-rpa-security.png" 
                     alt="Three Practical Recommendations to Secure RPA in Federal IT"
                     className="w-full h-full object-cover"
+                    skeletonClassName="h-full"
                   />
                 </div>
                 <div className="p-12 flex flex-col justify-center">
@@ -268,10 +270,11 @@ export default function Insights() {
                     <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
                       {/* Image */}
                       <div className="relative h-64 overflow-hidden">
-                        <img
+                        <ImageWithLoader
                           src={insight.image}
                           alt={insight.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          skeletonClassName="h-64"
                         />
                       </div>
 

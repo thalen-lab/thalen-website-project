@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
+import { ImageWithLoader } from '@/components/ImageWithLoader';
 import Footer from '@/components/Footer';
 import { ArrowRight, Search, X, Bookmark } from 'lucide-react';
 import SaveSearchDialog from '@/components/SaveSearchDialog';
@@ -360,10 +361,11 @@ export default function CaseStudies() {
                   <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
                     {/* Image */}
                     <div className="relative h-64 overflow-hidden">
-                      <img
+                      <ImageWithLoader
                         src={study.image}
                         alt={study.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        skeletonClassName="h-64"
                       />
                       {/* Category badge overlay */}
                       <div className="absolute top-4 left-4">

@@ -1909,3 +1909,11 @@
 - [x] Ensure consistent styling with Insights page
 - [x] Preserve all routes, links, and functionality
 - [x] Test filtering and search functionality
+
+
+## Phase 122: Implement Image Loading States for Case Studies and Insights
+- [x] Create reusable ImageWithLoader component with skeleton states
+- [x] Add blur-up placeholder functionality
+- [x] Apply image loaders to Case Studies page cards
+- [x] Apply image loaders to Insights page cards
+- [x] Test loading states on slower connections
