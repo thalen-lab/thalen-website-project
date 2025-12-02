@@ -2118,3 +2118,36 @@
 - [ ] Test app shortcuts on iOS and Android
 - [ ] Verify deep links work correctly from shortcuts
 - [ ] Save checkpoint with push notifications and app shortcuts
+
+
+## Phase 127: Events Landing Page Enhancement
+
+### RUXI Design Audit
+- [x] Review current Events page structure and design
+- [x] Identify RUXI Rule #2 violations (government positioning)
+- [x] Identify RUXI Rule #3 violations (visual design standards)
+- [x] Plan clean, professional layout matching homepage quality
+
+### Visual Design Enhancements
+- [x] Update hero section with clean typography and spacing
+- [x] Apply RUXI icon color standards (blue on light, white on dark)
+- [x] Replace orange CheckCircle2 icons with neutral dots
+- [x] Update event cards with clean, minimal design
+- [x] Add professional images to event cards (if applicable)
+- [x] Ensure orange is reserved for CTAs and hover effects only
+- [x] Add hover effects and click animations to cards
+- [x] Optimize responsive layout for mobile/tablet
+
+### Content & Positioning
+- [x] Update copy to reflect government agencies (federal, state, local)
+- [x] Add FedRAMP and StateRAMP references where appropriate
+- [x] Ensure vendor-neutral consulting positioning
+- [x] Verify all event descriptions are government-focused
+
+### Testing & Verification
+- [x] Test Events page on desktop viewport
+- [x] Test responsive layout on mobile (375px, 390px, 428px)
+- [x] Verify all links and routes work correctly
+- [x] Verify no nested anchor tag errors
+- [x] Ensure consistent design with homepage and other pages
+- [x] Save checkpoint with enhanced Events page
