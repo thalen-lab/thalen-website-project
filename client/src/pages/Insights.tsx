@@ -276,9 +276,10 @@ export default function Insights() {
                       </div>
 
                       <CardContent className="p-6 flex flex-col flex-1">
-                        <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                        <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
                           {insight.title}
                         </h3>
+                        <p className="text-sm text-muted-foreground mb-4">By {insight.author}</p>
                         <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
 
                         <div className="flex items-center text-sm text-muted-foreground">

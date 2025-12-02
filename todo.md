@@ -1894,3 +1894,9 @@
 - [x] Add sharp edges to Featured Article card (rounded-none with border-2)
 - [x] Restore author attribution ("Written by Kearney Principal Mark Munster")
 - [x] Verify card maintains clean professional appearance
+
+## Phase 120: Add Author Names to Insight Cards
+- [x] Add author names to regular insight cards
+- [x] Position author text cleanly below title
+- [x] Ensure consistent styling across all cards
+- [x] Verify professional appearance
