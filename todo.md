@@ -1867,3 +1867,4 @@
 
 ## Phase 94: Update ROI Methodology Insight Card Image
 - [x] Replace ROI Methodology insight card image with futuristic analytics visualization
+- [x] Replace Responsible AI insight card image with VR visualization
