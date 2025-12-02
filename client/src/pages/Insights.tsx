@@ -169,7 +169,7 @@ export default function Insights() {
       {/* Featured Insight */}
       <section className="py-20">
         <div className="container">
-          <Card className="overflow-hidden max-w-5xl mx-auto hover:shadow-xl transition-shadow">
+          <Card className="overflow-hidden max-w-5xl mx-auto hover:shadow-xl transition-shadow p-0">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2">
                 <div className="relative overflow-hidden">
@@ -184,9 +184,6 @@ export default function Insights() {
                   <h3 className="text-3xl font-bold mb-4">Three Practical Recommendations to Secure RPA in Federal IT</h3>
                   <p className="text-muted-foreground mb-6">
                     This article provides three overarching recommendations for RPA Program Teams to support the successful implementation and operation of the program.
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-6">
-                    Written by Kearney Principal Mark Munster
                   </p>
                   <Button className="bg-orange-gradient hover:opacity-90 w-fit">
                     Download Report

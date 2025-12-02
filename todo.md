@@ -1883,3 +1883,9 @@
 - [x] Ensure images extend to the very top edge of cards
 - [x] Use sharp edges on cards (no rounded corners)
 - [x] Verify all links and routes still work correctly
+
+## Phase 97: Apply Clean Formatting to Featured Article Card
+- [x] Remove author attribution ("Written by Kearney Principal Mark Munster")
+- [x] Ensure image extends to the top edge without white space
+- [x] Apply same clean design as regular insight cards
+- [x] Verify the card maintains its featured styling while matching the clean format
