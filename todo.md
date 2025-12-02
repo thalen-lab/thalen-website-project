@@ -1939,3 +1939,18 @@
 - [x] Test WebP/AVIF fallback behavior
 - [x] Test hover prefetch for instant navigation
 - [x] Create comprehensive vitest tests (23 tests, all passing)
+
+
+## Phase 121: Extend Image Optimizations to Homepage and Insights Landing Page
+- [x] Audit all images on homepage (hero carousel, case study showcase)
+- [x] Generate responsive versions (mobile/tablet/desktop) for homepage images
+- [x] Generate WebP versions for all homepage images
+- [x] Update hero carousel to use ImageWithLoader component
+- [x] Update case study showcase cards with ImageWithLoader and prefetch
+- [x] Add prefetch on hover to insights landing page cards
+- [x] Test responsive images on different viewport sizes
+- [x] Test WebP format detection and fallback
+- [x] Test hover prefetch for instant navigation on homepage
+- [x] Test hover prefetch for instant navigation on insights page
+- [x] Verify performance improvements with DevTools
+- [x] Update IMAGE_OPTIMIZATION.md documentation

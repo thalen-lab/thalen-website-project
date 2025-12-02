@@ -4,6 +4,8 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from 'framer-motion';
+import { ImageWithLoader } from '@/components/ImageWithLoader';
+import { prefetchImage } from '@/lib/prefetch';
 
 interface CaseStudy {
   id: string;
@@ -168,10 +170,11 @@ export default function CaseStudyShowcase() {
             <Card 
               key={study.id}
               className="flex-none w-full lg:w-[calc(33.333%-1rem)] snap-start bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
+              onMouseEnter={() => prefetchImage(study.image)}
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden bg-slate-200">
-                <img 
+                <ImageWithLoader
                   src={study.image}
                   alt={study.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

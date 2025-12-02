@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import CaseStudyShowcase from '@/components/CaseStudyShowcase';
 import Footer from '@/components/Footer';
+import { ImageWithLoader } from '@/components/ImageWithLoader';
 import { 
   ArrowRight, 
   TrendingUp, 
@@ -192,14 +193,12 @@ export default function Home() {
               index === currentHeroIndex ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div 
-              className="absolute inset-0 bg-cover bg-center bg-fixed"
-              style={{ 
-                backgroundImage: `url(${slide.image})`,
-                transform: 'translateZ(0)',
-                willChange: 'transform'
-              }}
-            >
+            <div className="absolute inset-0">
+              <ImageWithLoader
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/50" />
               {/* Vignette effect */}
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,transparent_50%,rgba(0,0,0,0.3)_100%)]" />

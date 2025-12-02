@@ -24,100 +24,6 @@
       "mobile_jpeg": "optimized/images/change-management/mobile.jpg"
     }
   },
-  "/defense-cyber-ops.b7c4e1f3.jpg": {
-    "original": "/defense-cyber-ops.b7c4e1f3.jpg",
-    "versions": {
-      "mobile_webp": "optimized/defense-cyber-ops.b7c4e1f3/mobile.webp",
-      "mobile_jpeg": "optimized/defense-cyber-ops.b7c4e1f3/mobile.jpg",
-      "tablet_webp": "optimized/defense-cyber-ops.b7c4e1f3/tablet.webp",
-      "tablet_jpeg": "optimized/defense-cyber-ops.b7c4e1f3/tablet.jpg"
-    }
-  },
-  "/energy-grid-control.c9d5f2a4.jpg": {
-    "original": "/energy-grid-control.c9d5f2a4.jpg",
-    "versions": {
-      "mobile_webp": "optimized/energy-grid-control.c9d5f2a4/mobile.webp",
-      "mobile_jpeg": "optimized/energy-grid-control.c9d5f2a4/mobile.jpg",
-      "tablet_webp": "optimized/energy-grid-control.c9d5f2a4/tablet.webp",
-      "tablet_jpeg": "optimized/energy-grid-control.c9d5f2a4/tablet.jpg"
-    }
-  },
-  "/financial-fraud-soc.a8f3d9e2.jpg": {
-    "original": "/financial-fraud-soc.a8f3d9e2.jpg",
-    "versions": {
-      "mobile_webp": "optimized/financial-fraud-soc.a8f3d9e2/mobile.webp",
-      "mobile_jpeg": "optimized/financial-fraud-soc.a8f3d9e2/mobile.jpg"
-    }
-  },
-  "/healthcare-legacy-it.jpg": {
-    "original": "/healthcare-legacy-it.jpg",
-    "versions": {
-      "mobile_webp": "optimized/healthcare-legacy-it/mobile.webp",
-      "mobile_jpeg": "optimized/healthcare-legacy-it/mobile.jpg",
-      "tablet_webp": "optimized/healthcare-legacy-it/tablet.webp",
-      "tablet_jpeg": "optimized/healthcare-legacy-it/tablet.jpg",
-      "desktop_webp": "optimized/healthcare-legacy-it/desktop.webp",
-      "desktop_jpeg": "optimized/healthcare-legacy-it/desktop.jpg"
-    }
-  },
-  "/manufacturing-security.jpg": {
-    "original": "/manufacturing-security.jpg",
-    "versions": {
-      "mobile_webp": "optimized/manufacturing-security/mobile.webp",
-      "mobile_jpeg": "optimized/manufacturing-security/mobile.jpg"
-    }
-  },
-  "/images/hero-automation.jpg": {
-    "original": "/images/hero-automation.jpg",
-    "versions": {
-      "mobile_webp": "optimized/images/hero-automation/mobile.webp",
-      "mobile_jpeg": "optimized/images/hero-automation/mobile.jpg",
-      "tablet_webp": "optimized/images/hero-automation/tablet.webp",
-      "tablet_jpeg": "optimized/images/hero-automation/tablet.jpg",
-      "desktop_webp": "optimized/images/hero-automation/desktop.webp",
-      "desktop_jpeg": "optimized/images/hero-automation/desktop.jpg"
-    }
-  },
-  "/images/hero-datacenter.jpg": {
-    "original": "/images/hero-datacenter.jpg",
-    "versions": {
-      "mobile_webp": "optimized/images/hero-datacenter/mobile.webp",
-      "mobile_jpeg": "optimized/images/hero-datacenter/mobile.jpg",
-      "tablet_webp": "optimized/images/hero-datacenter/tablet.webp",
-      "tablet_jpeg": "optimized/images/hero-datacenter/tablet.jpg",
-      "desktop_webp": "optimized/images/hero-datacenter/desktop.webp",
-      "desktop_jpeg": "optimized/images/hero-datacenter/desktop.jpg"
-    }
-  },
-  "/images/hero-federal.jpg": {
-    "original": "/images/hero-federal.jpg",
-    "versions": {
-      "mobile_webp": "optimized/images/hero-federal/mobile.webp",
-      "mobile_jpeg": "optimized/images/hero-federal/mobile.jpg",
-      "tablet_webp": "optimized/images/hero-federal/tablet.webp",
-      "tablet_jpeg": "optimized/images/hero-federal/tablet.jpg",
-      "desktop_webp": "optimized/images/hero-federal/desktop.webp",
-      "desktop_jpeg": "optimized/images/hero-federal/desktop.jpg"
-    }
-  },
-  "/images/roi-dashboard.jpg": {
-    "original": "/images/roi-dashboard.jpg",
-    "versions": {
-      "mobile_webp": "optimized/images/roi-dashboard/mobile.webp",
-      "mobile_jpeg": "optimized/images/roi-dashboard/mobile.jpg",
-      "tablet_webp": "optimized/images/roi-dashboard/tablet.webp",
-      "tablet_jpeg": "optimized/images/roi-dashboard/tablet.jpg"
-    }
-  },
-  "/images/ai-transparency.jpg": {
-    "original": "/images/ai-transparency.jpg",
-    "versions": {
-      "mobile_webp": "optimized/images/ai-transparency/mobile.webp",
-      "mobile_jpeg": "optimized/images/ai-transparency/mobile.jpg",
-      "tablet_webp": "optimized/images/ai-transparency/tablet.webp",
-      "tablet_jpeg": "optimized/images/ai-transparency/tablet.jpg"
-    }
-  },
   "/rpa-article.a7f3b2e1.png": {
     "original": "/rpa-article.a7f3b2e1.png",
     "versions": {
@@ -247,6 +153,100 @@
     "versions": {
       "mobile_webp": "optimized/images/insights/multi-cloud-team/mobile.webp",
       "mobile_jpeg": "optimized/images/insights/multi-cloud-team/mobile.jpg"
+    }
+  },
+  "/defense-cyber-ops.b7c4e1f3.jpg": {
+    "original": "/defense-cyber-ops.b7c4e1f3.jpg",
+    "versions": {
+      "mobile_webp": "optimized/defense-cyber-ops.b7c4e1f3/mobile.webp",
+      "mobile_jpeg": "optimized/defense-cyber-ops.b7c4e1f3/mobile.jpg",
+      "tablet_webp": "optimized/defense-cyber-ops.b7c4e1f3/tablet.webp",
+      "tablet_jpeg": "optimized/defense-cyber-ops.b7c4e1f3/tablet.jpg"
+    }
+  },
+  "/energy-grid-control.c9d5f2a4.jpg": {
+    "original": "/energy-grid-control.c9d5f2a4.jpg",
+    "versions": {
+      "mobile_webp": "optimized/energy-grid-control.c9d5f2a4/mobile.webp",
+      "mobile_jpeg": "optimized/energy-grid-control.c9d5f2a4/mobile.jpg",
+      "tablet_webp": "optimized/energy-grid-control.c9d5f2a4/tablet.webp",
+      "tablet_jpeg": "optimized/energy-grid-control.c9d5f2a4/tablet.jpg"
+    }
+  },
+  "/financial-fraud-soc.a8f3d9e2.jpg": {
+    "original": "/financial-fraud-soc.a8f3d9e2.jpg",
+    "versions": {
+      "mobile_webp": "optimized/financial-fraud-soc.a8f3d9e2/mobile.webp",
+      "mobile_jpeg": "optimized/financial-fraud-soc.a8f3d9e2/mobile.jpg"
+    }
+  },
+  "/healthcare-legacy-it.jpg": {
+    "original": "/healthcare-legacy-it.jpg",
+    "versions": {
+      "mobile_webp": "optimized/healthcare-legacy-it/mobile.webp",
+      "mobile_jpeg": "optimized/healthcare-legacy-it/mobile.jpg",
+      "tablet_webp": "optimized/healthcare-legacy-it/tablet.webp",
+      "tablet_jpeg": "optimized/healthcare-legacy-it/tablet.jpg",
+      "desktop_webp": "optimized/healthcare-legacy-it/desktop.webp",
+      "desktop_jpeg": "optimized/healthcare-legacy-it/desktop.jpg"
+    }
+  },
+  "/manufacturing-security.jpg": {
+    "original": "/manufacturing-security.jpg",
+    "versions": {
+      "mobile_webp": "optimized/manufacturing-security/mobile.webp",
+      "mobile_jpeg": "optimized/manufacturing-security/mobile.jpg"
+    }
+  },
+  "/images/hero-automation.jpg": {
+    "original": "/images/hero-automation.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/hero-automation/mobile.webp",
+      "mobile_jpeg": "optimized/images/hero-automation/mobile.jpg",
+      "tablet_webp": "optimized/images/hero-automation/tablet.webp",
+      "tablet_jpeg": "optimized/images/hero-automation/tablet.jpg",
+      "desktop_webp": "optimized/images/hero-automation/desktop.webp",
+      "desktop_jpeg": "optimized/images/hero-automation/desktop.jpg"
+    }
+  },
+  "/images/hero-datacenter.jpg": {
+    "original": "/images/hero-datacenter.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/hero-datacenter/mobile.webp",
+      "mobile_jpeg": "optimized/images/hero-datacenter/mobile.jpg",
+      "tablet_webp": "optimized/images/hero-datacenter/tablet.webp",
+      "tablet_jpeg": "optimized/images/hero-datacenter/tablet.jpg",
+      "desktop_webp": "optimized/images/hero-datacenter/desktop.webp",
+      "desktop_jpeg": "optimized/images/hero-datacenter/desktop.jpg"
+    }
+  },
+  "/images/hero-federal.jpg": {
+    "original": "/images/hero-federal.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/hero-federal/mobile.webp",
+      "mobile_jpeg": "optimized/images/hero-federal/mobile.jpg",
+      "tablet_webp": "optimized/images/hero-federal/tablet.webp",
+      "tablet_jpeg": "optimized/images/hero-federal/tablet.jpg",
+      "desktop_webp": "optimized/images/hero-federal/desktop.webp",
+      "desktop_jpeg": "optimized/images/hero-federal/desktop.jpg"
+    }
+  },
+  "/images/roi-dashboard.jpg": {
+    "original": "/images/roi-dashboard.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/roi-dashboard/mobile.webp",
+      "mobile_jpeg": "optimized/images/roi-dashboard/mobile.jpg",
+      "tablet_webp": "optimized/images/roi-dashboard/tablet.webp",
+      "tablet_jpeg": "optimized/images/roi-dashboard/tablet.jpg"
+    }
+  },
+  "/images/ai-transparency.jpg": {
+    "original": "/images/ai-transparency.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/ai-transparency/mobile.webp",
+      "mobile_jpeg": "optimized/images/ai-transparency/mobile.jpg",
+      "tablet_webp": "optimized/images/ai-transparency/tablet.webp",
+      "tablet_jpeg": "optimized/images/ai-transparency/tablet.jpg"
     }
   }
 }

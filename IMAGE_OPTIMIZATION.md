@@ -162,6 +162,41 @@ Browser prefetches page in background
 User clicks → Instant navigation
 ```
 
+## Implementation Status
+
+### Pages with Full Optimization
+
+#### Homepage
+- ✅ **Hero Carousel** (3 images) - Responsive WebP with lazy loading
+- ✅ **Case Study Showcase** (7 images) - Responsive WebP with hover prefetch
+- ✅ All images serving optimal sizes based on viewport
+
+#### Insights Landing Page
+- ✅ **Insight Cards** (6 images) - Responsive WebP with lazy loading
+- ✅ **Hover Prefetch** - Images preloaded on card hover
+- ✅ Search and filtering maintained
+
+#### Case Studies Landing Page
+- ✅ **Case Study Cards** (9 images) - Responsive WebP with lazy loading
+- ✅ **Hover Prefetch** - Images preloaded on card hover
+- ✅ Filtering and pagination maintained
+
+#### Individual Case Study Pages
+- ✅ **Hero Images** - Responsive WebP with LQIP placeholders
+- ✅ **Related Case Studies** - Hover prefetch enabled
+
+#### Individual Insight/Blog Pages
+- ✅ **Hero Images** - Responsive WebP with LQIP placeholders
+- ✅ **Related Articles** - Hover prefetch enabled
+
+### Components Using Optimization
+
+- `ImageWithLoader` - Core image component with lazy loading and responsive selection
+- `CaseStudyShowcase` - Homepage carousel with prefetch
+- `Insights` page - Card grid with prefetch
+- `CaseStudies` page - Card grid with prefetch
+- All individual case study and blog post pages
+
 ## Usage Guide
 
 ### For Developers
@@ -195,6 +230,7 @@ The `ImageWithLoader` component automatically:
 
 #### Adding Prefetch to New Pages
 
+**For page navigation prefetch:**
 ```tsx
 import { usePrefetch } from '@/hooks/usePrefetch';
 
@@ -207,6 +243,22 @@ function MyCard({ href }) {
   return (
     <Link href={href} {...prefetchHandlers}>
       {/* Card content */}
+    </Link>
+  );
+}
+```
+
+**For image prefetch on hover:**
+```tsx
+import { prefetchImage } from '@/lib/prefetch';
+
+function MyCard({ image, href }) {
+  return (
+    <Link 
+      href={href} 
+      onMouseEnter={() => prefetchImage(image)}
+    >
+      <ImageWithLoader src={image} alt="..." />
     </Link>
   );
 }
