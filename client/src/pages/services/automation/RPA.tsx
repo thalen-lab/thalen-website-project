@@ -11,7 +11,7 @@ export default function RPA() {
     {
       icon: FileCheck,
       title: 'Process Assessment & Discovery',
-      description: 'We identify high-value automation opportunities through comprehensive process analysis, ROI modeling, and feasibility assessment for government agencies.',
+      description: 'We identify high-value automation opportunities through comprehensive process analysis, ROI modeling, and feasibility assessment for government agencies (federal, state, and local).',
       benefits: ['Process discovery workshops', 'Automation ROI analysis', 'Feasibility assessment'],
       link: '/services/automation/rpa/process-assessment'
     },
@@ -104,7 +104,7 @@ export default function RPA() {
               Government RPA Implementation
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies implement FedRAMP-authorized RPA platforms with process discovery, bot development, ATO documentation, and Center of Excellence setup. Vendor-neutral consulting with proven expertise across all major RPA platforms.
+              We help government agencies (federal, state, and local) implement FedRAMP and StateRAMP-authorized RPA platforms with process discovery, bot development, ATO documentation, and Center of Excellence setup. Vendor-neutral consulting with proven expertise across all major RPA platforms.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -144,7 +144,7 @@ export default function RPA() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Core RPA Implementation Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end RPA capabilities from process discovery to Center of Excellence, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
+              End-to-end RPA capabilities from process discovery to Center of Excellence, designed for government agencies (federal, state, and local) requiring FedRAMP and StateRAMP compliance and mission-critical reliability.
             </p>
           </div>
 
@@ -200,7 +200,7 @@ export default function RPA() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government RPA Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing RPA platforms and automation solutions across government agencies with measurable mission impact.
+              Proven track record implementing RPA platforms and automation solutions across government agencies (federal, state, and local) with measurable mission impact.
             </p>
           </div>
 

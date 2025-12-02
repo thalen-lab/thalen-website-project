@@ -179,7 +179,7 @@ export default function PlatformImplementation() {
               RPA Platform Selection & Implementation
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies select and implement the RIGHT FedRAMP-authorized RPA platform for their mission requirements. Vendor-neutral consulting ensures you get the best fit—not just the platform we happen to sell.
+              We help government agencies (federal, state, and local) select and implement the RIGHT FedRAMP and StateRAMP-authorized RPA platform for their mission requirements. Vendor-neutral consulting ensures you get the best fit—not just the platform we happen to sell.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

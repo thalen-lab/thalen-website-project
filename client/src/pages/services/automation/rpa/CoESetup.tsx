@@ -211,7 +211,7 @@ export default function CoESetup() {
               RPA Center of Excellence (CoE) Setup
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              One-off bot projects deliver limited value. A properly structured RPA Center of Excellence scales automation enterprise-wide with governance, standards, training, and sustainable operations—turning RPA into a strategic capability, not just a tactical tool.
+              One-off bot projects deliver limited value. A properly structured RPA Center of Excellence helps government agencies (federal, state, and local) scale automation enterprise-wide with governance, standards, training, and sustainable operations—turning RPA into a strategic capability, not just a tactical tool.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

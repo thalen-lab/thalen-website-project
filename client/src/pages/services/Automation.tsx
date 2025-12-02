@@ -97,7 +97,7 @@ export default function Automation() {
               Government Automation Implementation
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies implement FedRAMP-authorized automation platforms with RPA, systems integration, and workflow orchestration. Vendor-neutral consulting with proven expertise across all major automation technologies.
+              We help government agencies (federal, state, and local) implement FedRAMP and StateRAMP-authorized automation platforms with RPA, systems integration, and workflow orchestration. Vendor-neutral consulting with proven expertise across all major automation technologies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -137,7 +137,7 @@ export default function Automation() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Automation Implementation Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end automation capabilities from RPA to enterprise integration, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
+              End-to-end automation capabilities from RPA to enterprise integration, designed for government agencies (federal, state, and local) requiring FedRAMP and StateRAMP compliance and mission-critical reliability.
             </p>
           </div>
 
@@ -193,7 +193,7 @@ export default function Automation() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Automation Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing automation platforms and solutions across government agencies with measurable mission impact.
+              Proven track record implementing automation platforms and solutions across government agencies (federal, state, and local) with measurable mission impact.
             </p>
           </div>
 

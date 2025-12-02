@@ -165,7 +165,7 @@ export default function ProcessAssessment() {
               RPA Process Assessment & Discovery
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Not all processes are good automation candidates. Our comprehensive assessment identifies your highest-value opportunities with detailed ROI projections, implementation roadmaps, and risk analysis—so you invest in bots that deliver measurable results.
+              Not all processes are good automation candidates. Our comprehensive assessment helps government agencies (federal, state, and local) identify highest-value opportunities with detailed ROI projections, implementation roadmaps, and risk analysis—so you invest in bots that deliver measurable results.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -190,7 +190,7 @@ export default function ProcessAssessment() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our 4-Phase Assessment Methodology</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Typically completed in 4-6 weeks with minimal disruption to agency operations
+              Typically completed in 4-6 weeks with minimal disruption to government agency operations (federal, state, and local)
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
