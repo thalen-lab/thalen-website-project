@@ -248,5 +248,26 @@
       "tablet_webp": "optimized/images/ai-transparency/tablet.webp",
       "tablet_jpeg": "optimized/images/ai-transparency/tablet.jpg"
     }
+  },
+  "/images/zero-trust-architecture.png": {
+    "original": "/images/zero-trust-architecture.png",
+    "versions": {
+      "mobile_webp": "optimized/images/zero-trust-architecture/mobile.webp",
+      "mobile_jpeg": "optimized/images/zero-trust-architecture/mobile.jpg"
+    }
+  },
+  "/insights-change-management.png": {
+    "original": "/insights-change-management.png",
+    "versions": {
+      "mobile_webp": "optimized/insights-change-management/mobile.webp",
+      "mobile_jpeg": "optimized/insights-change-management/mobile.jpg"
+    }
+  },
+  "/uipath-logo.png": {
+    "original": "/uipath-logo.png",
+    "versions": {
+      "mobile_webp": "optimized/uipath-logo/mobile.webp",
+      "mobile_jpeg": "optimized/uipath-logo/mobile.jpg"
+    }
   }
 }
