@@ -265,7 +265,7 @@ export default function Insights() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 {paginatedInsights.map((insight, index) => (
                   <Link key={index} href={insight.href}>
-                    <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2">
+                    <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
                       {/* Image */}
                       <div className="relative h-64 overflow-hidden">
                         <img

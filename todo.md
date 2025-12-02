@@ -1879,5 +1879,7 @@
 - [x] Remove tags below descriptions (e.g., "ROI", "Automation")
 - [x] Remove author names from cards
 - [x] Reposition images to fill cards properly with no white space
+- [x] Fix white space at the top of insight cards
+- [x] Ensure images extend to the very top edge of cards
 - [x] Use sharp edges on cards (no rounded corners)
 - [x] Verify all links and routes still work correctly
