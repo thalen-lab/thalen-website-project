@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
 import { useLQIP } from '@/hooks/useLQIP';
+import { usePrefetch } from '@/hooks/usePrefetch';
 import Footer from '@/components/Footer';
 import { ArrowRight, Search, X, Bookmark } from 'lucide-react';
 import SaveSearchDialog from '@/components/SaveSearchDialog';
@@ -357,9 +358,13 @@ export default function CaseStudies() {
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredCaseStudies.map((study, index) => (
-                <Link key={index} href={study.href}>
-                  <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
+              {filteredCaseStudies.map((study, index) => {
+                const CaseStudyCard = () => {
+                  const prefetchHandlers = usePrefetch(study.href);
+                  
+                  return (
+                    <Link key={index} href={study.href} {...prefetchHandlers}>
+                      <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
                     {/* Image */}
                     <div className="relative h-64 overflow-hidden">
                       <ImageWithLoader
@@ -389,9 +394,13 @@ export default function CaseStudies() {
                         ))}
                       </div>
                     </CardContent>
-                  </Card>
-                </Link>
-              ))}
+                      </Card>
+                    </Link>
+                  );
+                };
+                
+                return <CaseStudyCard key={index} />;
+              })}
             </div>
           )}
         </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
+import { useResponsiveImage, getResponsiveSrcSet } from '@/hooks/useResponsiveImage';
 
 interface ImageWithLoaderProps {
   src: string;
@@ -27,6 +28,10 @@ export function ImageWithLoader({
   const [hasError, setHasError] = useState(false);
   const [shouldLoad, setShouldLoad] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
+  
+  // Get optimal responsive image source based on viewport and format support
+  const responsiveSrc = useResponsiveImage(src);
+  const srcSet = getResponsiveSrcSet(src);
 
   // Intersection observer for lazy loading
   useEffect(() => {
@@ -99,7 +104,9 @@ export function ImageWithLoader({
       {/* Actual image - only loads when near viewport */}
       {!hasError && shouldLoad ? (
         <img
-          src={src}
+          src={responsiveSrc}
+          srcSet={srcSet || undefined}
+          sizes="(max-width: 768px) 640px, (max-width: 1280px) 1024px, 1920px"
           alt={alt}
           className={cn(
             'transition-opacity duration-500',

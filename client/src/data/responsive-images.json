@@ -1,0 +1,252 @@
+{
+  "/incentro-logo.b8e4c3f2.webp": {
+    "original": "/incentro-logo.b8e4c3f2.webp",
+    "versions": {
+      "mobile_webp": "optimized/incentro-logo.b8e4c3f2/mobile.webp",
+      "mobile_jpeg": "optimized/incentro-logo.b8e4c3f2/mobile.jpg",
+      "tablet_webp": "optimized/incentro-logo.b8e4c3f2/tablet.webp",
+      "tablet_jpeg": "optimized/incentro-logo.b8e4c3f2/tablet.jpg"
+    }
+  },
+  "/rocket-federal.webp": {
+    "original": "/rocket-federal.webp",
+    "versions": {
+      "mobile_webp": "optimized/rocket-federal/mobile.webp",
+      "mobile_jpeg": "optimized/rocket-federal/mobile.jpg",
+      "tablet_webp": "optimized/rocket-federal/tablet.webp",
+      "tablet_jpeg": "optimized/rocket-federal/tablet.jpg"
+    }
+  },
+  "/images/change-management.webp": {
+    "original": "/images/change-management.webp",
+    "versions": {
+      "mobile_webp": "optimized/images/change-management/mobile.webp",
+      "mobile_jpeg": "optimized/images/change-management/mobile.jpg"
+    }
+  },
+  "/defense-cyber-ops.b7c4e1f3.jpg": {
+    "original": "/defense-cyber-ops.b7c4e1f3.jpg",
+    "versions": {
+      "mobile_webp": "optimized/defense-cyber-ops.b7c4e1f3/mobile.webp",
+      "mobile_jpeg": "optimized/defense-cyber-ops.b7c4e1f3/mobile.jpg",
+      "tablet_webp": "optimized/defense-cyber-ops.b7c4e1f3/tablet.webp",
+      "tablet_jpeg": "optimized/defense-cyber-ops.b7c4e1f3/tablet.jpg"
+    }
+  },
+  "/energy-grid-control.c9d5f2a4.jpg": {
+    "original": "/energy-grid-control.c9d5f2a4.jpg",
+    "versions": {
+      "mobile_webp": "optimized/energy-grid-control.c9d5f2a4/mobile.webp",
+      "mobile_jpeg": "optimized/energy-grid-control.c9d5f2a4/mobile.jpg",
+      "tablet_webp": "optimized/energy-grid-control.c9d5f2a4/tablet.webp",
+      "tablet_jpeg": "optimized/energy-grid-control.c9d5f2a4/tablet.jpg"
+    }
+  },
+  "/financial-fraud-soc.a8f3d9e2.jpg": {
+    "original": "/financial-fraud-soc.a8f3d9e2.jpg",
+    "versions": {
+      "mobile_webp": "optimized/financial-fraud-soc.a8f3d9e2/mobile.webp",
+      "mobile_jpeg": "optimized/financial-fraud-soc.a8f3d9e2/mobile.jpg"
+    }
+  },
+  "/healthcare-legacy-it.jpg": {
+    "original": "/healthcare-legacy-it.jpg",
+    "versions": {
+      "mobile_webp": "optimized/healthcare-legacy-it/mobile.webp",
+      "mobile_jpeg": "optimized/healthcare-legacy-it/mobile.jpg",
+      "tablet_webp": "optimized/healthcare-legacy-it/tablet.webp",
+      "tablet_jpeg": "optimized/healthcare-legacy-it/tablet.jpg",
+      "desktop_webp": "optimized/healthcare-legacy-it/desktop.webp",
+      "desktop_jpeg": "optimized/healthcare-legacy-it/desktop.jpg"
+    }
+  },
+  "/manufacturing-security.jpg": {
+    "original": "/manufacturing-security.jpg",
+    "versions": {
+      "mobile_webp": "optimized/manufacturing-security/mobile.webp",
+      "mobile_jpeg": "optimized/manufacturing-security/mobile.jpg"
+    }
+  },
+  "/images/hero-automation.jpg": {
+    "original": "/images/hero-automation.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/hero-automation/mobile.webp",
+      "mobile_jpeg": "optimized/images/hero-automation/mobile.jpg",
+      "tablet_webp": "optimized/images/hero-automation/tablet.webp",
+      "tablet_jpeg": "optimized/images/hero-automation/tablet.jpg",
+      "desktop_webp": "optimized/images/hero-automation/desktop.webp",
+      "desktop_jpeg": "optimized/images/hero-automation/desktop.jpg"
+    }
+  },
+  "/images/hero-datacenter.jpg": {
+    "original": "/images/hero-datacenter.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/hero-datacenter/mobile.webp",
+      "mobile_jpeg": "optimized/images/hero-datacenter/mobile.jpg",
+      "tablet_webp": "optimized/images/hero-datacenter/tablet.webp",
+      "tablet_jpeg": "optimized/images/hero-datacenter/tablet.jpg",
+      "desktop_webp": "optimized/images/hero-datacenter/desktop.webp",
+      "desktop_jpeg": "optimized/images/hero-datacenter/desktop.jpg"
+    }
+  },
+  "/images/hero-federal.jpg": {
+    "original": "/images/hero-federal.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/hero-federal/mobile.webp",
+      "mobile_jpeg": "optimized/images/hero-federal/mobile.jpg",
+      "tablet_webp": "optimized/images/hero-federal/tablet.webp",
+      "tablet_jpeg": "optimized/images/hero-federal/tablet.jpg",
+      "desktop_webp": "optimized/images/hero-federal/desktop.webp",
+      "desktop_jpeg": "optimized/images/hero-federal/desktop.jpg"
+    }
+  },
+  "/images/roi-dashboard.jpg": {
+    "original": "/images/roi-dashboard.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/roi-dashboard/mobile.webp",
+      "mobile_jpeg": "optimized/images/roi-dashboard/mobile.jpg",
+      "tablet_webp": "optimized/images/roi-dashboard/tablet.webp",
+      "tablet_jpeg": "optimized/images/roi-dashboard/tablet.jpg"
+    }
+  },
+  "/images/ai-transparency.jpg": {
+    "original": "/images/ai-transparency.jpg",
+    "versions": {
+      "mobile_webp": "optimized/images/ai-transparency/mobile.webp",
+      "mobile_jpeg": "optimized/images/ai-transparency/mobile.jpg",
+      "tablet_webp": "optimized/images/ai-transparency/tablet.webp",
+      "tablet_jpeg": "optimized/images/ai-transparency/tablet.jpg"
+    }
+  },
+  "/rpa-article.a7f3b2e1.png": {
+    "original": "/rpa-article.a7f3b2e1.png",
+    "versions": {
+      "mobile_webp": "optimized/rpa-article.a7f3b2e1/mobile.webp",
+      "mobile_jpeg": "optimized/rpa-article.a7f3b2e1/mobile.jpg"
+    }
+  },
+  "/thalen-logo.png": {
+    "original": "/thalen-logo.png",
+    "versions": {
+      "mobile_webp": "optimized/thalen-logo/mobile.webp",
+      "mobile_jpeg": "optimized/thalen-logo/mobile.jpg",
+      "tablet_webp": "optimized/thalen-logo/tablet.webp",
+      "tablet_jpeg": "optimized/thalen-logo/tablet.jpg"
+    }
+  },
+  "/insights-realtime-analytics.png": {
+    "original": "/insights-realtime-analytics.png",
+    "versions": {
+      "mobile_webp": "optimized/insights-realtime-analytics/mobile.webp",
+      "mobile_jpeg": "optimized/insights-realtime-analytics/mobile.jpg",
+      "tablet_webp": "optimized/insights-realtime-analytics/tablet.webp",
+      "tablet_jpeg": "optimized/insights-realtime-analytics/tablet.jpg",
+      "desktop_webp": "optimized/insights-realtime-analytics/desktop.webp",
+      "desktop_jpeg": "optimized/insights-realtime-analytics/desktop.jpg"
+    }
+  },
+  "/insights-roi-methodology.png": {
+    "original": "/insights-roi-methodology.png",
+    "versions": {
+      "mobile_webp": "optimized/insights-roi-methodology/mobile.webp",
+      "mobile_jpeg": "optimized/insights-roi-methodology/mobile.jpg",
+      "tablet_webp": "optimized/insights-roi-methodology/tablet.webp",
+      "tablet_jpeg": "optimized/insights-roi-methodology/tablet.jpg"
+    }
+  },
+  "/insights-zero-trust.png": {
+    "original": "/insights-zero-trust.png",
+    "versions": {
+      "mobile_webp": "optimized/insights-zero-trust/mobile.webp",
+      "mobile_jpeg": "optimized/insights-zero-trust/mobile.jpg",
+      "tablet_webp": "optimized/insights-zero-trust/tablet.webp",
+      "tablet_jpeg": "optimized/insights-zero-trust/tablet.jpg"
+    }
+  },
+  "/insights-responsible-ai.png": {
+    "original": "/insights-responsible-ai.png",
+    "versions": {
+      "mobile_webp": "optimized/insights-responsible-ai/mobile.webp",
+      "mobile_jpeg": "optimized/insights-responsible-ai/mobile.jpg",
+      "tablet_webp": "optimized/insights-responsible-ai/tablet.webp",
+      "tablet_jpeg": "optimized/insights-responsible-ai/tablet.jpg"
+    }
+  },
+  "/insights-multi-cloud.png": {
+    "original": "/insights-multi-cloud.png",
+    "versions": {
+      "mobile_webp": "optimized/insights-multi-cloud/mobile.webp",
+      "mobile_jpeg": "optimized/insights-multi-cloud/mobile.jpg"
+    }
+  },
+  "/responsible-ai-circuit.png": {
+    "original": "/responsible-ai-circuit.png",
+    "versions": {
+      "mobile_webp": "optimized/responsible-ai-circuit/mobile.webp",
+      "mobile_jpeg": "optimized/responsible-ai-circuit/mobile.jpg",
+      "tablet_webp": "optimized/responsible-ai-circuit/tablet.webp",
+      "tablet_jpeg": "optimized/responsible-ai-circuit/tablet.jpg"
+    }
+  },
+  "/zero-trust-capitol.png": {
+    "original": "/zero-trust-capitol.png",
+    "versions": {
+      "mobile_webp": "optimized/zero-trust-capitol/mobile.webp",
+      "mobile_jpeg": "optimized/zero-trust-capitol/mobile.jpg",
+      "tablet_webp": "optimized/zero-trust-capitol/tablet.webp",
+      "tablet_jpeg": "optimized/zero-trust-capitol/tablet.jpg",
+      "desktop_webp": "optimized/zero-trust-capitol/desktop.webp",
+      "desktop_jpeg": "optimized/zero-trust-capitol/desktop.jpg"
+    }
+  },
+  "/roi-analytics.png": {
+    "original": "/roi-analytics.png",
+    "versions": {
+      "mobile_webp": "optimized/roi-analytics/mobile.webp",
+      "mobile_jpeg": "optimized/roi-analytics/mobile.jpg",
+      "tablet_webp": "optimized/roi-analytics/tablet.webp",
+      "tablet_jpeg": "optimized/roi-analytics/tablet.jpg"
+    }
+  },
+  "/responsible-ai-vr.png": {
+    "original": "/responsible-ai-vr.png",
+    "versions": {
+      "mobile_webp": "optimized/responsible-ai-vr/mobile.webp",
+      "mobile_jpeg": "optimized/responsible-ai-vr/mobile.jpg",
+      "tablet_webp": "optimized/responsible-ai-vr/tablet.webp",
+      "tablet_jpeg": "optimized/responsible-ai-vr/tablet.jpg"
+    }
+  },
+  "/kearney-rpa-security.png": {
+    "original": "/kearney-rpa-security.png",
+    "versions": {
+      "mobile_webp": "optimized/kearney-rpa-security/mobile.webp",
+      "mobile_jpeg": "optimized/kearney-rpa-security/mobile.jpg",
+      "tablet_webp": "optimized/kearney-rpa-security/tablet.webp",
+      "tablet_jpeg": "optimized/kearney-rpa-security/tablet.jpg"
+    }
+  },
+  "/images/multi-cloud-architecture.png": {
+    "original": "/images/multi-cloud-architecture.png",
+    "versions": {
+      "mobile_webp": "optimized/images/multi-cloud-architecture/mobile.webp",
+      "mobile_jpeg": "optimized/images/multi-cloud-architecture/mobile.jpg"
+    }
+  },
+  "/images/real-time-analytics.png": {
+    "original": "/images/real-time-analytics.png",
+    "versions": {
+      "mobile_webp": "optimized/images/real-time-analytics/mobile.webp",
+      "mobile_jpeg": "optimized/images/real-time-analytics/mobile.jpg",
+      "tablet_webp": "optimized/images/real-time-analytics/tablet.webp",
+      "tablet_jpeg": "optimized/images/real-time-analytics/tablet.jpg"
+    }
+  },
+  "/images/insights/multi-cloud-team.png": {
+    "original": "/images/insights/multi-cloud-team.png",
+    "versions": {
+      "mobile_webp": "optimized/images/insights/multi-cloud-team/mobile.webp",
+      "mobile_jpeg": "optimized/images/insights/multi-cloud-team/mobile.jpg"
+    }
+  }
+}

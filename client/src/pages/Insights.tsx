@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
 import { useLQIP } from '@/hooks/useLQIP';
+import { usePrefetch } from '@/hooks/usePrefetch';
 import Footer from '@/components/Footer';
 import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -267,9 +268,13 @@ export default function Insights() {
           {paginatedInsights.length > 0 ? (
             <>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                {paginatedInsights.map((insight, index) => (
-                  <Link key={index} href={insight.href}>
-                    <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
+                {paginatedInsights.map((insight, index) => {
+                  const InsightCard = () => {
+                    const prefetchHandlers = usePrefetch(insight.href);
+                    
+                    return (
+                      <Link key={index} href={insight.href} {...prefetchHandlers}>
+                        <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
                       {/* Image */}
                       <div className="relative h-64 overflow-hidden">
                         <ImageWithLoader
@@ -295,9 +300,13 @@ export default function Insights() {
                           <span className="ml-4">{insight.date}</span>
                         </div>
                       </CardContent>
-                    </Card>
-                  </Link>
-                ))}
+                        </Card>
+                      </Link>
+                    );
+                  };
+                  
+                  return <InsightCard key={index} />;
+                })}
               </div>
 
               {/* Pagination Controls */}
