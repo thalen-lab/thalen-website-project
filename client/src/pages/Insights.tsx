@@ -21,7 +21,8 @@ export default function Insights() {
       authorSlug: 'sarah-chen',
       date: 'Nov 10, 2024',
       readTime: '8 min read',
-      tags: ['ROI', 'Strategy', 'Automation'],
+      tags: ['ROI', 'Automation'],
+      image: '/images/roi-dashboard.jpg',
       href: '/insights/roi-methodology'
     },
     {
@@ -32,7 +33,8 @@ export default function Insights() {
       authorSlug: 'michael-rodriguez',
       date: 'Nov 8, 2024',
       readTime: '10 min read',
-      tags: ['Security', 'Federal', 'Compliance'],
+      tags: ['Security', 'Compliance'],
+      image: '/images/zero-trust-architecture.png',
       href: '/insights/zero-trust'
     },
     {
@@ -43,7 +45,8 @@ export default function Insights() {
       authorSlug: 'jennifer-park',
       date: 'Nov 5, 2024',
       readTime: '12 min read',
-      tags: ['AI', 'Ethics', 'Government'],
+      tags: ['AI', 'Ethics'],
+      image: '/images/ai-transparency.jpg',
       href: '/insights/responsible-ai'
     },
     {
@@ -54,7 +57,8 @@ export default function Insights() {
       authorSlug: 'david-thompson',
       date: 'Nov 1, 2024',
       readTime: '9 min read',
-      tags: ['Cloud', 'Strategy', 'Architecture'],
+      tags: ['Cloud', 'Architecture'],
+      image: '/images/multi-cloud-architecture.png',
       href: '/insights/multi-cloud'
     },
     {
@@ -65,7 +69,8 @@ export default function Insights() {
       authorSlug: 'lisa-martinez',
       date: 'Oct 28, 2024',
       readTime: '11 min read',
-      tags: ['Transformation', 'Change Management', 'Leadership'],
+      tags: ['Transformation', 'Leadership'],
+      image: '/images/change-management.webp',
       href: '/insights/change-management'
     },
     {
@@ -76,7 +81,8 @@ export default function Insights() {
       authorSlug: 'james-wilson',
       date: 'Oct 25, 2024',
       readTime: '10 min read',
-      tags: ['Analytics', 'Big Data', 'Architecture'],
+      tags: ['Analytics', 'Architecture'],
+      image: '/images/real-time-analytics.png',
       href: '/insights/real-time-analytics'
     }
   ];
@@ -259,13 +265,26 @@ export default function Insights() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 {paginatedInsights.map((insight, index) => (
                   <Link key={index} href={insight.href}>
-                    <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer">
-                      <CardContent className="p-8 flex flex-col flex-1">
-                        <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
+                    <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer overflow-hidden">
+                      {/* Image */}
+                      <div className="relative h-48 overflow-hidden bg-muted">
+                        <img
+                          src={insight.image}
+                          alt={insight.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute top-4 left-4">
+                          <span className="text-xs font-semibold text-white bg-accent px-3 py-1 rounded-full">
+                            {insight.category}
+                          </span>
+                        </div>
+                      </div>
+
+                      <CardContent className="p-6 flex flex-col flex-1">
                         <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
                           {insight.title}
                         </h3>
-                        <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
+                        <p className="text-muted-foreground mb-4 flex-1">{insight.excerpt}</p>
 
                         <div className="flex items-center text-sm text-muted-foreground mb-4">
                           <User className="h-4 w-4 mr-2" />
@@ -274,15 +293,15 @@ export default function Insights() {
                           <span>{insight.readTime}</span>
                         </div>
 
-                        <div className="flex flex-wrap gap-2 mb-6">
+                        <div className="flex flex-wrap gap-2 mb-4">
                           {insight.tags.map((tag, idx) => (
-                            <span key={idx} className="text-xs bg-background px-3 py-1 rounded-full border border-border">
+                            <span key={idx} className="text-xs bg-muted px-3 py-1 rounded-full text-muted-foreground">
                               {tag}
                             </span>
                           ))}
                         </div>
 
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between pt-4 border-t border-border">
                           <span className="text-sm text-muted-foreground">{insight.date}</span>
                           <Button variant="ghost" size="sm" className="group-hover:text-accent">
                             Read More

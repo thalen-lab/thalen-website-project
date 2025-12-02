@@ -1852,3 +1852,9 @@
 ✅ Added StateRAMP alongside FedRAMP in hero section
 ✅ Updated "Core Automation Implementation Services" section with explicit positioning
 ✅ Updated "Government Automation Implementation Success" section with explicit positioning
+
+## Insights Page Enhancement
+- [x] Add professional images to all insight cards
+- [x] Reduce tag count from 3+ to 1-2 most relevant tags per article
+- [x] Maintain clean RUXI design standards
+- [x] Preserve all existing pages, links, and routes
