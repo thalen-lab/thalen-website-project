@@ -446,32 +446,32 @@ export default function Home() {
           {/* Partner Categories Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Cloud & Infrastructure */}
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-foreground tracking-wide uppercase border-b border-border pb-3">Cloud & Infrastructure</h3>
-              <div className="space-y-2">
-                <p className="text-base text-foreground font-medium">AWS GovCloud</p>
-                <p className="text-base text-foreground font-medium">Azure Government</p>
-                <p className="text-base text-foreground font-medium">Google Cloud</p>
+            <div className="bg-card border border-border rounded-xl p-8 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+              <h3 className="text-base font-bold text-foreground tracking-wide uppercase mb-6 pb-4 border-b border-border">Cloud & Infrastructure</h3>
+              <div className="space-y-4">
+                <p className="text-lg text-foreground font-semibold">AWS GovCloud</p>
+                <p className="text-lg text-foreground font-semibold">Azure Government</p>
+                <p className="text-lg text-foreground font-semibold">Google Cloud</p>
               </div>
             </div>
 
             {/* Automation & AI */}
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-foreground tracking-wide uppercase border-b border-border pb-3">Automation & AI</h3>
-              <div className="space-y-2">
-                <p className="text-base text-foreground font-medium">UiPath</p>
-                <p className="text-base text-foreground font-medium">Automation Anywhere</p>
-                <p className="text-base text-foreground font-medium">OpenAI</p>
+            <div className="bg-card border border-border rounded-xl p-8 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+              <h3 className="text-base font-bold text-foreground tracking-wide uppercase mb-6 pb-4 border-b border-border">Automation & AI</h3>
+              <div className="space-y-4">
+                <p className="text-lg text-foreground font-semibold">UiPath</p>
+                <p className="text-lg text-foreground font-semibold">Automation Anywhere</p>
+                <p className="text-lg text-foreground font-semibold">OpenAI</p>
               </div>
             </div>
 
             {/* Security & Compliance */}
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-foreground tracking-wide uppercase border-b border-border pb-3">Security & Compliance</h3>
-              <div className="space-y-2">
-                <p className="text-base text-foreground font-medium">Palo Alto Networks</p>
-                <p className="text-base text-foreground font-medium">CrowdStrike</p>
-                <p className="text-base text-foreground font-medium">Splunk</p>
+            <div className="bg-card border border-border rounded-xl p-8 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+              <h3 className="text-base font-bold text-foreground tracking-wide uppercase mb-6 pb-4 border-b border-border">Security & Compliance</h3>
+              <div className="space-y-4">
+                <p className="text-lg text-foreground font-semibold">Palo Alto Networks</p>
+                <p className="text-lg text-foreground font-semibold">CrowdStrike</p>
+                <p className="text-lg text-foreground font-semibold">Splunk</p>
               </div>
             </div>
           </div>
