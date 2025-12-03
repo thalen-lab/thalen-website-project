@@ -271,8 +271,8 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Editorial List - Typography-Driven */}
-          <div className="space-y-0">
+          {/* 2x2 Grid Layout - Typography-Driven */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
@@ -280,17 +280,15 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="group border-t border-border hover:border-accent transition-colors py-8 first:border-t-0 first:pt-0"
+                className="group"
               >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
-                      {cert.name}
-                    </h3>
-                    <p className="text-base text-muted-foreground leading-relaxed">
-                      {cert.description}
-                    </p>
-                  </div>
+                <div className="flex flex-col">
+                  <h3 className="text-xl font-bold mb-3 pb-3 border-b border-border group-hover:text-accent group-hover:border-accent transition-colors">
+                    {cert.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {cert.description}
+                  </p>
                 </div>
               </motion.div>
             ))}

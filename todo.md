@@ -2416,3 +2416,14 @@
 - [x] Ensure responsive design works on mobile (stacks to single column)
 - [x] Test grid layout across all viewport sizes
 - [x] Verify all content displays correctly
+
+
+## Redesign Certifications Section to 2x2 Grid Layout
+- [x] Change from horizontal divider list to 2x2 grid (2 rows, 4 columns)
+- [x] Display 8 certifications in grid format
+- [x] Maintain horizontal dividers under each certification title
+- [x] Keep clean typography-driven design
+- [x] Add subtle orange hover effects
+- [x] Ensure responsive design works on mobile (stacks appropriately)
+- [x] Test grid layout across all viewport sizes
+- [x] Verify all content displays correctly
