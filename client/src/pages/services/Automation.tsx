@@ -282,7 +282,7 @@ export default function Automation() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">{capability.description}</p>
