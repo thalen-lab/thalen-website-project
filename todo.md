@@ -2544,3 +2544,15 @@
 - [x] Test Automation service page (confirmed "Why Partner with Thalen Technologies")
 - [x] Test Events page past recordings (confirmed "Thalen Technologies' proprietary RAPID Framework")
 - [x] Verify all pages display correct company name
+
+## Balance Editorial and Card-Based Design on Homepage
+- [ ] Audit current homepage sections (hero, mission, capabilities, case studies, RAPID, certifications, partners, CTA)
+- [ ] Restore card-based design for Core Capabilities section (6 service cards with hover effects)
+- [ ] Keep editorial horizontal lines only for RAPID Framework phases
+- [ ] Replace all checkmark icons with black bullet points throughout homepage
+- [ ] Ensure cards have proper hover effects (border-accent, shadow, scale)
+- [ ] Test all sections and verify responsive design
+- [ ] Save checkpoint with balanced design approach
+
+## Remove Icons from Service Cards
+- [x] Remove icons from Core Capabilities service cards on homepage

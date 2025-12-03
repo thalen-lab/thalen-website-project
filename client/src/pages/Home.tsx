@@ -228,21 +228,26 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <Link
                 key={index}
                 href={service.href}
                 className="block group"
               >
-                <div className="h-full border-2 border-primary-foreground/20 hover:border-accent rounded-lg p-6 transition-all hover:shadow-2xl">
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-base opacity-80 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
+                <Card className="h-full border-2 border-border hover:border-accent transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-card">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      {service.description}
+                    </p>
+                    <div className="flex items-center text-accent text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    </div>
+                  </CardContent>
+                </Card>
               </Link>
             ))}
           </div>
