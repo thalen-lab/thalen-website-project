@@ -265,10 +265,10 @@ export default function Home() {
         <div className="container max-w-5xl relative">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-              Intelligence, delivered.
+              Govern Smart.
             </h2>
             <p className="text-xl md:text-2xl font-light leading-relaxed max-w-4xl mx-auto opacity-95">
-              At NexDyne, we've always believed progress starts when technology serves mission. By working together and thinking differently, we help government agencies turn their biggest opportunities into their next big moves. One challenge at a time.
+              At Thalen Technologies, we've always believed progress starts when technology serves mission. By working together and thinking differently, we help government agencies turn their biggest opportunities into their next big moves. One challenge at a time.
             </p>
           </div>
         </div>
@@ -280,12 +280,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left: Visual */}
             <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-primary/20 rounded-2xl p-12 flex items-center justify-center relative overflow-hidden">
+              <div className="aspect-[4/3] bg-gradient-to-br from-orange-500/20 via-accent/20 to-orange-600/20 rounded-2xl p-12 flex items-center justify-center relative overflow-hidden">
                 {/* Abstract tech visualization */}
                 <div className="absolute inset-0 opacity-30">
-                  <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-500/40 rounded-full blur-3xl" />
-                  <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-blue-500/40 rounded-full blur-3xl" />
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/40 rounded-full blur-3xl" />
+                  <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/40 rounded-full blur-3xl" />
+                  <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-accent/40 rounded-full blur-3xl" />
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-orange-600/40 rounded-full blur-3xl" />
                 </div>
                 <div className="relative text-center">
                   <div className="text-6xl md:text-7xl font-bold text-primary mb-4">2.3B</div>
@@ -297,7 +297,7 @@ export default function Home() {
             
             {/* Right: Content */}
             <div>
-              <p className="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-3 tracking-wide uppercase">Featured Insight</p>
+              <p className="text-sm font-semibold text-accent mb-3 tracking-wide uppercase">Featured Insight</p>
               <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                 From 4,000 Hours to 40 Minutes: How Federal Agencies Are Achieving 99% Time Reduction
               </h3>
