@@ -136,16 +136,13 @@ export default function CaseStudyShowcase() {
                 <p className="text-slate-600 mb-4 line-clamp-3 flex-grow">
                   {study.description}
                 </p>
-                <Button 
-                  asChild
-                  variant="ghost" 
-                  className="p-0 h-auto text-slate-900 hover:text-orange-600 font-medium hover:bg-transparent group/btn"
+                <Link 
+                  href={study.link}
+                  className="inline-flex items-center p-0 h-auto text-slate-900 hover:text-orange-600 font-medium group/btn transition-colors"
                 >
-                  <Link href={study.link}>
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </Card>
           ))}
@@ -159,16 +156,12 @@ export default function CaseStudyShowcase() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex justify-center"
         >
-          <Button 
-            asChild
-            variant="default"
-            size="lg"
-            className="bg-slate-900 hover:bg-slate-800 text-white"
+          <Link 
+            href="/case-studies"
+            className="inline-flex items-center justify-center gap-2 h-10 px-6 rounded-md bg-slate-900 hover:bg-slate-800 text-white font-medium transition-colors"
           >
-            <Link href="/case-studies">
-              View All Cases
-            </Link>
-          </Button>
+            View All Cases
+          </Link>
         </motion.div>
       </div>
     </section>
