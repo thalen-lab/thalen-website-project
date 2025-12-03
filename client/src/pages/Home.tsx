@@ -218,7 +218,7 @@ export default function Home() {
       <CaseStudyShowcase />
 
       {/* Certifications Section - Editorial Layout */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-slate-100">
         <div className="container">
           <motion.div 
             className="grid lg:grid-cols-2 gap-8 mb-12"
