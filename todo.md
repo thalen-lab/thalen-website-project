@@ -2610,3 +2610,9 @@
 - [x] Change service cards from rounded corners to sharp edges (rounded-none)
 - [x] Add border-2 styling to match case studies and insights cards
 - [x] Ensure consistent design across all homepage card sections
+
+## Phase 50: Selective Rollback - Government Process Automation Page
+- [x] Identify checkpoint with cards and icons after RUXI implementation
+- [x] Restore Automation.tsx from that checkpoint
+- [x] Verify page displays correctly with card-based layout
+- [ ] Save checkpoint with restored version

@@ -1,8 +1,9 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Bot, Network, GitBranch } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, Shield, Users, Award, Bot, Network, GitBranch } from 'lucide-react';
 
 export default function Automation() {
   // Primary service offerings (3 core automation capabilities)
@@ -11,18 +12,21 @@ export default function Automation() {
       icon: Bot,
       title: 'Government RPA Implementation',
       description: 'Implement FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov, Blue Prism Gov) with process discovery, bot development, ATO documentation, and Center of Excellence setup.',
+      benefits: ['Process assessment & discovery', 'FedRAMP platform deployment', 'ATO compliance documentation'],
       link: '/services/automation/rpa'
     },
     {
       icon: Network,
       title: 'Enterprise Integration Services',
       description: 'Connect FedRAMP-authorized platforms and legacy government systems with secure APIs, data synchronization, and compliance-ready integration patterns.',
+      benefits: ['50+ FedRAMP platform connectors', 'Legacy system modernization', 'API security & governance'],
       link: '/services/automation/integration'
     },
     {
       icon: GitBranch,
       title: 'Workflow Orchestration',
       description: 'Automate end-to-end business processes across multiple departments and systems with intelligent workflow orchestration and process optimization.',
+      benefits: ['Cross-system automation', 'Business process management', 'Real-time monitoring'],
       link: '/services/automation/orchestration'
     }
   ];
@@ -35,46 +39,22 @@ export default function Automation() {
     { name: 'Bot Maintenance & Support', description: 'Ongoing monitoring, optimization, and scaling of automation solutions' }
   ];
 
-
-
-  // 4-Step Implementation Process
-  const implementationProcess = [
+  const keyDifferentiators = [
     {
-      step: '01',
-      title: 'Discovery & Assessment',
-      description: 'Process mining to identify automation opportunities, ROI modeling, and FedRAMP platform selection based on your mission requirements.',
-      duration: '2-4 weeks'
+      icon: Shield,
+      title: 'FedRAMP Platform Expertise',
+      description: 'Deep implementation experience with 50+ FedRAMP-authorized automation platforms including UiPath Gov, Automation Anywhere Gov, and ServiceNow Gov.'
     },
     {
-      step: '02',
-      title: 'Design & Compliance',
-      description: 'Solution architecture, security controls design, ATO documentation preparation, and compliance validation (FedRAMP, FISMA, NIST).',
-      duration: '4-6 weeks'
+      icon: Users,
+      title: 'Vendor-Neutral Consulting',
+      description: 'We help you select the RIGHT automation platforms for your mission requirements, then implement them with proven government-specific best practices.'
     },
     {
-      step: '03',
-      title: 'Build & Test',
-      description: 'Bot development, integration with legacy systems, user acceptance testing, and performance optimization with government stakeholders.',
-      duration: '8-12 weeks'
-    },
-    {
-      step: '04',
-      title: 'Deploy & Scale',
-      description: 'Production deployment, Center of Excellence setup, training programs, and ongoing optimization to maximize mission impact.',
-      duration: 'Ongoing'
+      icon: Award,
+      title: 'Mission-Focused Implementation',
+      description: 'Automation solutions designed for measurable mission impact—faster processing, reduced errors, compliance assurance, and operational cost savings.'
     }
-  ];
-
-  // Platforms We Implement Most Often
-  const topPlatforms = [
-    { name: 'UiPath Government Cloud', category: 'RPA' },
-    { name: 'Automation Anywhere Gov', category: 'RPA' },
-    { name: 'ServiceNow Gov', category: 'Workflow' },
-    { name: 'Microsoft Power Automate Gov', category: 'RPA' },
-    { name: 'Blue Prism Government', category: 'RPA' },
-    { name: 'MuleSoft Government Cloud', category: 'Integration' },
-    { name: 'Pega Government Cloud', category: 'BPM' },
-    { name: 'Appian Government Cloud', category: 'BPM' }
   ];
 
   const governmentExperience = [
@@ -110,14 +90,14 @@ export default function Automation() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-orange-500/30">
-              CORE CAPABILITIES
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              Core Service
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Government Process Automation
+              Government Automation Implementation
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
-              Vendor-neutral consulting for federal, state, and local agencies. We implement FedRAMP and StateRAMP-authorized platforms with proven compliance expertise and measurable mission impact.
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              We help government agencies (federal, state, and local) implement FedRAMP and StateRAMP-authorized automation platforms with RPA, systems integration, and workflow orchestration. Vendor-neutral consulting with proven expertise across all major automation technologies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -126,166 +106,79 @@ export default function Automation() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
+              <Link href="/services/automation/rpa">
+                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                  Explore RPA Services
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Automation Implementation Process */}
-      <section className="py-20 bg-background">
-        <div className="container max-w-5xl">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Automation Implementation Process</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              A proven 4-step methodology for delivering compliant, mission-focused automation solutions.
-            </p>
-          </div>
-
-          {/* 2x2 Grid Layout */}
-          <div className="grid md:grid-cols-2 gap-0">
-            {/* Phase 1 */}
-            <div className="p-8 md:p-12 border-b md:border-r border-border">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-muted border-2 border-border flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl font-bold">1</span>
-                </div>
-                <h3 className="text-2xl font-bold">Research & Assessment</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
-              </p>
-            </div>
-
-            {/* Phase 2 - Orange Accent */}
-            <div className="p-8 md:p-12 border-b border-border">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-orange-500/10 border-2 border-orange-500 flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl font-bold text-orange-600 dark:text-orange-400">2</span>
-                </div>
-                <h3 className="text-2xl font-bold text-orange-600 dark:text-orange-400">Architecture & Planning</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Solution architecture design, technology stack selection, and detailed implementation roadmap.
-              </p>
-            </div>
-
-            {/* Phase 3 */}
-            <div className="p-8 md:p-12 md:border-r border-border">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-muted border-2 border-border flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl font-bold">3</span>
-                </div>
-                <h3 className="text-2xl font-bold">Implementation & Delivery</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
-              </p>
-            </div>
-
-            {/* Phase 4 */}
-            <div className="p-8 md:p-12">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-muted border-2 border-border flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl font-bold">4</span>
-                </div>
-                <h3 className="text-2xl font-bold">Performance & Optimization</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Horizontal Divider */}
-      <div className="container">
-        <div className="border-t border-border"></div>
-      </div>
-
-      {/* Platforms We Implement Most Often */}
-      <section className="py-20 bg-background">
-        <div className="container max-w-5xl">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Platforms We Implement Most Often</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              FedRAMP-authorized automation platforms we deploy for government agencies.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {topPlatforms.map((platform, index) => (
-              <div key={index} className="group">
-                <div className="bg-white border border-gray-200 rounded-lg p-8 text-center hover:border-orange-500 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                  <h4 className="font-semibold mb-2 text-base leading-tight text-gray-900">{platform.name}</h4>
-                  <p className="text-sm text-gray-600 uppercase tracking-wide">{platform.category}</p>
-                </div>
+      {/* Key Differentiators */}
+      <section className="py-16 bg-background">
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-8">
+            {keyDifferentiators.map((item, index) => (
+              <div key={index} className="text-center">
+                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-muted-foreground mb-6">
-              We implement 50+ FedRAMP-authorized platforms. Need help selecting the right tools?
-            </p>
-            <Link href="/contact">
-              <Button variant="outline" size="lg">
-                Request Platform Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Horizontal Divider */}
-      <div className="container">
-        <div className="border-t border-border"></div>
-      </div>
-
-      {/* Primary Automation Services - Z100 Editorial Style */}
-      <section className="py-20 bg-background">
-        <div className="container max-w-5xl">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Government Technology Implementation Services</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Comprehensive automation services including RPA implementation, FedRAMP platform integration (50+ connectors), and workflow orchestration across government agencies with ATO documentation and compliance support.
+      {/* Primary Automation Services */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Automation Implementation Services</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              End-to-end automation capabilities from RPA to enterprise integration, designed for government agencies (federal, state, and local) requiring FedRAMP and StateRAMP compliance and mission-critical reliability.
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {primaryServices.map((service, index) => (
-              <div key={index} className="group">
-                <div className="flex items-start gap-6 mb-4">
-                  <service.icon className="h-12 w-12 text-primary flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h3 className="text-3xl font-bold mb-4">{service.title}</h3>
-                    <p className="text-lg text-muted-foreground leading-relaxed mb-6">{service.description}</p>
-                    <Link href={service.link}>
-                      <Button variant="outline" className="border-2 hover:border-accent hover:bg-accent/5">
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-                {index < primaryServices.length - 1 && (
-                  <div className="border-t border-border mt-16"></div>
-                )}
-              </div>
+              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
+                <CardContent className="p-8">
+                  <service.icon className="h-16 w-16 text-primary mb-6" />
+                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <p className="text-muted-foreground mb-6">{service.description}</p>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-start text-sm">
+                        <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link href={service.link}>
+                    <Button variant="outline" className="w-full border-2 border-dashed border-primary/30 hover:border-accent hover:bg-accent/5">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
             ))}
           </div>
 
           {/* Additional Capabilities - Compact Format */}
-          <div className="mt-20 pt-16 border-t border-border">
-            <h3 className="text-2xl font-bold mb-8">Additional Automation Capabilities</h3>
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-8 text-center">Additional Automation Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 mr-4 flex-shrink-0"></span>
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{capability.description}</p>
+                    <p className="text-sm text-muted-foreground">{capability.description}</p>
                   </div>
                 </div>
               ))}
@@ -294,77 +187,101 @@ export default function Automation() {
         </div>
       </section>
 
-
-
-      {/* FedRAMP Automation Platform Expertise - Z100 Editorial Style */}
+      {/* Government Automation Experience */}
       <section className="py-20 bg-background">
-        <div className="container max-w-5xl">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">FedRAMP-Authorized Automation Platform Expertise</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              We implement and integrate FedRAMP-authorized automation platforms from leading vendors, helping you select the right tools for your mission.
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Government Automation Implementation Success</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Proven track record implementing automation platforms and solutions across government agencies (federal, state, and local) with measurable mission impact.
             </p>
           </div>
 
-          <div className="space-y-16">
-            {fedrampPlatforms.map((category, index) => (
-              <div key={index}>
-                {/* Horizontal Divider with Orange Accent */}
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-1 h-8 bg-orange-500 rounded-full"></div>
-                  <h3 className="text-2xl font-bold">{category.category}</h3>
-                </div>
-                
-                {/* Platform Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {category.platforms.map((platform, idx) => (
-                    <div 
-                      key={idx} 
-                      className="group bg-white border border-gray-200 rounded-lg p-6 hover:border-orange-500 hover:shadow-md transition-all duration-300 cursor-pointer"
-                    >
-                      <h4 className="font-semibold text-base text-gray-900 mb-2">{platform}</h4>
-                      <p className="text-sm text-gray-600">
-                        {idx === 0 && category.category === 'RPA & Intelligent Automation' && 'Enterprise-grade RPA with AI-powered automation capabilities'}
-                        {idx === 1 && category.category === 'RPA & Intelligent Automation' && 'Cloud-native intelligent automation platform'}
-                        {idx === 2 && category.category === 'RPA & Intelligent Automation' && 'Secure, scalable RPA for mission-critical operations'}
-                        {idx === 3 && category.category === 'RPA & Intelligent Automation' && 'Low-code automation integrated with Microsoft 365'}
-                        {idx === 0 && category.category === 'Integration & iPaaS' && 'API-led connectivity for hybrid cloud environments'}
-                        {idx === 1 && category.category === 'Integration & iPaaS' && 'Cloud-native integration platform with pre-built connectors'}
-                        {idx === 2 && category.category === 'Integration & iPaaS' && 'Enterprise data integration and management platform'}
-                        {idx === 3 && category.category === 'Integration & iPaaS' && 'Self-service data integration with AI-powered insights'}
-                        {idx === 0 && category.category === 'Workflow & BPM' && 'Enterprise service management and workflow automation'}
-                        {idx === 1 && category.category === 'Workflow & BPM' && 'Low-code platform for business process management'}
-                        {idx === 2 && category.category === 'Workflow & BPM' && 'Enterprise low-code automation platform'}
-                        {idx === 3 && category.category === 'Workflow & BPM' && 'Open-source workflow and decision automation'}
-                        {idx === 0 && category.category === 'Document Processing' && 'AI-powered document understanding and extraction'}
-                        {idx === 1 && category.category === 'Document Processing' && 'Intelligent document processing with cognitive capture'}
-                        {idx === 2 && category.category === 'Document Processing' && 'Enterprise capture and document processing platform'}
-                        {idx === 3 && category.category === 'Document Processing' && 'Intelligent automation for document-centric processes'}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {governmentExperience.map((exp, index) => (
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
+                <CardContent className="p-8">
+                  <TrendingUp className="h-12 w-12 text-primary mb-4" />
+                  <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
+                  <p className="text-lg font-bold text-primary">{exp.outcome}</p>
+                </CardContent>
+              </Card>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/case-studies">
+              <Button variant="outline" size="lg">
+                View All Automation Case Studies
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* FedRAMP Automation Platform Expertise */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Automation Platform Expertise</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We implement and integrate FedRAMP-authorized automation platforms from leading vendors, helping you select the right tools for your mission.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {fedrampPlatforms.map((category, index) => (
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-bold mb-4">{category.category}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {category.platforms.map((platform, idx) => (
+                      <span key={idx} className="bg-card border border-border text-primary px-3 py-1 rounded-full text-sm font-medium">
+                        {platform}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-6">
+              Plus 30+ additional FedRAMP-authorized automation and integration platforms
+            </p>
+            <Link href="/federal-solutions">
+              <Button variant="outline" size="lg">
+                View All FedRAMP Platforms
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Automate Your Government Processes?
-          </h2>
-          <p className="text-xl opacity-90 mb-8 leading-relaxed">
-            Schedule a free automation assessment to identify high-impact opportunities and build your roadmap.
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Automate Your Government Operations?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Schedule an automation assessment to discuss your agency's automation opportunities, evaluate FedRAMP platform options, and develop a roadmap for mission-critical automation.
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Schedule Free Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Request Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="/federal-solutions">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                View Federal Solutions
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
