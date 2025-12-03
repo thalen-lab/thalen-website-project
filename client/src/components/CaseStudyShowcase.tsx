@@ -136,15 +136,16 @@ export default function CaseStudyShowcase() {
                 <p className="text-slate-600 mb-4 line-clamp-3 flex-grow">
                   {study.description}
                 </p>
-                <Link href={study.link}>
-                  <Button 
-                    variant="ghost" 
-                    className="p-0 h-auto text-slate-900 hover:text-orange-600 font-medium hover:bg-transparent group/btn"
-                  >
+                <Button 
+                  asChild
+                  variant="ghost" 
+                  className="p-0 h-auto text-slate-900 hover:text-orange-600 font-medium hover:bg-transparent group/btn"
+                >
+                  <Link href={study.link}>
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
             </Card>
           ))}
