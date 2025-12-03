@@ -298,144 +298,144 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Methodology Section - RAPID Framework */}
-      <section className="py-20 bg-muted">
-        <div className="container">
+      {/* Methodology Section - RAPID Framework - Streamlined Editorial */}
+      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+        <div className="container max-w-5xl">
           <motion.div 
-            className="text-center mb-16"
+            className="mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-accent mb-2">Our Methodology</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies RAPID Framework</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven Government Implementation Methodology: Structured 4-phase approach delivering compliant, on-budget FedRAMP and StateRAMP platform deployments
+            <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wider">Our Methodology</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">The Thalen Technologies RAPID Framework</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              Structured 4-phase approach delivering compliant, on-budget FedRAMP and StateRAMP platform deployments
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Editorial List - Horizontal Dividers */}
+          <div className="space-y-0">
             {/* Phase 1 */}
-            <Card className="border-2 hover:border-accent transition-colors">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
-                  1
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+              className="group border-t border-border hover:border-accent transition-colors py-8 first:border-t-0 first:pt-0"
+            >
+              <div className="flex flex-col md:flex-row md:items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                    1
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Research & Assessment</h3>
-                <p className="text-muted-foreground mb-4">
-                  Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
-                </p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Current state analysis</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Opportunity identification</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>ROI projection modeling</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Research & Assessment
+                  </h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Phase 2 */}
-            <Card className="border-2 hover:border-accent transition-colors">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
-                  2
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="group border-t border-border hover:border-accent transition-colors py-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                    2
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Architecture & Planning</h3>
-                <p className="text-muted-foreground mb-4">
-                  Solution architecture design, technology stack selection, and detailed implementation roadmap.
-                </p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Architecture optimization</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Technology evaluation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Phased roadmap creation</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Architecture & Planning
+                  </h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Solution architecture design, technology stack selection, and detailed implementation roadmap.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Phase 3 */}
-            <Card className="border-2 hover:border-accent transition-colors">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
-                  3
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="group border-t border-border hover:border-accent transition-colors py-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                    3
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Implementation & Delivery</h3>
-                <p className="text-muted-foreground mb-4">
-                  Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
-                </p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Compliance documentation & ATO support</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Security controls implementation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Zero-downtime deployment</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Implementation & Delivery
+                  </h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Phase 4 */}
-            <Card className="border-2 hover:border-accent transition-colors">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
-                  4
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="group border-t border-border hover:border-accent transition-colors py-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                    4
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Performance & Optimization</h3>
-                <p className="text-muted-foreground mb-4">
-                  Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
-                </p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Real-time dashboards</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>ROI measurement & reporting</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Predictive maintenance</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Performance & Optimization
+                  </h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-lg text-muted-foreground mb-6">
+          {/* CTA Section */}
+          <motion.div 
+            className="mt-16 pt-12 border-t border-border text-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <p className="text-base text-muted-foreground mb-6">
               <strong className="text-foreground">90-day ATO timeline</strong> • <strong className="text-foreground">100% authorization success rate</strong> • <strong className="text-foreground">Zero operational disruption</strong>
             </p>
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
-              <Link href="/contact">
+              <Link href="/methodology">
                 Learn More About RAPID
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
 
