@@ -221,62 +221,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Capabilities Section - Clean Editorial Style */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="container max-w-5xl">
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">What We Do</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
-              We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies. Our vendor-neutral approach ensures you get the right solution, not just the one we sell.
-            </p>
-          </div>
-
-          <div className="space-y-0">
-            <div className="py-8 border-b border-border">
-              <h3 className="text-2xl font-bold mb-3">Cloud Migration & Integration</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Migrate to AWS GovCloud, Azure Government, or Google Cloud with comprehensive ATO documentation, security controls implementation, and multi-cloud orchestration.
-              </p>
-            </div>
-
-            <div className="py-8 border-b border-border">
-              <h3 className="text-2xl font-bold mb-3">Process Automation & RPA</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Deploy FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov) with bot development, ATO compliance documentation, and Center of Excellence setup.
-              </p>
-            </div>
-
-            <div className="py-8 border-b border-border">
-              <h3 className="text-2xl font-bold mb-3">Data Analytics & Intelligence</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Implement secure analytics using FedRAMP platforms (Tableau Gov, Power BI Gov, Databricks Gov) with data governance, compliance controls, and real-time visualization.
-              </p>
-            </div>
-
-            <div className="py-8 border-b border-border">
-              <h3 className="text-2xl font-bold mb-3">Cybersecurity & Compliance</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Achieve FedRAMP, StateRAMP, CMMC, and FISMA compliance through gap analysis, security controls implementation, continuous monitoring, and audit preparation.
-              </p>
-            </div>
-
-            <div className="py-8 border-b border-border">
-              <h3 className="text-2xl font-bold mb-3">Systems Integration</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Connect 50+ FedRAMP platforms (Salesforce Gov Cloud, ServiceNow, Workday) with legacy systems using secure APIs, vendor-neutral architecture, and ATO-ready integration patterns.
-              </p>
-            </div>
-
-            <div className="py-8">
-              <h3 className="text-2xl font-bold mb-3">IT Modernization & Transformation</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Vendor-neutral platform selection, legacy system modernization, change management, and Technology Modernization Fund (TMF) proposal support for federal agencies.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services Section - Editorial Layout */}
       <section className="py-24 md:py-32 bg-navy-gradient text-primary-foreground">
         <div className="container max-w-5xl">
