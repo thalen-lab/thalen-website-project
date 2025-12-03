@@ -287,7 +287,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wider">Our Methodology</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">The Thalen Technologies RAPID Framework</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">The Thalen Technologies RAPID Framework</h2>
             <p className="text-lg text-muted-foreground max-w-2xl">
               Structured 4-phase approach delivering compliant, on-budget FedRAMP and StateRAMP platform deployments
             </p>
