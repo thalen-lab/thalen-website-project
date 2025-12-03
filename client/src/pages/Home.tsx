@@ -252,23 +252,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value Proposition Bridge Section */}
-      <section className="py-16 bg-background">
-        <div className="container max-w-4xl text-center">
-          <p className="text-2xl md:text-3xl font-light text-foreground leading-relaxed">
-            We don't sell platforms. We help government agencies select, implement, and optimize the right FedRAMP and StateRAMP solutions for mission success.
-          </p>
+      {/* Mission Statement Section - Editorial Style */}
+      <section className="py-24 md:py-32 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
+            backgroundSize: '48px 48px'
+          }} />
+        </div>
+        
+        <div className="container max-w-5xl relative">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+              Intelligence, delivered.
+            </h2>
+            <p className="text-xl md:text-2xl font-light leading-relaxed max-w-4xl mx-auto opacity-95">
+              At NexDyne, we've always believed progress starts when technology serves mission. By working together and thinking differently, we help government agencies turn their biggest opportunities into their next big moves. One challenge at a time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Insight Section - Split Layout */}
+      <section className="py-20 bg-muted">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            {/* Left: Visual */}
+            <div className="relative">
+              <div className="aspect-[4/3] bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-primary/20 rounded-2xl p-12 flex items-center justify-center relative overflow-hidden">
+                {/* Abstract tech visualization */}
+                <div className="absolute inset-0 opacity-30">
+                  <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-500/40 rounded-full blur-3xl" />
+                  <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-blue-500/40 rounded-full blur-3xl" />
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/40 rounded-full blur-3xl" />
+                </div>
+                <div className="relative text-center">
+                  <div className="text-6xl md:text-7xl font-bold text-primary mb-4">2.3B</div>
+                  <div className="text-xl md:text-2xl font-semibold text-foreground">ROI Generated</div>
+                  <div className="text-sm text-muted-foreground mt-2">Across 50+ Federal Agencies</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right: Content */}
+            <div>
+              <p className="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-3 tracking-wide uppercase">Featured Insight</p>
+              <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                From 4,000 Hours to 40 Minutes: How Federal Agencies Are Achieving 99% Time Reduction
+              </h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Our vendor-neutral approach to FedRAMP platform implementation has helped agencies analyze threats 6,000 times faster, reduce manual processing from weeks to minutes, and achieve compliance-ready automation at scale. Discover the methodology behind measurable mission impact.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                  <Link href="/methodology">
+                    Explore Our Methodology
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/case-studies">View Case Studies</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Services Section - Editorial Layout */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-24 md:py-32 bg-navy-gradient text-primary-foreground">
         <div className="container max-w-5xl">
-          <div className="mb-16">
-            <p className="text-sm font-semibold text-accent mb-3">Core Capabilities</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Government IT Implementation Services</h2>
-            <p className="text-xl opacity-90 max-w-3xl">
-              Vendor-neutral consulting for federal, state, and local agencies. We implement FedRAMP and StateRAMP-authorized platforms with proven compliance expertise.
+          <div className="mb-20">
+            <p className="text-sm font-semibold text-cyan-400 mb-4 tracking-wide uppercase">How We Help Agencies</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+              Let's turn your biggest opportunities into your next big moves.
+            </h2>
+            <p className="text-xl md:text-2xl opacity-90 max-w-3xl leading-relaxed">
+              Vendor-neutral consulting for federal, state, and local agencies. We implement FedRAMP and StateRAMP-authorized platforms with proven compliance expertise and measurable mission impact.
             </p>
           </div>
 
