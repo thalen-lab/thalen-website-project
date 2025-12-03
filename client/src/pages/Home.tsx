@@ -254,11 +254,11 @@ export default function Home() {
       {/* Case Studies Section - Incentro Style */}
       <CaseStudyShowcase />
 
-      {/* Certifications Section */}
+      {/* Certifications Section - Editorial Layout */}
       <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-        <div className="container">
+        <div className="container max-w-5xl">
           <motion.div 
-            className="text-center mb-16"
+            className="mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -266,59 +266,34 @@ export default function Home() {
           >
             <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wider">Trusted & Certified</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise & Government Security & Compliance</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl">
               Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
             </p>
           </motion.div>
 
-          {/* Featured Certifications - Top Tier */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 max-w-6xl mx-auto">
-            {certifications.slice(0, 4).map((cert, index) => {
-              const Icon = cert.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="bg-card border-2 border-border hover:border-accent rounded-xl p-6 text-center flex flex-col items-center justify-start transition-all hover:shadow-xl hover:-translate-y-1 cursor-default h-full">
-                    <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                      <Icon className="w-7 h-7 text-accent" />
-                    </div>
-                    <h3 className="text-base font-bold mb-3 leading-tight">{cert.name}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{cert.description}</p>
+          {/* Editorial List - Typography-Driven */}
+          <div className="space-y-0">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="group border-t border-border hover:border-accent transition-colors py-8 first:border-t-0 first:pt-0"
+              >
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                      {cert.name}
+                    </h3>
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      {cert.description}
+                    </p>
                   </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Additional Certifications - Bottom Tier */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {certifications.slice(4).map((cert, index) => {
-              const Icon = cert.icon;
-              return (
-                <motion.div
-                  key={index + 4}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: (index + 4) * 0.1 }}
-                  className="group"
-                >
-                  <div className="bg-card border-2 border-border hover:border-accent rounded-xl p-6 text-center flex flex-col items-center justify-start transition-all hover:shadow-xl hover:-translate-y-1 cursor-default h-full">
-                    <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                      <Icon className="w-7 h-7 text-accent" />
-                    </div>
-                    <h3 className="text-base font-bold mb-3 leading-tight">{cert.name}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{cert.description}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

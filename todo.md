@@ -2389,3 +2389,11 @@
 - [x] Improve visual hierarchy and spacing
 - [x] Test redesigned section across devices
 - [x] Verify all functionality preserved
+
+## Redesign Certifications Section - McKinsey/Deloitte Editorial Layout
+- [x] Remove card-based design with icon badges
+- [x] Implement horizontal divider layout matching Services section
+- [x] Use typography-driven hierarchy (certification names as headlines)
+- [x] Add minimal decoration with subtle orange hover effects
+- [x] Test editorial design across devices
+- [x] Verify all functionality preserved
