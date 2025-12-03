@@ -195,7 +195,7 @@ export default function Home() {
                 href={service.href}
                 className="block group"
               >
-                <Card className="h-full border-2 border-border hover:border-accent transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-card">
+                <Card className="h-full border-2 border-border hover:border-accent transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-card rounded-none">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
                       {service.title}

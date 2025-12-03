@@ -2605,3 +2605,8 @@
 - [x] Enhance partner name styling and spacing
 - [x] Match visual consistency with RAPID Framework and certifications sections
 - [x] Add appropriate hover effects and borders
+
+## Phase 49: Update Core Capabilities Service Cards to Sharp Edges
+- [x] Change service cards from rounded corners to sharp edges (rounded-none)
+- [x] Add border-2 styling to match case studies and insights cards
+- [x] Ensure consistent design across all homepage card sections
