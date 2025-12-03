@@ -2368,3 +2368,13 @@
 - [x] Redesign Core Capabilities section with 2x3 grid layout (2 services per row, 3 rows total)
 - [x] Reduce spacing above "Core Capabilities" heading
 - [x] Maintain all service links, pages, and routes
+
+## Case Studies Section Redesign
+- [x] Replace carousel with static 3-column grid showing first three case studies
+- [x] Apply sharp edges (rounded-none, border-2) to case study cards
+- [x] Ensure images fit properly in cards without distortion
+- [x] Reduce extra spacing under card descriptions
+- [x] Replace circle arrow CTAs with "Learn More" text CTAs
+- [x] Add "All Cases" button below the grid linking to /case-studies
+- [x] Remove carousel navigation arrows
+- [x] Preserve all case study links, pages, and routes
