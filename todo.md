@@ -2645,4 +2645,6 @@
 - [x] Update Methodology section background to darker color
 - [x] Ensure text contrast and readability
 - [x] Test visual hierarchy and appearance
-- [ ] Save checkpoint
+- [x] Save checkpoint
+
+- [x] Stretch RAPID Framework cards to match certifications section width

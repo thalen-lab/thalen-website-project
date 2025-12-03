@@ -278,7 +278,7 @@ export default function Home() {
 
       {/* Methodology Section - RAPID Framework - Streamlined Editorial */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-        <div className="container max-w-5xl">
+        <div className="container">
           <motion.div 
             className="mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -416,8 +416,8 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-base text-muted-foreground mb-6">
-              <strong className="text-foreground">90-day ATO timeline</strong> • <strong className="text-foreground">100% authorization success rate</strong> • <strong className="text-foreground">Zero operational disruption</strong>
+            <p className="text-base text-white mb-6">
+              <strong className="text-white">90-day ATO timeline</strong> • <strong className="text-white">100% authorization success rate</strong> • <strong className="text-white">Zero operational disruption</strong>
             </p>
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
               <Link href="/methodology">
