@@ -1,10 +1,9 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, LineChart, Activity, Gauge, Eye, Zap, Shield, Database, Brain, TrendingUp } from 'lucide-react';
+
+import { ArrowRight, Activity, Gauge, Eye } from 'lucide-react';
 
 export default function Visualization() {
   const visualizationBenefits = [
@@ -49,34 +48,48 @@ export default function Visualization() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/data-analytics" className="hover:text-accent">Data Analytics & Intelligence</Link>
-            <span className="mx-2">/</span>
-            <span>Real-Time Analytics & Visualization</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
-              Mission-Critical Intelligence
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      {/* Hero Section - Z100 Editorial Style */}
+      <section className="relative pt-32 pb-20 bg-white">
+        <div className="container max-w-5xl">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-sm text-zinc-500 mb-12">
+            <Link href="/" className="hover:text-zinc-900 transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/services" className="hover:text-zinc-900 transition-colors">Services</Link>
+            <span>/</span>
+            <Link href="/services/data-analytics" className="hover:text-zinc-900 transition-colors">Data Analytics</Link>
+            <span>/</span>
+            <span className="text-zinc-900">Real-Time Analytics & Visualization</span>
+          </div>
+
+          {/* Hero Content */}
+          <div className="space-y-8">
+            <h1 className="text-5xl md:text-6xl font-light text-zinc-900 leading-[1.1] tracking-tight">
               Real-Time Analytics & Visualization
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            
+            <p className="text-xl md:text-2xl text-zinc-600 leading-relaxed font-light max-w-4xl">
               Government operations (federal, state, and local) do not run on last night's batch reports. When threats emerge, operations unfold, or crises develop, decision-makers need real-time intelligence—not data that is hours or days old. Thalen Technologies builds mission-critical analytics platforms using FedRAMP and StateRAMP-authorized tools that deliver actionable insights in real-time with government-grade security. From intelligence analysis to operational command centers, our dashboards turn massive data streams into clear, actionable intelligence.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Dashboard Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Link href="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-zinc-900 hover:bg-zinc-800 text-white px-8 h-12 text-base font-normal rounded-none"
+                >
+                  Request Dashboard Demo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white px-8 h-12 text-base font-normal rounded-none"
+              >
                 View Visualization Examples
               </Button>
             </div>
@@ -84,290 +97,198 @@ export default function Visualization() {
         </div>
       </section>
 
-      {/* Visualization Benefits */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Real-Time Analytics Matter for Federal Missions</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              When decisions have national security implications, you cannot afford to wait for overnight ETL jobs to complete.
-            </p>
-          </div>
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+      {/* Why Real-Time Analytics Matter - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-4 tracking-tight">
+            Why Real-Time Analytics Matter for Federal Missions
+          </h2>
+          <p className="text-xl text-zinc-600 leading-relaxed font-light mb-16 max-w-3xl">
+            When decisions have national security implications, you cannot afford to wait for overnight ETL jobs to complete.
+          </p>
+
+          <div className="space-y-12">
             {visualizationBenefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
-                <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="flex gap-6">
+                <div className="flex-shrink-0">
+                  <benefit.icon className="h-8 w-8 text-zinc-900" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-normal text-zinc-900 mb-3">{benefit.title}</h3>
+                  <p className="text-base text-zinc-600 leading-relaxed">{benefit.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* The Visualization Problem */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Commercial BI Tools Are Not Built for Federal Missions</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Tableau and Power BI are excellent for sales dashboards and marketing reports. They are not designed for intelligence analysis, threat monitoring, or operational command and control. Commercial tools cannot handle classified data, lack real-time streaming capabilities, and provide no audit trails for congressional oversight.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies builds custom analytics platforms purpose-designed for federal missions. Our dashboards handle real-time sensor feeds, integrate classified and unclassified data, provide full audit trails, and meet FedRAMP High security requirements. You get intelligence platforms, not generic business intelligence tools.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Sub-Second Data Refresh</div>
-                  <div className="text-sm text-muted-foreground">Real-time streaming analytics with Apache Kafka, Flink, and Spark Streaming</div>
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
+
+      {/* Use Cases - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-16 tracking-tight">
+            Real-Time Analytics Use Cases
+          </h2>
+
+          <div className="space-y-16">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="border-l-2 border-zinc-900 pl-8">
+                <h3 className="text-2xl font-light text-zinc-900 mb-4">{useCase.title}</h3>
+                <p className="text-base text-zinc-600 leading-relaxed mb-6">{useCase.description}</p>
+                
+                <div className="flex flex-wrap gap-4">
+                  {useCase.metrics.map((metric, idx) => (
+                    <span key={idx} className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">
+                      {metric}
+                    </span>
+                  ))}
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Classified Data Handling</div>
-                  <div className="text-sm text-muted-foreground">Air-gapped deployments for TS/SCI environments with full security controls</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Custom Visualizations</div>
-                  <div className="text-sm text-muted-foreground">Purpose-built dashboards for your mission—not generic templates</div>
-                </div>
-              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
+
+      {/* FedRAMP Platforms - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-8 tracking-tight">
+            FedRAMP-Authorized Visualization Platforms
+          </h2>
+          
+          <p className="text-base text-zinc-600 leading-relaxed mb-8">
+            We implement and integrate government-authorized analytics platforms that meet your security and compliance requirements:
+          </p>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Tableau Government</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Industry-leading visual analytics with FedRAMP authorization for interactive dashboards and embedded analytics
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Microsoft Power BI Government</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Integrated with Microsoft 365 GCC High for seamless data access and collaboration
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Qlik Government</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Associative analytics engine for complex data relationships and ad-hoc exploration
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Domo Government</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Cloud-native BI platform with mobile-first design and automated data pipelines
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Mission-Critical Analytics Use Cases</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Thalen Technologies has built real-time analytics platforms for intelligence, operations, fraud detection, and executive decision support.
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
+
+      {/* Implementation Approach - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-12 tracking-tight">
+            Our Analytics Implementation Approach
+          </h2>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">1. Requirements Discovery & Platform Selection</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                We start by understanding your mission requirements, data sources, user needs, and compliance constraints. Then we help you select the RIGHT FedRAMP-authorized platform—not just the one we happen to sell.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">2. Data Architecture & Integration</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Before building dashboards, we ensure your data architecture can support real-time analytics. This includes data pipeline development, API integration, caching strategies, and performance optimization.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">3. Dashboard Design & Development</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                We design dashboards with mission users—not just IT stakeholders. Our UX-focused approach ensures dashboards surface the right insights at the right time without overwhelming users with irrelevant data.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">4. Security, Testing & Deployment</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                All dashboards undergo security review, performance testing, and user acceptance testing before production deployment. We implement role-based access controls, data masking, and audit logging as required.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">5. Training & Sustainment</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                We train your team to maintain and extend dashboards after deployment. Our goal is to enable your team to be self-sufficient—not create vendor lock-in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
+
+      {/* CTA Section - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-light text-zinc-900 tracking-tight">
+              Ready to Build Real-Time Analytics Dashboards?
+            </h2>
+            <p className="text-xl text-zinc-600 leading-relaxed font-light max-w-3xl">
+              Let's discuss your visualization requirements and how we can help you implement FedRAMP-authorized analytics platforms that deliver mission-critical intelligence.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {useCase.metrics.map((metric, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
-                        {metric}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="pt-4">
+              <Link href="/contact">
+                <Button 
+                  size="lg"
+                  className="bg-zinc-900 hover:bg-zinc-800 text-white px-8 h-12 text-base font-normal rounded-none"
+                >
+                  Request Dashboard Demo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Technology Stack */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Real-Time Analytics Technology Stack</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We use proven, government-approved technologies for mission-critical analytics.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Streaming Data Processing</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Apache Kafka for event streaming</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Apache Flink for real-time processing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Spark Streaming for batch + streaming</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Redis for sub-second caching</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Visualization & Dashboards</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>React + D3.js for custom viz</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Grafana for operational monitoring</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Mapbox for geospatial analysis</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>WebSockets for live updates</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Data Storage & Query</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>ClickHouse for OLAP queries</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Elasticsearch for full-text search</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>TimescaleDB for time-series data</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>PostgreSQL for relational data</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all active:scale-95">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold mb-2">&lt;50ms</div>
-                  <div className="text-sm opacity-80">Query response time</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">1M+</div>
-                  <div className="text-sm opacity-80">Events per second processed</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">99.99%</div>
-                  <div className="text-sm opacity-80">Platform uptime SLA</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">100%</div>
-                  <div className="text-sm opacity-80">FedRAMP High compliant</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Related Services Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Enhance your analytics capabilities with these related Thalen Technologies offerings
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Intelligent Automation & Process Optimization</h3>
-                <p className="text-muted-foreground mb-4">
-                  Turn your analytics insights into automated action. Our RPA and process orchestration solutions trigger workflows based on real-time data thresholds and alerts.
-                </p>
-                <Link href="/services/automation">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Custom Software Solutions</h3>
-                <p className="text-muted-foreground mb-4">
-                  Build custom mission applications powered by your analytics platform. We develop bespoke dashboards, mobile apps, and citizen portals that leverage your data infrastructure.
-                </p>
-                <Link href="/services/custom-software">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Real-Time Analytics for Your Mission?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a demo. We will show you live examples of real-time analytics platforms we have built for government agencies (federal, state, and local) and discuss your specific requirements.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request Live Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Download Architecture Guide
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <RelatedServices 
-        services={[
-          {
-            title: 'Data Engineering & Pipelines',
-            description: 'Build reliable data pipelines that feed your visualization and BI platforms.',
-            href: '/services/data-analytics/engineering',
-            icon: Database
-          },
-          {
-            title: 'Machine Learning & AI',
-            description: 'Enhance visualizations with predictive analytics and AI-powered insights.',
-            href: '/services/data-analytics/ml-ai',
-            icon: Brain
-          },
-          {
-            title: 'Business Intelligence Strategy',
-            description: 'Develop comprehensive BI strategy that aligns analytics with organizational goals.',
-            href: '/services/business-intelligence',
-            icon: TrendingUp
-          }
-        ]}
-        title="Enhance Your Analytics"
-        description="Combine visualization with data engineering, ML/AI, and BI strategy for complete analytics solutions."
-      />
 
       <Footer />
     </div>

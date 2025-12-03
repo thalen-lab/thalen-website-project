@@ -2584,3 +2584,5 @@
 - [x] Update ATO Compliance detail subpage
 - [x] Update CoE Setup detail subpage
 - [x] Test all pages and verify consistency
+- [x] Remove "Our Mission" section from homepage
+- [x] Increase the height of the hero section on homepage

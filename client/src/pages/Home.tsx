@@ -155,7 +155,7 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[400px] overflow-hidden">
+      <section className="relative h-[600px] overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
@@ -187,33 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-        {/* Mission Statement Section */}
-      <section className="relative py-16 md:py-20 overflow-hidden bg-white">
-        
-        {/* Content */}
-        <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
-              <span className="text-sm font-medium text-orange-600">Our Mission</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">Govern Smart</h2>
-            <p className="text-xl md:text-2xl italic text-slate-600 mb-8 leading-relaxed font-light">
-              "Our philosophy has always been to offer government agencies only the finest expertise and service. We believe in building lasting relationships based on trust, excellence, and unwavering commitment to mission success."
-            </p>
-            
-            {/* Signature - Regular Format */}
-            <div className="flex flex-col items-center mb-10">
-              <p className="text-base text-slate-600 font-medium">—David Seyaker</p>
-              <p className="text-sm text-slate-500">Principal and CEO</p>
-            </div>
-            
-            <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-orange-400 mx-auto mb-10 rounded-full"></div>
-            <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
-              We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies. From cloud migration to automation to security compliance, we handle the technical complexity so you can focus on mission delivery.
-            </p>
-          </div>
-        </div>
-      </section>
+
 
       {/* Services Section - 2x3 Grid Layout */}
       <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">

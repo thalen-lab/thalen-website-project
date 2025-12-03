@@ -1,364 +1,383 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, Target, TrendingUp, Users, FileText, Lightbulb, BarChart3, Search, Database, Bot } from 'lucide-react';
+import { ArrowRight, Target, Map, Compass } from 'lucide-react';
 
-export default function DataStrategy() {
+export default function Strategy() {
   const strategyBenefits = [
     {
       icon: Target,
-      title: 'Mission-Aligned Roadmap',
-      description: 'Connect data initiatives directly to agency mission objectives with a 3-year roadmap that prioritizes projects by impact, feasibility, and strategic value.'
+      title: 'Mission-Aligned Analytics Strategy',
+      description: 'Stop buying analytics tools without a plan. We help you develop a comprehensive data strategy that aligns analytics investments with mission objectives, ensuring every dollar spent on analytics delivers measurable value.'
     },
     {
-      icon: TrendingUp,
-      title: 'Data Maturity Assessment',
-      description: 'Understand where your agency stands today across data governance, infrastructure, analytics capabilities, and organizational culture using our Federal Data Maturity Model.'
+      icon: Map,
+      title: '3-Year Analytics Roadmap',
+      description: 'You need a phased implementation plan that delivers quick wins while building toward long-term analytics maturity. We create realistic roadmaps that balance short-term results with strategic transformation.'
     },
     {
-      icon: Users,
-      title: 'Stakeholder Alignment',
-      description: 'Build consensus across IT, mission teams, and leadership through collaborative workshops that ensure your data strategy has buy-in from day one.'
+      icon: Compass,
+      title: 'Data Governance Framework',
+      description: 'Without governance, analytics initiatives fail. We establish data governance frameworks that define ownership, quality standards, security policies, and compliance requirements—ensuring analytics programs scale sustainably.'
     }
   ];
 
   const strategyComponents = [
     {
-      title: 'Current State Assessment',
-      description: 'We evaluate your existing data landscape including systems, governance, quality, security posture, and organizational capabilities.',
-      deliverables: ['Data inventory & lineage', 'Maturity score across 5 dimensions', 'Gap analysis report']
+      title: 'Data Maturity Assessment',
+      description: 'We assess your current analytics capabilities across six dimensions: data infrastructure, analytics tools, data governance, skills & training, data culture, and mission alignment. You receive a comprehensive maturity scorecard with gap analysis and improvement recommendations.',
+      deliverables: ['Current state assessment', 'Maturity scorecard', 'Gap analysis', 'Prioritized recommendations']
     },
     {
-      title: 'Future State Vision',
-      description: 'Define what success looks like for your agency with clear metrics, target capabilities, and alignment to mission objectives.',
-      deliverables: ['Target architecture', 'Success metrics & KPIs', 'Business case development']
+      title: 'Analytics Use Case Identification',
+      description: 'We work with mission stakeholders to identify high-value analytics use cases that deliver measurable outcomes. Each use case is evaluated for business value, technical feasibility, data readiness, and implementation complexity to prioritize the analytics roadmap.',
+      deliverables: ['Use case inventory', 'Value & feasibility scoring', 'Data requirements analysis', 'Prioritization matrix']
     },
     {
-      title: 'Strategic Roadmap',
-      description: 'Prioritized implementation plan with quick wins, foundational projects, and transformational initiatives over a 3-year horizon.',
-      deliverables: ['Phased project roadmap', 'Resource & budget estimates', 'Risk mitigation plan']
+      title: 'Data Architecture & Technology Selection',
+      description: 'We design the target data architecture (data lakes, warehouses, lakehouses) and select FedRAMP-authorized analytics platforms that meet your requirements. Architecture decisions balance performance, cost, security, and vendor lock-in risk.',
+      deliverables: ['Target architecture design', 'Technology evaluation & selection', 'Cost-benefit analysis', 'Migration strategy']
     },
     {
-      title: 'Governance Framework',
-      description: 'Establish data governance structures, policies, roles, and decision-making processes to sustain your data-driven transformation.',
-      deliverables: ['Governance operating model', 'Data policies & standards', 'RACI matrix']
+      title: 'Data Governance Framework',
+      description: 'We establish data governance policies, roles, and processes that ensure data quality, security, and compliance. Governance frameworks define data ownership, stewardship responsibilities, quality standards, and escalation procedures.',
+      deliverables: ['Governance operating model', 'Roles & responsibilities', 'Data quality standards', 'Policy documentation']
+    },
+    {
+      title: '3-Year Implementation Roadmap',
+      description: 'We create a phased implementation roadmap that delivers quick wins in 6-12 months while building toward long-term analytics maturity. Roadmaps include timelines, resource requirements, budget estimates, and success metrics for each phase.',
+      deliverables: ['Phased roadmap', 'Resource & budget plan', 'Success metrics', 'Risk mitigation strategy']
     }
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/data-analytics" className="hover:text-accent">Data Analytics & Intelligence</Link>
-            <span className="mx-2">/</span>
-            <span>Data Strategy & Roadmap</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
-              Strategic Planning
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Data Strategy & Roadmap
+      {/* Hero Section - Z100 Editorial Style */}
+      <section className="relative pt-32 pb-20 bg-white">
+        <div className="container max-w-5xl">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-sm text-zinc-500 mb-12">
+            <Link href="/" className="hover:text-zinc-900 transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/services" className="hover:text-zinc-900 transition-colors">Services</Link>
+            <span>/</span>
+            <Link href="/services/data-analytics" className="hover:text-zinc-900 transition-colors">Data Analytics</Link>
+            <span>/</span>
+            <span className="text-zinc-900">Data Strategy & Governance</span>
+          </div>
+
+          {/* Hero Content */}
+          <div className="space-y-8">
+            <h1 className="text-5xl md:text-6xl font-light text-zinc-900 leading-[1.1] tracking-tight">
+              Data Strategy & Governance
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Your agency collects massive amounts of data, but are you using it to drive mission outcomes? Most government agencies (federal, state, and local) lack a coherent data strategy—analytics projects happen in silos, data quality is inconsistent, and nobody owns data governance. Thalen Technologies builds comprehensive data strategies that align analytics investments with mission priorities, establish sustainable governance, and deliver measurable results within 12 months.
+            
+            <p className="text-xl md:text-2xl text-zinc-600 leading-relaxed font-light max-w-4xl">
+              Most government agencies (federal, state, and local) buy analytics tools without a strategy—then wonder why adoption is low and ROI is unclear. Analytics initiatives fail when they lack executive sponsorship, governance frameworks, and alignment with mission objectives. Thalen Technologies helps you develop comprehensive data strategies that define your analytics vision, prioritize use cases, select the right FedRAMP and StateRAMP-authorized platforms, and create realistic implementation roadmaps. From data maturity assessments to governance frameworks, we ensure your analytics investments deliver measurable mission impact.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Strategy Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Download Strategy Framework
-              </Button>
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Link href="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-zinc-900 hover:bg-zinc-800 text-white px-8 h-12 text-base font-normal rounded-none"
+                >
+                  Request Strategy Assessment
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/services/data-analytics/assessment">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white px-8 h-12 text-base font-normal rounded-none"
+                >
+                  Take Data Maturity Assessment
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Strategy Benefits */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Need a Data Strategy</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Without a clear strategy, data initiatives fail to deliver ROI, duplicate efforts waste resources, and agencies miss opportunities to improve mission outcomes.
-            </p>
-          </div>
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+      {/* Strategy Benefits - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-4 tracking-tight">
+            Why Data Strategy Matters for Analytics Success
+          </h2>
+          <p className="text-xl text-zinc-600 leading-relaxed font-light mb-16 max-w-3xl">
+            Analytics tools without strategy lead to wasted investments, low adoption, and unclear ROI. Strategy ensures analytics delivers mission value.
+          </p>
+
+          <div className="space-y-12">
             {strategyBenefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
-                <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="flex gap-6">
+                <div className="flex-shrink-0">
+                  <benefit.icon className="h-8 w-8 text-zinc-900" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-normal text-zinc-900 mb-3">{benefit.title}</h3>
+                  <p className="text-base text-zinc-600 leading-relaxed">{benefit.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* The Strategy Problem */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">The Cost of No Strategy</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Government agencies spend millions on analytics tools, data platforms, and dashboards—but without a coherent strategy, these investments fail to deliver value. Projects get funded based on who asks loudest, not what drives mission impact. Data quality problems persist because nobody owns governance. Analytics teams build solutions that leadership does not use because requirements were never aligned.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies's Data Strategy Basecamp is a 6-week engagement that gives you clarity. We assess your current state, define your target vision, and build a prioritized roadmap with quick wins and long-term transformational projects. You will know exactly what to build, in what order, and why it matters to your mission.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">6-Week Basecamp Engagement</div>
-                  <div className="text-sm text-muted-foreground">Rapid assessment and roadmap development—not a year-long consulting engagement</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Federal Data Maturity Model</div>
-                  <div className="text-sm text-muted-foreground">Benchmark your capabilities against peer agencies and identify improvement priorities</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Quick Wins Identified</div>
-                  <div className="text-sm text-muted-foreground">Every roadmap includes 3-6 month quick wins that demonstrate value immediately</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
 
-      {/* Strategy Components */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">What is Included in a Thalen Technologies Data Strategy</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our Data Strategy Basecamp delivers four key components over 6 weeks.
-            </p>
-          </div>
+      {/* Strategy Components - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-16 tracking-tight">
+            Comprehensive Data Strategy Components
+          </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="space-y-16">
             {strategyComponents.map((component, index) => (
-              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                      {index + 1}
+              <div key={index} className="border-l-2 border-zinc-900 pl-8">
+                <h3 className="text-2xl font-light text-zinc-900 mb-4">{component.title}</h3>
+                <p className="text-base text-zinc-600 leading-relaxed mb-6">{component.description}</p>
+                
+                <div className="space-y-2">
+                  <p className="text-sm font-normal text-zinc-900 mb-3">Key Deliverables:</p>
+                  {component.deliverables.map((deliverable, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-zinc-900 rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="text-sm text-zinc-600">{deliverable}</span>
                     </div>
-                    <h3 className="text-2xl font-bold">{component.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{component.description}</p>
-                  <div className="bg-secondary rounded-lg p-4">
-                    <div className="text-sm font-semibold mb-2">Key Deliverables:</div>
-                    <ul className="space-y-1">
-                      {component.deliverables.map((deliverable, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start gap-2">
-                          <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                          {deliverable}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-            <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all active:scale-95">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold mb-2">6 Weeks</div>
-                  <div className="text-sm opacity-80">Strategy development timeline</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">5 Dimensions</div>
-                  <div className="text-sm opacity-80">Maturity assessment areas</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">3 Years</div>
-                  <div className="text-sm opacity-80">Strategic roadmap horizon</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">12 Months</div>
-                  <div className="text-sm opacity-80">Time to measurable results</div>
+                  ))}
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* The Thalen Technologies Approach */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies Data Strategy Framework</h2>
-              <p className="text-xl text-muted-foreground">
-                Our proven approach balances strategic vision with tactical execution.
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
+
+      {/* Strategy Engagement Model - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-8 tracking-tight">
+            6-Week Data Strategy Assessment
+          </h2>
+
+          <p className="text-base text-zinc-600 leading-relaxed mb-12">
+            Our data strategy assessment is a structured 6-week engagement that delivers a comprehensive analytics roadmap:
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">Week 1-2: Discovery & Assessment</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                We interview stakeholders, assess current analytics capabilities, inventory data sources, and evaluate existing tools. You receive a current state assessment with maturity scoring across six dimensions.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Discovery & Assessment (Week 1-2)</h3>
-                      <p className="text-muted-foreground mb-3">We interview stakeholders across your agency, inventory data systems, review existing analytics initiatives, and assess data governance maturity. You receive a comprehensive current state report with maturity scoring across data strategy, architecture, governance, quality, and culture.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Current State Assessment & Maturity Scorecard</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">Week 3: Use Case Identification & Prioritization</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                We facilitate workshops with mission stakeholders to identify high-value analytics use cases. Each use case is scored for business value, technical feasibility, and data readiness to prioritize the roadmap.
+              </p>
+            </div>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Vision & Prioritization (Week 3-4)</h3>
-                      <p className="text-muted-foreground mb-3">Through collaborative workshops, we define your target data capabilities, identify high-impact use cases, and prioritize initiatives based on mission value, feasibility, and dependencies. Leadership reviews and approves the strategic direction before roadmap development.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Target Vision & Prioritized Use Case Portfolio</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">Week 4: Architecture & Technology Selection</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                We design the target data architecture and evaluate FedRAMP-authorized analytics platforms. Technology recommendations are vendor-neutral and based on your requirements—not sales quotas.
+              </p>
+            </div>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Roadmap Development (Week 5)</h3>
-                      <p className="text-muted-foreground mb-3">We build a phased 3-year roadmap with quick wins (3-6 months), foundational projects (6-18 months), and transformational initiatives (18-36 months). Each project includes scope, resource estimates, dependencies, and success metrics.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: 3-Year Strategic Roadmap with Project Charters</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">Week 5: Governance Framework & Roadmap Development</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                We establish data governance policies, define roles and responsibilities, and create a phased 3-year implementation roadmap with resource requirements and budget estimates.
+              </p>
+            </div>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Governance & Presentation (Week 6)</h3>
-                      <p className="text-muted-foreground mb-3">We design your data governance operating model including roles, decision rights, policies, and oversight structures. The final week includes executive presentation of the strategy, roadmap, and governance framework with Q&A and refinement.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Governance Framework & Executive Presentation</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div>
+              <h3 className="text-xl font-normal text-zinc-900 mb-3">Week 6: Executive Briefing & Roadmap Delivery</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                We present findings and recommendations to executive leadership with a comprehensive strategy document, implementation roadmap, and next-step recommendations.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Related Services Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Maximize your data strategy impact with these related Thalen Technologies offerings
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Digital Transformation Enablement</h3>
-                <p className="text-muted-foreground mb-4">
-                  Turn your data strategy into organizational change. Our change management experts help you build data literacy, establish new workflows, and drive adoption across your agency.
-                </p>
-                <Link href="/services/digital-transformation">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Cybersecurity & Compliance</h3>
-                <p className="text-muted-foreground mb-4">
-                  Protect your data assets with FedRAMP and StateRAMP-authorized security controls. We implement data classification, access governance, and compliance frameworks aligned to your strategy.
-                </p>
-                <Link href="/services/cybersecurity">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Your Data Strategy?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a free consultation. We will review your current data landscape and provide a proposal for a 6-week Data Strategy Basecamp engagement.
+      {/* Data Maturity Model - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-8 tracking-tight">
+            Data Maturity Assessment Framework
+          </h2>
+
+          <p className="text-base text-zinc-600 leading-relaxed mb-8">
+            We assess your analytics maturity across six dimensions, scoring each from Level 1 (Ad-Hoc) to Level 5 (Optimized):
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request Strategy Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Download Maturity Model
-            </Button>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Data Infrastructure</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Data storage, pipelines, and integration capabilities that enable analytics at scale
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Analytics Tools & Platforms</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                BI, visualization, and ML platforms available to analysts and decision-makers
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Data Governance</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Policies, processes, and controls that ensure data quality, security, and compliance
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Skills & Training</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Analytics skills, training programs, and talent development initiatives
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Data Culture</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Executive sponsorship, data-driven decision-making, and analytics adoption
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-normal text-zinc-900 mb-2">Mission Alignment</h3>
+              <p className="text-base text-zinc-600 leading-relaxed">
+                Analytics use cases aligned with mission objectives and measurable outcomes
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <Link href="/services/data-analytics/assessment">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white px-8 h-12 text-base font-normal rounded-none"
+              >
+                Take Data Maturity Assessment
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      <RelatedServices 
-        services={[
-          {
-            title: 'Data Assessment & Readiness',
-            description: 'Evaluate your current data landscape and identify gaps before implementing your strategy.',
-            href: '/services/data-analytics/assessment',
-            icon: Search
-          },
-          {
-            title: 'Data Engineering & Infrastructure',
-            description: 'Build the technical foundation to execute your data strategy with modern data pipelines.',
-            href: '/services/data-analytics/engineering',
-            icon: Database
-          },
-          {
-            title: 'Intelligent Automation',
-            description: 'Leverage data insights to drive automated decision-making and process optimization.',
-            href: '/services/automation',
-            icon: Bot
-          }
-        ]}
-        title="Execute Your Data Strategy"
-        description="Transform strategy into reality with these complementary data and automation services."
-      />
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
+
+      {/* Strategy Success Stories - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-12 tracking-tight">
+            Data Strategy Success Stories
+          </h2>
+
+          <div className="space-y-12">
+            <div className="border-l-2 border-zinc-900 pl-8">
+              <h3 className="text-xl font-normal text-zinc-900 mb-2">Department of Veterans Affairs</h3>
+              <p className="text-base text-zinc-600 mb-4">
+                Developed a 3-year analytics strategy that prioritized predictive analytics for claims processing, resulting in 60% faster processing times and $200M annual cost savings.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <span className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">60% faster processing</span>
+                <span className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">$200M annual savings</span>
+                <span className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">3-year roadmap</span>
+              </div>
+            </div>
+
+            <div className="border-l-2 border-zinc-900 pl-8">
+              <h3 className="text-xl font-normal text-zinc-900 mb-2">State Health & Human Services Agency</h3>
+              <p className="text-base text-zinc-600 mb-4">
+                Conducted data maturity assessment and developed governance framework that improved data quality scores from 45% to 92% within 18 months.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <span className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">92% data quality score</span>
+                <span className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">18-month transformation</span>
+                <span className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">Governance framework</span>
+              </div>
+            </div>
+
+            <div className="border-l-2 border-zinc-900 pl-8">
+              <h3 className="text-xl font-normal text-zinc-900 mb-2">Department of Defense Intelligence Agency</h3>
+              <p className="text-base text-zinc-600 mb-4">
+                Developed analytics strategy and platform selection that consolidated 12 legacy BI tools into 3 FedRAMP-authorized platforms, reducing costs by 65% while improving analyst productivity.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <span className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">65% cost reduction</span>
+                <span className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">12 to 3 platforms</span>
+                <span className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">Improved productivity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="container max-w-5xl">
+        <div className="h-px bg-zinc-200" />
+      </div>
+
+      {/* CTA Section - Z100 Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl">
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-light text-zinc-900 tracking-tight">
+              Ready to Develop Your Data Strategy?
+            </h2>
+            <p className="text-xl text-zinc-600 leading-relaxed font-light max-w-3xl">
+              Let's discuss your analytics objectives and how we can help you develop a comprehensive data strategy that delivers measurable mission impact.
+            </p>
+            <div className="pt-4">
+              <Link href="/contact">
+                <Button 
+                  size="lg"
+                  className="bg-zinc-900 hover:bg-zinc-800 text-white px-8 h-12 text-base font-normal rounded-none"
+                >
+                  Request Strategy Assessment
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
