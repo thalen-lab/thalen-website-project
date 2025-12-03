@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Shield, Cloud, Lock, Database, Zap, Cpu } from "lucide-react";
+import { ArrowRight, Shield, Cloud, Lock, Database, Zap, Cpu } from "lucide-react";
 
 export default function Partners() {
   return (
@@ -40,32 +40,23 @@ export default function Partners() {
       <section className="py-16 bg-muted/30">
         <div className="container max-w-5xl">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="font-bold text-lg mb-2">Vendor-Neutral Consulting</h3>
-                <p className="text-muted-foreground text-sm">
-                  We evaluate and recommend platforms based on your requirements—not commission structures.
-                </p>
-              </div>
+            <div className="border-l-4 border-accent pl-6">
+              <h3 className="font-bold text-lg mb-2">Vendor-Neutral Consulting</h3>
+              <p className="text-muted-foreground text-sm">
+                We evaluate and recommend platforms based on your requirements—not commission structures.
+              </p>
             </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="font-bold text-lg mb-2">Implementation Expertise</h3>
-                <p className="text-muted-foreground text-sm">
-                  Our team holds certifications across 50+ platforms—we implement what you choose, not what we sell.
-                </p>
-              </div>
+            <div className="border-l-4 border-accent pl-6">
+              <h3 className="font-bold text-lg mb-2">Implementation Expertise</h3>
+              <p className="text-muted-foreground text-sm">
+                Our team holds certifications across 50+ platforms—we implement what you choose, not what we sell.
+              </p>
             </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="font-bold text-lg mb-2">Government-First Focus</h3>
-                <p className="text-muted-foreground text-sm">
-                  All partnerships support FedRAMP/StateRAMP compliance for federal, state, and local agencies.
-                </p>
-              </div>
+            <div className="border-l-4 border-accent pl-6">
+              <h3 className="font-bold text-lg mb-2">Government-First Focus</h3>
+              <p className="text-muted-foreground text-sm">
+                All partnerships support FedRAMP/StateRAMP compliance for federal, state, and local agencies.
+              </p>
             </div>
           </div>
         </div>
