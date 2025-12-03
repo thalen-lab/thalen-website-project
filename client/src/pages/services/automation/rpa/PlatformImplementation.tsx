@@ -293,7 +293,7 @@ export default function PlatformImplementation() {
 
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+               <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">No Vendor Partnerships</h4>
                 <p className="text-muted-foreground leading-relaxed">We maintain independence from all RPA vendors to provide unbiased recommendations</p>

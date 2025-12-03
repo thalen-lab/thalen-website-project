@@ -260,7 +260,7 @@ export default function CoESetup() {
 
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+               <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">10-15 Bots Deployed in Year 1</h4>
                 <p className="text-muted-foreground leading-relaxed">Typical deployment velocity for agencies with established CoE frameworks</p>

@@ -199,42 +199,42 @@ export default function Orchestration() {
 
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">Visual Workflow Designer</h4>
                 <p className="text-muted-foreground leading-relaxed">Drag-and-drop interface for building complex workflows without coding</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">Intelligent Routing & Assignment</h4>
                 <p className="text-muted-foreground leading-relaxed">Route work based on business rules, workload balancing, and skill matching</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">SLA Management & Escalation</h4>
                 <p className="text-muted-foreground leading-relaxed">Automatically escalate aging work items and enforce service level agreements</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">Real-Time Analytics Dashboard</h4>
                 <p className="text-muted-foreground leading-relaxed">Monitor process performance, identify bottlenecks, and track KPIs in real-time</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">Compliance & Audit Trail</h4>
                 <p className="text-muted-foreground leading-relaxed">Complete audit logs for every action, decision, and system interaction</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">Multi-System Integration</h4>
                 <p className="text-muted-foreground leading-relaxed">Connect workflows to 50+ FedRAMP platforms and legacy government systems</p>

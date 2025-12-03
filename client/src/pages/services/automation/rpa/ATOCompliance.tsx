@@ -245,7 +245,7 @@ export default function ATOCompliance() {
           <div className="space-y-8">
             {deliverables.map((item, index) => (
               <div key={index} className="flex items-start gap-6">
-                <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
                     <h3 className="text-xl font-bold">{item.title}</h3>
@@ -281,7 +281,7 @@ export default function ATOCompliance() {
 
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+               <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">50+ Successful ATOs</h4>
                 <p className="text-muted-foreground leading-relaxed">Proven track record securing Authority to Operate for RPA deployments across government agencies</p>

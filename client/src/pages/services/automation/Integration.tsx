@@ -124,28 +124,28 @@ export default function Integration() {
 
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">50+ Pre-Built FedRAMP Connectors</h4>
                 <p className="text-muted-foreground leading-relaxed">Salesforce Gov Cloud, ServiceNow Gov, Workday Gov, Microsoft 365 GCC High, and more</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">Legacy System Support</h4>
                 <p className="text-muted-foreground leading-relaxed">AS/400, Oracle E-Business Suite, SAP ECC, COBOL applications, and custom databases</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">Air-Gapped Network Orchestration</h4>
                 <p className="text-muted-foreground leading-relaxed">Secure data transfer between classified and unclassified environments with full compliance</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
               <div>
                 <h4 className="font-semibold mb-1">Real-Time & Batch Processing</h4>
                 <p className="text-muted-foreground leading-relaxed">Choose the right integration pattern for each use case—event-driven, scheduled, or on-demand</p>

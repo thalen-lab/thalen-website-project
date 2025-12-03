@@ -171,7 +171,7 @@ export default function RPA() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">{capability.description}</p>
@@ -185,30 +185,54 @@ export default function RPA() {
 
 
 
-      {/* FedRAMP RPA Platform Expertise */}
+      {/* FedRAMP RPA Platform Expertise - Z100 Editorial Style with Cards */}
       <section className="py-20 bg-background">
         <div className="container max-w-5xl">
           <div className="mb-16">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized RPA Platform Expertise</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">FedRAMP-Authorized RPA Platform Expertise</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
               We implement and integrate FedRAMP-authorized RPA platforms from leading vendors, helping you select the right tools for your mission.
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-16">
             {fedrampPlatforms.map((category, index) => (
               <div key={index}>
-                <h3 className="text-2xl font-bold mb-6">{category.category}</h3>
-                <div className="flex flex-wrap gap-3">
+                {/* Horizontal Divider with Orange Accent */}
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-1 h-8 bg-orange-500 rounded-full"></div>
+                  <h3 className="text-2xl font-bold">{category.category}</h3>
+                </div>
+                
+                {/* Platform Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {category.platforms.map((platform, idx) => (
-                    <span key={idx} className="bg-secondary border border-border text-foreground px-4 py-2 rounded-full text-sm font-medium">
-                      {platform}
-                    </span>
+                    <div 
+                      key={idx} 
+                      className="group bg-white border border-gray-200 rounded-lg p-6 hover:border-orange-500 hover:shadow-md transition-all duration-300 cursor-pointer"
+                    >
+                      <h4 className="font-semibold text-base text-gray-900 mb-2">{platform}</h4>
+                      <p className="text-sm text-gray-600">
+                        {idx === 0 && category.category === 'Enterprise RPA Platforms' && 'Enterprise-grade RPA with AI-powered automation capabilities'}
+                        {idx === 1 && category.category === 'Enterprise RPA Platforms' && 'Cloud-native intelligent automation platform'}
+                        {idx === 2 && category.category === 'Enterprise RPA Platforms' && 'Secure, scalable RPA for mission-critical operations'}
+                        {idx === 3 && category.category === 'Enterprise RPA Platforms' && 'Low-code automation integrated with Microsoft 365'}
+                        {idx === 0 && category.category === 'Intelligent Document Processing' && 'AI-powered document understanding and extraction'}
+                        {idx === 1 && category.category === 'Intelligent Document Processing' && 'Intelligent document processing with cognitive capture'}
+                        {idx === 2 && category.category === 'Intelligent Document Processing' && 'Enterprise capture and document processing platform'}
+                        {idx === 3 && category.category === 'Intelligent Document Processing' && 'Intelligent automation for document-centric processes'}
+                        {idx === 0 && category.category === 'Process Mining & Analytics' && 'End-to-end process mining and optimization platform'}
+                        {idx === 1 && category.category === 'Process Mining & Analytics' && 'Process intelligence and execution management'}
+                        {idx === 2 && category.category === 'Process Mining & Analytics' && 'Process analytics and optimization for Power Platform'}
+                        {idx === 3 && category.category === 'Process Mining & Analytics' && 'Business process analysis and mining platform'}
+                        {idx === 0 && category.category === 'Workflow Orchestration' && 'Enterprise service management and workflow automation'}
+                        {idx === 1 && category.category === 'Workflow Orchestration' && 'Low-code platform for business process management'}
+                        {idx === 2 && category.category === 'Workflow Orchestration' && 'Enterprise low-code automation platform'}
+                        {idx === 3 && category.category === 'Workflow Orchestration' && 'Open-source workflow and decision automation'}
+                      </p>
+                    </div>
                   ))}
                 </div>
-                {index < fedrampPlatforms.length - 1 && (
-                  <div className="border-t border-border mt-12"></div>
-                )}
               </div>
             ))}
           </div>
