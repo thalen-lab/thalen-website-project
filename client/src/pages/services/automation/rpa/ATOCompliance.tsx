@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Shield, FileCheck, Lock, AlertTriangle, CheckCircle2, FileText, Users, Clock } from 'lucide-react';
+import { ArrowRight, Shield, FileCheck, Lock, AlertTriangle } from 'lucide-react';
 
 export default function ATOCompliance() {
   const complianceFrameworks = [
@@ -78,97 +78,32 @@ export default function ATOCompliance() {
       activities: [
         'Compile complete ATO package for review',
         'Present to agency Authorizing Official (AO)',
-        'Address AO questions and concerns',
+        'Address AO questions and remediate findings',
         'Receive ATO decision and authorization letter'
       ]
     }
   ];
 
-  const atoDocuments = [
+  const deliverables = [
     {
-      document: 'System Security Plan (SSP)',
-      description: 'Comprehensive documentation of security controls, system architecture, and implementation details.',
-      pages: '150-300 pages',
-      icon: FileText
+      title: 'System Security Plan (SSP)',
+      description: 'Comprehensive documentation of security controls, system architecture, and compliance posture',
+      pages: '100-200 pages'
     },
     {
-      document: 'Security Assessment Report (SAR)',
-      description: 'Independent assessment of security controls with findings, risks, and remediation recommendations.',
-      pages: '50-100 pages',
-      icon: FileCheck
+      title: 'Security Assessment Report (SAR)',
+      description: 'Independent assessment of security control effectiveness with test results and findings',
+      pages: '50-100 pages'
     },
     {
-      document: 'Plan of Action & Milestones (POA&M)',
-      description: 'Tracking document for identified vulnerabilities with remediation timelines and responsible parties.',
-      pages: '10-30 pages',
-      icon: Clock
+      title: 'Plan of Action & Milestones (POA&M)',
+      description: 'Remediation plan for identified vulnerabilities with timelines and responsible parties',
+      pages: '10-20 pages'
     },
     {
-      document: 'Continuous Monitoring Plan',
-      description: 'Ongoing security monitoring strategy including scanning schedules, metrics, and reporting procedures.',
-      pages: '20-40 pages',
-      icon: Shield
-    },
-    {
-      document: 'Incident Response Plan',
-      description: 'Procedures for detecting, responding to, and recovering from security incidents.',
-      pages: '30-50 pages',
-      icon: AlertTriangle
-    },
-    {
-      document: 'Contingency Plan',
-      description: 'Business continuity and disaster recovery procedures for RPA systems.',
-      pages: '40-60 pages',
-      icon: Users
-    }
-  ];
-
-  const securityControls = [
-    {
-      family: 'Access Control (AC)',
-      examples: ['AC-2: Account Management', 'AC-3: Access Enforcement', 'AC-6: Least Privilege'],
-      rpaContext: 'Bot credentials, role-based access, privileged account management'
-    },
-    {
-      family: 'Audit & Accountability (AU)',
-      examples: ['AU-2: Audit Events', 'AU-6: Audit Review', 'AU-12: Audit Generation'],
-      rpaContext: 'Bot activity logging, transaction auditing, compliance reporting'
-    },
-    {
-      family: 'Identification & Authentication (IA)',
-      examples: ['IA-2: User Identification', 'IA-5: Authenticator Management', 'IA-8: Identification'],
-      rpaContext: 'Bot authentication, credential rotation, PIV/CAC integration'
-    },
-    {
-      family: 'System & Communications Protection (SC)',
-      examples: ['SC-7: Boundary Protection', 'SC-8: Transmission Confidentiality', 'SC-13: Cryptographic Protection'],
-      rpaContext: 'Network segmentation, encrypted communications, data protection'
-    },
-    {
-      family: 'System & Information Integrity (SI)',
-      examples: ['SI-2: Flaw Remediation', 'SI-3: Malicious Code Protection', 'SI-4: System Monitoring'],
-      rpaContext: 'Bot patching, malware protection, anomaly detection'
-    }
-  ];
-
-  const governmentExperience = [
-    {
-      agency: 'Federal Civilian Agency',
-      framework: 'FedRAMP Moderate',
-      timeline: '14 weeks to ATO',
-      outcome: 'Zero high-risk findings, approved on first submission'
-    },
-    {
-      agency: 'Department of Defense',
-      framework: 'CMMC Level 2 + NIST 800-171',
-      timeline: '18 weeks to ATO',
-      outcome: 'Full compliance, 45 bots authorized for production'
-    },
-    {
-      agency: 'Intelligence Community',
-      framework: 'ICD 503 + NIST 800-53 High',
-      timeline: '22 weeks to ATO',
-      outcome: 'High-security environment authorization achieved'
+      title: 'Continuous Monitoring Plan',
+      description: 'Ongoing security monitoring, vulnerability management, and compliance reporting procedures',
+      pages: '20-30 pages'
     }
   ];
 
@@ -182,31 +117,26 @@ export default function ATOCompliance() {
           <nav className="text-sm mb-6 opacity-80">
             <Link href="/services/automation" className="hover:text-accent">Intelligent Automation</Link>
             <span className="mx-2">/</span>
-            <Link href="/services/automation/rpa" className="hover:text-accent">RPA Implementation</Link>
+            <Link href="/services/automation/rpa" className="hover:text-accent">Government RPA</Link>
             <span className="mx-2">/</span>
             <span>ATO & Compliance</span>
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
-              Security First, Mission Always
+            <div className="inline-block px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-4 border border-orange-500/30">
+              COMPLIANCE & SECURITY SERVICES
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              RPA ATO & Compliance Documentation
+              ATO & Compliance Documentation
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Government RPA deployments (federal, state, and local) require rigorous security documentation and compliance validation. We provide complete ATO packages for FedRAMP, StateRAMP, and CMMC compliance, security control implementation, and ongoing compliance support—so your bots meet agency security requirements without delays.
+            <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+              Deploying RPA in government environments requires rigorous security controls documentation and ATO (Authority to Operate) approval. We provide complete compliance support—from System Security Plans to Security Assessment Reports—ensuring your RPA deployment meets FedRAMP, FISMA, and agency-specific requirements. Our team has secured ATOs for 50+ government RPA implementations.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                  Request ATO Support
+                  Request ATO Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/case-studies/federal-automation">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  View Compliance Case Study
                 </Button>
               </Link>
             </div>
@@ -214,78 +144,33 @@ export default function ATOCompliance() {
         </div>
       </section>
 
-      {/* Compliance Frameworks */}
+      {/* Compliance Frameworks - Keep Cards for Comparison */}
       <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Government Compliance Frameworks We Support</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive documentation and control implementation for all major government security frameworks
+        <div className="container max-w-6xl">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Government Compliance Frameworks</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              We provide compliance documentation and ATO support for all major government security frameworks.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {complianceFrameworks.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-accent transition-all duration-300">
-                  <CardContent className="pt-8">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-1">{item.framework}</h3>
-                        <p className="text-sm text-muted-foreground">{item.description}</p>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="bg-muted rounded-lg px-3 py-2">
-                        <div className="text-xs font-semibold mb-1">Authorization Levels</div>
-                        <div className="text-xs">{item.levels.join(', ')}</div>
-                      </div>
-                      <div className="bg-muted rounded-lg px-3 py-2">
-                        <div className="text-xs font-semibold mb-1">Security Controls</div>
-                        <div className="text-xs">{item.controls}</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
-      {/* ATO Process */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our ATO Process</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Typical timeline: 10-16 weeks from kickoff to ATO authorization
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {atoPhases.map((phase, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <div className="text-sm text-primary font-semibold">{phase.phase}</div>
-                      <h3 className="text-xl font-bold">{phase.title}</h3>
-                      <div className="text-sm text-muted-foreground">Duration: {phase.duration}</div>
-                    </div>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {complianceFrameworks.map((item, index) => (
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all">
+                <CardContent className="p-8">
+                  <item.icon className="h-12 w-12 text-primary mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">{item.framework}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{item.description}</p>
+                  
                   <div className="space-y-2">
-                    {phase.activities.map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-1" />
-                        <span className="text-sm">{activity}</span>
-                      </div>
-                    ))}
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-semibold">Authorization Levels:</span>
+                      <span className="text-sm text-muted-foreground">{item.levels.join(', ')}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-semibold">Security Controls:</span>
+                      <span className="text-sm text-muted-foreground">{item.controls}</span>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -294,130 +179,154 @@ export default function ATOCompliance() {
         </div>
       </section>
 
-      {/* ATO Documents */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Complete ATO Documentation Package</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We deliver all required artifacts for agency Authorizing Official (AO) review and approval
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {atoDocuments.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <Card key={index} className="border-2">
-                  <CardContent className="pt-8">
-                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-2">{item.document}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
-                    <div className="inline-block bg-card border border-border text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                      {item.pages}
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
 
-      {/* Security Controls */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">NIST 800-53 Security Controls for RPA</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We document and implement security controls specific to RPA deployments
+      {/* ATO Process - Z100 Editorial Style */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our ATO Process</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              A proven four-phase methodology for securing Authority to Operate for RPA deployments in government environments.
             </p>
           </div>
-          <div className="space-y-4 max-w-5xl mx-auto">
-            {securityControls.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">
-                      {index + 1}
+
+          <div className="space-y-16">
+            {atoPhases.map((phase, index) => (
+              <div key={index}>
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-orange-500/10 border-2 border-orange-500 flex items-center justify-center">
+                      <span className="text-xl font-bold text-orange-500">{phase.phase.split(' ')[1]}</span>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-2">{item.family}</h3>
-                      <div className="mb-3">
-                        <div className="text-sm font-semibold mb-1">Example Controls:</div>
-                        <div className="flex flex-wrap gap-2">
-                          {item.examples.map((example, idx) => (
-                            <span key={idx} className="inline-block bg-muted text-foreground px-3 py-1 rounded-full text-xs">
-                              {example}
-                            </span>
-                          ))}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
+                      <h3 className="text-3xl font-bold">{phase.title}</h3>
+                      <span className="text-sm text-muted-foreground font-semibold">{phase.duration}</span>
+                    </div>
+                    <div className="space-y-3">
+                      {phase.activities.map((activity, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                          <p className="text-muted-foreground leading-relaxed">{activity}</p>
                         </div>
-                      </div>
-                      <div className="bg-muted rounded-lg px-4 py-3">
-                        <div className="text-xs font-semibold mb-1">RPA Context:</div>
-                        <div className="text-sm">{item.rpaContext}</div>
-                      </div>
+                      ))}
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+                {index < atoPhases.length - 1 && (
+                  <div className="border-t border-border mt-16"></div>
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Government Experience */}
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* ATO Deliverables - Z100 Editorial Style */}
       <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Government ATO Success Stories</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We've secured ATOs for RPA deployments across federal, defense, and intelligence agencies
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold mb-4">ATO Package Deliverables</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Complete documentation package required for ATO approval and ongoing compliance.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {governmentExperience.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                    <Shield className="h-6 w-6 text-primary" />
+
+          <div className="space-y-8">
+            {deliverables.map((item, index) => (
+              <div key={index} className="flex items-start gap-6">
+                <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+                    <h3 className="text-xl font-bold">{item.title}</h3>
+                    <span className="text-sm text-muted-foreground font-semibold">{item.pages}</span>
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{item.agency}</h3>
-                  <div className="mb-3">
-                    <div className="inline-block bg-card border border-border text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                      {item.framework}
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">{item.timeline}</p>
-                  <p className="text-sm font-semibold text-primary">{item.outcome}</p>
-                </CardContent>
-              </Card>
+                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
+              </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* Why ATO Support Matters - Z100 Editorial Style */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold mb-4">Why ATO Support Matters</h2>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Most RPA implementations fail to receive ATO approval on the first attempt. Agencies underestimate the documentation burden, misinterpret control requirements, or fail to properly inherit FedRAMP authorizations. The result? Months of delays, expensive remediation work, and frustrated stakeholders.
+              </p>
+              <p>
+                NexDyne has secured ATOs for 50+ government RPA implementations across federal, state, and local agencies. We know exactly what Authorizing Officials expect, how to properly document inherited controls, and how to navigate agency-specific security requirements. Our ATO packages pass review on the first submission 90% of the time.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">50+ Successful ATOs</h4>
+                <p className="text-muted-foreground leading-relaxed">Proven track record securing Authority to Operate for RPA deployments across government agencies</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">90% First-Time Approval Rate</h4>
+                <p className="text-muted-foreground leading-relaxed">Our ATO packages pass Authorizing Official review on first submission 90% of the time</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">FedRAMP Inheritance Expertise</h4>
+                <p className="text-muted-foreground leading-relaxed">Properly document inherited controls from FedRAMP-authorized platforms to reduce compliance burden</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">Continuous Monitoring Support</h4>
+                <p className="text-muted-foreground leading-relaxed">Ongoing compliance monitoring, vulnerability management, and annual assessment support</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Need ATO Support for Your RPA Deployment?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Let our compliance experts handle the documentation while you focus on automation outcomes. We'll get your bots authorized faster.
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Secure Your RPA ATO?
+          </h2>
+          <p className="text-xl opacity-90 mb-8 leading-relaxed">
+            Schedule a free consultation to discuss your ATO requirements and timeline.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request ATO Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/services/automation/rpa/platform-implementation">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Platform Implementation
-              </Button>
-            </Link>
-          </div>
+          <Link href="/contact">
+            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              Request ATO Consultation
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </section>
 

@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, CheckCircle2, Workflow, GitBranch, Shield, Zap, Clock, BarChart3, Network, Bot, Code, Target, Activity, Users, Search, Layers } from 'lucide-react';
+import { ArrowRight, Workflow, GitBranch, Layers, Target, Activity, Users, Search, Bot, Network, Cloud } from 'lucide-react';
 
 export default function Orchestration() {
   const orchestrationBenefits = [
@@ -60,41 +60,40 @@ export default function Orchestration() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-4 border border-orange-500/30">
               FedRAMP & StateRAMP Authorized Workflow Automation
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Process Orchestration for Government Agencies (Federal, State, and Local)
+              Process Orchestration for Government Agencies
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Your most important work involves multiple departments, systems, and decision points. Approvals get stuck in email chains. Work sits in queues waiting for the next step. Nobody has visibility into where things stand. Thalen Technologies Process Orchestration automates these complex, multi-step workflows from end to end—routing work intelligently, enforcing policy automatically, and giving you real-time visibility into every process.
+            <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+              Your most important work involves multiple departments, systems, and decision points. Approvals get stuck in email chains. Work sits in queues waiting for the next step. Nobody has visibility into where things stand. NexDyne Process Orchestration automates these complex, multi-step workflows from end to end—routing work intelligently, enforcing policy automatically, and giving you real-time visibility into every process.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Process Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Orchestration Examples
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                  Request Process Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-16">
+      {/* Benefits Section - Keep Cards for Visual Impact */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Transform How Your Agency Operates</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Process orchestration is not just workflow automation—it is the operating system for your entire organization.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {orchestrationBenefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all">
                 <CardContent className="p-8">
                   <benefit.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
@@ -106,172 +105,171 @@ export default function Orchestration() {
         </div>
       </section>
 
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
 
-
-      {/* Orchestration Scenarios */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-16">
+      {/* Orchestration Scenarios - Keep Cards for Visual Impact */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Common Orchestration Scenarios</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From procurement to case management, government agencies (federal, state, and local) orchestrate their most complex processes with Thalen Technologies.
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              From procurement to case management, government agencies (federal, state, and local) orchestrate their most complex processes with NexDyne.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {orchestrationScenarios.map((scenario, index) => (
-              <Card key={index} className="group hover:shadow-2xl hover:border-accent transition-all duration-300 border-2">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all">
                 <CardContent className="p-8">
-                  <div className="bg-muted rounded-lg p-4 w-fit mb-4">
-                    <scenario.icon className="h-10 w-10 text-primary" />
-                  </div>
+                  <scenario.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-3">{scenario.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{scenario.description}</p>
-                  <div className="bg-secondary rounded-lg p-4">
-                    <div className="text-2xl font-bold text-primary mb-1">{scenario.metric}</div>
-                    <div className="text-sm text-muted-foreground">Typical improvement</div>
-                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{scenario.description}</p>
+                  <p className="text-lg font-bold text-primary">{scenario.metric}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-
-          <Card className="bg-navy-gradient text-primary-foreground border-0">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold mb-2">65%</div>
-                  <div className="text-sm opacity-80">Faster process completion</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">90%</div>
-                  <div className="text-sm opacity-80">SLA compliance rate</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">100%</div>
-                  <div className="text-sm opacity-80">Process visibility</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">45 Days</div>
-                  <div className="text-sm opacity-80">Average implementation</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
-      {/* The Thalen Technologies Approach */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies Orchestration Framework</h2>
-              <p className="text-xl text-muted-foreground">
-                We do not just automate your current process—we optimize it first.
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* How It Works - Z100 Editorial Style */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold mb-4">How Process Orchestration Works</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              A proven approach to automating complex, multi-step workflows across government agencies.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            <div className="border-l-4 border-orange-500 pl-8 py-4">
+              <h3 className="text-2xl font-bold mb-3">Process Discovery & Mapping</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We document your current workflows, identify bottlenecks, and map out the ideal future state. This includes stakeholder interviews, process mining, and compliance requirement analysis.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Process Mining & Analysis</h3>
-                      <p className="text-muted-foreground mb-3">We analyze your current process by interviewing stakeholders, reviewing documentation, and observing actual workflows. You will receive a detailed process map showing every step, decision point, and handoff—plus recommendations for optimization before automation.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Current State Process Map & Optimization Recommendations</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="border-l-4 border-orange-500 pl-8 py-4">
+              <h3 className="text-2xl font-bold mb-3">Workflow Design & Configuration</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Design automated workflows using visual tools—no coding required. Configure routing rules, approval hierarchies, SLA thresholds, and integration points with existing systems.
+              </p>
+            </div>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Workflow Design & Policy Encoding</h3>
-                      <p className="text-muted-foreground mb-3">We design the optimized workflow with your team, encoding business rules, approval hierarchies, and compliance requirements. Every decision point is documented, and exception handling is built in from the start.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Future State Workflow Design & Business Rules Documentation</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="border-l-4 border-orange-500 pl-8 py-4">
+              <h3 className="text-2xl font-bold mb-3">Testing & Validation</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Validate workflows with real users in a sandbox environment. Test edge cases, error handling, and compliance controls before deploying to production.
+              </p>
+            </div>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Platform Configuration & Integration</h3>
-                      <p className="text-muted-foreground mb-3">We configure the orchestration platform to match your workflow design, integrate with your existing systems (ERP, case management, email, etc.), and build dashboards for process monitoring. Your team validates the configuration in a test environment.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Configured platform with full system integration</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Deployment & Continuous Improvement</h3>
-                      <p className="text-muted-foreground mb-3">The orchestrated process goes live with full monitoring and support. We track performance metrics, identify bottlenecks, and continuously refine workflows based on actual usage data. Your team can make configuration changes without developer involvement.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Production workflow + ongoing optimization support</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="border-l-4 border-orange-500 pl-8 py-4">
+              <h3 className="text-2xl font-bold mb-3">Deployment & Continuous Improvement</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Roll out workflows in phases, monitor performance metrics, and iterate based on user feedback. Our platform provides real-time analytics to identify optimization opportunities.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Orchestrate Your Complex Workflows?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a free process assessment. We will map your current workflow, identify bottlenecks, and show you exactly how orchestration will improve cycle times and compliance.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request Free Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              View Orchestration Case Studies
-            </Button>
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* Key Capabilities - Z100 Editorial Style */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold mb-4">Orchestration Platform Capabilities</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Enterprise-grade workflow automation built for government compliance and mission-critical operations.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">Visual Workflow Designer</h4>
+                <p className="text-muted-foreground leading-relaxed">Drag-and-drop interface for building complex workflows without coding</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">Intelligent Routing & Assignment</h4>
+                <p className="text-muted-foreground leading-relaxed">Route work based on business rules, workload balancing, and skill matching</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">SLA Management & Escalation</h4>
+                <p className="text-muted-foreground leading-relaxed">Automatically escalate aging work items and enforce service level agreements</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">Real-Time Analytics Dashboard</h4>
+                <p className="text-muted-foreground leading-relaxed">Monitor process performance, identify bottlenecks, and track KPIs in real-time</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">Compliance & Audit Trail</h4>
+                <p className="text-muted-foreground leading-relaxed">Complete audit logs for every action, decision, and system interaction</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">Multi-System Integration</h4>
+                <p className="text-muted-foreground leading-relaxed">Connect workflows to 50+ FedRAMP platforms and legacy government systems</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <RelatedServices 
+      {/* Related Services */}
+      <RelatedServices
         services={[
-          {
-            title: 'Robotic Process Automation (RPA)',
-            description: 'Deploy intelligent bots within orchestrated workflows for end-to-end process automation.',
-            href: '/services/automation/rpa',
-            icon: Bot
-          },
-          {
-            title: 'System Integration & APIs',
-            description: 'Connect disparate systems that your workflows orchestrate with seamless integrations.',
-            href: '/services/automation/integration',
-            icon: Network
-          },
-          {
-            title: 'Process Mining & Optimization',
-            description: 'Discover optimization opportunities in your workflows with AI-powered process mining and analysis.',
-            href: '/services/process-optimization',
-            icon: BarChart3
-          }
+          { title: 'Government RPA Implementation', description: 'Implement FedRAMP-authorized RPA platforms with process discovery and bot development', href: '/services/automation/rpa', icon: Bot },
+          { title: 'Enterprise Integration Services', description: 'Connect FedRAMP-authorized platforms and legacy government systems with secure APIs', href: '/services/automation/integration', icon: Network },
+          { title: 'Cloud Infrastructure & Modernization', description: 'Migrate to AWS GovCloud, Azure Government, or Salesforce Gov Cloud with ATO support', href: '/services/cloud', icon: Cloud }
         ]}
-        title="Complete Workflow Automation"
-        description="Enhance orchestration capabilities with RPA, integration, and process optimization services."
       />
+
+      {/* CTA Section */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Orchestrate Your Processes?
+          </h2>
+          <p className="text-xl opacity-90 mb-8 leading-relaxed">
+            Schedule a free process assessment to identify automation opportunities and build your orchestration roadmap.
+          </p>
+          <Link href="/contact">
+            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              Request Process Assessment
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+        </div>
+      </section>
 
       <Footer />
     </div>

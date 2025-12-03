@@ -1,9 +1,8 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, FileSearch, Target, TrendingUp, DollarSign, Clock, BarChart3, Users, AlertCircle } from 'lucide-react';
+import { ArrowRight, FileSearch, Target, TrendingUp, Clock, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export default function ProcessAssessment() {
   const assessmentPhases = [
@@ -57,38 +56,32 @@ export default function ProcessAssessment() {
     {
       criterion: 'Rule-Based & Repeatable',
       description: 'Process follows consistent rules with minimal exceptions',
-      ideal: 'Same steps every time, clear decision logic',
-      icon: CheckCircle2
+      ideal: 'Same steps every time, clear decision logic'
     },
     {
       criterion: 'High Volume & Frequency',
       description: 'Process runs frequently with significant transaction volume',
-      ideal: 'Daily/weekly execution, 100+ transactions/month',
-      icon: TrendingUp
+      ideal: 'Daily/weekly execution, 100+ transactions/month'
     },
     {
       criterion: 'Time-Consuming',
       description: 'Process consumes significant staff time',
-      ideal: '10+ hours/week of manual effort',
-      icon: Clock
+      ideal: '10+ hours/week of manual effort'
     },
     {
       criterion: 'Digital Inputs',
       description: 'Process uses structured digital data (not paper-based)',
-      ideal: 'Data in spreadsheets, databases, or web forms',
-      icon: FileSearch
+      ideal: 'Data in spreadsheets, databases, or web forms'
     },
     {
       criterion: 'Stable Systems',
       description: 'Underlying systems are stable with minimal changes',
-      ideal: 'No major system upgrades planned in next 12 months',
-      icon: Target
+      ideal: 'No major system upgrades planned in next 12 months'
     },
     {
       criterion: 'Error-Prone',
       description: 'Manual process has high error rates or rework',
-      ideal: 'Frequent data entry errors or quality issues',
-      icon: AlertCircle
+      ideal: 'Frequent data entry errors or quality issues'
     }
   ];
 
@@ -100,47 +93,20 @@ export default function ProcessAssessment() {
     },
     {
       title: 'Automation Opportunity Matrix',
-      description: 'Scored and ranked list of automation candidates with feasibility assessment, ROI projections, and implementation complexity ratings.',
+      description: 'Scored and ranked list of automation candidates with feasibility ratings, ROI estimates, and implementation complexity.',
       pages: '10-15 pages'
     },
     {
-      title: 'Business Case Package',
-      description: 'Detailed ROI models for top opportunities including cost-benefit analysis, implementation timeline, resource requirements, and risk assessment.',
-      pages: '30-40 pages'
+      title: 'Business Case Presentations',
+      description: 'Executive-ready slide decks for top opportunities with ROI models, implementation timelines, and risk mitigation strategies.',
+      pages: '5-10 slides per opportunity'
     },
     {
       title: 'Implementation Roadmap',
-      description: '12-18 month phased roadmap with sequenced projects, resource allocation, milestone definitions, and success metrics.',
+      description: '12-18 month phased plan with project sequencing, resource requirements, and success metrics.',
       pages: '15-20 pages'
-    },
-    {
-      title: 'Executive Presentation',
-      description: 'C-level presentation deck summarizing findings, recommendations, and expected business impact with compelling visualizations.',
-      pages: '20-25 slides'
     }
   ];
-
-  const roiExample = {
-    process: 'Vendor Invoice Processing',
-    currentState: {
-      volume: '500 invoices/month',
-      timePerInvoice: '15 minutes',
-      totalHours: '125 hours/month',
-      laborCost: '$50/hour',
-      monthlyCost: '$6,250',
-      errorRate: '8%',
-      reworkCost: '$500/month'
-    },
-    futureState: {
-      automationRate: '85%',
-      timePerInvoice: '2 minutes (bot)',
-      totalHours: '17 hours/month',
-      monthlySavings: '$5,400',
-      annualSavings: '$64,800',
-      implementationCost: '$45,000',
-      paybackPeriod: '8.3 months'
-    }
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -152,20 +118,20 @@ export default function ProcessAssessment() {
           <nav className="text-sm mb-6 opacity-80">
             <Link href="/services/automation" className="hover:text-accent">Intelligent Automation</Link>
             <span className="mx-2">/</span>
-            <Link href="/services/automation/rpa" className="hover:text-accent">RPA Implementation</Link>
+            <Link href="/services/automation/rpa" className="hover:text-accent">Government RPA</Link>
             <span className="mx-2">/</span>
             <span>Process Assessment</span>
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
-              Foundation for RPA Success
+            <div className="inline-block px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-4 border border-orange-500/30">
+              RPA DISCOVERY SERVICES
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              RPA Process Assessment & Discovery
+              Process Assessment & Discovery
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Not all processes are good automation candidates. Our comprehensive assessment helps government agencies (federal, state, and local) identify highest-value opportunities with detailed ROI projections, implementation roadmaps, and risk analysis—so you invest in bots that deliver measurable results.
+            <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+              Not every process should be automated. We help government agencies identify the RIGHT automation opportunities—processes with high ROI potential, low implementation risk, and measurable mission impact. Our structured assessment methodology evaluates feasibility, calculates ROI, and builds a prioritized roadmap for your RPA program.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -174,225 +140,176 @@ export default function ProcessAssessment() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/case-studies/federal-automation">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  View Case Study
-                </Button>
-              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Assessment Phases */}
+      {/* Assessment Methodology - Z100 Editorial Style */}
       <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our 4-Phase Assessment Methodology</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Typically completed in 4-6 weeks with minimal disruption to government agency operations (federal, state, and local)
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Assessment Methodology</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              A proven four-phase approach to identifying and prioritizing automation opportunities in government agencies.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+
+          <div className="space-y-16">
             {assessmentPhases.map((phase, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <div className="text-sm text-accent font-semibold">{phase.phase}</div>
-                      <h3 className="text-xl font-bold">{phase.title}</h3>
-                      <div className="text-sm text-muted-foreground">Duration: {phase.duration}</div>
+              <div key={index}>
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-orange-500/10 border-2 border-orange-500 flex items-center justify-center">
+                      <span className="text-xl font-bold text-orange-500">{phase.phase.split(' ')[1]}</span>
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    {phase.activities.map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-1" />
-                        <span className="text-sm">{activity}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Assessment Criteria */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">What Makes a Good RPA Candidate?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We evaluate every process against these 6 criteria to predict automation success
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {assessmentCriteria.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <Card key={index} className="border-2">
-                  <CardContent className="pt-8">
-                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-accent" />
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
+                      <h3 className="text-3xl font-bold">{phase.title}</h3>
+                      <span className="text-sm text-muted-foreground font-semibold">{phase.duration}</span>
                     </div>
-                    <h3 className="text-lg font-bold mb-2">{item.criterion}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
-                    <div className="bg-muted rounded-lg px-3 py-2">
-                      <div className="text-xs text-accent font-semibold">Ideal State:</div>
-                      <div className="text-xs">{item.ideal}</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ROI Example */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Real-World ROI Example</h2>
-            <p className="text-xl text-muted-foreground">
-              Federal agency vendor invoice processing automation
-            </p>
-          </div>
-          <div className="max-w-5xl mx-auto">
-            <Card className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-center">{roiExample.process}</h3>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <div className="bg-secondary rounded-lg p-6">
-                      <h4 className="font-bold text-lg mb-4">Current State (Manual)</h4>
-                      <div className="space-y-3">
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Volume:</span>
-                          <span className="font-semibold">{roiExample.currentState.volume}</span>
+                    <div className="space-y-3">
+                      {phase.activities.map((activity, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                          <p className="text-muted-foreground leading-relaxed">{activity}</p>
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Time per invoice:</span>
-                          <span className="font-semibold">{roiExample.currentState.timePerInvoice}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Total hours/month:</span>
-                          <span className="font-semibold">{roiExample.currentState.totalHours}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Labor cost:</span>
-                          <span className="font-semibold">{roiExample.currentState.laborCost}</span>
-                        </div>
-                        <div className="border-t pt-2 flex justify-between">
-                          <span className="font-semibold">Monthly cost:</span>
-                          <span className="font-bold text-lg">{roiExample.currentState.monthlyCost}</span>
-                        </div>
-                        <div className="flex justify-between text-sm">
-                          <span className="text-muted-foreground">Error rate:</span>
-                          <span className="text-red-500 font-semibold">{roiExample.currentState.errorRate}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="bg-muted rounded-lg p-6">
-                      <h4 className="font-bold text-lg mb-4">Future State (Automated)</h4>
-                      <div className="space-y-3">
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Automation rate:</span>
-                          <span className="font-semibold text-accent">{roiExample.futureState.automationRate}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Time per invoice:</span>
-                          <span className="font-semibold">{roiExample.futureState.timePerInvoice}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Total hours/month:</span>
-                          <span className="font-semibold">{roiExample.futureState.totalHours}</span>
-                        </div>
-                        <div className="border-t pt-2 flex justify-between">
-                          <span className="font-semibold">Monthly savings:</span>
-                          <span className="font-bold text-lg text-accent">{roiExample.futureState.monthlySavings}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="font-semibold">Annual savings:</span>
-                          <span className="font-bold text-xl text-accent">{roiExample.futureState.annualSavings}</span>
-                        </div>
-                        <div className="border-t pt-2 space-y-2 text-sm">
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">Implementation cost:</span>
-                            <span>{roiExample.futureState.implementationCost}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="font-semibold">Payback period:</span>
-                            <span className="font-bold text-accent">{roiExample.futureState.paybackPeriod}</span>
-                          </div>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Deliverables */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Assessment Deliverables</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive documentation package to support your RPA investment decisions
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {deliverables.map((deliverable, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-2">{deliverable.title}</h3>
-                      <p className="text-sm text-muted-foreground mb-3">{deliverable.description}</p>
-                      <div className="text-xs text-accent font-semibold">{deliverable.pages}</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                {index < assessmentPhases.length - 1 && (
+                  <div className="border-t border-border mt-16"></div>
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Identify Your Top RPA Opportunities?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Our assessment typically identifies 5-10 high-value automation opportunities with 6-12 month payback periods.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Free Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/services/automation/rpa">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Back to RPA Services
-              </Button>
-            </Link>
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* Assessment Criteria - Z100 Editorial Style */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold mb-4">What Makes a Good Automation Candidate?</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              We evaluate processes against six key criteria to determine automation feasibility and ROI potential.
+            </p>
           </div>
+
+          <div className="space-y-8">
+            {assessmentCriteria.map((item, index) => (
+              <div key={index} className="border-l-4 border-orange-500 pl-8 py-4">
+                <h3 className="text-2xl font-bold mb-2">{item.criterion}</h3>
+                <p className="text-lg text-muted-foreground mb-2 leading-relaxed">{item.description}</p>
+                <p className="text-sm font-semibold text-primary">Ideal: {item.ideal}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* Deliverables - Z100 Editorial Style */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold mb-4">Assessment Deliverables</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              You receive comprehensive documentation to guide your automation program from assessment through implementation.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {deliverables.map((item, index) => (
+              <div key={index} className="flex items-start gap-6">
+                <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+                    <h3 className="text-xl font-bold">{item.title}</h3>
+                    <span className="text-sm text-muted-foreground font-semibold">{item.pages}</span>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* Typical Results - Z100 Editorial Style */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold mb-4">Typical Assessment Results</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              What government agencies typically discover through our process assessment.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">15-25 Automation Opportunities Identified</h4>
+                <p className="text-muted-foreground leading-relaxed">Most agencies have 15-25 viable automation candidates across departments</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">5-10 High-ROI Quick Wins</h4>
+                <p className="text-muted-foreground leading-relaxed">5-10 processes with 200%+ ROI and 60-90 day implementation timelines</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">$500K-$2M Annual Savings Potential</h4>
+                <p className="text-muted-foreground leading-relaxed">Typical savings range for mid-size agencies (500-2000 employees)</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">12-18 Month Implementation Roadmap</h4>
+                <p className="text-muted-foreground leading-relaxed">Phased rollout plan with sequenced projects and resource requirements</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Discover Your Automation Opportunities?
+          </h2>
+          <p className="text-xl opacity-90 mb-8 leading-relaxed">
+            Schedule a free consultation to discuss your process assessment needs and timeline.
+          </p>
+          <Link href="/contact">
+            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              Request Free Consultation
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </section>
 

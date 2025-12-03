@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, CheckCircle2, Network, Zap, Shield, Database, Cloud, Lock, GitBranch, Code, Bot, Workflow, GitMerge, Server } from 'lucide-react';
+import { ArrowRight, Network, Cloud, GitMerge, Server, Database, Workflow, Bot, GitBranch } from 'lucide-react';
 
 export default function Integration() {
   const capabilities = [
@@ -57,41 +57,40 @@ export default function Integration() {
           </nav>
           
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-4 border border-orange-500/30">
               FedRAMP & StateRAMP Authorized • FIPS 140-2 Compliant
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Enterprise Integration Platform
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Your agency runs on dozens of disconnected systems. Financial data lives in one place, HR records in another, and mission-critical information is scattered across legacy mainframes and modern cloud apps. The result? Your team wastes hours manually transferring data, reconciling spreadsheets, and chasing down information. Thalen Technologies's integration platform connects everything—securely, automatically, and without expensive system replacements.
+            <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+              Your agency runs on dozens of disconnected systems. Financial data lives in one place, HR records in another, and mission-critical information is scattered across legacy mainframes and modern cloud apps. The result? Your team wastes hours manually transferring data, reconciling spreadsheets, and chasing down information. NexDyne's integration platform connects everything—securely, automatically, and without expensive system replacements.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Integration Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Integration Architecture
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                  Request Integration Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Capabilities Section */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-16">
+      {/* Capabilities Section - Keep Cards for Visual Hierarchy */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Integration Built for Government Complexity</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Government agencies (federal, state, and local) face integration challenges that commercial iPaaS vendors can't solve. We specialize in the hard problems—legacy systems, air-gapped networks, and strict compliance requirements.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {capabilities.map((capability, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all">
                 <CardContent className="p-8">
                   <capability.icon className="h-14 w-14 text-primary mb-4" />
                   <h3 className="text-2xl font-bold mb-3">{capability.title}</h3>
@@ -103,208 +102,161 @@ export default function Integration() {
         </div>
       </section>
 
-      {/* The Integration Problem */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Government Integration Is Different</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* The Integration Problem - Z100 Editorial Style */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Government Integration Is Different</h2>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
                 Commercial integration platforms assume you're working with modern, API-enabled systems in a single cloud environment. That's not reality for government agencies (federal, state, and local). You're running mission-critical applications on mainframes from the 1980s alongside cutting-edge AI tools. You have air-gapped networks, strict data residency requirements, and systems that were never designed to communicate.
               </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                Thalen Technologies's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs. And we do it all while maintaining FedRAMP and StateRAMP authorization with full audit trails.
+              <p>
+                NexDyne's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs. And we do it all while maintaining FedRAMP and StateRAMP authorization with full audit trails.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                  <div>
-                    <div className="font-semibold mb-1">No System Left Behind</div>
-                    <div className="text-sm text-muted-foreground">Connect legacy mainframes, COTS products, and modern SaaS—all through one platform</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                  <div>
-                    <div className="font-semibold mb-1">Air-Gap Ready</div>
-                    <div className="text-sm text-muted-foreground">Secure data transfer between classified and unclassified environments</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
-                  <div>
-                    <div className="font-semibold mb-1">Compliance Automation</div>
-                    <div className="text-sm text-muted-foreground">Automated FISMA reporting, continuous ATO monitoring, and audit-ready logs</div>
-                  </div>
-                </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">50+ Pre-Built FedRAMP Connectors</h4>
+                <p className="text-muted-foreground leading-relaxed">Salesforce Gov Cloud, ServiceNow Gov, Workday Gov, Microsoft 365 GCC High, and more</p>
               </div>
             </div>
-
-
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">Legacy System Support</h4>
+                <p className="text-muted-foreground leading-relaxed">AS/400, Oracle E-Business Suite, SAP ECC, COBOL applications, and custom databases</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">Air-Gapped Network Orchestration</h4>
+                <p className="text-muted-foreground leading-relaxed">Secure data transfer between classified and unclassified environments with full compliance</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <h4 className="font-semibold mb-1">Real-Time & Batch Processing</h4>
+                <p className="text-muted-foreground leading-relaxed">Choose the right integration pattern for each use case—event-driven, scheduled, or on-demand</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Integration Challenges */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Common Integration Challenges We Solve</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From defense contractors to civilian agencies, organizations trust Thalen Technologies to connect their most complex systems.
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* Common Integration Challenges - Keep Cards for Visual Impact */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold mb-4">Common Integration Challenges We Solve</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Real-world integration scenarios that government agencies face every day.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {integrationChallenges.map((challenge, index) => (
-              <Card key={index} className="group hover:shadow-2xl hover:border-accent transition-all duration-300 border-2">
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all">
                 <CardContent className="p-8">
-                  <div className="bg-muted rounded-lg p-4 w-fit mb-4">
-                    <challenge.icon className="h-10 w-10 text-primary" />
-                  </div>
+                  <challenge.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-3">{challenge.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{challenge.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-
-          <Card className="bg-navy-gradient text-primary-foreground border-0">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold mb-2">200+</div>
-                  <div className="text-sm opacity-80">Pre-built connectors</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">50%</div>
-                  <div className="text-sm opacity-80">Reduction in manual data entry</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">99.9%</div>
-                  <div className="text-sm opacity-80">Platform uptime SLA</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">60 Days</div>
-                  <div className="text-sm opacity-80">Average integration timeline</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
-      {/* The Thalen Technologies Approach */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies Integration Methodology</h2>
-              <p className="text-xl text-muted-foreground">
-                We don't just connect systems—we architect sustainable integration ecosystems.
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* Implementation Approach - Z100 Editorial Style */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Integration Implementation Approach</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              A proven methodology for enterprise integration projects in government environments.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            <div className="border-l-4 border-orange-500 pl-8 py-4">
+              <h3 className="text-2xl font-bold mb-3">Discovery & Architecture Design</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We map your existing systems, data flows, and integration requirements. Then we design a scalable architecture that balances real-time needs with batch processing efficiency.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">System Inventory & Data Flow Mapping</h3>
-                      <p className="text-muted-foreground mb-3">We document every system in your environment, map current data flows (manual and automated), and identify integration pain points. You'll receive a comprehensive architecture diagram showing exactly how information moves through your organization today.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Current State Architecture & Integration Gap Analysis</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="border-l-4 border-orange-500 pl-8 py-4">
+              <h3 className="text-2xl font-bold mb-3">Platform Configuration & Testing</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Deploy the integration platform in your environment (cloud, on-premise, or hybrid). Configure connectors, build data transformation logic, and validate with comprehensive testing.
+              </p>
+            </div>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Integration Architecture Design</h3>
-                      <p className="text-muted-foreground mb-3">We design a future-state architecture that connects your systems through our FedRAMP-authorized platform. This includes data transformation rules, security controls, error handling, and scalability planning. Every integration is documented and approved before implementation.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Target Architecture Blueprint & Security Plan</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="border-l-4 border-orange-500 pl-8 py-4">
+              <h3 className="text-2xl font-bold mb-3">Phased Rollout & Monitoring</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Launch integrations in waves, starting with non-critical systems. Monitor performance, error rates, and data quality. Adjust as needed before expanding to mission-critical workflows.
+              </p>
+            </div>
 
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Phased Implementation & Testing</h3>
-                      <p className="text-muted-foreground mb-3">We implement integrations in priority order, starting with your highest-impact data flows. Each integration is thoroughly tested in a sandbox environment before production deployment. Your team validates data accuracy at every step.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Production integrations with full test documentation</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Monitoring & Continuous Optimization</h3>
-                      <p className="text-muted-foreground mb-3">Once live, you gain access to real-time monitoring dashboards showing data flow health, error rates, and performance metrics. We continuously optimize integrations based on usage patterns and provide quarterly architecture reviews.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Operational platform + ongoing support & optimization</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="border-l-4 border-orange-500 pl-8 py-4">
+              <h3 className="text-2xl font-bold mb-3">Ongoing Support & Optimization</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Provide 24/7 monitoring, incident response, and continuous optimization. As your systems evolve, we adapt integrations to maintain seamless data flow.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Related Services */}
+      <RelatedServices
+        services={[
+          { title: 'Government RPA Implementation', description: 'Implement FedRAMP-authorized RPA platforms with process discovery and bot development', href: '/services/automation/rpa', icon: Bot },
+          { title: 'Workflow Orchestration', description: 'Automate end-to-end business processes across multiple departments and systems', href: '/services/automation/orchestration', icon: GitBranch },
+          { title: 'Cloud Infrastructure & Modernization', description: 'Migrate to AWS GovCloud, Azure Government, or Salesforce Gov Cloud with ATO support', href: '/services/cloud', icon: Cloud }
+        ]}
+      />
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Connect Your Systems?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a free integration assessment. We'll map your current system landscape and identify your top 3 integration opportunities with projected time savings.
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Connect Your Systems?
+          </h2>
+          <p className="text-xl opacity-90 mb-8 leading-relaxed">
+            Schedule a free integration assessment to map your systems and identify quick wins.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <Link href="/contact">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request Free Assessment
+              Request Integration Assessment
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Download Integration Guide
-            </Button>
-          </div>
+          </Link>
         </div>
       </section>
-
-      <RelatedServices 
-        services={[
-          {
-            title: 'Robotic Process Automation (RPA)',
-            description: 'Automate repetitive tasks across integrated systems with intelligent bots that work 24/7 without errors.',
-            href: '/services/automation/rpa',
-            icon: Bot
-          },
-          {
-            title: 'Workflow Automation & Orchestration',
-            description: 'Orchestrate complex multi-system workflows that leverage your integrated enterprise architecture.',
-            href: '/services/automation/orchestration',
-            icon: Workflow
-          },
-          {
-            title: 'Data Analytics & Intelligence',
-            description: 'Unlock insights from integrated data sources with advanced analytics and business intelligence.',
-            href: '/services/data-analytics',
-            icon: Database
-          }
-        ]}
-        title="Maximize Integration Value"
-        description="Leverage your integrated systems with these complementary automation and analytics services."
-      />
 
       <Footer />
     </div>
