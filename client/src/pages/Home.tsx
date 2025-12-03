@@ -248,27 +248,42 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* 2x2 Grid Layout - Typography-Driven */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="group"
-              >
-                <div className="flex flex-col">
-                  <h3 className="text-xl font-bold mb-3 pb-3 border-b border-border group-hover:text-accent group-hover:border-accent transition-colors">
-                    {cert.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {cert.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+          {/* 4-Column Grid with Hover-Reveal Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {certifications.map((cert, index) => {
+              const IconComponent = cert.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="group relative"
+                >
+                  <Card className="h-full border-2 border-border hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden bg-card">
+                    <CardContent className="p-6 relative">
+                      {/* Icon and Title - Always Visible */}
+                      <div className="flex flex-col items-center text-center mb-4">
+                        <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                          <IconComponent className="w-8 h-8 text-accent" />
+                        </div>
+                        <h3 className="text-lg font-bold group-hover:text-accent transition-colors">
+                          {cert.name}
+                        </h3>
+                      </div>
+                      
+                      {/* Description - Revealed on Hover */}
+                      <div className="absolute inset-0 bg-card/95 backdrop-blur-sm p-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-sm text-muted-foreground leading-relaxed text-center">
+                          {cert.description}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
