@@ -301,23 +301,23 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5 }}
-              className="group py-8 first:pt-0"
+              className="group"
             >
-              <div className="flex flex-col gap-4">
-                <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-6 p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                    <div className="w-16 h-16 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold transition-colors">
                       1
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
                       Research & Assessment
                     </h3>
                   </div>
                 </div>
                 <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed mt-1">
                   Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
                 </p>
               </div>
@@ -329,23 +329,23 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="group py-8 first:pt-0"
+              className="group"
             >
-              <div className="flex flex-col gap-4">
-                <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-6 p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                    <div className="w-16 h-16 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold transition-colors">
                       2
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
                       Architecture & Planning
                     </h3>
                   </div>
                 </div>
                 <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed mt-1">
                   Solution architecture design, technology stack selection, and detailed implementation roadmap.
                 </p>
               </div>
@@ -357,23 +357,23 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="group py-8"
+              className="group"
             >
-              <div className="flex flex-col gap-4">
-                <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-6 p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                    <div className="w-16 h-16 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold transition-colors">
                       3
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
                       Implementation & Delivery
                     </h3>
                   </div>
                 </div>
                 <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed mt-1">
                   Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
                 </p>
               </div>
@@ -385,23 +385,23 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="group py-8"
+              className="group"
             >
-              <div className="flex flex-col gap-4">
-                <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-6 p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                    <div className="w-16 h-16 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold transition-colors">
                       4
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
                       Performance & Optimization
                     </h3>
                   </div>
                 </div>
                 <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed mt-1">
                   Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
                 </p>
               </div>

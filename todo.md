@@ -2598,3 +2598,4 @@
 - [x] Match section heading size with case studies and certifications sections (4xl lg:5xl)
 - [x] Adjust card dimensions and spacing to match visual consistency
 - [x] Ensure consistent typography and layout hierarchy
+- [x] Increase RAPID Framework card padding and dimensions to match certifications section visual weight
