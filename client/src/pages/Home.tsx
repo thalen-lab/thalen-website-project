@@ -252,6 +252,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Value Proposition Bridge Section */}
+      <section className="py-16 bg-background">
+        <div className="container max-w-4xl text-center">
+          <p className="text-2xl md:text-3xl font-light text-foreground leading-relaxed">
+            We don't sell platforms. We help government agencies select, implement, and optimize the right FedRAMP and StateRAMP solutions for mission success.
+          </p>
+        </div>
+      </section>
+
       {/* Services Section - Editorial Layout */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container max-w-5xl">
