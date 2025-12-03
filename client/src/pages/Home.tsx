@@ -126,12 +126,7 @@ export default function Home() {
     }
   ];
 
-  const stats = [
-    { value: '15+', label: 'Years Implementing Government IT Solutions' },
-    { value: '$2.3B+', label: 'In Government Contract Value Delivered' },
-    { value: '50+', label: 'FedRAMP Platforms Integrated' },
-    { value: '100+', label: 'Agency Implementations Completed' }
-  ];
+
 
   const certifications = [
     {
@@ -257,22 +252,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-secondary">
-        <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services Section - Editorial Layout */}
-      <section className="py-20 bg-navy-gradient diagonal-top text-primary-foreground">
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container max-w-5xl">
           <div className="mb-16">
             <p className="text-sm font-semibold text-accent mb-3">Core Capabilities</p>
