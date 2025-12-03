@@ -2587,3 +2587,6 @@
 - [x] Remove "Our Mission" section from homepage
 - [x] Increase the height of the hero section on homepage
 - [x] Redesign certifications section with hover-reveal cards (title visible, description on hover)
+
+## Phase 46: Remove Icons from Certification Cards
+- [x] Remove icons from certification cards on homepage (keep only titles and hover descriptions)

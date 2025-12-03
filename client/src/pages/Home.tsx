@@ -14,13 +14,7 @@ import {
   BarChart3,
   Cpu,
   Code,
-  Users,
-  ShieldCheck,
-  Award,
-  FileCheck,
-  Lock,
-  Key,
-  Heart
+  Users
 } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { motion } from 'framer-motion';
@@ -100,42 +94,34 @@ export default function Home() {
   const certifications = [
     {
       name: 'FedRAMP & StateRAMP Expert',
-      icon: Shield,
       description: 'Deep expertise implementing FedRAMP and StateRAMP-authorized platforms for federal, state, and local agencies at Moderate and High impact levels with proven ATO support.'
     },
     {
       name: 'CMMC Compliance Partner',
-      icon: ShieldCheck,
       description: 'Certified to help defense contractors achieve CMMC Level 2 and Level 3 compliance through gap analysis, controls implementation, and audit preparation.'
     },
     {
       name: 'ISO 27001 Certified',
-      icon: Award,
       description: 'ISO 27001:2022 certified organization with proven methodologies for implementing information security management systems for government clients.'
     },
     {
       name: 'NIST Framework Expertise',
-      icon: FileCheck,
       description: 'Extensive experience implementing NIST Cybersecurity Framework v2.0 controls and security assessments for federal and defense agencies.'
     },
     {
       name: 'GSA Schedule Holder',
-      icon: Lock,
       description: 'GSA IT Schedule 70 contract holder providing streamlined procurement for government agencies seeking implementation and integration services.'
     },
     {
       name: 'ATO Support Services',
-      icon: Key,
       description: 'Proven track record supporting agencies through FISMA Authority to Operate (ATO) processes with security documentation and compliance assessments.'
     },
     {
       name: 'CJIS & State Compliance',
-      icon: Heart,
       description: 'CJIS-compliant implementations for state and local law enforcement agencies, plus expertise with state-specific compliance frameworks and data sovereignty requirements.'
     },
     {
       name: 'Cleared Personnel Available',
-      icon: Users,
       description: 'Top Secret/SCI cleared team members available for classified projects and sensitive government implementations requiring security clearances.'
     }
   ];
@@ -251,7 +237,6 @@ export default function Home() {
           {/* 4-Column Grid with Hover-Reveal Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {certifications.map((cert, index) => {
-              const IconComponent = cert.icon;
               return (
                 <motion.div
                   key={index}
@@ -263,11 +248,8 @@ export default function Home() {
                 >
                   <Card className="h-full border-2 border-border hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden bg-card">
                     <CardContent className="p-6 relative">
-                      {/* Icon and Title - Always Visible */}
-                      <div className="flex flex-col items-center text-center mb-4">
-                        <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                          <IconComponent className="w-8 h-8 text-accent" />
-                        </div>
+                      {/* Title - Always Visible */}
+                      <div className="flex flex-col items-center text-center">
                         <h3 className="text-lg font-bold group-hover:text-accent transition-colors">
                           {cert.name}
                         </h3>
