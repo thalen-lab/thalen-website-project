@@ -271,32 +271,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Editorial Layout */}
       <section className="py-20 bg-navy-gradient diagonal-top text-primary-foreground">
-        <div className="container">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-accent mb-2">Services</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Driving Mission Success Through Three Core Outcomes</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Operational Efficiency • Mission Continuity • Compliance Assurance
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <p className="text-sm font-semibold text-accent mb-3">Core Capabilities</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Government IT Implementation Services</h2>
+            <p className="text-xl opacity-90 max-w-3xl">
+              Vendor-neutral consulting for federal, state, and local agencies. We implement FedRAMP and StateRAMP-authorized platforms with proven compliance expertise.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="space-y-0">
             {services.map((service, index) => (
-              <Card key={index} className="bg-card/10 border-primary-foreground/20 backdrop-blur hover:bg-card/20 transition-all group">
-                <CardContent className="p-6">
-                  <service.icon className="h-12 w-12 text-primary-foreground mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 text-primary-foreground">{service.title}</h3>
-                  <p className="text-primary-foreground/80 mb-6">{service.description}</p>
-                  <Button asChild variant="outline" className="w-full bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent group-hover:border-accent transition-all active:scale-95 touch-feedback">
-                    <Link href={service.href}>
-                      Explore Service
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link
+                key={index}
+                href={service.href}
+                className="block py-8 border-b border-primary-foreground/20 last:border-b-0 group transition-all hover:border-accent"
+              >
+                <div className="flex items-start gap-6">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-lg opacity-80 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                  <ArrowRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-2" />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
