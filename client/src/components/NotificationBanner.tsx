@@ -100,7 +100,7 @@ export function NotificationBanner() {
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-sm mb-1">
-              Stay Updated with NexDyne
+              Stay Updated with Thalen Technologies
             </h3>
             <p className="text-sm text-muted-foreground mb-3">
               Get notified about new case studies, upcoming events, and personalized assessment reminders.

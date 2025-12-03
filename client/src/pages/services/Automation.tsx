@@ -108,7 +108,7 @@ export default function Automation() {
       <section className="py-20 bg-background">
         <div className="container max-w-5xl">
           <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Partner with NexDyne</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Partner with Thalen Technologies</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Three core strengths that define our approach to government automation implementation.
             </p>
