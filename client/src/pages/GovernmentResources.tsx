@@ -254,45 +254,25 @@ export default function GovernmentResources() {
         </div>
       </section>
 
-      {/* Quick Links */}
-      <section className="py-12 bg-secondary">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-6">
-            <a href="#guides" className="block">
-              <Card className="hover:border-accent transition-colors cursor-pointer h-full">
-                <CardContent className="p-6 text-center">
-                  <BookOpen className="h-10 w-10 text-foreground mx-auto mb-3" />
-                  <h3 className="font-bold mb-2">Compliance Guides</h3>
-                  <p className="text-sm text-muted-foreground">FedRAMP, CMMC, StateRAMP</p>
-                </CardContent>
-              </Card>
+      {/* Quick Links - Editorial Style */}
+      <section className="py-16 bg-background border-t">
+        <div className="container max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
+            <a href="#guides" className="group block border-b border-border pb-6 transition-all duration-300 hover:border-accent">
+              <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-accent">Compliance Guides</h3>
+              <p className="text-muted-foreground">FedRAMP, CMMC, StateRAMP</p>
             </a>
-            <a href="#checklists" className="block">
-              <Card className="hover:border-accent transition-colors cursor-pointer h-full">
-                <CardContent className="p-6 text-center">
-                  <ClipboardCheck className="h-10 w-10 text-foreground mx-auto mb-3" />
-                  <h3 className="font-bold mb-2">Interactive Checklists</h3>
-                  <p className="text-sm text-muted-foreground">Readiness assessments</p>
-                </CardContent>
-              </Card>
+            <a href="#checklists" className="group block border-b border-border pb-6 transition-all duration-300 hover:border-accent">
+              <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-accent">Interactive Checklists</h3>
+              <p className="text-muted-foreground">Readiness assessments</p>
             </a>
-            <a href="#calculators" className="block">
-              <Card className="hover:border-accent transition-colors cursor-pointer h-full">
-                <CardContent className="p-6 text-center">
-                  <Calculator className="h-10 w-10 text-foreground mx-auto mb-3" />
-                  <h3 className="font-bold mb-2">ROI Calculators</h3>
-                  <p className="text-sm text-muted-foreground">Cloud, automation, security</p>
-                </CardContent>
-              </Card>
+            <a href="#calculators" className="group block border-b border-border pb-6 transition-all duration-300 hover:border-accent">
+              <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-accent">ROI Calculators</h3>
+              <p className="text-muted-foreground">Cloud, automation, security</p>
             </a>
-            <a href="#procurement" className="block">
-              <Card className="hover:border-accent transition-colors cursor-pointer h-full">
-                <CardContent className="p-6 text-center">
-                  <FileText className="h-10 w-10 text-foreground mx-auto mb-3" />
-                  <h3 className="font-bold mb-2">Procurement Guides</h3>
-                  <p className="text-sm text-muted-foreground">Federal & state/local</p>
-                </CardContent>
-              </Card>
+            <a href="#procurement" className="group block border-b border-border pb-6 transition-all duration-300 hover:border-accent">
+              <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-accent">Procurement Guides</h3>
+              <p className="text-muted-foreground">Federal & state/local</p>
             </a>
           </div>
         </div>
