@@ -294,50 +294,7 @@ export default function Automation() {
         </div>
       </section>
 
-      {/* Horizontal Divider */}
-      <div className="container">
-        <div className="border-t border-border"></div>
-      </div>
 
-      {/* Government Automation Experience - Z100 Editorial Style */}
-      <section className="py-20 bg-background">
-        <div className="container max-w-5xl">
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold mb-4">Government Automation Implementation Success</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Proven track record implementing automation platforms and solutions across government agencies (federal, state, and local) with measurable mission impact.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {governmentExperience.map((exp, index) => (
-              <div key={index} className="border-l-4 border-primary pl-8 py-4">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">{exp.agency}</h3>
-                    <p className="text-muted-foreground">{exp.project}</p>
-                  </div>
-                  <p className="text-lg font-bold text-primary">{exp.outcome}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12">
-            <Link href="/case-studies">
-              <Button variant="outline" size="lg">
-                View All Automation Case Studies
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Horizontal Divider */}
-      <div className="container">
-        <div className="border-t border-border"></div>
-      </div>
 
       {/* FedRAMP Automation Platform Expertise */}
       <section className="py-20 bg-background">
