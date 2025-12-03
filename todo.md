@@ -2326,4 +2326,13 @@
 - [x] List core capabilities clearly and concisely
 - [x] Ensure smooth transition from philosophy to capabilities to services
 - [x] Test updated homepage layout
+- [x] Save checkpoint after completion
+
+## Phase 105: Replace Hero Images with Video Background
+- [x] Copy video file to client/public/videos/ directory
+- [x] Remove rotating image carousel logic from Home.tsx
+- [x] Implement video background in hero section
+- [x] Add video autoplay, loop, and muted attributes
+- [x] Ensure video is responsive and covers full hero area
+- [x] Test video performance and loading
 - [ ] Save checkpoint after completion

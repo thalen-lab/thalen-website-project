@@ -29,36 +29,7 @@ import { motion } from 'framer-motion';
 import { useSwipe } from '@/hooks/useSwipe';
 
 export default function Home() {
-  const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [currentCaseStudy, setCurrentCaseStudy] = useState(0);
-
-  // Swipe handlers for hero carousel
-  const heroSwipeRef = useSwipe({
-    onSwipeLeft: () => {
-      setCurrentHeroIndex((prev) => (prev + 1) % heroSlides.length);
-    },
-    onSwipeRight: () => {
-      setCurrentHeroIndex((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    },
-  });
-
-  const heroSlides = [
-    {
-      image: '/images/hero-datacenter.jpg',
-      title: 'Implementing FedRAMP & StateRAMP Solutions',
-      subtitle: 'Vendor-neutral consulting and systems integration for federal, state, and local government agencies'
-    },
-    {
-      image: '/images/hero-automation.jpg',
-      title: 'Government IT Implementation Excellence',
-      subtitle: 'Deploy and optimize FedRAMP and StateRAMP-authorized platforms with proven compliance expertise'
-    },
-    {
-      image: '/images/hero-federal.jpg',
-      title: 'Trusted Government IT Partner',
-      subtitle: 'Multi-vendor integration, ATO support, and mission-critical implementation services'
-    }
-  ];
 
   const services = [
     {
@@ -171,12 +142,7 @@ export default function Home() {
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentHeroIndex((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+
 
   const nextCaseStudy = () => {
     setCurrentCaseStudy((prev) => (prev + 1) % caseStudies.length);
@@ -190,65 +156,43 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      {/* Hero Section with Rotating Images */}
-      <section ref={heroSwipeRef} className="relative h-[600px] overflow-hidden touch-pan-y">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentHeroIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+      {/* Hero Section with Video Background */}
+      <section className="relative h-[600px] overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
           >
-            <div className="absolute inset-0">
-              <ImageWithLoader
-                src={slide.image}
-                alt={slide.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/50" />
-              {/* Vignette effect */}
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,transparent_50%,rgba(0,0,0,0.3)_100%)]" />
-            </div>
-            <div className="relative container h-full flex items-center">
-              <div className="max-w-2xl text-primary-foreground">
-                <h1 className="text-5xl md:text-6xl font-bold mb-4">{slide.title}</h1>
-                <p className="text-xl md:text-2xl mb-8 opacity-90">{slide.subtitle}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-        
-        {/* CTA Buttons - Outside carousel to prevent duplicates */}
-        <div className="absolute bottom-24 left-0 right-0">
-          <div className="container">
-            <div className="max-w-2xl">
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all touch-feedback">
-                  <Link href="/contact">
-                    Schedule Strategic Assessment
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary touch-feedback">
-                  <Link href="/methodology">View ROI Methodology</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/50" />
+          {/* Vignette effect */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,transparent_50%,rgba(0,0,0,0.3)_100%)]" />
         </div>
         
-        {/* Hero Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentHeroIndex(index)}
-              aria-label={`Go to slide ${index + 1}`}
-              className={`w-3 h-3 rounded-full transition-all touch-feedback min-h-[44px] min-w-[44px] flex items-center justify-center ${
-                index === currentHeroIndex ? 'bg-accent w-8' : 'bg-primary-foreground/50'
-              }`}
-            />
-          ))}
+        {/* Hero Content */}
+        <div className="relative container h-full flex items-center">
+          <div className="max-w-2xl text-primary-foreground">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">Implementing FedRAMP & StateRAMP Solutions</h1>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">Vendor-neutral consulting and systems integration for federal, state, and local government agencies</p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all touch-feedback">
+                <Link href="/contact">
+                  Schedule Strategic Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary touch-feedback">
+                <Link href="/methodology">View ROI Methodology</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
