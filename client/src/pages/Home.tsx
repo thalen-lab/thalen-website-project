@@ -268,7 +268,10 @@ export default function Home() {
               Govern Smart.
             </h2>
             <p className="text-xl md:text-2xl font-light leading-relaxed max-w-4xl mx-auto opacity-95">
-              We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies. From cloud migration to automation to security compliance, we handle the technical complexity so you can focus on mission delivery.
+              <em>"Our philosophy has always been to offer government agencies only the finest implementation expertise and to back every engagement with the highest level of service. Earning trust and delivering excellence is our top priority."</em>
+            </p>
+            <p className="text-lg md:text-xl mt-6 max-w-3xl mx-auto opacity-80">
+              We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies with vendor-neutral expertise and proven compliance methodologies.
             </p>
           </div>
         </div>
