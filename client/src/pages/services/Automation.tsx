@@ -67,14 +67,14 @@ export default function Automation() {
 
   // Platforms We Implement Most Often
   const topPlatforms = [
-    { name: 'UiPath Government Cloud', category: 'RPA', logo: '🤖' },
-    { name: 'Automation Anywhere Gov', category: 'RPA', logo: '⚙️' },
-    { name: 'ServiceNow Gov', category: 'Workflow', logo: '🔄' },
-    { name: 'Microsoft Power Automate Gov', category: 'RPA', logo: '⚡' },
-    { name: 'Blue Prism Government', category: 'RPA', logo: '🔷' },
-    { name: 'MuleSoft Government Cloud', category: 'Integration', logo: '🔗' },
-    { name: 'Pega Government Cloud', category: 'BPM', logo: '📊' },
-    { name: 'Appian Government Cloud', category: 'BPM', logo: '📋' }
+    { name: 'UiPath Government Cloud', category: 'RPA' },
+    { name: 'Automation Anywhere Gov', category: 'RPA' },
+    { name: 'ServiceNow Gov', category: 'Workflow' },
+    { name: 'Microsoft Power Automate Gov', category: 'RPA' },
+    { name: 'Blue Prism Government', category: 'RPA' },
+    { name: 'MuleSoft Government Cloud', category: 'Integration' },
+    { name: 'Pega Government Cloud', category: 'BPM' },
+    { name: 'Appian Government Cloud', category: 'BPM' }
   ];
 
   const governmentExperience = [
@@ -216,10 +216,9 @@ export default function Automation() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {topPlatforms.map((platform, index) => (
               <div key={index} className="group">
-                <div className="bg-secondary border border-border rounded-lg p-6 text-center hover:border-orange-500 hover:bg-orange-500/5 transition-all duration-200">
-                  <div className="text-5xl mb-4">{platform.logo}</div>
-                  <h4 className="font-bold mb-2 text-sm leading-tight">{platform.name}</h4>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wide">{platform.category}</p>
+                <div className="bg-white border border-gray-200 rounded-lg p-8 text-center hover:border-orange-500 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                  <h4 className="font-semibold mb-2 text-base leading-tight text-gray-900">{platform.name}</h4>
+                  <p className="text-sm text-gray-600 uppercase tracking-wide">{platform.category}</p>
                 </div>
               </div>
             ))}
