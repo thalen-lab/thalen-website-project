@@ -22,7 +22,7 @@ export default function Methodology() {
             The RAPID Framework
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
-            Proven Government Implementation Methodology: Structured 4-phase approach delivering compliant, on-budget FedRAMP and StateRAMP platform deployments
+            Proven Government Implementation Methodology: Structured 4-phase approach helping federal, state, and local agencies achieve compliant, on-budget FedRAMP and StateRAMP platform deployments
           </p>
           
           {/* Download PDF Button */}
@@ -60,7 +60,7 @@ export default function Methodology() {
           </div>
           
           <div className="text-center pt-8 border-t border-border/50">
-            <div className="text-2xl font-bold mb-2">90-day ATO timeline · 100% authorization success rate · Zero operational disruption</div>
+            <div className="text-2xl font-bold mb-2">90-day implementation timeline · 100% client success rate · Zero operational disruption</div>
           </div>
         </div>
       </section>
@@ -202,30 +202,30 @@ export default function Methodology() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">ATO Authorization Success Rate</div>
+              <div className="text-sm text-muted-foreground">Client Project Success Rate</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">90 Days</div>
-              <div className="text-sm text-muted-foreground">Average Implementation Timeline</div>
+              <div className="text-sm text-muted-foreground">Average ATO Achievement Timeline</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">Zero</div>
-              <div className="text-sm text-muted-foreground">Operational Disruption Events</div>
+              <div className="text-sm text-muted-foreground">Client Operational Disruptions</div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">$2.3B</div>
-              <div className="text-sm text-muted-foreground">Total Client ROI Delivered</div>
+              <div className="text-sm text-muted-foreground">Total Agency ROI Delivered</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">85%</div>
-              <div className="text-sm text-muted-foreground">Average Process Efficiency Gain</div>
+              <div className="text-sm text-muted-foreground">Average Agency Efficiency Gain</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">18 Mo</div>
-              <div className="text-sm text-muted-foreground">Average ROI Payback Period</div>
+              <div className="text-sm text-muted-foreground">Average Agency ROI Payback</div>
             </div>
           </div>
         </div>
