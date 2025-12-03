@@ -2378,3 +2378,7 @@
 - [x] Add "All Cases" button below the grid linking to /case-studies
 - [x] Remove carousel navigation arrows
 - [x] Preserve all case study links, pages, and routes
+
+## Fix Case Study Card White Space
+- [x] Remove white space above images in case study cards
+- [x] Ensure images start at the very top of each card

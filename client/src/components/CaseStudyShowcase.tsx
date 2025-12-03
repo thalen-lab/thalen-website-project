@@ -112,7 +112,7 @@ export default function CaseStudyShowcase() {
           {featuredCaseStudies.map((study) => (
             <Card 
               key={study.id}
-              className="bg-white border-2 border-slate-200 rounded-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group flex flex-col"
+              className="bg-white border-2 border-slate-200 rounded-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group flex flex-col p-0"
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden bg-slate-200">
