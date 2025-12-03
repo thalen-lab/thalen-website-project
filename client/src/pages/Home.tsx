@@ -315,30 +315,33 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Editorial List - Horizontal Dividers */}
-          <div className="space-y-0">
+          {/* 2x2 Grid Layout with Horizontal Dividers */}
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-0">
             {/* Phase 1 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5 }}
-              className="group border-t border-border hover:border-accent transition-colors py-8 first:border-t-0 first:pt-0"
+              className="group py-8 first:pt-0"
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
-                    1
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                      1
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                      Research & Assessment
+                    </h3>
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
-                    Research & Assessment
-                  </h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
-                  </p>
-                </div>
+                <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
+                </p>
               </div>
             </motion.div>
 
@@ -348,22 +351,25 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="group border-t border-border hover:border-accent transition-colors py-8"
+              className="group py-8 first:pt-0"
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
-                    2
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                      2
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                      Architecture & Planning
+                    </h3>
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
-                    Architecture & Planning
-                  </h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Solution architecture design, technology stack selection, and detailed implementation roadmap.
-                  </p>
-                </div>
+                <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Solution architecture design, technology stack selection, and detailed implementation roadmap.
+                </p>
               </div>
             </motion.div>
 
@@ -373,22 +379,25 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="group border-t border-border hover:border-accent transition-colors py-8"
+              className="group py-8"
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
-                    3
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                      3
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                      Implementation & Delivery
+                    </h3>
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
-                    Implementation & Delivery
-                  </h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
-                  </p>
-                </div>
+                <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
+                </p>
               </div>
             </motion.div>
 
@@ -398,22 +407,25 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="group border-t border-border hover:border-accent transition-colors py-8"
+              className="group py-8"
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
-                    4
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-xl font-bold transition-colors">
+                      4
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
+                      Performance & Optimization
+                    </h3>
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">
-                    Performance & Optimization
-                  </h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
-                  </p>
-                </div>
+                <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
+                </p>
               </div>
             </motion.div>
           </div>
