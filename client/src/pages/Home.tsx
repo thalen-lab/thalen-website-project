@@ -268,7 +268,7 @@ export default function Home() {
               Govern Smart.
             </h2>
             <p className="text-xl md:text-2xl font-light leading-relaxed max-w-4xl mx-auto opacity-95">
-              At Thalen Technologies, we've always believed progress starts when technology serves mission. By working together and thinking differently, we help government agencies turn their biggest opportunities into their next big moves. One challenge at a time.
+              We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies. From cloud migration to automation to security compliance, we handle the technical complexity so you can focus on mission delivery.
             </p>
           </div>
         </div>
