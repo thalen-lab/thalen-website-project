@@ -277,7 +277,7 @@ export default function Home() {
       </section>
 
       {/* Methodology Section - RAPID Framework - Streamlined Editorial */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container max-w-5xl">
           <motion.div 
             className="mb-16"
@@ -286,9 +286,9 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wider">Our Methodology</p>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">The Thalen Technologies RAPID Framework</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <p className="text-sm font-semibold text-orange-500 mb-3 uppercase tracking-wider">Our Methodology</p>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-white">The Thalen Technologies RAPID Framework</h2>
+            <p className="text-lg text-slate-300 max-w-2xl">
               Structured 4-phase approach delivering compliant, on-budget FedRAMP and StateRAMP platform deployments
             </p>
           </motion.div>
@@ -303,21 +303,21 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="group"
             >
-              <div className="flex flex-col gap-6 p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col gap-6 p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold transition-colors">
+                    <div className="w-16 h-16 border-2 border-slate-600 group-hover:border-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
                       1
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-orange-500 transition-colors">
                       Research & Assessment
                     </h3>
                   </div>
                 </div>
-                <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-muted-foreground leading-relaxed mt-1">
+                <div className="w-full h-px bg-slate-700 group-hover:bg-orange-500 transition-colors"></div>
+                <p className="text-base text-slate-400 leading-relaxed mt-1">
                   Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
                 </p>
               </div>
@@ -331,21 +331,21 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.05 }}
               className="group"
             >
-              <div className="flex flex-col gap-6 p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col gap-6 p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold transition-colors">
+                    <div className="w-16 h-16 border-2 border-slate-600 group-hover:border-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
                       2
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-orange-500 transition-colors">
                       Architecture & Planning
                     </h3>
                   </div>
                 </div>
-                <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-muted-foreground leading-relaxed mt-1">
+                <div className="w-full h-px bg-slate-700 group-hover:bg-orange-500 transition-colors"></div>
+                <p className="text-base text-slate-400 leading-relaxed mt-1">
                   Solution architecture design, technology stack selection, and detailed implementation roadmap.
                 </p>
               </div>
@@ -359,21 +359,21 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="group"
             >
-              <div className="flex flex-col gap-6 p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col gap-6 p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold transition-colors">
+                    <div className="w-16 h-16 border-2 border-slate-600 group-hover:border-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
                       3
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-orange-500 transition-colors">
                       Implementation & Delivery
                     </h3>
                   </div>
                 </div>
-                <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-muted-foreground leading-relaxed mt-1">
+                <div className="w-full h-px bg-slate-700 group-hover:bg-orange-500 transition-colors"></div>
+                <p className="text-base text-slate-400 leading-relaxed mt-1">
                   Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
                 </p>
               </div>
@@ -387,21 +387,21 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.15 }}
               className="group"
             >
-              <div className="flex flex-col gap-6 p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col gap-6 p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-border group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold transition-colors">
+                    <div className="w-16 h-16 border-2 border-slate-600 group-hover:border-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
                       4
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-orange-500 transition-colors">
                       Performance & Optimization
                     </h3>
                   </div>
                 </div>
-                <div className="w-full h-px bg-border group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-muted-foreground leading-relaxed mt-1">
+                <div className="w-full h-px bg-slate-700 group-hover:bg-orange-500 transition-colors"></div>
+                <p className="text-base text-slate-400 leading-relaxed mt-1">
                   Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
                 </p>
               </div>
