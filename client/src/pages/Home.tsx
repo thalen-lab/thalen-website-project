@@ -156,22 +156,15 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      {/* Hero Section with Video Background */}
-      <section className="relative h-[600px] overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative h-[400px] overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
             <source src="/videos/hero-video.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/50" />
-          {/* Vignette effect */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,transparent_50%,rgba(0,0,0,0.3)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.03)_0%,transparent_70%)]" />
         </div>
         
         {/* Hero Content */}
@@ -196,53 +189,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Statement Section */}
-      <section className="py-20 md:py-24 bg-background">
-        <div className="container max-w-5xl">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              Govern Smart.
-            </h2>
-            <p className="text-lg md:text-xl font-light leading-relaxed max-w-4xl mx-auto mb-5">
-              <em>"Our philosophy has always been to offer government agencies only the finest implementation expertise and to back every engagement with the highest level of service. Earning trust and delivering excellence is our top priority."</em>
+        {/* Mission Statement Section */}
+      <section className="relative py-16 md:py-20 overflow-hidden bg-white">
+        
+        {/* Content */}
+        <div className="container relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
+              <span className="text-sm font-medium text-orange-600">Our Mission</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">Govern Smart</h2>
+            <p className="text-xl md:text-2xl italic text-slate-600 mb-8 leading-relaxed font-light">
+              "Our philosophy has always been to offer government agencies only the finest expertise and service. We believe in building lasting relationships based on trust, excellence, and unwavering commitment to mission success."
             </p>
-            <p className="text-base md:text-lg max-w-3xl mx-auto text-muted-foreground">
-              We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies with vendor-neutral expertise and proven compliance methodologies.
+            
+            {/* Signature - Regular Format */}
+            <div className="flex flex-col items-center mb-10">
+              <p className="text-base text-slate-600 font-medium">—David Seyaker</p>
+              <p className="text-sm text-slate-500">Principal and CEO</p>
+            </div>
+            
+            <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-orange-400 mx-auto mb-10 rounded-full"></div>
+            <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
+              We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies. From cloud migration to automation to security compliance, we handle the technical complexity so you can focus on mission delivery.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Section - Editorial Layout */}
-      <section className="py-24 md:py-32 bg-navy-gradient text-primary-foreground">
-        <div className="container max-w-5xl">
-          <div className="mb-20">
-            <p className="text-sm font-semibold text-accent mb-4 tracking-wide uppercase">Core Capabilities</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+      {/* Services Section - 2x3 Grid Layout */}
+      <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container">
+          <div className="mb-12">
+            <p className="text-sm font-semibold text-accent mb-3 tracking-wide uppercase">Core Capabilities</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Government Technology Implementation Services
             </h2>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl leading-relaxed">
+            <p className="text-lg md:text-xl opacity-90 max-w-4xl leading-relaxed">
               Vendor-neutral consulting for federal, state, and local agencies. We implement FedRAMP and StateRAMP-authorized platforms with proven compliance expertise and measurable mission impact.
             </p>
           </div>
 
-          <div className="space-y-0">
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Link
                 key={index}
                 href={service.href}
-                className="block py-8 border-b border-primary-foreground/20 last:border-b-0 group transition-all hover:border-accent"
+                className="block group"
               >
-                <div className="flex items-start gap-6">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-lg opacity-80 leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                  <ArrowRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-2" />
+                <div className="h-full border-2 border-primary-foreground/20 hover:border-accent rounded-lg p-6 transition-all hover:shadow-2xl">
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-base opacity-80 leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
               </Link>
             ))}

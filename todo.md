@@ -2360,4 +2360,11 @@
 - [x] Keep background white (not gray)
 - [x] Professionally adjust text sizes for better hierarchy
 - [x] Test updated layout
-- [ ] Save checkpoint
+- [x] Save checkpoint
+
+## Current Tasks
+- [x] Restore video background to hero section while keeping reduced height
+- [x] Remove background building image from mission statement section and reduce height
+- [x] Redesign Core Capabilities section with 2x3 grid layout (2 services per row, 3 rows total)
+- [x] Reduce spacing above "Core Capabilities" heading
+- [x] Maintain all service links, pages, and routes
