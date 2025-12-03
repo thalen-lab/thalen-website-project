@@ -2615,4 +2615,12 @@
 - [x] Identify checkpoint with cards and icons after RUXI implementation
 - [x] Restore Automation.tsx from that checkpoint
 - [x] Verify page displays correctly with card-based layout
-- [ ] Save checkpoint with restored version
+- [x] Save checkpoint with restored version
+
+## Phase 51: Selective Rollback - All Automation Subpages
+- [x] Restore RPA.tsx from checkpoint 0a5aaf54 (with cards and icons)
+- [x] Restore Integration.tsx from checkpoint 0a5aaf54 (with cards and icons)
+- [x] Restore Orchestration.tsx from checkpoint 0a5aaf54 (with cards and icons)
+- [x] Restore all 4 RPA detail subpages from checkpoint 93b811d (ProcessAssessment, PlatformImplementation, ATOCompliance, CoESetup)
+- [x] Verify all pages display correctly with card-based layouts
+- [x] Save checkpoint with all restored subpages
