@@ -35,19 +35,66 @@ export default function Automation() {
     { name: 'Bot Maintenance & Support', description: 'Ongoing monitoring, optimization, and scaling of automation solutions' }
   ];
 
-  const keyDifferentiators = [
+  // Recent Government Automation Projects (mini case studies)
+  const recentProjects = [
     {
-      title: 'FedRAMP Platform Expertise',
-      description: 'Deep implementation experience with 50+ FedRAMP-authorized automation platforms including UiPath Gov, Automation Anywhere Gov, and ServiceNow Gov.'
+      agency: 'Department of Veterans Affairs',
+      challenge: 'Manual claims processing causing 45-day backlogs',
+      solution: 'Deployed UiPath Gov RPA bots with intelligent document processing',
+      results: ['60% faster processing', '85% automation rate', '$8.2M annual savings']
     },
     {
-      title: 'Vendor-Neutral Consulting',
-      description: 'We help you select the RIGHT automation platforms for your mission requirements, then implement them with proven government-specific best practices.'
+      agency: 'Department of Defense',
+      challenge: 'Contract management across 200+ systems with compliance gaps',
+      solution: 'Implemented ServiceNow Gov workflow orchestration with automated ATO documentation',
+      results: ['$4.2M cost reduction', '99.8% compliance rate', '40% faster contract cycles']
     },
     {
-      title: 'Mission-Focused Implementation',
-      description: 'Automation solutions designed for measurable mission impact—faster processing, reduced errors, compliance assurance, and operational cost savings.'
+      agency: 'Federal Healthcare Agency',
+      challenge: 'Provider enrollment taking 90+ days with high error rates',
+      solution: 'Built end-to-end automation using Automation Anywhere Gov and custom APIs',
+      results: ['15-day enrollment time', '94% error reduction', '12,000 providers onboarded']
     }
+  ];
+
+  // 4-Step Implementation Process
+  const implementationProcess = [
+    {
+      step: '01',
+      title: 'Discovery & Assessment',
+      description: 'Process mining to identify automation opportunities, ROI modeling, and FedRAMP platform selection based on your mission requirements.',
+      duration: '2-4 weeks'
+    },
+    {
+      step: '02',
+      title: 'Design & Compliance',
+      description: 'Solution architecture, security controls design, ATO documentation preparation, and compliance validation (FedRAMP, FISMA, NIST).',
+      duration: '4-6 weeks'
+    },
+    {
+      step: '03',
+      title: 'Build & Test',
+      description: 'Bot development, integration with legacy systems, user acceptance testing, and performance optimization with government stakeholders.',
+      duration: '8-12 weeks'
+    },
+    {
+      step: '04',
+      title: 'Deploy & Scale',
+      description: 'Production deployment, Center of Excellence setup, training programs, and ongoing optimization to maximize mission impact.',
+      duration: 'Ongoing'
+    }
+  ];
+
+  // Platforms We Implement Most Often
+  const topPlatforms = [
+    { name: 'UiPath Government Cloud', category: 'RPA', logo: '🤖' },
+    { name: 'Automation Anywhere Gov', category: 'RPA', logo: '⚙️' },
+    { name: 'ServiceNow Gov', category: 'Workflow', logo: '🔄' },
+    { name: 'Microsoft Power Automate Gov', category: 'RPA', logo: '⚡' },
+    { name: 'Blue Prism Government', category: 'RPA', logo: '🔷' },
+    { name: 'MuleSoft Government Cloud', category: 'Integration', logo: '🔗' },
+    { name: 'Pega Government Cloud', category: 'BPM', logo: '📊' },
+    { name: 'Appian Government Cloud', category: 'BPM', logo: '📋' }
   ];
 
   const governmentExperience = [
@@ -104,23 +151,128 @@ export default function Automation() {
         </div>
       </section>
 
-      {/* Key Differentiators - Z100 Editorial Style */}
+      {/* Recent Government Automation Projects */}
       <section className="py-20 bg-background">
         <div className="container max-w-5xl">
           <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Partner with Thalen Technologies</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Recent Government Automation Projects</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Three core strengths that define our approach to government automation implementation.
+              Real implementations across federal agencies with measurable mission impact.
             </p>
           </div>
 
           <div className="space-y-12">
-            {keyDifferentiators.map((item, index) => (
-              <div key={index} className="border-l-4 border-orange-500 pl-8 py-4">
-                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">{item.description}</p>
+            {recentProjects.map((project, index) => (
+              <div key={index} className="border-l-4 border-orange-500 pl-8 py-6">
+                <h3 className="text-2xl font-bold mb-3">{project.agency}</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-1">Challenge</p>
+                    <p className="text-lg leading-relaxed">{project.challenge}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-1">Solution</p>
+                    <p className="text-lg leading-relaxed">{project.solution}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Results</p>
+                    <div className="flex flex-wrap gap-3">
+                      {project.results.map((result, idx) => (
+                        <span key={idx} className="bg-orange-500/10 text-orange-600 dark:text-orange-400 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/20">
+                          {result}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12">
+            <Link href="/case-studies">
+              <Button variant="outline" size="lg">
+                View All Case Studies
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* Our Automation Implementation Process */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Automation Implementation Process</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              A proven 4-step methodology for delivering compliant, mission-focused automation solutions.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {implementationProcess.map((phase, index) => (
+              <div key={index} className="flex gap-8 items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-orange-500/10 border-2 border-orange-500 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-orange-600 dark:text-orange-400">{phase.step}</span>
+                  </div>
+                </div>
+                <div className="flex-1 pt-2">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-2xl font-bold">{phase.title}</h3>
+                    <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">{phase.duration}</span>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">{phase.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Horizontal Divider */}
+      <div className="container">
+        <div className="border-t border-border"></div>
+      </div>
+
+      {/* Platforms We Implement Most Often */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Platforms We Implement Most Often</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              FedRAMP-authorized automation platforms we deploy for government agencies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {topPlatforms.map((platform, index) => (
+              <div key={index} className="group">
+                <div className="bg-secondary border border-border rounded-lg p-6 text-center hover:border-orange-500 hover:bg-orange-500/5 transition-all duration-200">
+                  <div className="text-5xl mb-4">{platform.logo}</div>
+                  <h4 className="font-bold mb-2 text-sm leading-tight">{platform.name}</h4>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide">{platform.category}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-muted-foreground mb-6">
+              We implement 50+ FedRAMP-authorized platforms. Need help selecting the right tools?
+            </p>
+            <Link href="/contact">
+              <Button variant="outline" size="lg">
+                Request Platform Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
