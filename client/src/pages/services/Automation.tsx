@@ -296,30 +296,54 @@ export default function Automation() {
 
 
 
-      {/* FedRAMP Automation Platform Expertise */}
+      {/* FedRAMP Automation Platform Expertise - Z100 Editorial Style */}
       <section className="py-20 bg-background">
         <div className="container max-w-5xl">
           <div className="mb-16">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Automation Platform Expertise</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">FedRAMP-Authorized Automation Platform Expertise</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
               We implement and integrate FedRAMP-authorized automation platforms from leading vendors, helping you select the right tools for your mission.
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-16">
             {fedrampPlatforms.map((category, index) => (
               <div key={index}>
-                <h3 className="text-2xl font-bold mb-6">{category.category}</h3>
-                <div className="flex flex-wrap gap-3">
+                {/* Horizontal Divider with Orange Accent */}
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-1 h-8 bg-orange-500 rounded-full"></div>
+                  <h3 className="text-2xl font-bold">{category.category}</h3>
+                </div>
+                
+                {/* Platform Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {category.platforms.map((platform, idx) => (
-                    <span key={idx} className="bg-secondary border border-border text-foreground px-4 py-2 rounded-full text-sm font-medium">
-                      {platform}
-                    </span>
+                    <div 
+                      key={idx} 
+                      className="group bg-white border border-gray-200 rounded-lg p-6 hover:border-orange-500 hover:shadow-md transition-all duration-300 cursor-pointer"
+                    >
+                      <h4 className="font-semibold text-base text-gray-900 mb-2">{platform}</h4>
+                      <p className="text-sm text-gray-600">
+                        {idx === 0 && category.category === 'RPA & Intelligent Automation' && 'Enterprise-grade RPA with AI-powered automation capabilities'}
+                        {idx === 1 && category.category === 'RPA & Intelligent Automation' && 'Cloud-native intelligent automation platform'}
+                        {idx === 2 && category.category === 'RPA & Intelligent Automation' && 'Secure, scalable RPA for mission-critical operations'}
+                        {idx === 3 && category.category === 'RPA & Intelligent Automation' && 'Low-code automation integrated with Microsoft 365'}
+                        {idx === 0 && category.category === 'Integration & iPaaS' && 'API-led connectivity for hybrid cloud environments'}
+                        {idx === 1 && category.category === 'Integration & iPaaS' && 'Cloud-native integration platform with pre-built connectors'}
+                        {idx === 2 && category.category === 'Integration & iPaaS' && 'Enterprise data integration and management platform'}
+                        {idx === 3 && category.category === 'Integration & iPaaS' && 'Self-service data integration with AI-powered insights'}
+                        {idx === 0 && category.category === 'Workflow & BPM' && 'Enterprise service management and workflow automation'}
+                        {idx === 1 && category.category === 'Workflow & BPM' && 'Low-code platform for business process management'}
+                        {idx === 2 && category.category === 'Workflow & BPM' && 'Enterprise low-code automation platform'}
+                        {idx === 3 && category.category === 'Workflow & BPM' && 'Open-source workflow and decision automation'}
+                        {idx === 0 && category.category === 'Document Processing' && 'AI-powered document understanding and extraction'}
+                        {idx === 1 && category.category === 'Document Processing' && 'Intelligent document processing with cognitive capture'}
+                        {idx === 2 && category.category === 'Document Processing' && 'Enterprise capture and document processing platform'}
+                        {idx === 3 && category.category === 'Document Processing' && 'Intelligent automation for document-centric processes'}
+                      </p>
+                    </div>
                   ))}
                 </div>
-                {index < fedrampPlatforms.length - 1 && (
-                  <div className="border-t border-border mt-12"></div>
-                )}
               </div>
             ))}
           </div>
