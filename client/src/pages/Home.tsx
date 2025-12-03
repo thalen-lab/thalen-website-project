@@ -225,9 +225,9 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-navy-gradient text-primary-foreground">
         <div className="container max-w-5xl">
           <div className="mb-20">
-            <p className="text-sm font-semibold text-cyan-400 mb-4 tracking-wide uppercase">How We Help Agencies</p>
+            <p className="text-sm font-semibold text-accent mb-4 tracking-wide uppercase">Core Capabilities</p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-              Let's turn your biggest opportunities into your next big moves.
+              Government Technology Implementation Services
             </h2>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl leading-relaxed">
               Vendor-neutral consulting for federal, state, and local agencies. We implement FedRAMP and StateRAMP-authorized platforms with proven compliance expertise and measurable mission impact.

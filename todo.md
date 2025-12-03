@@ -2341,3 +2341,9 @@
 - [x] Remove "What We Do" core capabilities section from homepage
 - [x] Test homepage layout after removal
 - [x] Save checkpoint
+
+## Phase 107: Update Services Section Heading and Description
+- [x] Change "How We Help Agencies" to "Core Capabilities"
+- [x] Replace promotional subtitle with professional government consulting language
+- [x] Test updated homepage layout
+- [ ] Save checkpoint
