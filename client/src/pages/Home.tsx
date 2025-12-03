@@ -196,25 +196,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Statement Section - Editorial Style */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
-            backgroundSize: '48px 48px'
-          }} />
-        </div>
-        
-        <div className="container max-w-5xl relative">
+      {/* Mission Statement Section */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container max-w-4xl">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-              Govern Smart.
-            </h2>
-            <p className="text-xl md:text-2xl font-light leading-relaxed max-w-4xl mx-auto opacity-95">
-              <em>"Our philosophy has always been to offer government agencies only the finest implementation expertise and to back every engagement with the highest level of service. Earning trust and delivering excellence is our top priority."</em>
-            </p>
-            <p className="text-lg md:text-xl mt-6 max-w-3xl mx-auto opacity-80">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies with vendor-neutral expertise and proven compliance methodologies.
             </p>
           </div>

@@ -2346,4 +2346,11 @@
 - [x] Change "How We Help Agencies" to "Core Capabilities"
 - [x] Replace promotional subtitle with professional government consulting language
 - [x] Test updated homepage layout
+- [x] Save checkpoint
+
+## Phase 108: Reduce Mission Statement Section Weight
+- [x] Change background from gray to white
+- [x] Reduce text size and visual prominence
+- [x] Make content more concise and subtle
+- [x] Test updated layout
 - [ ] Save checkpoint
