@@ -2318,4 +2318,12 @@
 - [x] Add italicized philosophy quote emphasizing service excellence and trust
 - [x] Maintain substantive FedRAMP/StateRAMP expertise messaging
 - [x] Test updated copy in browser
+- [x] Save checkpoint after completion
+
+## Phase 104: Remove Featured Insight Section and Add Core Capabilities
+- [x] Remove entire Featured Insight section (2.3B ROI, case study preview)
+- [x] Create clean Core Capabilities section after philosophy statement)
+- [x] List core capabilities clearly and concisely
+- [x] Ensure smooth transition from philosophy to capabilities to services
+- [x] Test updated homepage layout
 - [ ] Save checkpoint after completion

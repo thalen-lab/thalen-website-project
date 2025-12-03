@@ -277,47 +277,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Insight Section - Split Layout */}
-      <section className="py-20 bg-muted">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Left: Visual */}
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-orange-500/20 via-accent/20 to-orange-600/20 rounded-2xl p-12 flex items-center justify-center relative overflow-hidden">
-                {/* Abstract tech visualization */}
-                <div className="absolute inset-0 opacity-30">
-                  <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/40 rounded-full blur-3xl" />
-                  <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-accent/40 rounded-full blur-3xl" />
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-orange-600/40 rounded-full blur-3xl" />
-                </div>
-                <div className="relative text-center">
-                  <div className="text-6xl md:text-7xl font-bold text-primary mb-4">2.3B</div>
-                  <div className="text-xl md:text-2xl font-semibold text-foreground">ROI Generated</div>
-                  <div className="text-sm text-muted-foreground mt-2">Across 50+ Federal Agencies</div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right: Content */}
-            <div>
-              <p className="text-sm font-semibold text-accent mb-3 tracking-wide uppercase">Featured Insight</p>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                From 4,000 Hours to 40 Minutes: How Federal Agencies Are Achieving 99% Time Reduction
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Our vendor-neutral approach to FedRAMP platform implementation has helped agencies analyze threats 6,000 times faster, reduce manual processing from weeks to minutes, and achieve compliance-ready automation at scale. Discover the methodology behind measurable mission impact.
+      {/* Core Capabilities Section - Clean Editorial Style */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">What We Do</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
+              We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies. Our vendor-neutral approach ensures you get the right solution, not just the one we sell.
+            </p>
+          </div>
+
+          <div className="space-y-0">
+            <div className="py-8 border-b border-border">
+              <h3 className="text-2xl font-bold mb-3">Cloud Migration & Integration</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Migrate to AWS GovCloud, Azure Government, or Google Cloud with comprehensive ATO documentation, security controls implementation, and multi-cloud orchestration.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                  <Link href="/methodology">
-                    Explore Our Methodology
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/case-studies">View Case Studies</Link>
-                </Button>
-              </div>
+            </div>
+
+            <div className="py-8 border-b border-border">
+              <h3 className="text-2xl font-bold mb-3">Process Automation & RPA</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Deploy FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov) with bot development, ATO compliance documentation, and Center of Excellence setup.
+              </p>
+            </div>
+
+            <div className="py-8 border-b border-border">
+              <h3 className="text-2xl font-bold mb-3">Data Analytics & Intelligence</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Implement secure analytics using FedRAMP platforms (Tableau Gov, Power BI Gov, Databricks Gov) with data governance, compliance controls, and real-time visualization.
+              </p>
+            </div>
+
+            <div className="py-8 border-b border-border">
+              <h3 className="text-2xl font-bold mb-3">Cybersecurity & Compliance</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Achieve FedRAMP, StateRAMP, CMMC, and FISMA compliance through gap analysis, security controls implementation, continuous monitoring, and audit preparation.
+              </p>
+            </div>
+
+            <div className="py-8 border-b border-border">
+              <h3 className="text-2xl font-bold mb-3">Systems Integration</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Connect 50+ FedRAMP platforms (Salesforce Gov Cloud, ServiceNow, Workday) with legacy systems using secure APIs, vendor-neutral architecture, and ATO-ready integration patterns.
+              </p>
+            </div>
+
+            <div className="py-8">
+              <h3 className="text-2xl font-bold mb-3">IT Modernization & Transformation</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Vendor-neutral platform selection, legacy system modernization, change management, and Technology Modernization Fund (TMF) proposal support for federal agencies.
+              </p>
             </div>
           </div>
         </div>
