@@ -22,7 +22,7 @@ export default function Methodology() {
             The RAPID Framework
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
-            Proven Government Implementation Methodology: Structured 4-phase approach helping federal, state, and local agencies achieve compliant, on-budget FedRAMP and StateRAMP platform deployments
+            Structured 4-phase approach helping federal, state, and local agencies modernize operations, achieve compliance, and deliver mission-critical results
           </p>
           
           {/* Download PDF Button */}
@@ -80,7 +80,7 @@ export default function Methodology() {
                   <h2 className="text-2xl font-bold mb-2">Research & Assessment</h2>
                   <div className="h-px bg-border mb-4"></div>
                   <p className="text-muted-foreground mb-4">
-                    Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
+                    Comprehensive assessment of your agency's current operations, systems, and processes to identify modernization opportunities and establish ROI baseline.
                   </p>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-start gap-2">
@@ -110,7 +110,7 @@ export default function Methodology() {
                   <h2 className="text-2xl font-bold mb-2">Architecture & Planning</h2>
                   <div className="h-px bg-border mb-4"></div>
                   <p className="text-muted-foreground mb-4">
-                    Solution architecture design, technology stack selection, and detailed implementation roadmap.
+                    Solution architecture design - whether modernizing existing systems, implementing FedRAMP/StateRAMP platforms, or integrating both - with detailed implementation roadmap.
                   </p>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-start gap-2">
@@ -140,7 +140,7 @@ export default function Methodology() {
                   <h2 className="text-2xl font-bold mb-2">Implementation & Delivery</h2>
                   <div className="h-px bg-border mb-4"></div>
                   <p className="text-muted-foreground mb-4">
-                    Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
+                    Hands-on implementation of system modernization, process automation, and compliance documentation - delivering measurable results with zero operational disruption.
                   </p>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-start gap-2">
@@ -170,7 +170,7 @@ export default function Methodology() {
                   <h2 className="text-2xl font-bold mb-2">Performance & Optimization</h2>
                   <div className="h-px bg-border mb-4"></div>
                   <p className="text-muted-foreground mb-4">
-                    Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
+                    Ongoing monitoring, optimization, and support to ensure sustained performance improvements and continuous ROI growth.
                   </p>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-start gap-2">
