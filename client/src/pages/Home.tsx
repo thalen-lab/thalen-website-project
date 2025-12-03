@@ -15,8 +15,6 @@ import {
   Cpu,
   Code,
   Users,
-  ChevronLeft,
-  ChevronRight,
   ShieldCheck,
   Award,
   FileCheck,
@@ -450,136 +448,67 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="flex items-start justify-between mb-12">
-            <div className="max-w-xl">
-              <p className="text-sm text-muted-foreground mb-2">Partners</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                With these partners we deliver enterprise-grade solutions
-              </h2>
-              <Link href="/partners" className="inline-flex items-center justify-center rounded-full border border-border bg-background px-6 py-3 text-base font-semibold hover:bg-accent hover:text-accent-foreground transition-colors">
-                All partners
-              </Link>
+      <section className="py-24 bg-background">
+        <div className="container max-w-5xl">
+          {/* Header */}
+          <div className="mb-16">
+            <p className="text-sm font-medium text-muted-foreground mb-3 tracking-wide uppercase">Technology Partners</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
+              Delivering enterprise-grade solutions through strategic partnerships
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+              We collaborate with industry-leading technology providers to deliver comprehensive, mission-critical solutions for federal agencies and government contractors.
+            </p>
+          </div>
+
+          {/* Partner Categories Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Cloud & Infrastructure */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-semibold text-foreground tracking-wide uppercase border-b border-border pb-3">Cloud & Infrastructure</h3>
+              <div className="space-y-2">
+                <p className="text-base text-foreground font-medium">AWS GovCloud</p>
+                <p className="text-base text-foreground font-medium">Azure Government</p>
+                <p className="text-base text-foreground font-medium">Google Cloud</p>
+              </div>
             </div>
-            <div className="flex gap-2">
-              <button
-                onClick={() => {
-                  const container = document.getElementById('partners-carousel');
-                  if (container) container.scrollBy({ left: -400, behavior: 'smooth' });
-                }}
-                className="p-3 rounded-full border border-border hover:bg-accent transition-colors"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <button
-                onClick={() => {
-                  const container = document.getElementById('partners-carousel');
-                  if (container) container.scrollBy({ left: 400, behavior: 'smooth' });
-                }}
-                className="p-3 rounded-full border border-border hover:bg-accent transition-colors"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
+
+            {/* Automation & AI */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-semibold text-foreground tracking-wide uppercase border-b border-border pb-3">Automation & AI</h3>
+              <div className="space-y-2">
+                <p className="text-base text-foreground font-medium">UiPath</p>
+                <p className="text-base text-foreground font-medium">Automation Anywhere</p>
+                <p className="text-base text-foreground font-medium">OpenAI</p>
+              </div>
+            </div>
+
+            {/* Security & Compliance */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-semibold text-foreground tracking-wide uppercase border-b border-border pb-3">Security & Compliance</h3>
+              <div className="space-y-2">
+                <p className="text-base text-foreground font-medium">Palo Alto Networks</p>
+                <p className="text-base text-foreground font-medium">CrowdStrike</p>
+                <p className="text-base text-foreground font-medium">Splunk</p>
+              </div>
             </div>
           </div>
 
-          <div id="partners-carousel" className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4">
-            {/* Process Automation Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
-              <h3 className="text-xl font-bold mb-6 text-foreground">Process Automation</h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  UiPath
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Automation Anywhere
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Blue Prism
-                </span>
-              </div>
-            </div>
+          {/* Horizontal Divider */}
+          <div className="border-t border-border my-12"></div>
 
-            {/* Cloud Platforms Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
-              <h3 className="text-xl font-bold mb-6 text-foreground">Cloud Platforms</h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  AWS GovCloud
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Azure Government
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Google Cloud
-                </span>
-              </div>
+          {/* CTA */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <p className="text-lg text-foreground font-medium mb-1">Explore our complete partner ecosystem</p>
+              <p className="text-sm text-muted-foreground">25+ strategic partnerships across 6 technology categories</p>
             </div>
-
-            {/* Data & Analytics Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
-              <h3 className="text-xl font-bold mb-6 text-foreground">Data & Analytics</h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Snowflake
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Databricks
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Tableau
-                </span>
-              </div>
-            </div>
-
-            {/* Cybersecurity Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
-              <h3 className="text-xl font-bold mb-6 text-foreground">Cybersecurity</h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Palo Alto Networks
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  CrowdStrike
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Splunk
-                </span>
-              </div>
-            </div>
-
-            {/* AI & Machine Learning Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
-              <h3 className="text-xl font-bold mb-6 text-foreground">AI & Machine Learning</h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  OpenAI
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Anthropic
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  DataRobot
-                </span>
-              </div>
-            </div>
-
-            {/* Enterprise Software Card */}
-            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
-              <h3 className="text-xl font-bold mb-6 text-foreground">Enterprise Software</h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  ServiceNow
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  Salesforce
-                </span>
-                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
-                  SAP
-                </span>
-              </div>
-            </div>
+            <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all whitespace-nowrap">
+              <Link href="/partners">
+                View All Partners
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
