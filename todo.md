@@ -2560,3 +2560,6 @@
 
 ## Phase 75: Redesign Implementation Process Section
 - [x] Redesign Implementation Process section with 2x2 grid, horizontal dividers, no timelines, orange accent on Phase 2
+
+## Phase 76: Remove Recent Government Automation Projects Section
+- [x] Remove 'Recent Government Automation Projects' section from Government Process Automation page

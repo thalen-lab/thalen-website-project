@@ -35,27 +35,7 @@ export default function Automation() {
     { name: 'Bot Maintenance & Support', description: 'Ongoing monitoring, optimization, and scaling of automation solutions' }
   ];
 
-  // Recent Government Automation Projects (mini case studies)
-  const recentProjects = [
-    {
-      agency: 'Department of Veterans Affairs',
-      challenge: 'Manual claims processing causing 45-day backlogs',
-      solution: 'Deployed UiPath Gov RPA bots with intelligent document processing',
-      results: ['60% faster processing', '85% automation rate', '$8.2M annual savings']
-    },
-    {
-      agency: 'Department of Defense',
-      challenge: 'Contract management across 200+ systems with compliance gaps',
-      solution: 'Implemented ServiceNow Gov workflow orchestration with automated ATO documentation',
-      results: ['$4.2M cost reduction', '99.8% compliance rate', '40% faster contract cycles']
-    },
-    {
-      agency: 'Federal Healthcare Agency',
-      challenge: 'Provider enrollment taking 90+ days with high error rates',
-      solution: 'Built end-to-end automation using Automation Anywhere Gov and custom APIs',
-      results: ['15-day enrollment time', '94% error reduction', '12,000 providers onboarded']
-    }
-  ];
+
 
   // 4-Step Implementation Process
   const implementationProcess = [
@@ -150,60 +130,6 @@ export default function Automation() {
           </div>
         </div>
       </section>
-
-      {/* Recent Government Automation Projects */}
-      <section className="py-20 bg-background">
-        <div className="container max-w-5xl">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Recent Government Automation Projects</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Real implementations across federal agencies with measurable mission impact.
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            {recentProjects.map((project, index) => (
-              <div key={index} className="border-l-4 border-orange-500 pl-8 py-6">
-                <h3 className="text-2xl font-bold mb-3">{project.agency}</h3>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-1">Challenge</p>
-                    <p className="text-lg leading-relaxed">{project.challenge}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-1">Solution</p>
-                    <p className="text-lg leading-relaxed">{project.solution}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Results</p>
-                    <div className="flex flex-wrap gap-3">
-                      {project.results.map((result, idx) => (
-                        <span key={idx} className="bg-orange-500/10 text-orange-600 dark:text-orange-400 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/20">
-                          {result}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12">
-            <Link href="/case-studies">
-              <Button variant="outline" size="lg">
-                View All Case Studies
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Horizontal Divider */}
-      <div className="container">
-        <div className="border-t border-border"></div>
-      </div>
 
       {/* Our Automation Implementation Process */}
       <section className="py-20 bg-background">
