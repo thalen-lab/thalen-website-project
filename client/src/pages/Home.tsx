@@ -219,23 +219,29 @@ export default function Home() {
 
       {/* Certifications Section - Editorial Layout */}
       <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-        <div className="container max-w-5xl">
+        <div className="container">
           <motion.div 
-            className="mb-16"
+            className="grid lg:grid-cols-2 gap-8 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wider">Trusted & Certified</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise & Government Security & Compliance</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
-            </p>
+            <div>
+              <p className="text-sm font-medium text-orange-600 mb-3">Trusted & Certified</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
+                Enterprise & Government Security & Compliance
+              </h2>
+            </div>
+            <div className="flex flex-col justify-end">
+              <p className="text-lg text-slate-600">
+                Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
+              </p>
+            </div>
           </motion.div>
 
-          {/* 4-Column Grid with Hover-Reveal Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 3-Column Grid with Hover-Reveal Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => {
               return (
                 <motion.div
@@ -246,18 +252,18 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   className="group relative"
                 >
-                  <Card className="h-full border-2 border-border hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden bg-card">
-                    <CardContent className="p-6 relative">
+                  <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden bg-white rounded-none shadow-lg">
+                    <CardContent className="p-8 relative">
                       {/* Title - Always Visible */}
                       <div className="flex flex-col items-center text-center">
-                        <h3 className="text-lg font-bold group-hover:text-accent transition-colors">
+                        <h3 className="text-xl font-bold text-slate-900 group-hover:text-accent transition-colors">
                           {cert.name}
                         </h3>
                       </div>
                       
                       {/* Description - Revealed on Hover */}
-                      <div className="absolute inset-0 bg-card/95 backdrop-blur-sm p-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <p className="text-sm text-muted-foreground leading-relaxed text-center">
+                      <div className="absolute inset-0 bg-white/95 backdrop-blur-sm p-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-base text-slate-600 leading-relaxed text-center">
                           {cert.description}
                         </p>
                       </div>

@@ -2590,3 +2590,6 @@
 
 ## Phase 46: Remove Icons from Certification Cards
 - [x] Remove icons from certification cards on homepage (keep only titles and hover descriptions)
+- [x] Match section title size between certifications and case studies sections
+- [x] Increase certification card sizes to align with case study card sizes
+- [x] Ensure consistent visual hierarchy and spacing
