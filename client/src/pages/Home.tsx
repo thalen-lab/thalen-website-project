@@ -197,10 +197,16 @@ export default function Home() {
       </section>
 
       {/* Mission Statement Section */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container max-w-4xl">
+      <section className="py-20 md:py-24 bg-background">
+        <div className="container max-w-5xl">
           <div className="text-center">
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              Govern Smart.
+            </h2>
+            <p className="text-lg md:text-xl font-light leading-relaxed max-w-4xl mx-auto mb-5">
+              <em>"Our philosophy has always been to offer government agencies only the finest implementation expertise and to back every engagement with the highest level of service. Earning trust and delivering excellence is our top priority."</em>
+            </p>
+            <p className="text-base md:text-lg max-w-3xl mx-auto text-muted-foreground">
               We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies with vendor-neutral expertise and proven compliance methodologies.
             </p>
           </div>
