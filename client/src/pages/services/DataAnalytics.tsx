@@ -1,79 +1,120 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, BarChart3, Brain, Database, LineChart } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, Database, LineChart, Shield, Users, Award, TrendingUp } from 'lucide-react';
 
 export default function DataAnalytics() {
+  // Primary service offerings (4 core capabilities)
   const primaryServices = [
     {
       icon: LineChart,
       title: 'Analytics Platform Implementation',
       description: 'We implement FedRAMP-authorized analytics platforms (Tableau Government, Power BI Gov, Qlik Government) with real-time dashboards and mission intelligence.',
+      benefits: ['FedRAMP platform selection', 'Custom dashboard development', 'Data source integration'],
       link: '/services/data-analytics/visualization'
     },
     {
       icon: Brain,
       title: 'AI/ML Model Development & Deployment',
       description: 'Deploy machine learning models for predictive analytics, fraud detection, and operational optimization using government-approved AI platforms.',
+      benefits: ['Explainable AI implementation', 'Model governance frameworks', 'Bias detection & mitigation'],
       link: '/services/data-analytics/ml-ai'
     },
     {
       icon: Database,
       title: 'Data Engineering & Pipeline Development',
       description: 'Build scalable data pipelines using FedRAMP ETL tools (Informatica Gov, Talend, AWS Glue) for reliable, trusted data at operational scale.',
+      benefits: ['Automated data pipelines', 'Data quality frameworks', 'Real-time processing'],
       link: '/services/data-analytics/engineering'
     },
     {
       icon: BarChart3,
       title: 'Data Strategy & Governance',
       description: 'Develop comprehensive data strategies aligned with mission objectives, including governance frameworks, data architecture, and analytics roadmaps.',
+      benefits: ['6-week strategy assessment', '3-year implementation roadmap', 'Quick wins identification'],
       link: '/services/data-analytics/strategy'
     }
   ];
 
+  // Additional capabilities (compact format)
+  const additionalCapabilities = [
+    { name: 'Data Warehouse Modernization', description: 'Migrate legacy data warehouses to cloud-native platforms (Snowflake Gov, Redshift)' },
+    { name: 'Master Data Management (MDM)', description: 'Implement MDM solutions for data consistency across agency systems' },
+    { name: 'Data Quality & Observability', description: 'Deploy data quality monitoring and automated anomaly detection' },
+    { name: 'Analytics Training & Enablement', description: 'Train agency staff on analytics tools and data-driven decision-making' }
+  ];
+
+  const keyDifferentiators = [
+    {
+      icon: Shield,
+      title: 'FedRAMP Analytics Platforms',
+      description: 'Deep implementation experience with 30+ FedRAMP-authorized analytics, BI, and AI/ML platforms across all major vendors.'
+    },
+    {
+      icon: Users,
+      title: 'Vendor-Neutral Analytics Consulting',
+      description: 'We help you select the RIGHT analytics platforms for your mission requirements, then integrate them with existing systems.'
+    },
+    {
+      icon: Award,
+      title: 'Mission-Focused Outcomes',
+      description: 'Analytics solutions designed for measurable mission impact—faster decisions, improved outcomes, and operational efficiency.'
+    }
+  ];
+
+  const governmentExperience = [
+    { agency: 'Department of Veterans Affairs', project: 'Predictive Analytics Platform', outcome: '60% faster claims processing' },
+    { agency: 'Department of Defense', project: 'Automated Data Pipelines', outcome: '$12M annual cost savings' },
+    { agency: 'Health & Human Services', project: 'Public Health Surveillance', outcome: 'Real-time disease tracking' }
+  ];
+
+  const fedrampPlatforms = [
+    {
+      category: 'Business Intelligence & Visualization',
+      platforms: ['Tableau Government', 'Microsoft Power BI Gov', 'Qlik Government', 'Domo Government']
+    },
+    {
+      category: 'AI/ML & Predictive Analytics',
+      platforms: ['AWS SageMaker (GovCloud)', 'Azure Machine Learning Gov', 'DataRobot Government', 'H2O.ai']
+    },
+    {
+      category: 'Data Engineering & ETL',
+      platforms: ['Informatica Government', 'Talend Government', 'AWS Glue', 'Azure Data Factory Gov']
+    },
+    {
+      category: 'Data Warehousing',
+      platforms: ['Snowflake Government', 'Amazon Redshift', 'Azure Synapse Analytics Gov', 'Google BigQuery']
+    }
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section - Z100 Editorial Style */}
-      <section className="relative pt-32 pb-20 bg-white">
-        <div className="container max-w-5xl">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-sm text-zinc-500 mb-12">
-            <Link href="/" className="hover:text-zinc-900 transition-colors">Home</Link>
-            <span>/</span>
-            <Link href="/services" className="hover:text-zinc-900 transition-colors">Services</Link>
-            <span>/</span>
-            <span className="text-zinc-900">Data Analytics</span>
-          </div>
-
-          {/* Hero Content */}
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-6xl font-light text-zinc-900 leading-[1.1] tracking-tight">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
+        <div className="container">
+          <div className="max-w-4xl">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              Implementation Services
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Government Data Analytics & Intelligence
             </h1>
-            
-            <p className="text-xl md:text-2xl text-zinc-600 leading-relaxed font-light max-w-4xl">
-              We help government agencies (federal, state, and local) implement FedRAMP and StateRAMP-authorized analytics platforms, AI/ML models, and data pipelines that transform massive datasets into mission-critical intelligence. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              We help government agencies implement FedRAMP-authorized analytics platforms, AI/ML models, and data pipelines that transform massive datasets into mission-critical intelligence. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
             </p>
-
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-wrap gap-4">
               <Link href="/contact">
-                <Button 
-                  size="lg" 
-                  className="bg-zinc-900 hover:bg-zinc-800 text-white px-8 h-12 text-base font-normal rounded-none"
-                >
+                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
                   Request Analytics Assessment
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/services/data-analytics/assessment">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white px-8 h-12 text-base font-normal rounded-none"
-                >
+                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   Take Data Maturity Assessment
                 </Button>
               </Link>
@@ -82,207 +123,223 @@ export default function DataAnalytics() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
-
-      {/* Core Services Grid - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-16 tracking-tight">
-            Core Analytics Implementation Services
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            {primaryServices.map((service, index) => (
-              <Link key={index} href={service.link}>
-                <div className="group cursor-pointer">
-                  <div className="mb-6">
-                    <service.icon className="h-10 w-10 text-zinc-900" strokeWidth={1.5} />
-                  </div>
-                  
-                  <h3 className="text-2xl font-light text-zinc-900 mb-4 group-hover:text-zinc-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-base text-zinc-600 leading-relaxed mb-4">
-                    {service.description}
-                  </p>
-
-                  <div className="flex items-center text-sm text-zinc-900 group-hover:text-zinc-600 transition-colors">
-                    <span className="font-normal">Learn more</span>
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
-                  </div>
-                </div>
-              </Link>
+      {/* Key Differentiators */}
+      <section className="py-16 bg-background">
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-8">
+            {keyDifferentiators.map((item, index) => (
+              <div key={index} className="text-center">
+                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
+      {/* Primary Analytics Services */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Analytics Implementation Services</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              End-to-end analytics capabilities from strategy to deployment, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
+            </p>
+          </div>
 
-      {/* Additional Capabilities - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-12 tracking-tight">
-            Additional Analytics Capabilities
-          </h2>
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {primaryServices.map((service, index) => (
+              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
+                <CardContent className="p-8">
+                  <service.icon className="h-16 w-16 text-primary mb-6" />
+                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <p className="text-muted-foreground mb-6">{service.description}</p>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-start text-sm">
+                        <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-2"></span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">Data Warehouse Modernization</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Migrate legacy data warehouses to cloud-native platforms (Snowflake Gov, Redshift)
-              </p>
-            </div>
+                  <Link href={service.link}>
+                    <Button variant="outline" className="w-full border-2 border-dashed border-primary/30 hover:border-accent hover:bg-accent/5">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
 
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">Master Data Management (MDM)</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Implement MDM solutions for data consistency across agency systems
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">Data Quality & Observability</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Deploy data quality monitoring and automated anomaly detection
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">Analytics Training & Enablement</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Train agency staff on analytics tools and data-driven decision-making
-              </p>
+          {/* Additional Capabilities - Compact Format */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-8 text-center">Additional Analytics Capabilities</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {additionalCapabilities.map((capability, index) => (
+                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
+                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-4"></span>
+                  <div>
+                    <h4 className="font-semibold mb-1">{capability.name}</h4>
+                    <p className="text-sm text-muted-foreground">{capability.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
-
-      {/* FedRAMP Platform Expertise - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-12 tracking-tight">
-            FedRAMP-Authorized Analytics Platform Expertise
-          </h2>
-
-          <div className="space-y-12">
-            <div>
-              <h3 className="text-xl font-normal text-zinc-900 mb-4">Business Intelligence & Visualization</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Tableau Government, Microsoft Power BI Gov, Qlik Government, Domo Government
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-normal text-zinc-900 mb-4">AI/ML & Predictive Analytics</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                AWS SageMaker (GovCloud), Azure Machine Learning Gov, DataRobot Government, H2O.ai
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-normal text-zinc-900 mb-4">Data Engineering & ETL</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Informatica Government, Talend Government, AWS Glue, Azure Data Factory Gov
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-normal text-zinc-900 mb-4">Data Warehousing</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Snowflake Government, Amazon Redshift, Azure Synapse Analytics Gov, Google BigQuery
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
-
-      {/* Government Experience - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-12 tracking-tight">
-            Government Analytics Implementation Success
-          </h2>
-
-          <div className="space-y-8">
-            <div className="border-l-2 border-zinc-900 pl-6">
-              <h3 className="text-xl font-normal text-zinc-900 mb-2">Department of Veterans Affairs</h3>
-              <p className="text-base text-zinc-600 mb-1">Predictive Analytics Platform</p>
-              <p className="text-base text-zinc-900">60% faster claims processing</p>
-            </div>
-
-            <div className="border-l-2 border-zinc-900 pl-6">
-              <h3 className="text-xl font-normal text-zinc-900 mb-2">Department of Defense</h3>
-              <p className="text-base text-zinc-600 mb-1">Automated Data Pipelines</p>
-              <p className="text-base text-zinc-900">$12M annual cost savings</p>
-            </div>
-
-            <div className="border-l-2 border-zinc-900 pl-6">
-              <h3 className="text-xl font-normal text-zinc-900 mb-2">Health & Human Services</h3>
-              <p className="text-base text-zinc-600 mb-1">Public Health Surveillance</p>
-              <p className="text-base text-zinc-900">Real-time disease tracking</p>
-            </div>
+      {/* Government Analytics Experience */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Government Analytics Implementation Success</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Proven track record implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
+            </p>
           </div>
 
-          <div className="mt-12">
+          <div className="grid md:grid-cols-3 gap-8">
+            {governmentExperience.map((exp, index) => (
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
+                <CardContent className="p-8">
+                  <TrendingUp className="h-12 w-12 text-primary mb-4" />
+                  <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
+                  <p className="text-lg font-bold text-accent">{exp.outcome}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
             <Link href="/case-studies">
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white px-8 h-12 text-base font-normal rounded-none"
-              >
+              <Button variant="outline" size="lg">
                 View All Analytics Case Studies
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
-
-      {/* CTA Section - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-light text-zinc-900 tracking-tight">
-              Ready to Transform Your Data into Intelligence?
-            </h2>
-            <p className="text-xl text-zinc-600 leading-relaxed font-light max-w-3xl">
-              Let's discuss your analytics requirements and how we can help you implement FedRAMP-authorized platforms that deliver mission-critical insights.
+      {/* FedRAMP Analytics Platform Expertise */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Analytics Platform Expertise</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We implement and integrate FedRAMP-authorized analytics platforms from leading vendors, helping you select the right tools for your mission.
             </p>
-            <div className="pt-4">
-              <Link href="/contact">
-                <Button 
-                  size="lg"
-                  className="bg-zinc-900 hover:bg-zinc-800 text-white px-8 h-12 text-base font-normal rounded-none"
-                >
-                  Schedule Analytics Consultation
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
           </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {fedrampPlatforms.map((category, index) => (
+              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-bold mb-4">{category.category}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {category.platforms.map((platform, idx) => (
+                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
+                        {platform}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-6">
+              Plus 20+ additional FedRAMP-authorized analytics platforms including SAS Government, SPSS, Alteryx, and more.
+            </p>
+            <Link href="/partners">
+              <Button variant="outline" size="lg">
+                View All Analytics Platforms
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Data into Intelligence?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Schedule an analytics assessment to discuss your agency's data challenges, evaluate FedRAMP platform options, and develop a roadmap for mission-critical analytics.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Request Analytics Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="/services/data-analytics/assessment">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                Take Data Maturity Assessment
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study CTA */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Success Story
+            </div>
+            <h2 className="text-4xl font-bold mb-4">See Government Data Analytics in Action</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Learn how a state attorney general's office prevented $50M in fraud with CJIS-compliant real-time ML analytics processing 10M+ daily transactions.
+            </p>
+          </div>
+          <Card className="max-w-4xl mx-auto overflow-hidden hover:shadow-2xl transition-all active:scale-95">
+            <div className="grid md:grid-cols-2">
+              <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
+                <div className="inline-block bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
+                  State Government
+                </div>
+                <h3 className="text-3xl font-bold mb-4">State Attorney General Prevents $50M in Fraud</h3>
+                <p className="text-muted-foreground mb-6">
+                  Implemented CJIS-compliant fraud detection system processing 10M+ daily transactions with real-time ML analytics and preventing $50M in fraudulent activities annually.
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div>
+                    <div className="text-3xl font-bold text-accent">$50M+</div>
+                    <div className="text-sm text-muted-foreground">Annual Fraud Prevented</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-accent">10M+</div>
+                    <div className="text-sm text-muted-foreground">Daily Transactions</div>
+                  </div>
+                </div>
+                <Link href="/case-studies/state-attorney-general">
+                  <Button size="lg" className="bg-orange-gradient hover:opacity-90 w-full">
+                    View Full Case Study
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="relative h-64 md:h-auto">
+                <img 
+                  src="/financial-fraud-soc.a8f3d9e2.jpg" 
+                  alt="State Attorney General Fraud Detection"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 

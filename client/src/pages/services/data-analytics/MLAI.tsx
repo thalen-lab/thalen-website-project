@@ -1,8 +1,10 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, AlertTriangle, TrendingUp, Eye } from 'lucide-react';
+import RelatedServices from '@/components/RelatedServices';
+import { ArrowRight, Brain, AlertTriangle, TrendingUp, Shield, Eye, Zap, Database, Bot } from 'lucide-react';
 
 export default function MLAI() {
   const mlBenefits = [
@@ -27,313 +29,360 @@ export default function MLAI() {
     {
       title: 'Benefits Fraud Detection',
       description: 'Federal benefits programs lose billions to fraudulent claims annually. Thalen Technologies built an ML-powered fraud detection system for a major benefits agency that analyzes claim patterns, applicant behavior, and third-party data to flag suspicious claims before payment. The system reduced fraud losses by 40% while maintaining a 95% accuracy rate to avoid false positives that delay legitimate claims.',
-      metrics: ['$500M fraud prevented annually', '95% detection accuracy', '<2% false positive rate']
+      impact: '$500M fraud prevented annually',
+      accuracy: '95% detection accuracy',
+      falsePositives: '<2% false positive rate'
     },
     {
       title: 'Predictive Maintenance for Defense Systems',
       description: 'Aircraft downtime costs the military millions per day. We deployed ML models that analyze sensor data from engines, avionics, and structural components to predict failures 30-60 days in advance. Maintenance crews can now schedule repairs during planned downtime instead of responding to emergency failures.',
-      metrics: ['35% reduction in unplanned downtime', '92% prediction accuracy', '$120M annual maintenance savings']
+      impact: '35% reduction in unplanned downtime',
+      accuracy: '92% prediction accuracy',
+      savings: '$120M annual maintenance savings'
     },
     {
       title: 'Insider Threat Detection',
       description: 'Insider threats are the hardest security risks to detect. Thalen Technologies built an ML system for a defense agency that analyzes user behavior patterns—file access, email activity, network connections, physical access—to identify anomalies that indicate potential insider threats. The system flags high-risk users for security review without overwhelming analysts with false alarms.',
-      metrics: ['12 insider threats detected', '88% detection accuracy', '90% faster investigation time']
+      impact: '12 insider threats detected',
+      accuracy: '88% detection accuracy',
+      response: '90% faster investigation time'
     },
     {
       title: 'Budget Forecasting & Resource Optimization',
       description: 'Government agencies struggle with budget forecasting due to complex variables and political uncertainty. We built ML models that analyze historical spending patterns, program performance, economic indicators, and policy changes to forecast budget needs with 95% accuracy. Leadership can now make data-driven resource allocation decisions instead of relying on gut instinct.',
-      metrics: ['$50M budget optimization', '95% forecast accuracy', '18-month forecast horizon']
+      impact: '$50M budget optimization',
+      accuracy: '95% forecast accuracy',
+      planning: '18-month forecast horizon'
     }
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section - Z100 Editorial Style */}
-      <section className="relative pt-32 pb-20 bg-white">
-        <div className="container max-w-5xl">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-sm text-zinc-500 mb-12">
-            <Link href="/" className="hover:text-zinc-900 transition-colors">Home</Link>
-            <span>/</span>
-            <Link href="/services" className="hover:text-zinc-900 transition-colors">Services</Link>
-            <span>/</span>
-            <Link href="/services/data-analytics" className="hover:text-zinc-900 transition-colors">Data Analytics</Link>
-            <span>/</span>
-            <span className="text-zinc-900">Predictive Analytics & ML/AI</span>
-          </div>
-
-          {/* Hero Content */}
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-6xl font-light text-zinc-900 leading-[1.1] tracking-tight">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
+        <div className="container">
+          <nav className="text-sm mb-6 opacity-80">
+            <Link href="/services/data-analytics" className="hover:text-accent">Data Analytics & Intelligence</Link>
+            <span className="mx-2">/</span>
+            <span>Predictive Analytics & ML/AI</span>
+          </nav>
+          
+          <div className="max-w-4xl">
+            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
+              AI-Powered Intelligence
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Predictive Analytics & ML/AI
             </h1>
-            
-            <p className="text-xl md:text-2xl text-zinc-600 leading-relaxed font-light max-w-4xl">
-              Stop reacting to problems after they happen. Thalen Technologies deploys machine learning models and AI-powered analytics using FedRAMP and StateRAMP-authorized platforms that predict fraud, forecast failures, detect threats, and optimize operations before issues escalate. Our ML implementations are not black boxes—every prediction includes transparent reasoning, bias detection, and model governance to meet government accountability standards (federal, state, and local). From fraud detection to predictive maintenance, we turn your data into actionable foresight.
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              Stop reacting to problems after they happen. Thalen Technologies deploys machine learning models and AI-powered analytics that predict fraud, forecast failures, detect threats, and optimize operations before issues escalate. Our ML implementations are not black boxes—every prediction includes transparent reasoning, bias detection, and model governance to meet federal accountability standards. From fraud detection to predictive maintenance, we turn your data into actionable foresight.
             </p>
-
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Link href="/contact">
-                <Button 
-                  size="lg" 
-                  className="bg-zinc-900 hover:bg-zinc-800 text-white px-8 h-12 text-base font-normal rounded-none"
-                >
-                  Request ML/AI Consultation
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white px-8 h-12 text-base font-normal rounded-none"
-              >
-                View ML Use Cases
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Request ML Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                View ML Case Studies
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
+      {/* ML Benefits */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Need Predictive Analytics</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Reactive analytics tell you what happened. Predictive analytics tell you what will happen—giving you time to prevent problems before they occur.
+            </p>
+          </div>
 
-      {/* ML Benefits - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-4 tracking-tight">
-            Why Machine Learning Matters for Government Operations
-          </h2>
-          <p className="text-xl text-zinc-600 leading-relaxed font-light mb-16 max-w-3xl">
-            Traditional analytics tell you what happened. Machine learning tells you what will happen—and what to do about it.
-          </p>
-
-          <div className="space-y-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {mlBenefits.map((benefit, index) => (
-              <div key={index} className="flex gap-6">
-                <div className="flex-shrink-0">
-                  <benefit.icon className="h-8 w-8 text-zinc-900" strokeWidth={1.5} />
+              <Card key={index} className="border-2 hover:border-accent transition-colors">
+                <CardContent className="p-8">
+                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
+                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The ML Problem */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Black-Box AI Is Not Acceptable for Government</h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Commercial ML platforms are optimized for marketing and sales predictions where mistakes are tolerable. Federal applications—fraud detection, threat assessment, benefits eligibility—require explainability, bias detection, and accountability. You cannot tell Congress "the algorithm decided" when a decision is challenged.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6">
+              Thalen Technologies builds explainable AI systems where every prediction includes transparent reasoning. Our ML implementations include bias detection, fairness metrics, model governance, and full audit trails. You will understand not just what the model predicts, but why—and you will have documentation to defend decisions under congressional oversight and IG audits.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Explainable AI (XAI)</div>
+                  <div className="text-sm text-muted-foreground">SHAP, LIME, and attention mechanisms provide transparent reasoning for every prediction</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Bias Detection & Fairness</div>
+                  <div className="text-sm text-muted-foreground">Continuous monitoring for demographic bias, disparate impact, and fairness metrics</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold mb-1">Model Governance & Audit Trails</div>
+                  <div className="text-sm text-muted-foreground">Full lineage tracking, version control, and audit logs for regulatory compliance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ML Use Cases */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Proven ML/AI Use Cases for Government Agencies</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Thalen Technologies has deployed production ML systems for fraud detection, predictive maintenance, threat intelligence, and operational optimization.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {mlUseCases.map((useCase, index) => (
+              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
+                  <div className="grid grid-cols-3 gap-4 bg-secondary rounded-lg p-4">
+                    <div>
+                      <div className="text-2xl font-bold text-primary">{useCase.impact}</div>
+                      <div className="text-xs text-muted-foreground">Business Impact</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-primary">{useCase.accuracy}</div>
+                      <div className="text-xs text-muted-foreground">Model Accuracy</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-primary">{useCase.falsePositives || useCase.savings || useCase.response || useCase.planning}</div>
+                      <div className="text-xs text-muted-foreground">Additional Metric</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ML Technology Stack */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">ML/AI Technology Stack</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We use proven, government-approved ML frameworks and tools.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-4">ML Frameworks</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>TensorFlow & PyTorch</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>Scikit-learn for classical ML</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>XGBoost & LightGBM</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>Hugging Face Transformers</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-4">Explainability & Governance</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>SHAP for feature importance</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>LIME for local explanations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>MLflow for model tracking</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>Fairlearn for bias detection</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-4">Deployment & Monitoring</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>Kubernetes for model serving</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>TensorFlow Serving & TorchServe</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>Prometheus for model monitoring</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
+                    <span>Evidently AI for drift detection</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all active:scale-95">
+            <CardContent className="p-8 md:p-12">
+              <div className="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                  <div className="text-4xl font-bold mb-2">95%+</div>
+                  <div className="text-sm opacity-80">Model accuracy</div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-normal text-zinc-900 mb-3">{benefit.title}</h3>
-                  <p className="text-base text-zinc-600 leading-relaxed">{benefit.description}</p>
+                  <div className="text-4xl font-bold mb-2">&lt;2%</div>
+                  <div className="text-sm opacity-80">False positive rate</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold mb-2">100%</div>
+                  <div className="text-sm opacity-80">Explainable predictions</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold mb-2">24/7</div>
+                  <div className="text-sm opacity-80">Model monitoring</div>
                 </div>
               </div>
-            ))}
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
-
-      {/* ML Use Cases - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-16 tracking-tight">
-            Machine Learning Implementation Success Stories
-          </h2>
-
-          <div className="space-y-16">
-            {mlUseCases.map((useCase, index) => (
-              <div key={index} className="border-l-2 border-zinc-900 pl-8">
-                <h3 className="text-2xl font-light text-zinc-900 mb-4">{useCase.title}</h3>
-                <p className="text-base text-zinc-600 leading-relaxed mb-6">{useCase.description}</p>
-                
-                <div className="flex flex-wrap gap-4">
-                  {useCase.metrics.map((metric, idx) => (
-                    <span key={idx} className="text-sm text-zinc-900 px-4 py-2 border border-zinc-300">
-                      {metric}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
-
-      {/* FedRAMP ML Platforms - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-8 tracking-tight">
-            FedRAMP-Authorized ML/AI Platforms
-          </h2>
-          
-          <p className="text-base text-zinc-600 leading-relaxed mb-8">
-            We deploy machine learning models using government-authorized AI platforms that meet your security and compliance requirements:
-          </p>
-
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">AWS SageMaker (GovCloud)</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                End-to-end ML platform for building, training, and deploying models at scale with FedRAMP High authorization
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">Azure Machine Learning Government</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Enterprise ML platform integrated with Azure Government services for seamless data access and model deployment
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">DataRobot Government</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Automated machine learning platform with explainable AI and model governance built for government compliance
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">H2O.ai</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Open-source ML platform with enterprise features for transparent, auditable model development
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
-
-      {/* ML Implementation Approach - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-12 tracking-tight">
-            Our ML/AI Implementation Approach
-          </h2>
-
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-normal text-zinc-900 mb-3">1. Problem Definition & Use Case Validation</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Not every problem needs machine learning. We start by validating whether ML is the right solution, defining success metrics, and ensuring you have the data quality and volume required for accurate predictions.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-normal text-zinc-900 mb-3">2. Data Preparation & Feature Engineering</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                ML models are only as good as the data they train on. We clean, normalize, and engineer features from your raw data to maximize model accuracy while detecting and mitigating bias.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-normal text-zinc-900 mb-3">3. Model Development & Training</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                We develop and train multiple model architectures, compare performance, and select the best approach for your use case. All models include explainability features so you understand WHY predictions are made.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-normal text-zinc-900 mb-3">4. Model Validation & Bias Testing</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Before deployment, we rigorously test models for accuracy, bias, and fairness. Government ML systems must meet accountability standards—we ensure your models pass scrutiny.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-normal text-zinc-900 mb-3">5. Deployment & Model Governance</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                We deploy models into production with monitoring, governance, and retraining pipelines. Models degrade over time—we ensure yours stay accurate and compliant.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
-
-      {/* Explainable AI & Model Governance - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-light text-zinc-900 mb-8 tracking-tight">
-            Explainable AI & Model Governance
-          </h2>
-
-          <p className="text-base text-zinc-600 leading-relaxed mb-8">
-            Government agencies cannot deploy black-box ML models that make decisions without explanation. We implement explainable AI (XAI) techniques that provide transparent reasoning for every prediction:
-          </p>
-
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">Feature Importance Analysis</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Understand which data features drive model predictions and ensure they align with domain expertise
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">SHAP (SHapley Additive exPlanations)</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Quantify the contribution of each feature to individual predictions for audit and accountability
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">Bias Detection & Mitigation</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Test models for demographic bias and implement fairness constraints to ensure equitable outcomes
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-normal text-zinc-900 mb-2">Model Governance Framework</h3>
-              <p className="text-base text-zinc-600 leading-relaxed">
-                Document model development, validation, deployment, and monitoring for regulatory compliance and audit trails
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="container max-w-5xl">
-        <div className="h-px bg-zinc-200" />
-      </div>
-
-      {/* CTA Section - Z100 Editorial Style */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-light text-zinc-900 tracking-tight">
-              Ready to Deploy Predictive Analytics?
-            </h2>
-            <p className="text-xl text-zinc-600 leading-relaxed font-light max-w-3xl">
-              Let's discuss your ML/AI requirements and how we can help you implement FedRAMP-authorized platforms that deliver actionable predictions with transparent, explainable reasoning.
+      {/* Related Services Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Maximize your ML/AI impact with these related Thalen Technologies offerings
             </p>
-            <div className="pt-4">
-              <Link href="/contact">
-                <Button 
-                  size="lg"
-                  className="bg-zinc-900 hover:bg-zinc-800 text-white px-8 h-12 text-base font-normal rounded-none"
-                >
-                  Request ML/AI Consultation
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Intelligent Automation & Process Optimization</h3>
+                <p className="text-muted-foreground mb-4">
+                  Embed ML predictions into automated workflows. Our RPA solutions can trigger actions based on model outputs, creating closed-loop intelligent automation systems.
+                </p>
+                <Link href="/services/automation">
+                  <Button variant="outline" className="w-full">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Application Development & Integration</h3>
+                <p className="text-muted-foreground mb-4">
+                  Build ML-powered applications that serve predictions to end users. We develop APIs, web apps, and mobile interfaces that make your models accessible and actionable.
+                </p>
+                <Link href="/services/app-development">
+                  <Button variant="outline" className="w-full">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Deploy Predictive Analytics for Your Mission?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Schedule a free ML assessment. We will evaluate your data, identify high-impact ML use cases, and provide a roadmap for implementation.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              Request ML Assessment
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              Download ML Guide
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <RelatedServices 
+        services={[
+          {
+            title: 'Data Engineering & Infrastructure',
+            description: 'Build scalable data pipelines that power your machine learning models.',
+            href: '/services/data-analytics/engineering',
+            icon: Database
+          },
+          {
+            title: 'Predictive Analytics & Forecasting',
+            description: 'Apply ML models to predict outcomes, forecast trends, and optimize operations.',
+            href: '/services/predictive-analytics',
+            icon: TrendingUp
+          },
+          {
+            title: 'Intelligent Automation',
+            description: 'Integrate AI models into automated workflows for intelligent decision-making.',
+            href: '/services/automation',
+            icon: Bot
+          }
+        ]}
+        title="Complete AI/ML Solutions"
+        description="Combine machine learning with data engineering, analytics, and automation for end-to-end AI capabilities."
+      />
 
       <Footer />
     </div>

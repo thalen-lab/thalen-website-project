@@ -2624,3 +2624,13 @@
 - [x] Restore all 4 RPA detail subpages from checkpoint 93b811d (ProcessAssessment, PlatformImplementation, ATOCompliance, CoESetup)
 - [x] Verify all pages display correctly with card-based layouts
 - [x] Save checkpoint with all restored subpages
+
+## Phase 52: Selective Rollback - Government Data Analytics & Intelligence Section
+- [x] Restore DataAnalytics.tsx landing page from checkpoint 93b811d (with cards and icons)
+- [x] Restore Strategy.tsx from checkpoint 93b811d (with cards and icons)
+- [x] Restore Visualization.tsx from checkpoint 93b811d (with cards and icons)
+- [x] Restore MLAI.tsx from checkpoint 93b811d (with cards and icons)
+- [x] Restore Engineering.tsx from checkpoint 93b811d (with cards and icons)
+- [x] Restore Assessment.tsx from checkpoint 93b811d (with cards and icons)
+- [x] Verify all pages display correctly with card-based layouts
+- [ ] Save checkpoint with all restored Data Analytics pages

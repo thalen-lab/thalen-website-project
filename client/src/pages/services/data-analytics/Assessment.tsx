@@ -364,7 +364,7 @@ export default function DataMaturityAssessment() {
         <div className="container text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Data Maturity Assessment</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto mb-8">
-            Evaluate your government organization's (federal, state, or local) current data capabilities and receive a personalized roadmap for FedRAMP and StateRAMP-compliant analytics improvement
+            Evaluate your organization's current data capabilities and receive a personalized roadmap for improvement
           </p>
           <div className="max-w-md mx-auto">
             <div className="flex justify-between text-sm mb-2">
