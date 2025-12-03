@@ -215,23 +215,59 @@ export default function Automation() {
             </p>
           </div>
 
-          <div className="space-y-8">
-            {implementationProcess.map((phase, index) => (
-              <div key={index} className="flex gap-8 items-start">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-orange-500/10 border-2 border-orange-500 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-orange-600 dark:text-orange-400">{phase.step}</span>
-                  </div>
+          {/* 2x2 Grid Layout */}
+          <div className="grid md:grid-cols-2 gap-0">
+            {/* Phase 1 */}
+            <div className="p-8 md:p-12 border-b md:border-r border-border">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-muted border-2 border-border flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold">1</span>
                 </div>
-                <div className="flex-1 pt-2">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-2xl font-bold">{phase.title}</h3>
-                    <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">{phase.duration}</span>
-                  </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">{phase.description}</p>
-                </div>
+                <h3 className="text-2xl font-bold">Research & Assessment</h3>
               </div>
-            ))}
+              <p className="text-muted-foreground leading-relaxed">
+                Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
+              </p>
+            </div>
+
+            {/* Phase 2 - Orange Accent */}
+            <div className="p-8 md:p-12 border-b border-border">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-orange-500/10 border-2 border-orange-500 flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold text-orange-600 dark:text-orange-400">2</span>
+                </div>
+                <h3 className="text-2xl font-bold text-orange-600 dark:text-orange-400">Architecture & Planning</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Solution architecture design, technology stack selection, and detailed implementation roadmap.
+              </p>
+            </div>
+
+            {/* Phase 3 */}
+            <div className="p-8 md:p-12 md:border-r border-border">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-muted border-2 border-border flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold">3</span>
+                </div>
+                <h3 className="text-2xl font-bold">Implementation & Delivery</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
+              </p>
+            </div>
+
+            {/* Phase 4 */}
+            <div className="p-8 md:p-12">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-muted border-2 border-border flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold">4</span>
+                </div>
+                <h3 className="text-2xl font-bold">Performance & Optimization</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
+              </p>
+            </div>
           </div>
         </div>
       </section>
