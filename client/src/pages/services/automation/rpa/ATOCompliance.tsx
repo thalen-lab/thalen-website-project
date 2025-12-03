@@ -274,7 +274,7 @@ export default function ATOCompliance() {
                 Most RPA implementations fail to receive ATO approval on the first attempt. Agencies underestimate the documentation burden, misinterpret control requirements, or fail to properly inherit FedRAMP authorizations. The result? Months of delays, expensive remediation work, and frustrated stakeholders.
               </p>
               <p>
-                NexDyne has secured ATOs for 50+ government RPA implementations across federal, state, and local agencies. We know exactly what Authorizing Officials expect, how to properly document inherited controls, and how to navigate agency-specific security requirements. Our ATO packages pass review on the first submission 90% of the time.
+                Thalen Technologies has secured ATOs for 50+ government RPA implementations across federal, state, and local agencies. We know exactly what Authorizing Officials expect, how to properly document inherited controls, and how to navigate agency-specific security requirements. Our ATO packages pass review on the first submission 90% of the time.
               </p>
             </div>
           </div>

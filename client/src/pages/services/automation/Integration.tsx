@@ -64,7 +64,7 @@ export default function Integration() {
               Enterprise Integration Platform
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
-              Your agency runs on dozens of disconnected systems. Financial data lives in one place, HR records in another, and mission-critical information is scattered across legacy mainframes and modern cloud apps. The result? Your team wastes hours manually transferring data, reconciling spreadsheets, and chasing down information. NexDyne's integration platform connects everything—securely, automatically, and without expensive system replacements.
+              Your agency runs on dozens of disconnected systems. Financial data lives in one place, HR records in another, and mission-critical information is scattered across legacy mainframes and modern cloud apps. The result? Your team wastes hours manually transferring data, reconciling spreadsheets, and chasing down information. Thalen Technologies' integration platform connects everything—securely, automatically, and without expensive system replacements.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -117,7 +117,7 @@ export default function Integration() {
                 Commercial integration platforms assume you're working with modern, API-enabled systems in a single cloud environment. That's not reality for government agencies (federal, state, and local). You're running mission-critical applications on mainframes from the 1980s alongside cutting-edge AI tools. You have air-gapped networks, strict data residency requirements, and systems that were never designed to communicate.
               </p>
               <p>
-                NexDyne's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs. And we do it all while maintaining FedRAMP and StateRAMP authorization with full audit trails.
+                Thalen Technologies' integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs. And we do it all while maintaining FedRAMP and StateRAMP authorization with full audit trails.
               </p>
             </div>
           </div>

@@ -2519,3 +2519,15 @@
 - [x] Apply Z100 to ATO Compliance detail page
 - [x] Apply Z100 to CoE Setup detail page
 - [x] Test all Automation pages for consistency
+
+## URGENT: Fix Company Name in Automation Pages
+- [x] Audit all 8 Automation pages for NexDyne references
+- [x] Replace NexDyne with Thalen Technologies in main Automation landing page
+- [x] Replace NexDyne with Thalen Technologies in RPA Implementation subpage
+- [x] Replace NexDyne with Thalen Technologies in Enterprise Integration subpage
+- [x] Replace NexDyne with Thalen Technologies in Workflow Orchestration subpage
+- [x] Replace NexDyne with Thalen Technologies in Process Assessment detail page
+- [x] Replace NexDyne with Thalen Technologies in Platform Implementation detail page
+- [x] Replace NexDyne with Thalen Technologies in ATO Compliance detail page
+- [x] Replace NexDyne with Thalen Technologies in CoE Setup detail page
+- [x] Test all pages and save checkpoint

@@ -286,7 +286,7 @@ export default function PlatformImplementation() {
                 Most RPA vendors push their platform regardless of fit. System integrators have preferred vendor partnerships that influence their recommendations. This leads to poor platform choices that cost agencies millions in technical debt, licensing fees, and failed implementations.
               </p>
               <p>
-                NexDyne maintains no vendor partnerships or reseller agreements. We evaluate platforms objectively based on YOUR mission requirements, technical environment, and budget constraints. Our only incentive is to recommend the platform that will deliver the best outcomes for your agency.
+                Thalen Technologies maintains no vendor partnerships or reseller agreements. We evaluate platforms objectively based on YOUR mission requirements, technical environment, and budget constraints. Our only incentive is to recommend the platform that will deliver the best outcomes for your agency.
               </p>
             </div>
           </div>

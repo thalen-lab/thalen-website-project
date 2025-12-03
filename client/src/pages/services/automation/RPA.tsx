@@ -114,7 +114,7 @@ export default function RPA() {
       <section className="py-20 bg-background">
         <div className="container max-w-5xl">
           <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose NexDyne for RPA</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Thalen Technologies for RPA</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Three core strengths that define our approach to government RPA implementation.
             </p>

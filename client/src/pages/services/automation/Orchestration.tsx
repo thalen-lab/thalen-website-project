@@ -67,7 +67,7 @@ export default function Orchestration() {
               Process Orchestration for Government Agencies
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
-              Your most important work involves multiple departments, systems, and decision points. Approvals get stuck in email chains. Work sits in queues waiting for the next step. Nobody has visibility into where things stand. NexDyne Process Orchestration automates these complex, multi-step workflows from end to end—routing work intelligently, enforcing policy automatically, and giving you real-time visibility into every process.
+              Your most important work involves multiple departments, systems, and decision points. Approvals get stuck in email chains. Work sits in queues waiting for the next step. Nobody has visibility into where things stand. Thalen Technologies Process Orchestration automates these complex, multi-step workflows from end to end—routing work intelligently, enforcing policy automatically, and giving you real-time visibility into every process.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -116,7 +116,7 @@ export default function Orchestration() {
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Common Orchestration Scenarios</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              From procurement to case management, government agencies (federal, state, and local) orchestrate their most complex processes with NexDyne.
+              From procurement to case management, government agencies (federal, state, and local) orchestrate their most complex processes with Thalen Technologies.
             </p>
           </div>
 
