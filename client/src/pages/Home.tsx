@@ -299,7 +299,7 @@ export default function Home() {
               <div className="flex gap-8 items-start">
                 {/* Phase Number */}
                 <div className="flex-shrink-0 relative z-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
+                  <div className="w-20 h-20 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-110">
                     <span className="text-3xl font-bold text-white">1</span>
                   </div>
                 </div>
@@ -327,7 +327,7 @@ export default function Home() {
               <div className="flex gap-8 items-start">
                 {/* Phase Number */}
                 <div className="flex-shrink-0 relative z-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
+                  <div className="w-20 h-20 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-110">
                     <span className="text-3xl font-bold text-white">2</span>
                   </div>
                 </div>
@@ -355,7 +355,7 @@ export default function Home() {
               <div className="flex gap-8 items-start">
                 {/* Phase Number */}
                 <div className="flex-shrink-0 relative z-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
+                  <div className="w-20 h-20 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-110">
                     <span className="text-3xl font-bold text-white">3</span>
                   </div>
                 </div>
@@ -383,7 +383,7 @@ export default function Home() {
               <div className="flex gap-8 items-start">
                 {/* Phase Number */}
                 <div className="flex-shrink-0 relative z-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
+                  <div className="w-20 h-20 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-110">
                     <span className="text-3xl font-bold text-white">4</span>
                   </div>
                 </div>
