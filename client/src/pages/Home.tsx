@@ -269,11 +269,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Methodology Section - RAPID Framework - Streamlined Editorial */}
+      {/* Methodology Section - RAPID Framework - Redesigned */}
       <section className="py-24 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container">
           <motion.div 
-            className="text-center max-w-4xl mx-auto mb-16"
+            className="text-center max-w-4xl mx-auto mb-20"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -281,122 +281,122 @@ export default function Home() {
           >
             <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Our Methodology</p>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">The NexDyne RAPID Framework</h2>
-            <p className="text-xl text-slate-300 leading-relaxed">
+            <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
               Structured 4-phase approach delivering compliant, on-budget FedRAMP and StateRAMP platform deployments
             </p>
           </motion.div>
 
-          {/* 2x2 Grid Layout with Horizontal Dividers */}
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-0">
+          {/* Vertical Timeline Layout */}
+          <div className="max-w-5xl mx-auto space-y-8">
             {/* Phase 1 */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5 }}
-              className="group"
+              className="group relative"
             >
-              <div className="flex flex-col gap-6 p-8 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-accent hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-white/20 group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
-                      1
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
-                      Research & Assessment
-                    </h3>
+              <div className="flex gap-8 items-start">
+                {/* Phase Number */}
+                <div className="flex-shrink-0 relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
+                    <span className="text-3xl font-bold text-white">1</span>
                   </div>
                 </div>
-                <div className="w-full h-px bg-white/10 group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-slate-400 leading-relaxed mt-1">
-                  Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
-                </p>
+                
+                {/* Content */}
+                <div className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 group-hover:bg-white/10 group-hover:border-accent/50 transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
+                    Research & Assessment
+                  </h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
             {/* Phase 2 */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-              className="group"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="group relative"
             >
-              <div className="flex flex-col gap-6 p-8 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-accent hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-white/20 group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
-                      2
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
-                      Architecture & Planning
-                    </h3>
+              <div className="flex gap-8 items-start">
+                {/* Phase Number */}
+                <div className="flex-shrink-0 relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
+                    <span className="text-3xl font-bold text-white">2</span>
                   </div>
                 </div>
-                <div className="w-full h-px bg-white/10 group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-slate-400 leading-relaxed mt-1">
-                  Solution architecture design, technology stack selection, and detailed implementation roadmap.
-                </p>
+                
+                {/* Content */}
+                <div className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 group-hover:bg-white/10 group-hover:border-accent/50 transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
+                    Architecture & Planning
+                  </h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    Solution architecture design, technology stack selection, and detailed implementation roadmap.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
             {/* Phase 3 */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="group"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="group relative"
             >
-              <div className="flex flex-col gap-6 p-8 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-accent hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-white/20 group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
-                      3
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
-                      Implementation & Delivery
-                    </h3>
+              <div className="flex gap-8 items-start">
+                {/* Phase Number */}
+                <div className="flex-shrink-0 relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
+                    <span className="text-3xl font-bold text-white">3</span>
                   </div>
                 </div>
-                <div className="w-full h-px bg-white/10 group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-slate-400 leading-relaxed mt-1">
-                  Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
-                </p>
+                
+                {/* Content */}
+                <div className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 group-hover:bg-white/10 group-hover:border-accent/50 transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
+                    Implementation & Delivery
+                  </h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
             {/* Phase 4 */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              className="group"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="group relative"
             >
-              <div className="flex flex-col gap-6 p-8 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-accent hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-white/20 group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
-                      4
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
-                      Performance & Optimization
-                    </h3>
+              <div className="flex gap-8 items-start">
+                {/* Phase Number */}
+                <div className="flex-shrink-0 relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
+                    <span className="text-3xl font-bold text-white">4</span>
                   </div>
                 </div>
-                <div className="w-full h-px bg-white/10 group-hover:bg-accent transition-colors"></div>
-                <p className="text-base text-slate-400 leading-relaxed mt-1">
-                  Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
-                </p>
+                
+                {/* Content */}
+                <div className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 group-hover:bg-white/10 group-hover:border-accent/50 transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
+                    Performance & Optimization
+                  </h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
