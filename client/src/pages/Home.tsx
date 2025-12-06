@@ -147,25 +147,24 @@ export default function Home() {
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
             <source src="/videos/hero-video.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/50" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.03)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
         </div>
         
         {/* Hero Content */}
         <div className="relative container h-full flex items-center">
-          <div className="max-w-2xl text-primary-foreground">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">Implementing FedRAMP & StateRAMP Solutions</h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">Vendor-neutral consulting and systems integration for federal, state, and local government agencies</p>
+          <div className="max-w-3xl text-primary-foreground">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">Implementing FedRAMP & StateRAMP Solutions</h1>
+            <p className="text-xl md:text-2xl mb-10 text-white/95 leading-relaxed">Vendor-neutral consulting and systems integration for federal, state, and local government agencies</p>
             
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all touch-feedback">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
                 <Link href="/contact">
                   Schedule Strategic Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary touch-feedback">
+              <Button asChild variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
                 <Link href="/methodology">View ROI Methodology</Link>
               </Button>
             </div>
@@ -178,33 +177,36 @@ export default function Home() {
       {/* Services Section - 2x3 Grid Layout */}
       <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-12">
-            <p className="text-sm font-semibold text-accent mb-3 tracking-wide uppercase">Core Capabilities</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+          <div className="mb-16 text-center max-w-4xl mx-auto">
+            <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Core Capabilities</p>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
               Government Technology Implementation Services
             </h2>
-            <p className="text-lg md:text-xl opacity-90 max-w-4xl leading-relaxed">
+            <p className="text-xl text-white/90 leading-relaxed">
               Vendor-neutral consulting for federal, state, and local agencies. We implement FedRAMP and StateRAMP-authorized platforms with proven compliance expertise and measurable mission impact.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link
                 key={index}
                 href={service.href}
                 className="block group"
               >
-                <Card className="h-full border-2 border-border hover:border-accent transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-card rounded-none">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
+                  <CardContent className="p-8">
+                    <div className="mb-6">
+                      <service.icon className="h-12 w-12 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-white">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-base text-white/80 leading-relaxed mb-6">
                       {service.description}
                     </p>
-                    <div className="flex items-center text-accent text-sm font-semibold group-hover:translate-x-2 transition-transform">
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    <div className="flex items-center text-accent text-sm font-semibold group-hover:gap-3 gap-2 transition-all">
+                      Learn More <ArrowRight className="h-4 w-4" />
                     </div>
                   </CardContent>
                 </Card>
@@ -218,26 +220,22 @@ export default function Home() {
       <CaseStudyShowcase />
 
       {/* Certifications Section - Editorial Layout */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-slate-100">
+      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
         <div className="container">
           <motion.div 
-            className="grid lg:grid-cols-2 gap-8 mb-12"
+            className="text-center max-w-4xl mx-auto mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <div>
-              <p className="text-sm font-medium text-orange-600 mb-3">Trusted & Certified</p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
-                Enterprise & Government Security & Compliance
-              </h2>
-            </div>
-            <div className="flex flex-col justify-end">
-              <p className="text-lg text-slate-600">
-                Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
-              </p>
-            </div>
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Trusted & Certified</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              Enterprise & Government Security & Compliance
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
+            </p>
           </motion.div>
 
           {/* 3-Column Grid with Hover-Reveal Cards */}
@@ -252,18 +250,13 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   className="group relative"
                 >
-                  <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden bg-white rounded-none shadow-lg">
-                    <CardContent className="p-8 relative">
-                      {/* Title - Always Visible */}
-                      <div className="flex flex-col items-center text-center">
-                        <h3 className="text-xl font-bold text-slate-900 group-hover:text-accent transition-colors">
+                  <Card className="h-full border border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-lg bg-white">
+                    <CardContent className="p-8">
+                      <div className="text-center">
+                        <h3 className="text-xl font-bold text-slate-900 mb-4">
                           {cert.name}
                         </h3>
-                      </div>
-                      
-                      {/* Description - Revealed on Hover */}
-                      <div className="absolute inset-0 bg-white/95 backdrop-blur-sm p-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <p className="text-base text-slate-600 leading-relaxed text-center">
+                        <p className="text-base text-slate-600 leading-relaxed">
                           {cert.description}
                         </p>
                       </div>
@@ -277,18 +270,18 @@ export default function Home() {
       </section>
 
       {/* Methodology Section - RAPID Framework - Streamlined Editorial */}
-      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+      <section className="py-24 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container">
           <motion.div 
-            className="mb-16"
+            className="text-center max-w-4xl mx-auto mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-orange-500 mb-3 uppercase tracking-wider">Our Methodology</p>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-white">The Thalen Technologies RAPID Framework</h2>
-            <p className="text-lg text-slate-300 max-w-2xl">
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Our Methodology</p>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">The NexDyne RAPID Framework</h2>
+            <p className="text-xl text-slate-300 leading-relaxed">
               Structured 4-phase approach delivering compliant, on-budget FedRAMP and StateRAMP platform deployments
             </p>
           </motion.div>
@@ -303,20 +296,20 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="group"
             >
-              <div className="flex flex-col gap-6 p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col gap-6 p-8 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-accent hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-slate-600 group-hover:border-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
+                    <div className="w-16 h-16 border-2 border-white/20 group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
                       1
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-orange-500 transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
                       Research & Assessment
                     </h3>
                   </div>
                 </div>
-                <div className="w-full h-px bg-slate-700 group-hover:bg-orange-500 transition-colors"></div>
+                <div className="w-full h-px bg-white/10 group-hover:bg-accent transition-colors"></div>
                 <p className="text-base text-slate-400 leading-relaxed mt-1">
                   Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
                 </p>
@@ -331,20 +324,20 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.05 }}
               className="group"
             >
-              <div className="flex flex-col gap-6 p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col gap-6 p-8 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-accent hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-slate-600 group-hover:border-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
+                    <div className="w-16 h-16 border-2 border-white/20 group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
                       2
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-orange-500 transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
                       Architecture & Planning
                     </h3>
                   </div>
                 </div>
-                <div className="w-full h-px bg-slate-700 group-hover:bg-orange-500 transition-colors"></div>
+                <div className="w-full h-px bg-white/10 group-hover:bg-accent transition-colors"></div>
                 <p className="text-base text-slate-400 leading-relaxed mt-1">
                   Solution architecture design, technology stack selection, and detailed implementation roadmap.
                 </p>
@@ -359,20 +352,20 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="group"
             >
-              <div className="flex flex-col gap-6 p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col gap-6 p-8 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-accent hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-slate-600 group-hover:border-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
+                    <div className="w-16 h-16 border-2 border-white/20 group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
                       3
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-orange-500 transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
                       Implementation & Delivery
                     </h3>
                   </div>
                 </div>
-                <div className="w-full h-px bg-slate-700 group-hover:bg-orange-500 transition-colors"></div>
+                <div className="w-full h-px bg-white/10 group-hover:bg-accent transition-colors"></div>
                 <p className="text-base text-slate-400 leading-relaxed mt-1">
                   Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
                 </p>
@@ -387,20 +380,20 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.15 }}
               className="group"
             >
-              <div className="flex flex-col gap-6 p-8 rounded-xl border border-slate-700 bg-slate-800/50 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col gap-6 p-8 border border-white/10 bg-white/5 backdrop-blur-sm hover:border-accent hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-slate-600 group-hover:border-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
+                    <div className="w-16 h-16 border-2 border-white/20 group-hover:border-accent rounded-full flex items-center justify-center text-2xl font-bold text-white transition-colors">
                       4
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-orange-500 transition-colors">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
                       Performance & Optimization
                     </h3>
                   </div>
                 </div>
-                <div className="w-full h-px bg-slate-700 group-hover:bg-orange-500 transition-colors"></div>
+                <div className="w-full h-px bg-white/10 group-hover:bg-accent transition-colors"></div>
                 <p className="text-base text-slate-400 leading-relaxed mt-1">
                   Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
                 </p>
