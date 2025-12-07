@@ -70,69 +70,53 @@ export default function ATOSupport() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
-              <h2 className="text-4xl font-bold text-navy-900">Why ATO Expertise Matters</h2>
+              <h2 className="text-4xl font-bold text-navy-900">Our ATO Approach</h2>
             </div>
             
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-              Federal agencies face a critical challenge when implementing new systems: even after awarding 
-              a contract for cloud migration, automation, or data analytics, the system cannot operate until 
-              it receives Authority to Operate (ATO). Many contractors can build the technical solution but 
-              struggle with the security authorization process, causing costly delays and missed deadlines.
+              Federal systems require Authority to Operate (ATO) before going live. Thalen Technologies 
+              integrates security authorization into every implementation project from day one, ensuring 
+              your system achieves ATO on schedule without delays.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <Card className="p-6 border border-slate-200 hover:border-red-500 hover:shadow-lg transition-all duration-300 bg-white">
-                <h3 className="text-xl font-bold text-navy-900 mb-3">The Contractor Gap</h3>
-                <ul className="space-y-2 text-slate-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Technical teams unfamiliar with NIST 800-53 control families</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Incomplete System Security Plans (SSP) delaying authorization</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Lack of experience with 3PAO assessments and findings remediation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>No continuous monitoring strategy for sustained compliance</span>
-                  </li>
-                </ul>
-              </Card>
-              
-              <Card className="p-6 border border-slate-200 hover:border-accent hover:shadow-lg transition-all duration-300 bg-white">
-                <h3 className="text-xl font-bold text-navy-900 mb-3">The Cost of Delays</h3>
-                <ul className="space-y-2 text-slate-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">•</span>
-                    <span>Systems ready but unable to go live for 6-12 months</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">•</span>
-                    <span>Budget overruns from extended security documentation efforts</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">•</span>
-                    <span>Mission-critical initiatives stalled during authorization</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange-500 mt-1">•</span>
-                    <span>Potential contract penalties for missed milestones</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-            
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg p-6 border border-accent/20">
-              <p className="text-lg text-slate-800 font-medium">
-                <strong className="text-navy-900">Thalen Technologies' Advantage:</strong> When agencies select Thalen Technologies 
-                for implementation contracts, they choose a contractor who builds ATO authorization into the 
-                project plan from day one. We don't just deliver technical solutions—we deliver authorized 
-                systems ready to operate on schedule.
-              </p>
+            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg p-8 border border-accent/20">
+              <h3 className="text-2xl font-bold text-navy-900 mb-4">What Sets Thalen Technologies Apart</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-navy-900 mb-3">Deep Security Expertise</h4>
+                  <ul className="space-y-2 text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>NIST 800-53 control implementation specialists on every project</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>Proven System Security Plan (SSP) development methodology</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>Established relationships with 3PAO assessment organizations</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-navy-900 mb-3">Parallel Development Model</h4>
+                  <ul className="space-y-2 text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>Security documentation progresses alongside technical development</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>Continuous monitoring built into system architecture</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>ATO milestones integrated into project timelines from kickoff</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -411,11 +395,11 @@ export default function ATOSupport() {
         <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Choose a Contractor with ATO Expertise Built-In
+              Implementation Expertise with ATO Built-In
             </h2>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Don't risk project delays with contractors who treat ATO as an afterthought. Partner with 
-              Thalen Technologies for implementation expertise that includes security authorization from day one.
+              Partner with Thalen Technologies for implementation expertise that includes security 
+              authorization from day one. Your systems go live on schedule with full ATO in place.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
