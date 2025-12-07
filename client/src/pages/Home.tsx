@@ -274,7 +274,7 @@ export default function Home() {
       <section className="py-24 bg-gradient-to-b from-white to-slate-50">
         <div className="container">
           <motion.div 
-            className="text-center max-w-4xl mx-auto mb-20"
+            className="text-center max-w-4xl mx-auto mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -289,9 +289,31 @@ export default function Home() {
             </p>
           </motion.div>
 
+          {/* Stats Bar */}
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-20 py-8 border-y border-slate-200"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="text-center">
+              <div className="text-4xl font-bold text-accent mb-2">150+</div>
+              <div className="text-sm text-slate-600 uppercase tracking-wide">Implementations</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-accent mb-2">98%</div>
+              <div className="text-sm text-slate-600 uppercase tracking-wide">On-Time Delivery</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-accent mb-2">$50M+</div>
+              <div className="text-sm text-slate-600 uppercase tracking-wide">Federal Contracts</div>
+            </div>
+          </motion.div>
+
           {/* Four Pillars Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {/* Pillar 1: Rapid Assessment & Architecture */}
+            {/* Pillar 1: Structured Discovery */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -306,16 +328,16 @@ export default function Home() {
                       <TrendingUp className="h-10 w-10 text-accent" />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                      Rapid Assessment & Architecture
+                      Structured Discovery
                     </h3>
                   </div>
                   <p className="text-base text-slate-600 leading-relaxed mb-6">
-                    We begin every engagement with a comprehensive 2-week discovery phase that maps your current state, identifies compliance gaps, and designs a vendor-neutral architecture aligned with your mission objectives. Our assessments include stakeholder interviews, technical infrastructure review, security posture analysis, and detailed ROI projections.
+                    We begin every engagement with a comprehensive 2-week discovery phase that maps your current state, identifies compliance gaps, and designs a vendor-neutral architecture aligned with your mission objectives. Our team brings 30+ years combined experience serving DoD, DHS, and civilian agencies.
                   </p>
                   <ul className="space-y-3 text-slate-700">
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>Stakeholder alignment workshops</span>
+                      <span>2-week discovery with stakeholder alignment workshops</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
@@ -323,66 +345,23 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>Platform-agnostic solution design</span>
+                      <span>50+ FedRAMP platforms evaluated for best-fit solutions</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>Detailed implementation roadmap with milestones</span>
+                      <span>Detailed implementation roadmap with ROI projections</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* Pillar 2: Security-Native Implementation */}
+            {/* Pillar 2: Vendor-Agnostic Solutions */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="group"
-            >
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
-                <CardContent className="p-10">
-                  <div className="mb-6">
-                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <Shield className="h-10 w-10 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                      Security-Native Implementation
-                    </h3>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Security and compliance are embedded from day one—not bolted on afterward. We implement only FedRAMP and StateRAMP-authorized platforms, configure zero-trust architectures by default, and prepare all security documentation needed for agency authorization. Every integration follows NIST 800-53 controls and agency-specific security requirements.
-                  </p>
-                  <ul className="space-y-3 text-slate-700">
-                    <li className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>FedRAMP/StateRAMP-authorized platforms only</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>Zero-trust architecture by default</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>Complete ATO documentation packages</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>NIST 800-53 controls implementation</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Pillar 3: Vendor-Agnostic Solutions */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.3 }}
               className="group"
             >
               <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
@@ -396,7 +375,7 @@ export default function Home() {
                     </h3>
                   </div>
                   <p className="text-base text-slate-600 leading-relaxed mb-6">
-                    We are not tied to any single vendor or platform. Our recommendations are based solely on your mission requirements, budget constraints, and technical environment. We evaluate 50+ FedRAMP-authorized platforms across automation, analytics, cloud, and integration categories to identify the best-fit solutions—then implement them with full transparency and knowledge transfer.
+                    We maintain complete vendor independence. Our recommendations are based solely on your mission requirements, budget constraints, and technical environment. We evaluate 50+ FedRAMP-authorized platforms to identify the best-fit solutions—then implement them with full transparency and knowledge transfer.
                   </p>
                   <ul className="space-y-3 text-slate-700">
                     <li className="flex items-start gap-3">
@@ -405,7 +384,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>Multi-vendor integration expertise</span>
+                      <span>Multi-vendor integration expertise across 50+ platforms</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
@@ -414,6 +393,49 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Full knowledge transfer and documentation</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Pillar 3: Security-First Implementation */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="group"
+            >
+              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
+                <CardContent className="p-10">
+                  <div className="mb-6">
+                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                      <Shield className="h-10 w-10 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                      Security-First Implementation
+                    </h3>
+                  </div>
+                  <p className="text-base text-slate-600 leading-relaxed mb-6">
+                    Security and compliance are embedded from day one—not bolted on afterward. We implement only FedRAMP and StateRAMP-authorized platforms, configure zero-trust architectures by default, and prepare complete ATO packages including SSP, SAR, and POA&M documentation.
+                  </p>
+                  <ul className="space-y-3 text-slate-700">
+                    <li className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                      <span>FedRAMP/StateRAMP-authorized platforms only</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                      <span>Zero-trust architecture configured by default</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                      <span>Complete ATO packages (SSP, SAR, POA&M)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                      <span>NIST 800-53 controls implementation and validation</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -439,7 +461,7 @@ export default function Home() {
                     </h3>
                   </div>
                   <p className="text-base text-slate-600 leading-relaxed mb-6">
-                    Our team includes Top Secret/SCI cleared personnel with decades of federal government experience. We understand agency culture, procurement processes, and the unique challenges of implementing technology in classified and sensitive environments. Every project is staffed with experienced consultants who have delivered similar implementations for agencies like yours.
+                    Our team includes Top Secret/SCI cleared personnel with 30+ years combined federal government experience. We understand agency culture, procurement processes, and the unique challenges of implementing technology in classified and sensitive environments.
                   </p>
                   <ul className="space-y-3 text-slate-700">
                     <li className="flex items-start gap-3">
@@ -452,11 +474,11 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>Experience across 20+ federal agencies</span>
+                      <span>Proven implementations for DoD, DHS, and civilian agencies</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
-                      <span>Proven change management and training delivery</span>
+                      <span>Change management and training delivery expertise</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -473,11 +495,11 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <p className="text-lg text-slate-600 mb-6">
-              Contact us to discuss your agency's requirements.
+              Ready to discuss your agency's challenges?
             </p>
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
               <Link href="/contact">
-                Request Assessment
+                Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
