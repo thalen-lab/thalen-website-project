@@ -3,8 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { 
-  ArrowRight, Cloud, Code2, Smartphone, Zap, TrendingUp, 
-  Users, DollarSign, Rocket, CheckCircle2, Layers, Database 
+  ArrowRight, Cloud, Code2, Smartphone, Rocket, CheckCircle2, Layers, Database, Users, TrendingUp 
 } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -339,46 +338,6 @@ export default function CustomSoftware() {
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Thalen Technologies?</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Zap,
-                title: "Fast Time to Market",
-                description: "Agile methodology delivers working software in 8-12 weeks."
-              },
-              {
-                icon: TrendingUp,
-                title: "Scalable Architecture",
-                description: "Built to grow from MVP to millions of users."
-              },
-              {
-                icon: DollarSign,
-                title: "Cost-Effective",
-                description: "Competitive rates without compromising quality."
-              },
-              {
-                icon: Users,
-                title: "Experienced Team",
-                description: "15+ years building software for startups and enterprises."
-              }
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <item.icon className="h-12 w-12 text-accent mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
             ))}
           </div>
         </div>

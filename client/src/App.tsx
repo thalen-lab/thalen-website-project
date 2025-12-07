@@ -135,6 +135,9 @@ import HHSPublicHealthCase from "./pages/case-studies/HHSPublicHealth";
 import AerospaceDigitalTwinCase from "./pages/case-studies/AerospaceDigitalTwin";
 import StateDOTCase from "./pages/case-studies/StateDOT";
 import CountyHealthCase from "./pages/case-studies/CountyHealth";
+import FederalAgencyAutomation from "./pages/case-studies/FederalAgencyAutomation";
+import DoDManufacturingUptime from "./pages/case-studies/DoDManufacturingUptime";
+import VALegacyIntegration from "./pages/case-studies/VALegacyIntegration";
 import CaseStudies from "./pages/CaseStudies";
 
 // Insights Pages
@@ -276,6 +279,9 @@ function Router() {
       <Route path={"/case-studies/hhs-public-health"} component={HHSPublicHealthCase} />
       <Route path={"/case-studies/state-dot"} component={StateDOTCase} />
       <Route path={"/case-studies/county-health"} component={CountyHealthCase} />
+      <Route path={"/case-studies/federal-agency-automation"} component={FederalAgencyAutomation} />
+      <Route path={"/case-studies/dod-manufacturing-uptime"} component={DoDManufacturingUptime} />
+      <Route path={"/case-studies/va-legacy-integration"} component={VALegacyIntegration} />
       
       {/* Insights Routes */}
       <Route path={"/insights/roi-methodology"} component={ROIMethodologyInsight} />

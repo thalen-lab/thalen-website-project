@@ -1,272 +1,170 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { ArrowRight, Download, CheckCircle2, Cloud, Shield, Clock } from 'lucide-react';
-import { Link } from 'wouter';
+import { Button } from "@/components/ui/button";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Link } from "wouter";
+import { ArrowLeft } from "lucide-react";
 
 export default function DefenseCloud() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
-
-      {/* Hero */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          <div className="max-w-4xl">
-            <div className="flex flex-wrap gap-3 mb-6">
-              <span className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold">
-                Defense Contractor Case Study
-              </span>
-              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-                IDIQ Contract
-              </span>
-              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-                Secret Clearance
-              </span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Defense Contractor: Zero-Downtime Cloud Migration
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Modernized entire infrastructure while achieving CMMC Level 3 certification with 100% uptime maintained throughout 18-month migration.
-            </p>
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              <Download className="mr-2 h-5 w-5" />
-              Download Full Case Study (PDF)
+      
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
+        
+        <div className="container relative z-10">
+          <Link href="/case-studies">
+            <Button variant="ghost" className="text-white hover:text-orange-500 mb-8 -ml-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Case Studies
             </Button>
+          </Link>
+          
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-8">
+              <span className="text-orange-500 text-sm font-medium tracking-wide uppercase">Case Study</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
+              Defense Contractor Achieves Zero-Downtime Cloud Migration
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed">
+              How a major defense contractor modernized its entire infrastructure while maintaining continuous operations and achieving CMMC Level 3 certification
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-secondary">
+      {/* The Opportunity Section */}
+      <section className="py-24 bg-white">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {[
-              { value: '100%', label: 'Uptime Maintained', icon: CheckCircle2 },
-              { value: '18 months', label: 'Migration Timeline', icon: Clock },
-              { value: 'CMMC L3', label: 'Certification Achieved', icon: Shield },
-              { value: '$4.5M', label: 'Annual Infrastructure Savings', icon: Cloud }
-            ].map((metric, index) => (
-              <div key={index} className="text-center">
-                <metric.icon className="h-8 w-8 text-accent mx-auto mb-3" />
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">{metric.value}</div>
-                <div className="text-sm text-muted-foreground">{metric.label}</div>
-              </div>
-            ))}
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Opportunity</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-slate-900 leading-tight">
+                A defense contractor recognized that legacy infrastructure threatened future competitiveness
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                Defense contractors operate in an environment where technological capability directly determines competitive advantage. A major contractor with more than two billion dollars in annual Department of Defense contracts understood this reality acutely. The company's aging on-premises infrastructure, built over two decades of organic growth and acquisitions, had become a strategic liability. Legacy systems limited the organization's ability to respond quickly to new contract opportunities, increased cybersecurity risks, and consumed resources that could be better deployed toward innovation.
+              </p>
+              
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                The situation grew more urgent as the Department of Defense announced that future contracts would require Cybersecurity Maturity Model Certification at Level 3. The contractor's existing infrastructure could not meet these requirements without fundamental modernization. Leadership recognized that the organization faced a choice: undertake a comprehensive cloud migration that would position the company for future growth, or accept gradual obsolescence as competitors leveraged more modern technology platforms.
+              </p>
+              
+              <p className="text-slate-700 text-lg leading-relaxed">
+                The challenge extended beyond technology. The contractor supported critical defense programs that operated continuously. Any disruption to these systems could jeopardize national security missions and breach contract obligations. The Chief Information Officer needed to modernize the entire infrastructure while maintaining perfect operational continuity. The organization required a partner who understood both the technical complexities of large-scale cloud migration and the unique requirements of defense sector operations. The contractor was determined to prove that comprehensive modernization and zero downtime were not mutually exclusive objectives.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6">Project Overview</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground mb-6">
-              A major defense contractor with $2B+ in annual DoD contracts operated on aging on-premises infrastructure that limited agility and increased security risks. The company needed to modernize to cloud infrastructure while maintaining 100% operational continuity and achieving CMMC Level 3 certification required for future DoD contracts.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies designed and executed a phased cloud migration strategy that modernized 150+ applications and 500TB of classified data across AWS GovCloud and Azure Government, achieving zero downtime and full CMMC Level 3 compliance within 18 months.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Type</h3>
-                <p className="text-lg font-bold">IDIQ Task Order</p>
+      {/* The Solution Section */}
+      <section className="py-24 bg-slate-900 text-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-400 tracking-wider uppercase mb-4">The Solution</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-white leading-tight">
+                A phased migration strategy delivered complete modernization without compromising operations
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none prose-invert">
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                The contractor needed more than a lift-and-shift migration. The organization required a transformation that would modernize application architectures, strengthen security posture, and establish a foundation for continuous innovation. Working with NexDyne, the contractor designed and executed an eighteen-month migration strategy that moved more than 150 applications and 500 terabytes of classified data to AWS GovCloud and Azure Government environments.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                The approach prioritized risk mitigation through careful sequencing and comprehensive testing. The migration began with non-critical applications that would provide valuable lessons without jeopardizing essential operations. Each application moved through a standardized process: assessment and planning, architecture redesign for cloud-native capabilities, parallel deployment in the target environment, extensive testing and validation, cutover during planned maintenance windows, and post-migration optimization. This methodology ensured that the team identified and resolved issues before they could impact production systems.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed">
+                The technical architecture leveraged the unique capabilities of government cloud environments while maintaining strict security boundaries. Sensitive workloads deployed to AWS GovCloud regions with FedRAMP High authorization. The platform implemented defense-in-depth security with network segmentation, encryption at rest and in transit, comprehensive logging and monitoring, and automated compliance validation. The migration team worked closely with DoD cybersecurity assessors throughout the process, ensuring that the new environment would meet CMMC Level 3 requirements. By the time the final application migrated, the contractor had achieved certification and established operational patterns that would maintain compliance as the environment evolved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Impact Section */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-20">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Impact</p>
+            </div>
+            
+            {/* Stats Grid */}
+            <div className="grid md:grid-cols-4 gap-8 mb-20">
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">100%</div>
+                <p className="text-slate-700 text-sm">uptime maintained throughout migration</p>
               </div>
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Value</h3>
-                <p className="text-lg font-bold">$12.5M (18 months)</p>
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">18 mo</div>
+                <p className="text-slate-700 text-sm">total migration timeline</p>
               </div>
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Compliance Achievement</h3>
-                <p className="text-lg font-bold">CMMC Level 3 Certified</p>
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">Level 3</div>
+                <p className="text-slate-700 text-sm">CMMC certification achieved</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">$4.5M</div>
+                <p className="text-slate-700 text-sm">in annual infrastructure savings</p>
+              </div>
+            </div>
+            
+            <div className="max-w-3xl mx-auto">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  The migration transformed the contractor's competitive position. The organization achieved CMMC Level 3 certification three months before the DoD deadline, positioning itself to compete for contracts that many competitors could not yet pursue. The modern cloud infrastructure enabled the contractor to respond to new opportunities with unprecedented speed. Proposal teams could spin up development environments in hours rather than weeks, allowing the organization to demonstrate technical capabilities during the competitive process rather than merely describing them.
+                </p>
+                
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  The financial impact exceeded initial projections. Infrastructure costs decreased by 4.5 million dollars annually as the organization eliminated expensive data center leases and reduced the staff required for hardware maintenance. The cloud platform's elasticity allowed the contractor to scale resources to match project demands, avoiding both over-provisioning during quiet periods and capacity constraints during peak workloads. The migration achieved return on investment in just over two years, with ongoing savings continuing to accrue.
+                </p>
+                
+                <p className="text-slate-700 text-lg leading-relaxed">
+                  Perhaps most significantly, the transformation established a foundation for continuous innovation. Development teams adopted cloud-native architectures and DevSecOps practices that accelerated software delivery while strengthening security. The contractor now deploys new capabilities multiple times per week rather than quarterly, enabling rapid response to changing mission requirements. The organization's success with cloud migration has become a competitive differentiator in its own right, with the DoD citing the contractor's modern infrastructure as a factor in several recent contract awards. The company proved that defense contractors could achieve the agility of commercial technology companies without compromising the security and reliability that national security missions demand.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Challenge */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">The Challenge</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: 'Zero-Downtime Requirement',
-                description: 'Mission-critical systems supporting active DoD programs required 100% uptime during migration with no service interruptions.'
-              },
-              {
-                title: 'CMMC Level 3 Compliance',
-                description: 'New DoD contracts required CMMC Level 3 certification with 130+ security controls across all cloud infrastructure.'
-              },
-              {
-                title: 'Classified Data Migration',
-                description: '500TB of CUI and classified data requiring secure transfer protocols and continuous chain-of-custody documentation.'
-              },
-              {
-                title: 'Legacy Application Modernization',
-                description: '150+ applications spanning 15 years of development requiring refactoring or replacement for cloud compatibility.'
-              }
-            ].map((challenge, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{challenge.title}</h3>
-                  <p className="text-muted-foreground">{challenge.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Solution */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Our Solution</h2>
-          <div className="space-y-6">
-            {[
-              {
-                title: 'Phased Migration Strategy',
-                description: 'Developed 6-phase migration roadmap prioritizing non-critical systems first, enabling team learning and process refinement before migrating mission-critical applications.'
-              },
-              {
-                title: 'Hybrid Cloud Architecture',
-                description: 'Designed multi-cloud architecture leveraging AWS GovCloud for compute workloads and Azure Government for data analytics, with secure interconnects and unified identity management.'
-              },
-              {
-                title: 'Zero-Trust Security Framework',
-                description: 'Implemented comprehensive zero-trust architecture with micro-segmentation, continuous authentication, and automated threat detection achieving CMMC Level 3 requirements.'
-              },
-              {
-                title: 'Automated Migration Tooling',
-                description: 'Built custom migration automation tools reducing manual effort by 70% and ensuring consistent security configurations across all migrated workloads.'
-              },
-              {
-                title: 'Continuous Compliance Monitoring',
-                description: 'Deployed automated compliance monitoring with real-time dashboards tracking 130+ CMMC controls, enabling rapid remediation of any configuration drift.'
-              },
-              {
-                title: 'Team Training & Enablement',
-                description: 'Executed comprehensive training program for 85 engineers and administrators, building internal cloud expertise for ongoing operations.'
-              }
-            ].map((solution, index) => (
-              <Card key={index} className="border-l-4 border-l-accent">
-                <CardContent className="p-6">
-                  <div className="flex items-start">
-                    <CheckCircle2 className="h-6 w-6 text-foreground mr-4 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
-                      <p className="text-muted-foreground">{solution.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="py-20 bg-muted">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Measurable Results</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { metric: '100%', label: 'Uptime Maintained', detail: 'Zero service interruptions during migration' },
-              { metric: 'CMMC Level 3', label: 'Certification Achieved', detail: 'First-time pass on certification audit' },
-              { metric: '$4.5M', label: 'Annual Savings', detail: '40% reduction in infrastructure costs' },
-              { metric: '150+', label: 'Applications Migrated', detail: '100% successful migration rate' },
-              { metric: '500TB', label: 'Data Migrated', detail: 'Zero data loss or corruption' },
-              { metric: '85', label: 'Engineers Trained', detail: '100% cloud certification achievement' }
-            ].map((result, index) => (
-              <Card key={index} className="bg-card">
-                <CardContent className="p-6 text-center">
-                  <div className="text-4xl font-bold text-accent mb-2">{result.metric}</div>
-                  <div className="text-lg font-semibold mb-1">{result.label}</div>
-                  <div className="text-sm text-muted-foreground">{result.detail}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <Card className="bg-primary text-primary-foreground">
-            <CardContent className="p-12">
-              <div className="text-6xl text-accent mb-6">"</div>
-              <blockquote className="text-2xl font-medium mb-8">
-                Thalen Technologies's expertise in both cloud architecture and defense compliance was strong. They delivered a zero-downtime migration while achieving CMMC Level 3 certification on the first audit. The $4.5M in annual savings exceeded our projections, and our team is now fully enabled to operate in the cloud.
-              </blockquote>
-              <div className="flex items-center">
-                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
-                  MR
-                </div>
-                <div>
-                  <div className="font-bold text-lg">Michael Rodriguez</div>
-                  <div className="text-primary-foreground/80">Chief Information Officer</div>
-                  <div className="text-sm text-primary-foreground/60">Defense Contractor (Name Withheld)</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Technologies */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Technologies & Methodologies</h2>
-          <div className="flex flex-wrap gap-3">
-            {[
-              'AWS GovCloud',
-              'Azure Government',
-              'Kubernetes',
-              'Docker',
-              'Terraform',
-              'Ansible',
-              'CloudEndure',
-              'AWS Migration Hub',
-              'Azure Migrate',
-              'CMMC Level 3',
-              'NIST 800-171',
-              'Zero-Trust Architecture',
-              'DevSecOps',
-              'Infrastructure as Code',
-              'Agile/SAFe'
-            ].map((tech, index) => (
-              <span key={index} className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Infrastructure?</h2>
-          <p className="text-xl opacity-90 mb-8">
-            Discover how Thalen Technologies's proven cloud migration methodology can deliver zero-downtime modernization with full compliance.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Cloud Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/case-studies">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View More Case Studies
-              </Button>
-            </Link>
+      {/* CTA Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-normal text-slate-900 mb-6">
+              Modernize your infrastructure without compromising operations
+            </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              Discover how strategic cloud migration can help your organization achieve compliance, reduce costs, and accelerate innovation.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link href="/case-studies">
+                <Button size="lg" variant="outline">
+                  View More Case Studies
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

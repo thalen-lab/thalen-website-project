@@ -50,7 +50,7 @@ export default function Navigation() {
             >
               <button className="flex items-center space-x-1 hover:text-accent transition-colors">
                 <span>Services</span>
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-5 w-5" />
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -75,7 +75,7 @@ export default function Navigation() {
             >
               <button className="flex items-center space-x-1 hover:text-accent transition-colors">
                 <span>Industries</span>
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-5 w-5" />
               </button>
               {industriesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -106,7 +106,7 @@ export default function Navigation() {
             >
               <button className="flex items-center space-x-1 hover:text-accent transition-colors">
                 <span>Federal Solutions</span>
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-5 w-5" />
               </button>
               {federalSolutionsOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -168,7 +168,7 @@ export default function Navigation() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </button>
         </div>
 

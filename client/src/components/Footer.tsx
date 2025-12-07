@@ -17,13 +17,13 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-6 w-6" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                <Twitter className="h-5 w-5" />
+                <Twitter className="h-6 w-6" />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                <Facebook className="h-5 w-5" />
+                <Facebook className="h-6 w-6" />
               </a>
             </div>
           </div>
@@ -66,21 +66,21 @@ export default function Footer() {
         <div className="border-t border-primary-foreground/20 pt-8 mb-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm opacity-90">
             <div className="flex items-start space-x-3">
-              <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" />
+              <Phone className="h-6 w-6 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium mb-1">Phone</p>
                 <p>+1 (555) 123-4567</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" />
+              <Mail className="h-6 w-6 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium mb-1">Email</p>
                 <p>contact@thalen.tech</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
+              <MapPin className="h-6 w-6 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium mb-1">Headquarters</p>
                 <p>Washington, DC Metro Area</p>
