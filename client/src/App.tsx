@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import GovernmentChat from "./components/GovernmentChat";
 import LiveChat from "./components/LiveChat";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
+import { NotificationBanner } from "./components/NotificationBanner";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Team from "./pages/Team";
@@ -36,6 +37,8 @@ import CapabilityGenerator from "./pages/CapabilityGenerator";
 import GovernmentResources from "./pages/GovernmentResources";
 import ContractVehicleComparison from "./pages/ContractVehicleComparison";
 import ComplianceRoadmap from "./pages/ComplianceRoadmap";
+import MobileContact from "./pages/MobileContact";
+import MobileAssessment from "./pages/MobileAssessment";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -43,6 +46,7 @@ import DataAnalyticsService from "./pages/services/DataAnalytics";
 import AnalyticsService from "./pages/services/Analytics";
 import Cloud from "./pages/services/Cloud";
 import CybersecurityService from "./pages/services/Cybersecurity";
+import ATOSupportService from "./pages/services/ATOSupport";
 import AppDevelopmentService from "./pages/services/AppDevelopment";
 import CustomSoftwareService from "./pages/services/CustomSoftware";
 
@@ -162,6 +166,8 @@ function Router() {
       <Route path={"/about"} component={About} />
       <Route path={"/team"} component={Team} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/m/contact"} component={MobileContact} />
+      <Route path={"/m/assessment"} component={MobileAssessment} />
       <Route path={"/contact/partnerships"} component={ContactPartnerships} />
       <Route path={"/contact/government"} component={ContactGovernment} />
       <Route path={"/contact/emergency"} component={ContactEmergency} />
@@ -212,6 +218,7 @@ function Router() {
       <Route path={"/services/infrastructure-as-code"} component={InfrastructureAsCode} />
       <Route path={"/services/disaster-recovery"} component={DisasterRecovery} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />
+      <Route path={"/services/ato-support"} component={ATOSupportService} />
       <Route path={"/services/security-assessment"} component={SecurityAssessment} />
       <Route path={"/services/penetration-testing"} component={PenetrationTesting} />
       <Route path={"/services/identity-access-management"} component={IdentityAccessManagement} />
@@ -390,6 +397,7 @@ function App() {
           <Toaster />
           <Router />
           <GovernmentChat />
+          <NotificationBanner />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

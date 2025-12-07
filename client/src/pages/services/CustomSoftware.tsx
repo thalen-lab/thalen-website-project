@@ -263,7 +263,7 @@ export default function CustomSoftware() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Modern Technology Stack</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We use cutting-edge technologies to build fast, scalable, and maintainable applications.
+              We use current technologies to build fast, scalable, and maintainable applications.
             </p>
           </div>
 

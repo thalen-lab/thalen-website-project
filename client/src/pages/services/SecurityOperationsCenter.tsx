@@ -160,7 +160,7 @@ export default function SecurityOperationsCenter() {
                   <p className="text-muted-foreground mb-6">{service.description}</p>
                   <div className="border-t pt-4">
                     <h4 className="font-semibold mb-3 text-sm">Key Responsibilities:</h4>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {service.responsibilities.map((resp, idx) => (
                         <div key={idx} className="flex items-center text-sm">
                           <div className="h-2 w-2 bg-foreground rounded-full mr-2"></div>
@@ -182,11 +182,11 @@ export default function SecurityOperationsCenter() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Enterprise SOC Tools & Platforms</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Best-in-class security tools and platforms for comprehensive threat detection and response.
+              Established security tools and platforms for comprehensive threat detection and response.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {socTools.map((tool, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">
@@ -205,7 +205,7 @@ export default function SecurityOperationsCenter() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">SOC Performance Metrics</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Industry-leading response times and threat detection rates for mission-critical environments.
+              Established response times and threat detection rates for mission-critical environments.
             </p>
           </div>
 
@@ -230,7 +230,7 @@ export default function SecurityOperationsCenter() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Protect Your Assets 24/7</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a SOC consultation and discover how NexDyne can deliver continuous security monitoring and threat detection for your mission-critical government environment.
+            Schedule a SOC consultation and discover how Thalen Technologies can deliver continuous security monitoring and threat detection for your mission-critical government environment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

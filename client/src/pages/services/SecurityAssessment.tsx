@@ -110,7 +110,7 @@ export default function SecurityAssessment() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose NexDyne</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose Thalen Technologies</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Unlike generic compliance consultants, we understand government authorization processes (FedRAMP, StateRAMP, CJIS), security clearances, and mission continuity imperatives.
             </p>
@@ -187,7 +187,7 @@ export default function SecurityAssessment() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {frameworks.map((framework, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">
@@ -205,7 +205,7 @@ export default function SecurityAssessment() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Achieve Compliance?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive readiness assessment and discover how NexDyne can accelerate your path to FedRAMP, StateRAMP, CMMC, or NIST compliance.
+            Start with a comprehensive readiness assessment and discover how Thalen Technologies can accelerate your path to FedRAMP, StateRAMP, CMMC, or NIST compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

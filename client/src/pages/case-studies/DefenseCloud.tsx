@@ -201,7 +201,7 @@ export default function DefenseCloud() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                Thalen Technologies's expertise in both cloud architecture and defense compliance was exceptional. They delivered a zero-downtime migration while achieving CMMC Level 3 certification on the first audit. The $4.5M in annual savings exceeded our projections, and our team is now fully enabled to operate in the cloud.
+                Thalen Technologies's expertise in both cloud architecture and defense compliance was strong. They delivered a zero-downtime migration while achieving CMMC Level 3 certification on the first audit. The $4.5M in annual savings exceeded our projections, and our team is now fully enabled to operate in the cloud.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">

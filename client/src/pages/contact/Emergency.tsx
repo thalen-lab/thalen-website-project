@@ -95,8 +95,8 @@ export default function Emergency() {
                     <Mail className="h-5 w-5 text-red-600 mr-2" />
                     Emergency Email
                   </h3>
-                  <a href="mailto:emergency@nexdynetechnologies.com" className="text-red-600 hover:underline">
-                    emergency@nexdynetechnologies.com
+                  <a href="mailto:emergency@thalentechnologies.com" className="text-red-600 hover:underline">
+                    emergency@thalentechnologies.com
                   </a>
                 </CardContent>
               </Card>

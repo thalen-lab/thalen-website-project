@@ -197,7 +197,7 @@ export default function FederalAutomation() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                Thalen Technologies transformed our operations while maintaining the highest security standards. The 85% automation rate exceeded our expectations, and the 2-day processing time has dramatically improved our mission readiness. Their team's expertise in federal compliance was invaluable.
+                Thalen Technologies improved our operations while maintaining the highest security standards. The 85% automation rate exceeded our expectations, and the 2-day processing time has dramatically improved our mission readiness. Their team's expertise in federal compliance was invaluable.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -247,14 +247,14 @@ export default function FederalAutomation() {
       {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Agency?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how Thalen Technologies's proven federal automation methodology can deliver similar results for your organization.
+            Contact us to discuss how our federal automation services can support your organization.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Federal Assessment
+                Request Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

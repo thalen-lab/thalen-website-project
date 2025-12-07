@@ -77,8 +77,8 @@ export default function Partnerships() {
               <Card className="mb-6">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-2">Direct Contact</h3>
-                  <a href="mailto:partnerships@nexdynetechnologies.com" className="text-accent hover:underline">
-                    partnerships@nexdynetechnologies.com
+                  <a href="mailto:partnerships@thalentechnologies.com" className="text-accent hover:underline">
+                    partnerships@thalentechnologies.com
                   </a>
                 </CardContent>
               </Card>

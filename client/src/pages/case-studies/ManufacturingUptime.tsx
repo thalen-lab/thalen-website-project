@@ -231,7 +231,7 @@ export default function ManufacturingUptime() {
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Eliminate Unplanned Downtime</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how Thalen Technologies's predictive maintenance and industrial cybersecurity solutions can transform your operations.
+            Learn how Thalen Technologies's predictive maintenance and industrial cybersecurity solutions support operational efficiency.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

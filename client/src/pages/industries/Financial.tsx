@@ -181,7 +181,7 @@ export default function Financial() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Financial Services Success Story</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real-world results demonstrating the transformative impact of AI-powered fraud detection and risk analytics in large-scale financial operations.
+              Real-world results demonstrating the significant impact of AI-powered fraud detection and risk analytics in large-scale financial operations.
             </p>
           </div>
           <Card className="overflow-hidden max-w-5xl mx-auto">

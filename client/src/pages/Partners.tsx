@@ -1,246 +1,405 @@
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Shield, Cloud, Lock, Database, Zap, Cpu } from "lucide-react";
 
 export default function Partners() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section with Orange Gradient */}
-      <section className="relative bg-orange-gradient py-32 overflow-hidden">
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-sm text-white/80 mb-4">Partners</p>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Together we deliver enterprise-grade solutions
-              </h1>
+      {/* Hero Section - Clean White/Navy Editorial Design */}
+      <section className="relative bg-white py-24 border-b border-border">
+        <div className="container max-w-5xl">
+          <div className="max-w-3xl">
+            <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">Technology Partnerships</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 leading-tight">
+              We implement the platforms you need—without vendor lock-in
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              Thalen Technologies maintains strategic partnerships with 50+ FedRAMP and StateRAMP-authorized technology providers. We don't sell platforms—we help federal, state, and local agencies implement the right solutions for their mission requirements.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/contact">
+                <Button size="lg" className="gap-2">
+                  Schedule Assessment <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
+              <Link href="/methodology">
+                <Button size="lg" variant="outline">
+                  View Our Methodology
+                </Button>
+              </Link>
             </div>
-            
-            {/* Partner Logo Visualization */}
-            <div className="relative">
-              <div className="bg-[oklch(0.35_0.05_250)] rounded-[3rem] p-12 transform rotate-6">
-                <div className="grid grid-cols-3 gap-4">
-                  {/* Placeholder partner logos in organic shape */}
-                  <div className="bg-accent/30 rounded-2xl p-6 flex items-center justify-center text-white font-bold text-sm">
-                    AWS
-                  </div>
-                  <div className="bg-accent/40 rounded-2xl p-6 flex items-center justify-center text-white font-bold text-lg">
-                    UiPath
-                  </div>
-                  <div className="bg-accent/30 rounded-2xl p-6 flex items-center justify-center text-white font-bold text-sm">
-                    Google
-                  </div>
-                  <div className="bg-accent/40 rounded-2xl p-6 flex items-center justify-center text-white font-bold text-sm">
-                    Palo Alto
-                  </div>
-                  <div className="bg-accent/50 rounded-2xl p-6 flex items-center justify-center text-white font-bold text-xl">
-                    OpenAI
-                  </div>
-                  <div className="bg-accent/30 rounded-2xl p-6 flex items-center justify-center text-white font-bold text-sm">
-                    Splunk
-                  </div>
-                  <div className="bg-accent/30 rounded-2xl p-6 flex items-center justify-center text-white font-bold text-sm">
-                    Snowflake
-                  </div>
-                  <div className="bg-accent/40 rounded-2xl p-6 flex items-center justify-center text-white font-bold text-sm">
-                    ServiceNow
-                  </div>
-                  <div className="bg-accent/30 rounded-2xl p-6 flex items-center justify-center text-white font-bold text-sm">
-                    Azure
-                  </div>
-                </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vendor-Neutral Positioning Statement */}
+      <section className="py-16 bg-muted/30">
+        <div className="container max-w-5xl">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="border-l-4 border-accent pl-6">
+              <h3 className="font-bold text-lg mb-2">Vendor-Neutral Consulting</h3>
+              <p className="text-muted-foreground text-sm">
+                We evaluate and recommend platforms based on your requirements—not commission structures.
+              </p>
+            </div>
+            <div className="border-l-4 border-accent pl-6">
+              <h3 className="font-bold text-lg mb-2">Implementation Expertise</h3>
+              <p className="text-muted-foreground text-sm">
+                Our team holds certifications across 50+ platforms—we implement what you choose, not what we sell.
+              </p>
+            </div>
+            <div className="border-l-4 border-accent pl-6">
+              <h3 className="font-bold text-lg mb-2">Government-First Focus</h3>
+              <p className="text-muted-foreground text-sm">
+                All partnerships support FedRAMP/StateRAMP compliance for federal, state, and local agencies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FedRAMP/StateRAMP Authorized Platforms We Implement */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-primary mb-4">
+              FedRAMP & StateRAMP-authorized platforms we implement
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl">
+              Our consulting team maintains active certifications and implementation experience across government-authorized cloud platforms, security tools, and enterprise software. We help you navigate vendor selection, procurement, and deployment.
+            </p>
+          </div>
+
+          {/* Cloud Infrastructure & Platforms */}
+          <div className="mb-16 pb-16 border-b border-border">
+            <div className="flex items-center gap-3 mb-8">
+              <Cloud className="w-8 h-8 text-primary" />
+              <h3 className="text-2xl font-bold text-primary">Cloud Infrastructure & Platforms</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">AWS GovCloud (FedRAMP High)</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Secure cloud infrastructure for federal agencies with IL4/IL5 workloads
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Migration & modernization consulting</li>
+                  <li>• Landing zone design and implementation</li>
+                  <li>• Cost optimization and FinOps</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Microsoft Azure Government</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Enterprise cloud platform with government-specific compliance
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Hybrid cloud architecture design</li>
+                  <li>• Active Directory integration</li>
+                  <li>• DevSecOps pipeline setup</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Google Cloud Platform (GCP)</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Advanced data analytics and AI/ML capabilities for government
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• BigQuery data warehouse implementation</li>
+                  <li>• Kubernetes (GKE) orchestration</li>
+                  <li>• Vertex AI model deployment</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Oracle Cloud Infrastructure</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  High-performance infrastructure for mission-critical workloads
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Database migration and optimization</li>
+                  <li>• Disaster recovery planning</li>
+                  <li>• Autonomous database setup</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Cybersecurity & Compliance */}
+          <div className="mb-16 pb-16 border-b border-border">
+            <div className="flex items-center gap-3 mb-8">
+              <Shield className="w-8 h-8 text-primary" />
+              <h3 className="text-2xl font-bold text-primary">Cybersecurity & Compliance</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Palo Alto Networks</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Next-generation firewall and zero-trust security architecture
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Zero-trust network design</li>
+                  <li>• Prisma Cloud implementation</li>
+                  <li>• Security policy automation</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">CrowdStrike Falcon</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Endpoint detection and response (EDR) for government agencies
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Endpoint protection deployment</li>
+                  <li>• Threat hunting and incident response</li>
+                  <li>• Integration with SIEM platforms</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Splunk Enterprise Security</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Security information and event management (SIEM) platform
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• SIEM architecture and deployment</li>
+                  <li>• Custom dashboard development</li>
+                  <li>• Compliance reporting automation</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Tenable.io</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Vulnerability management and continuous monitoring
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Continuous vulnerability scanning</li>
+                  <li>• Risk-based prioritization</li>
+                  <li>• Compliance dashboard setup</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Data & Analytics Platforms */}
+          <div className="mb-16 pb-16 border-b border-border">
+            <div className="flex items-center gap-3 mb-8">
+              <Database className="w-8 h-8 text-primary" />
+              <h3 className="text-2xl font-bold text-primary">Data & Analytics Platforms</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Snowflake Government</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Cloud data warehouse for secure government analytics
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Data warehouse architecture design</li>
+                  <li>• ETL pipeline development</li>
+                  <li>• Data governance implementation</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Databricks</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Unified analytics platform for data engineering and AI
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Lakehouse architecture setup</li>
+                  <li>• ML model development and deployment</li>
+                  <li>• Real-time streaming analytics</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Tableau Government</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Visual analytics and business intelligence platform
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Dashboard and visualization design</li>
+                  <li>• Self-service analytics enablement</li>
+                  <li>• Enterprise deployment and governance</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Microsoft Power BI</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Business analytics and reporting for government agencies
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Report and dashboard development</li>
+                  <li>• Power Query data transformation</li>
+                  <li>• Embedded analytics integration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Process Automation & AI */}
+          <div className="mb-16 pb-16 border-b border-border">
+            <div className="flex items-center gap-3 mb-8">
+              <Zap className="w-8 h-8 text-primary" />
+              <h3 className="text-2xl font-bold text-primary">Process Automation & AI</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">UiPath Government Cloud</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Robotic process automation (RPA) for government workflows
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• RPA opportunity assessment</li>
+                  <li>• Bot development and deployment</li>
+                  <li>• Center of Excellence (CoE) setup</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Automation Anywhere</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Intelligent automation platform with AI capabilities
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Intelligent document processing</li>
+                  <li>• Process discovery and mining</li>
+                  <li>• Bot lifecycle management</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">OpenAI Azure Government</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Large language models (LLMs) for government use cases
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• LLM use case identification</li>
+                  <li>• Prompt engineering and fine-tuning</li>
+                  <li>• Responsible AI governance</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">DataRobot</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Automated machine learning (AutoML) platform
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Predictive model development</li>
+                  <li>• Model monitoring and governance</li>
+                  <li>• MLOps pipeline automation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Enterprise Software & Integration */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <Cpu className="w-8 h-8 text-primary" />
+              <h3 className="text-2xl font-bold text-primary">Enterprise Software & Integration</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">ServiceNow Government</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  IT service management (ITSM) and workflow automation
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• ITSM implementation and configuration</li>
+                  <li>• Custom workflow development</li>
+                  <li>• Integration with legacy systems</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Salesforce Government Cloud</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Constituent relationship management (CRM) platform
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• CRM implementation and customization</li>
+                  <li>• Lightning component development</li>
+                  <li>• Data migration and integration</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">MuleSoft Anypoint</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  API-led integration platform for government agencies
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• API strategy and design</li>
+                  <li>• Integration architecture</li>
+                  <li>• Microservices implementation</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+                <h4 className="font-bold text-lg mb-2">Workato</h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Enterprise automation and integration platform (iPaaS)
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Low-code integration development</li>
+                  <li>• Recipe library customization</li>
+                  <li>• Cross-platform workflow automation</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Partners We Are Proud Of */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-primary">
-            Partners we are proud of
-          </h2>
-
-          {/* Process Automation */}
-          <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 text-primary">Process Automation</h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-6xl font-bold text-accent mb-4">Ui</div>
-                <h4 className="text-xl font-bold text-primary">UiPath</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">AA</div>
-                <h4 className="text-xl font-bold text-primary">Automation Anywhere</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">BP</div>
-                <h4 className="text-xl font-bold text-primary">Blue Prism</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">W</div>
-                <h4 className="text-xl font-bold text-primary">Workato</h4>
-              </div>
-            </div>
+      {/* How We Help You Choose */}
+      <section className="py-20 bg-muted/30">
+        <div className="container max-w-5xl">
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold text-primary mb-4">
+              How we help you navigate platform selection
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl">
+              Our vendor-neutral consulting approach ensures you select and implement platforms based on mission requirements—not sales pressure.
+            </p>
           </div>
 
-          {/* Cloud Platforms */}
-          <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 text-primary">Cloud Platforms</h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">AWS</div>
-                <h4 className="text-xl font-bold text-primary">AWS GovCloud</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">GC</div>
-                <h4 className="text-xl font-bold text-primary">Google Cloud</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">Az</div>
-                <h4 className="text-xl font-bold text-primary">Microsoft Azure</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">OC</div>
-                <h4 className="text-xl font-bold text-primary">Oracle Cloud</h4>
-              </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-card border border-border rounded-lg p-8">
+              <div className="text-3xl font-bold text-accent mb-4">01</div>
+              <h3 className="text-xl font-bold mb-3">Requirements Analysis</h3>
+              <p className="text-muted-foreground">
+                We assess your current state, mission objectives, compliance requirements, and technical constraints to define platform evaluation criteria.
+              </p>
             </div>
-          </div>
-
-          {/* Data & Analytics */}
-          <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 text-primary">Data & Analytics</h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">❄</div>
-                <h4 className="text-xl font-bold text-primary">Snowflake</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">DB</div>
-                <h4 className="text-xl font-bold text-primary">Databricks</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">T</div>
-                <h4 className="text-xl font-bold text-primary">Tableau</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">PB</div>
-                <h4 className="text-xl font-bold text-primary">Power BI</h4>
-              </div>
+            <div className="bg-card border border-border rounded-lg p-8">
+              <div className="text-3xl font-bold text-accent mb-4">02</div>
+              <h3 className="text-xl font-bold mb-3">Vendor Evaluation</h3>
+              <p className="text-muted-foreground">
+                We evaluate FedRAMP/StateRAMP-authorized platforms against your criteria, providing objective scoring and recommendations without vendor bias.
+              </p>
             </div>
-          </div>
-
-          {/* Cybersecurity */}
-          <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 text-primary">Cybersecurity</h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">PA</div>
-                <h4 className="text-xl font-bold text-primary">Palo Alto Networks</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">CS</div>
-                <h4 className="text-xl font-bold text-primary">CrowdStrike</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">S</div>
-                <h4 className="text-xl font-bold text-primary">Splunk</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">F5</div>
-                <h4 className="text-xl font-bold text-primary">F5 Networks</h4>
-              </div>
-            </div>
-          </div>
-
-          {/* AI & Machine Learning */}
-          <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 text-primary">AI & Machine Learning</h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">⚡</div>
-                <h4 className="text-xl font-bold text-primary">OpenAI</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">A</div>
-                <h4 className="text-xl font-bold text-primary">Anthropic</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">DR</div>
-                <h4 className="text-xl font-bold text-primary">DataRobot</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">H2</div>
-                <h4 className="text-xl font-bold text-primary">H2O.ai</h4>
-              </div>
-            </div>
-          </div>
-
-          {/* Enterprise Software */}
-          <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 text-primary">Enterprise Software</h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">SN</div>
-                <h4 className="text-xl font-bold text-primary">ServiceNow</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">SF</div>
-                <h4 className="text-xl font-bold text-primary">Salesforce</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">SAP</div>
-                <h4 className="text-xl font-bold text-primary">SAP</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">WD</div>
-                <h4 className="text-xl font-bold text-primary">Workday</h4>
-              </div>
-            </div>
-          </div>
-
-          {/* DevOps & Integration */}
-          <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 text-primary">DevOps & Integration</h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">GH</div>
-                <h4 className="text-xl font-bold text-primary">GitHub</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">GL</div>
-                <h4 className="text-xl font-bold text-primary">GitLab</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">JK</div>
-                <h4 className="text-xl font-bold text-primary">Jenkins</h4>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-12 flex flex-col items-center justify-center hover:border-accent transition-colors group">
-                <div className="text-5xl font-bold text-accent mb-4">K8</div>
-                <h4 className="text-xl font-bold text-primary">Kubernetes</h4>
-              </div>
+            <div className="bg-card border border-border rounded-lg p-8">
+              <div className="text-3xl font-bold text-accent mb-4">03</div>
+              <h3 className="text-xl font-bold mb-3">Implementation & Optimization</h3>
+              <p className="text-muted-foreground">
+                Once you select a platform, our certified engineers implement, configure, and optimize it for your specific use cases and workflows.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to leverage our partner ecosystem?
-          </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-3xl mx-auto">
-            Our strategic partnerships enable us to deliver best-in-class solutions tailored to your mission-critical needs.
-          </p>
-          <Link href="/contact">
-            <a className="inline-block bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-4 rounded-full transition-colors">
-              Contact Us
-            </a>
-          </Link>
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="bg-primary text-white rounded-2xl p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Need help selecting the right platforms for your agency?
+            </h2>
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              Schedule a free 60-minute assessment to discuss your requirements and explore FedRAMP/StateRAMP-authorized solutions.
+            </p>
+            <Link href="/contact">
+              <Button size="lg" variant="secondary" className="gap-2">
+                Schedule Free Assessment <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

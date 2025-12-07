@@ -205,7 +205,7 @@ export default function ApplicationDevelopment() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Modern Technology Stack</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We leverage cutting-edge frameworks, cloud platforms, and enterprise tools to build scalable, secure applications for federal missions.
+              We leverage current frameworks, cloud platforms, and enterprise tools to build scalable, secure applications for federal missions.
             </p>
           </div>
 
@@ -213,7 +213,7 @@ export default function ApplicationDevelopment() {
             {/* Frontend & Backend */}
             <div>
               <h3 className="text-xl font-bold mb-6 text-center">Frontend & Backend Frameworks</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {[
                   { name: "React", category: "Frontend" },
                   { name: "Angular", category: "Frontend" },
@@ -236,7 +236,7 @@ export default function ApplicationDevelopment() {
             {/* Cloud Platforms */}
             <div>
               <h3 className="text-xl font-bold mb-6 text-center">Cloud Platforms & Infrastructure</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
                 {[
                   { name: "AWS", icon: "☁️" },
                   { name: "Azure", icon: "☁️" },
@@ -255,7 +255,7 @@ export default function ApplicationDevelopment() {
             {/* Databases & Tools */}
             <div>
               <h3 className="text-xl font-bold mb-6 text-center">Databases & Development Tools</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {[
                   { name: "PostgreSQL", icon: "🗄️" },
                   { name: "MongoDB", icon: "🗄️" },
@@ -275,7 +275,7 @@ export default function ApplicationDevelopment() {
             {/* Certifications & Partnerships */}
             <div className="bg-gradient-to-br from-navy-900 to-blue-900 rounded-2xl p-12">
               <h3 className="text-2xl font-bold mb-8 text-center text-white">Certifications & Partnerships</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   { name: "FedRAMP Authorized", badge: "🛡️" },
                   { name: "AWS Partner", badge: "☁️" },
@@ -304,7 +304,7 @@ export default function ApplicationDevelopment() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Why Choose Thalen Technologies for Application Development?</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We combine deep federal expertise with cutting-edge development practices to deliver applications that meet the unique challenges of government missions.
+                We combine deep federal expertise with current development practices to deliver applications that meet the unique challenges of government missions.
               </p>
               
               <div className="space-y-6">
@@ -324,7 +324,7 @@ export default function ApplicationDevelopment() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">FedRAMP Authorized</h3>
-                    <p className="text-muted-foreground">Proven track record with 50+ successful FedRAMP ATOs across agencies.</p>
+                    <p className="text-muted-foreground">Experience with 50+ successful FedRAMP ATOs across agencies.</p>
                   </div>
                 </div>
                 
@@ -344,7 +344,7 @@ export default function ApplicationDevelopment() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">Modern Technology Stack</h3>
-                    <p className="text-muted-foreground">Cloud-native, microservices architecture with cutting-edge frameworks and tools.</p>
+                    <p className="text-muted-foreground">Cloud-native, microservices architecture with current frameworks and tools.</p>
                   </div>
                 </div>
               </div>

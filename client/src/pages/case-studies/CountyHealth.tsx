@@ -262,7 +262,7 @@ export default function CountyHealth() {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Client Testimonial</h3>
               <p className="text-lg mb-6 leading-relaxed">
-                "Thalen Technologies transformed our disease surveillance from a 14-day manual process to real-time automated monitoring. Last flu season, we detected an outbreak 11 days earlier than the previous year, allowing us to launch targeted vaccination campaigns that reduced community transmission by 34%. The platform's HIPAA compliance and seamless integration with 120+ healthcare providers gave us confidence that we were protecting both public health and patient privacy. This system has fundamentally changed how we respond to infectious disease threats."
+                "Thalen Technologies improved our disease surveillance from a 14-day manual process to real-time automated monitoring. Last flu season, we detected an outbreak 11 days earlier than the previous year, allowing us to launch targeted vaccination campaigns that reduced community transmission by 34%. The platform's HIPAA compliance and seamless integration with 120+ healthcare providers gave us confidence that we were protecting both public health and patient privacy. This system has fundamentally changed how we respond to infectious disease threats."
               </p>
               <div className="border-t border-accent/20 pt-4">
                 <div className="font-semibold">Dr. Michael Chen, MD, MPH</div>

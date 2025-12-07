@@ -179,7 +179,7 @@ export default function HospitalWaitTimes() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                The patient flow optimization platform from Thalen Technologies has been transformational. We've cut wait times by 65% while handling 15% more patients. Our staff is more efficient, our patients are happier, and we've eliminated CMS penalties. This is the future of hospital operations.
+                The patient flow optimization platform from Thalen Technologies has been significant. We've cut wait times by 65% while handling 15% more patients. Our staff is more efficient, our patients are happier, and we've eliminated CMS penalties. This is the future of hospital operations.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">

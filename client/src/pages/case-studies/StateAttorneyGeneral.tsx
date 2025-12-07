@@ -307,7 +307,7 @@ export default function StateAttorneyGeneralCaseStudy() {
         <div className="container max-w-4xl text-center">
           <div className="text-6xl mb-6">"</div>
           <blockquote className="text-2xl md:text-3xl font-medium mb-8 italic">
-            Thalen Technologies delivered a game-changing fraud detection system that's already saved taxpayers over $50 million. Their deep understanding of CJIS compliance requirements and ability to implement sophisticated ML analytics on a tight timeline was exceptional. This platform has transformed how we protect state programs from fraud.
+            Thalen Technologies delivered a significant fraud detection system that's already saved taxpayers over $50 million. Their deep understanding of CJIS compliance requirements and ability to implement sophisticated ML analytics on a tight timeline was strong. This platform has improved how we protect state programs from fraud.
           </blockquote>
           <div className="font-semibold text-xl">Chief Deputy Attorney General</div>
           <div className="text-accent">Financial Crimes Division</div>

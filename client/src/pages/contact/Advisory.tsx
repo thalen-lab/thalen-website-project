@@ -79,8 +79,8 @@ export default function Advisory() {
               <Card className="mb-6">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-2">Technical Advisory Team</h3>
-                  <a href="mailto:technical@nexdynetechnologies.com" className="text-accent hover:underline">
-                    technical@nexdynetechnologies.com
+                  <a href="mailto:technical@thalentechnologies.com" className="text-accent hover:underline">
+                    technical@thalentechnologies.com
                   </a>
                 </CardContent>
               </Card>

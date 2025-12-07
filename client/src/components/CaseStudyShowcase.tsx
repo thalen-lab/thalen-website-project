@@ -1,9 +1,9 @@
-import { useState, useRef } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from 'framer-motion';
+import { ImageWithLoader } from '@/components/ImageWithLoader';
 
 interface CaseStudy {
   id: string;
@@ -74,27 +74,8 @@ const caseStudies: CaseStudy[] = [
 ];
 
 export default function CaseStudyShowcase() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (!containerRef.current) return;
-    
-    const cardWidth = containerRef.current.offsetWidth / 3; // Width of one card
-    const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
-    
-    containerRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-
-    // Update index
-    if (direction === 'right' && currentIndex < caseStudies.length - 3) {
-      setCurrentIndex(currentIndex + 1);
-    } else if (direction === 'left' && currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
+  // Display only the first three case studies
+  const featuredCaseStudies = caseStudies.slice(0, 3);
 
   return (
     <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
@@ -114,64 +95,28 @@ export default function CaseStudyShowcase() {
             </h2>
           </div>
           <div className="flex flex-col justify-end">
-            <p className="text-lg text-slate-600 mb-6">
+            <p className="text-lg text-slate-600">
               Real-world case studies demonstrating measurable mission impact across federal, state, and local government agencies.
             </p>
-            <div className="flex items-center gap-4">
-              <Button 
-                asChild
-                variant="default"
-                className="bg-slate-900 hover:bg-slate-800 text-white"
-              >
-                <Link href="/case-studies">
-                  All cases
-                </Link>
-              </Button>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => scroll('left')}
-                  disabled={currentIndex === 0}
-                  className="w-10 h-10 rounded-full border-2 border-slate-300 flex items-center justify-center hover:border-slate-900 hover:bg-slate-50 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-                  aria-label="Previous cases"
-                >
-                  <ChevronLeft className="w-5 h-5 text-slate-900" />
-                </button>
-                <button
-                  onClick={() => scroll('right')}
-                  disabled={currentIndex >= caseStudies.length - 3}
-                  className="w-10 h-10 rounded-full border-2 border-slate-300 flex items-center justify-center hover:border-slate-900 hover:bg-slate-50 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-                  aria-label="Next cases"
-                >
-                  <ChevronRight className="w-5 h-5 text-slate-900" />
-                </button>
-              </div>
-            </div>
           </div>
         </motion.div>
 
-        {/* Case Study Cards */}
+        {/* Case Study Cards - Static 3-column grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.2 }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
         >
-          <div 
-          ref={containerRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
-          style={{ 
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none'
-          }}
-        >
-          {caseStudies.map((study) => (
+          {featuredCaseStudies.map((study) => (
             <Card 
               key={study.id}
-              className="flex-none w-full lg:w-[calc(33.333%-1rem)] snap-start bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
+              className="bg-white border-2 border-slate-200 rounded-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group flex flex-col p-0"
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden bg-slate-200">
-                <img 
+                <ImageWithLoader
                   src={study.image}
                   alt={study.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -184,28 +129,41 @@ export default function CaseStudyShowcase() {
               </div>
 
               {/* Content */}
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 line-clamp-2">
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2">
                   {study.title}
                 </h3>
-                <p className="text-slate-600 mb-6 line-clamp-3">
+                <p className="text-slate-600 mb-4 line-clamp-3 flex-grow">
                   {study.description}
                 </p>
-                <Link href={study.link} className="w-12 h-12 rounded-full border-2 border-slate-900 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors group/btn">
-                  <ArrowRight className="w-5 h-5" />
+                <Link 
+                  href={study.link}
+                  className="inline-flex items-center p-0 h-auto text-slate-900 hover:text-orange-600 font-medium group/btn transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </Card>
           ))}
-        </div>
+        </motion.div>
+
+        {/* All Cases CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="flex justify-center"
+        >
+          <Link 
+            href="/case-studies"
+            className="inline-flex items-center justify-center gap-2 h-10 px-6 rounded-md bg-slate-900 hover:bg-slate-800 text-white font-medium transition-colors"
+          >
+            View All Cases
+          </Link>
         </motion.div>
       </div>
-
-      <style>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 }

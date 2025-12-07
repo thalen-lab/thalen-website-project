@@ -1,7 +1,7 @@
-// Service Worker for NexDyne PWA
+// Service Worker for Thalen PWA
 // Provides offline capability and caching for resources and case studies
 
-const CACHE_NAME = 'nexdyne-v1';
+const CACHE_NAME = 'thalen-v1';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache immediately on install
@@ -161,5 +161,111 @@ self.addEventListener('message', (event) => {
         return cache.addAll(event.data.urls);
       })
     );
+  }
+});
+
+// Push event - handle incoming push notifications
+self.addEventListener('push', (event) => {
+  console.log('[Service Worker] Push received:', event);
+  
+  let notificationData = {
+    title: 'Thalen',
+    body: 'You have a new notification',
+    icon: '/pwa-icon-192.png',
+    badge: '/badge.png',
+    data: {
+      url: '/'
+    }
+  };
+
+  // Parse notification data from push event
+  if (event.data) {
+    try {
+      const payload = event.data.json();
+      notificationData = {
+        title: payload.title || notificationData.title,
+        body: payload.body || notificationData.body,
+        icon: payload.icon || notificationData.icon,
+        badge: payload.badge || notificationData.badge,
+        data: payload.data || notificationData.data,
+        tag: payload.tag,
+        requireInteraction: payload.requireInteraction || false,
+        actions: payload.actions || []
+      };
+    } catch (error) {
+      console.error('[Service Worker] Error parsing push data:', error);
+    }
+  }
+
+  const promiseChain = self.registration.showNotification(
+    notificationData.title,
+    {
+      body: notificationData.body,
+      icon: notificationData.icon,
+      badge: notificationData.badge,
+      data: notificationData.data,
+      tag: notificationData.tag,
+      requireInteraction: notificationData.requireInteraction,
+      actions: notificationData.actions
+    }
+  );
+
+  event.waitUntil(promiseChain);
+});
+
+// Notification click event - handle user clicking on notification
+self.addEventListener('notificationclick', (event) => {
+  console.log('[Service Worker] Notification clicked:', event);
+  
+  event.notification.close();
+
+  const urlToOpen = event.notification.data?.url || '/';
+
+  // Track notification click
+  if (event.notification.data?.notificationId) {
+    fetch('/api/trpc/notifications.trackClick', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        notificationId: event.notification.data.notificationId
+      })
+    }).catch(err => console.error('Failed to track click:', err));
+  }
+
+  // Open the URL in a new window or focus existing window
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true })
+      .then((clientList) => {
+        // Check if there's already a window open with this URL
+        for (const client of clientList) {
+          if (client.url === urlToOpen && 'focus' in client) {
+            return client.focus();
+          }
+        }
+        // If no window is open, open a new one
+        if (clients.openWindow) {
+          return clients.openWindow(urlToOpen);
+        }
+      })
+  );
+});
+
+// Notification close event - track when user dismisses notification
+self.addEventListener('notificationclose', (event) => {
+  console.log('[Service Worker] Notification closed:', event);
+  
+  // Track notification dismissal
+  if (event.notification.data?.notificationId) {
+    fetch('/api/trpc/notifications.trackDismiss', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        notificationId: event.notification.data.notificationId
+      })
+    }).catch(err => console.error('Failed to track dismiss:', err));
   }
 });

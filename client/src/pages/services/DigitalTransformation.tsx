@@ -60,7 +60,7 @@ export default function DigitalTransformation() {
     {
       icon: Award,
       title: 'TMF & Modernization Funding Expertise',
-      description: 'We\'ve helped agencies secure $45M+ in Technology Modernization Fund awards with compelling business cases and proven implementation track records.'
+      description: 'We\'ve helped agencies secure $45M+ in Technology Modernization Fund awards with compelling business cases and implementation experience.'
     }
   ];
 

@@ -15,6 +15,7 @@ export default function Navigation() {
     { name: 'Data Analytics & Intelligence', href: '/services/data-analytics' },
     { name: 'Cloud Infrastructure & Modernization', href: '/services/cloud' },
     { name: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
+    { name: 'ATO Support & Authorization', href: '/services/ato-support' },
     { name: 'Application Development & Integration', href: '/services/application-development' },
     { name: 'Custom Software Solutions', href: '/services/custom-software' },
     { name: 'Digital Transformation Enablement', href: '/services/digital-transformation' },
@@ -30,10 +31,13 @@ export default function Navigation() {
   return (
     <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
       <div className="container">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <span className="text-2xl font-bold">Thalen Technologies - Govern Smart</span>
+            <span className="text-xl sm:text-2xl font-bold">
+              <span className="hidden sm:inline">Thalen Technologies - Govern Smart</span>
+              <span className="sm:hidden">Thalen Tech</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -160,8 +164,9 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -172,7 +177,7 @@ export default function Navigation() {
           <div className="lg:hidden pb-6 space-y-4">
             <div>
               <button 
-                className="flex items-center justify-between w-full py-2 font-medium"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] font-medium"
                 onClick={() => setServicesOpen(!servicesOpen)}
               >
                 <span>Services</span>
@@ -184,7 +189,7 @@ export default function Navigation() {
                     <Link 
                       key={service.href} 
                       href={service.href}
-                      className="block py-2 text-sm hover:text-accent"
+                      className="block py-3 min-h-[44px] text-sm hover:text-accent flex items-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {service.name}
@@ -196,7 +201,7 @@ export default function Navigation() {
 
             <div>
               <button 
-                className="flex items-center justify-between w-full py-2 font-medium"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] font-medium"
                 onClick={() => setIndustriesOpen(!industriesOpen)}
               >
                 <span>Industries</span>
@@ -208,7 +213,7 @@ export default function Navigation() {
                     <Link 
                       key={industry.href} 
                       href={industry.href}
-                      className="block py-2 text-sm hover:text-accent"
+                      className="block py-3 min-h-[44px] text-sm hover:text-accent flex items-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {industry.name}
@@ -220,55 +225,55 @@ export default function Navigation() {
 
             <Link 
               href="/insights" 
-              className="block py-2 font-medium hover:text-accent"
+              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Insights
             </Link>
             <Link 
               href="/case-studies" 
-              className="block py-2 font-medium hover:text-accent"
+              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Case Studies
             </Link>
             <Link 
               href="/federal-solutions" 
-              className="block py-2 font-medium hover:text-accent"
+              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Federal Solutions
             </Link>
             <Link 
               href="/government-resources" 
-              className="block py-2 font-medium hover:text-accent"
+              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Resources
             </Link>
             <Link 
               href="/events" 
-              className="block py-2 font-medium hover:text-accent"
+              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Events
             </Link>
             <Link 
               href="/about" 
-              className="block py-2 font-medium hover:text-accent"
+              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               href="/contact" 
-              className="block py-2 font-medium hover:text-accent"
+              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
             </Link>
             
-            <Button asChild className="w-full bg-orange-gradient hover:opacity-90 transition-opacity mt-4">
+            <Button asChild className="w-full min-h-[44px] bg-orange-gradient hover:opacity-90 transition-opacity mt-4">
               <Link href="/contact">Schedule Assessment</Link>
             </Button>
           </div>

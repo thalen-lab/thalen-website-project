@@ -100,7 +100,7 @@ export default function ZeroTrustArchitecture() {
               Zero Trust Architecture
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Implement modern Zero Trust security framework with micro-segmentation, continuous verification, and least-privilege access controls. NexDyne delivers NIST 800-207 and DoD Zero Trust Reference Architecture implementations for government agencies (federal, state, local) eliminating implicit trust.
+              Implement modern Zero Trust security framework with micro-segmentation, continuous verification, and least-privilege access controls. Thalen Technologies delivers NIST 800-207 and DoD Zero Trust Reference Architecture implementations for government agencies (federal, state, local) eliminating implicit trust.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -170,7 +170,7 @@ export default function ZeroTrustArchitecture() {
                   <p className="text-muted-foreground mb-6">{phase.description}</p>
                   <div className="border-t pt-4">
                     <h4 className="font-semibold mb-3 text-sm">Key Deliverables:</h4>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {phase.deliverables.map((deliverable, idx) => (
                         <div key={idx} className="flex items-center text-sm">
                           <div className="h-2 w-2 bg-foreground rounded-full mr-2"></div>
@@ -196,7 +196,7 @@ export default function ZeroTrustArchitecture() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {ztFrameworks.map((framework, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">
@@ -240,7 +240,7 @@ export default function ZeroTrustArchitecture() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Implement Zero Trust Security</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a Zero Trust assessment and discover how NexDyne can help you eliminate implicit trust and implement modern security architecture.
+            Schedule a Zero Trust assessment and discover how Thalen Technologies can help you eliminate implicit trust and implement modern security architecture.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -3,8 +3,12 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
+import { ImageWithLoader } from '@/components/ImageWithLoader';
+import { useLQIP } from '@/hooks/useLQIP';
+import { usePrefetch } from '@/hooks/usePrefetch';
+import { prefetchImage } from '@/lib/prefetch';
 import Footer from '@/components/Footer';
-import { ArrowRight, Clock, User, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Insights() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,7 +25,8 @@ export default function Insights() {
       authorSlug: 'sarah-chen',
       date: 'Nov 10, 2024',
       readTime: '8 min read',
-      tags: ['ROI', 'Strategy', 'Automation'],
+      tags: ['ROI', 'Automation'],
+      image: '/roi-analytics.png',
       href: '/insights/roi-methodology'
     },
     {
@@ -32,7 +37,8 @@ export default function Insights() {
       authorSlug: 'michael-rodriguez',
       date: 'Nov 8, 2024',
       readTime: '10 min read',
-      tags: ['Security', 'Federal', 'Compliance'],
+      tags: ['Security', 'Compliance'],
+      image: '/zero-trust-capitol.png',
       href: '/insights/zero-trust'
     },
     {
@@ -43,7 +49,8 @@ export default function Insights() {
       authorSlug: 'jennifer-park',
       date: 'Nov 5, 2024',
       readTime: '12 min read',
-      tags: ['AI', 'Ethics', 'Government'],
+      tags: ['AI', 'Ethics'],
+      image: '/responsible-ai-vr.png',
       href: '/insights/responsible-ai'
     },
     {
@@ -54,7 +61,8 @@ export default function Insights() {
       authorSlug: 'david-thompson',
       date: 'Nov 1, 2024',
       readTime: '9 min read',
-      tags: ['Cloud', 'Strategy', 'Architecture'],
+      tags: ['Cloud', 'Architecture'],
+      image: '/images/insights/multi-cloud-team.png',
       href: '/insights/multi-cloud'
     },
     {
@@ -65,7 +73,8 @@ export default function Insights() {
       authorSlug: 'lisa-martinez',
       date: 'Oct 28, 2024',
       readTime: '11 min read',
-      tags: ['Transformation', 'Change Management', 'Leadership'],
+      tags: ['Transformation', 'Leadership'],
+      image: '/insights-change-management.png',
       href: '/insights/change-management'
     },
     {
@@ -76,7 +85,8 @@ export default function Insights() {
       authorSlug: 'james-wilson',
       date: 'Oct 25, 2024',
       readTime: '10 min read',
-      tags: ['Analytics', 'Big Data', 'Architecture'],
+      tags: ['Analytics', 'Architecture'],
+      image: '/insights-realtime-analytics.png',
       href: '/insights/real-time-analytics'
     }
   ];
@@ -163,14 +173,16 @@ export default function Insights() {
       {/* Featured Insight */}
       <section className="py-20">
         <div className="container">
-          <Card className="overflow-hidden max-w-5xl mx-auto hover:shadow-xl transition-shadow">
+          <Card className="overflow-hidden max-w-5xl mx-auto hover:shadow-xl transition-shadow p-0 rounded-none border-2">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2">
                 <div className="relative overflow-hidden">
-                  <img 
-                    src="/rpa-article.a7f3b2e1.png" 
-                    alt="Three Practical Recommendations to Secure Robotic Process Automation (RPA) in a Federal IT environment"
+                  <ImageWithLoader
+                    src="/kearney-rpa-security.png" 
+                    alt="Three Practical Recommendations to Secure RPA in Federal IT"
+                    lqip={useLQIP('/kearney-rpa-security.png')}
                     className="w-full h-full object-cover"
+                    skeletonClassName="h-full"
                   />
                 </div>
                 <div className="p-12 flex flex-col justify-center">
@@ -257,42 +269,50 @@ export default function Insights() {
           {paginatedInsights.length > 0 ? (
             <>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                {paginatedInsights.map((insight, index) => (
-                  <Link key={index} href={insight.href}>
-                    <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer">
-                      <CardContent className="p-8 flex flex-col flex-1">
-                        <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
-                        <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                {paginatedInsights.map((insight, index) => {
+                  const InsightCard = () => {
+                    const prefetchHandlers = usePrefetch(insight.href);
+                    
+                    return (
+                      <Link 
+                        key={index} 
+                        href={insight.href} 
+                        {...prefetchHandlers}
+                        onMouseEnter={() => prefetchImage(insight.image)}
+                      >
+                        <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
+                      {/* Image */}
+                      <div className="relative h-64 overflow-hidden">
+                        <ImageWithLoader
+                          src={insight.image}
+                          alt={insight.title}
+                          lqip={useLQIP(insight.image)}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          skeletonClassName="h-64"
+                        />
+                      </div>
+
+                      <CardContent className="p-6 flex flex-col flex-1">
+                        <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
                           {insight.title}
                         </h3>
+                        <p className="text-sm text-muted-foreground mb-4">By {insight.author}</p>
                         <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
 
-                        <div className="flex items-center text-sm text-muted-foreground mb-4">
-                          <User className="h-4 w-4 mr-2" />
-                          <span className="mr-4">{insight.author}</span>
+                        <div className="flex items-center text-sm text-muted-foreground">
                           <Clock className="h-4 w-4 mr-2" />
-                          <span>{insight.readTime}</span>
-                        </div>
-
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {insight.tags.map((tag, idx) => (
-                            <span key={idx} className="text-xs bg-background px-3 py-1 rounded-full border border-border">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-muted-foreground">{insight.date}</span>
-                          <Button variant="ghost" size="sm" className="group-hover:text-accent">
-                            Read More
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
+                          <span className="mr-4">{insight.readTime}</span>
+                          <span>•</span>
+                          <span className="ml-4">{insight.date}</span>
                         </div>
                       </CardContent>
-                    </Card>
-                  </Link>
-                ))}
+                        </Card>
+                      </Link>
+                    );
+                  };
+                  
+                  return <InsightCard key={index} />;
+                })}
               </div>
 
               {/* Pagination Controls */}
@@ -394,12 +414,12 @@ export default function Insights() {
       {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Operations?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a strategic assessment with our automation experts.
+            Request an assessment to discuss your agency's requirements.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-            Schedule Assessment
+            Request Assessment
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

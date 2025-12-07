@@ -853,12 +853,12 @@ export default function ComplianceRoadmap() {
 
       {/* Roadmap Results */}
       {showResults && roadmap && (
-        <section id="roadmap" className="py-20 bg-secondary">
+        <section id="roadmap" className="py-20 bg-navy-gradient">
           <div className="container max-w-6xl">
             {/* Header */}
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">{roadmap.framework} Compliance Roadmap</h2>
-              <p className="text-xl text-muted-foreground mb-6">
+              <h2 className="text-4xl font-bold mb-4 text-white">{roadmap.framework} Compliance Roadmap</h2>
+              <p className="text-xl text-slate-300 mb-6">
                 Customized implementation plan for {roadmap.maturityLevel.toLowerCase()}
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-6">
@@ -892,17 +892,17 @@ export default function ComplianceRoadmap() {
 
             {/* Timeline Visualization */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-center">Implementation Timeline</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center text-white">Implementation Timeline</h3>
               <div className="relative">
                 {/* Timeline line */}
-                <div className="absolute left-8 top-0 bottom-0 w-1 bg-accent/30" />
+                <div className="absolute left-8 top-0 bottom-0 w-1 bg-white/20" />
                 
                 {/* Milestones */}
                 <div className="space-y-8">
                   {roadmap.milestones.map((milestone, index) => (
                     <div key={milestone.id} className="relative pl-20">
                       {/* Timeline dot */}
-                      <div className="absolute left-5 top-6 h-8 w-8 rounded-full bg-accent flex items-center justify-center text-white font-bold z-10">
+                      <div className="absolute left-5 top-6 h-8 w-8 rounded-full bg-slate-600 flex items-center justify-center text-white font-bold z-10">
                         {index + 1}
                       </div>
                       
@@ -910,7 +910,7 @@ export default function ComplianceRoadmap() {
                         <CardHeader>
                           <div className="flex items-start justify-between">
                             <div className="flex-1">
-                              <div className="text-sm text-accent font-semibold mb-1">{milestone.phase}</div>
+                              <div className="text-sm text-slate-600 font-semibold mb-1">{milestone.phase}</div>
                               <CardTitle className="text-xl mb-2">{milestone.title}</CardTitle>
                               <p className="text-sm text-muted-foreground">{milestone.description}</p>
                             </div>
@@ -991,10 +991,10 @@ export default function ComplianceRoadmap() {
             </div>
 
             {/* Important Notes */}
-            <Card className="border-2 border-accent/50 bg-accent/5">
+            <Card className="border-2 border-white/20 bg-white/10 text-white">
               <CardHeader>
-                <CardTitle className="flex items-center">
-                  <AlertTriangle className="h-6 w-6 text-accent mr-3" />
+                <CardTitle className="flex items-center text-white">
+                  <AlertTriangle className="h-6 w-6 text-orange-400 mr-3" />
                   Important Considerations
                 </CardTitle>
               </CardHeader>
@@ -1020,14 +1020,14 @@ export default function ComplianceRoadmap() {
       {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Compliance Journey?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Compliance Consultation</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Our compliance experts can help you navigate the entire process, from initial assessment to certification and beyond.
+            Request a consultation to discuss compliance requirements and implementation planning.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Compliance Consultation
+                Request Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

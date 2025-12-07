@@ -65,9 +65,24 @@ export default function DataAnalytics() {
   ];
 
   const governmentExperience = [
-    { agency: 'Department of Veterans Affairs', project: 'Predictive Analytics Platform', outcome: '60% faster claims processing' },
-    { agency: 'Department of Defense', project: 'Automated Data Pipelines', outcome: '$12M annual cost savings' },
-    { agency: 'Health & Human Services', project: 'Public Health Surveillance', outcome: 'Real-time disease tracking' }
+    { 
+      agency: 'Department of Veterans Affairs', 
+      project: 'Predictive Analytics Platform', 
+      outcome: '60% faster claims processing',
+      details: 'Deployed machine learning models on AWS SageMaker GovCloud to predict claim approval likelihood. Analyzed 2.3 million historical claims. Reduced average processing time from 28 days to 11 days. Improved first-pass approval rate from 68% to 84%.'
+    },
+    { 
+      agency: 'Department of Defense', 
+      project: 'Automated Data Pipelines', 
+      outcome: '$12M annual cost savings',
+      details: 'Built automated ETL pipelines using Informatica Gov to consolidate data from 14 legacy systems. Eliminated 85,000 hours of manual data processing annually. Reduced data latency from 48 hours to 15 minutes. Improved data accuracy to 99.7%.'
+    },
+    { 
+      agency: 'Health & Human Services', 
+      project: 'Public Health Surveillance', 
+      outcome: 'Real-time disease tracking',
+      details: 'Implemented Tableau Government platform with real-time data feeds from 50 state health departments. Built 12 interactive dashboards for epidemiological analysis. Reduced outbreak detection time from 7 days to 4 hours. Supports 300+ public health analysts.'
+    }
   ];
 
   const fedrampPlatforms = [
@@ -109,7 +124,7 @@ export default function DataAnalytics() {
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                  Request Analytics Assessment
+                  Request Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -200,7 +215,7 @@ export default function DataAnalytics() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Analytics Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
+              Experience implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
             </p>
           </div>
 
@@ -211,7 +226,8 @@ export default function DataAnalytics() {
                   <TrendingUp className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
-                  <p className="text-lg font-bold text-accent">{exp.outcome}</p>
+                  <p className="text-lg font-bold text-accent mb-4">{exp.outcome}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{exp.details}</p>
                 </CardContent>
               </Card>
             ))}
@@ -272,14 +288,14 @@ export default function DataAnalytics() {
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Data into Intelligence?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule an analytics assessment to discuss your agency's data challenges, evaluate FedRAMP platform options, and develop a roadmap for mission-critical analytics.
+            Contact us to discuss your agency's data analytics requirements and evaluate available platform options.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Analytics Assessment
+                Request Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

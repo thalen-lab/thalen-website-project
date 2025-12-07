@@ -1,6 +1,6 @@
 # Critical FAQ Reference: Government IT Implementation Consulting Positioning
 
-**Document Purpose:** This document captures critical business positioning questions and answers that define NexDyne's market strategy as a government IT implementation consulting firm.
+**Document Purpose:** This document captures critical business positioning questions and answers that define Thalen's market strategy as a government IT implementation consulting firm.
 
 **Last Updated:** January 28, 2025
 

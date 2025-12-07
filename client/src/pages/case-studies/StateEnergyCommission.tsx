@@ -307,7 +307,7 @@ export default function StateEnergyCommissionCaseStudy() {
         <div className="container max-w-4xl text-center">
           <div className="text-6xl mb-6">"</div>
           <blockquote className="text-2xl md:text-3xl font-medium mb-8 italic">
-            Thalen Technologies's grid optimization platform has been transformational for our state's energy infrastructure. The 65% reduction in outages has dramatically improved service reliability for millions of residents, and the predictive maintenance capabilities have shifted us from reactive firefighting to proactive planning. Their StateRAMP expertise ensured we met all compliance requirements while delivering cutting-edge IoT analytics.
+            Thalen Technologies's grid optimization platform has been significant for our state's energy infrastructure. The 65% reduction in outages has dramatically improved service reliability for millions of residents, and the predictive maintenance capabilities have shifted us from reactive firefighting to proactive planning. Their StateRAMP expertise ensured we met all compliance requirements while delivering current IoT analytics.
           </blockquote>
           <div className="font-semibold text-xl">Executive Director</div>
           <div className="text-accent">State Energy Commission</div>
