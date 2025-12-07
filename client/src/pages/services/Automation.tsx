@@ -183,8 +183,7 @@ export default function Automation() {
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                    <h3 className="text-lg font-bold text-navy-900 mb-4">
                       FAR Part 39 Compliance
                     </h3>
                     <p className="text-sm text-slate-700 mb-4">
@@ -192,18 +191,17 @@ export default function Automation() {
                     </p>
                     <ul className="space-y-2 text-sm text-slate-700">
                       <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
+                        <span className="text-slate-900 mt-1">•</span>
                         <span><strong>FAR 52.239-1:</strong> Privacy and security safeguards for automation platforms</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
+                        <span className="text-slate-900 mt-1">•</span>
                         <span><strong>FAR 52.204-21:</strong> Basic safeguarding of contractor information systems</span>
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                    <h3 className="text-lg font-bold text-navy-900 mb-4">
                       Procurement Benefits
                     </h3>
                     <p className="text-sm text-slate-700 mb-4">
@@ -211,11 +209,11 @@ export default function Automation() {
                     </p>
                     <ul className="space-y-2 text-sm text-slate-700">
                       <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
+                        <span className="text-slate-900 mt-1">•</span>
                         <span>Streamlined task order awards under GSA Schedule contracts</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
+                        <span className="text-slate-900 mt-1">•</span>
                         <span>Documented compliance reduces agency oversight burden</span>
                       </li>
                     </ul>

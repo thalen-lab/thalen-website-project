@@ -2882,3 +2882,8 @@
 
 ## Phase 66: Fix Automation Page Icons
 - [x] Reduce icon sizes and move icons to the left of titles in cards to make cards more compact
+
+## Phase 65: FAR Part 39 Compliance Section Styling Updates
+- [x] Remove orange checkmark icon from FAR Part 39 Compliance section
+- [x] Adjust title margins in FAR Part 39 Compliance section
+- [x] Change all bullet points from orange to black
