@@ -504,8 +504,8 @@ export default function Home() {
                       Security-Native Implementation
                     </h3>
                   </div>
-                  <p className="text-base text-slate-600 leading-relaxed mb-6">
-                    Security and compliance are embedded from day one—not bolted on afterward. We implement only FedRAMP and StateRAMP-authorized platforms, configure zero-trust architectures by default, and provide comprehensive ATO documentation packages. Every integration follows NIST 800-53 controls and agency-specific security requirements.
+                  <p className="text-muted-foreground">
+                    Security and compliance are embedded from day one—not bolted on afterward. We implement only FedRAMP and StateRAMP-authorized platforms, configure zero-trust architectures by default, and prepare all security documentation needed for agency authorization. Every integration follows NIST 800-53 controls and agency-specific security requirements.
                   </p>
                   <ul className="space-y-3 text-slate-700">
                     <li className="flex items-start gap-3">
