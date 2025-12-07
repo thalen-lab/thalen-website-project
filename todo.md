@@ -2890,3 +2890,6 @@
 
 ## Phase 67: Add Team Experience Section to Homepage
 - [x] Add Team Experience section with three case study cards after Government Contracting Compliance section
+
+## Phase 50: Update Case Study Metrics for GovTech Context
+- [x] Update case study metrics to emphasize operational improvements (ROI %, throughput, productivity) instead of financial impact

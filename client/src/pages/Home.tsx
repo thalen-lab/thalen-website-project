@@ -82,9 +82,9 @@ export default function Home() {
     {
       category: 'Healthcare',
       title: 'Healthcare System Integrates 12 Legacy Systems',
-      description: 'Integrated 12 legacy healthcare systems with FedRAMP-authorized platforms, delivering real-time patient data access and $12M annual operational cost savings.',
-      metric: '$12M',
-      metricLabel: 'Annual Savings',
+      description: 'Integrated 12 legacy healthcare systems with FedRAMP-authorized platforms, delivering real-time patient data access and 170% ROI over three years with measurable productivity gains.',
+      metric: '170%',
+      metricLabel: 'ROI (3 Years)',
       href: '/case-studies/hhs-public-health'
     }
   ];
