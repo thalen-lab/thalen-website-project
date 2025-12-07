@@ -2868,3 +2868,6 @@
 ## Phase 65: Remove Sections from Government Process Automation Page
 - [x] Remove "Proven Results" section from Government Process Automation service page
 - [x] Remove "Platform Expertise" section from Government Process Automation service page
+
+## Phase 49: Remove Why Choose Us Section from Service Pages
+- [x] Remove "Why Choose Us" section from all service pages

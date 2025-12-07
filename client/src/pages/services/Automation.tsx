@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Shield, Users, Award, Bot, Network, GitBranch, Wrench, Cloud } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Shield, Users, Bot, Network, GitBranch, Wrench, Cloud } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Automation() {
@@ -68,24 +68,6 @@ export default function Automation() {
     { name: 'Process Mining & Discovery', description: 'Identify automation opportunities through process analytics and mining' },
     { name: 'Hyperautomation Strategy', description: 'Combine RPA, AI/ML, OCR, and workflow tools for end-to-end automation' },
     { name: 'Bot Maintenance & Support', description: 'Ongoing monitoring, optimization, and scaling of automation solutions' }
-  ];
-
-  const keyDifferentiators = [
-    {
-      icon: Wrench,
-      title: 'Modernization-First Approach',
-      description: 'We start by optimizing and automating your existing systems and operations before recommending new platform purchases.'
-    },
-    {
-      icon: Shield,
-      title: 'Platform-Agnostic Consulting',
-      description: 'Vendor-neutral guidance. We implement FedRAMP platforms only when your existing systems cannot meet mission requirements.'
-    },
-    {
-      icon: Award,
-      title: 'Mission-Focused Implementation',
-      description: 'Automation solutions designed for measurable mission impact—faster processing, reduced errors, compliance assurance, and operational cost savings.'
-    }
   ];
 
 
@@ -181,46 +163,6 @@ export default function Automation() {
                     <div className="bg-accent/5 border-l-4 border-accent p-4 rounded">
                       <p className="text-sm font-semibold text-slate-900">{approach.emphasis}</p>
                     </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Key Differentiators */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
-        <div className="container">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Why Choose Us</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Proven Automation Expertise
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {keyDifferentiators.map((item, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="h-full border-2 border-primary/20 hover:border-primary/40 transition-all">
-                  <CardContent className="p-8 text-center">
-                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                      <item.icon className="h-7 w-7 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                    <p className="text-slate-600">{item.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
