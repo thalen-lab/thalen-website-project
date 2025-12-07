@@ -2710,3 +2710,5 @@
 
 ## Phase 204: Update ATO Support Page Design to Match Homepage
 - [x] Update ATO Support page design to match homepage (card styling, hover effects, section colors)
+- [x] Remove Realistic ATO Timelines section from ATO Support page
+- [x] Remove Implementation + ATO Success case study section from ATO Support page
