@@ -2887,3 +2887,6 @@
 - [x] Remove orange checkmark icon from FAR Part 39 Compliance section
 - [x] Adjust title margins in FAR Part 39 Compliance section
 - [x] Change all bullet points from orange to black
+
+## Phase 67: Add Team Experience Section to Homepage
+- [x] Add Team Experience section with three case study cards after Government Contracting Compliance section

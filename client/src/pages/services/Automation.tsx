@@ -225,6 +225,140 @@ export default function Automation() {
         </div>
       </section>
 
+      {/* Team Experience Section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <motion.div 
+            className="text-center mb-16 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Proven Expertise</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              Our Team's Experience
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              Our team members have delivered automation solutions at leading government agencies. These projects were completed during their tenure at previous organizations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Case Study Card 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group">
+                <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-slate-400 text-sm font-medium">Project Image</div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-block px-3 py-1 bg-accent text-white text-xs font-semibold rounded-full">
+                      Federal Government
+                    </span>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-accent transition-colors">
+                    Federal Agency Achieves 85% Process Automation
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                    Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.
+                  </p>
+                  <p className="text-xs text-slate-500 mb-4 italic">
+                    Led by [Team Member Name] at [Previous Agency/Organization]
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">RPA</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">FedRAMP</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">CMMC</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Case Study Card 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group">
+                <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-slate-400 text-sm font-medium">Project Image</div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-block px-3 py-1 bg-accent text-white text-xs font-semibold rounded-full">
+                      Defense
+                    </span>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-accent transition-colors">
+                    DoD Manufacturing Facility Achieves 99.2% Uptime
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                    Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.
+                  </p>
+                  <p className="text-xs text-slate-500 mb-4 italic">
+                    Led by [Team Member Name] at [Previous Agency/Organization]
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">Cybersecurity</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">IoT</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">CMMC</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Case Study Card 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group">
+                <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-slate-400 text-sm font-medium">Project Image</div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-block px-3 py-1 bg-accent text-white text-xs font-semibold rounded-full">
+                      Federal Government
+                    </span>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-accent transition-colors">
+                    VA Medical Center Integrates 12 Legacy Systems
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                    Integrated 12 disparate healthcare systems using FedRAMP iPaaS platform. Reduced administrative burden by 60% for 8,500 staff members.
+                  </p>
+                  <p className="text-xs text-slate-500 mb-4 italic">
+                    Led by [Team Member Name] at [Previous Agency/Organization]
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">Integration</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">HIPAA</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">FedRAMP</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
