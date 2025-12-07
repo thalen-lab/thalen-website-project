@@ -2898,3 +2898,6 @@
 - [x] Create individual case study detail page for Federal Agency 85% Process Automation
 - [x] Create individual case study detail page for DoD Manufacturing Facility 99.2% Uptime
 - [x] Create individual case study detail page for VA Medical Center 12 Legacy Systems Integration
+
+## Bug Fixes
+- [x] Fix case study cards not opening when clicked on automation services page

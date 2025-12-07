@@ -252,7 +252,8 @@ export default function Automation() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group">
+              <Link href="/case-studies/federal-agency-automation" className="block h-full">
+                <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group cursor-pointer">
                 <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-slate-400 text-sm font-medium">Project Image</div>
@@ -280,6 +281,7 @@ export default function Automation() {
                   </div>
                 </CardContent>
               </Card>
+              </Link>
             </motion.div>
 
             {/* Case Study Card 2 */}
@@ -289,7 +291,8 @@ export default function Automation() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group">
+              <Link href="/case-studies/dod-manufacturing-uptime" className="block h-full">
+                <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group cursor-pointer">
                 <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-slate-400 text-sm font-medium">Project Image</div>
@@ -317,6 +320,7 @@ export default function Automation() {
                   </div>
                 </CardContent>
               </Card>
+              </Link>
             </motion.div>
 
             {/* Case Study Card 3 */}
@@ -326,7 +330,8 @@ export default function Automation() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group">
+              <Link href="/case-studies/va-medical-integration" className="block h-full">
+                <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group cursor-pointer">
                 <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-slate-400 text-sm font-medium">Project Image</div>
@@ -354,6 +359,7 @@ export default function Automation() {
                   </div>
                 </CardContent>
               </Card>
+              </Link>
             </motion.div>
           </div>
         </div>
