@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, TrendingUp, Shield, Users, Award, Bot, Network, GitBranch, Wrench, Cloud } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Shield, Users, Award, Bot, Network, GitBranch, Wrench, Cloud } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Automation() {
@@ -88,45 +88,6 @@ export default function Automation() {
     }
   ];
 
-  const governmentExperience = [
-    { 
-      agency: 'Federal Agency', 
-      project: 'Claims Processing Automation', 
-      outcome: '85% automation rate achieved',
-      details: 'Automated 12 claims processing workflows by modernizing existing systems and integrating legacy databases. Reduced manual processing time from 45 minutes to 6 minutes per claim without new platform purchases.'
-    },
-    { 
-      agency: 'Department of Defense', 
-      project: 'Contract Management Automation', 
-      outcome: '$4.2M annual cost savings',
-      details: 'Implemented workflow automation for contract review and compliance checking across existing systems. Automated 8 processes across 3 offices. Reduced contract processing cycle from 14 days to 3 days.'
-    },
-    { 
-      agency: 'Department of Veterans Affairs', 
-      project: 'Benefits Processing Optimization', 
-      outcome: '60% faster processing time',
-      details: 'Built automation bots for benefits eligibility verification and integrated with 5 legacy systems. Reduced average processing time from 28 days to 11 days. Improved accuracy rate to 99.2%.'
-    }
-  ];
-
-  const fedrampPlatforms = [
-    {
-      category: 'RPA & Intelligent Automation',
-      platforms: ['UiPath Government Cloud', 'Automation Anywhere Gov', 'Blue Prism Government', 'Microsoft Power Automate Gov']
-    },
-    {
-      category: 'Integration & iPaaS',
-      platforms: ['MuleSoft Government Cloud', 'Dell Boomi Gov', 'Informatica Gov', 'SnapLogic Gov']
-    },
-    {
-      category: 'Workflow & BPM',
-      platforms: ['ServiceNow Gov', 'Pega Government Cloud', 'Appian Government Cloud', 'Camunda']
-    },
-    {
-      category: 'Document Processing',
-      platforms: ['UiPath Document Understanding', 'Automation Anywhere IQ Bot', 'ABBYY FlexiCapture Gov', 'Kofax TotalAgility']
-    }
-  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -348,128 +309,6 @@ export default function Automation() {
                 </div>
               ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Government Automation Experience */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Proven Results</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Government Automation Implementation Success
-            </h2>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Experience implementing automation solutions across government agencies (federal, state, and local) with measurable mission impact.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {governmentExperience.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="h-full rounded-none border-2 border-slate-900 hover:shadow-2xl transition-all active:scale-95 group">
-                  <CardContent className="p-8">
-                    <TrendingUp className="h-12 w-12 text-primary mb-4 group-hover:text-accent transition-colors" />
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">{exp.agency}</h3>
-                    <p className="text-sm text-slate-600 mb-3">{exp.project}</p>
-                    <p className="text-lg font-bold text-primary mb-4">{exp.outcome}</p>
-                    <p className="text-sm text-slate-600 leading-relaxed">{exp.details}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div 
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <Button asChild size="lg" variant="outline" className="border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white transition-all">
-              <Link href="/case-studies">
-                View All Automation Case Studies
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FedRAMP Platform Expertise - When Needed */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
-        <div className="container">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Platform Expertise (When Needed)</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              FedRAMP-Authorized Platform Implementation
-            </h2>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              When your existing systems cannot meet mission requirements, we implement and integrate FedRAMP-authorized automation platforms from leading vendors.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {fedrampPlatforms.map((category, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="h-full border-2 border-slate-200 hover:border-accent/40 hover:shadow-lg transition-all">
-                  <CardContent className="p-8">
-                    <h3 className="text-xl font-bold text-slate-900 mb-4">{category.category}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {category.platforms.map((platform, idx) => (
-                        <span key={idx} className="bg-slate-100 border border-slate-300 text-slate-900 px-3 py-1 rounded-full text-sm font-medium hover:bg-accent/10 hover:border-accent transition-colors">
-                          {platform}
-                        </span>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div 
-            className="mt-12 text-center bg-primary/5 border-2 border-primary/20 rounded-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-lg text-slate-700 mb-4">
-              <strong className="text-slate-900">Platform-agnostic approach:</strong> We evaluate your existing systems first and recommend FedRAMP platforms only when modernization cannot meet your mission requirements, compliance needs, or budget constraints.
-            </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link href="/contact">
-                Discuss Your Automation Needs
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </motion.div>
         </div>
       </section>

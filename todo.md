@@ -2864,3 +2864,7 @@
 ## Phase 64: Fix Government Process Automation Service Page
 - [x] Fix Government Process Automation service page not displaying
 - [x] Rewrite Automation page to reflect two-pronged approach: (1) modernize existing systems first, (2) implement FedRAMP platforms when needed
+
+## Phase 65: Remove Sections from Government Process Automation Page
+- [x] Remove "Proven Results" section from Government Process Automation service page
+- [x] Remove "Platform Expertise" section from Government Process Automation service page
