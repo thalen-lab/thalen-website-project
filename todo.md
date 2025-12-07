@@ -2687,3 +2687,6 @@
 - [x] Update Home.tsx with simplified description
 - [x] Test changes in browser
 - [x] Save checkpoint
+
+## Phase 202: Remove RAPID Framework Section
+- [x] Remove RAPID Framework section from homepage (redundant with Our Approach)
