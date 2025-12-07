@@ -28,11 +28,7 @@ import StateLocalSolutions from "./pages/federal-solutions/StateLocal";
 import StateROICalculator from "./pages/federal-solutions/StateROICalculator";
 import StateComplianceChecklist from "./pages/federal-solutions/StateComplianceChecklist";
 import StateProcurementGuide from "./pages/federal-solutions/StateProcurementGuide";
-import StateAttorneyGeneralCase from "./pages/case-studies/StateAttorneyGeneral";
-import StateEnergyCommissionCase from "./pages/case-studies/StateEnergyCommission";
-import CountyHealthDepartmentCase from "./pages/case-studies/CountyHealthDepartment";
-import DoDManufacturingCase from "./pages/case-studies/DoDManufacturing";
-import VAHealthcareCase from "./pages/case-studies/VAHealthcare";
+// State and local case studies are imported below in the main case studies section
 import CapabilityGenerator from "./pages/CapabilityGenerator";
 import GovernmentResources from "./pages/GovernmentResources";
 import ContractVehicleComparison from "./pages/ContractVehicleComparison";
@@ -138,6 +134,11 @@ import CountyHealthCase from "./pages/case-studies/CountyHealth";
 import FederalAgencyAutomation from "./pages/case-studies/FederalAgencyAutomation";
 import DoDManufacturingUptime from "./pages/case-studies/DoDManufacturingUptime";
 import VALegacyIntegration from "./pages/case-studies/VALegacyIntegration";
+import StateAttorneyGeneralCase from "./pages/case-studies/StateAttorneyGeneral";
+import StateEnergyCommissionCase from "./pages/case-studies/StateEnergyCommission";
+import CountyHealthDepartmentCase from "./pages/case-studies/CountyHealthDepartment";
+import DoDManufacturingCase from "./pages/case-studies/DoDManufacturing";
+import VAHealthcareCase from "./pages/case-studies/VAHealthcare";
 import CaseStudies from "./pages/CaseStudies";
 
 // Insights Pages
@@ -187,11 +188,7 @@ function Router() {
       <Route path={"/federal-solutions/state-local/roi-calculator"} component={StateROICalculator} />
       <Route path={"/federal-solutions/state-local/compliance-checklist"} component={StateComplianceChecklist} />
       <Route path={"/federal-solutions/state-local/procurement-guide"} component={StateProcurementGuide} />
-      <Route path={"/case-studies/state-attorney-general"} component={StateAttorneyGeneralCase} />
-      <Route path={"/case-studies/state-energy-commission"} component={StateEnergyCommissionCase} />
-      <Route path={"/case-studies/county-health-department"} component={CountyHealthDepartmentCase} />
-      <Route path={"/case-studies/dod-manufacturing"} component={DoDManufacturingCase} />
-      <Route path={"/case-studies/va-healthcare"} component={VAHealthcareCase} />
+      {/* State and local case study routes moved to main case studies section */}
       <Route path={"/capability-generator"} component={CapabilityGenerator} />
       <Route path={"/government-resources"} component={GovernmentResources} />
       <Route path={"/contract-vehicle-comparison"} component={ContractVehicleComparison} />
@@ -282,6 +279,11 @@ function Router() {
       <Route path={"/case-studies/federal-agency-automation"} component={FederalAgencyAutomation} />
       <Route path={"/case-studies/dod-manufacturing-uptime"} component={DoDManufacturingUptime} />
       <Route path={"/case-studies/va-legacy-integration"} component={VALegacyIntegration} />
+      <Route path={"/case-studies/state-attorney-general"} component={StateAttorneyGeneralCase} />
+      <Route path={"/case-studies/state-energy-commission"} component={StateEnergyCommissionCase} />
+      <Route path={"/case-studies/county-health-department"} component={CountyHealthDepartmentCase} />
+      <Route path={"/case-studies/dod-manufacturing"} component={DoDManufacturingCase} />
+      <Route path={"/case-studies/va-healthcare"} component={VAHealthcareCase} />
       
       {/* Insights Routes */}
       <Route path={"/insights/roi-methodology"} component={ROIMethodologyInsight} />

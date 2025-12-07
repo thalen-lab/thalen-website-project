@@ -2946,3 +2946,6 @@
 ## Phase 48: Apply New Format to Additional Service Pages
 - [x] Apply new format to Data Analytics & Intelligence page
 - [x] Apply new format to Cloud Infrastructure & Modernization page
+
+## Phase: Fix All Routes
+- [x] Fix all routes in App.tsx and ensure proper navigation
