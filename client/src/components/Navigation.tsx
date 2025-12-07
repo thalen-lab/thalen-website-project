@@ -15,6 +15,7 @@ export default function Navigation() {
     { name: 'Data Analytics & Intelligence', href: '/services/data-analytics' },
     { name: 'Cloud Infrastructure & Modernization', href: '/services/cloud' },
     { name: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
+    { name: 'ATO Support & Authorization', href: '/services/ato-support' },
     { name: 'Application Development & Integration', href: '/services/application-development' },
     { name: 'Custom Software Solutions', href: '/services/custom-software' },
     { name: 'Digital Transformation Enablement', href: '/services/digital-transformation' },

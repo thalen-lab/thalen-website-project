@@ -46,6 +46,7 @@ import DataAnalyticsService from "./pages/services/DataAnalytics";
 import AnalyticsService from "./pages/services/Analytics";
 import Cloud from "./pages/services/Cloud";
 import CybersecurityService from "./pages/services/Cybersecurity";
+import ATOSupportService from "./pages/services/ATOSupport";
 import AppDevelopmentService from "./pages/services/AppDevelopment";
 import CustomSoftwareService from "./pages/services/CustomSoftware";
 
@@ -217,6 +218,7 @@ function Router() {
       <Route path={"/services/infrastructure-as-code"} component={InfrastructureAsCode} />
       <Route path={"/services/disaster-recovery"} component={DisasterRecovery} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />
+      <Route path={"/services/ato-support"} component={ATOSupportService} />
       <Route path={"/services/security-assessment"} component={SecurityAssessment} />
       <Route path={"/services/penetration-testing"} component={PenetrationTesting} />
       <Route path={"/services/identity-access-management"} component={IdentityAccessManagement} />
