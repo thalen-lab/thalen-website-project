@@ -12,7 +12,7 @@ export default function ApplicationDevelopment() {
     {
       icon: Code2,
       title: "Custom Application Development",
-      description: "Mission-critical applications built for government agencies with FedRAMP authorization and TS/SCI cleared teams.",
+      description: "Modernize your existing applications OR build new mission-critical solutions for government agencies with FedRAMP authorization and TS/SCI cleared teams.",
       link: "/services/custom-application-development",
       benefits: [
         "FedRAMP-authorized development",
@@ -122,7 +122,7 @@ export default function ApplicationDevelopment() {
             </h1>
             
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Mission-critical applications for government agencies. Our TS/SCI cleared development teams deliver FedRAMP-authorized solutions with full ATO support, ensuring your applications meet the highest security and compliance standards.
+              We help agencies modernize and enhance their existing applications—then build new FedRAMP-authorized solutions when mission demands it. Our TS/SCI cleared development teams deliver custom applications with full ATO support and the highest security standards.
             </p>
             
             <div className="flex flex-wrap gap-4">

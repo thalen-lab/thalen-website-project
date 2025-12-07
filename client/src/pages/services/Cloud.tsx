@@ -11,7 +11,7 @@ export default function Cloud() {
     {
       icon: RefreshCw,
       title: 'FedRAMP Cloud Migration Services',
-      description: 'We help agencies migrate to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) with zero downtime and full ATO support.',
+      description: 'Modernize your existing infrastructure OR migrate to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) when mission demands it—with zero downtime and full ATO support.',
       benefits: ['Zero business disruption', 'ATO package preparation', 'Multi-vendor platform expertise'],
       link: '/services/cloud-migration'
     },
@@ -154,7 +154,7 @@ export default function Cloud() {
               Cloud Infrastructure & Modernization
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Modernize on-premises infrastructure or migrate to FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it. Includes hybrid architecture, legacy system integration, and ATO support.
+              We help agencies modernize their existing infrastructure and operations—then implement FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it. Includes hybrid architecture, legacy system integration, and ATO support.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -194,7 +194,7 @@ export default function Cloud() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Implementation Approach</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A phased methodology that balances quick wins with long-term transformation, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
+              A phased methodology that balances quick wins with long-term transformation—modernizing your existing infrastructure first, then implementing FedRAMP platforms when needed for compliance and new capabilities.
             </p>
           </div>
 

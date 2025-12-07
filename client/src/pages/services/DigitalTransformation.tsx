@@ -18,7 +18,7 @@ export default function DigitalTransformation() {
     {
       icon: Lightbulb,
       title: 'Legacy System Modernization',
-      description: 'We help agencies migrate from mainframe and legacy systems to modern FedRAMP and StateRAMP cloud platforms with zero business disruption and comprehensive change management.',
+      description: 'We help agencies modernize their existing legacy systems—OR migrate to modern FedRAMP and StateRAMP cloud platforms when needed—with zero business disruption and comprehensive change management.',
       benefits: ['Zero downtime migrations', 'Data integrity validation', 'User adoption programs'],
       link: '/services/legacy-modernization-dt'
     },
@@ -119,7 +119,7 @@ export default function DigitalTransformation() {
               Federal IT Modernization & Transformation
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
-              We guide federal, state, and local agencies through IT modernization with vendor-neutral platform selection, implementation roadmaps, change management, and Technology Modernization Fund (TMF) support. Transform legacy systems into modern, cloud-based operations.
+              We help agencies modernize their existing IT systems and operations—then implement FedRAMP/StateRAMP platforms when mission demands it. Includes vendor-neutral platform selection, implementation roadmaps, change management, and Technology Modernization Fund (TMF) support.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
