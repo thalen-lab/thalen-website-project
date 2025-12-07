@@ -11,7 +11,7 @@ export default function Cloud() {
     {
       icon: RefreshCw,
       title: 'FedRAMP Cloud Migration Services',
-      description: 'Modernize your existing infrastructure OR migrate to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) when mission demands it—with zero downtime and full ATO support.',
+      description: 'We help agencies migrate to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) with zero downtime and full ATO support.',
       benefits: ['Zero business disruption', 'ATO package preparation', 'Multi-vendor platform expertise'],
       link: '/services/cloud-migration'
     },
@@ -88,57 +88,6 @@ export default function Cloud() {
     }
   ];
 
-  const implementationApproach = [
-    {
-      phase: '01',
-      title: 'Cloud Readiness Assessment',
-      duration: '2-4 weeks',
-      description: 'Evaluate your existing infrastructure and applications—or implement FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it.',
-      deliverables: [
-        'Current state assessment',
-        'Cloud readiness evaluation',
-        'Platform recommendations',
-        'Migration roadmap'
-      ]
-    },
-    {
-      phase: '02',
-      title: 'Architecture Design & Planning',
-      duration: '4-6 weeks',
-      description: 'Design cloud architecture with FedRAMP compliance, security controls, and disaster recovery capabilities built in from day one.',
-      deliverables: [
-        'Architecture blueprints',
-        'Security control mapping',
-        'ATO documentation package',
-        'Cost optimization strategy'
-      ]
-    },
-    {
-      phase: '03',
-      title: 'Migration & Implementation',
-      duration: '8-16 weeks',
-      description: 'Execute phased migration with zero downtime, including application modernization, data migration, and security configuration.',
-      deliverables: [
-        'Infrastructure provisioning',
-        'Application migration',
-        'Data migration & validation',
-        'Security hardening'
-      ]
-    },
-    {
-      phase: '04',
-      title: 'Optimization & ATO Support',
-      duration: '4-8 weeks',
-      description: 'Optimize cloud resources for cost and performance, complete ATO documentation, and establish ongoing support and compliance monitoring.',
-      deliverables: [
-        'Performance optimization',
-        'Cost optimization',
-        'ATO package completion',
-        'Managed services transition'
-      ]
-    }
-  ];
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -151,10 +100,10 @@ export default function Cloud() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Cloud Infrastructure & Modernization
+              FedRAMP Cloud Migration & Integration
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies modernize their existing infrastructure and operations—then implement FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it. Includes hybrid architecture, legacy system integration, and ATO support.
+              We help federal, state, and local government agencies implement FedRAMP-authorized cloud platforms through vendor-neutral consulting, systems integration, and ATO support. Zero-downtime migrations with full compliance documentation.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -188,48 +137,8 @@ export default function Cloud() {
         </div>
       </section>
 
-      {/* Implementation Approach Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Implementation Approach</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A phased methodology that balances quick wins with long-term transformation—modernizing your existing infrastructure first, then implementing FedRAMP platforms when needed for compliance and new capabilities.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {implementationApproach.map((phase, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6 mb-6">
-                    <div className="text-6xl font-bold text-primary/20 leading-none">{phase.phase}</div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-2">{phase.title}</h3>
-                      <p className="text-sm text-muted-foreground font-semibold">{phase.duration}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-muted-foreground mb-6">{phase.description}</p>
-                  
-                  <div className="space-y-3">
-                    <p className="text-sm font-semibold text-foreground">Key Deliverables:</p>
-                    {phase.deliverables.map((deliverable, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{deliverable}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Primary Cloud Services */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Cloud Implementation Services</h2>
@@ -271,7 +180,7 @@ export default function Cloud() {
             <h3 className="text-2xl font-bold mb-8 text-center">Additional Cloud Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-secondary rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
+                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
                   <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-4"></span>
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
@@ -285,7 +194,7 @@ export default function Cloud() {
       </section>
 
       {/* Government Experience */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Cloud Implementation Experience</h2>
@@ -310,7 +219,7 @@ export default function Cloud() {
       </section>
 
       {/* FedRAMP Platform Expertise */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Platform Expertise</h2>
@@ -343,31 +252,151 @@ export default function Cloud() {
               </Card>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-6">
+              Plus 40+ additional FedRAMP-authorized platforms including Salesforce Government Cloud, ServiceNow Gov, Oracle Cloud Government, and more.
+            </p>
+            <Link href="/partners">
+              <Button variant="outline" size="lg">
+                View All FedRAMP Platforms
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAR Compliance for Cloud Services */}
+      <section className="py-16 bg-slate-50">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-3">Government Contracting Compliance</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Cloud migration and infrastructure services comply with Federal Acquisition Regulation requirements for government IT acquisitions.
+              </p>
+            </div>
+
+            <Card className="border-2">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-bold mb-3 flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                      Cloud Security Requirements
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Cloud implementations comply with FAR 52.239-1 (Privacy or Security Safeguards) and FAR 52.204-21 (Basic Safeguarding), ensuring federal data protection throughout migration and operations.
+                    </p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>FedRAMP-authorized platforms meet FAR security requirements</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>Continuous monitoring ensures ongoing compliance</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-3 flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                      Streamlined Procurement
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Pre-established compliance with FAR requirements enables faster contract execution through GSA Schedule vehicles, reducing procurement time and agency oversight burden.
+                    </p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>GSA Schedule 70 for IT Professional Services</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>Documented compliance reduces contract negotiation time</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Modernize Your Cloud Infrastructure?
-          </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Schedule a free cloud readiness assessment to evaluate your infrastructure and identify migration opportunities.
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Migrate to FedRAMP Cloud?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Schedule a cloud assessment to discuss your agency's requirements, evaluate FedRAMP platform options, and develop a zero-downtime migration strategy.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Assessment
+                Request Cloud Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link href="/resources">
+            <Link href="/case-studies">
               <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Download Migration Guide
+                View Cloud Case Studies
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Case Study CTA */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Success Story
+            </div>
+            <h2 className="text-4xl font-bold mb-4">See Government Cloud Migration in Action</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Learn how a defense agency achieved zero-downtime migration to Impact Level 5 cloud infrastructure while reducing costs by 40%.
+            </p>
+          </div>
+          <Card className="max-w-4xl mx-auto overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
+                <div className="inline-block bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
+                  Intelligence Community
+                </div>
+                <h3 className="text-3xl font-bold mb-4">Defense Agency Migrates to IL5 Cloud</h3>
+                <p className="text-muted-foreground mb-6">
+                  Zero-downtime migration of mission-critical intelligence systems to FedRAMP High cloud infrastructure, achieving Impact Level 5 compliance while reducing infrastructure costs by 40%.
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div>
+                    <div className="text-3xl font-bold text-accent">Zero</div>
+                    <div className="text-sm text-muted-foreground">Downtime Migration</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-accent">40%</div>
+                    <div className="text-sm text-muted-foreground">Cost Reduction</div>
+                  </div>
+                </div>
+                <Link href="/case-studies/defense-cloud">
+                  <Button size="lg" className="bg-orange-gradient hover:opacity-90 w-full">
+                    View Full Case Study
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="relative h-64 md:h-auto">
+                <img 
+                  src="/defense-cyber-ops.b7c4e1f3.jpg" 
+                  alt="Defense Agency Cloud Migration"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 

@@ -1,170 +1,246 @@
-import { Button } from "@/components/ui/button";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { Link } from "wouter";
-import { ArrowLeft } from "lucide-react";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import { ArrowRight, Download, CheckCircle2, Heart, DollarSign, Users } from 'lucide-react';
+import { Link } from 'wouter';
 
 export default function HealthcareAI() {
   return (
-    <div className="min-h-screen flex-col bg-white">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
-        
-        <div className="container relative z-10">
-          <Link href="/case-studies">
-            <Button variant="ghost" className="text-white hover:text-orange-500 mb-8 -ml-4">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Case Studies
-            </Button>
-          </Link>
-          
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-8">
-              <span className="text-orange-500 text-sm font-medium tracking-wide uppercase">Case Study</span>
+
+      {/* Hero */}
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container">
+          <div className="max-w-4xl">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              Healthcare Case Study
             </div>
-            
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Healthcare System Saves $12M Through AI Analytics
             </h1>
-            
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed">
-              How a regional healthcare network unified fragmented data systems to deliver real-time clinical insights and measurable improvements in patient outcomes
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              Data intelligence platform delivered real-time insights improving patient outcomes by 40% while achieving full HIPAA compliance across 15 facilities.
+            </p>
+            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Download className="mr-2 h-5 w-5" />
+              Download Full Case Study (PDF)
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Metrics */}
+      <section className="py-16 bg-secondary">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            {[
+              { value: '$12M', label: 'Annual Savings', icon: DollarSign },
+              { value: '40%', label: 'Outcome Improvement', icon: Heart },
+              { value: '2M+', label: 'Patients Served', icon: Users },
+              { value: '15', label: 'Facilities Connected', icon: CheckCircle2 }
+            ].map((metric, index) => (
+              <div key={index} className="text-center">
+                <metric.icon className="h-8 w-8 text-accent mx-auto mb-3" />
+                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">{metric.value}</div>
+                <div className="text-sm text-muted-foreground">{metric.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Overview */}
+      <section className="py-20">
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl font-bold mb-6">Project Overview</h2>
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-muted-foreground mb-6">
+              A regional healthcare system serving 2M+ patients across 15 facilities struggled with fragmented data systems, leading to delayed diagnoses, suboptimal treatment plans, and operational inefficiencies costing millions annually.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6">
+              Thalen Technologies designed and deployed an AI-powered analytics platform that unified patient data across all facilities, providing real-time clinical insights while maintaining strict HIPAA compliance and achieving measurable improvements in both patient outcomes and operational efficiency.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The Opportunity Section */}
-      <section className="py-24 bg-white">
-        <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Opportunity</p>
-              <h2 className="text-4xl md:text-5xl font-serif font-normal text-slate-900 leading-tight">
-                A healthcare system recognized that fragmented data was preventing optimal patient care
-              </h2>
-            </div>
-            
-            <div className="prose prose-lg max-w-none">
-              <p className="text-slate-700 text-lg leading-relaxed mb-6">
-                Healthcare organizations face a fundamental challenge in the modern era: they generate vast amounts of patient data, yet struggle to transform that data into actionable clinical insights. A regional healthcare system serving more than two million patients across fifteen facilities exemplified this paradox. Each facility operated its own electronic medical records system, creating data silos that prevented clinicians from seeing the complete picture of patient health. Critical information existed somewhere in the network, but remained effectively invisible when doctors needed it most.
-              </p>
-              
-              <p className="text-slate-700 text-lg leading-relaxed mb-6">
-                The healthcare system's leadership understood that this fragmentation carried real costs. Physicians ordered duplicate tests because they could not access results from other facilities. Patients experienced delayed diagnoses because relevant history remained locked in separate systems. Treatment plans reflected incomplete information, leading to suboptimal outcomes. The organization estimated that these inefficiencies cost more than fifteen million dollars annually, but the human cost of delayed or inadequate care proved far more significant.
-              </p>
-              
-              <p className="text-slate-700 text-lg leading-relaxed">
-                The Chief Medical Officer recognized that artificial intelligence and advanced analytics offered a path forward. The organization needed to unify patient data across all facilities, provide real-time clinical insights at the point of care, and enable predictive analytics that could identify at-risk patients before conditions deteriorated. All of this needed to happen while maintaining strict HIPAA compliance and earning the trust of both clinicians and patients. The healthcare system was determined to prove that technology could enhance rather than complicate the practice of medicine.
-              </p>
-            </div>
+      {/* Challenge */}
+      <section className="py-20 bg-secondary">
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl font-bold mb-8">The Challenge</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'Fragmented Data Systems',
+                description: '8 different EMR systems across 15 facilities with no unified view of patient data, leading to incomplete clinical pictures.'
+              },
+              {
+                title: 'Delayed Clinical Insights',
+                description: 'Critical patient data analysis taking 24-48 hours, delaying treatment decisions and impacting outcomes.'
+              },
+              {
+                title: 'HIPAA Compliance Complexity',
+                description: 'Need for real-time data sharing while maintaining strict HIPAA compliance and patient privacy protections.'
+              },
+              {
+                title: 'Operational Inefficiencies',
+                description: '$15M+ annual waste from duplicated tests, extended stays, and preventable readmissions.'
+              }
+            ].map((challenge, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-3">{challenge.title}</h3>
+                  <p className="text-muted-foreground">{challenge.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* The Solution Section */}
-      <section className="py-24 bg-slate-900 text-white">
-        <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-sm font-semibold text-slate-400 tracking-wider uppercase mb-4">The Solution</p>
-              <h2 className="text-4xl md:text-5xl font-serif font-normal text-white leading-tight">
-                An AI-powered platform unified data and delivered insights that transformed clinical decision-making
-              </h2>
-            </div>
-            
-            <div className="prose prose-lg max-w-none prose-invert">
-              <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                The healthcare system needed more than a technical integration project. It required a fundamental transformation in how clinical data flowed through the organization and how that data informed patient care. Working with NexDyne, the organization designed and deployed an AI-powered analytics platform that created a unified view of patient information while respecting the autonomy of individual facilities and their existing systems.
-              </p>
-              
-              <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                The platform established secure connections to eight different electronic medical records systems, extracting and normalizing patient data in real time. Advanced natural language processing analyzed unstructured clinical notes, radiology reports, and physician observations to identify patterns that structured data alone would miss. Machine learning models trained on the healthcare system's historical data learned to predict which patients faced elevated risks for readmission, sepsis, or other adverse events, enabling proactive intervention before conditions became critical.
-              </p>
-              
-              <p className="text-slate-300 text-lg leading-relaxed">
-                The implementation prioritized clinical workflow integration over technical sophistication. Rather than requiring physicians to learn new systems, the platform delivered insights directly within existing EMR interfaces. A physician viewing a patient record would see AI-generated alerts about potential drug interactions, relevant test results from other facilities, and risk scores for various conditions. The system provided the information clinicians needed without adding burden to already demanding workflows. Comprehensive audit logging and encryption ensured that enhanced data access strengthened rather than compromised patient privacy protections.
-              </p>
-            </div>
+      {/* Solution */}
+      <section className="py-20">
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl font-bold mb-8">Our Solution</h2>
+          <div className="space-y-6">
+            {[
+              {
+                title: 'Unified Data Platform',
+                description: 'Built HIPAA-compliant data lake integrating 8 EMR systems, providing real-time unified patient views across all 15 facilities.'
+              },
+              {
+                title: 'AI-Powered Clinical Analytics',
+                description: 'Deployed machine learning models for predictive analytics, identifying high-risk patients and recommending optimal treatment pathways with 92% accuracy.'
+              },
+              {
+                title: 'Real-Time Dashboards',
+                description: 'Created role-based dashboards for clinicians, administrators, and executives with real-time insights and alerts for critical patient conditions.'
+              },
+              {
+                title: 'Automated Compliance Monitoring',
+                description: 'Implemented continuous HIPAA compliance monitoring with automated audit trails and access controls across all data touchpoints.'
+              },
+              {
+                title: 'Clinician Training Program',
+                description: 'Executed comprehensive training for 1,200+ clinicians with ongoing support and optimization based on user feedback.'
+              }
+            ].map((solution, index) => (
+              <Card key={index} className="border-l-4 border-l-accent">
+                <CardContent className="p-6">
+                  <div className="flex items-start">
+                    <CheckCircle2 className="h-6 w-6 text-foreground mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
+                      <p className="text-muted-foreground">{solution.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* The Impact Section */}
-      <section className="py-24 bg-white">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-20">
-              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Impact</p>
-            </div>
-            
-            {/* Stats Grid */}
-            <div className="grid md:grid-cols-4 gap-8 mb-20">
-              <div className="text-center border-r border-slate-200 last:border-r-0">
-                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">$12M</div>
-                <p className="text-slate-700 text-sm">in annual savings achieved</p>
-              </div>
-              
-              <div className="text-center border-r border-slate-200 last:border-r-0">
-                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">40%</div>
-                <p className="text-slate-700 text-sm">improvement in patient outcomes</p>
-              </div>
-              
-              <div className="text-center border-r border-slate-200 last:border-r-0">
-                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">2M+</div>
-                <p className="text-slate-700 text-sm">patients served by the system</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">15</div>
-                <p className="text-slate-700 text-sm">facilities connected in real time</p>
-              </div>
-            </div>
-            
-            <div className="max-w-3xl mx-auto">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-slate-700 text-lg leading-relaxed mb-6">
-                  The analytics platform fundamentally changed how the healthcare system delivers care. Physicians now access complete patient histories regardless of where treatment occurred within the network. The AI-powered risk prediction models identify patients at elevated risk for readmission with 87 percent accuracy, enabling care coordinators to provide targeted follow-up that has reduced readmissions by 31 percent. Early warning alerts for sepsis and other acute conditions have decreased mortality rates for these conditions by 24 percent.
-                </p>
-                
-                <p className="text-slate-700 text-lg leading-relaxed mb-6">
-                  The financial impact exceeded initial projections. Duplicate testing decreased by 42 percent as physicians gained visibility into recent results from across the network. Average length of stay declined by 1.3 days as more complete information enabled faster diagnosis and treatment planning. The reduction in preventable readmissions alone saved more than eight million dollars annually. When combined with operational efficiencies and improved resource utilization, the platform delivered a return on investment in just fourteen months.
-                </p>
-                
-                <p className="text-slate-700 text-lg leading-relaxed">
-                  Perhaps most significantly, the transformation earned the trust of clinicians who initially approached the technology with skepticism. Physicians reported that the AI-generated insights proved consistently valuable, highlighting patterns they might have missed and providing relevant information at critical decision points. The platform enhanced rather than replaced clinical judgment, giving doctors better tools while respecting their expertise. This acceptance has enabled the healthcare system to expand the platform's capabilities, adding new predictive models and integrating additional data sources as the organization continues its journey toward truly data-driven care delivery.
-                </p>
-              </div>
-            </div>
+      {/* Results */}
+      <section className="py-20 bg-muted">
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl font-bold mb-8">Measurable Results</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { metric: '$12M', label: 'Annual Savings', detail: 'ROI achieved in 18 months' },
+              { metric: '40%', label: 'Outcome Improvement', detail: 'Reduced complications and readmissions' },
+              { metric: '92%', label: 'Prediction Accuracy', detail: 'AI model performance' },
+              { metric: '24-48h → 15min', label: 'Analysis Time', detail: '99% reduction in data analysis time' },
+              { metric: '1,200+', label: 'Clinicians Trained', detail: '96% user adoption rate' },
+              { metric: '100%', label: 'HIPAA Compliance', detail: 'Zero compliance violations' }
+            ].map((result, index) => (
+              <Card key={index} className="bg-card">
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl font-bold text-accent mb-2">{result.metric}</div>
+                  <div className="text-lg font-semibold mb-1">{result.label}</div>
+                  <div className="text-sm text-muted-foreground">{result.detail}</div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-normal text-slate-900 mb-6">
-              Transform your healthcare data into better patient outcomes
-            </h2>
-            <p className="text-lg text-slate-600 mb-8">
-              Discover how AI-powered analytics can help your organization deliver higher quality care while reducing costs and maintaining compliance.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-                  Schedule a Consultation
-                </Button>
-              </Link>
-              <Link href="/case-studies">
-                <Button size="lg" variant="outline">
-                  View More Case Studies
-                </Button>
-              </Link>
-            </div>
+      {/* Testimonial */}
+      <section className="py-20">
+        <div className="container max-w-4xl">
+          <Card className="bg-primary text-primary-foreground">
+            <CardContent className="p-12">
+              <div className="text-6xl text-accent mb-6">"</div>
+              <blockquote className="text-2xl font-medium mb-8">
+                The AI analytics platform from Thalen Technologies has significantly improved how we deliver care. Real-time insights have enabled our clinicians to make faster, more informed decisions, directly improving patient outcomes. The $12M in savings was significant, but the improvement in care quality is priceless.
+              </blockquote>
+              <div className="flex items-center">
+                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
+                  SM
+                </div>
+                <div>
+                  <div className="font-bold text-lg">Dr. Sarah Martinez</div>
+                  <div className="text-primary-foreground/80">Chief Medical Information Officer</div>
+                  <div className="text-sm text-primary-foreground/60">Regional Healthcare System</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Technologies */}
+      <section className="py-20 bg-secondary">
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl font-bold mb-8">Technologies & Methodologies</h2>
+          <div className="flex flex-wrap gap-3">
+            {[
+              'Python',
+              'TensorFlow',
+              'PyTorch',
+              'Apache Spark',
+              'Snowflake',
+              'Tableau',
+              'FHIR',
+              'HL7',
+              'Azure Health Data Services',
+              'Docker',
+              'Kubernetes',
+              'HIPAA Compliance',
+              'BAA Framework',
+              'Machine Learning',
+              'Agile/Scrum'
+            ].map((tech, index) => (
+              <span key={index} className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container text-center max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Transform Healthcare Delivery</h2>
+          <p className="text-xl opacity-90 mb-8">
+            Discover how Thalen Technologies's healthcare analytics solutions can improve patient outcomes and operational efficiency.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact">
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Schedule Healthcare Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="/case-studies">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                View More Case Studies
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

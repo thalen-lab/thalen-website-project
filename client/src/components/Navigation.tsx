@@ -29,14 +29,14 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-background/95 backdrop-blur-sm text-foreground sticky top-0 z-50 border-b border-border">
+    <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
       <div className="container">
         <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <span className="text-lg sm:text-xl font-bold">
+            <span className="text-xl sm:text-2xl font-bold">
               <span className="hidden sm:inline">Thalen Technologies - Govern Smart</span>
-              <span className="sm:hidden">Thalen</span>
+              <span className="sm:hidden">Thalen Tech</span>
             </span>
           </Link>
 
@@ -50,7 +50,7 @@ export default function Navigation() {
             >
               <button className="flex items-center space-x-1 hover:text-accent transition-colors">
                 <span>Services</span>
-                <ChevronDown className="h-5 w-5" />
+                <ChevronDown className="h-4 w-4" />
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -75,7 +75,7 @@ export default function Navigation() {
             >
               <button className="flex items-center space-x-1 hover:text-accent transition-colors">
                 <span>Industries</span>
-                <ChevronDown className="h-5 w-5" />
+                <ChevronDown className="h-4 w-4" />
               </button>
               {industriesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -106,7 +106,7 @@ export default function Navigation() {
             >
               <button className="flex items-center space-x-1 hover:text-accent transition-colors">
                 <span>Federal Solutions</span>
-                <ChevronDown className="h-5 w-5" />
+                <ChevronDown className="h-4 w-4" />
               </button>
               {federalSolutionsOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -168,7 +168,7 @@ export default function Navigation() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 

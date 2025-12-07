@@ -11,7 +11,7 @@ export default function Cybersecurity() {
     {
       icon: FileSearch,
       title: 'CMMC & FedRAMP Compliance Implementation',
-      description: 'Strengthen your existing security controls OR achieve CMMC Level 2/3 certification and FedRAMP authorization when compliance requires it—through gap assessments, security control implementation, and ATO support.',
+      description: 'We help agencies and contractors achieve CMMC Level 2/3 certification and FedRAMP authorization through gap assessments, security control implementation, and ATO support.',
       benefits: ['CMMC gap assessment', 'Security controls implementation', 'ATO package preparation'],
       link: '/services/security-assessment'
     },
@@ -111,7 +111,7 @@ export default function Cybersecurity() {
               Government Cybersecurity & Compliance Services
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies strengthen their existing security posture and operations—then implement FedRAMP/StateRAMP-authorized security platforms when compliance requires it. Includes CMMC certification, Zero Trust architecture, and ATO support with cleared security professionals.
+              We help government agencies (federal, state, and local) and defense contractors implement FedRAMP and StateRAMP-authorized security platforms, achieve CMMC certification, and deploy Zero Trust architectures. Vendor-neutral consulting with cleared security professionals and proven ATO success.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

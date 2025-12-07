@@ -154,13 +154,13 @@ export default function CustomSoftware() {
         <div className="container">
           <div className="max-w-4xl">
             <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-6">
-              Implementation Services
+              Commercial & Enterprise Solutions
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Custom Software Solutions
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help agencies build custom software solutions tailored to their mission requirements—modernizing existing applications first, then developing new FedRAMP-authorized solutions when needed. From citizen-facing portals to internal case management systems.
+              Bespoke software engineered to solve your unique business challenges. From concept to deployment, we deliver SaaS platforms, mobile apps, and enterprise solutions that drive competitive advantage.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>
