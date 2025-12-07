@@ -2730,3 +2730,7 @@
 - [x] Rewrite "Thalen Technologies' Advantage" to emphasize positive differentiators
 - [x] Remove negative language from final CTA section
 - [x] Test changes and save checkpoint
+
+## Phase 208: Add Signature Hover Effects to ATO Support Cards
+- [x] Add signature hover effects to FedRAMP Advantages card
+- [x] Add signature hover effects to Agency Responsibilities card

@@ -340,7 +340,7 @@ export default function ATOSupport() {
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="p-6 border border-slate-200">
+              <Card className="group p-6 border border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <h3 className="text-xl font-bold text-navy-900 mb-3">FedRAMP Advantages</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
@@ -362,7 +362,7 @@ export default function ATOSupport() {
                 </ul>
               </Card>
               
-              <Card className="p-6 border border-slate-200">
+              <Card className="group p-6 border border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <h3 className="text-xl font-bold text-navy-900 mb-3">Agency Responsibilities</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
