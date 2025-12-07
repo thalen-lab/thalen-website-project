@@ -3,39 +3,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Shield, Users, Bot, Network, GitBranch, Wrench, Cloud } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Shield, Users, Bot, Network, GitBranch } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Automation() {
-  // Two ways we serve government agencies
-  const twoApproaches = [
-    {
-      icon: Wrench,
-      number: '1',
-      title: 'Modernize Your Existing Systems',
-      description: 'We help agencies optimize and automate THEIR OWN existing systems and operations without requiring new platform purchases.',
-      capabilities: [
-        'Legacy system modernization and integration',
-        'Process optimization and workflow automation',
-        'Custom integrations between existing tools',
-        'Infrastructure upgrades and improvements'
-      ],
-      emphasis: 'Start here: Most agencies can achieve significant automation gains by modernizing what they already have.'
-    },
-    {
-      icon: Cloud,
-      number: '2',
-      title: 'Implement FedRAMP Platforms When Needed',
-      description: 'When existing systems cannot meet mission requirements, we implement FedRAMP/StateRAMP-authorized platforms and integrate them with your current infrastructure.',
-      capabilities: [
-        'When agencies need new capabilities not available internally',
-        'When legacy systems cannot be cost-effectively modernized',
-        'When compliance requires FedRAMP-authorized solutions',
-        'Integration of new platforms with existing systems'
-      ],
-      emphasis: 'Platform-agnostic: We recommend platforms only when modernization is not sufficient.'
-    }
-  ];
+
 
   // Primary service offerings (3 core automation capabilities)
   const primaryServices = [
@@ -110,66 +82,7 @@ export default function Automation() {
         </div>
       </section>
 
-      {/* Two Ways We Serve Government Agencies */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Two Ways We Serve Government Agencies</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Modernization First, Platforms When Needed
-            </h2>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Most agencies can achieve significant automation gains by modernizing their existing systems. We implement new platforms only when modernization cannot meet mission requirements.
-            </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {twoApproaches.map((approach, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-              >
-                <Card className="h-full border-2 border-primary/20 hover:border-accent hover:shadow-xl transition-all">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                        <approach.icon className="h-8 w-8 text-accent" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-5xl font-bold text-accent/20 mb-2">{approach.number}</div>
-                        <h3 className="text-2xl font-bold text-slate-900 mb-3">{approach.title}</h3>
-                      </div>
-                    </div>
-                    <p className="text-slate-600 mb-6 leading-relaxed">{approach.description}</p>
-                    
-                    <ul className="space-y-3 mb-6">
-                      {approach.capabilities.map((capability, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-slate-700">
-                          <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" />
-                          <span>{capability}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="bg-accent/5 border-l-4 border-accent p-4 rounded">
-                      <p className="text-sm font-semibold text-slate-900">{approach.emphasis}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Primary Automation Services */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
