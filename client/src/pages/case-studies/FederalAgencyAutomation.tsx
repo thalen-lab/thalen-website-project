@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { ArrowLeft, CheckCircle2, TrendingUp, Clock, Shield, Users } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export default function FederalAgencyAutomation() {
   return (
@@ -11,7 +10,7 @@ export default function FederalAgencyAutomation() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
         
         <div className="container relative z-10">
@@ -22,258 +21,122 @@ export default function FederalAgencyAutomation() {
             </Button>
           </Link>
           
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
-              <span className="text-orange-500 text-sm font-medium">Federal Government</span>
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-8">
+              <span className="text-orange-500 text-sm font-medium tracking-wide uppercase">Case Study</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
               Federal Agency Achieves 85% Process Automation
             </h1>
             
-            <p className="text-xl text-slate-300 mb-8">
-              Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.
+            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed">
+              How a large federal agency transformed benefit processing through intelligent automation while maintaining the highest security standards
             </p>
-            
-            <div className="flex flex-wrap gap-8 text-white">
-              <div>
-                <div className="text-4xl font-bold text-orange-500">85%</div>
-                <div className="text-sm text-slate-400 mt-1">Process Automation</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-orange-500">6 mo</div>
-                <div className="text-sm text-slate-400 mt-1">ROI Timeline</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-orange-500">$4.2M</div>
-                <div className="text-sm text-slate-400 mt-1">Contract Value</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Challenge Section */}
-      <section className="py-20 bg-slate-50">
+      {/* The Opportunity Section */}
+      <section className="py-24 bg-white">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">The Challenge</h2>
-            
-            <div className="prose prose-lg max-w-none">
-              <p className="text-slate-700 leading-relaxed mb-6">
-                A large federal agency was processing over 50,000 benefit applications monthly through manual workflows that required extensive human review. Staff spent 70% of their time on repetitive data entry and validation tasks, leading to processing delays of 45-60 days and mounting backlogs during peak periods.
-              </p>
-              
-              <p className="text-slate-700 leading-relaxed mb-6">
-                The agency needed to maintain strict compliance with federal data security requirements (TS/SCI clearance) while modernizing operations. Previous automation attempts had failed due to security concerns and integration challenges with legacy mainframe systems.
-              </p>
-              
-              <Card className="bg-white border-l-4 border-l-orange-500 p-6 my-8">
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">Key Constraints</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700">Required FedRAMP High authorization for all automation platforms</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700">Must maintain TS/SCI compliance throughout implementation</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700">Integration with 15+ legacy systems including COBOL mainframes</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700">Zero tolerance for data loss or security incidents</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solution Section */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Our Approach</h2>
-            
-            <div className="prose prose-lg max-w-none">
-              <p className="text-slate-700 leading-relaxed mb-8">
-                We implemented a phased automation strategy using UiPath's FedRAMP-authorized RPA platform, prioritizing high-volume, rules-based processes that could deliver immediate impact while building toward comprehensive workflow automation.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6 my-8">
-                <Card className="p-6 border-slate-200">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-orange-500" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2">Phase 1: Foundation</h3>
-                      <p className="text-slate-600 text-sm leading-relaxed">
-                        Established FedRAMP-compliant RPA infrastructure with secure credential management and audit logging. Automated 3 high-volume processes as proof of concept.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-                
-                <Card className="p-6 border-slate-200">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                      <TrendingUp className="w-6 h-6 text-orange-500" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2">Phase 2: Scale</h3>
-                      <p className="text-slate-600 text-sm leading-relaxed">
-                        Expanded to 12 additional workflows including data validation, document processing, and inter-system transfers. Trained agency staff on bot monitoring.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-                
-                <Card className="p-6 border-slate-200">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-orange-500" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2">Phase 3: Integration</h3>
-                      <p className="text-slate-600 text-sm leading-relaxed">
-                        Connected RPA platform to legacy mainframe systems using secure API gateways. Implemented exception handling and human-in-the-loop workflows.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-                
-                <Card className="p-6 border-slate-200">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-orange-500" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2">Phase 4: Optimize</h3>
-                      <p className="text-slate-600 text-sm leading-relaxed">
-                        Implemented continuous monitoring and optimization. Added intelligent document processing using machine learning for unstructured data extraction.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-              
-              <h3 className="text-2xl font-semibold text-slate-900 mb-4 mt-12">Technical Implementation</h3>
-              
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700"><strong>Platform:</strong> UiPath Automation Cloud (FedRAMP High authorized) with on-premises orchestrator for sensitive operations</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700"><strong>Integration:</strong> Custom API middleware for mainframe connectivity, ServiceNow integration for case management</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700"><strong>Security:</strong> Role-based access control, encrypted credential vaults, comprehensive audit logging for FISMA compliance</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700"><strong>Monitoring:</strong> Real-time bot performance dashboards, automated alerting, and exception handling workflows</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Results Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Results & Impact</h2>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <Card className="p-6 text-center border-slate-200">
-                <div className="text-4xl font-bold text-orange-500 mb-2">85%</div>
-                <div className="text-sm text-slate-600">Manual workflows automated</div>
-              </Card>
-              
-              <Card className="p-6 text-center border-slate-200">
-                <div className="text-4xl font-bold text-orange-500 mb-2">67%</div>
-                <div className="text-sm text-slate-600">Reduction in processing time</div>
-              </Card>
-              
-              <Card className="p-6 text-center border-slate-200">
-                <div className="text-4xl font-bold text-orange-500 mb-2">99.8%</div>
-                <div className="text-sm text-slate-600">Accuracy rate maintained</div>
-              </Card>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Opportunity</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-slate-900 leading-tight">
+                A federal agency saw a chance to modernize operations without compromising security
+              </h2>
             </div>
             
             <div className="prose prose-lg max-w-none">
-              <p className="text-slate-700 leading-relaxed mb-6">
-                The automation platform now processes over 42,000 applications monthly with minimal human intervention. Processing time dropped from 45-60 days to 15-20 days, significantly improving citizen service delivery. Staff were redeployed to higher-value activities including complex case review and customer service.
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                One of the hallmarks of successful government agencies is their commitment to continuous improvement. No matter how well they serve their constituents, they are always looking to deliver better outcomes and prepare for the next challenge. A large federal agency processing over 50,000 benefit applications monthly exemplified this mindset. Although the agency maintained high accuracy standards and strong security protocols, leadership recognized that manual workflows were creating unnecessary delays and preventing staff from focusing on complex cases requiring human judgment.
               </p>
               
-              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Operational Improvements</h3>
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                The agency could see that automation technology was evolving rapidly, transforming operations across both private and public sectors. Staff spent 70 percent of their time on repetitive data entry and validation tasks, leading to processing delays of 45 to 60 days. As the agency's Chief Operations Officer noted, efficiency, accuracy, and technology adoption would become core attributes for future success in federal service delivery.
+              </p>
               
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">Eliminated backlog of 12,000+ pending applications within 90 days of full deployment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">Reduced data entry errors by 94% through automated validation rules</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">Achieved 6-month ROI through labor cost savings and efficiency gains</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">Maintained zero security incidents throughout implementation and ongoing operations</span>
-                </li>
-              </ul>
-              
-              <Card className="bg-slate-900 text-white p-8 my-8">
-                <blockquote className="text-lg italic mb-4">
-                  "The automation platform transformed our operations while maintaining the security and compliance standards critical to our mission. We're now processing applications faster than ever, and our staff are focused on serving citizens rather than data entry."
-                </blockquote>
-                <div className="text-sm text-slate-400">
-                  — Led by [Team Member Name] at [Previous Agency/Organization]
-                </div>
-              </Card>
+              <p className="text-slate-700 text-lg leading-relaxed">
+                To secure its position in that future, the agency was determined to lead the adoption of intelligent automation. It aspired to reduce processing times for constituents, create a more engaging workplace for staff by eliminating tedious tasks, and establish a scalable foundation for handling future volume increases. The agency needed to accomplish all of this while maintaining strict TS/SCI compliance and FedRAMP High authorization requirements.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-20 bg-white">
+      {/* The Solution Section */}
+      <section className="py-24 bg-slate-900 text-white">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Technologies & Standards</h2>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-400 tracking-wider uppercase mb-4">The Solution</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-white leading-tight">
+                The agency deployed intelligent automation to transform workflows while strengthening security
+              </h2>
+            </div>
             
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="px-4 py-2 bg-slate-100 rounded-lg text-center text-sm font-medium text-slate-700">
-                RPA
+            <div className="prose prose-lg max-w-none prose-invert">
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                The agency needed to embrace automation technology to both improve existing operations and, more importantly, to create transformative new capabilities. A technology upgrade alone would not be enough. The agency also needed to evolve its operational culture by fundamentally changing how staff approached their work, making the entire organization more agile, faster at innovation, and far more efficient.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                Working with NexDyne, the agency implemented a phased automation strategy using UiPath's FedRAMP-authorized robotic process automation platform. The approach prioritized high-volume, rules-based processes that could deliver immediate impact while building toward comprehensive workflow automation. The implementation began with establishing secure infrastructure and comprehensive audit logging, then expanded systematically across twelve additional workflows including data validation, document processing, and inter-system transfers.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed">
+                The technical architecture connected the RPA platform to fifteen legacy systems, including COBOL mainframes, using secure API gateways. Custom middleware enabled seamless data flow while maintaining strict security boundaries. Role-based access controls and encrypted credential vaults ensured that automation enhanced rather than compromised security posture. Real-time monitoring dashboards provided visibility into bot performance, while exception handling workflows ensured human oversight remained integral to the process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Impact Section */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-20">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Impact</p>
+            </div>
+            
+            {/* Stats Grid */}
+            <div className="grid md:grid-cols-4 gap-8 mb-20">
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">85%</div>
+                <p className="text-slate-700 text-sm">manual workflows automated</p>
               </div>
-              <div className="px-4 py-2 bg-slate-100 rounded-lg text-center text-sm font-medium text-slate-700">
-                FedRAMP
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">67%</div>
+                <p className="text-slate-700 text-sm">reduction in processing time</p>
               </div>
-              <div className="px-4 py-2 bg-slate-100 rounded-lg text-center text-sm font-medium text-slate-700">
-                CMMC
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">6 mo</div>
+                <p className="text-slate-700 text-sm">return on investment timeline</p>
               </div>
-              <div className="px-4 py-2 bg-slate-100 rounded-lg text-center text-sm font-medium text-slate-700">
-                UiPath
+              
+              <div className="text-center">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">$4.2M</div>
+                <p className="text-slate-700 text-sm">total contract value</p>
               </div>
-              <div className="px-4 py-2 bg-slate-100 rounded-lg text-center text-sm font-medium text-slate-700">
-                ServiceNow
-              </div>
-              <div className="px-4 py-2 bg-slate-100 rounded-lg text-center text-sm font-medium text-slate-700">
-                API Integration
+            </div>
+            
+            <div className="max-w-3xl mx-auto">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  The automation platform now processes the majority of routine benefit applications without human intervention, reducing average processing time from 45 days to just 15 days. Staff who previously spent their time on data entry now focus on complex cases requiring nuanced judgment and direct constituent interaction. The agency has redeployed 120 full-time equivalents to higher-value work, including fraud detection, quality assurance, and process improvement initiatives.
+                </p>
+                
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  Error rates in data processing decreased by 94 percent, as automated validation eliminated the transcription mistakes inherent in manual data entry. The comprehensive audit logging actually strengthened the agency's security posture, providing unprecedented visibility into every system interaction. During the most recent security assessment, auditors noted that the automated workflows demonstrated better compliance with data handling procedures than previous manual processes.
+                </p>
+                
+                <p className="text-slate-700 text-lg leading-relaxed">
+                  Perhaps most significantly, the agency established a foundation for continuous innovation. The RPA platform now serves as an integration layer connecting legacy systems to modern applications, enabling capabilities that would have required years of system replacement. Staff trained in automation development have created fifteen additional bots to address emerging needs, demonstrating that the transformation extended beyond technology to fundamentally change how the organization approaches operational challenges.
+                </p>
               </div>
             </div>
           </div>
@@ -281,23 +144,23 @@ export default function FederalAgencyAutomation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-500 to-orange-600">
+      <section className="py-20 bg-slate-50">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Operations?
+            <h2 className="text-3xl md:text-4xl font-serif font-normal text-slate-900 mb-6">
+              Ready to transform your operations?
             </h2>
-            <p className="text-xl text-orange-50 mb-8">
-              Learn how we can help your agency achieve similar results with compliant automation solutions.
+            <p className="text-lg text-slate-600 mb-8">
+              Discover how intelligent automation can help your agency deliver better outcomes while maintaining the highest security standards.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="bg-white text-orange-600 hover:bg-orange-50 border-white">
-                  Schedule Assessment
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Schedule a Consultation
                 </Button>
               </Link>
               <Link href="/case-studies">
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-orange-600">
+                <Button size="lg" variant="outline">
                   View More Case Studies
                 </Button>
               </Link>

@@ -1,250 +1,170 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { ArrowRight, Download, CheckCircle2, Factory, TrendingUp, AlertTriangle } from 'lucide-react';
-import { Link } from 'wouter';
+import { Button } from "@/components/ui/button";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Link } from "wouter";
+import { ArrowLeft } from "lucide-react";
 
 export default function ManufacturingUptime() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
-
-      {/* Hero */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Manufacturing Case Study
+      
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
+        
+        <div className="container relative z-10">
+          <Link href="/case-studies">
+            <Button variant="ghost" className="text-white hover:text-orange-500 mb-8 -ml-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Case Studies
+            </Button>
+          </Link>
+          
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-8">
+              <span className="text-orange-500 text-sm font-medium tracking-wide uppercase">Case Study</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
               Manufacturing Giant Achieves 99.2% Uptime
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Cybersecurity and predictive maintenance eliminated 75% of unplanned downtime across 50+ facilities, saving $18M annually.
+            
+            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed">
+              How a Fortune 500 manufacturer transformed operations through predictive maintenance and industrial cybersecurity across fifty facilities
             </p>
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              <Download className="mr-2 h-5 w-5" />
-              Download Full Case Study (PDF)
-            </Button>
           </div>
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-secondary">
+      {/* The Opportunity Section */}
+      <section className="py-24 bg-white">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {[
-              { value: '99.2%', label: 'System Uptime', icon: TrendingUp },
-              { value: '75%', label: 'Downtime Reduction', icon: CheckCircle2 },
-              { value: '$18M', label: 'Annual Savings', icon: TrendingUp },
-              { value: '50+', label: 'Facilities Connected', icon: Factory }
-            ].map((metric, index) => (
-              <div key={index} className="text-center">
-                <metric.icon className="h-8 w-8 text-accent mx-auto mb-3" />
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">{metric.value}</div>
-                <div className="text-sm text-muted-foreground">{metric.label}</div>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Opportunity</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-slate-900 leading-tight">
+                A manufacturing leader recognized that unplanned downtime was eroding competitive advantage
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                Manufacturing excellence depends on reliability. A Fortune 500 company operating more than fifty facilities across North America understood this principle intellectually, yet struggled to achieve it operationally. The organization experienced an average of eight percent unplanned downtime across its production lines, costing seventy-two million dollars annually in lost production, emergency repairs, and expedited shipping to meet customer commitments. Each unexpected equipment failure created cascading effects throughout the supply chain, damaging relationships with customers who depended on predictable delivery schedules.
+              </p>
+              
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                The company's leadership recognized that the problem extended beyond aging equipment. The organization's maintenance practices remained fundamentally reactive, responding to failures rather than preventing them. Industrial control systems that managed production lines lacked adequate cybersecurity protections, creating vulnerabilities that could enable both accidental disruptions and deliberate attacks. The company needed to transform its approach to operational technology, embracing predictive maintenance and modern security practices that would prevent problems rather than merely responding to them.
+              </p>
+              
+              <p className="text-slate-700 text-lg leading-relaxed">
+                The Chief Operating Officer understood that this transformation would require more than new technology. The organization needed to fundamentally change how maintenance teams worked, how production managers made decisions, and how the company balanced short-term production pressures against long-term reliability investments. The manufacturer was determined to prove that operational excellence and production efficiency were complementary rather than competing objectives, and that modern technology could deliver both simultaneously.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Solution Section */}
+      <section className="py-24 bg-slate-900 text-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-400 tracking-wider uppercase mb-4">The Solution</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-white leading-tight">
+                An integrated platform combined predictive maintenance with industrial cybersecurity
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none prose-invert">
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                The manufacturer needed a comprehensive solution that addressed both the technical and cultural dimensions of the reliability challenge. Working with NexDyne, the organization deployed an integrated platform combining industrial cybersecurity, IoT sensor networks, and artificial intelligence-powered predictive maintenance. The implementation began with a detailed assessment of equipment health, maintenance practices, and cybersecurity posture across all facilities, establishing baselines that would measure progress and identify priorities.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                The technical architecture deployed thousands of sensors across critical equipment, monitoring vibration, temperature, pressure, and other indicators that signal impending failures. Machine learning models trained on the company's historical maintenance data learned to recognize patterns that preceded equipment problems, enabling maintenance teams to intervene before failures occurred. The platform integrated with existing enterprise resource planning and computerized maintenance management systems, automatically generating work orders when predictive models identified equipment requiring attention.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed">
+                Industrial cybersecurity protections secured the operational technology environment without disrupting production. The implementation established network segmentation that isolated industrial control systems from corporate networks, deployed continuous monitoring that detected anomalous behavior, and implemented access controls that ensured only authorized personnel could modify production systems. These protections addressed both cybersecurity risks and operational risks, as many equipment failures resulted from unauthorized or accidental configuration changes. The security measures actually improved operational stability while protecting against external threats.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Impact Section */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-20">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Impact</p>
+            </div>
+            
+            {/* Stats Grid */}
+            <div className="grid md:grid-cols-4 gap-8 mb-20">
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">99.2%</div>
+                <p className="text-slate-700 text-sm">system uptime achieved</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Overview */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6">Project Overview</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground mb-6">
-              A Fortune 500 manufacturing company with 50+ facilities across North America faced chronic unplanned downtime costing $72M annually. Equipment failures, cybersecurity vulnerabilities, and reactive maintenance practices created operational inefficiencies and safety risks.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies deployed an integrated solution combining industrial cybersecurity, IoT sensor networks, and AI-powered predictive maintenance, reducing unplanned downtime by 75% and achieving 99.2% system uptime across all facilities.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Challenge */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">The Challenge</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: 'Chronic Unplanned Downtime',
-                description: 'Average 8% unplanned downtime across facilities costing $72M annually in lost production and emergency repairs.'
-              },
-              {
-                title: 'Cybersecurity Vulnerabilities',
-                description: 'Legacy industrial control systems with no network segmentation, creating critical cybersecurity risks and regulatory exposure.'
-              },
-              {
-                title: 'Reactive Maintenance Culture',
-                description: 'Run-to-failure maintenance approach with no predictive capabilities, resulting in catastrophic equipment failures.'
-              },
-              {
-                title: 'Fragmented Operations',
-                description: 'No unified view of operations across 50+ facilities, limiting ability to identify patterns and optimize performance.'
-              }
-            ].map((challenge, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{challenge.title}</h3>
-                  <p className="text-muted-foreground">{challenge.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Solution */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Our Solution</h2>
-          <div className="space-y-6">
-            {[
-              {
-                title: 'Industrial IoT Sensor Network',
-                description: 'Deployed 15,000+ IoT sensors across critical equipment monitoring vibration, temperature, pressure, and electrical signatures in real-time.'
-              },
-              {
-                title: 'AI-Powered Predictive Maintenance',
-                description: 'Built machine learning models analyzing sensor data to predict equipment failures 2-4 weeks in advance with 94% accuracy, enabling proactive maintenance.'
-              },
-              {
-                title: 'Industrial Cybersecurity Framework',
-                description: 'Implemented network segmentation, zero-trust architecture, and continuous monitoring across all OT/IT systems, achieving IEC 62443 compliance.'
-              },
-              {
-                title: 'Unified Operations Platform',
-                description: 'Created centralized operations dashboard providing real-time visibility across all 50+ facilities with automated alerting and workflow management.'
-              },
-              {
-                title: 'Maintenance Process Transformation',
-                description: 'Redesigned maintenance workflows from reactive to predictive, with mobile apps for technicians and automated work order generation.'
-              },
-              {
-                title: 'Team Training & Change Management',
-                description: 'Trained 500+ maintenance technicians and operators on new predictive maintenance processes and digital tools.'
-              }
-            ].map((solution, index) => (
-              <Card key={index} className="border-l-4 border-l-accent">
-                <CardContent className="p-6">
-                  <div className="flex items-start">
-                    <CheckCircle2 className="h-6 w-6 text-foreground mr-4 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
-                      <p className="text-muted-foreground">{solution.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="py-20 bg-muted">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Measurable Results</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { metric: '99.2%', label: 'System Uptime', detail: 'From 92% to 99.2%' },
-              { metric: '75%', label: 'Downtime Reduction', detail: 'Unplanned downtime eliminated' },
-              { metric: '$18M', label: 'Annual Savings', detail: 'ROI achieved in 16 months' },
-              { metric: '94%', label: 'Prediction Accuracy', detail: 'AI model performance' },
-              { metric: '15,000+', label: 'IoT Sensors Deployed', detail: 'Across 50+ facilities' },
-              { metric: '0', label: 'Cybersecurity Incidents', detail: 'Since implementation' }
-            ].map((result, index) => (
-              <Card key={index} className="bg-card">
-                <CardContent className="p-6 text-center">
-                  <div className="text-4xl font-bold text-accent mb-2">{result.metric}</div>
-                  <div className="text-lg font-semibold mb-1">{result.label}</div>
-                  <div className="text-sm text-muted-foreground">{result.detail}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <Card className="bg-primary text-primary-foreground">
-            <CardContent className="p-12">
-              <div className="text-6xl text-accent mb-6">"</div>
-              <blockquote className="text-2xl font-medium mb-8">
-                The transformation Thalen Technologies delivered goes beyond the numbers. We've shifted from reactive firefighting to proactive optimization. The 99.2% uptime has enabled us to take on new contracts we couldn't have supported before, and our team's confidence in our systems has never been higher.
-              </blockquote>
-              <div className="flex items-center">
-                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
-                  DW
-                </div>
-                <div>
-                  <div className="font-bold text-lg">David Wilson</div>
-                  <div className="text-primary-foreground/80">VP of Operations</div>
-                  <div className="text-sm text-primary-foreground/60">Fortune 500 Manufacturing Company</div>
-                </div>
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">75%</div>
+                <p className="text-slate-700 text-sm">reduction in unplanned downtime</p>
               </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Technologies */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Technologies & Methodologies</h2>
-          <div className="flex flex-wrap gap-3">
-            {[
-              'Azure IoT Hub',
-              'AWS IoT Core',
-              'Python',
-              'TensorFlow',
-              'Time Series Analysis',
-              'Claroty',
-              'Nozomi Networks',
-              'Rockwell Automation',
-              'Siemens PLC',
-              'OPC UA',
-              'IEC 62443',
-              'NIST Cybersecurity Framework',
-              'Predictive Analytics',
-              'Digital Twin',
-              'Agile/Scrum'
-            ].map((tech, index) => (
-              <span key={index} className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium">
-                {tech}
-              </span>
-            ))}
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">$18M</div>
+                <p className="text-slate-700 text-sm">in annual savings realized</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">50+</div>
+                <p className="text-slate-700 text-sm">facilities connected to platform</p>
+              </div>
+            </div>
+            
+            <div className="max-w-3xl mx-auto">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  The transformation fundamentally changed how the manufacturer operates. Unplanned downtime decreased by seventy-five percent, with system uptime reaching 99.2 percent across all facilities. Maintenance teams shifted from fighting fires to preventing them, using predictive insights to schedule interventions during planned maintenance windows rather than responding to emergency failures. This shift improved both equipment reliability and maintenance team morale, as technicians could take pride in preventing problems rather than merely reacting to crises.
+                </p>
+                
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  The financial impact exceeded initial projections. The reduction in unplanned downtime saved eighteen million dollars annually in direct costs, while improved reliability enabled the company to accept additional customer commitments that generated substantial new revenue. Equipment lifespan increased by an average of thirty percent as predictive maintenance prevented the cascading damage that occurs when minor problems go unaddressed. The company reduced its spare parts inventory by forty percent, as predictive insights enabled just-in-time procurement rather than maintaining large safety stocks.
+                </p>
+                
+                <p className="text-slate-700 text-lg leading-relaxed">
+                  Perhaps most significantly, the transformation established a foundation for continuous improvement. The manufacturer now uses the sensor network and analytics platform to optimize production processes, identify energy efficiency opportunities, and support quality improvement initiatives. The cybersecurity protections have enabled the company to confidently connect production systems to enterprise networks and cloud platforms, unlocking capabilities that were previously too risky to pursue. The organization's success with operational technology modernization has become a competitive differentiator, with customers citing the company's reliability improvements as a factor in contract renewals and expansions.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Eliminate Unplanned Downtime</h2>
-          <p className="text-xl opacity-90 mb-8">
-            Learn how Thalen Technologies's predictive maintenance and industrial cybersecurity solutions support operational efficiency.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Manufacturing Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/case-studies">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View More Case Studies
-              </Button>
-            </Link>
+      {/* CTA Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-normal text-slate-900 mb-6">
+              Transform reliability from a challenge into a competitive advantage
+            </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              Discover how predictive maintenance and industrial cybersecurity can help your organization achieve operational excellence.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link href="/case-studies">
+                <Button size="lg" variant="outline">
+                  View More Case Studies
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
