@@ -28,7 +28,6 @@ export default function ATOSupport() {
         <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">
-              <Shield className="w-4 h-4" />
               ATO Support Built Into Every Implementation
             </div>
             
@@ -40,7 +39,7 @@ export default function ATOSupport() {
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              When federal agencies choose NexDyne to implement cloud migrations, automation platforms, 
+              When federal agencies choose Thalen Technologies to implement cloud migrations, automation platforms, 
               or data systems, they get more than technical expertise—they get a contractor who navigates 
               the entire ATO process from day one, ensuring your system goes live on schedule.
             </p>
@@ -70,8 +69,7 @@ export default function ATOSupport() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-6">
-              <AlertCircle className="w-8 h-8 text-accent" />
+            <div className="mb-6">
               <h2 className="text-4xl font-bold text-navy-900">Why ATO Expertise Matters</h2>
             </div>
             
@@ -130,7 +128,7 @@ export default function ATOSupport() {
             
             <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg p-6 border border-accent/20">
               <p className="text-lg text-slate-800 font-medium">
-                <strong className="text-navy-900">NexDyne's Advantage:</strong> When agencies select NexDyne 
+                <strong className="text-navy-900">Thalen Technologies' Advantage:</strong> When agencies select Thalen Technologies 
                 for implementation contracts, they choose a contractor who builds ATO authorization into the 
                 project plan from day one. We don't just deliver technical solutions—we deliver authorized 
                 systems ready to operate on schedule.
@@ -145,12 +143,11 @@ export default function ATOSupport() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Target className="w-8 h-8 text-accent" />
+              <div className="mb-6">
                 <h2 className="text-4xl font-bold text-navy-900">ATO Support Throughout Implementation</h2>
               </div>
               <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-                NexDyne integrates ATO activities into every phase of system implementation, ensuring 
+                Thalen Technologies integrates ATO activities into every phase of system implementation, ensuring 
                 security authorization progresses in parallel with technical development—not as an afterthought.
               </p>
             </div>
@@ -169,7 +166,7 @@ export default function ATOSupport() {
                       Project Kickoff: Security by Design
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      During initial project planning, NexDyne conducts a security requirements assessment 
+                      During initial project planning, Thalen Technologies conducts a security requirements assessment 
                       to determine the appropriate authorization framework (FedRAMP, FISMA Moderate/High, 
                       DoD IL-4/5). We architect the system with security controls built in from the start, 
                       not bolted on later. This includes selecting FedRAMP-authorized cloud platforms when 
@@ -211,7 +208,7 @@ export default function ATOSupport() {
                       Development: Documentation in Parallel
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      As NexDyne develops and configures the system, our security team simultaneously 
+                      As Thalen Technologies develops and configures the system, our security team simultaneously 
                       documents security controls in the System Security Plan (SSP). We implement required 
                       controls using Infrastructure as Code and automated configuration management, creating 
                       auditable evidence of compliance. This parallel approach eliminates the typical 
@@ -253,7 +250,7 @@ export default function ATOSupport() {
                       Testing: Security Assessment Coordination
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      NexDyne coordinates with third-party assessment organizations (3PAO) to validate 
+                      Thalen Technologies coordinates with third-party assessment organizations (3PAO) to validate 
                       security control effectiveness. We prepare the environment for assessment, manage 
                       the testing process, and rapidly remediate any findings. Our experience with federal 
                       security assessments means we anticipate common issues and address them proactively, 
@@ -295,7 +292,7 @@ export default function ATOSupport() {
                       Authorization & Go-Live
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      NexDyne prepares the authorization package and coordinates with the agency's 
+                      Thalen Technologies prepares the authorization package and coordinates with the agency's 
                       Authorizing Official (AO) to secure final ATO approval. We establish continuous 
                       monitoring capabilities to maintain authorization and provide ongoing compliance 
                       support. The system goes live on schedule with full authorization in place—no delays, 
@@ -332,75 +329,72 @@ export default function ATOSupport() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-6">
-              <Zap className="w-8 h-8 text-accent" />
+            <div className="mb-6">
               <h2 className="text-4xl font-bold text-navy-900">Leveraging FedRAMP & StateRAMP</h2>
             </div>
             
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-              When appropriate for your project, NexDyne leverages FedRAMP and StateRAMP authorized 
-              platforms to accelerate ATO timelines. However, it's critical to understand that using 
-              a FedRAMP-authorized platform does not automatically grant your agency ATO—your specific 
-              implementation still requires authorization.
+              Thalen Technologies leverages FedRAMP and StateRAMP authorized platforms to accelerate 
+              ATO timelines when appropriate. Using a FedRAMP-authorized platform does not automatically 
+              grant your agency ATO—your specific implementation still requires authorization.
             </p>
             
             <div className="bg-gradient-to-br from-orange-50 to-slate-50 rounded-lg p-8 mb-8 border border-orange-200">
               <h3 className="text-2xl font-bold text-navy-900 mb-4">Understanding Control Inheritance</h3>
               <p className="text-slate-700 mb-4 leading-relaxed">
                 FedRAMP authorization means the cloud platform infrastructure (AWS GovCloud, Azure Government, 
-                Salesforce Government Cloud, etc.) has been pre-authorized by the vendor. This provides 
-                <strong> inherited controls</strong> that your agency can leverage, reducing the number of 
-                controls you must implement and document yourself.
+                Salesforce Government Cloud) has been pre-authorized by the vendor. This provides 
+                <strong> inherited controls</strong> that reduce the number of controls your agency must 
+                implement and document.
               </p>
               <p className="text-slate-700 leading-relaxed">
-                However, <strong>customer-managed controls</strong> remain your agency's responsibility. 
-                How you configure the platform, manage user access, integrate with other systems, and handle 
-                your data all require documentation and validation. NexDyne manages this inheritance model 
-                expertly, documenting which controls are inherited versus agency-managed, and implementing 
-                the customer-managed controls correctly.
+                However, <strong>customer-managed controls</strong> remain your responsibility: platform 
+                configuration, user access management, system integration, and data handling all require 
+                documentation and validation. Thalen Technologies manages this inheritance model by documenting 
+                which controls are inherited versus agency-managed, and implementing customer-managed controls correctly.
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="p-6 border-l-4 border-l-green-500">
+              <Card className="p-6 border border-slate-200">
                 <h3 className="text-xl font-bold text-navy-900 mb-3">FedRAMP Advantages</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-black mt-1">•</span>
                     <span>Reduced ATO timeline: 6-9 months vs. 18-24 months for custom systems</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-black mt-1">•</span>
                     <span>Inherited infrastructure controls reduce documentation burden</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-black mt-1">•</span>
                     <span>Platform vendor maintains continuous monitoring for inherited controls</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-black mt-1">•</span>
                     <span>Proven security baseline accepted across federal agencies</span>
                   </li>
                 </ul>
               </Card>
               
-              <Card className="p-6 border border-slate-200 hover:border-accent hover:shadow-lg transition-all duration-300 bg-white">
+              <Card className="p-6 border border-slate-200">
                 <h3 className="text-xl font-bold text-navy-900 mb-3">Agency Responsibilities</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
-                    <AlertCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-black mt-1">•</span>
                     <span>Document agency-specific system configuration and data flows</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <AlertCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-black mt-1">•</span>
                     <span>Implement customer-managed security controls (access, encryption, logging)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <AlertCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-black mt-1">•</span>
                     <span>Conduct security assessment for the agency's implementation</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <AlertCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-black mt-1">•</span>
                     <span>Obtain agency-specific ATO from Authorizing Official</span>
                   </li>
                 </ul>
@@ -421,7 +415,7 @@ export default function ATOSupport() {
             </h2>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
               Don't risk project delays with contractors who treat ATO as an afterthought. Partner with 
-              NexDyne for implementation expertise that includes security authorization from day one.
+              Thalen Technologies for implementation expertise that includes security authorization from day one.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
