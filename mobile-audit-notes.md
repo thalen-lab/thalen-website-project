@@ -1,4 +1,4 @@
-# Mobile Optimization Audit - NexDyne Website
+# Mobile Optimization Audit - Thalen Website
 
 ## Desktop View (1280px+) - Initial Observations
 

@@ -34,7 +34,7 @@ const teamMembers = [
     certifications: ["UiPath Advanced", "Blue Prism", "Six Sigma Black Belt"],
     clearance: "Secret",
     experience: "12+ years",
-    bio: "Healthcare and manufacturing automation specialist with proven track record of 60%+ efficiency gains in complex operational environments."
+    bio: "Healthcare and manufacturing automation specialist with experience delivering efficiency improvements in complex operational environments."
   },
   {
     name: "David Thompson",

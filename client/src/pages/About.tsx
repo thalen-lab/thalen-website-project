@@ -50,7 +50,7 @@ export default function About() {
       icon: Globe,
       title: 'Balance',
       letter: 'B',
-      description: 'Harmonizing innovation with stability. We balance cutting-edge AI capabilities with proven methodologies, ensuring transformative results without operational disruption or unnecessary risk.'
+      description: 'Harmonizing innovation with stability. We balance modern AI capabilities with established methodologies, delivering results without operational disruption or unnecessary risk.'
     },
     {
       icon: Award,
@@ -392,7 +392,7 @@ export default function About() {
             <p className="text-sm font-semibold text-accent mb-2">Certifications & Compliance</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Government-Grade Security & Compliance</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Certified expertise across federal, state, and local government compliance frameworks with proven track record in the most demanding security environments.
+              Certified expertise across federal, state, and local government compliance frameworks with experience in high-security environments.
             </p>
           </motion.div>
 

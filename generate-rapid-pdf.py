@@ -12,11 +12,11 @@ class RAPIDFrameworkPDF(FPDF):
         self.set_auto_page_break(auto=True, margin=20)
         
     def header(self):
-        """Custom header with NexDyne branding"""
+        """Custom header with Thalen branding"""
         if self.page_no() > 1:
             self.set_font('Arial', 'B', 10)
             self.set_text_color(30, 58, 138)  # Navy blue
-            self.cell(0, 10, 'NexDyne Technology - RAPID Framework', 0, 1, 'L')
+            self.cell(0, 10, 'Thalen Technology - RAPID Framework', 0, 1, 'L')
             self.set_draw_color(255, 127, 80)  # Orange
             self.line(10, 20, 200, 20)
             self.ln(5)
@@ -109,7 +109,7 @@ def generate_rapid_framework_pdf():
     pdf.ln(40)
     pdf.set_font('Arial', 'B', 18)
     pdf.set_text_color(30, 58, 138)
-    pdf.cell(0, 10, 'NexDyne Technology', 0, 1, 'C')
+    pdf.cell(0, 10, 'Thalen Technology', 0, 1, 'C')
     
     pdf.set_font('Arial', '', 11)
     pdf.set_text_color(100, 100, 100)
@@ -121,7 +121,7 @@ def generate_rapid_framework_pdf():
     pdf.orange_divider()
     
     pdf.body_text(
-        'The RAPID Framework is NexDyne\'s proven methodology for helping federal, state, and local '
+        'The RAPID Framework is Thalen\'s proven methodology for helping federal, state, and local '
         'government agencies modernize operations, achieve compliance, and deliver mission-critical results. '
         'With over 15 years of experience serving the public sector, we have refined this four-phase approach '
         'to ensure predictable outcomes, measurable ROI, and zero operational disruption.'
@@ -426,11 +426,11 @@ def generate_rapid_framework_pdf():
     
     # ============ WHY NEXDYNE ============
     pdf.add_page()
-    pdf.chapter_title('Why NexDyne Technology?', 16)
+    pdf.chapter_title('Why Thalen Technology?', 16)
     pdf.orange_divider()
     
     pdf.body_text(
-        'NexDyne Technology brings over 15 years of specialized experience serving federal, state, and local '
+        'Thalen Technology brings over 15 years of specialized experience serving federal, state, and local '
         'government agencies. We understand the unique challenges of public sector modernization - from complex '
         'compliance requirements to budget constraints to organizational change resistance.'
     )
@@ -489,12 +489,12 @@ def generate_rapid_framework_pdf():
     pdf.section_title('Contact Information')
     pdf.set_font('Arial', 'B', 11)
     pdf.set_text_color(30, 58, 138)
-    pdf.cell(0, 8, 'NexDyne Technology', 0, 1, 'L')
+    pdf.cell(0, 8, 'Thalen Technology', 0, 1, 'L')
     
     pdf.set_font('Arial', '', 11)
     pdf.set_text_color(60, 60, 60)
-    pdf.cell(0, 6, 'Email: contact@nexdyne.tech', 0, 1, 'L')
-    pdf.cell(0, 6, 'Web: www.nexdyne.tech', 0, 1, 'L')
+    pdf.cell(0, 6, 'Email: contact@thalen.tech', 0, 1, 'L')
+    pdf.cell(0, 6, 'Web: www.thalen.tech', 0, 1, 'L')
     
     pdf.ln(10)
     pdf.body_text(
@@ -503,7 +503,7 @@ def generate_rapid_framework_pdf():
     )
     
     # Save PDF
-    output_path = '/home/ubuntu/nexdyne-website/client/public/rapid-framework-methodology.pdf'
+    output_path = '/home/ubuntu/thalen-website/client/public/rapid-framework-methodology.pdf'
     pdf.output(output_path)
     print(f'PDF generated successfully: {output_path}')
     return output_path

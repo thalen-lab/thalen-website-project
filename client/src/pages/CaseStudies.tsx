@@ -213,7 +213,7 @@ export default function CaseStudies() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Proven Transformation Results
+              Case Studies
             </h1>
             <p className="text-xl md:text-2xl opacity-90">
               Real-world government case studies demonstrating FedRAMP and StateRAMP platform implementation expertise across federal, state, and local agencies.
@@ -409,12 +409,12 @@ export default function CaseStudies() {
       {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Write Your Success Story?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Discover how Thalen Technologies's proven methodology can deliver transformative results for your organization.
+            Request an assessment to discuss your agency's technology requirements.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-            Schedule Strategic Assessment
+            Request Assessment
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

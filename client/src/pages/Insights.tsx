@@ -414,12 +414,12 @@ export default function Insights() {
       {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Operations?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a strategic assessment with our automation experts.
+            Request an assessment to discuss your agency's requirements.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-            Schedule Assessment
+            Request Assessment
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

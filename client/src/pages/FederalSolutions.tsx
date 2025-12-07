@@ -318,7 +318,7 @@ export default function FederalSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Certifications & Government Credentials</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Industry-leading certifications and cleared personnel ensure compliance with federal security and quality standards.
+              Certifications and cleared personnel supporting federal security and quality standards compliance.
             </p>
           </div>
 

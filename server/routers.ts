@@ -212,7 +212,7 @@ export const appRouter = router({
         try {
           // Send notification to owner
           const emailContent = `
-New Contact Form Submission from NexDyne Website
+New Contact Form Submission from Thalen Technologies Website
 
 Name: ${input.name}
 Email: ${input.email}

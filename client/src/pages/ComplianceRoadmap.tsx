@@ -1020,14 +1020,14 @@ export default function ComplianceRoadmap() {
       {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Compliance Journey?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Compliance Consultation</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Our compliance experts can help you navigate the entire process, from initial assessment to certification and beyond.
+            Request a consultation to discuss compliance requirements and implementation planning.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Compliance Consultation
+                Request Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

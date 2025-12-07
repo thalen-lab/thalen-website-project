@@ -164,7 +164,7 @@ export default function Contact() {
                     <Mail className="h-6 w-6 text-accent mr-4 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-muted-foreground">contact@nexdyne.tech</p>
+                      <p className="text-muted-foreground">contact@thalen.tech</p>
                       <p className="text-sm text-muted-foreground">24-hour response time</p>
                     </div>
                   </CardContent>

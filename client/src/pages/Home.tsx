@@ -153,14 +153,14 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative container h-full flex items-center">
           <div className="max-w-3xl text-primary-foreground">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">Modernize Your Systems. Implement Secure Platforms.</h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-white/95 leading-relaxed">We help government agencies optimize existing infrastructure and implement FedRAMP/StateRAMP solutions when needed—vendor-neutral, mission-focused, compliance-ready</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">Government Technology Implementation Services</h1>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-white/95 leading-relaxed">Infrastructure modernization and FedRAMP/StateRAMP platform implementation for federal, state, and local government agencies</p>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
                 <Link href="/contact">
-                  Schedule Strategic Assessment
+                  Request Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -598,11 +598,11 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <p className="text-lg text-slate-600 mb-6">
-              Ready to see how our approach delivers measurable results?
+              Contact us to discuss your agency's requirements.
             </p>
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
               <Link href="/contact">
-                Schedule a Strategic Assessment
+                Request Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
@@ -613,14 +613,14 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Operations?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a comprehensive automation assessment and discover how our proven methodology can deliver measurable ROI for your organization.
+            Request an assessment to evaluate how our services can support your agency's technology requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
               <Link href="/contact">
-                Schedule Strategic Assessment
+                Request Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

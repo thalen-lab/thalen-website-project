@@ -234,14 +234,14 @@ export default function Methodology() {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Operations?</h2>
+          <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Schedule a complimentary assessment to discover how the RAPID Framework can deliver measurable results for your agency.
+            Request an assessment to evaluate how our methodology applies to your agency's requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg">
-                Schedule Assessment
+                Request Assessment
               </Button>
             </Link>
             <Button 

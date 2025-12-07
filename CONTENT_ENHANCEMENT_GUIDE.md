@@ -1,4 +1,4 @@
-# Content Enhancement Guide for NexDyne/Thalen Technologies Website
+# Content Enhancement Guide for Thalen/Thalen Technologies Website
 
 This document provides guidance for replacing placeholder content with authentic, professional assets to strengthen credibility and visual appeal.
 

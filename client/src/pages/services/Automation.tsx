@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, CheckCircle2, TrendingUp, Shield, Users, Award, Bot, Network, GitBranch } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Automation() {
   // Primary service offerings (3 core automation capabilities)
@@ -86,202 +87,316 @@ export default function Automation() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
+      {/* Hero Section - Matching Homepage Style */}
+      <section className="relative py-20 md:py-32 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
-          <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+          <motion.div 
+            className="max-w-4xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
               Core Service
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Government Automation Implementation
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Government Process Automation
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               We help government agencies (federal, state, and local) implement FedRAMP and StateRAMP-authorized automation platforms with RPA, systems integration, and workflow orchestration. Vendor-neutral consulting with proven expertise across all major automation technologies.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
+                <Link href="/contact">
                   Request Automation Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/services/automation/rpa">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
+                <Link href="/services/automation/rpa">
                   Explore RPA Services
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Key Differentiators */}
-      <section className="py-16 bg-background">
+      {/* Key Differentiators - Matching Homepage Card Style */}
+      <section className="py-20 bg-white">
         <div className="container">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Why Choose Us</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              Proven Automation Expertise
+            </h2>
+          </motion.div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {keyDifferentiators.map((item, index) => (
-              <div key={index} className="text-center">
-                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="h-full border-2 border-primary/20 hover:border-primary/40 transition-all">
+                  <CardContent className="p-8 text-center">
+                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                      <item.icon className="h-7 w-7 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                    <p className="text-slate-600">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Primary Automation Services */}
-      <section className="py-20 bg-secondary">
+      {/* Primary Automation Services - Glass-morphism Cards */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Automation Implementation Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Core Capabilities</p>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
+              Core Automation Implementation Services
+            </h2>
+            <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
               End-to-end automation capabilities from RPA to enterprise integration, designed for government agencies (federal, state, and local) requiring FedRAMP and StateRAMP compliance and mission-critical reliability.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {primaryServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
-                <CardContent className="p-8">
-                  <service.icon className="h-16 w-16 text-primary mb-6" />
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start text-sm">
-                        <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Link href={service.link} className="block group h-full">
+                  <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
+                    <CardContent className="p-8">
+                      <div className="mb-6">
+                        <service.icon className="h-12 w-12 text-accent" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4 text-white">
+                        {service.title}
+                      </h3>
+                      <p className="text-base text-white/80 leading-relaxed mb-6">
+                        {service.description}
+                      </p>
+                      
+                      <ul className="space-y-3 mb-8">
+                        {service.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-start text-sm text-white/80">
+                            <ArrowRight className="h-4 w-4 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
 
-                  <Link href={service.link}>
-                    <Button variant="outline" className="w-full border-2 border-dashed border-primary/30 hover:border-accent hover:bg-accent/5">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                      <div className="flex items-center text-accent text-sm font-semibold group-hover:gap-3 gap-2 transition-all">
+                        Learn More <ArrowRight className="h-4 w-4" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
             ))}
           </div>
 
           {/* Additional Capabilities - Compact Format */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Additional Automation Capabilities</h3>
+          <motion.div 
+            className="mt-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-bold mb-8 text-center text-white">Additional Automation Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                <div key={index} className="flex items-start p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
+                  <ArrowRight className="h-4 w-4 text-accent mt-1 mr-4 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold mb-1">{capability.name}</h4>
-                    <p className="text-sm text-muted-foreground">{capability.description}</p>
+                    <h4 className="font-semibold mb-1 text-white">{capability.name}</h4>
+                    <p className="text-sm text-white/70">{capability.description}</p>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Government Automation Experience */}
-      <section className="py-20 bg-background">
+      {/* Government Automation Experience - Sharp Edges Style */}
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Government Automation Implementation Success</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Proven Results</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              Government Automation Implementation Success
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Proven track record implementing automation platforms and solutions across government agencies (federal, state, and local) with measurable mission impact.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {governmentExperience.map((exp, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
-                <CardContent className="p-8">
-                  <TrendingUp className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
-                  <p className="text-lg font-bold text-primary">{exp.outcome}</p>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="h-full rounded-none border-2 border-slate-900 hover:shadow-2xl transition-all active:scale-95 group">
+                  <CardContent className="p-8">
+                    <TrendingUp className="h-12 w-12 text-primary mb-4 group-hover:text-accent transition-colors" />
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">{exp.agency}</h3>
+                    <p className="text-sm text-slate-600 mb-3">{exp.project}</p>
+                    <p className="text-lg font-bold text-primary">{exp.outcome}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/case-studies">
-              <Button variant="outline" size="lg">
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Button asChild size="lg" variant="outline" className="border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white transition-all">
+              <Link href="/case-studies">
                 View All Automation Case Studies
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
       {/* FedRAMP Automation Platform Expertise */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Automation Platform Expertise</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Platform Expertise</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              FedRAMP-Authorized Automation Platform Expertise
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               We implement and integrate FedRAMP-authorized automation platforms from leading vendors, helping you select the right tools for your mission.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {fedrampPlatforms.map((category, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">{category.category}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="bg-card border border-border text-primary px-3 py-1 rounded-full text-sm font-medium">
-                        {platform}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="h-full border-2 border-slate-200 hover:border-accent/40 hover:shadow-lg transition-all">
+                  <CardContent className="p-8">
+                    <h3 className="text-xl font-bold text-slate-900 mb-4">{category.category}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {category.platforms.map((platform, idx) => (
+                        <span key={idx} className="bg-slate-100 border border-slate-300 text-slate-900 px-3 py-1 rounded-full text-sm font-medium hover:bg-accent/10 hover:border-accent transition-colors">
+                          {platform}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
-              Plus 30+ additional FedRAMP-authorized automation and integration platforms
+          <motion.div 
+            className="mt-12 text-center bg-primary/5 border-2 border-primary/20 rounded-lg p-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-lg text-slate-700 mb-4">
+              <strong className="text-slate-900">Vendor-neutral approach:</strong> We help you evaluate and select the RIGHT automation platforms for your specific mission requirements, compliance needs, and budget constraints—then implement them with proven best practices.
             </p>
-            <Link href="/federal-solutions">
-              <Button variant="outline" size="lg">
-                View All FedRAMP Platforms
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+              <Link href="/contact">
+                Discuss Platform Selection
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Final CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Automate Your Government Operations?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule an automation assessment to discuss your agency's automation opportunities, evaluate FedRAMP platform options, and develop a roadmap for mission-critical automation.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
+        <div className="container">
+          <motion.div 
+            className="max-w-4xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Automate Your Government Processes?
+            </h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Schedule a free automation assessment to identify opportunities, evaluate platforms, and develop a roadmap for implementation.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
+                <Link href="/contact">
+                  Schedule Free Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-            </Link>
-            <Link href="/federal-solutions">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Federal Solutions
+              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
+                <Link href="/case-studies">
+                  View Success Stories
+                </Link>
               </Button>
-            </Link>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

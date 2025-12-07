@@ -2,7 +2,7 @@
 
 ## Overview
 
-Implemented advanced image loading optimizations to significantly improve initial page load performance and perceived speed across the NexDyne website.
+Implemented advanced image loading optimizations to significantly improve initial page load performance and perceived speed across the Thalen website.
 
 ## Features Implemented
 
