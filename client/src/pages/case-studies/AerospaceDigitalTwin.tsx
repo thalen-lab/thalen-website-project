@@ -179,7 +179,7 @@ export default function AerospaceDigitalTwin() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                Thalen Technologies's digital twin platform has revolutionized our maintenance operations. The 70% reduction in unscheduled maintenance has dramatically improved our operational reliability, and the $95M in annual savings exceeded our business case. We now have unprecedented visibility into our fleet's health and can optimize maintenance like never before.
+                Thalen Technologies's digital twin platform has significantly improved our maintenance operations. The 70% reduction in unscheduled maintenance has improved our operational reliability, and the $95M in annual savings exceeded our business case. We now have comprehensive visibility into our fleet's health and can optimize maintenance scheduling more effectively.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
@@ -229,9 +229,9 @@ export default function AerospaceDigitalTwin() {
       {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Transform Your Maintenance Operations</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Digital Twin Solutions for Predictive Maintenance</h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how Thalen Technologies's digital twin solutions can enable predictive maintenance and reduce costs.
+            Learn how Thalen Technologies's digital twin solutions enable predictive maintenance and cost reduction.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

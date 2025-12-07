@@ -61,7 +61,7 @@ export default function Healthcare() {
               Healthcare & Life Sciences
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              HIPAA-compliant automation and analytics solutions that improve patient outcomes while reducing operational costs. Transform clinical workflows, enable value-based care, and empower data-driven decision making across your healthcare organization.
+              HIPAA-compliant automation and analytics solutions that improve patient outcomes while reducing operational costs. Support clinical workflows, enable value-based care, and facilitate data-driven decision making across your healthcare organization.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
