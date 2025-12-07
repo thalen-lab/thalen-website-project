@@ -14,6 +14,8 @@ import {
   Users,
   Target,
   TrendingUp,
+  Award,
+  Zap,
 } from "lucide-react";
 
 export default function ATOSupport() {
@@ -30,32 +32,32 @@ export default function ATOSupport() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
               <Shield className="w-4 h-4" />
-              Authority to Operate (ATO) Support
+              ATO Support Built Into Every Implementation
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Navigate the ATO Process with
+              Implementation Expertise
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 mt-2">
-                Expert Guidance
+                Plus ATO Authorization
               </span>
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              You've won the contract. Now comes the critical challenge: achieving Authority to Operate. 
-              NexDyne provides end-to-end ATO support to help federal agencies navigate the complex 
-              authorization process with confidence.
+              When federal agencies choose NexDyne to implement cloud migrations, automation platforms, 
+              or data systems, they get more than technical expertise—they get a contractor who navigates 
+              the entire ATO process from day one, ensuring your system goes live on schedule.
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
-                  Schedule ATO Consultation
+                  Discuss Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link href="/methodology">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                  View Our Methodology
+                  View RAPID Framework
                 </Button>
               </Link>
             </div>
@@ -73,34 +75,35 @@ export default function ATOSupport() {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <AlertCircle className="w-8 h-8 text-orange-600" />
-              <h2 className="text-4xl font-bold text-navy-900">The Challenge</h2>
+              <h2 className="text-4xl font-bold text-navy-900">Why ATO Expertise Matters</h2>
             </div>
             
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-              After winning a government contract, agencies face a critical hurdle: obtaining Authority to Operate (ATO) 
-              for their systems. This process is complex, time-consuming, and fraught with potential delays that can 
-              jeopardize project timelines and budgets.
+              Federal agencies face a critical challenge when implementing new systems: even after awarding 
+              a contract for cloud migration, automation, or data analytics, the system cannot operate until 
+              it receives Authority to Operate (ATO). Many contractors can build the technical solution but 
+              struggle with the security authorization process, causing costly delays and missed deadlines.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <Card className="p-6 border-l-4 border-l-red-500">
-                <h3 className="text-xl font-bold text-navy-900 mb-3">Common Roadblocks</h3>
+                <h3 className="text-xl font-bold text-navy-900 mb-3">The Contractor Gap</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
                     <span className="text-red-500 mt-1">•</span>
-                    <span>Incomplete or inadequate System Security Plans (SSP)</span>
+                    <span>Technical teams unfamiliar with NIST 800-53 control families</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-red-500 mt-1">•</span>
-                    <span>Insufficient security control implementation evidence</span>
+                    <span>Incomplete System Security Plans (SSP) delaying authorization</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-red-500 mt-1">•</span>
-                    <span>Lack of continuous monitoring capabilities</span>
+                    <span>Lack of experience with 3PAO assessments and findings remediation</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-red-500 mt-1">•</span>
-                    <span>Misalignment with NIST 800-53 control families</span>
+                    <span>No continuous monitoring strategy for sustained compliance</span>
                   </li>
                 </ul>
               </Card>
@@ -110,19 +113,19 @@ export default function ATOSupport() {
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
                     <span className="text-orange-500 mt-1">•</span>
-                    <span>Project launch delays of 6-18 months</span>
+                    <span>Systems ready but unable to go live for 6-12 months</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange-500 mt-1">•</span>
-                    <span>Budget overruns from extended security assessments</span>
+                    <span>Budget overruns from extended security documentation efforts</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange-500 mt-1">•</span>
-                    <span>Stakeholder frustration and loss of confidence</span>
+                    <span>Mission-critical initiatives stalled during authorization</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange-500 mt-1">•</span>
-                    <span>Potential contract penalties or termination</span>
+                    <span>Potential contract penalties for missed milestones</span>
                   </li>
                 </ul>
               </Card>
@@ -130,27 +133,28 @@ export default function ATOSupport() {
             
             <div className="bg-slate-100 rounded-lg p-6 border-l-4 border-l-navy-600">
               <p className="text-lg text-slate-800 font-medium">
-                <strong className="text-navy-900">The Reality:</strong> Most agencies underestimate the complexity 
-                of the ATO process. Without experienced guidance, even well-funded projects can stall for months 
-                during the authorization phase, putting mission-critical initiatives at risk.
+                <strong className="text-navy-900">NexDyne's Advantage:</strong> When agencies select NexDyne 
+                for implementation contracts, they choose a contractor who builds ATO authorization into the 
+                project plan from day one. We don't just deliver technical solutions—we deliver authorized 
+                systems ready to operate on schedule.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* NexDyne's Approach Section */}
+      {/* How We Integrate ATO Section */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Target className="w-8 h-8 text-orange-600" />
-                <h2 className="text-4xl font-bold text-navy-900">NexDyne's ATO Support Approach</h2>
+                <h2 className="text-4xl font-bold text-navy-900">ATO Support Throughout Implementation</h2>
               </div>
               <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-                Our proven 4-phase methodology streamlines the ATO process, reducing time-to-authorization 
-                while ensuring comprehensive security compliance.
+                NexDyne integrates ATO activities into every phase of system implementation, ensuring 
+                security authorization progresses in parallel with technical development—not as an afterthought.
               </p>
             </div>
             
@@ -165,28 +169,32 @@ export default function ATOSupport() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-navy-900 mb-3">
-                      Assessment & Gap Analysis
+                      Project Kickoff: Security by Design
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      We begin by conducting a comprehensive assessment of your current security posture against 
-                      the required authorization framework (FedRAMP, FISMA, DoD IL-4/5, etc.). Our team identifies 
-                      gaps in control implementation, documentation, and continuous monitoring capabilities.
+                      During initial project planning, NexDyne conducts a security requirements assessment 
+                      to determine the appropriate authorization framework (FedRAMP, FISMA Moderate/High, 
+                      DoD IL-4/5). We architect the system with security controls built in from the start, 
+                      not bolted on later. This includes selecting FedRAMP-authorized cloud platforms when 
+                      applicable to leverage inherited controls and accelerate authorization timelines.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-slate-50 p-4 rounded-lg">
                         <h4 className="font-semibold text-navy-900 mb-2">Key Activities</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
-                          <li>• Security control assessment</li>
-                          <li>• Documentation review</li>
-                          <li>• Architecture evaluation</li>
-                          <li>• Risk assessment</li>
+                          <li>• Authorization framework determination</li>
+                          <li>• Security control baseline selection</li>
+                          <li>• Architecture security review</li>
+                          <li>• FedRAMP/StateRAMP platform evaluation</li>
                         </ul>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Timeline</h4>
-                        <p className="text-sm text-slate-700">2-4 weeks</p>
-                        <h4 className="font-semibold text-navy-900 mt-3 mb-2">Deliverable</h4>
-                        <p className="text-sm text-slate-700">Gap Analysis Report with prioritized remediation roadmap</p>
+                        <h4 className="font-semibold text-navy-900 mb-2">Deliverables</h4>
+                        <ul className="text-sm text-slate-700 space-y-1">
+                          <li>• Security requirements document</li>
+                          <li>• Control inheritance matrix</li>
+                          <li>• ATO timeline integrated into project plan</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -203,12 +211,14 @@ export default function ATOSupport() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-navy-900 mb-3">
-                      Documentation & Control Implementation
+                      Development: Documentation in Parallel
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      Our team works alongside your staff to develop comprehensive security documentation and 
-                      implement missing controls. We leverage automation and proven templates to accelerate 
-                      this phase while maintaining quality and compliance.
+                      As NexDyne develops and configures the system, our security team simultaneously 
+                      documents security controls in the System Security Plan (SSP). We implement required 
+                      controls using Infrastructure as Code and automated configuration management, creating 
+                      auditable evidence of compliance. This parallel approach eliminates the typical 
+                      post-development scramble to document what was built.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-slate-50 p-4 rounded-lg">
@@ -216,15 +226,17 @@ export default function ATOSupport() {
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• System Security Plan (SSP) development</li>
                           <li>• Security control implementation</li>
-                          <li>• Policy and procedure documentation</li>
-                          <li>• Configuration management</li>
+                          <li>• Configuration management automation</li>
+                          <li>• Continuous monitoring setup</li>
                         </ul>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Timeline</h4>
-                        <p className="text-sm text-slate-700">2-4 months</p>
-                        <h4 className="font-semibold text-navy-900 mt-3 mb-2">Deliverables</h4>
-                        <p className="text-sm text-slate-700">Complete SSP, security policies, control implementation evidence</p>
+                        <h4 className="font-semibold text-navy-900 mb-2">Deliverables</h4>
+                        <ul className="text-sm text-slate-700 space-y-1">
+                          <li>• Complete SSP documentation</li>
+                          <li>• Security policies and procedures</li>
+                          <li>• Control implementation evidence</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -241,12 +253,14 @@ export default function ATOSupport() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-navy-900 mb-3">
-                      Security Assessment & Testing
+                      Testing: Security Assessment Coordination
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      We coordinate with third-party assessment organizations (3PAO) or conduct internal assessments 
-                      to validate security control effectiveness. Our team prepares your environment for assessment, 
-                      manages the testing process, and addresses findings efficiently.
+                      NexDyne coordinates with third-party assessment organizations (3PAO) to validate 
+                      security control effectiveness. We prepare the environment for assessment, manage 
+                      the testing process, and rapidly remediate any findings. Our experience with federal 
+                      security assessments means we anticipate common issues and address them proactively, 
+                      minimizing assessment delays and rework.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-slate-50 p-4 rounded-lg">
@@ -254,15 +268,17 @@ export default function ATOSupport() {
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• Pre-assessment readiness review</li>
                           <li>• 3PAO coordination and support</li>
-                          <li>• Vulnerability scanning and penetration testing</li>
-                          <li>• Finding remediation</li>
+                          <li>• Vulnerability scanning and pen testing</li>
+                          <li>• Finding remediation and retesting</li>
                         </ul>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Timeline</h4>
-                        <p className="text-sm text-slate-700">1-3 months</p>
-                        <h4 className="font-semibold text-navy-900 mt-3 mb-2">Deliverables</h4>
-                        <p className="text-sm text-slate-700">Security Assessment Report (SAR), Plan of Action & Milestones (POA&M)</p>
+                        <h4 className="font-semibold text-navy-900 mb-2">Deliverables</h4>
+                        <ul className="text-sm text-slate-700 space-y-1">
+                          <li>• Security Assessment Report (SAR)</li>
+                          <li>• Plan of Action & Milestones (POA&M)</li>
+                          <li>• Remediation evidence documentation</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -279,12 +295,14 @@ export default function ATOSupport() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-navy-900 mb-3">
-                      Authorization & Continuous Monitoring
+                      Authorization & Go-Live
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      We guide your authorization package through the approval process and establish continuous 
-                      monitoring capabilities to maintain your ATO. Our team provides ongoing support to ensure 
-                      sustained compliance and rapid response to emerging threats.
+                      NexDyne prepares the authorization package and coordinates with the agency's 
+                      Authorizing Official (AO) to secure final ATO approval. We establish continuous 
+                      monitoring capabilities to maintain authorization and provide ongoing compliance 
+                      support. The system goes live on schedule with full authorization in place—no delays, 
+                      no surprises.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-slate-50 p-4 rounded-lg">
@@ -292,15 +310,17 @@ export default function ATOSupport() {
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• Authorization package preparation</li>
                           <li>• Authorizing Official (AO) coordination</li>
-                          <li>• Continuous monitoring setup</li>
-                          <li>• Ongoing compliance support</li>
+                          <li>• Continuous monitoring implementation</li>
+                          <li>• Go-live support and validation</li>
                         </ul>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Timeline</h4>
-                        <p className="text-sm text-slate-700">1-2 months (initial), ongoing</p>
-                        <h4 className="font-semibold text-navy-900 mt-3 mb-2">Deliverables</h4>
-                        <p className="text-sm text-slate-700">ATO approval, continuous monitoring plan, monthly compliance reports</p>
+                        <h4 className="font-semibold text-navy-900 mb-2">Deliverables</h4>
+                        <ul className="text-sm text-slate-700 space-y-1">
+                          <li>• ATO approval letter</li>
+                          <li>• Continuous monitoring plan</li>
+                          <li>• Ongoing compliance reporting</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -311,144 +331,244 @@ export default function ATOSupport() {
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {/* FedRAMP Advantage Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
-              <Clock className="w-8 h-8 text-orange-600" />
-              <h2 className="text-4xl font-bold text-navy-900">Realistic Timeline & Variables</h2>
+              <Zap className="w-8 h-8 text-orange-600" />
+              <h2 className="text-4xl font-bold text-navy-900">Leveraging FedRAMP & StateRAMP</h2>
             </div>
             
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-              The ATO process typically takes <strong className="text-navy-900">6-12 months</strong> from initial 
-              assessment to final authorization. However, the actual timeline depends on several critical factors:
+              When appropriate for your project, NexDyne leverages FedRAMP and StateRAMP authorized 
+              platforms to accelerate ATO timelines. However, it's critical to understand that using 
+              a FedRAMP-authorized platform does not automatically grant your agency ATO—your specific 
+              implementation still requires authorization.
             </p>
             
-            <div className="space-y-6 mb-8">
-              <Card className="p-6">
-                <h3 className="text-xl font-bold text-navy-900 mb-3">Impact Level & Framework</h3>
-                <div className="space-y-2 text-slate-700">
-                  <p><strong>FISMA Low:</strong> 6-8 months (fewer controls, simpler assessment)</p>
-                  <p><strong>FISMA Moderate:</strong> 8-10 months (standard federal systems)</p>
-                  <p><strong>FISMA High / DoD IL-4:</strong> 10-14 months (extensive controls, rigorous testing)</p>
-                  <p><strong>DoD IL-5 / Top Secret:</strong> 12-18 months (maximum security requirements)</p>
-                </div>
-              </Card>
-              
-              <Card className="p-6">
-                <h3 className="text-xl font-bold text-navy-900 mb-3">System Complexity</h3>
-                <div className="space-y-2 text-slate-700">
-                  <p><strong>Simple systems:</strong> Single application, limited integrations (shorter timeline)</p>
-                  <p><strong>Complex systems:</strong> Multiple components, extensive integrations, legacy systems (longer timeline)</p>
-                  <p><strong>Cloud-hosted:</strong> May leverage FedRAMP authorizations for faster approval</p>
-                </div>
-              </Card>
-              
-              <Card className="p-6">
-                <h3 className="text-xl font-bold text-navy-900 mb-3">Organizational Readiness</h3>
-                <div className="space-y-2 text-slate-700">
-                  <p><strong>Mature security posture:</strong> Existing controls, documentation (faster)</p>
-                  <p><strong>Limited security maturity:</strong> Significant gaps, minimal documentation (slower)</p>
-                  <p><strong>Dedicated resources:</strong> Full-time security team accelerates progress</p>
-                </div>
-              </Card>
+            <div className="bg-gradient-to-br from-orange-50 to-slate-50 rounded-lg p-8 mb-8 border border-orange-200">
+              <h3 className="text-2xl font-bold text-navy-900 mb-4">Understanding Control Inheritance</h3>
+              <p className="text-slate-700 mb-4 leading-relaxed">
+                FedRAMP authorization means the cloud platform infrastructure (AWS GovCloud, Azure Government, 
+                Salesforce Government Cloud, etc.) has been pre-authorized by the vendor. This provides 
+                <strong> inherited controls</strong> that your agency can leverage, reducing the number of 
+                controls you must implement and document yourself.
+              </p>
+              <p className="text-slate-700 leading-relaxed">
+                However, <strong>customer-managed controls</strong> remain your agency's responsibility. 
+                How you configure the platform, manage user access, integrate with other systems, and handle 
+                your data all require documentation and validation. NexDyne manages this inheritance model 
+                expertly, documenting which controls are inherited versus agency-managed, and implementing 
+                the customer-managed controls correctly.
+              </p>
             </div>
             
-            <div className="bg-orange-50 rounded-lg p-6 border-l-4 border-l-orange-500">
-              <p className="text-lg text-slate-800">
-                <strong className="text-orange-900">NexDyne's Advantage:</strong> Our experienced team and proven 
-                methodology can reduce ATO timelines by 30-40% compared to organizations attempting the process 
-                without specialized guidance. We've helped agencies achieve authorization in as little as 6 months 
-                for moderate-impact systems.
-              </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="p-6 border-l-4 border-l-green-500">
+                <h3 className="text-xl font-bold text-navy-900 mb-3">FedRAMP Advantages</h3>
+                <ul className="space-y-2 text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Reduced ATO timeline: 6-9 months vs. 18-24 months for custom systems</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Inherited infrastructure controls reduce documentation burden</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Platform vendor maintains continuous monitoring for inherited controls</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Proven security baseline accepted across federal agencies</span>
+                  </li>
+                </ul>
+              </Card>
+              
+              <Card className="p-6 border-l-4 border-l-orange-500">
+                <h3 className="text-xl font-bold text-navy-900 mb-3">Agency Responsibilities</h3>
+                <ul className="space-y-2 text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <AlertCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <span>Document agency-specific system configuration and data flows</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <AlertCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <span>Implement customer-managed security controls (access, encryption, logging)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <AlertCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <span>Conduct security assessment for the agency's implementation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <AlertCircle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <span>Obtain agency-specific ATO from Authorizing Official</span>
+                  </li>
+                </ul>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Real Example Section */}
+      {/* Realistic Timeline Section */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center gap-3 mb-6">
-              <FileCheck className="w-8 h-8 text-orange-600" />
-              <h2 className="text-4xl font-bold text-navy-900">Real-World Example</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Clock className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+              <h2 className="text-4xl font-bold text-navy-900 mb-4">Realistic ATO Timelines</h2>
+              <p className="text-xl text-slate-700">
+                Timeline varies based on authorization level, system complexity, and organizational readiness. 
+                NexDyne's integrated approach reduces these timelines by 30-40% compared to contractors 
+                without ATO expertise.
+              </p>
             </div>
             
-            <Card className="p-8 border-t-4 border-t-orange-500">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-navy-900 mb-2">
-                  Department of Homeland Security
-                </h3>
-                <p className="text-lg text-orange-600 font-semibold">
-                  Cloud Migration ATO for Critical Infrastructure Platform
+            <div className="space-y-6">
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-navy-900">FISMA Low</h3>
+                  <span className="text-2xl font-bold text-orange-600">6-8 months</span>
+                </div>
+                <p className="text-slate-700">
+                  Fewer controls, simpler assessment. Ideal for low-impact systems with limited sensitive data.
                 </p>
+              </Card>
+              
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-navy-900">FISMA Moderate (FedRAMP-leveraged)</h3>
+                  <span className="text-2xl font-bold text-orange-600">8-10 months</span>
+                </div>
+                <p className="text-slate-700">
+                  Standard federal systems using FedRAMP platforms. Most common authorization level for 
+                  cloud-based agency systems.
+                </p>
+              </Card>
+              
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-navy-900">FISMA High / DoD IL-4</h3>
+                  <span className="text-2xl font-bold text-orange-600">10-14 months</span>
+                </div>
+                <p className="text-slate-700">
+                  Extensive controls, rigorous testing. Required for high-impact systems with significant 
+                  operational or mission risk.
+                </p>
+              </Card>
+              
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-navy-900">DoD IL-5 / Top Secret</h3>
+                  <span className="text-2xl font-bold text-orange-600">12-18 months</span>
+                </div>
+                <p className="text-slate-700">
+                  Maximum security requirements for classified systems. Requires specialized facilities, 
+                  personnel clearances, and extensive validation.
+                </p>
+              </Card>
+            </div>
+            
+            <div className="mt-8 bg-gradient-to-br from-navy-900 to-navy-800 rounded-lg p-8 text-white">
+              <div className="flex items-start gap-4">
+                <Award className="w-12 h-12 text-orange-400 flex-shrink-0" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-3">NexDyne's Track Record</h3>
+                  <p className="text-slate-200 leading-relaxed">
+                    Our integrated ATO approach has helped federal agencies achieve authorization in as 
+                    little as 6 months for moderate-impact systems. By building security into the 
+                    implementation from day one, we eliminate the typical post-development authorization 
+                    delays that plague government IT projects.
+                  </p>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Real-World Example */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-navy-900 mb-4">Implementation + ATO Success</h2>
+              <p className="text-xl text-slate-700">
+                How NexDyne delivered both technical implementation and ATO authorization on schedule
+              </p>
+            </div>
+            
+            <Card className="p-8 border-t-4 border-t-orange-600">
+              <h3 className="text-2xl font-bold text-navy-900 mb-4">
+                Department of Homeland Security: Critical Infrastructure Platform
+              </h3>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-slate-50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-orange-600 mb-2">9 months</div>
-                  <p className="text-sm text-slate-700">From assessment to ATO approval</p>
+                <div className="text-center p-6 bg-slate-50 rounded-lg">
+                  <div className="text-4xl font-bold text-orange-600 mb-2">9 months</div>
+                  <div className="text-sm text-slate-600">Assessment to ATO</div>
                 </div>
-                <div className="bg-slate-50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-orange-600 mb-2">FISMA High</div>
-                  <p className="text-sm text-slate-700">Authorization level achieved</p>
+                <div className="text-center p-6 bg-slate-50 rounded-lg">
+                  <div className="text-4xl font-bold text-orange-600 mb-2">FISMA High</div>
+                  <div className="text-sm text-slate-600">Authorization Level</div>
                 </div>
-                <div className="bg-slate-50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-orange-600 mb-2">$2.4M</div>
-                  <p className="text-sm text-slate-700">Saved vs. extended delays</p>
+                <div className="text-center p-6 bg-slate-50 rounded-lg">
+                  <div className="text-4xl font-bold text-orange-600 mb-2">$2.4M</div>
+                  <div className="text-sm text-slate-600">Saved vs. Delays</div>
                 </div>
               </div>
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-xl font-bold text-navy-900 mb-3">The Situation</h4>
+                  <h4 className="text-lg font-bold text-navy-900 mb-2">The Contract</h4>
                   <p className="text-slate-700 leading-relaxed">
-                    After winning a $45M contract to modernize a critical infrastructure monitoring platform, 
-                    a DHS component agency faced a complex ATO challenge. The system required FISMA High authorization 
-                    due to the sensitivity of infrastructure data, and the agency had limited experience with 
-                    cloud security authorizations.
+                    DHS awarded NexDyne a $45M contract to modernize a critical infrastructure monitoring 
+                    platform. The system required FISMA High authorization due to the sensitivity of 
+                    infrastructure data, and the agency had aggressive timelines with limited cloud security 
+                    experience.
                   </p>
                 </div>
                 
                 <div>
-                  <h4 className="text-xl font-bold text-navy-900 mb-3">The Challenge</h4>
+                  <h4 className="text-lg font-bold text-navy-900 mb-2">The Challenge</h4>
                   <ul className="space-y-2 text-slate-700">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-orange-600 mt-1">•</span>
                       <span>Complex hybrid cloud architecture spanning AWS GovCloud and on-premises systems</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-orange-600 mt-1">•</span>
                       <span>Integration with 12 external data sources requiring boundary protection</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-orange-600 mt-1">•</span>
                       <span>Limited internal security documentation and control evidence</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                      <span>Aggressive 12-month project timeline with ATO as critical milestone</span>
+                      <span className="text-orange-600 mt-1">•</span>
+                      <span>12-month project timeline with ATO as critical milestone</span>
                     </li>
                   </ul>
                 </div>
                 
                 <div>
-                  <h4 className="text-xl font-bold text-navy-900 mb-3">NexDyne's Solution</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <h4 className="text-lg font-bold text-navy-900 mb-2">NexDyne's Integrated Approach</h4>
+                  <div className="bg-slate-50 p-6 rounded-lg space-y-4">
                     <div>
-                      <h5 className="font-semibold text-navy-900 mb-2">Phase 1-2 (Months 1-4)</h5>
-                      <ul className="text-sm text-slate-700 space-y-1">
-                        <li>• Conducted rapid gap analysis identifying 47 control deficiencies</li>
-                        <li>• Developed comprehensive 850-page SSP leveraging FedRAMP templates</li>
+                      <p className="font-semibold text-navy-900 mb-2">Months 1-4: Build + Document</p>
+                      <ul className="text-sm text-slate-700 space-y-1 ml-4">
+                        <li>• Architected hybrid cloud solution with security controls built-in</li>
+                        <li>• Developed 850-page SSP in parallel with system development</li>
                         <li>• Implemented automated security controls using Infrastructure as Code</li>
                         <li>• Established continuous monitoring with SIEM integration</li>
                       </ul>
                     </div>
                     <div>
-                      <h5 className="font-semibold text-navy-900 mb-2">Phase 3-4 (Months 5-9)</h5>
-                      <ul className="text-sm text-slate-700 space-y-1">
+                      <p className="font-semibold text-navy-900 mb-2">Months 5-9: Test + Authorize</p>
+                      <ul className="text-sm text-slate-700 space-y-1 ml-4">
                         <li>• Coordinated 3PAO assessment with minimal findings (8 low-risk items)</li>
                         <li>• Remediated all findings within 2 weeks</li>
                         <li>• Prepared authorization package with executive briefings</li>
@@ -459,90 +579,77 @@ export default function ATOSupport() {
                 </div>
                 
                 <div>
-                  <h4 className="text-xl font-bold text-navy-900 mb-3">The Outcome</h4>
+                  <h4 className="text-lg font-bold text-navy-900 mb-2">The Outcome</h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <Card className="p-4 bg-green-50 border-green-200">
-                      <div className="flex items-start gap-3">
-                        <TrendingUp className="w-6 h-6 text-green-600 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-green-900 mb-1">Accelerated Timeline</p>
-                          <p className="text-sm text-green-800">
-                            Achieved ATO in 9 months vs. industry average of 12-14 months for FISMA High systems
-                          </p>
-                        </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-navy-900">Accelerated Timeline</p>
+                        <p className="text-sm text-slate-700">9 months vs. industry average of 12-14 months</p>
                       </div>
-                    </Card>
-                    <Card className="p-4 bg-green-50 border-green-200">
-                      <div className="flex items-start gap-3">
-                        <Users className="w-6 h-6 text-green-600 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-green-900 mb-1">Knowledge Transfer</p>
-                          <p className="text-sm text-green-800">
-                            Trained agency security team on continuous monitoring and compliance maintenance
-                          </p>
-                        </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-navy-900">Knowledge Transfer</p>
+                        <p className="text-sm text-slate-700">Trained agency team on compliance maintenance</p>
                       </div>
-                    </Card>
-                    <Card className="p-4 bg-green-50 border-green-200">
-                      <div className="flex items-start gap-3">
-                        <FileText className="w-6 h-6 text-green-600 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-green-900 mb-1">Reusable Framework</p>
-                          <p className="text-sm text-green-800">
-                            Established security documentation templates for future system authorizations
-                          </p>
-                        </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-navy-900">Reusable Framework</p>
+                        <p className="text-sm text-slate-700">Templates for future system authorizations</p>
                       </div>
-                    </Card>
-                    <Card className="p-4 bg-green-50 border-green-200">
-                      <div className="flex items-start gap-3">
-                        <Shield className="w-6 h-6 text-green-600 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-green-900 mb-1">Sustained Compliance</p>
-                          <p className="text-sm text-green-800">
-                            Maintained ATO for 3+ years with zero critical findings during annual assessments
-                          </p>
-                        </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-navy-900">Sustained Compliance</p>
+                        <p className="text-sm text-slate-700">3+ years with zero critical findings</p>
                       </div>
-                    </Card>
+                    </div>
                   </div>
+                </div>
+                
+                <div className="bg-gradient-to-r from-slate-100 to-orange-50 p-6 rounded-lg border-l-4 border-l-orange-600">
+                  <p className="text-slate-800 italic leading-relaxed">
+                    "NexDyne's expertise was instrumental in achieving our ATO on schedule. Their systematic 
+                    approach and deep knowledge of federal security requirements gave us confidence throughout 
+                    the process. They didn't just help us get authorized—they built our team's capability to 
+                    maintain compliance long-term."
+                  </p>
+                  <p className="text-sm text-slate-600 mt-3">— DHS Program Director</p>
                 </div>
               </div>
             </Card>
-            
-            <div className="mt-8 bg-navy-900 rounded-lg p-8 text-white">
-              <p className="text-lg mb-4">
-                <strong className="text-orange-400">"NexDyne's expertise was instrumental in achieving our ATO on schedule,"</strong> 
-                said the DHS Program Director. <em>"Their systematic approach and deep knowledge of federal security requirements 
-                gave us confidence throughout the process. They didn't just help us get authorized—they built our team's 
-                capability to maintain compliance long-term."</em>
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-navy-900 to-navy-800 text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
+        
+        <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Ready to Navigate Your ATO Journey?
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Choose a Contractor with ATO Expertise Built-In
             </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Don't let the authorization process delay your mission-critical project. 
-              Partner with NexDyne for expert ATO support that delivers results.
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              Don't risk project delays with contractors who treat ATO as an afterthought. Partner with 
+              NexDyne for implementation expertise that includes security authorization from day one.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
-                  Schedule Free ATO Assessment
+                  Discuss Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link href="/case-studies">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                  View More Case Studies
+                  View Case Studies
                 </Button>
               </Link>
             </div>
