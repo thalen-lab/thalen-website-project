@@ -31,10 +31,13 @@ export default function Navigation() {
   return (
     <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
       <div className="container">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <span className="text-2xl font-bold">Thalen Technologies - Govern Smart</span>
+            <span className="text-xl sm:text-2xl font-bold">
+              <span className="hidden sm:inline">Thalen Technologies - Govern Smart</span>
+              <span className="sm:hidden">Thalen Tech</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

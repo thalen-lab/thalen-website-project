@@ -141,7 +141,7 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[600px] overflow-hidden">
+      <section className="relative min-h-[500px] sm:h-[600px] overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover">
@@ -153,11 +153,11 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative container h-full flex items-center">
           <div className="max-w-3xl text-primary-foreground">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">Implementing FedRAMP & StateRAMP Solutions</h1>
-            <p className="text-xl md:text-2xl mb-10 text-white/95 leading-relaxed">Vendor-neutral consulting and systems integration for federal, state, and local government agencies</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">Implementing FedRAMP & StateRAMP Solutions</h1>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-white/95 leading-relaxed">Vendor-neutral consulting and systems integration for federal, state, and local government agencies</p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
                 <Link href="/contact">
                   Schedule Strategic Assessment
@@ -187,7 +187,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
               <Link
                 key={index}
@@ -289,7 +289,7 @@ export default function Home() {
           </motion.div>
 
           {/* Four Pillars Grid */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
             {/* Pillar 1: Rapid Assessment & Architecture */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-4">
@@ -64,7 +64,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="border-t border-primary-foreground/20 pt-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm opacity-90">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm opacity-90">
             <div className="flex items-start space-x-3">
               <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" />
               <div>
