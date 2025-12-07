@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Bot, FileCheck, Shield, GraduationCap, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Bot, FileCheck, Shield, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function RPA() {
@@ -13,29 +13,25 @@ export default function RPA() {
       icon: FileCheck,
       title: 'Process Assessment & Discovery',
       description: 'We identify high-value automation opportunities through comprehensive process analysis, ROI modeling, and feasibility assessment for government agencies (federal, state, and local).',
-      benefits: ['Process discovery workshops', 'Automation ROI analysis', 'Feasibility assessment'],
-      link: '/services/automation/rpa/process-assessment'
+      benefits: ['Process discovery workshops', 'Automation ROI analysis', 'Feasibility assessment']
     },
     {
       icon: Bot,
       title: 'RPA Platform Selection & Implementation',
       description: 'Vendor-neutral selection and implementation of FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov, Blue Prism Gov) tailored to your mission.',
-      benefits: ['FedRAMP platform selection', 'Bot development & deployment', 'System integration'],
-      link: '/services/automation/rpa/platform-implementation'
+      benefits: ['FedRAMP platform selection', 'Bot development & deployment', 'System integration']
     },
     {
       icon: Shield,
       title: 'ATO & Compliance Documentation',
       description: 'Complete security controls documentation, FedRAMP/FISMA compliance packages, and ATO support for RPA deployments in government environments.',
-      benefits: ['Security controls documentation', 'FedRAMP compliance packages', 'ATO support'],
-      link: '/services/automation/rpa/ato-compliance'
+      benefits: ['Security controls documentation', 'FedRAMP compliance packages', 'ATO support']
     },
     {
       icon: GraduationCap,
       title: 'RPA Center of Excellence (CoE) Setup',
       description: 'Establish governance frameworks, development standards, training programs, and ongoing support for sustainable enterprise RPA programs.',
-      benefits: ['Governance frameworks', 'Developer training programs', 'Best practices & standards'],
-      link: '/services/automation/rpa/coe-setup'
+      benefits: ['Governance frameworks', 'Developer training programs', 'Best practices & standards']
     }
   ];
 
@@ -114,34 +110,28 @@ export default function RPA() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Link href={service.link} className="block group h-full">
-                  <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
-                    <CardContent className="p-8">
-                      <div className="mb-6">
-                        <service.icon className="h-12 w-12 text-accent" />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4 text-white">
-                        {service.title}
-                      </h3>
-                      <p className="text-base text-white/80 leading-relaxed mb-6">
-                        {service.description}
-                      </p>
+                <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
+                  <CardContent className="p-8">
+                    <div className="mb-6">
+                      <service.icon className="h-12 w-12 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      {service.title}
+                    </h3>
+                    <p className="text-base text-white/80 leading-relaxed mb-6">
+                      {service.description}
+                    </p>
 
-                      <ul className="space-y-3 mb-8">
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-start text-sm text-white/80">
-                            <ArrowRight className="h-4 w-4 text-accent mt-0.5 mr-3 flex-shrink-0" />
-                            <span>{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      <div className="flex items-center text-accent text-sm font-semibold group-hover:gap-3 gap-2 transition-all">
-                        Learn More <ArrowRight className="h-4 w-4" />
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
+                    <ul className="space-y-3">
+                      {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start text-sm text-white/80">
+                          <ArrowRight className="h-4 w-4 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
@@ -165,98 +155,6 @@ export default function RPA() {
                   </div>
                 </div>
               ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FAR Compliance for RPA Services */}
-      <section className="py-16 bg-slate-50">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-navy-900 mb-3">Government Contracting Compliance</h2>
-              <p className="text-lg text-slate-700 max-w-2xl mx-auto">
-                Our RPA implementations comply with Federal Acquisition Regulation requirements for IT services.
-              </p>
-            </div>
-
-            <Card className="border-2 border-accent/20">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                      FAR Part 39 Compliance
-                    </h3>
-                    <p className="text-sm text-slate-700 mb-4">
-                      RPA implementations comply with FAR Part 39 (Acquisition of Information Technology) requirements governing IT professional services and cloud solutions.
-                    </p>
-                    <ul className="space-y-2 text-sm text-slate-700">
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span><strong>FAR 52.239-1:</strong> Privacy and security safeguards for RPA platforms</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span><strong>FAR 52.204-21:</strong> Basic safeguarding of contractor information systems</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                      Procurement Benefits
-                    </h3>
-                    <p className="text-sm text-slate-700 mb-4">
-                      Pre-established compliance frameworks enable faster contract execution and reduced oversight requirements for agency procurement officers.
-                    </p>
-                    <ul className="space-y-2 text-sm text-slate-700">
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>Streamlined task order awards under GSA Schedule contracts</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>Documented compliance reduces agency oversight burden</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Automate Your Government Operations?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Schedule an RPA assessment to discuss your agency's automation opportunities, evaluate FedRAMP platform options, and develop a roadmap for mission-critical automation.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
-                <Link href="/contact">
-                  Schedule Free Assessment
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
-                <Link href="/case-studies">
-                  View Success Stories
-                </Link>
-              </Button>
             </div>
           </motion.div>
         </div>
