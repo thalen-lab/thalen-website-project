@@ -2942,3 +2942,7 @@
 - [x] Apply benchmark template to Government RPA Implementation page
 - [x] Apply benchmark template to Enterprise Integration Services page
 - [x] Apply benchmark template to Workflow Orchestration page
+
+## Phase 48: Apply New Format to Additional Service Pages
+- [x] Apply new format to Data Analytics & Intelligence page
+- [x] Apply new format to Cloud Infrastructure & Modernization page

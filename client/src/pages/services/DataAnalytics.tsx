@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, BarChart3, Brain, Database, LineChart, Shield, Users, Award, TrendingUp } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, Database, LineChart, Shield, Users, Award, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 export default function DataAnalytics() {
   // Primary service offerings (4 core capabilities)
@@ -104,6 +104,57 @@ export default function DataAnalytics() {
     }
   ];
 
+  const implementationApproach = [
+    {
+      phase: '01',
+      title: 'Data Strategy & Assessment',
+      duration: '4-6 weeks',
+      description: 'Evaluate your existing data infrastructure and analytics capabilities—or implement FedRAMP BI platforms (Tableau Gov, Power BI Gov) when compliance requires it.',
+      deliverables: [
+        'Current state assessment',
+        'Data maturity evaluation',
+        'Platform recommendations',
+        'Implementation roadmap'
+      ]
+    },
+    {
+      phase: '02',
+      title: 'Platform Implementation',
+      duration: '8-12 weeks',
+      description: 'Deploy FedRAMP-authorized analytics platforms with custom dashboards, data source integration, and user training.',
+      deliverables: [
+        'Platform configuration',
+        'Dashboard development',
+        'Data source integration',
+        'User training & documentation'
+      ]
+    },
+    {
+      phase: '03',
+      title: 'Data Pipeline Development',
+      duration: '10-16 weeks',
+      description: 'Build automated data pipelines using FedRAMP ETL tools to consolidate data from legacy systems and ensure data quality.',
+      deliverables: [
+        'ETL pipeline development',
+        'Data quality frameworks',
+        'Automated monitoring',
+        'Performance optimization'
+      ]
+    },
+    {
+      phase: '04',
+      title: 'AI/ML Model Deployment',
+      duration: '12-20 weeks',
+      description: 'Deploy machine learning models for predictive analytics, fraud detection, and operational optimization using government-approved AI platforms.',
+      deliverables: [
+        'Model development & training',
+        'Explainable AI implementation',
+        'Model governance frameworks',
+        'Continuous monitoring'
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -116,10 +167,10 @@ export default function DataAnalytics() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Government Data Analytics & Intelligence
+              Data Analytics & Intelligence
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies implement FedRAMP-authorized analytics platforms, AI/ML models, and data pipelines that transform massive datasets into mission-critical intelligence. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
+              Optimize your existing data infrastructure and analytics capabilities—or implement FedRAMP BI platforms (Tableau Gov, Power BI Gov) when compliance requires it. Includes data strategy, governance, and custom dashboards.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -153,8 +204,48 @@ export default function DataAnalytics() {
         </div>
       </section>
 
-      {/* Primary Analytics Services */}
+      {/* Implementation Approach Section */}
       <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Implementation Approach</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              A phased methodology that balances quick wins with long-term transformation, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {implementationApproach.map((phase, index) => (
+              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-6 mb-6">
+                    <div className="text-6xl font-bold text-primary/20 leading-none">{phase.phase}</div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold mb-2">{phase.title}</h3>
+                      <p className="text-sm text-muted-foreground font-semibold">{phase.duration}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-muted-foreground mb-6">{phase.description}</p>
+                  
+                  <div className="space-y-3">
+                    <p className="text-sm font-semibold text-foreground">Key Deliverables:</p>
+                    {phase.deliverables.map((deliverable, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-sm">{deliverable}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Primary Analytics Services */}
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Analytics Implementation Services</h2>
@@ -196,7 +287,7 @@ export default function DataAnalytics() {
             <h3 className="text-2xl font-bold mb-8 text-center">Additional Analytics Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
+                <div key={index} className="flex items-start p-6 bg-secondary rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
                   <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-4"></span>
                   <div>
                     <h4 className="font-semibold mb-1">{capability.name}</h4>
@@ -210,7 +301,7 @@ export default function DataAnalytics() {
       </section>
 
       {/* Government Analytics Experience */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Analytics Implementation Success</h2>
@@ -227,7 +318,7 @@ export default function DataAnalytics() {
                   <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
                   <p className="text-lg font-bold text-accent mb-4">{exp.outcome}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{exp.details}</p>
+                  <p className="text-sm text-muted-foreground">{exp.details}</p>
                 </CardContent>
               </Card>
             ))}
@@ -235,8 +326,8 @@ export default function DataAnalytics() {
 
           <div className="text-center mt-12">
             <Link href="/case-studies">
-              <Button variant="outline" size="lg">
-                View All Analytics Case Studies
+              <Button size="lg" variant="outline" className="border-2">
+                View All Case Studies
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -244,24 +335,24 @@ export default function DataAnalytics() {
         </div>
       </section>
 
-      {/* FedRAMP Analytics Platform Expertise */}
-      <section className="py-20 bg-secondary">
+      {/* FedRAMP Platform Expertise */}
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Analytics Platform Expertise</h2>
+            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Analytics Platforms</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We implement and integrate FedRAMP-authorized analytics platforms from leading vendors, helping you select the right tools for your mission.
+              Deep implementation experience with 30+ FedRAMP-authorized analytics, BI, and AI/ML platforms. We help you select the RIGHT platforms for your mission requirements.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {fedrampPlatforms.map((category, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
+              <Card key={index} className="border-2">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold mb-4">{category.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
+                      <span key={idx} className="px-3 py-1 bg-secondary text-sm rounded-full border border-border">
                         {platform}
                       </span>
                     ))}
@@ -270,32 +361,22 @@ export default function DataAnalytics() {
               </Card>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
-              Plus 20+ additional FedRAMP-authorized analytics platforms including SAS Government, SPSS, Alteryx, and more.
-            </p>
-            <Link href="/partners">
-              <Button variant="outline" size="lg">
-                View All Analytics Platforms
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Contact us to discuss your agency's data analytics requirements and evaluate available platform options.
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Transform Your Data into Intelligence?
+          </h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Schedule a free assessment to evaluate your data maturity and identify quick wins for analytics implementation.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Assessment
+                Schedule Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -305,57 +386,6 @@ export default function DataAnalytics() {
               </Button>
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Case Study CTA */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-12">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Success Story
-            </div>
-            <h2 className="text-4xl font-bold mb-4">See Government Data Analytics in Action</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Learn how a state attorney general's office prevented $50M in fraud with CJIS-compliant real-time ML analytics processing 10M+ daily transactions.
-            </p>
-          </div>
-          <Card className="max-w-4xl mx-auto overflow-hidden hover:shadow-2xl transition-all active:scale-95">
-            <div className="grid md:grid-cols-2">
-              <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
-                <div className="inline-block bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
-                  State Government
-                </div>
-                <h3 className="text-3xl font-bold mb-4">State Attorney General Prevents $50M in Fraud</h3>
-                <p className="text-muted-foreground mb-6">
-                  Implemented CJIS-compliant fraud detection system processing 10M+ daily transactions with real-time ML analytics and preventing $50M in fraudulent activities annually.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  <div>
-                    <div className="text-3xl font-bold text-accent">$50M+</div>
-                    <div className="text-sm text-muted-foreground">Annual Fraud Prevented</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-accent">10M+</div>
-                    <div className="text-sm text-muted-foreground">Daily Transactions</div>
-                  </div>
-                </div>
-                <Link href="/case-studies/state-attorney-general">
-                  <Button size="lg" className="bg-orange-gradient hover:opacity-90 w-full">
-                    View Full Case Study
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </div>
-              <div className="relative h-64 md:h-auto">
-                <img 
-                  src="/financial-fraud-soc.a8f3d9e2.jpg" 
-                  alt="State Attorney General Fraud Detection"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </Card>
         </div>
       </section>
 
