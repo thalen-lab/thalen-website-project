@@ -10,22 +10,22 @@ export default function DigitalTransformation() {
   const primaryServices = [
     {
       icon: Target,
-      title: 'FedRAMP & StateRAMP Platform Selection',
-      description: 'We help agencies select optimal FedRAMP and StateRAMP platforms for their mission needs through vendor-neutral assessment, multi-year implementation roadmaps, and TCO analysis.',
+      title: 'Digital Transformation Strategy',
+      description: 'Develop comprehensive transformation strategies that maximize your existing technology investments—with FedRAMP/StateRAMP platform recommendations only when new capabilities and compliance requirements align with mission objectives and TCO analysis.',
       benefits: ['50+ FedRAMP/StateRAMP platform evaluations', 'Vendor-neutral recommendations', 'Multi-year strategic roadmap'],
       link: '/services/platform-selection'
     },
     {
       icon: Lightbulb,
       title: 'Legacy System Modernization',
-      description: 'We help agencies migrate from mainframe and legacy systems to modern FedRAMP and StateRAMP cloud platforms with zero business disruption and comprehensive change management.',
+      description: 'Modernize mainframe and legacy systems through incremental refactoring, API wrappers, and process optimization—preserving mission continuity and institutional knowledge without forced platform migrations or vendor lock-in.',
       benefits: ['Zero downtime migrations', 'Data integrity validation', 'User adoption programs'],
       link: '/services/legacy-modernization-dt'
     },
     {
       icon: Users,
       title: 'Change Management & Training',
-      description: 'Structured organizational change programs using proven frameworks (Prosci ADKAR, Kotter 8-Step) with role-based training and adoption strategies.',
+      description: 'Transform your existing operations through process redesign, change management, and workforce enablement—with technology platform changes introduced only when organizational readiness and mission needs align.',
       benefits: ['85% user adoption rate', 'Change champion programs', 'Executive governance'],
       link: '/services/change-management'
     },
@@ -116,10 +116,10 @@ export default function DigitalTransformation() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Federal IT Modernization & Transformation
+              Digital Transformation & Modernization
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
-              We guide federal, state, and local agencies through IT modernization with vendor-neutral platform selection, implementation roadmaps, change management, and Technology Modernization Fund (TMF) support. Transform legacy systems into modern, cloud-based operations.
+              Thalen Technologies delivers transformation through a dual approach: first, we modernize your existing operations through process redesign, change management, and technology optimization—with FedRAMP platforms implemented only when compliance requires it or new capabilities align with mission objectives. Vendor-neutral consulting with TMF support and proven adoption strategies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

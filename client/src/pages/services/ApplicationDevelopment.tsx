@@ -12,7 +12,7 @@ export default function ApplicationDevelopment() {
     {
       icon: Code2,
       title: "Custom Application Development",
-      description: "Mission-critical applications built for government agencies with FedRAMP authorization and TS/SCI cleared teams.",
+      description: "Build custom applications tailored to your mission requirements using modern frameworks—or integrate FedRAMP-authorized platforms when commercial capabilities align with your needs and vendor-neutral architecture prevents lock-in.",
       link: "/services/custom-application-development",
       benefits: [
         "FedRAMP-authorized development",
@@ -24,7 +24,7 @@ export default function ApplicationDevelopment() {
     {
       icon: Zap,
       title: "Low-Code/Rapid Application Development",
-      description: "Accelerate digital transformation with visual development platforms. Deploy applications in weeks, not years.",
+      description: "Rapidly prototype and deploy applications with custom low-code solutions—or implement FedRAMP low-code platforms (Appian Gov, OutSystems Gov) when compliance requires certified tools and governance at scale.",
       link: "/services/low-code-development",
       benefits: [
         "10x faster development",
@@ -36,7 +36,7 @@ export default function ApplicationDevelopment() {
     {
       icon: Rocket,
       title: "Legacy System Modernization",
-      description: "Transform aging COBOL and mainframe systems into modern, cloud-native applications while maintaining mission continuity.",
+      description: "Modernize your legacy COBOL and mainframe systems with API wrappers, microservices, and incremental refactoring—preserving mission continuity while reducing technical debt without forced platform migrations.",
       link: "/services/legacy-modernization",
       benefits: [
         "Zero-downtime migration",
@@ -60,7 +60,7 @@ export default function ApplicationDevelopment() {
     {
       icon: GitBranch,
       title: "System Integration & APIs",
-      description: "Connect legacy and modern systems with secure, scalable APIs and microservices architecture.",
+      description: "Integrate your existing systems with custom APIs and middleware—or connect FedRAMP platforms (Salesforce Gov, ServiceNow Gov, Workday) when enterprise orchestration and vendor ecosystems align with mission needs.",
       link: "/services/system-integration",
       benefits: [
         "Seamless data flow",
@@ -122,7 +122,7 @@ export default function ApplicationDevelopment() {
             </h1>
             
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Mission-critical applications for government agencies. Our TS/SCI cleared development teams deliver FedRAMP-authorized solutions with full ATO support, ensuring your applications meet the highest security and compliance standards.
+              Thalen Technologies delivers application solutions through a dual approach: first, we integrate and modernize your existing systems with custom APIs and workflows—then connect FedRAMP platforms (Salesforce Gov, ServiceNow Gov, Workday) when vendor-neutral architecture ensures no lock-in. Our TS/SCI cleared teams ensure compliance and mission continuity.
             </p>
             
             <div className="flex flex-wrap gap-4">

@@ -11,28 +11,28 @@ export default function DataAnalytics() {
     {
       icon: LineChart,
       title: 'Analytics Platform Implementation',
-      description: 'We implement FedRAMP-authorized analytics platforms (Tableau Government, Power BI Gov, Qlik Government) with real-time dashboards and mission intelligence.',
+      description: 'Optimize your existing analytics tools and dashboards first—or implement FedRAMP-authorized platforms (Tableau Government, Power BI Gov, Qlik Government) when compliance mandates it or your current tools lack needed capabilities.',
       benefits: ['FedRAMP platform selection', 'Custom dashboard development', 'Data source integration'],
       link: '/services/data-analytics/visualization'
     },
     {
       icon: Brain,
       title: 'AI/ML Model Development & Deployment',
-      description: 'Deploy machine learning models for predictive analytics, fraud detection, and operational optimization using government-approved AI platforms.',
+      description: 'Build custom ML models on your existing infrastructure and data science tools—or deploy FedRAMP AI/ML platforms (AWS SageMaker GovCloud, Azure ML Gov) when enterprise-scale model governance and compliance are required.',
       benefits: ['Explainable AI implementation', 'Model governance frameworks', 'Bias detection & mitigation'],
       link: '/services/data-analytics/ml-ai'
     },
     {
       icon: Database,
       title: 'Data Engineering & Pipeline Development',
-      description: 'Build scalable data pipelines using FedRAMP ETL tools (Informatica Gov, Talend, AWS Glue) for reliable, trusted data at operational scale.',
+      description: 'Modernize your existing data pipelines with custom ETL scripts and integrations—or implement FedRAMP ETL platforms (Informatica Gov, Talend, AWS Glue) when enterprise-scale data orchestration and governance are needed.',
       benefits: ['Automated data pipelines', 'Data quality frameworks', 'Real-time processing'],
       link: '/services/data-analytics/engineering'
     },
     {
       icon: BarChart3,
       title: 'Data Strategy & Governance',
-      description: 'Develop comprehensive data strategies aligned with mission objectives, including governance frameworks, data architecture, and analytics roadmaps.',
+      description: 'Develop comprehensive data strategies that maximize your existing data assets and infrastructure—with FedRAMP platform recommendations only when new capabilities align with mission objectives and compliance requirements.',
       benefits: ['6-week strategy assessment', '3-year implementation roadmap', 'Quick wins identification'],
       link: '/services/data-analytics/strategy'
     }
@@ -116,10 +116,10 @@ export default function DataAnalytics() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Government Data Analytics & Intelligence
+              Data Analytics & Intelligence
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies implement FedRAMP-authorized analytics platforms, AI/ML models, and data pipelines that transform massive datasets into mission-critical intelligence. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
+              Thalen Technologies delivers analytics through a dual approach: first, we optimize your existing data infrastructure and analytics capabilities—then implement FedRAMP-authorized BI platforms (Tableau Gov, Power BI Gov) when compliance requires it or new analytical capabilities are needed. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

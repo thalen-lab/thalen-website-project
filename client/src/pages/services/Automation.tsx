@@ -14,21 +14,21 @@ export default function Automation() {
     {
       icon: Bot,
       title: 'Government RPA Implementation',
-      description: 'Automate repetitive manual processes using robotic process automation—either with your existing tools or FedRAMP-authorized platforms when needed.',
+      description: 'Automate repetitive manual processes by optimizing your existing automation tools first, or implement FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov) when new capabilities or compliance requirements demand it.',
       benefits: ['Process assessment & discovery', 'Bot development & deployment', 'Integration with existing systems'],
       link: '/services/automation/rpa'
     },
     {
       icon: Network,
       title: 'Enterprise Integration Services',
-      description: 'Connect your existing government systems, databases, and applications with secure APIs, data synchronization, and compliance-ready integration patterns.',
+      description: 'Connect and modernize your existing government systems, databases, and applications with custom APIs and integration patterns—or implement FedRAMP iPaaS platforms (MuleSoft Gov, Boomi Gov) when enterprise-scale orchestration is required.',
       benefits: ['Legacy system connectivity', 'Custom API development', 'Data synchronization & governance'],
       link: '/services/automation/integration'
     },
     {
       icon: GitBranch,
       title: 'Workflow Orchestration',
-      description: 'Automate end-to-end business processes across multiple departments and systems with intelligent workflow orchestration and process optimization.',
+      description: 'Streamline your existing cross-departmental workflows through process redesign and optimization—or deploy FedRAMP workflow platforms (ServiceNow Gov, Appian Gov) when complex orchestration across legacy systems is needed.',
       benefits: ['Cross-system automation', 'Business process management', 'Real-time monitoring'],
       link: '/services/automation/orchestration'
     }
@@ -60,10 +60,10 @@ export default function Automation() {
               Core Service
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Government Process Automation
+              Intelligent Automation & Process Optimization
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              We help government agencies automate processes and workflows through two approaches: modernizing and optimizing your existing systems first, then implementing FedRAMP/StateRAMP-authorized platforms when needed.
+              Thalen Technologies delivers automation through a dual approach: first, we modernize and optimize your existing workflows, systems, and processes—then implement FedRAMP/StateRAMP-authorized platforms (UiPath Gov, Automation Anywhere Gov) only when new capabilities are needed or compliance requires it.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">

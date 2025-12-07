@@ -2937,3 +2937,11 @@
 - [ ] Rewrite StateDOT.tsx in editorial style
 - [x] Test all rewritten case study pages
 - [x] Verify consistency across all 22 case studies
+
+## Phase 67: Update Service Pages with Dual Approach Messaging
+- [x] Update Process Automation page hero and content to emphasize dual approach (modernizing existing systems AND implementing FedRAMP platforms)
+- [x] Update Data Analytics page hero and content to emphasize dual approach
+- [x] Update Cloud Infrastructure page hero and content to emphasize dual approach
+- [x] Update Cybersecurity page hero and content to emphasize dual approach
+- [x] Update Application Development page hero and content to emphasize dual approach
+- [x] Update Digital Transformation page hero and content to emphasize dual approach

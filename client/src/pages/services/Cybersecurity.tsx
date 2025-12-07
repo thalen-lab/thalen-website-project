@@ -11,28 +11,28 @@ export default function Cybersecurity() {
     {
       icon: FileSearch,
       title: 'CMMC & FedRAMP Compliance Implementation',
-      description: 'We help agencies and contractors achieve CMMC Level 2/3 certification and FedRAMP authorization through gap assessments, security control implementation, and ATO support.',
+      description: 'Strengthen your existing security controls and close compliance gaps through assessments and remediation—with FedRAMP-authorized tools recommended only when CMMC Level 2/3 or ATO requirements demand certified platforms.',
       benefits: ['CMMC gap assessment', 'Security controls implementation', 'ATO package preparation'],
       link: '/services/security-assessment'
     },
     {
       icon: Network,
       title: 'Zero Trust Architecture Implementation',
-      description: 'Deploy NIST 800-207 Zero Trust frameworks using FedRAMP-authorized security platforms with micro-segmentation, continuous verification, and identity-centric controls.',
+      description: 'Implement Zero Trust principles with your existing network infrastructure and security tools—or deploy FedRAMP Zero Trust platforms when micro-segmentation and continuous verification require enterprise-scale orchestration.',
       benefits: ['NIST 800-207 implementation', 'Micro-segmentation design', 'Identity-centric security'],
       link: '/services/zero-trust-architecture'
     },
     {
       icon: Eye,
       title: 'Security Operations Center (SOC) Setup',
-      description: 'Implement 24/7 security monitoring using FedRAMP SIEM/SOAR platforms (Splunk Gov, LogRhythm, Palo Alto Cortex) with automated threat detection and response.',
+      description: 'Build security monitoring capabilities with your existing log aggregation and detection tools—or implement FedRAMP SIEM/SOAR platforms (Splunk Gov, LogRhythm) when compliance or threat volume requires enterprise-grade correlation.',
       benefits: ['24/7 threat monitoring', 'SIEM/SOAR deployment', 'Automated incident response'],
       link: '/services/security-operations-center'
     },
     {
       icon: Lock,
       title: 'Identity & Access Management (IAM)',
-      description: 'Deploy Zero Trust identity solutions using FedRAMP IAM platforms with PIV/CAC integration, privileged access management, and identity governance.',
+      description: 'Modernize your existing identity and access controls with PIV/CAC integration and privilege management—or deploy FedRAMP IAM platforms (Okta Gov, Ping Identity Gov) when identity governance at scale is required.',
       benefits: ['PIV/CAC integration', 'Privileged access management', 'Identity governance frameworks'],
       link: '/services/identity-access-management'
     }
@@ -108,10 +108,10 @@ export default function Cybersecurity() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Government Cybersecurity & Compliance Services
+              Cybersecurity & Compliance
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies (federal, state, and local) and defense contractors implement FedRAMP and StateRAMP-authorized security platforms, achieve CMMC certification, and deploy Zero Trust architectures. Vendor-neutral consulting with cleared security professionals and proven ATO success.
+              Thalen Technologies delivers security through a dual approach: first, we strengthen your existing security posture with gap assessments, control implementation, and compliance frameworks—then deploy FedRAMP security platforms (Splunk Gov, CrowdStrike Gov) when compliance mandates it or threat models require certified tools. Vendor-neutral consulting with cleared security professionals and proven ATO success.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

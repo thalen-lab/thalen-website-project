@@ -10,29 +10,29 @@ export default function Cloud() {
   const primaryServices = [
     {
       icon: RefreshCw,
-      title: 'FedRAMP Cloud Migration Services',
-      description: 'We help agencies migrate to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) with zero downtime and full ATO support.',
+      title: 'Cloud Migration & Modernization',
+      description: 'Modernize your on-premises infrastructure with hybrid cloud architectures first—or migrate to FedRAMP-authorized platforms (AWS GovCloud, Azure Government, Google Cloud) when compliance mandates it or operational needs require cloud-native capabilities.',
       benefits: ['Zero business disruption', 'ATO package preparation', 'Multi-vendor platform expertise'],
       link: '/services/cloud-migration'
     },
     {
       icon: Globe,
       title: 'Multi-Cloud Integration & Orchestration',
-      description: 'Vendor-neutral architecture design and implementation across multiple FedRAMP platforms with unified management and seamless interoperability.',
+      description: 'Integrate your existing on-premises and cloud infrastructure with unified management—or implement multi-cloud FedRAMP architectures when workload distribution and vendor diversification align with mission requirements.',
       benefits: ['Best-of-breed platform selection', 'Unified management layer', 'Workload portability'],
       link: '/services/multi-cloud'
     },
     {
       icon: Shield,
       title: 'Cloud Security & Compliance Implementation',
-      description: 'Deploy and configure FedRAMP-authorized security tools with CMMC, FISMA, and NIST 800-53 compliance frameworks for mission-critical workloads.',
+      description: 'Strengthen your existing infrastructure security posture with NIST 800-53 controls and compliance frameworks—with FedRAMP-authorized security tools deployed only when compliance requirements or threat models demand certified platforms.',
       benefits: ['FedRAMP High implementation', 'CMMC Level 2/3 readiness', 'Continuous monitoring setup'],
       link: '/services/cloud-security'
     },
     {
       icon: GitBranch,
       title: 'Infrastructure as Code (IaC) Implementation',
-      description: 'Implement automated infrastructure provisioning using Terraform, CloudFormation, and Ansible for consistent, auditable deployments.',
+      description: 'Automate your existing infrastructure provisioning with custom scripts and configuration management—or implement enterprise IaC platforms (Terraform Enterprise, CloudFormation) when governance and compliance require centralized control.',
       benefits: ['Automated provisioning', 'Version-controlled infrastructure', 'Compliance-ready templates'],
       link: '/services/infrastructure-as-code'
     }
@@ -100,10 +100,10 @@ export default function Cloud() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              FedRAMP Cloud Migration & Integration
+              Cloud Infrastructure & Modernization
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help federal, state, and local government agencies implement FedRAMP-authorized cloud platforms through vendor-neutral consulting, systems integration, and ATO support. Zero-downtime migrations with full compliance documentation.
+              Thalen Technologies delivers cloud transformation through a dual approach: first, we modernize your on-premises infrastructure with hybrid architectures and legacy system optimization—then migrate to FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it or compliance requires it. Zero-downtime migrations with full ATO support.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
