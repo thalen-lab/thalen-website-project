@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Shield, Users, Bot, Network, GitBranch } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Shield, Users, Bot, Network, GitBranch, FileText, Search, Workflow, Settings } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Automation() {
@@ -36,10 +36,10 @@ export default function Automation() {
 
   // Additional capabilities (compact format)
   const additionalCapabilities = [
-    { name: 'Intelligent Document Processing (IDP)', description: 'AI-powered document extraction and classification for unstructured data' },
-    { name: 'Process Mining & Discovery', description: 'Identify automation opportunities through process analytics and mining' },
-    { name: 'Hyperautomation Strategy', description: 'Combine RPA, AI/ML, OCR, and workflow tools for end-to-end automation' },
-    { name: 'Bot Maintenance & Support', description: 'Ongoing monitoring, optimization, and scaling of automation solutions' }
+    { icon: FileText, name: 'Intelligent Document Processing (IDP)', description: 'AI-powered document extraction and classification for unstructured data' },
+    { icon: Search, name: 'Process Mining & Discovery', description: 'Identify automation opportunities through process analytics and mining' },
+    { icon: Workflow, name: 'Hyperautomation Strategy', description: 'Combine RPA, AI/ML, OCR, and workflow tools for end-to-end automation' },
+    { icon: Settings, name: 'Bot Maintenance & Support', description: 'Ongoing monitoring, optimization, and scaling of automation solutions' }
   ];
 
 
@@ -156,7 +156,7 @@ export default function Automation() {
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
                 <div key={index} className="flex items-start p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
-                  <ArrowRight className="h-4 w-4 text-accent mt-1 mr-4 flex-shrink-0" />
+                  <capability.icon className="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold mb-1 text-white">{capability.name}</h4>
                     <p className="text-sm text-white/70">{capability.description}</p>

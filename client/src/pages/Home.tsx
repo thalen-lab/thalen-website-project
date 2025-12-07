@@ -197,7 +197,7 @@ export default function Home() {
                 <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <service.icon className="h-12 w-12 text-accent" />
+                      <service.icon className="h-14 w-14 text-accent" />
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-white">
                       {service.title}
@@ -302,8 +302,8 @@ export default function Home() {
               <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <TrendingUp className="h-8 w-8 text-accent" />
+                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                      <TrendingUp className="h-10 w-10 text-accent" />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       Rapid Assessment & Architecture
@@ -314,19 +314,19 @@ export default function Home() {
                   </p>
                   <ul className="space-y-3 text-slate-700">
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Stakeholder alignment workshops</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Compliance gap analysis (FedRAMP, CMMC, FISMA)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Platform-agnostic solution design</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Detailed implementation roadmap with milestones</span>
                     </li>
                   </ul>
@@ -345,8 +345,8 @@ export default function Home() {
               <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <Shield className="h-8 w-8 text-accent" />
+                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                      <Shield className="h-10 w-10 text-accent" />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       Security-Native Implementation
@@ -357,19 +357,19 @@ export default function Home() {
                   </p>
                   <ul className="space-y-3 text-slate-700">
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>FedRAMP/StateRAMP-authorized platforms only</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Zero-trust architecture by default</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Complete ATO documentation packages</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>NIST 800-53 controls implementation</span>
                     </li>
                   </ul>
@@ -388,8 +388,8 @@ export default function Home() {
               <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <Code className="h-8 w-8 text-accent" />
+                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                      <Code className="h-10 w-10 text-accent" />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       Vendor-Agnostic Solutions
@@ -400,19 +400,19 @@ export default function Home() {
                   </p>
                   <ul className="space-y-3 text-slate-700">
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Independent platform evaluation and selection</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Multi-vendor integration expertise</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Avoid vendor lock-in with open standards</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Full knowledge transfer and documentation</span>
                     </li>
                   </ul>
@@ -431,8 +431,8 @@ export default function Home() {
               <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <Users className="h-8 w-8 text-accent" />
+                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                      <Users className="h-10 w-10 text-accent" />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       Cleared Team Execution
@@ -443,19 +443,19 @@ export default function Home() {
                   </p>
                   <ul className="space-y-3 text-slate-700">
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Top Secret/SCI cleared team members available</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Deep federal procurement expertise (GSA Schedule 70)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Experience across 20+ federal agencies</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Proven change management and training delivery</span>
                     </li>
                   </ul>

@@ -150,7 +150,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <Card>
                   <CardContent className="p-6 flex items-start">
-                    <Phone className="h-6 w-6 text-accent mr-4 mt-1" />
+                    <Phone className="h-7 w-7 text-accent mr-4 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
                       <p className="text-muted-foreground">+1 (555) 123-4567</p>
@@ -161,7 +161,7 @@ export default function Contact() {
 
                 <Card>
                   <CardContent className="p-6 flex items-start">
-                    <Mail className="h-6 w-6 text-accent mr-4 mt-1" />
+                    <Mail className="h-7 w-7 text-accent mr-4 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <p className="text-muted-foreground">contact@thalen.tech</p>
@@ -172,7 +172,7 @@ export default function Contact() {
 
                 <Card>
                   <CardContent className="p-6 flex items-start">
-                    <MapPin className="h-6 w-6 text-accent mr-4 mt-1" />
+                    <MapPin className="h-7 w-7 text-accent mr-4 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Headquarters</h3>
                       <p className="text-muted-foreground">

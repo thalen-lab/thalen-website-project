@@ -311,8 +311,8 @@ export default function About() {
               >
                 <Card className="text-center hover:shadow-xl transition-shadow h-full">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
-                      <value.icon className="h-8 w-8 text-accent" />
+                    <div className="w-20 h-20 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
+                      <value.icon className="h-10 w-10 text-accent" />
                     </div>
                     <div className="text-5xl font-bold text-accent/20 mb-2">{value.letter}</div>
                     <h3 className="text-xl font-bold mb-3">{value.title}</h3>
@@ -405,8 +405,8 @@ export default function About() {
             >
               <Card className="text-center hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-blue-500" />
+                  <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-10 w-10 text-blue-500" />
                   </div>
                   <h3 className="text-lg font-bold mb-3">FedRAMP Expert</h3>
                   <p className="text-sm text-muted-foreground">
@@ -424,8 +424,8 @@ export default function About() {
             >
               <Card className="text-center hover:shadow-xl transition-shadow h-full border-2 border-accent/30">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-accent" />
+                  <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-10 w-10 text-accent" />
                   </div>
                   <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3">
                     STATE & LOCAL
@@ -446,8 +446,8 @@ export default function About() {
             >
               <Card className="text-center hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-blue-500" />
+                  <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-10 w-10 text-blue-500" />
                   </div>
                   <h3 className="text-lg font-bold mb-3">CMMC Certified</h3>
                   <p className="text-sm text-muted-foreground">
@@ -465,8 +465,8 @@ export default function About() {
             >
               <Card className="text-center hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-blue-500" />
+                  <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-10 w-10 text-blue-500" />
                   </div>
                   <h3 className="text-lg font-bold mb-3">CJIS Compliant</h3>
                   <p className="text-sm text-muted-foreground">
