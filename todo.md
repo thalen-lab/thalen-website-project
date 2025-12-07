@@ -2734,3 +2734,11 @@
 ## Phase 208: Add Signature Hover Effects to ATO Support Cards
 - [x] Add signature hover effects to FedRAMP Advantages card
 - [x] Add signature hover effects to Agency Responsibilities card
+
+## Phase 210: Update ATO Support Page Design - Remove Orange Accents & Add Navy Backgrounds
+- [x] Change phase badge backgrounds from orange (bg-accent) to neutral slate
+- [x] Update phase badge text color to match neutral styling
+- [x] Add deep navy blue background (bg-navy-gradient) to selected sections
+- [x] Ensure text colors are appropriate for dark backgrounds (white/slate-300)
+- [x] Test visual hierarchy and readability
+- [ ] Save checkpoint
