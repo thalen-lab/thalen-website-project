@@ -163,7 +163,7 @@ export default function DataAnalytics() {
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -174,13 +174,13 @@ export default function DataAnalytics() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
                   Request Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/services/data-analytics/assessment">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
                   Take Data Maturity Assessment
                 </Button>
               </Link>
@@ -189,200 +189,243 @@ export default function DataAnalytics() {
         </div>
       </section>
 
-      {/* Key Differentiators */}
-      <section className="py-16 bg-background">
+      {/* Value Propositions */}
+      <section className="py-16 md:py-20 bg-background">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             {keyDifferentiators.map((item, index) => (
-              <div key={index} className="text-center">
-                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
+              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
+                <div className="flex justify-center mb-6">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                    <item.icon className="h-8 w-8 text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-center">{item.title}</h3>
+                <p className="text-muted-foreground text-center leading-relaxed">{item.description}</p>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Implementation Approach Section */}
-      <section className="py-20 bg-secondary">
+      {/* Our Implementation Approach */}
+      <section className="py-16 md:py-20 bg-muted">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Implementation Approach</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Implementation Approach</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
               A phased methodology that balances quick wins with long-term transformation, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {implementationApproach.map((phase, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6 mb-6">
-                    <div className="text-6xl font-bold text-primary/20 leading-none">{phase.phase}</div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-2">{phase.title}</h3>
-                      <p className="text-sm text-muted-foreground font-semibold">{phase.duration}</p>
+              <Card key={index} className="p-8">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="text-6xl font-bold text-muted-foreground/20">{phase.phase}</div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2">{phase.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">{phase.duration}</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">{phase.description}</p>
+                <div className="space-y-2">
+                  <p className="font-semibold mb-3">Key Deliverables:</p>
+                  {phase.deliverables.map((deliverable, idx) => (
+                    <div key={idx} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">{deliverable}</span>
                     </div>
-                  </div>
-                  
-                  <p className="text-muted-foreground mb-6">{phase.description}</p>
-                  
-                  <div className="space-y-3">
-                    <p className="text-sm font-semibold text-foreground">Key Deliverables:</p>
-                    {phase.deliverables.map((deliverable, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{deliverable}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
+                  ))}
+                </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Primary Analytics Services */}
-      <section className="py-20 bg-background">
+      {/* Core Analytics Implementation Services */}
+      <section className="py-16 md:py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Analytics Implementation Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Core Analytics Implementation Services</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
               End-to-end analytics capabilities from strategy to deployment, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {primaryServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
-                <CardContent className="p-8">
-                  <service.icon className="h-16 w-16 text-primary mb-6" />
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start text-sm">
-                        <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-2"></span>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link href={service.link}>
-                    <Button variant="outline" className="w-full border-2 border-dashed border-primary/30 hover:border-accent hover:bg-accent/5">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Additional Capabilities - Compact Format */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Additional Analytics Capabilities</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-secondary rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-4"></span>
-                  <div>
-                    <h4 className="font-semibold mb-1">{capability.name}</h4>
-                    <p className="text-sm text-muted-foreground">{capability.description}</p>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Analytics Platform Implementation */}
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <BarChart3 className="h-8 w-8 text-primary" />
                 </div>
-              ))}
-            </div>
+                <h3 className="text-2xl font-bold">Analytics Platform Implementation</h3>
+              </div>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                We implement FedRAMP-authorized analytics platforms (Tableau Government, Power BI Gov, Qlik Government) with real-time dashboards and mission intelligence.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">FedRAMP platform selection</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Custom dashboard development</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Data source integration</span>
+                </li>
+              </ul>
+              <Link href="/services/data-analytics/visualization">
+                <Button variant="outline" className="w-full group">
+                  Learn More 
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </Card>
+
+            {/* AI/ML Model Development & Deployment */}
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Brain className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold">AI/ML Model Development & Deployment</h3>
+              </div>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Deploy machine learning models for predictive analytics, fraud detection, and operational optimization using government-approved AI platforms.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Explainable AI implementation</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Model governance frameworks</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Bias detection & mitigation</span>
+                </li>
+              </ul>
+              <Link href="/services/data-analytics/ml-ai">
+                <Button variant="outline" className="w-full group">
+                  Learn More 
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Government Analytics Experience */}
-      <section className="py-20 bg-secondary">
+      {/* Additional Analytics Capabilities */}
+      <section className="py-16 md:py-20 bg-muted">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Government Analytics Implementation Success</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Additional Analytics Capabilities</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {additionalCapabilities.map((capability, index) => (
+              <Card key={index} className="p-6">
+                <h3 className="text-xl font-bold mb-2">{capability.name}</h3>
+                <p className="text-sm text-muted-foreground mb-4">{capability.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Government Analytics Implementation Success */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Government Analytics Implementation Success</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Experience implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {governmentExperience.map((exp, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
-                <CardContent className="p-8">
-                  <TrendingUp className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
-                  <p className="text-lg font-bold text-accent mb-4">{exp.outcome}</p>
-                  <p className="text-sm text-muted-foreground">{exp.details}</p>
-                </CardContent>
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                    <div>
+                      <h3 className="text-xl font-bold">{exp.agency}</h3>
+                      <p className="text-sm text-muted-foreground">{exp.project}</p>
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <p className="text-3xl font-bold text-accent mb-2">{exp.outcome}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{exp.details}</p>
+                  </div>
+                </div>
               </Card>
             ))}
           </div>
 
           <div className="text-center mt-12">
             <Link href="/case-studies">
-              <Button size="lg" variant="outline" className="border-2">
-                View All Case Studies
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button variant="outline" size="lg" className="group">
+                View All Case Studies 
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* FedRAMP Platform Expertise */}
-      <section className="py-20 bg-background">
+      {/* FedRAMP-Authorized Analytics Platforms */}
+      <section className="py-16 md:py-20 bg-muted">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Analytics Platforms</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">FedRAMP-Authorized Analytics Platforms</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Deep implementation experience with 30+ FedRAMP-authorized analytics, BI, and AI/ML platforms. We help you select the RIGHT platforms for your mission requirements.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {fedrampPlatforms.map((category, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">{category.category}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-secondary text-sm rounded-full border border-border">
-                        {platform}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
+              <Card key={index} className="p-8">
+                <h3 className="text-2xl font-bold mb-6">{category.category}</h3>
+                <div className="flex flex-wrap gap-3">
+                  {category.platforms.map((platform, idx) => (
+                    <span key={idx} className="px-4 py-2 bg-muted rounded-full text-sm font-medium">
+                      {platform}
+                    </span>
+                  ))}
+                </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+       {/* Final CTA */}
+      <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Data into Intelligence?
-          </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Schedule a free assessment to evaluate your data maturity and identify quick wins for analytics implementation.
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Data Analytics?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Schedule a free data maturity assessment to discover how analytics and AI/ML can accelerate your mission.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
+                Schedule Assessment <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link href="/services/data-analytics/assessment">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Take Data Maturity Assessment
+            <Link href="/resources">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
+                Download Analytics Guide
               </Button>
             </Link>
           </div>

@@ -2949,3 +2949,25 @@
 
 ## Phase: Fix All Routes
 - [x] Fix all routes in App.tsx and ensure proper navigation
+
+## Phase 53: Update Data Analytics Solution Page with New Design
+- [ ] Update Data Analytics & Intelligence page with new design from Thalen Technologies reference
+- [ ] Add hero section with navy gradient background and Implementation Services badge
+- [ ] Add three value proposition cards (FedRAMP Analytics, Vendor-Neutral Consulting, Mission-Focused Outcomes)
+- [ ] Add Our Implementation Approach section with 4-phase methodology cards
+- [ ] Add Core Analytics Implementation Services section with 2 service cards
+- [ ] Add Additional Analytics Capabilities section with 4 capability cards
+- [ ] Add Government Analytics Implementation Success section with 3 case study cards
+- [ ] Add FedRAMP-Authorized Analytics Platforms section with platform categories
+- [ ] Test all sections and responsive design
+
+## Phase 53: Update Data Analytics Solution Page Design
+- [x] Update Data Analytics page hero section with white badge styling
+- [x] Update value propositions section with centered icons and improved card design
+- [x] Update implementation approach section to match new design
+- [x] Update Core Analytics Services section to show 2 main cards with simplified layout
+- [x] Update Additional Analytics Capabilities section with 4 capability cards
+- [x] Update Government Analytics Success section with improved case study cards
+- [x] Update FedRAMP Platforms section with platform categories and pill badges
+- [x] Update final CTA section styling
+- [x] Test all sections and verify design matches reference documents
