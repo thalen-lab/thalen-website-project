@@ -24,20 +24,19 @@ export default function ATOSupport() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 opacity-95" />
+      <section className="relative pt-32 pb-20 overflow-hidden bg-navy-gradient">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
         
         <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">
               <Shield className="w-4 h-4" />
               ATO Support Built Into Every Implementation
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Implementation Expertise
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 mt-2">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-600 mt-2">
                 Plus ATO Authorization
               </span>
             </h1>
@@ -50,13 +49,13 @@ export default function ATOSupport() {
             
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
                   Discuss Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link href="/methodology">
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
                   View RAPID Framework
                 </Button>
               </Link>
@@ -74,7 +73,7 @@ export default function ATOSupport() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
-              <AlertCircle className="w-8 h-8 text-orange-600" />
+              <AlertCircle className="w-8 h-8 text-accent" />
               <h2 className="text-4xl font-bold text-navy-900">Why ATO Expertise Matters</h2>
             </div>
             
@@ -86,7 +85,7 @@ export default function ATOSupport() {
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <Card className="p-6 border-l-4 border-l-red-500">
+              <Card className="p-6 border border-slate-200 hover:border-red-500 hover:shadow-lg transition-all duration-300 bg-white">
                 <h3 className="text-xl font-bold text-navy-900 mb-3">The Contractor Gap</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
@@ -108,7 +107,7 @@ export default function ATOSupport() {
                 </ul>
               </Card>
               
-              <Card className="p-6 border-l-4 border-l-orange-500">
+              <Card className="p-6 border border-slate-200 hover:border-accent hover:shadow-lg transition-all duration-300 bg-white">
                 <h3 className="text-xl font-bold text-navy-900 mb-3">The Cost of Delays</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
@@ -131,7 +130,7 @@ export default function ATOSupport() {
               </Card>
             </div>
             
-            <div className="bg-slate-100 rounded-lg p-6 border-l-4 border-l-navy-600">
+            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg p-6 border border-accent/20">
               <p className="text-lg text-slate-800 font-medium">
                 <strong className="text-navy-900">NexDyne's Advantage:</strong> When agencies select NexDyne 
                 for implementation contracts, they choose a contractor who builds ATO authorization into the 
@@ -149,7 +148,7 @@ export default function ATOSupport() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-6">
-                <Target className="w-8 h-8 text-orange-600" />
+                <Target className="w-8 h-8 text-accent" />
                 <h2 className="text-4xl font-bold text-navy-900">ATO Support Throughout Implementation</h2>
               </div>
               <p className="text-xl text-slate-700 max-w-3xl mx-auto">
@@ -160,11 +159,11 @@ export default function ATOSupport() {
             
             <div className="grid gap-8">
               {/* Phase 1 */}
-              <Card className="p-8 hover:shadow-xl transition-shadow">
+              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-orange-600">1</span>
+                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-accent">1</span>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -202,11 +201,11 @@ export default function ATOSupport() {
               </Card>
               
               {/* Phase 2 */}
-              <Card className="p-8 hover:shadow-xl transition-shadow">
+              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-orange-600">2</span>
+                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-accent">2</span>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -244,11 +243,11 @@ export default function ATOSupport() {
               </Card>
               
               {/* Phase 3 */}
-              <Card className="p-8 hover:shadow-xl transition-shadow">
+              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-orange-600">3</span>
+                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-accent">3</span>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -286,11 +285,11 @@ export default function ATOSupport() {
               </Card>
               
               {/* Phase 4 */}
-              <Card className="p-8 hover:shadow-xl transition-shadow">
+              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-orange-600">4</span>
+                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-accent">4</span>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -336,7 +335,7 @@ export default function ATOSupport() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
-              <Zap className="w-8 h-8 text-orange-600" />
+              <Zap className="w-8 h-8 text-accent" />
               <h2 className="text-4xl font-bold text-navy-900">Leveraging FedRAMP & StateRAMP</h2>
             </div>
             
@@ -387,7 +386,7 @@ export default function ATOSupport() {
                 </ul>
               </Card>
               
-              <Card className="p-6 border-l-4 border-l-orange-500">
+              <Card className="p-6 border border-slate-200 hover:border-accent hover:shadow-lg transition-all duration-300 bg-white">
                 <h3 className="text-xl font-bold text-navy-900 mb-3">Agency Responsibilities</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
@@ -418,7 +417,7 @@ export default function ATOSupport() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <Clock className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+              <Clock className="w-12 h-12 text-accent mx-auto mb-4" />
               <h2 className="text-4xl font-bold text-navy-900 mb-4">Realistic ATO Timelines</h2>
               <p className="text-xl text-slate-700">
                 Timeline varies based on authorization level, system complexity, and organizational readiness. 
@@ -428,20 +427,20 @@ export default function ATOSupport() {
             </div>
             
             <div className="space-y-6">
-              <Card className="p-6 hover:shadow-lg transition-shadow">
+              <Card className="p-6 border border-slate-200 hover:border-accent hover:shadow-lg transition-all duration-300 bg-white">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-navy-900">FISMA Low</h3>
-                  <span className="text-2xl font-bold text-orange-600">6-8 months</span>
+                  <span className="text-2xl font-bold text-accent">6-8 months</span>
                 </div>
                 <p className="text-slate-700">
                   Fewer controls, simpler assessment. Ideal for low-impact systems with limited sensitive data.
                 </p>
               </Card>
               
-              <Card className="p-6 hover:shadow-lg transition-shadow">
+              <Card className="p-6 border border-slate-200 hover:border-accent hover:shadow-lg transition-all duration-300 bg-white">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-navy-900">FISMA Moderate (FedRAMP-leveraged)</h3>
-                  <span className="text-2xl font-bold text-orange-600">8-10 months</span>
+                  <span className="text-2xl font-bold text-accent">8-10 months</span>
                 </div>
                 <p className="text-slate-700">
                   Standard federal systems using FedRAMP platforms. Most common authorization level for 
@@ -449,10 +448,10 @@ export default function ATOSupport() {
                 </p>
               </Card>
               
-              <Card className="p-6 hover:shadow-lg transition-shadow">
+              <Card className="p-6 border border-slate-200 hover:border-accent hover:shadow-lg transition-all duration-300 bg-white">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-navy-900">FISMA High / DoD IL-4</h3>
-                  <span className="text-2xl font-bold text-orange-600">10-14 months</span>
+                  <span className="text-2xl font-bold text-accent">10-14 months</span>
                 </div>
                 <p className="text-slate-700">
                   Extensive controls, rigorous testing. Required for high-impact systems with significant 
@@ -460,10 +459,10 @@ export default function ATOSupport() {
                 </p>
               </Card>
               
-              <Card className="p-6 hover:shadow-lg transition-shadow">
+              <Card className="p-6 border border-slate-200 hover:border-accent hover:shadow-lg transition-all duration-300 bg-white">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-navy-900">DoD IL-5 / Top Secret</h3>
-                  <span className="text-2xl font-bold text-orange-600">12-18 months</span>
+                  <span className="text-2xl font-bold text-accent">12-18 months</span>
                 </div>
                 <p className="text-slate-700">
                   Maximum security requirements for classified systems. Requires specialized facilities, 
@@ -472,9 +471,9 @@ export default function ATOSupport() {
               </Card>
             </div>
             
-            <div className="mt-8 bg-gradient-to-br from-navy-900 to-navy-800 rounded-lg p-8 text-white">
+            <div className="mt-8 bg-navy-gradient rounded-lg p-8 text-white">
               <div className="flex items-start gap-4">
-                <Award className="w-12 h-12 text-orange-400 flex-shrink-0" />
+                <Award className="w-12 h-12 text-accent flex-shrink-0" />
                 <div>
                   <h3 className="text-2xl font-bold mb-3">NexDyne's Track Record</h3>
                   <p className="text-slate-200 leading-relaxed">
@@ -501,22 +500,22 @@ export default function ATOSupport() {
               </p>
             </div>
             
-            <Card className="p-8 border-t-4 border-t-orange-600">
+            <Card className="p-8 border border-slate-200 hover:border-accent hover:shadow-lg transition-all duration-300 bg-white">
               <h3 className="text-2xl font-bold text-navy-900 mb-4">
                 Department of Homeland Security: Critical Infrastructure Platform
               </h3>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center p-6 bg-slate-50 rounded-lg">
-                  <div className="text-4xl font-bold text-orange-600 mb-2">9 months</div>
+                  <div className="text-4xl font-bold text-accent mb-2">9 months</div>
                   <div className="text-sm text-slate-600">Assessment to ATO</div>
                 </div>
                 <div className="text-center p-6 bg-slate-50 rounded-lg">
-                  <div className="text-4xl font-bold text-orange-600 mb-2">FISMA High</div>
+                  <div className="text-4xl font-bold text-accent mb-2">FISMA High</div>
                   <div className="text-sm text-slate-600">Authorization Level</div>
                 </div>
                 <div className="text-center p-6 bg-slate-50 rounded-lg">
-                  <div className="text-4xl font-bold text-orange-600 mb-2">$2.4M</div>
+                  <div className="text-4xl font-bold text-accent mb-2">$2.4M</div>
                   <div className="text-sm text-slate-600">Saved vs. Delays</div>
                 </div>
               </div>
@@ -536,19 +535,19 @@ export default function ATOSupport() {
                   <h4 className="text-lg font-bold text-navy-900 mb-2">The Challenge</h4>
                   <ul className="space-y-2 text-slate-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-orange-600 mt-1">•</span>
+                      <span className="text-accent mt-1">•</span>
                       <span>Complex hybrid cloud architecture spanning AWS GovCloud and on-premises systems</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-orange-600 mt-1">•</span>
+                      <span className="text-accent mt-1">•</span>
                       <span>Integration with 12 external data sources requiring boundary protection</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-orange-600 mt-1">•</span>
+                      <span className="text-accent mt-1">•</span>
                       <span>Limited internal security documentation and control evidence</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-orange-600 mt-1">•</span>
+                      <span className="text-accent mt-1">•</span>
                       <span>12-month project timeline with ATO as critical milestone</span>
                     </li>
                   </ul>
@@ -612,7 +611,7 @@ export default function ATOSupport() {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-r from-slate-100 to-orange-50 p-6 rounded-lg border-l-4 border-l-orange-600">
+                <div className="bg-gradient-to-r from-slate-100 to-accent/10 p-6 rounded-lg border-l-4 border-l-accent">
                   <p className="text-slate-800 italic leading-relaxed">
                     "NexDyne's expertise was instrumental in achieving our ATO on schedule. Their systematic 
                     approach and deep knowledge of federal security requirements gave us confidence throughout 
@@ -628,7 +627,7 @@ export default function ATOSupport() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
+      <section className="py-20 bg-navy-gradient relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
         
         <div className="container relative z-10 mx-auto px-4">
@@ -642,13 +641,13 @@ export default function ATOSupport() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
                   Discuss Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link href="/case-studies">
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
                   View Case Studies
                 </Button>
               </Link>
