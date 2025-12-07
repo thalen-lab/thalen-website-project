@@ -8,7 +8,7 @@ import RelatedServices from "@/components/RelatedServices";
 export default function EnterprisePortals() {
   const benefits = [
     { icon: Globe, title: "Section 508 Compliant", description: "Fully accessible portals meeting federal accessibility requirements for all users." },
-    { icon: Users, title: "24/7 Self-Service", description: "Reduce call center volume and provide citizens with 24/7 access to services and information." },
+    { icon: Users, title: "24/7 Self-Service", description: "Reduce call center volume and empower citizens with 24/7 access to services and information." },
     { icon: Shield, title: "Secure Authentication", description: "Multi-factor authentication, Login.gov integration, and role-based access control." },
     { icon: Clock, title: "Mobile-Responsive", description: "Optimized for all devices—desktop, tablet, and mobile—ensuring access anywhere, anytime." }
   ];
@@ -87,7 +87,7 @@ export default function EnterprisePortals() {
       <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Build Your Enterprise Portal?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Schedule a consultation to explore how portals can improve your citizen and employee experience.</p>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Schedule a consultation to explore how portals can transform your citizen and employee experience.</p>
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-white"><Link href="/contact">Schedule Free Consultation</Link></Button>
         </div>
       </section>

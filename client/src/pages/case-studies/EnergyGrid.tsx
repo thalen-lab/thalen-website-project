@@ -179,7 +179,7 @@ export default function EnergyGrid() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                Thalen Technologies's smart grid solution improved our operations and customer experience. The 60% reduction in outages has dramatically improved reliability, and the AI-powered renewable integration enables us to meet our sustainability goals while maintaining grid stability. This is the foundation for our next 40 years.
+                Thalen Technologies's smart grid solution transformed our operations and customer experience. The 60% reduction in outages has dramatically improved reliability, and the AI-powered renewable integration enables us to meet our sustainability goals while maintaining grid stability. This is the foundation for our next 40 years.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">

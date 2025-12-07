@@ -20,7 +20,7 @@ interface AssessmentFormProps {
   serviceType?: string;
 }
 
-const STORAGE_KEY = "thalen_assessment_form";
+const STORAGE_KEY = "nexdyne_assessment_form";
 
 export default function AssessmentForm({ 
   title = "Request Free Assessment",

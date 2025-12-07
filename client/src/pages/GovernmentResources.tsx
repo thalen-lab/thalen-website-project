@@ -6,14 +6,12 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { 
-  FileText, Download, Shield, Calculator, 
+  FileText, Download, CheckCircle2, Shield, Calculator, 
   BookOpen, ClipboardCheck, TrendingUp, Cloud, Lock,
-  DollarSign, Clock, Users, ArrowRight, Building2,
-  CheckCircle2, AlertCircle, BarChart3, Target, Info, Circle
+  DollarSign, Clock, Users, ArrowRight 
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -35,7 +33,6 @@ export default function GovernmentResources() {
 
   const [cloudROI, setCloudROI] = useState<any>(null);
   const [automationROI, setAutomationROI] = useState<any>(null);
-  const [roiScenario, setRoiScenario] = useState<'conservative' | 'moderate' | 'aggressive'>('moderate');
 
   // CMMC Checklist State
   const [cmmcChecklist, setCmmcChecklist] = useState<{[key: string]: boolean}>({});
@@ -68,51 +65,21 @@ export default function GovernmentResources() {
       return;
     }
 
-    // Scenario-based assumptions (based on DHS research)
-    const scenarios = {
-      conservative: {
-        infrastructureReduction: 0.25,  // 25% cost reduction
-        fteReduction: 0.40,             // 40% FTE reduction
-        downtimeReduction: 0.60,        // 60% downtime reduction
-        migrationCostMultiplier: 0.22,  // 22% of annual cost
-        productivityGain: 0.10          // 10% productivity gain
-      },
-      moderate: {
-        infrastructureReduction: 0.35,  // 35% cost reduction
-        fteReduction: 0.50,             // 50% FTE reduction
-        downtimeReduction: 0.70,        // 70% downtime reduction
-        migrationCostMultiplier: 0.18,  // 18% of annual cost
-        productivityGain: 0.15          // 15% productivity gain
-      },
-      aggressive: {
-        infrastructureReduction: 0.45,  // 45% cost reduction
-        fteReduction: 0.60,             // 60% FTE reduction
-        downtimeReduction: 0.80,        // 80% downtime reduction
-        migrationCostMultiplier: 0.15,  // 15% of annual cost
-        productivityGain: 0.20          // 20% productivity gain
-      }
-    };
-
-    const scenario = scenarios[roiScenario];
-
-    // Calculate savings
-    const cloudCost = current * (1 - scenario.infrastructureReduction);
+    // Typical cloud savings: 30-40% infrastructure cost reduction
+    const cloudCost = current * 0.65; // 35% reduction
     const infrastructureSavings = current - cloudCost;
 
-    // FTE savings: reduction percentage * 2080 hours/year * $75/hour average
-    const fteSavings = (fte * scenario.fteReduction) * 2080 * 75;
+    // FTE savings: typically 50% reduction in maintenance staff
+    const fteSavings = (fte * 0.5) * 2080 * 75; // 50% reduction, 2080 hours/year, $75/hour
 
-    // Downtime reduction savings
-    const downtimeSavings = (downtime * scenario.downtimeReduction) * hourlyCost;
+    // Downtime reduction: typically 70% reduction
+    const downtimeSavings = (downtime * 0.7) * hourlyCost;
 
-    // Productivity gains from faster deployment and scalability
-    const productivityGains = (infrastructureSavings + fteSavings) * scenario.productivityGain;
-
-    const totalAnnualSavings = infrastructureSavings + fteSavings + downtimeSavings + productivityGains;
+    const totalAnnualSavings = infrastructureSavings + fteSavings + downtimeSavings;
     const threeYearSavings = totalAnnualSavings * 3;
     
-    // Migration cost
-    const migrationCost = current * scenario.migrationCostMultiplier;
+    // Typical migration cost: 15-20% of annual infrastructure cost
+    const migrationCost = current * 0.18;
     const netSavings = threeYearSavings - migrationCost;
     const roi = ((netSavings / migrationCost) * 100).toFixed(0);
     const paybackMonths = ((migrationCost / totalAnnualSavings) * 12).toFixed(1);
@@ -121,14 +88,12 @@ export default function GovernmentResources() {
       infrastructureSavings: infrastructureSavings.toFixed(0),
       fteSavings: fteSavings.toFixed(0),
       downtimeSavings: downtimeSavings.toFixed(0),
-      productivityGains: productivityGains.toFixed(0),
       totalAnnualSavings: totalAnnualSavings.toFixed(0),
       threeYearSavings: threeYearSavings.toFixed(0),
       migrationCost: migrationCost.toFixed(0),
       netSavings: netSavings.toFixed(0),
       roi,
-      paybackMonths,
-      scenario: roiScenario
+      paybackMonths
     });
 
     toast.success('ROI calculated successfully!');
@@ -145,51 +110,24 @@ export default function GovernmentResources() {
       return;
     }
 
-    // Scenario-based assumptions (based on government automation research)
-    const scenarios = {
-      conservative: {
-        timeReduction: 0.75,      // 75% time reduction
-        errorReduction: 0.85,     // 85% error reduction
-        productivityGain: 0.12,   // 12% productivity gain
-        implementationMultiplier: 0.55  // 55% of first-year savings
-      },
-      moderate: {
-        timeReduction: 0.85,      // 85% time reduction
-        errorReduction: 0.90,     // 90% error reduction
-        productivityGain: 0.15,   // 15% productivity gain
-        implementationMultiplier: 0.45  // 45% of first-year savings
-      },
-      aggressive: {
-        timeReduction: 0.92,      // 92% time reduction
-        errorReduction: 0.95,     // 95% error reduction
-        productivityGain: 0.20,   // 20% productivity gain
-        implementationMultiplier: 0.35  // 35% of first-year savings
-      }
-    };
-
-    const scenario = scenarios[roiScenario];
-
     // Calculate time savings
     const hoursPerMonth = (processes * minutes) / 60;
     const annualHours = hoursPerMonth * 12;
-    const timeSavings = annualHours * hourlyRate * scenario.timeReduction;
+    const timeSavings = annualHours * hourlyRate * 0.85; // 85% time reduction typical
 
     // Calculate error reduction savings
-    const errorCostPerProcess = 25; // Average $25 per error to fix (government context)
+    const errorCostPerProcess = 15; // Average $15 per error to fix
     const currentErrorCost = (processes * 12) * (errorRate / 100) * errorCostPerProcess;
-    const errorReduction = currentErrorCost * scenario.errorReduction;
+    const errorReduction = currentErrorCost * 0.90; // 90% error reduction
 
     // Calculate productivity gains
-    const productivityGain = timeSavings * scenario.productivityGain;
+    const productivityGain = timeSavings * 0.15; // 15% additional productivity
 
-    // Compliance and audit benefits (10% of time savings)
-    const complianceBenefits = timeSavings * 0.10;
-
-    const totalAnnualSavings = timeSavings + errorReduction + productivityGain + complianceBenefits;
+    const totalAnnualSavings = timeSavings + errorReduction + productivityGain;
     const threeYearSavings = totalAnnualSavings * 3;
     
-    // Implementation cost
-    const implementationCost = totalAnnualSavings * scenario.implementationMultiplier;
+    // Typical implementation cost
+    const implementationCost = annualHours * 50; // $50/hour for implementation
     const netSavings = threeYearSavings - implementationCost;
     const roi = ((netSavings / implementationCost) * 100).toFixed(0);
     const paybackMonths = ((implementationCost / totalAnnualSavings) * 12).toFixed(1);
@@ -198,15 +136,13 @@ export default function GovernmentResources() {
       timeSavings: timeSavings.toFixed(0),
       errorReduction: errorReduction.toFixed(0),
       productivityGain: productivityGain.toFixed(0),
-      complianceBenefits: complianceBenefits.toFixed(0),
       totalAnnualSavings: totalAnnualSavings.toFixed(0),
       threeYearSavings: threeYearSavings.toFixed(0),
       implementationCost: implementationCost.toFixed(0),
       netSavings: netSavings.toFixed(0),
       roi,
       paybackMonths,
-      hoursPerMonth: hoursPerMonth.toFixed(0),
-      scenario: roiScenario
+      hoursPerMonth: hoursPerMonth.toFixed(0)
     });
 
     toast.success('ROI calculated successfully!');
@@ -222,57 +158,62 @@ export default function GovernmentResources() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section - RUXI Rule #2: Government Agency Positioning */}
+      {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Building2 className="h-4 w-4" />
-              Trusted by Federal, State & Local Government Agencies
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              Government Buyer Resources
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Government Resources Hub
+              Resources Hub for Government IT Decision-Makers
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Comprehensive tools, compliance guides, and ROI calculators designed specifically for government agencies navigating digital transformation, cloud migration, and cybersecurity compliance.
+              Comprehensive guides, interactive checklists, and ROI calculators to support informed procurement decisions for federal, state, and local government agencies.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="#calculators">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                  Explore ROI Calculators
-                  <Calculator className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="#guides">
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                  <span className="transition-colors duration-300 group-hover:text-accent">HIPAA Compliance Guide</span>
-                  <BookOpen className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Links - Editorial Style */}
-      <section className="py-16 bg-background border-t">
-        <div className="container max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
-            <a href="#guides" className="group block border-b border-border pb-6 transition-all duration-300 hover:border-accent">
-              <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-accent">Compliance Guides</h3>
-              <p className="text-muted-foreground">FedRAMP, CMMC, StateRAMP</p>
+      {/* Quick Links */}
+      <section className="py-12 bg-secondary">
+        <div className="container">
+          <div className="grid md:grid-cols-4 gap-6">
+            <a href="#guides" className="block">
+              <Card className="hover:border-accent transition-colors cursor-pointer h-full">
+                <CardContent className="p-6 text-center">
+                  <BookOpen className="h-10 w-10 text-accent mx-auto mb-3" />
+                  <h3 className="font-bold mb-2">Compliance Guides</h3>
+                  <p className="text-sm text-muted-foreground">FedRAMP, CMMC, StateRAMP</p>
+                </CardContent>
+              </Card>
             </a>
-            <a href="#checklists" className="group block border-b border-border pb-6 transition-all duration-300 hover:border-accent">
-              <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-accent">Interactive Checklists</h3>
-              <p className="text-muted-foreground">Readiness assessments</p>
+            <a href="#checklists" className="block">
+              <Card className="hover:border-accent transition-colors cursor-pointer h-full">
+                <CardContent className="p-6 text-center">
+                  <ClipboardCheck className="h-10 w-10 text-accent mx-auto mb-3" />
+                  <h3 className="font-bold mb-2">Interactive Checklists</h3>
+                  <p className="text-sm text-muted-foreground">Readiness assessments</p>
+                </CardContent>
+              </Card>
             </a>
-            <a href="#calculators" className="group block border-b border-border pb-6 transition-all duration-300 hover:border-accent">
-              <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-accent">ROI Calculators</h3>
-              <p className="text-muted-foreground">Cloud, automation, security</p>
+            <a href="#calculators" className="block">
+              <Card className="hover:border-accent transition-colors cursor-pointer h-full">
+                <CardContent className="p-6 text-center">
+                  <Calculator className="h-10 w-10 text-accent mx-auto mb-3" />
+                  <h3 className="font-bold mb-2">ROI Calculators</h3>
+                  <p className="text-sm text-muted-foreground">Cloud, automation, security</p>
+                </CardContent>
+              </Card>
             </a>
-            <a href="#procurement" className="group block border-b border-border pb-6 transition-all duration-300 hover:border-accent">
-              <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-accent">Procurement Guides</h3>
-              <p className="text-muted-foreground">Federal & state/local</p>
+            <a href="#procurement" className="block">
+              <Card className="hover:border-accent transition-colors cursor-pointer h-full">
+                <CardContent className="p-6 text-center">
+                  <FileText className="h-10 w-10 text-accent mx-auto mb-3" />
+                  <h3 className="font-bold mb-2">Procurement Guides</h3>
+                  <p className="text-sm text-muted-foreground">Federal & state/local</p>
+                </CardContent>
+              </Card>
             </a>
           </div>
         </div>
@@ -290,11 +231,11 @@ export default function GovernmentResources() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* FedRAMP ATO Guide */}
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
+            <Card className="border-2">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Shield className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
-                  <span className="transition-colors duration-300 group-hover:text-accent">FedRAMP ATO Process Guide</span>
+                  <Shield className="h-6 w-6 text-accent mr-3" />
+                  FedRAMP ATO Process Guide
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -303,23 +244,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">FedRAMP authorization levels (Low, Moderate, High)</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">System Security Plan (SSP) development</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Security assessment and authorization process</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Continuous monitoring requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Timeline and cost estimates</span>
                   </div>
                 </div>
@@ -338,11 +279,11 @@ export default function GovernmentResources() {
             </Card>
 
             {/* CMMC Readiness Guide */}
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
+            <Card className="border-2">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Lock className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
-                  <span className="transition-colors duration-300 group-hover:text-accent">CMMC Readiness Guide</span>
+                  <Lock className="h-6 w-6 text-accent mr-3" />
+                  CMMC Readiness Guide
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -351,23 +292,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">CMMC Level 2 and Level 3 requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">NIST 800-171 compliance mapping</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Gap assessment and remediation planning</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Third-party assessment preparation</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Cost and timeline planning</span>
                   </div>
                 </div>
@@ -386,11 +327,11 @@ export default function GovernmentResources() {
             </Card>
 
             {/* StateRAMP Guide */}
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
+            <Card className="border-2">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Shield className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
-                  <span className="transition-colors duration-300 group-hover:text-accent">StateRAMP Compliance Guide</span>
+                  <Shield className="h-6 w-6 text-accent mr-3" />
+                  StateRAMP Compliance Guide
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -399,23 +340,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">StateRAMP authorization process overview</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Differences from FedRAMP requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">State-specific compliance requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Security control implementation</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Assessment and authorization timeline</span>
                   </div>
                 </div>
@@ -434,11 +375,11 @@ export default function GovernmentResources() {
             </Card>
 
             {/* CJIS Compliance Guide */}
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
+            <Card className="border-2">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Lock className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
-                  <span className="transition-colors duration-300 group-hover:text-accent">CJIS Compliance Guide</span>
+                  <Lock className="h-6 w-6 text-accent mr-3" />
+                  CJIS Compliance Guide
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -447,23 +388,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">CJIS Security Policy requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Personnel screening and training</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Advanced authentication requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Audit logging and monitoring</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Cloud service provider compliance</span>
                   </div>
                 </div>
@@ -484,260 +425,6 @@ export default function GovernmentResources() {
         </div>
       </section>
 
-      {/* StateRAMP vs FedRAMP Comparison */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">StateRAMP vs. FedRAMP: Strategic Comparison</h2>
-            <p className="text-xl text-muted-foreground">
-              Understanding the key differences to make informed cloud security authorization decisions
-            </p>
-          </div>
-
-          {/* Overview Cards */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Shield className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
-                  <span className="transition-colors duration-300 group-hover:text-accent">FedRAMP (Federal)</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  The Federal Risk and Authorization Management Program standardizes cloud security assessment and authorization for <strong>federal government agencies</strong>.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm"><strong>Mandatory</strong> for federal agencies</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm">Managed by GSA (General Services Administration)</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm">Timeline: <strong>12-18 months</strong> typical</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm">Cost: <strong>$250K-$3M+</strong> (by impact level)</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm">Access to $50B+ federal cloud market</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Building2 className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
-                  <span className="transition-colors duration-300 group-hover:text-accent">StateRAMP (State & Local)</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  StateRAMP provides FedRAMP-equivalent security authorization for cloud services used by <strong>state and local government agencies</strong>.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm"><strong>Preferred</strong> by state/local agencies</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm">Managed by non-profit organization</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm">Timeline: <strong>4-6 months</strong> typical</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm">Cost: <strong>30-50% less</strong> than FedRAMP</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span className="text-sm">"Authorize once, use many times" across states</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Detailed Comparison Table */}
-          <Card className="border-2">
-            <CardHeader>
-              <CardTitle>Detailed Comparison</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b">
-                      <th className="text-left p-3 font-semibold">Feature</th>
-                      <th className="text-left p-3 font-semibold">FedRAMP</th>
-                      <th className="text-left p-3 font-semibold">StateRAMP</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b">
-                      <td className="p-3 font-medium">Primary Customer</td>
-                      <td className="p-3">Federal government agencies</td>
-                      <td className="p-3">State and local governments, educational institutions</td>
-                    </tr>
-                    <tr className="border-b bg-secondary/30">
-                      <td className="p-3 font-medium">Governing Body</td>
-                      <td className="p-3">GSA (federal mandate)</td>
-                      <td className="p-3">Non-profit organization (not federal)</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="p-3 font-medium">Authorization Process</td>
-                      <td className="p-3">JAB P-ATO or Agency ATO</td>
-                      <td className="p-3">Simplified, state-level authorization</td>
-                    </tr>
-                    <tr className="border-b bg-secondary/30">
-                      <td className="p-3 font-medium">Security Baseline</td>
-                      <td className="p-3">NIST SP 800-53 (federal)</td>
-                      <td className="p-3">NIST SP 800-53 (same baseline)</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="p-3 font-medium">Timeline</td>
-                      <td className="p-3">12-18 months (can extend to 24+)</td>
-                      <td className="p-3">4-6 months (faster pathway)</td>
-                    </tr>
-                    <tr className="border-b bg-secondary/30">
-                      <td className="p-3 font-medium">Initial Cost</td>
-                      <td className="p-3">$250K-$3M+ (by impact level)</td>
-                      <td className="p-3">$150K-$400K (30-50% less)</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="p-3 font-medium">Annual Maintenance</td>
-                      <td className="p-3">$100K-$1M+ (continuous monitoring)</td>
-                      <td className="p-3">Lower ongoing costs</td>
-                    </tr>
-                    <tr className="border-b bg-secondary/30">
-                      <td className="p-3 font-medium">Authorization Expiration</td>
-                      <td className="p-3">Annual reassessment required</td>
-                      <td className="p-3">StateRAMP Ready status does not expire</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="p-3 font-medium">Fast Track Option</td>
-                      <td className="p-3">N/A</td>
-                      <td className="p-3">Yes, for FedRAMP-authorized CSPs</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Decision Guide */}
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Target className="h-6 w-6 text-foreground mr-3" />
-                  When to Choose FedRAMP
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span>Serving federal agencies (mandatory requirement)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span>Targeting broad federal market access</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span>Handling federal data classification needs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span>Multi-year federal contracts</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Target className="h-6 w-6 text-foreground mr-3" />
-                  When to Choose StateRAMP
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span>Serving state and local government agencies</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span>Cost-effective authorization pathway</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span>Faster market entry (4-6 months)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
-                    <span>Regional or state-specific operations</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* State-Specific Programs */}
-          <Card className="border-2 mt-8">
-            <CardHeader>
-              <CardTitle>State-Specific RAMP Programs</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground mb-4">
-                Several states have developed their own versions of StateRAMP tailored to local requirements:
-              </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="p-4 bg-secondary rounded-lg">
-                  <div className="font-semibold mb-1">TX-RAMP</div>
-                  <div className="text-xs text-muted-foreground">Texas Department of Information Resources</div>
-                </div>
-                <div className="p-4 bg-secondary rounded-lg">
-                  <div className="font-semibold mb-1">AZ-RAMP</div>
-                  <div className="text-xs text-muted-foreground">Arizona Department of Administration</div>
-                </div>
-                <div className="p-4 bg-secondary rounded-lg">
-                  <div className="font-semibold mb-1">GA-RAMP</div>
-                  <div className="text-xs text-muted-foreground">Georgia Technology Authority</div>
-                </div>
-                <div className="p-4 bg-secondary rounded-lg">
-                  <div className="font-semibold mb-1">OH-RAMP</div>
-                  <div className="text-xs text-muted-foreground">Ohio state-specific framework</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <div className="text-center mt-12">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Get FedRAMP/StateRAMP Guidance
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Interactive Checklists */}
       <section id="checklists" className="py-20 bg-secondary">
         <div className="container max-w-4xl">
@@ -753,7 +440,7 @@ export default function GovernmentResources() {
               <div className="flex justify-between items-start">
                 <div>
                   <CardTitle className="flex items-center mb-2">
-                    <ClipboardCheck className="h-6 w-6 text-foreground mr-3" />
+                    <ClipboardCheck className="h-6 w-6 text-accent mr-3" />
                     CMMC Level 2 Readiness Checklist
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
@@ -822,73 +509,6 @@ export default function GovernmentResources() {
             </p>
           </div>
 
-          {/* Scenario Selector */}
-          <Card className="mb-8 border-2 bg-secondary/50">
-            <CardContent className="p-6">
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Target className="h-5 w-5 text-foreground" />
-                    <h3 className="font-semibold text-lg">ROI Scenario</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Select an assumption scenario based on your organization's risk tolerance and transformation goals.
-                  </p>
-                </div>
-                <div className="w-full md:w-64">
-                  <Select value={roiScenario} onValueChange={(value: any) => setRoiScenario(value)}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select scenario" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="conservative">
-                        <div className="flex items-center gap-2">
-                          <AlertCircle className="h-4 w-4" />
-                          <span>Conservative</span>
-                        </div>
-                      </SelectItem>
-                      <SelectItem value="moderate">
-                        <div className="flex items-center gap-2">
-                          <BarChart3 className="h-4 w-4" />
-                          <span>Moderate (Recommended)</span>
-                        </div>
-                      </SelectItem>
-                      <SelectItem value="aggressive">
-                        <div className="flex items-center gap-2">
-                          <TrendingUp className="h-4 w-4" />
-                          <span>Aggressive</span>
-                        </div>
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-              <div className="mt-4 grid md:grid-cols-3 gap-3 text-xs">
-                <div className="flex items-start gap-2 p-3 bg-background rounded-lg">
-                  <Info className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Conservative</div>
-                    <div className="text-muted-foreground">Lower savings estimates, higher implementation costs. Best for risk-averse organizations.</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2 p-3 bg-background rounded-lg">
-                  <Info className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Moderate</div>
-                    <div className="text-muted-foreground">Industry-standard assumptions based on government agency benchmarks.</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2 p-3 bg-background rounded-lg">
-                  <Info className="h-4 w-4 text-foreground mt-0.5 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-1">Aggressive</div>
-                    <div className="text-muted-foreground">Higher savings potential with optimized implementation. Requires strong change management.</div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
           <Tabs defaultValue="cloud" className="w-full">
             <TabsList className="grid w-full grid-cols-2 mb-8">
               <TabsTrigger value="cloud">Cloud Migration ROI</TabsTrigger>
@@ -898,10 +518,10 @@ export default function GovernmentResources() {
             {/* Cloud Migration Calculator */}
             <TabsContent value="cloud">
               <div className="grid lg:grid-cols-2 gap-8">
-                <Card className="border-2 transition-all duration-300 hover:border-accent group">
+                <Card className="border-2">
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <Cloud className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
+                      <Cloud className="h-6 w-6 text-accent mr-3" />
                       Cloud Migration Inputs
                     </CardTitle>
                   </CardHeader>
@@ -953,17 +573,17 @@ export default function GovernmentResources() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 transition-all duration-300 hover:border-accent group">
+                <Card className="border-2">
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <TrendingUp className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
+                      <TrendingUp className="h-6 w-6 text-accent mr-3" />
                       Projected ROI Results
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     {cloudROI ? (
                       <div className="space-y-6">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 gap-4">
                           <div className="text-center p-4 bg-secondary rounded-lg">
                             <DollarSign className="h-6 w-6 text-accent mx-auto mb-2" />
                             <div className="text-2xl font-bold text-accent">${parseInt(cloudROI.totalAnnualSavings).toLocaleString()}</div>
@@ -999,16 +619,9 @@ export default function GovernmentResources() {
                             <span className="text-muted-foreground">Downtime Reduction:</span>
                             <span className="font-semibold">${parseInt(cloudROI.downtimeSavings).toLocaleString()}/year</span>
                           </div>
-                          <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Productivity Gains:</span>
-                            <span className="font-semibold">${parseInt(cloudROI.productivityGains).toLocaleString()}/year</span>
-                          </div>
                           <div className="flex justify-between text-sm pt-3 border-t">
                             <span className="text-muted-foreground">Estimated Migration Cost:</span>
                             <span className="font-semibold">${parseInt(cloudROI.migrationCost).toLocaleString()}</span>
-                          </div>
-                          <div className="flex justify-between text-xs text-muted-foreground pt-2">
-                            <span>Scenario: {cloudROI.scenario.charAt(0).toUpperCase() + cloudROI.scenario.slice(1)}</span>
                           </div>
                         </div>
 
@@ -1033,10 +646,10 @@ export default function GovernmentResources() {
             {/* Automation Calculator */}
             <TabsContent value="automation">
               <div className="grid lg:grid-cols-2 gap-8">
-                <Card className="border-2 transition-all duration-300 hover:border-accent group">
+                <Card className="border-2">
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <Users className="h-6 w-6 text-foreground mr-3" />
+                      <Users className="h-6 w-6 text-accent mr-3" />
                       Automation Inputs
                     </CardTitle>
                   </CardHeader>
@@ -1088,17 +701,17 @@ export default function GovernmentResources() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 transition-all duration-300 hover:border-accent group">
+                <Card className="border-2">
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <TrendingUp className="h-6 w-6 text-foreground mr-3 transition-colors duration-300 group-hover:text-accent" />
+                      <TrendingUp className="h-6 w-6 text-accent mr-3" />
                       Projected ROI Results
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     {automationROI ? (
                       <div className="space-y-6">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 gap-4">
                           <div className="text-center p-4 bg-secondary rounded-lg">
                             <DollarSign className="h-6 w-6 text-accent mx-auto mb-2" />
                             <div className="text-2xl font-bold text-accent">${parseInt(automationROI.totalAnnualSavings).toLocaleString()}</div>
@@ -1123,27 +736,20 @@ export default function GovernmentResources() {
 
                         <div className="space-y-3 pt-4 border-t">
                           <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Time Savings:</span>
+                            <span className="text-muted-foreground">Time Savings (85% reduction):</span>
                             <span className="font-semibold">${parseInt(automationROI.timeSavings).toLocaleString()}/year</span>
                           </div>
                           <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Error Reduction:</span>
+                            <span className="text-muted-foreground">Error Reduction (90%):</span>
                             <span className="font-semibold">${parseInt(automationROI.errorReduction).toLocaleString()}/year</span>
                           </div>
                           <div className="flex justify-between text-sm">
                             <span className="text-muted-foreground">Productivity Gains:</span>
                             <span className="font-semibold">${parseInt(automationROI.productivityGain).toLocaleString()}/year</span>
                           </div>
-                          <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Compliance & Audit Benefits:</span>
-                            <span className="font-semibold">${parseInt(automationROI.complianceBenefits).toLocaleString()}/year</span>
-                          </div>
                           <div className="flex justify-between text-sm pt-3 border-t">
                             <span className="text-muted-foreground">Estimated Implementation Cost:</span>
                             <span className="font-semibold">${parseInt(automationROI.implementationCost).toLocaleString()}</span>
-                          </div>
-                          <div className="flex justify-between text-xs text-muted-foreground pt-2">
-                            <span>Scenario: {automationROI.scenario.charAt(0).toUpperCase() + automationROI.scenario.slice(1)}</span>
                           </div>
                         </div>
 
@@ -1179,9 +785,9 @@ export default function GovernmentResources() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
+            <Card className="border-2">
               <CardHeader>
-                <CardTitle className="transition-colors duration-300 group-hover:text-accent">Federal Procurement Process</CardTitle>
+                <CardTitle>Federal Procurement Process</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -1189,23 +795,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">GSA Schedule procurement process</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">IDIQ and BPA contract vehicles</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Set-aside contracts (8(a), SDVOSB, WOSB)</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Past performance evaluation criteria</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Compliance and security requirements</span>
                   </div>
                 </div>
@@ -1216,9 +822,9 @@ export default function GovernmentResources() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 transition-all duration-300 hover:border-accent group">
+            <Card className="border-2">
               <CardHeader>
-                <CardTitle className="transition-colors duration-300 group-hover:text-accent">State & Local Procurement Process</CardTitle>
+                <CardTitle>State & Local Procurement Process</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -1226,23 +832,23 @@ export default function GovernmentResources() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Cooperative purchasing contracts (NASPO, Sourcewell)</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">State master agreement process</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Local vendor preferences and requirements</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">State-specific compliance (StateRAMP, CJIS)</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-1.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-foreground mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm">RFP response best practices</span>
                   </div>
                 </div>

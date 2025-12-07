@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, json, boolean } from "drizzle-orm/mysql-core";
+import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -250,65 +250,3 @@ export const media = mysqlTable("media", {
 
 export type Media = typeof media.$inferSelect;
 export type InsertMedia = typeof media.$inferInsert;
-
-/**
- * Push notification subscriptions table
- * Stores user push notification subscriptions for web push
- */
-export const pushSubscriptions = mysqlTable("push_subscriptions", {
-  id: int("id").autoincrement().primaryKey(),
-  /** User ID from users table (nullable for anonymous subscriptions) */
-  userId: int("userId"),
-  /** Push subscription endpoint URL */
-  endpoint: text("endpoint").notNull(),
-  /** Push subscription keys (p256dh and auth) stored as JSON */
-  keys: json("keys").notNull(),
-  
-  // Notification preferences stored as JSON
-  preferences: json("preferences").notNull(),
-  
-  // Metadata
-  userAgent: text("userAgent"),
-  deviceType: varchar("deviceType", { length: 50 }), // 'ios', 'android', 'desktop'
-  isActive: boolean("isActive").default(true).notNull(),
-  
-  // Timestamps
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-  lastNotificationAt: timestamp("lastNotificationAt"),
-});
-
-export type PushSubscription = typeof pushSubscriptions.$inferSelect;
-export type InsertPushSubscription = typeof pushSubscriptions.$inferInsert;
-
-/**
- * Notification history table
- * Tracks sent notifications for analytics and debugging
- */
-export const notificationHistory = mysqlTable("notification_history", {
-  id: int("id").autoincrement().primaryKey(),
-  subscriptionId: int("subscriptionId"),
-  
-  // Notification content
-  title: varchar("title", { length: 255 }).notNull(),
-  body: text("body").notNull(),
-  icon: varchar("icon", { length: 500 }),
-  badge: varchar("badge", { length: 500 }),
-  data: json("data"), // Custom data payload
-  
-  // Notification metadata
-  category: varchar("category", { length: 50 }), // 'case_study', 'event', 'assessment', 'general'
-  clickUrl: varchar("clickUrl", { length: 1000 }),
-  
-  // Status
-  status: mysqlEnum("status", ["pending", "sent", "failed", "clicked"]).default("pending").notNull(),
-  errorMessage: text("errorMessage"),
-  
-  // Timestamps
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  sentAt: timestamp("sentAt"),
-  clickedAt: timestamp("clickedAt"),
-});
-
-export type NotificationHistory = typeof notificationHistory.$inferSelect;
-export type InsertNotificationHistory = typeof notificationHistory.$inferInsert;

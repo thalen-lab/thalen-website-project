@@ -307,7 +307,7 @@ export default function CountyHealthDepartmentCaseStudy() {
         <div className="container max-w-4xl text-center">
           <div className="text-6xl mb-6">"</div>
           <blockquote className="text-2xl md:text-3xl font-medium mb-8 italic">
-            Thalen Technologies's health data integration platform has significantly improved our public health response capabilities. The 40% improvement in outbreak detection time has been critical for protecting our 2.5 million residents, and the automated state reporting has eliminated countless hours of manual work. Their deep understanding of HIPAA requirements and health IT standards was essential to our success.
+            Thalen Technologies's health data integration platform has revolutionized our public health response capabilities. The 40% improvement in outbreak detection time has been critical for protecting our 2.5 million residents, and the automated state reporting has eliminated countless hours of manual work. Their deep understanding of HIPAA requirements and health IT standards was essential to our success.
           </blockquote>
           <div className="font-semibold text-xl">Director of Public Health</div>
           <div className="text-accent">County Health Department</div>

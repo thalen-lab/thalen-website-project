@@ -87,7 +87,7 @@ export default function PenetrationTesting() {
               Penetration Testing & Vulnerability Management
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Uncover security weaknesses before adversaries exploit them with comprehensive penetration testing and continuous vulnerability management for government agencies (federal, state, local) and defense contractors. Thalen Technologies's offensive security experts simulate real-world attacks to validate your defenses and prioritize remediation efforts.
+              Uncover security weaknesses before adversaries exploit them with comprehensive penetration testing and continuous vulnerability management for government agencies (federal, state, local) and defense contractors. NexDyne's offensive security experts simulate real-world attacks to validate your defenses and prioritize remediation efforts.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -155,7 +155,7 @@ export default function PenetrationTesting() {
                     <h3 className="text-2xl font-bold">{step.phase}</h3>
                   </div>
                   <p className="text-muted-foreground mb-6">{step.description}</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-2 gap-3">
                     {step.metrics.map((metric, idx) => (
                       <div key={idx} className="flex items-center text-sm">
                         <div className="h-2 w-2 bg-foreground rounded-full mr-2"></div>
@@ -180,7 +180,7 @@ export default function PenetrationTesting() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {testingMethodologies.map((methodology, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-accent">
                 <CardContent className="p-6 text-center">
@@ -224,7 +224,7 @@ export default function PenetrationTesting() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Find Vulnerabilities Before Attackers Do</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a comprehensive penetration test and discover how Thalen Technologies can identify and help remediate security weaknesses in your government environment.
+            Schedule a comprehensive penetration test and discover how NexDyne can identify and help remediate security weaknesses in your government environment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

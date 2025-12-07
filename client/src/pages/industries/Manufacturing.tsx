@@ -20,7 +20,7 @@ export default function Manufacturing() {
     },
     {
       title: 'Operational Efficiency & OEE Optimization',
-      description: 'Most manufacturing facilities operate at 60-70% Overall Equipment Effectiveness (OEE) due to inefficiencies in availability, performance, and quality. Lack of real-time visibility into production metrics prevents rapid problem identification and continuous improvement. Digital transformation is essential to achieve comprehensive OEE targets above 85%.'
+      description: 'Most manufacturing facilities operate at 60-70% Overall Equipment Effectiveness (OEE) due to inefficiencies in availability, performance, and quality. Lack of real-time visibility into production metrics prevents rapid problem identification and continuous improvement. Digital transformation is essential to achieve world-class OEE targets above 85%.'
     }
   ];
 
@@ -136,7 +136,7 @@ export default function Manufacturing() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Manufacturing Challenges We Solve</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Industrial manufacturers face complex operational challenges that require specialized expertise in both manufacturing processes and advanced technology implementation to achieve comprehensive performance.
+              Industrial manufacturers face complex operational challenges that require specialized expertise in both manufacturing processes and advanced technology implementation to achieve world-class performance.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -181,7 +181,7 @@ export default function Manufacturing() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Manufacturing Success Story</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real-world results demonstrating the significant impact of predictive maintenance and Industry 4.0 technologies in large-scale manufacturing operations.
+              Real-world results demonstrating the transformative impact of predictive maintenance and Industry 4.0 technologies in large-scale manufacturing operations.
             </p>
           </div>
           <Card className="overflow-hidden max-w-5xl mx-auto">

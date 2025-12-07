@@ -38,7 +38,7 @@ export default function DataStrategy() {
     },
     {
       title: 'Strategic Roadmap',
-      description: 'Prioritized implementation plan with quick wins, foundational projects, and significant initiatives over a 3-year horizon.',
+      description: 'Prioritized implementation plan with quick wins, foundational projects, and transformational initiatives over a 3-year horizon.',
       deliverables: ['Phased project roadmap', 'Resource & budget estimates', 'Risk mitigation plan']
     },
     {
@@ -117,7 +117,7 @@ export default function DataStrategy() {
               Government agencies spend millions on analytics tools, data platforms, and dashboards—but without a coherent strategy, these investments fail to deliver value. Projects get funded based on who asks loudest, not what drives mission impact. Data quality problems persist because nobody owns governance. Analytics teams build solutions that leadership does not use because requirements were never aligned.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies's Data Strategy Basecamp is a 6-week engagement that gives you clarity. We assess your current state, define your target vision, and build a prioritized roadmap with quick wins and long-term significant projects. You will know exactly what to build, in what order, and why it matters to your mission.
+              Thalen Technologies's Data Strategy Basecamp is a 6-week engagement that gives you clarity. We assess your current state, define your target vision, and build a prioritized roadmap with quick wins and long-term transformational projects. You will know exactly what to build, in what order, and why it matters to your mission.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -252,7 +252,7 @@ export default function DataStrategy() {
                     <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">Roadmap Development (Week 5)</h3>
-                      <p className="text-muted-foreground mb-3">We build a phased 3-year roadmap with quick wins (3-6 months), foundational projects (6-18 months), and significant initiatives (18-36 months). Each project includes scope, resource estimates, dependencies, and success metrics.</p>
+                      <p className="text-muted-foreground mb-3">We build a phased 3-year roadmap with quick wins (3-6 months), foundational projects (6-18 months), and transformational initiatives (18-36 months). Each project includes scope, resource estimates, dependencies, and success metrics.</p>
                       <div className="text-sm font-semibold text-primary">Deliverable: 3-Year Strategic Roadmap with Project Charters</div>
                     </div>
                   </div>

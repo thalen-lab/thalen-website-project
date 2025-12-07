@@ -149,7 +149,7 @@ export default function LegacyModernization() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Modernize Legacy Systems?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Legacy systems create operational risk, limit innovation, and drain budgets. Modernization enables agility and reduces costs.
+              Legacy systems create operational risk, limit innovation, and drain budgets. Modernization unlocks agility and reduces costs.
             </p>
           </div>
 

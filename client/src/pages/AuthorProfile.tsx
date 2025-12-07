@@ -16,7 +16,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/sarahchen',
       twitter: 'https://twitter.com/sarahchen',
-      email: 'sarah.chen@thalen.com'
+      email: 'sarah.chen@nexdyne.com'
     },
     image: '/authors/sarah-chen.jpg',
     stats: {
@@ -33,7 +33,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/michaelrodriguez',
       twitter: 'https://twitter.com/mrodriguez_sec',
-      email: 'michael.rodriguez@thalen.com'
+      email: 'michael.rodriguez@nexdyne.com'
     },
     image: '/authors/michael-rodriguez.jpg',
     stats: {
@@ -50,7 +50,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/drjenniferpark',
       twitter: 'https://twitter.com/drjpark_ai',
-      email: 'jennifer.park@thalen.com'
+      email: 'jennifer.park@nexdyne.com'
     },
     image: '/authors/jennifer-park.jpg',
     stats: {
@@ -67,7 +67,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/davidthompson',
       twitter: 'https://twitter.com/dthompson_cloud',
-      email: 'david.thompson@thalen.com'
+      email: 'david.thompson@nexdyne.com'
     },
     image: '/authors/david-thompson.jpg',
     stats: {
@@ -84,7 +84,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/lisamartinez',
       twitter: 'https://twitter.com/lmartinez_dx',
-      email: 'lisa.martinez@thalen.com'
+      email: 'lisa.martinez@nexdyne.com'
     },
     image: '/authors/lisa-martinez.jpg',
     stats: {
@@ -101,7 +101,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/jameswilson',
       twitter: 'https://twitter.com/jwilson_data',
-      email: 'james.wilson@thalen.com'
+      email: 'james.wilson@nexdyne.com'
     },
     image: '/authors/james-wilson.jpg',
     stats: {
@@ -361,12 +361,12 @@ export default function AuthorProfile() {
       {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Operations?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Request an assessment to discuss your agency's technology requirements.
+            Connect with our experts to discuss your automation and digital transformation needs.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-            Request Assessment
+            Schedule Assessment
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

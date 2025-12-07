@@ -323,13 +323,13 @@ export default function VAPredictiveAnalytics() {
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Operations with Predictive Analytics?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Contact us to discuss how our predictive analytics services can support your organization.
+            Schedule a free consultation. We will evaluate your data, identify high-impact ML use cases, and show you how predictive analytics can accelerate your mission.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request Assessment
+              Request Free ML Assessment
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">

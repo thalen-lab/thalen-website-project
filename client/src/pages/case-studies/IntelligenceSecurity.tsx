@@ -201,7 +201,7 @@ export default function IntelligenceSecurity() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                Thalen Technologies's cross-domain collaboration platform has significantly improved how we share intelligence across the IC. The platform maintains the strictest security standards while enabling the collaboration our mission requires. Three years of zero security incidents speaks to the quality of their security architecture and implementation.
+                Thalen Technologies's cross-domain collaboration platform has fundamentally transformed how we share intelligence across the IC. The platform maintains the strictest security standards while enabling the collaboration our mission requires. Three years of zero security incidents speaks to the quality of their security architecture and implementation.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">

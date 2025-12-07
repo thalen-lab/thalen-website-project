@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import { 
   FileText, 
   Download, 
+  CheckCircle2, 
   Shield, 
   TrendingUp, 
   BarChart3,
@@ -16,8 +17,7 @@ import {
   FileCheck,
   Award,
   ArrowRight,
-  Mail,
-  Circle
+  Mail
 } from 'lucide-react';
 
 export default function Resources() {
@@ -39,7 +39,7 @@ export default function Resources() {
       id: 'wp-gov-automation',
       category: 'whitepapers',
       title: 'Government Automation Strategy Guide',
-      description: 'Comprehensive 45-page guide covering automation assessment, vendor selection, implementation roadmap, and change management for federal, state, and local government agencies.',
+      description: 'Comprehensive 45-page guide covering automation assessment, vendor selection, implementation roadmap, and change management for government agencies.',
       icon: FileText,
       pages: 45,
       type: 'PDF Whitepaper',
@@ -59,7 +59,7 @@ export default function Resources() {
       id: 'wp-ai-governance',
       category: 'whitepapers',
       title: 'Responsible AI Governance Framework',
-      description: 'Executive guide to establishing AI governance, ethical guidelines, bias detection, and compliance frameworks for mission-critical AI deployments in government agencies.',
+      description: 'Executive guide to establishing AI governance, ethical guidelines, bias detection, and compliance frameworks for mission-critical AI deployments.',
       icon: BookOpen,
       pages: 52,
       type: 'PDF Whitepaper',
@@ -69,39 +69,19 @@ export default function Resources() {
       id: 'wp-cloud-migration',
       category: 'whitepapers',
       title: 'Multi-Cloud Strategy & Migration Playbook',
-      description: 'Detailed playbook covering cloud assessment, workload prioritization, migration strategies, and cost optimization across AWS GovCloud, Azure Government, and Google Cloud.',
+      description: 'Detailed playbook covering cloud assessment, workload prioritization, migration strategies, and cost optimization across AWS, Azure, and GCP.',
       icon: FileText,
       pages: 41,
       type: 'PDF Whitepaper',
       popular: false
     },
     {
-      id: 'wp-stateramp-fedramp',
-      category: 'whitepapers',
-      title: 'StateRAMP vs FedRAMP: Complete Comparison Guide',
-      description: 'Comprehensive comparison of StateRAMP and FedRAMP programs, including authorization processes, cost analysis, and strategic considerations for federal, state, and local agencies.',
-      icon: Shield,
-      pages: 28,
-      type: 'PDF Whitepaper',
-      popular: true
-    },
-    {
       id: 'checklist-fedramp',
       category: 'checklists',
       title: 'FedRAMP Authorization Readiness Checklist',
-      description: 'Complete checklist covering all FedRAMP Moderate and High baseline controls, documentation requirements, 3PAO assessment preparation, and authorization timeline for federal agencies.',
+      description: 'Complete checklist covering all FedRAMP Moderate and High baseline controls, documentation requirements, and authorization timeline.',
       icon: FileCheck,
       pages: 12,
-      type: 'PDF Checklist',
-      popular: true
-    },
-    {
-      id: 'checklist-stateramp',
-      category: 'checklists',
-      title: 'StateRAMP Authorization Readiness Checklist',
-      description: 'Comprehensive checklist for achieving StateRAMP authorization, including Fast Track pathway for FedRAMP-authorized providers and state-specific RAMP program requirements.',
-      icon: FileCheck,
-      pages: 14,
       type: 'PDF Checklist',
       popular: true
     },
@@ -109,7 +89,7 @@ export default function Resources() {
       id: 'checklist-cmmc',
       category: 'checklists',
       title: 'CMMC Level 3 Compliance Checklist',
-      description: 'Comprehensive checklist for achieving CMMC Level 3 certification, including all 130 practices across 17 domains with implementation guidance for defense contractors.',
+      description: 'Comprehensive checklist for achieving CMMC Level 3 certification, including all 130 practices across 17 domains with implementation guidance.',
       icon: Shield,
       pages: 18,
       type: 'PDF Checklist',
@@ -119,7 +99,7 @@ export default function Resources() {
       id: 'checklist-hipaa',
       category: 'checklists',
       title: 'HIPAA Security & Privacy Compliance Checklist',
-      description: 'Complete HIPAA compliance checklist covering administrative, physical, and technical safeguards with BAA requirements and breach response procedures for healthcare agencies.',
+      description: 'Complete HIPAA compliance checklist covering administrative, physical, and technical safeguards with BAA requirements and breach response procedures.',
       icon: FileCheck,
       pages: 15,
       type: 'PDF Checklist',
@@ -129,7 +109,7 @@ export default function Resources() {
       id: 'checklist-iso27001',
       category: 'checklists',
       title: 'ISO 27001:2022 Implementation Checklist',
-      description: 'Detailed checklist for ISO 27001:2022 certification covering all Annex A controls, risk assessment, and ISMS documentation requirements for government and enterprise.',
+      description: 'Detailed checklist for ISO 27001:2022 certification covering all Annex A controls, risk assessment, and ISMS documentation requirements.',
       icon: Award,
       pages: 22,
       type: 'PDF Checklist',
@@ -138,60 +118,40 @@ export default function Resources() {
     {
       id: 'calc-automation-roi',
       category: 'calculators',
-      title: 'Government Automation ROI Calculator',
-      description: 'Interactive calculator with federal, state, and local government benchmarks to project automation savings, implementation costs, payback period, and 5-year ROI with real-time results.',
+      title: 'Automation ROI Calculator',
+      description: 'Interactive Excel calculator with industry benchmarks to project automation savings, implementation costs, payback period, and 5-year ROI.',
       icon: Calculator,
       pages: 0,
-      type: 'Interactive Calculator',
+      type: 'Excel Calculator',
       popular: true
     },
     {
       id: 'calc-cloud-tco',
       category: 'calculators',
       title: 'Cloud Migration TCO Calculator',
-      description: 'Comprehensive TCO calculator comparing on-premises vs. cloud costs for government agencies, including infrastructure, labor, licensing, and operational expenses across AWS GovCloud, Azure Government, and GCP.',
+      description: 'Comprehensive TCO calculator comparing on-premises vs. cloud costs including infrastructure, labor, licensing, and operational expenses.',
       icon: TrendingUp,
       pages: 0,
-      type: 'Interactive Calculator',
+      type: 'Excel Calculator',
       popular: false
     },
     {
       id: 'calc-security-maturity',
       category: 'calculators',
       title: 'Cybersecurity Maturity Assessment',
-      description: 'Self-assessment tool evaluating your organization across 12 security domains aligned with NIST frameworks, with scoring, gap analysis, and remediation recommendations for government agencies.',
+      description: 'Self-assessment tool evaluating your organization across 12 security domains with scoring, gap analysis, and remediation recommendations.',
       icon: Shield,
       pages: 0,
-      type: 'Interactive Calculator',
+      type: 'Excel Calculator',
       popular: true
-    },
-    {
-      id: 'calc-compliance-cost',
-      category: 'calculators',
-      title: 'FedRAMP vs StateRAMP Cost Comparison',
-      description: 'Interactive calculator comparing authorization costs, timelines, and resource requirements between FedRAMP and StateRAMP pathways to help agencies choose the right compliance approach.',
-      icon: Calculator,
-      pages: 0,
-      type: 'Interactive Calculator',
-      popular: false
     },
     {
       id: 'report-federal-2024',
       category: 'reports',
       title: '2024 Federal Automation Trends Report',
-      description: 'Annual report analyzing automation adoption across 50+ federal government agencies, budget trends, technology preferences, and ROI benchmarks from real-world implementations.',
+      description: 'Annual report analyzing automation adoption across 50+ government agencies, budget trends, technology preferences, and ROI benchmarks.',
       icon: BarChart3,
       pages: 67,
-      type: 'PDF Report',
-      popular: true
-    },
-    {
-      id: 'report-state-local-2024',
-      category: 'reports',
-      title: '2024 State & Local Government Digital Transformation Study',
-      description: 'Research report covering digital transformation maturity, cloud adoption rates, automation use cases, and measured outcomes across 200+ state and local government agencies.',
-      icon: BarChart3,
-      pages: 58,
       type: 'PDF Report',
       popular: true
     },
@@ -199,7 +159,7 @@ export default function Resources() {
       id: 'report-healthcare-ai',
       category: 'reports',
       title: 'Healthcare AI Adoption & ROI Study',
-      description: 'Research report covering AI adoption rates, use cases, implementation challenges, and measured ROI across 200+ healthcare organizations and government health agencies.',
+      description: 'Research report covering AI adoption rates, use cases, implementation challenges, and measured ROI across 200+ healthcare organizations.',
       icon: TrendingUp,
       pages: 54,
       type: 'PDF Report',
@@ -209,7 +169,7 @@ export default function Resources() {
       id: 'report-manufacturing',
       category: 'reports',
       title: 'Manufacturing Digital Transformation Benchmark',
-      description: 'Industry benchmark report analyzing digital transformation maturity, technology investments, and operational outcomes across manufacturing sector and defense industrial base.',
+      description: 'Industry benchmark report analyzing digital transformation maturity, technology investments, and operational outcomes across manufacturing sector.',
       icon: BarChart3,
       pages: 48,
       type: 'PDF Report',
@@ -219,19 +179,9 @@ export default function Resources() {
       id: 'cs-federal-automation',
       category: 'case-studies',
       title: 'Federal Agency 85% Automation Case Study',
-      description: 'Detailed case study documenting how a federal agency achieved 85% process automation, reducing processing time from 6 weeks to 2 days while maintaining FedRAMP compliance.',
+      description: 'Detailed case study documenting how a federal agency achieved 85% process automation, reducing processing time from 6 weeks to 2 days.',
       icon: FileText,
       pages: 8,
-      type: 'PDF Case Study',
-      popular: true
-    },
-    {
-      id: 'cs-state-stateramp',
-      category: 'case-studies',
-      title: 'State Agency StateRAMP Authorization Success',
-      description: 'Case study showing how a state agency achieved StateRAMP authorization in 4 months using Fast Track pathway, enabling cloud adoption across 12 departments.',
-      icon: FileText,
-      pages: 6,
       type: 'PDF Case Study',
       popular: true
     },
@@ -239,7 +189,7 @@ export default function Resources() {
       id: 'cs-healthcare-ai',
       category: 'case-studies',
       title: 'Healthcare System $12M Savings Case Study',
-      description: 'Case study showing how AI-powered analytics delivered $12M annual savings and 40% improvement in patient outcomes for a government healthcare system.',
+      description: 'Case study showing how AI-powered analytics delivered $12M annual savings and 40% improvement in patient outcomes.',
       icon: FileText,
       pages: 6,
       type: 'PDF Case Study',
@@ -249,7 +199,7 @@ export default function Resources() {
       id: 'cs-defense-cloud',
       category: 'case-studies',
       title: 'Defense Contractor Zero-Downtime Migration',
-      description: 'Case study detailing zero-downtime cloud migration for defense contractor while achieving CMMC Level 3 certification and maintaining continuous operations.',
+      description: 'Case study detailing zero-downtime cloud migration for defense contractor while achieving CMMC Level 3 certification.',
       icon: FileText,
       pages: 7,
       type: 'PDF Case Study',
@@ -276,44 +226,39 @@ export default function Resources() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-24 bg-navy-gradient text-primary-foreground overflow-hidden">
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
           }} />
         </div>
         <div className="container relative">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-              Expert Resources for Government Agencies
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
-              Practical tools, proven methodologies, and strategic insights to accelerate digital transformation across federal, state, and local government.
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Resource Library</h1>
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              Expert insights, practical tools, and proven methodologies to accelerate your digital transformation journey.
             </p>
-            <div className="flex flex-wrap justify-center gap-8 text-base pt-4">
-              <div className="flex items-center gap-3">
-                <Circle className="h-2 w-2 fill-current" />
-                <span>20 Premium Resources</span>
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
+                <span>17 Premium Resources</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Circle className="h-2 w-2 fill-current" />
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
                 <span>Free Downloads</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Circle className="h-2 w-2 fill-current" />
-                <span>Interactive Calculators</span>
-              </div>
+
             </div>
           </div>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-secondary/30 border-y border-border">
+      <section className="py-8 bg-secondary border-b">
         <div className="container">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
@@ -321,11 +266,7 @@ export default function Resources() {
                 key={category.id}
                 variant={selectedCategory === category.id ? 'default' : 'outline'}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`transition-all ${
-                  selectedCategory === category.id 
-                    ? 'bg-accent hover:bg-accent/90 shadow-md' 
-                    : 'hover:border-accent/50'
-                }`}
+                className={selectedCategory === category.id ? 'bg-accent hover:bg-accent/90' : ''}
               >
                 {category.label}
               </Button>
@@ -339,34 +280,31 @@ export default function Resources() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredResources.map((resource) => (
-              <Card 
-                key={resource.id} 
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border"
-              >
-                <CardContent className="p-6 flex flex-col h-full">
+              <Card key={resource.id} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="p-3 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
+                    <div className="p-3 bg-muted rounded-lg">
                       <resource.icon className="h-8 w-8 text-accent" />
                     </div>
                     {resource.popular && (
-                      <span className="text-xs font-medium px-3 py-1 bg-accent/10 text-accent rounded-full border border-accent/20">
+                      <span className="text-xs bg-accent text-accent-foreground px-2 py-1 rounded-full font-semibold">
                         Popular
                       </span>
                     )}
                   </div>
                   
-                  <h3 className="text-xl font-semibold mb-3 leading-tight">{resource.title}</h3>
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed flex-grow">
+                  <h3 className="text-xl font-semibold mb-3">{resource.title}</h3>
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                     {resource.description}
                   </p>
                   
-                  <div className="flex items-center justify-between mb-4 text-sm text-muted-foreground pt-2 border-t border-border">
-                    <span className="font-medium">{resource.type}</span>
+                  <div className="flex items-center justify-between mb-4 text-sm text-muted-foreground">
+                    <span>{resource.type}</span>
                     {resource.pages > 0 && <span>{resource.pages} pages</span>}
                   </div>
                   
                   <Button 
-                    className="w-full bg-accent hover:bg-accent/90 transition-all hover:shadow-md active:scale-95"
+                    className="w-full bg-accent hover:bg-accent/90"
                     onClick={() => handleDownload(resource.id)}
                   >
                     <Download className="mr-2 h-4 w-4" />
@@ -381,16 +319,16 @@ export default function Resources() {
 
       {/* Download Modal */}
       {downloadingResource && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
-          <Card className="max-w-md w-full shadow-2xl animate-in zoom-in-95 duration-200">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <Card className="max-w-md w-full">
             <CardContent className="p-8">
               <div className="text-center mb-6">
-                <div className="inline-flex p-4 bg-accent/10 rounded-full mb-4">
+                <div className="inline-flex p-4 bg-muted rounded-full mb-4">
                   <Mail className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Get Your Free Resource</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Enter your government email to receive instant access to this resource and stay updated with our latest insights.
+                <p className="text-muted-foreground">
+                  Enter your email to receive instant access to this resource and stay updated with our latest insights.
                 </p>
               </div>
               
@@ -398,7 +336,7 @@ export default function Resources() {
                 <div>
                   <Input
                     type="email"
-                    placeholder="your.name@agency.gov"
+                    placeholder="your.email@company.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -407,10 +345,7 @@ export default function Resources() {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button 
-                    type="submit" 
-                    className="flex-1 bg-accent hover:bg-accent/90 transition-all hover:shadow-md active:scale-95"
-                  >
+                  <Button type="submit" className="flex-1 bg-accent hover:bg-accent/90">
                     Send Download Link
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -421,13 +356,12 @@ export default function Resources() {
                       setDownloadingResource(null);
                       setEmail('');
                     }}
-                    className="hover:bg-secondary transition-colors"
                   >
                     Cancel
                   </Button>
                 </div>
                 
-                <p className="text-xs text-muted-foreground text-center pt-2">
+                <p className="text-xs text-muted-foreground text-center">
                   We respect your privacy. Unsubscribe anytime.
                 </p>
               </form>
@@ -437,24 +371,15 @@ export default function Resources() {
       )}
 
       {/* CTA Section */}
-      <section className="relative py-24 bg-navy-gradient text-primary-foreground overflow-hidden" style={{
-        clipPath: 'polygon(0 8%, 100% 0, 100% 100%, 0 100%)',
-        marginTop: '-5rem',
-        paddingTop: '8rem'
-      }}>
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
-          }} />
-        </div>
-        <div className="container text-center relative">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Need Custom Guidance?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Our automation strategy experts are ready to provide personalized recommendations for your agency's unique challenges and compliance requirements.
+      <section className="py-20 bg-navy-gradient diagonal-top text-primary-foreground">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Need Custom Guidance?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Our automation strategy experts are ready to provide personalized recommendations for your organization's unique challenges.
           </p>
-          <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all text-lg px-8 py-6 h-auto">
+          <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
             <Link href="/contact">
-              Request Assessment
+              Schedule Strategic Assessment
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>

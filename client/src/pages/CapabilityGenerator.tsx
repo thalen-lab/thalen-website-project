@@ -457,8 +457,8 @@ export default function CapabilityGenerator() {
                   <h3 className="text-xl font-bold mb-4">Contact Information</h3>
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <p>Thalen Technologies Technology, Inc.</p>
-                    <p>Email: contracts@thalen.tech | Phone: (555) 123-4567</p>
-                    <p>Website: www.thalen.tech</p>
+                    <p>Email: contracts@nexdyne.tech | Phone: (555) 123-4567</p>
+                    <p>Website: www.nexdyne.tech</p>
                   </div>
                 </div>
               </CardContent>

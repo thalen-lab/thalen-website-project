@@ -30,24 +30,17 @@
   "categories": ["business", "productivity", "utilities"],
   "shortcuts": [
     {
-      "name": "ROI Calculator",
-      "short_name": "ROI Calc",
-      "description": "Calculate your automation ROI",
-      "url": "/federal-solutions/state-local/roi-calculator",
-      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Compliance Checklist",
-      "short_name": "Compliance",
-      "description": "Check compliance requirements",
-      "url": "/federal-solutions/state-local/compliance-checklist",
-      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
-    },
-    {
       "name": "Case Studies",
       "short_name": "Cases",
       "description": "View client success stories",
       "url": "/case-studies",
+      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Resources",
+      "short_name": "Resources",
+      "description": "Download whitepapers and guides",
+      "url": "/resources",
       "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {

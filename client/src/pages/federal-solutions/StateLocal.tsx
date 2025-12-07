@@ -219,7 +219,7 @@ export default function StateLocal() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">State & Local Government Success Stories</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experience implementing IT solutions for state agencies, counties, and municipalities with measurable outcomes.
+              Proven track record implementing IT solutions for state agencies, counties, and municipalities with measurable outcomes.
             </p>
           </div>
 

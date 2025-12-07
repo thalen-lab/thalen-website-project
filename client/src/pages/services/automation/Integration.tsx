@@ -58,7 +58,7 @@ export default function Integration() {
           
           <div className="max-w-4xl">
             <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
-              FedRAMP & StateRAMP Authorized • FIPS 140-2 Compliant
+              FedRAMP High Authorized • FIPS 140-2 Compliant
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Enterprise Integration Platform
@@ -85,7 +85,7 @@ export default function Integration() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Integration Built for Government Complexity</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Government agencies (federal, state, and local) face integration challenges that commercial iPaaS vendors can't solve. We specialize in the hard problems—legacy systems, air-gapped networks, and strict compliance requirements.
+              Government agencies face integration challenges that commercial iPaaS vendors can't solve. We specialize in the hard problems—legacy systems, air-gapped networks, and strict compliance requirements.
             </p>
           </div>
 
@@ -110,10 +110,10 @@ export default function Integration() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Government Integration Is Different</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Commercial integration platforms assume you're working with modern, API-enabled systems in a single cloud environment. That's not reality for government agencies (federal, state, and local). You're running mission-critical applications on mainframes from the 1980s alongside current AI tools. You have air-gapped networks, strict data residency requirements, and systems that were never designed to communicate.
+                Commercial integration platforms assume you're working with modern, API-enabled systems in a single cloud environment. That's not reality for government agencies. You're running mission-critical applications on mainframes from the 1980s alongside cutting-edge AI tools. You have air-gapped networks, strict data residency requirements, and systems that were never designed to communicate.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Thalen Technologies's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs. And we do it all while maintaining FedRAMP and StateRAMP authorization with full audit trails.
+                Thalen Technologies's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs. And we do it all while maintaining FedRAMP High authorization and full audit trails.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">

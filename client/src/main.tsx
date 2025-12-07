@@ -7,7 +7,6 @@ import superjson from "superjson";
 import App from "./App";
 import { getLoginUrl } from "./const";
 import "./index.css";
-import { initializeHaptics } from "./lib/haptics";
 
 const queryClient = new QueryClient();
 
@@ -60,9 +59,6 @@ createRoot(document.getElementById("root")!).render(
     </QueryClientProvider>
   </trpc.Provider>
 );
-
-// Initialize haptic feedback for iOS devices
-initializeHaptics();
 
 // Register Service Worker for PWA functionality
 if ('serviceWorker' in navigator) {

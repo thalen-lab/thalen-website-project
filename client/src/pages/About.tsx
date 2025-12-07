@@ -50,7 +50,7 @@ export default function About() {
       icon: Globe,
       title: 'Balance',
       letter: 'B',
-      description: 'Harmonizing innovation with stability. We balance modern AI capabilities with established methodologies, delivering results without operational disruption or unnecessary risk.'
+      description: 'Harmonizing innovation with stability. We balance cutting-edge AI capabilities with proven methodologies, ensuring transformative results without operational disruption or unnecessary risk.'
     },
     {
       icon: Award,
@@ -194,7 +194,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Every engagement begins with deep process analysis to identify the highest-impact automation opportunities. We then deploy proven frameworks that integrate seamlessly with existing operations, ensuring zero disruption while delivering significant results that scale with organizational growth.
+                Every engagement begins with deep process analysis to identify the highest-impact automation opportunities. We then deploy proven frameworks that integrate seamlessly with existing operations, ensuring zero disruption while delivering transformational results that scale with organizational growth.
               </p>
               
               <Link href="/services/automation">
@@ -231,7 +231,7 @@ export default function About() {
                   This approach allows us to deliver automation strategies that integrate seamlessly with existing workflows, maintain operational security, and scale with your organization's evolving needs. Every solution is battle-tested in real-world environments before full deployment.
                 </p>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 gap-8">
                   {operationalStats.map((stat, index) => (
                     <div key={index} className="text-center">
                       <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
@@ -356,7 +356,7 @@ export default function About() {
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+              className="grid grid-cols-2 gap-6"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -392,7 +392,7 @@ export default function About() {
             <p className="text-sm font-semibold text-accent mb-2">Certifications & Compliance</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Government-Grade Security & Compliance</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Certified expertise across federal, state, and local government compliance frameworks with experience in high-security environments.
+              Certified expertise across federal, state, and local government compliance frameworks with proven track record in the most demanding security environments.
             </p>
           </motion.div>
 
@@ -487,28 +487,6 @@ export default function About() {
             <p className="text-muted-foreground mb-4">
               Additional certifications: ISO 27001:2022, NIST Cybersecurity Framework v2.0, GSA Schedule 70, Top Secret/SCI cleared personnel available
             </p>
-            <Card className="border-2 bg-gradient-to-br from-primary/5 to-accent/5 max-w-4xl mx-auto">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-3">Federal Acquisition Regulation (FAR) Compliance</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Thalen Technologies maintains compliance with Federal Acquisition Regulation requirements for government IT services, including FAR Part 39 (Acquisition of Information Technology) and associated security clauses.
-                </p>
-                <div className="grid md:grid-cols-3 gap-4 text-sm">
-                  <div>
-                    <p className="font-semibold mb-1">FAR 52.204-21</p>
-                    <p className="text-muted-foreground text-xs">Basic Safeguarding of Covered Contractor Information Systems</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-1">FAR 52.239-1</p>
-                    <p className="text-muted-foreground text-xs">Privacy or Security Safeguards for IT systems and services</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-1">DFARS 252.204-7012</p>
-                    <p className="text-muted-foreground text-xs">Safeguarding Covered Defense Information (DoD contracts)</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </motion.div>
         </div>
       </section>
