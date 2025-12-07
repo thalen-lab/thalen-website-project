@@ -182,7 +182,7 @@ export default function SecurityOperationsCenter() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Enterprise SOC Tools & Platforms</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Best-in-class security tools and platforms for comprehensive threat detection and response.
+              Established security tools and platforms for comprehensive threat detection and response.
             </p>
           </div>
 
@@ -205,7 +205,7 @@ export default function SecurityOperationsCenter() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">SOC Performance Metrics</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Industry-leading response times and threat detection rates for mission-critical environments.
+              Established response times and threat detection rates for mission-critical environments.
             </p>
           </div>
 

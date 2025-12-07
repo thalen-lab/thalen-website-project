@@ -205,7 +205,7 @@ export default function ApplicationDevelopment() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Modern Technology Stack</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We leverage cutting-edge frameworks, cloud platforms, and enterprise tools to build scalable, secure applications for federal missions.
+              We leverage current frameworks, cloud platforms, and enterprise tools to build scalable, secure applications for federal missions.
             </p>
           </div>
 
@@ -304,7 +304,7 @@ export default function ApplicationDevelopment() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Why Choose Thalen Technologies for Application Development?</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We combine deep federal expertise with cutting-edge development practices to deliver applications that meet the unique challenges of government missions.
+                We combine deep federal expertise with current development practices to deliver applications that meet the unique challenges of government missions.
               </p>
               
               <div className="space-y-6">
@@ -324,7 +324,7 @@ export default function ApplicationDevelopment() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">FedRAMP Authorized</h3>
-                    <p className="text-muted-foreground">Proven track record with 50+ successful FedRAMP ATOs across agencies.</p>
+                    <p className="text-muted-foreground">Experience with 50+ successful FedRAMP ATOs across agencies.</p>
                   </div>
                 </div>
                 
@@ -344,7 +344,7 @@ export default function ApplicationDevelopment() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">Modern Technology Stack</h3>
-                    <p className="text-muted-foreground">Cloud-native, microservices architecture with cutting-edge frameworks and tools.</p>
+                    <p className="text-muted-foreground">Cloud-native, microservices architecture with current frameworks and tools.</p>
                   </div>
                 </div>
               </div>

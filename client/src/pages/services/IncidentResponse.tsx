@@ -205,7 +205,7 @@ export default function IncidentResponse() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Incident Response Performance</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Industry-leading response times and containment rates for critical security incidents.
+              Established response times and containment rates for critical security incidents.
             </p>
           </div>
 

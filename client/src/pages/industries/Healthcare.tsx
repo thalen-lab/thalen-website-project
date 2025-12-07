@@ -181,7 +181,7 @@ export default function Healthcare() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Healthcare Success Story</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real-world results demonstrating the transformative impact of strategic automation and advanced analytics in healthcare delivery.
+              Real-world results demonstrating the significant impact of strategic automation and advanced analytics in healthcare delivery.
             </p>
           </div>
           <Card className="overflow-hidden max-w-5xl mx-auto">

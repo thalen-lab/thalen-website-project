@@ -267,7 +267,7 @@ export default function FederalSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Past Performance & Agency Experience</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record delivering mission-critical IT solutions across federal, state, and local government agencies.
+              experience delivering mission-critical IT solutions across federal, state, and local government agencies.
             </p>
           </div>
 

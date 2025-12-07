@@ -199,7 +199,7 @@ export default function Cloud() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Cloud Implementation Experience</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing FedRAMP-authorized cloud solutions across federal, state, and local government agencies.
+              Experience implementing FedRAMP-authorized cloud solutions across federal, state, and local government agencies.
             </p>
           </div>
 

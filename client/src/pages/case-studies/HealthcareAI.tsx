@@ -175,7 +175,7 @@ export default function HealthcareAI() {
             <CardContent className="p-12">
               <div className="text-6xl text-accent mb-6">"</div>
               <blockquote className="text-2xl font-medium mb-8">
-                The AI analytics platform from Thalen Technologies has fundamentally transformed how we deliver care. Real-time insights have enabled our clinicians to make faster, more informed decisions, directly improving patient outcomes. The $12M in savings was significant, but the improvement in care quality is priceless.
+                The AI analytics platform from Thalen Technologies has significantly improved how we deliver care. Real-time insights have enabled our clinicians to make faster, more informed decisions, directly improving patient outcomes. The $12M in savings was significant, but the improvement in care quality is priceless.
               </blockquote>
               <div className="flex items-center">
                 <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">

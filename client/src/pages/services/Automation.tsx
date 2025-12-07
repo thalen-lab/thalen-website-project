@@ -261,7 +261,7 @@ export default function Automation() {
               Government Automation Implementation Success
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Proven track record implementing automation platforms and solutions across government agencies (federal, state, and local) with measurable mission impact.
+              Experience implementing automation platforms and solutions across government agencies (federal, state, and local) with measurable mission impact.
             </p>
           </motion.div>
 

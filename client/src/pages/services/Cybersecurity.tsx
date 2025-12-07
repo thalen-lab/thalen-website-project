@@ -60,7 +60,7 @@ export default function Cybersecurity() {
     {
       icon: Award,
       title: 'CMMC & ATO Success Record',
-      description: 'Proven track record achieving CMMC Level 2/3 certifications and FedRAMP ATOs with 100% success rate across 25+ agencies.'
+      description: 'Experience achieving CMMC Level 2/3 certifications and FedRAMP ATOs with 100% success rate across 25+ agencies.'
     }
   ];
 
@@ -232,7 +232,7 @@ export default function Cybersecurity() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Security Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing security platforms and achieving compliance certifications across government agencies and defense contractors.
+              Experience implementing security platforms and achieving compliance certifications across government agencies and defense contractors.
             </p>
           </div>
 

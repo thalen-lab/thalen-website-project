@@ -271,7 +271,7 @@ export default function DODDataPipelines() {
             <CardContent className="p-8">
               <div className="text-3xl text-accent mb-6">"</div>
               <p className="text-xl mb-6 italic">
-                Thalen Technologies's data engineering expertise transformed our supply chain operations. We went from waiting 18 hours for stale reports to having real-time visibility across 47 systems. The automated pipelines are rock-solid—they just work. Our analysts are finally doing analysis instead of data janitorial work.
+                Thalen Technologies's data engineering expertise improved our supply chain operations. We went from waiting 18 hours for stale reports to having real-time visibility across 47 systems. The automated pipelines are rock-solid—they just work. Our analysts are finally doing analysis instead of data janitorial work.
               </p>
               <div className="flex items-center gap-4">
                 <div>

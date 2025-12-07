@@ -109,7 +109,7 @@ export default function DataAnalytics() {
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                  Request Analytics Assessment
+                  Request Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -200,7 +200,7 @@ export default function DataAnalytics() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Analytics Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
+              Experience implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
             </p>
           </div>
 
@@ -272,14 +272,14 @@ export default function DataAnalytics() {
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Data into Intelligence?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule an analytics assessment to discuss your agency's data challenges, evaluate FedRAMP platform options, and develop a roadmap for mission-critical analytics.
+            Contact us to discuss your agency's data analytics requirements and evaluate available platform options.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Analytics Assessment
+                Request Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

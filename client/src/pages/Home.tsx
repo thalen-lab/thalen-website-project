@@ -114,7 +114,7 @@ export default function Home() {
     },
     {
       name: 'ATO Support Services',
-      description: 'Proven track record supporting agencies through FISMA Authority to Operate (ATO) processes with security documentation and compliance assessments.'
+      description: 'experience supporting agencies through FISMA Authority to Operate (ATO) processes with security documentation and compliance assessments.'
     },
     {
       name: 'CJIS & State Compliance',

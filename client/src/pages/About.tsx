@@ -194,7 +194,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Every engagement begins with deep process analysis to identify the highest-impact automation opportunities. We then deploy proven frameworks that integrate seamlessly with existing operations, ensuring zero disruption while delivering transformational results that scale with organizational growth.
+                Every engagement begins with deep process analysis to identify the highest-impact automation opportunities. We then deploy proven frameworks that integrate seamlessly with existing operations, ensuring zero disruption while delivering significant results that scale with organizational growth.
               </p>
               
               <Link href="/services/automation">
