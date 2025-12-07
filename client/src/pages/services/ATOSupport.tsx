@@ -123,14 +123,14 @@ export default function ATOSupport() {
       </section>
 
       {/* How We Integrate ATO Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-navy-gradient relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="mb-6">
-                <h2 className="text-4xl font-bold text-navy-900">ATO Support Throughout Implementation</h2>
+                <h2 className="text-4xl font-bold text-white">ATO Support Throughout Implementation</h2>
               </div>
-              <p className="text-xl text-slate-700 max-w-3xl mx-auto">
+              <p className="text-xl text-slate-200 max-w-3xl mx-auto">
                 Thalen Technologies integrates ATO activities into every phase of system implementation, ensuring 
                 security authorization progresses in parallel with technical development—not as an afterthought.
               </p>
@@ -141,8 +141,8 @@ export default function ATOSupport() {
               <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-accent">1</span>
+                    <div className="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-slate-600">1</span>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -183,8 +183,8 @@ export default function ATOSupport() {
               <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-accent">2</span>
+                    <div className="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-slate-600">2</span>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -225,8 +225,8 @@ export default function ATOSupport() {
               <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-accent">3</span>
+                    <div className="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-slate-600">3</span>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -267,8 +267,8 @@ export default function ATOSupport() {
               <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-accent">4</span>
+                    <div className="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-slate-600">4</span>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -323,15 +323,15 @@ export default function ATOSupport() {
               grant your agency ATO—your specific implementation still requires authorization.
             </p>
             
-            <div className="bg-gradient-to-br from-orange-50 to-slate-50 rounded-lg p-8 mb-8 border border-orange-200">
-              <h3 className="text-2xl font-bold text-navy-900 mb-4">Understanding Control Inheritance</h3>
-              <p className="text-slate-700 mb-4 leading-relaxed">
+            <div className="bg-navy-gradient rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Understanding Control Inheritance</h3>
+              <p className="text-slate-200 mb-4 leading-relaxed">
                 FedRAMP authorization means the cloud platform infrastructure (AWS GovCloud, Azure Government, 
                 Salesforce Government Cloud) has been pre-authorized by the vendor. This provides 
                 <strong> inherited controls</strong> that reduce the number of controls your agency must 
                 implement and document.
               </p>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-slate-200 leading-relaxed">
                 However, <strong>customer-managed controls</strong> remain your responsibility: platform 
                 configuration, user access management, system integration, and data handling all require 
                 documentation and validation. Thalen Technologies manages this inheritance model by documenting 

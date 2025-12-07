@@ -2742,3 +2742,10 @@
 - [x] Ensure text colors are appropriate for dark backgrounds (white/slate-300)
 - [x] Test visual hierarchy and readability
 - [x] Save checkpoint
+- [x] ATO Support page: Remove orange numbers, use neutral slate/gray instead
+- [x] ATO Support page: Add signature deep navy blue background to some sections
+
+## Phase 48: Remove Diagonal Section Transitions
+- [x] Remove diagonal clip-path CSS from all sections
+- [x] Remove negative margins and padding compensations for diagonal cuts
+- [x] Make all section transitions straight for professional GovTech aesthetic

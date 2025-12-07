@@ -518,7 +518,7 @@ export default function Events() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient diagonal-top text-primary-foreground">
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
             Need Custom Training for Your Agency?
