@@ -2906,3 +2906,22 @@
 - [x] Rewrite case studies in editorial style (no icons, no bullet points)
 - [x] Implement McKinsey-style layout for case studies
 - [x] Update case study content to be service-oriented for government sector
+
+## Phase: Rewrite Case Studies in Editorial Narrative Style
+- [x] Audit all 22 case study files to identify which follow editorial style
+- [x] Rewrite CountyHealth.tsx in editorial style
+- [ ] Rewrite CountyHealthDepartment.tsx in editorial style
+- [ ] Rewrite DODDataPipelines.tsx in editorial style
+- [ ] Rewrite DoDManufacturing.tsx in editorial style
+- [ ] Rewrite DoDManufacturingUptime.tsx in editorial style
+- [x] Rewrite EnergyGrid.tsx in editorial style
+- [x] Rewrite FederalAutomation.tsx in editorial style
+- [x] Rewrite HospitalWaitTimes.tsx in editorial style
+- [x] Rewrite StateAttorneyGeneral.tsx in editorial style
+- [ ] Rewrite StateDOT.tsx in editorial style
+- [ ] Rewrite StateEnergyCommission.tsx in editorial style
+- [x] Rewrite VAHealthcare.tsx in editorial style
+- [ ] Rewrite VALegacyIntegration.tsx in editorial style
+- [ ] Rewrite VAPredictiveAnalytics.tsx in editorial style
+- [ ] Test all rewritten case study pages
+- [ ] Verify all case studies display correctly with editorial style

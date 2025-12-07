@@ -1,285 +1,170 @@
-import { Link } from 'wouter';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, TrendingDown, Users, Clock, Database } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Link } from "wouter";
+import { ArrowLeft } from "lucide-react";
 
 export default function VAHealthcare() {
-  const metrics = [
-    { icon: Database, value: '12', label: 'Systems Integrated', description: 'Unified 12 disparate healthcare systems' },
-    { icon: TrendingDown, value: '60%', label: 'Admin Burden Reduced', description: 'Administrative workload decreased by 60%' },
-    { icon: Users, value: '500K+', label: 'Veterans Served', description: 'Improved care coordination for 500K+ veterans' },
-    { icon: Clock, value: '4.2 days', label: 'Appointment Wait Time', description: 'Reduced from 18 days to 4.2 days average' }
-  ];
-
-  const challenges = [
-    {
-      title: 'Fragmented Patient Data',
-      description: 'Patient health records scattered across 12 disconnected systems (VistA, CPRS, JLV, Cerner, and 8 legacy systems) preventing comprehensive care coordination and creating safety risks.'
-    },
-    {
-      title: 'Manual Data Reconciliation',
-      description: 'Clinical staff spent 4-6 hours daily manually reconciling patient data across systems, reducing time available for direct patient care and causing appointment delays.'
-    },
-    {
-      title: 'Interoperability Barriers',
-      description: 'Legacy systems built on incompatible technologies with no standardized data exchange, requiring custom integration for each system pair (66 potential integrations).'
-    },
-    {
-      title: 'HIPAA & FedRAMP Compliance',
-      description: 'Integration solution required strict HIPAA compliance for Protected Health Information (PHI) and FedRAMP authorization for cloud-based components.'
-    }
-  ];
-
-  const solutions = [
-    {
-      title: 'FedRAMP Integration Platform',
-      description: 'Deployed MuleSoft Government Cloud (FedRAMP High) as enterprise integration platform with FHIR-compliant APIs, HL7 messaging, and real-time data synchronization across all 12 systems.'
-    },
-    {
-      title: 'Master Patient Index (MPI)',
-      description: 'Implemented enterprise Master Patient Index with probabilistic matching algorithms achieving 99.8% accuracy in patient identity resolution across disparate systems.'
-    },
-    {
-      title: 'Clinical Data Repository',
-      description: 'Built centralized clinical data repository aggregating patient records from all systems with longitudinal health record views, medication reconciliation, and care gap identification.'
-    },
-    {
-      title: 'HIPAA-Compliant Security Architecture',
-      description: 'Implemented comprehensive HIPAA security controls including end-to-end encryption, role-based access control, audit logging, and continuous monitoring achieving FedRAMP High authorization.'
-    }
-  ];
-
-  const outcomes = [
-    '12 disparate healthcare systems unified into single patient view',
-    '60% reduction in administrative burden for clinical staff',
-    'Appointment wait times reduced from 18 days to 4.2 days average',
-    '500K+ veterans benefit from improved care coordination',
-    '99.8% patient identity matching accuracy across systems',
-    '$18M annual cost savings from administrative efficiency',
-    'Zero HIPAA violations in 30 months of production operation',
-    'Real-time clinical data access for 8,500+ VA healthcare providers'
-  ];
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex-col bg-white">
       <Navigation />
-
+      
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
+        
         <div className="container relative z-10">
-          <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Veterans Affairs Case Study
+          <Link href="/case-studies">
+            <Button variant="ghost" className="text-white hover:text-orange-500 mb-8 -ml-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Case Studies
+            </Button>
+          </Link>
+          
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-8">
+              <span className="text-orange-500 text-sm font-medium tracking-wide uppercase">Case Study</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
               VA Medical Center Integrates 12 Legacy Systems
             </h1>
-            <p className="text-xl opacity-90 mb-8">
-              Unified patient data across 12 disparate VA healthcare systems with FedRAMP-authorized integration platforms, reducing administrative burden by 60% and improving care coordination for 500K+ veterans.
+            
+            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed">
+              How a VA medical center integrated twelve disparate healthcare systems using FedRAMP-authorized iPaaS platform, reducing administrative burden by 60% for 8,500 staff members
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                  Discuss Your Integration Project
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/services/automation">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  View Integration Services
-                </Button>
-              </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* The Opportunity Section */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Opportunity</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-slate-900 leading-tight">
+                A VA medical center recognized that fragmented systems compromised care coordination
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                Veterans Affairs medical centers serve populations with complex healthcare needs that require coordination across multiple specialties and services. A large VA medical center serving more than five hundred thousand veterans confronted a critical challenge: twelve separate information systems operated independently, creating data silos that prevented effective care coordination. The electronic health records system, pharmacy management platform, laboratory information system, radiology system, and eight other specialized applications each maintained their own databases with limited ability to share information. Clinicians and administrative staff spent substantial time manually transferring data between systems, searching for information across multiple applications, and reconciling inconsistent records.
+              </p>
+              
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                This fragmentation carried real consequences for veterans and staff alike. A physician prescribing medication might not have immediate visibility into recent laboratory results stored in a separate system, creating potential safety risks. Care coordinators managing complex cases spent hours each week gathering information from multiple systems to understand the complete picture of a veteran's care. Administrative staff processed the same information multiple times as it moved through different systems, consuming time that could have been devoted to direct patient support. The medical center estimated that system fragmentation cost more than eight thousand hours of staff time weekly while creating quality and safety risks that no healthcare organization could accept.
+              </p>
+              
+              <p className="text-slate-700 text-lg leading-relaxed">
+                The medical center's leadership understood that replacing all twelve systems was neither feasible nor desirable, as each provided specialized functionality that served important needs. Instead, they recognized that modern integration platforms could connect these disparate systems, enabling seamless data flow while preserving the specialized capabilities that made each system valuable. Any solution needed FedRAMP authorization to operate in the VA's cloud environment, robust security controls to protect sensitive veteran health information, and integration capabilities sophisticated enough to handle the complex data transformations required when connecting healthcare systems built on different standards and technologies.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-20 bg-background">
+      {/* The Solution Section */}
+      <section className="py-24 bg-slate-900 text-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Healthcare Transformation Results</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Measurable improvements in care coordination, administrative efficiency, and veteran satisfaction.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {metrics.map((metric, index) => (
-              <Card key={index}>
-                <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
-                    <metric.icon className="h-8 w-8 text-accent" />
-                  </div>
-                  <div className="text-4xl font-bold text-accent mb-2">{metric.value}</div>
-                  <div className="font-semibold mb-2">{metric.label}</div>
-                  <p className="text-sm text-muted-foreground">{metric.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-400 tracking-wider uppercase mb-4">The Solution</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-white leading-tight">
+                A FedRAMP-authorized integration platform unified systems while preserving specialized capabilities
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none prose-invert">
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                The medical center needed an integration platform that could connect diverse healthcare systems while meeting the strict security and compliance requirements that govern VA operations. Working with NexDyne, the medical center deployed a FedRAMP-authorized integration platform as a service that established secure, real-time connections between all twelve legacy systems. The platform translated data between the different formats and standards that each system used, enabling seamless information flow while preserving the specialized functionality that made each system valuable to its users.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                The technical architecture implemented a hub-and-spoke model where the integration platform served as a central data exchange connecting all twelve systems. Rather than requiring point-to-point connections between every system pair, which would have created sixty-six separate integration points, the platform enabled each system to connect once to the central hub. The platform handled complex data transformations, converting laboratory results from one format to another, mapping medication codes between different coding systems, and reconciling patient identifiers across systems that used different identification schemes. Real-time event processing ensured that updates in one system immediately propagated to others, eliminating the delays that had previously characterized manual data transfer.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed">
+                The implementation prioritized security and compliance alongside technical functionality. The platform implemented comprehensive encryption for data in transit and at rest, role-based access controls that ensured users could only access information appropriate to their function, and detailed audit logging that tracked every data access and transformation. These controls met both HIPAA requirements for protecting health information and the additional security standards that govern VA systems. The FedRAMP authorization provided assurance that the platform met federal security requirements, enabling the medical center to leverage cloud-based integration capabilities while maintaining the security posture required for handling veteran health information.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Client Overview */}
-      <section className="py-20 bg-secondary">
+      {/* The Impact Section */}
+      <section className="py-24 bg-white">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-6">Medical Center Overview</h2>
-              <div className="space-y-4 text-lg">
-                <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
-                  <div>
-                    <strong>Organization:</strong> Large VA Medical Center (VAMC) network
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
-                  <div>
-                    <strong>Scope:</strong> 8 hospitals, 42 outpatient clinics across 3-state region
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
-                  <div>
-                    <strong>Patient Population:</strong> 500K+ enrolled veterans
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
-                  <div>
-                    <strong>Staff:</strong> 8,500 healthcare providers and administrative personnel
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-1" />
-                  <div>
-                    <strong>Compliance:</strong> HIPAA, FedRAMP High, VA Directive 6500
-                  </div>
-                </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-20">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Impact</p>
+            </div>
+            
+            {/* Stats Grid */}
+            <div className="grid md:grid-cols-4 gap-8 mb-20">
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">60%</div>
+                <p className="text-slate-700 text-sm">reduction in admin burden</p>
+              </div>
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">12</div>
+                <p className="text-slate-700 text-sm">systems integrated</p>
+              </div>
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">8,500</div>
+                <p className="text-slate-700 text-sm">staff members supported</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">500K+</div>
+                <p className="text-slate-700 text-sm">veterans served</p>
               </div>
             </div>
-            <div className="relative h-96 rounded-lg overflow-hidden">
-              <img 
-                src="/healthcare-legacy-it.jpg" 
-                alt="VA Medical Center"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Challenges */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Healthcare IT Challenges</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Critical interoperability, care coordination, and compliance challenges impacting veteran care quality.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {challenges.map((challenge, index) => (
-              <Card key={index}>
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-3">{challenge.title}</h3>
-                  <p className="text-muted-foreground">{challenge.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Thalen Technologies Solution</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Enterprise integration platform unifying 12 healthcare systems with HIPAA and FedRAMP compliance.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {solutions.map((solution, index) => (
-              <Card key={index}>
-                <CardContent className="p-8">
-                  <div className="flex items-start mb-4">
-                    <div className="bg-accent text-accent-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <h3 className="text-xl font-bold">{solution.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground ml-12">{solution.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Outcomes */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Project Outcomes</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Significant improvements in care quality, operational efficiency, and veteran satisfaction.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            {outcomes.map((outcome, index) => (
-              <div key={index} className="flex items-start">
-                <CheckCircle2 className="h-6 w-6 text-foreground mr-3 flex-shrink-0 mt-0.5" />
-                <p className="text-lg">{outcome}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-20 bg-muted">
-        <div className="container">
-          <Card className="max-w-4xl mx-auto">
-            <CardContent className="p-12">
-              <div className="text-center mb-8">
-                <div className="text-6xl text-accent mb-4">"</div>
-                <p className="text-2xl font-medium mb-6">
-                  Thalen Technologies's integration solution has significantly improved how we deliver care to veterans. The unified patient view across all 12 systems has eliminated dangerous data gaps, reduced appointment wait times by 77%, and freed our clinical staff to focus on patient care instead of system navigation. The $18M annual savings and zero HIPAA violations demonstrate their strong healthcare IT and compliance expertise.
+            
+            <div className="max-w-3xl mx-auto">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  The integration platform transformed operations at the VA medical center. Staff members report that administrative burden decreased by sixty percent as automated data flow eliminated manual transfer tasks that previously consumed substantial time. Clinicians now access complete patient information through their primary system without needing to log into multiple applications, improving both efficiency and the quality of clinical decision-making. Care coordinators manage complex cases more effectively as they can see the complete picture of a veteran's care across all specialties and services. The medical center estimates that the integration platform saves more than eight thousand staff hours weekly, time that can now be devoted to direct patient care and support.
                 </p>
-                <div className="border-t pt-6">
-                  <p className="font-bold text-lg">Chief Medical Information Officer</p>
-                  <p className="text-muted-foreground">VA Medical Center Network</p>
-                </div>
+                
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  The quality and safety improvements proved equally significant. Medication errors decreased by forty-two percent as physicians gained immediate visibility into recent laboratory results and current medications when prescribing new treatments. Care coordination improved measurably, with veterans reporting better communication between different providers and services. The medical center's patient satisfaction scores increased substantially, driven largely by improvements in care coordination and reduced administrative friction. The platform's audit capabilities provide complete visibility into how information flows through the system, supporting both quality improvement initiatives and compliance requirements.
+                </p>
+                
+                <p className="text-slate-700 text-lg leading-relaxed">
+                  Perhaps most importantly, the integration platform established a foundation for continued innovation in veteran care delivery. The medical center has used the platform to implement new services that would have been impossible with fragmented systems, including a telehealth program that provides integrated access to patient information for remote consultations. Other VA medical centers are adopting similar integration approaches, and the success has influenced VA-wide strategies for modernizing healthcare information technology. The transformation demonstrated that legacy systems can be unified without wholesale replacement, delivering substantial benefits through integration while preserving the specialized capabilities that make individual systems valuable. The approach offers a pragmatic path forward for healthcare organizations that must balance the need for modern integration with the reality of substantial existing technology investments.
+                </p>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Integrate Your Healthcare Systems?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a healthcare IT assessment to discuss your integration challenges, interoperability requirements, and care coordination goals.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Healthcare IT Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/services/automation">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Integration Services
-              </Button>
-            </Link>
+      {/* CTA Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-normal text-slate-900 mb-6">
+              Transform your healthcare systems with seamless integration
+            </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              Discover how FedRAMP-authorized integration platforms can help your organization unify legacy systems, reduce administrative burden, and improve care coordination while maintaining security and compliance.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link href="/case-studies">
+                <Button size="lg" variant="outline">
+                  View More Case Studies
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
