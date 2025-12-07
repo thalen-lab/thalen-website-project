@@ -132,25 +132,25 @@ export default function Automation() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-navy-gradient text-primary-foreground overflow-hidden">
+      {/* Hero Section - Enhanced with design system patterns */}
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden min-h-[500px] sm:h-[600px] flex items-center">
         <div className="container">
           <motion.div 
-            className="max-w-4xl"
-            initial={{ opacity: 0, y: 20 }}
+            className="max-w-3xl"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Core Service
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
               Government Process Automation
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-white/95 leading-relaxed">
               We help government agencies automate processes and workflows through two approaches: modernizing and optimizing your existing systems first, then implementing FedRAMP/StateRAMP-authorized platforms when needed.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
                 <Link href="/contact">
                   Request Automation Assessment
@@ -167,35 +167,35 @@ export default function Automation() {
         </div>
       </section>
 
-      {/* Two Ways We Serve Government Agencies */}
-      <section className="py-20 bg-white">
+      {/* Two Ways We Serve Government Agencies - Enhanced spacing and animations */}
+      <section className="py-16 md:py-20 bg-background">
         <div className="container">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Two Ways We Serve Government Agencies</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Two Ways We Serve Government Agencies</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Modernization First, Platforms When Needed
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Most agencies can achieve significant automation gains by modernizing their existing systems. We implement new platforms only when modernization cannot meet mission requirements.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
             {twoApproaches.map((approach, index) => (
               <motion.div 
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
               >
-                <Card className="h-full border-2 border-primary/20 hover:border-accent hover:shadow-xl transition-all">
+                <Card className="h-full border-2 hover:border-accent transition-all duration-300 hover:shadow-xl">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4 mb-6">
                       <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
@@ -203,22 +203,22 @@ export default function Automation() {
                       </div>
                       <div className="flex-1">
                         <div className="text-5xl font-bold text-accent/20 mb-2">{approach.number}</div>
-                        <h3 className="text-2xl font-bold text-slate-900 mb-3">{approach.title}</h3>
+                        <h3 className="text-2xl font-bold mb-3">{approach.title}</h3>
                       </div>
                     </div>
-                    <p className="text-slate-600 mb-6 leading-relaxed">{approach.description}</p>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">{approach.description}</p>
                     
                     <ul className="space-y-3 mb-6">
                       {approach.capabilities.map((capability, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-slate-700">
-                          <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                        <li key={idx} className="flex items-start text-sm">
+                          <CheckCircle2 className="h-4 w-4 text-accent mt-0.5 mr-3 flex-shrink-0" />
                           <span>{capability}</span>
                         </li>
                       ))}
                     </ul>
 
                     <div className="bg-accent/5 border-l-4 border-accent p-4 rounded">
-                      <p className="text-sm font-semibold text-slate-900">{approach.emphasis}</p>
+                      <p className="text-sm font-semibold">{approach.emphasis}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -228,38 +228,38 @@ export default function Automation() {
         </div>
       </section>
 
-      {/* Key Differentiators */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+      {/* Key Differentiators - Enhanced with design system patterns */}
+      <section className="py-16 md:py-20 bg-secondary">
         <div className="container">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Why Choose Us</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Why Choose Us</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Proven Automation Expertise
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {keyDifferentiators.map((item, index) => (
               <motion.div 
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
               >
-                <Card className="h-full border-2 border-primary/20 hover:border-primary/40 transition-all">
+                <Card className="h-full border-2 hover:border-accent transition-all duration-300 hover:shadow-xl">
                   <CardContent className="p-8 text-center">
-                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                      <item.icon className="h-7 w-7 text-primary" />
+                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                      <item.icon className="h-8 w-8 text-accent" />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                    <p className="text-slate-600">{item.description}</p>
+                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -268,39 +268,39 @@ export default function Automation() {
         </div>
       </section>
 
-      {/* Primary Automation Services */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      {/* Primary Automation Services - Enhanced with design system patterns */}
+      <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            className="mb-16 text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Core Capabilities</p>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
+            <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Core Capabilities</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
               Core Automation Implementation Services
             </h2>
-            <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
               End-to-end automation capabilities designed for government agencies (federal, state, and local) requiring compliance and mission-critical reliability.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {primaryServices.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
               >
                 <Link href={service.link} className="block group h-full">
-                  <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
+                  <Card className="h-full border-2 border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:shadow-xl">
                     <CardContent className="p-8">
-                      <div className="mb-6">
-                        <service.icon className="h-12 w-12 text-accent" />
+                      <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-6">
+                        <service.icon className="h-8 w-8 text-accent" />
                       </div>
                       <h3 className="text-2xl font-bold mb-4 text-white">
                         {service.title}
@@ -312,7 +312,7 @@ export default function Automation() {
                       <ul className="space-y-3 mb-8">
                         {service.benefits.map((benefit, idx) => (
                           <li key={idx} className="flex items-start text-sm text-white/80">
-                            <ArrowRight className="h-4 w-4 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-accent mt-0.5 mr-3 flex-shrink-0" />
                             <span>{benefit}</span>
                           </li>
                         ))}
@@ -331,62 +331,71 @@ export default function Automation() {
           {/* Additional Capabilities */}
           <motion.div 
             className="mt-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
             <h3 className="text-2xl font-bold mb-8 text-center text-white">Additional Automation Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
-                  <ArrowRight className="h-4 w-4 text-accent mt-1 mr-4 flex-shrink-0" />
+                <motion.div 
+                  key={index}
+                  className="flex items-start p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/10 hover:border-accent/50 transition-all duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                >
+                  <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 mr-4 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold mb-1 text-white">{capability.name}</h4>
                     <p className="text-sm text-white/70">{capability.description}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Government Automation Experience */}
-      <section className="py-20 bg-white">
+      {/* Government Automation Experience - Enhanced with design system patterns */}
+      <section className="py-16 md:py-20 bg-background">
         <div className="container">
           <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Proven Results</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Proven Results</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Government Automation Implementation Success
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Experience implementing automation solutions across government agencies (federal, state, and local) with measurable mission impact.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {governmentExperience.map((exp, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
               >
-                <Card className="h-full rounded-none border-2 border-slate-900 hover:shadow-2xl transition-all active:scale-95 group">
+                <Card className="h-full border-2 hover:border-accent hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-8">
-                    <TrendingUp className="h-12 w-12 text-primary mb-4 group-hover:text-accent transition-colors" />
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">{exp.agency}</h3>
-                    <p className="text-sm text-slate-600 mb-3">{exp.project}</p>
-                    <p className="text-lg font-bold text-primary mb-4">{exp.outcome}</p>
-                    <p className="text-sm text-slate-600 leading-relaxed">{exp.details}</p>
+                    <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                      <TrendingUp className="h-8 w-8 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
+                    <p className="text-2xl font-bold text-accent mb-4">{exp.outcome}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{exp.details}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -395,12 +404,12 @@ export default function Automation() {
 
           <motion.div 
             className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
-            <Button asChild size="lg" variant="outline" className="border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white transition-all">
+            <Button asChild size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all">
               <Link href="/case-studies">
                 View All Automation Case Studies
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -410,40 +419,40 @@ export default function Automation() {
         </div>
       </section>
 
-      {/* FedRAMP Platform Expertise - When Needed */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+      {/* FedRAMP Platform Expertise - Enhanced with design system patterns */}
+      <section className="py-16 md:py-20 bg-secondary">
         <div className="container">
           <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Platform Expertise (When Needed)</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Platform Expertise (When Needed)</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               FedRAMP-Authorized Platform Implementation
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               When your existing systems cannot meet mission requirements, we implement and integrate FedRAMP-authorized automation platforms from leading vendors.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {fedrampPlatforms.map((category, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
               >
-                <Card className="h-full border-2 border-slate-200 hover:border-accent/40 hover:shadow-lg transition-all">
+                <Card className="h-full border-2 hover:border-accent/40 hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-8">
-                    <h3 className="text-xl font-bold text-slate-900 mb-4">{category.category}</h3>
+                    <h3 className="text-xl font-bold mb-4">{category.category}</h3>
                     <div className="flex flex-wrap gap-2">
                       {category.platforms.map((platform, idx) => (
-                        <span key={idx} className="bg-slate-100 border border-slate-300 text-slate-900 px-3 py-1 rounded-full text-sm font-medium hover:bg-accent/10 hover:border-accent transition-colors">
+                        <span key={idx} className="bg-muted text-accent px-3 py-1 rounded-full text-sm font-medium border border-border hover:bg-accent/10 hover:border-accent transition-colors">
                           {platform}
                         </span>
                       ))}
@@ -455,101 +464,36 @@ export default function Automation() {
           </div>
 
           <motion.div 
-            className="mt-12 text-center bg-primary/5 border-2 border-primary/20 rounded-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
+            className="mt-12 bg-card border-2 border-border rounded-lg p-8"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
-            <p className="text-lg text-slate-700 mb-4">
-              <strong className="text-slate-900">Platform-agnostic approach:</strong> We evaluate your existing systems first and recommend FedRAMP platforms only when modernization cannot meet your mission requirements, compliance needs, or budget constraints.
+            <p className="text-lg text-card-foreground mb-4 text-center">
+              <strong>Platform-Agnostic Approach:</strong> We evaluate your existing systems first and recommend FedRAMP platforms only when modernization cannot achieve mission objectives. Our implementation includes full ATO support, compliance documentation, and integration with your current infrastructure.
             </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link href="/contact">
-                Discuss Your Automation Needs
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* FAR Compliance for Automation Services */}
-      <section className="py-16 bg-slate-50">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-navy-900 mb-3">Government Contracting Compliance</h2>
-              <p className="text-lg text-slate-700 max-w-2xl mx-auto">
-                Our automation implementations comply with Federal Acquisition Regulation requirements for IT services.
-              </p>
-            </div>
-
-            <Card className="border-2 border-accent/20">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                      FAR Part 39 Compliance
-                    </h3>
-                    <p className="text-sm text-slate-700 mb-4">
-                      Automation implementations comply with FAR Part 39 (Acquisition of Information Technology) requirements governing IT professional services and cloud solutions.
-                    </p>
-                    <ul className="space-y-2 text-sm text-slate-700">
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span><strong>FAR 52.239-1:</strong> Privacy and security safeguards for automation platforms</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span><strong>FAR 52.204-21:</strong> Basic safeguarding of contractor information systems</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                      Procurement Benefits
-                    </h3>
-                    <p className="text-sm text-slate-700 mb-4">
-                      Pre-established compliance frameworks enable faster contract execution and reduced oversight requirements for agency procurement officers.
-                    </p>
-                    <ul className="space-y-2 text-sm text-slate-700">
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>Streamlined task order awards under GSA Schedule contracts</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>Documented compliance reduces agency oversight burden</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      {/* CTA Section - Enhanced with design system patterns */}
+      <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
               Ready to Automate Your Government Processes?
             </h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Schedule a free automation assessment to identify opportunities, evaluate your existing systems, and develop a roadmap for implementation.
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+              Schedule a free automation assessment to identify opportunities for process optimization, cost savings, and mission impact.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
                 <Link href="/contact">
                   Schedule Free Assessment
