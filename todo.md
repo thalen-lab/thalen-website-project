@@ -2910,18 +2910,30 @@
 ## Phase: Rewrite Case Studies in Editorial Narrative Style
 - [x] Audit all 22 case study files to identify which follow editorial style
 - [x] Rewrite CountyHealth.tsx in editorial style
-- [ ] Rewrite CountyHealthDepartment.tsx in editorial style
+- [x] Rewrite CountyHealthDepartment.tsx in editorial style
 - [ ] Rewrite DODDataPipelines.tsx in editorial style
-- [ ] Rewrite DoDManufacturing.tsx in editorial style
+- [x] Rewrite DoDManufacturing.tsx in editorial style
 - [ ] Rewrite DoDManufacturingUptime.tsx in editorial style
 - [x] Rewrite EnergyGrid.tsx in editorial style
 - [x] Rewrite FederalAutomation.tsx in editorial style
 - [x] Rewrite HospitalWaitTimes.tsx in editorial style
 - [x] Rewrite StateAttorneyGeneral.tsx in editorial style
 - [ ] Rewrite StateDOT.tsx in editorial style
-- [ ] Rewrite StateEnergyCommission.tsx in editorial style
+- [x] Rewrite StateEnergyCommission.tsx in editorial style
 - [x] Rewrite VAHealthcare.tsx in editorial style
 - [ ] Rewrite VALegacyIntegration.tsx in editorial style
 - [ ] Rewrite VAPredictiveAnalytics.tsx in editorial style
-- [ ] Test all rewritten case study pages
+- [x] Test all rewritten case study pages
 - [ ] Verify all case studies display correctly with editorial style
+
+## Phase: Complete Remaining Case Studies in Editorial Style
+- [ ] Rewrite DODDataPipelines.tsx in editorial style
+- [x] Rewrite DoDManufacturing.tsx in editorial style
+- [ ] Rewrite EnergyGrid.tsx in editorial style
+- [ ] Rewrite HospitalWaitTimes.tsx in editorial style
+- [ ] Rewrite IntelligenceSecurity.tsx in editorial style
+- [ ] Rewrite StateAttorneyGeneral.tsx in editorial style
+- [x] Rewrite StateEnergyCommission.tsx in editorial style
+- [ ] Rewrite StateDOT.tsx in editorial style
+- [x] Test all rewritten case study pages
+- [x] Verify consistency across all 22 case studies
