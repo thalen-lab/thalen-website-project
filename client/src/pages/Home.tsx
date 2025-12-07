@@ -27,37 +27,37 @@ export default function Home() {
     {
       icon: Cpu,
       title: 'Process Automation & Optimization',
-      description: 'Modernize your existing workflows with RPA and orchestration—or implement FedRAMP platforms (UiPath Gov, Automation Anywhere Gov) when needed. Includes legacy system integration, ATO support, and compliance documentation.',
+      description: 'Optimize your existing workflows through process redesign and custom automation. When legacy systems cannot be modernized or compliance requires it, we implement FedRAMP platforms (UiPath Gov, Automation Anywhere Gov) with full ATO support.',
       href: '/services/automation'
     },
     {
       icon: BarChart3,
       title: 'Data Analytics & Intelligence',
-      description: 'Optimize your existing data infrastructure and analytics capabilities—or implement FedRAMP BI platforms (Tableau Gov, Power BI Gov) when compliance requires it. Includes data strategy, governance, and custom dashboards.',
+      description: 'Enhance your existing data infrastructure and analytics capabilities through custom development and integration. When new capabilities are needed or compliance requires it, we implement FedRAMP BI platforms (Tableau Gov, Power BI Gov).',
       href: '/services/data-analytics'
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure & Modernization',
-      description: 'Modernize on-premises infrastructure or migrate to FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it. Includes hybrid architecture, legacy system integration, and ATO support.',
+      description: 'Modernize your on-premises infrastructure through optimization and hybrid architecture. When mission requirements or compliance mandate cloud migration, we implement FedRAMP cloud platforms (AWS GovCloud, Azure Gov) with full ATO support.',
       href: '/services/cloud'
     },
     {
       icon: Shield,
       title: 'Cybersecurity & Compliance',
-      description: 'Strengthen your existing security posture or implement FedRAMP security platforms when compliance mandates it. Includes gap analysis, CMMC/FISMA compliance, zero-trust architecture, and ATO documentation.',
+      description: 'Strengthen your existing security posture through gap analysis, controls implementation, and zero-trust architecture. When compliance mandates FedRAMP-authorized security tools, we implement and integrate those platforms with full ATO documentation.',
       href: '/services/cybersecurity'
     },
     {
       icon: Code,
       title: 'Application Development & Integration',
-      description: 'Integrate your existing systems with modern APIs and workflows—or connect FedRAMP platforms (Salesforce Gov, ServiceNow, Workday) when needed. Vendor-neutral architecture ensures no lock-in.',
+      description: 'Integrate your existing systems through custom APIs, middleware, and workflow orchestration. When agencies need new capabilities that existing systems cannot provide, we implement FedRAMP platforms (Salesforce Gov, ServiceNow, Workday) and integrate them with your infrastructure.',
       href: '/services/system-integration'
     },
     {
       icon: Users,
       title: 'Digital Transformation & Modernization',
-      description: 'Transform your existing operations through process redesign, change management, and technology optimization—with FedRAMP platform implementation when compliance requires it. Includes TMF support and vendor-neutral guidance.',
+      description: 'Transform your existing operations through process redesign, change management, and technology optimization. When transformation requires new capabilities or FedRAMP compliance, we implement authorized platforms and integrate them with your systems. Includes TMF support.',
       href: '/services/digital-transformation'
     }
   ];
@@ -153,8 +153,8 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative container h-full flex items-center">
           <div className="max-w-3xl text-primary-foreground">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">Government Technology Implementation Services</h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-white/95 leading-relaxed">We deliver end-to-end technology solutions that modernize government operations, enhance security, and improve citizen services through proven implementation expertise</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">Government Technology Modernization & Implementation</h1>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-white/95 leading-relaxed">We help government agencies modernize their existing systems and operations—and implement FedRAMP/StateRAMP-authorized platforms when needed</p>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
@@ -180,10 +180,10 @@ export default function Home() {
           <div className="mb-16 text-center max-w-4xl mx-auto">
             <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Core Capabilities</p>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
-              Government Technology Services
+              Two Core Service Areas
             </h2>
             <p className="text-xl text-white/90 leading-relaxed">
-              Comprehensive technology solutions for federal, state, and local agencies. From automation to cybersecurity, we deliver mission-critical results.
+              We primarily help agencies modernize their existing systems and operations. When legacy systems can't meet mission needs or compliance requires FedRAMP-authorized tools, we implement and integrate those platforms. Vendor-neutral, mission-focused, compliance-ready.
             </p>
           </div>
 
@@ -216,6 +216,131 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Dual Approach Section */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-6xl">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Our Approach</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              When Do You Need What?
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+              Most agencies start with modernizing their existing systems and operations. When that is not enough or when compliance requires FedRAMP-authorized tools, we implement and integrate those platforms. Often, it is both.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Modernize Existing Systems */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Card className="h-full border-2 border-primary/20 hover:border-primary/40 transition-all">
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                      <TrendingUp className="h-7 w-7 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                      Modernize Your Existing Systems
+                    </h3>
+                    <p className="text-slate-600 mb-6">
+                      Our primary focus: optimize what you already have
+                    </p>
+                  </div>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700"><strong>Legacy system modernization:</strong> Refactor, re-architect, or integrate existing applications</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700"><strong>Process optimization:</strong> Automate workflows without replacing infrastructure</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700"><strong>Custom integrations:</strong> Connect disparate systems with APIs and middleware</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700"><strong>Infrastructure upgrades:</strong> Improve performance, security, and scalability</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Implement FedRAMP Platforms */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Card className="h-full border-2 border-accent/20 hover:border-accent/40 transition-all">
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                      <Shield className="h-7 w-7 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                      Implement FedRAMP/StateRAMP Platforms
+                    </h3>
+                    <p className="text-slate-600 mb-6">
+                      When modernization isn't enough, we implement authorized platforms
+                    </p>
+                  </div>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700"><strong>When legacy can't be modernized:</strong> Replace end-of-life systems with authorized platforms</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700"><strong>When compliance mandates it:</strong> FedRAMP/StateRAMP authorization required for data sensitivity</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700"><strong>When new capabilities needed:</strong> Add functionality your existing systems can't provide</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700"><strong>Integration with existing systems:</strong> Connect new platforms to your current infrastructure</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+
+          {/* Bottom CTA */}
+          <motion.div
+            className="mt-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <p className="text-lg text-slate-600 mb-6">
+              <strong className="text-slate-900">The key insight:</strong> We help agencies modernize their existing systems first. When that's not sufficient or compliance requires FedRAMP-authorized tools, we implement those platforms and integrate them with your infrastructure.
+            </p>
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+              <Link href="/contact">
+                Discuss Your Specific Needs
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Case Studies Section - Incentro Style */}
       <CaseStudyShowcase />
