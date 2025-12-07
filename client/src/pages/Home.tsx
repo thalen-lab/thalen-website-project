@@ -154,7 +154,7 @@ export default function Home() {
         <div className="relative container h-full flex items-center">
           <div className="max-w-3xl text-primary-foreground">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">Government Technology Implementation Services</h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-white/95 leading-relaxed">Infrastructure modernization and FedRAMP/StateRAMP platform implementation for federal, state, and local government agencies</p>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-white/95 leading-relaxed">We deliver end-to-end technology solutions that modernize government operations, enhance security, and improve citizen services through proven implementation expertise</p>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
@@ -199,14 +199,14 @@ export default function Home() {
                     <div className="mb-6">
                       <service.icon className="h-12 w-12 text-accent" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">
+                    <h3 className="text-xl font-bold mb-3 text-white">
                       {service.title}
                     </h3>
-                    <p className="text-base text-white/80 leading-relaxed mb-6">
+                    <p className="text-sm text-white/80 leading-relaxed mb-4">
                       {service.description}
                     </p>
-                    <div className="flex items-center text-accent text-sm font-semibold group-hover:gap-3 gap-2 transition-all">
-                      Learn More <ArrowRight className="h-4 w-4" />
+                    <div className="flex items-center text-accent text-xs font-semibold group-hover:gap-2 gap-1.5 transition-all">
+                      Learn More <ArrowRight className="h-3.5 w-3.5" />
                     </div>
                   </CardContent>
                 </Card>

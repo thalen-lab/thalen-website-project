@@ -2829,3 +2829,7 @@
 - [x] Review homepage hero and CTA sections for tone
 - [x] Review service pages for overly promotional language
 - [x] Ensure all content is factual, service-oriented, and professional
+
+## Phase 49: Update Hero Subtext and Service Card Design
+- [x] Update hero subtext to "We deliver end-to-end technology solutions that modernize government operations, enhance security, and improve citizen services through proven implementation expertise"
+- [x] Restore cleaner, more compact service card design with smaller icons
