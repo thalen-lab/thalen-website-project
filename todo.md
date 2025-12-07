@@ -2801,3 +2801,11 @@
 - [ ] Submit sitemap to Google Search Console
 - [ ] Run Lighthouse audits on all pages
 - [ ] Test Core Web Vitals (LCP, FID, CLS) - See SEO_PERFORMANCE_GUIDE.md
+
+## Phase 60: Align Homepage Messaging with Dual Business Model
+- [x] Review current homepage copy for clarity on dual approach
+- [x] Update hero section to emphasize both modernization AND platform implementation
+- [x] Revise service descriptions to reflect: modernizing existing systems + implementing FedRAMP platforms when needed
+- [x] Ensure messaging clarifies when each approach is used (legacy modernization vs. new platform implementation)
+- [x] Update value propositions to highlight flexibility in approach
+- [x] Add "When Do You Need What?" section with two-column comparison
