@@ -4,7 +4,7 @@ import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-primary/5 text-foreground border-t border-border">
       <div className="container py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
@@ -13,7 +13,7 @@ export default function Footer() {
               <img src={APP_LOGO} alt="Incentro" className="h-16" />
             </div>
             <p className="text-sm opacity-90 mb-4 max-w-sm">
-              Govern Smart. The Automation Strategy Authority for government and enterprise.
+              Delivering secure, compliant, and mission-critical technology solutions for government agencies nationwide.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
@@ -32,10 +32,12 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-sm opacity-90">
-              <li><Link href="/services/automation" className="hover:text-accent transition-colors">Automation Strategy</Link></li>
-              <li><Link href="/services/analytics" className="hover:text-accent transition-colors">Data Analytics</Link></li>
+              <li><Link href="/services/automation" className="hover:text-accent transition-colors">Process Automation</Link></li>
+              <li><Link href="/services/data-analytics" className="hover:text-accent transition-colors">Data Analytics</Link></li>
               <li><Link href="/services/cloud" className="hover:text-accent transition-colors">Cloud Modernization</Link></li>
               <li><Link href="/services/cybersecurity" className="hover:text-accent transition-colors">Cybersecurity</Link></li>
+              <li><Link href="/services/system-integration" className="hover:text-accent transition-colors">Application Development</Link></li>
+              <li><Link href="/services/digital-transformation" className="hover:text-accent transition-colors">Digital Transformation</Link></li>
             </ul>
           </div>
 
@@ -90,8 +92,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-75">
-          <p>© 2024 Incentro. All rights reserved.</p>
+        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-75">
+          <p>© 2024 NexDyne Technology. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>

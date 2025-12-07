@@ -29,14 +29,14 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
+    <nav className="bg-background/95 backdrop-blur-sm text-foreground sticky top-0 z-50 border-b border-border">
       <div className="container">
         <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <span className="text-xl sm:text-2xl font-bold">
+            <span className="text-lg sm:text-xl font-bold">
               <span className="hidden sm:inline">Thalen Technologies - Govern Smart</span>
-              <span className="sm:hidden">Thalen Tech</span>
+              <span className="sm:hidden">Thalen</span>
             </span>
           </Link>
 
