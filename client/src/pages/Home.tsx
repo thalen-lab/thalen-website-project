@@ -180,10 +180,10 @@ export default function Home() {
           <div className="mb-16 text-center max-w-4xl mx-auto">
             <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Core Capabilities</p>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
-              Two Ways We Serve Government Agencies
+              Government Technology Services
             </h2>
             <p className="text-xl text-white/90 leading-relaxed">
-              Modernize your existing systems and operations—or implement FedRAMP/StateRAMP platforms when compliance demands it. Often, it's both. We're vendor-neutral, mission-focused, and compliance-ready.
+              Comprehensive technology solutions for federal, state, and local agencies. From automation to cybersecurity, we deliver mission-critical results.
             </p>
           </div>
 
@@ -216,131 +216,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Dual Approach Section */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-6xl">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Our Approach</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              When Do You Need What?
-            </h2>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              We're not a platform vendor. We're your technology partner. Sometimes you need to modernize what you have. Sometimes you need FedRAMP platforms. Often, it's both.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Modernize Existing Systems */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Card className="h-full border-2 border-primary/20 hover:border-primary/40 transition-all">
-                <CardContent className="p-8">
-                  <div className="mb-6">
-                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <TrendingUp className="h-7 w-7 text-primary" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                      Modernize Your Existing Systems
-                    </h3>
-                    <p className="text-slate-600 mb-6">
-                      Optimize what you already have before introducing new platforms
-                    </p>
-                  </div>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700"><strong>Legacy system modernization:</strong> Refactor, re-architect, or integrate existing applications</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700"><strong>Process optimization:</strong> Automate workflows without replacing infrastructure</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700"><strong>Custom integrations:</strong> Connect disparate systems with APIs and middleware</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700"><strong>Infrastructure upgrades:</strong> Improve performance, security, and scalability</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Implement FedRAMP Platforms */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Card className="h-full border-2 border-accent/20 hover:border-accent/40 transition-all">
-                <CardContent className="p-8">
-                  <div className="mb-6">
-                    <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <Shield className="h-7 w-7 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                      Implement FedRAMP/StateRAMP Platforms
-                    </h3>
-                    <p className="text-slate-600 mb-6">
-                      Deploy authorized platforms when compliance or capability gaps require them
-                    </p>
-                  </div>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700"><strong>When legacy can't be modernized:</strong> Replace end-of-life systems with authorized platforms</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700"><strong>When compliance mandates it:</strong> FedRAMP/StateRAMP authorization required for data sensitivity</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700"><strong>When new capabilities needed:</strong> Add functionality your existing systems can't provide</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700"><strong>Integration with existing systems:</strong> Connect new platforms to your current infrastructure</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-
-          {/* Bottom CTA */}
-          <motion.div
-            className="mt-12 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <p className="text-lg text-slate-600 mb-6">
-              <strong className="text-slate-900">The key insight:</strong> We're not pushing platforms. We help agencies with whatever they need—modernization, implementation, or both.
-            </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link href="/contact">
-                Discuss Your Specific Needs
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Case Studies Section - Incentro Style */}
       <CaseStudyShowcase />

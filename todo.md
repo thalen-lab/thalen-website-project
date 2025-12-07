@@ -2871,3 +2871,6 @@
 
 ## Phase 49: Remove Why Choose Us Section from Service Pages
 - [x] Remove "Why Choose Us" section from all service pages
+
+## Phase 52: Remove "Two Ways We Serve" Section
+- [x] Remove "Two Ways We Serve Government Agencies" section from homepage
