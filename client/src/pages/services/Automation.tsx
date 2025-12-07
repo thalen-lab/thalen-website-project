@@ -383,6 +383,65 @@ export default function Automation() {
         </div>
       </section>
 
+      {/* FAR Compliance for Automation Services */}
+      <section className="py-16 bg-slate-50">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-navy-900 mb-3">Government Contracting Compliance</h2>
+              <p className="text-lg text-slate-700 max-w-2xl mx-auto">
+                Our automation implementations comply with Federal Acquisition Regulation requirements for IT services.
+              </p>
+            </div>
+
+            <Card className="border-2 border-accent/20">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                      FAR Part 39 Compliance
+                    </h3>
+                    <p className="text-sm text-slate-700 mb-4">
+                      Automation platform implementations comply with FAR Part 39 (Acquisition of Information Technology) requirements governing IT professional services and cloud solutions.
+                    </p>
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span><strong>FAR 52.239-1:</strong> Privacy and security safeguards for automation platforms</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span><strong>FAR 52.204-21:</strong> Basic safeguarding of contractor information systems</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                      Procurement Benefits
+                    </h3>
+                    <p className="text-sm text-slate-700 mb-4">
+                      Pre-established compliance frameworks enable faster contract execution and reduced oversight requirements for agency procurement officers.
+                    </p>
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>Streamlined task order awards under GSA Schedule contracts</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>Documented compliance reduces agency oversight burden</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">

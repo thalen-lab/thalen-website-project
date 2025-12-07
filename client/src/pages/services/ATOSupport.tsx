@@ -384,6 +384,93 @@ export default function ATOSupport() {
         </div>
       </section>
 
+      {/* FAR Compliance During ATO */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-navy-900 mb-4">FAR Compliance Integrated with ATO Process</h2>
+              <p className="text-xl text-slate-700 max-w-3xl mx-auto">
+                Federal Acquisition Regulation requirements are integrated into our ATO methodology, ensuring contract compliance throughout the security authorization lifecycle.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="p-6 border-2 border-accent/20">
+                <FileText className="h-10 w-10 text-accent mb-4" />
+                <h3 className="text-xl font-bold text-navy-900 mb-3">Security Safeguards (FAR 52.239-1)</h3>
+                <p className="text-slate-700 mb-4">
+                  Our ATO process ensures compliance with FAR 52.239-1 Privacy or Security Safeguards, documenting security controls and privacy protections required for federal IT systems.
+                </p>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <span>Security control implementation documented in System Security Plan (SSP)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <span>Privacy Impact Assessment (PIA) completed for systems handling PII</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <span>Continuous monitoring ensures ongoing compliance with security requirements</span>
+                  </li>
+                </ul>
+              </Card>
+
+              <Card className="p-6 border-2 border-accent/20">
+                <Shield className="h-10 w-10 text-accent mb-4" />
+                <h3 className="text-xl font-bold text-navy-900 mb-3">Information Safeguarding (FAR 52.204-21)</h3>
+                <p className="text-slate-700 mb-4">
+                  ATO implementations include FAR 52.204-21 Basic Safeguarding requirements for Covered Contractor Information Systems, protecting federal information throughout the project lifecycle.
+                </p>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <span>NIST SP 800-171 controls implemented for CUI protection</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <span>Incident response procedures documented and tested</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <span>Security assessment validates safeguarding effectiveness</span>
+                  </li>
+                </ul>
+              </Card>
+            </div>
+
+            <Card className="mt-8 p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-accent/20">
+              <h3 className="text-2xl font-bold text-navy-900 mb-4">Procurement Advantages</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div>
+                  <Target className="h-8 w-8 text-accent mb-3" />
+                  <h4 className="font-semibold text-navy-900 mb-2">Streamlined Contract Execution</h4>
+                  <p className="text-sm text-slate-700">
+                    Pre-established FAR compliance frameworks reduce contract negotiation time and enable faster project initiation.
+                  </p>
+                </div>
+                <div>
+                  <Shield className="h-8 w-8 text-accent mb-3" />
+                  <h4 className="font-semibold text-navy-900 mb-2">Reduced Oversight Burden</h4>
+                  <p className="text-sm text-slate-700">
+                    Documented compliance with FAR security requirements minimizes agency oversight and contractor management effort.
+                  </p>
+                </div>
+                <div>
+                  <FileCheck className="h-8 w-8 text-accent mb-3" />
+                  <h4 className="font-semibold text-navy-900 mb-2">Audit-Ready Documentation</h4>
+                  <p className="text-sm text-slate-700">
+                    Maintained compliance records support agency audits and CPARS evaluations with evidence of regulatory adherence.
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />

@@ -301,6 +301,86 @@ export default function Cybersecurity() {
         </div>
       </section>
 
+      {/* FAR Compliance for Cybersecurity Services */}
+      <section className="py-16 bg-slate-50">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-3">Government Contracting Compliance</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Cybersecurity implementations comply with Federal Acquisition Regulation requirements and Defense Federal Acquisition Regulation Supplement (DFARS) for DoD contracts.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <Card className="border-2">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold mb-3 flex items-center">
+                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                    IT Security Requirements (FAR)
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Cybersecurity services comply with FAR 52.239-1 (Privacy or Security Safeguards) and FAR 52.204-21 (Basic Safeguarding), implementing NIST controls for federal information protection.
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>NIST 800-53 control implementation and documentation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>Security assessment and continuous monitoring</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold mb-3 flex items-center">
+                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                    DoD Contracts (DFARS)
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    For Department of Defense contracts, we maintain compliance with DFARS 252.204-7012 (Safeguarding Covered Defense Information) and CMMC requirements for CUI protection.
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>NIST SP 800-171 controls for CUI safeguarding</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>CMMC Level 2 certification support and implementation</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="border-2 bg-gradient-to-br from-primary/5 to-accent/5">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold mb-4">Procurement Benefits</h3>
+                <div className="grid md:grid-cols-3 gap-6 text-sm">
+                  <div>
+                    <p className="font-semibold mb-2">Faster Contract Execution</p>
+                    <p className="text-muted-foreground">Pre-established compliance frameworks reduce contract negotiation time for security services.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Reduced Agency Risk</p>
+                    <p className="text-muted-foreground">Documented FAR and DFARS compliance minimizes contractor performance risk and oversight burden.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Audit-Ready Documentation</p>
+                    <p className="text-muted-foreground">Maintained compliance records support agency audits and CPARS evaluations.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">

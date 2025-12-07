@@ -267,6 +267,65 @@ export default function Cloud() {
         </div>
       </section>
 
+      {/* FAR Compliance for Cloud Services */}
+      <section className="py-16 bg-slate-50">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-3">Government Contracting Compliance</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Cloud migration and infrastructure services comply with Federal Acquisition Regulation requirements for government IT acquisitions.
+              </p>
+            </div>
+
+            <Card className="border-2">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-bold mb-3 flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                      Cloud Security Requirements
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Cloud implementations comply with FAR 52.239-1 (Privacy or Security Safeguards) and FAR 52.204-21 (Basic Safeguarding), ensuring federal data protection throughout migration and operations.
+                    </p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>FedRAMP-authorized platforms meet FAR security requirements</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>Continuous monitoring ensures ongoing compliance</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-3 flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
+                      Streamlined Procurement
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Pre-established compliance with FAR requirements enables faster contract execution through GSA Schedule vehicles, reducing procurement time and agency oversight burden.
+                    </p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>GSA Schedule 70 for IT Professional Services</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>Documented compliance reduces contract negotiation time</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
