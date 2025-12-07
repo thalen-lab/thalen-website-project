@@ -2749,3 +2749,6 @@
 - [x] Remove diagonal clip-path CSS from all sections
 - [x] Remove negative margins and padding compensations for diagonal cuts
 - [x] Make all section transitions straight for professional GovTech aesthetic
+
+## Phase 49: Fix ATO Support Page Hero Section
+- [x] Fix ATO Support page hero section diagonal transition around CTA area

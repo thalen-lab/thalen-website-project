@@ -59,10 +59,6 @@ export default function ATOSupport() {
             </div>
           </div>
         </div>
-        
-        <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 120" preserveAspectRatio="none" style={{ height: '120px' }}>
-          <path d="M0,0 L1440,60 L1440,120 L0,120 Z" fill="rgb(248, 250, 252)" />
-        </svg>
       </section>
 
       {/* The Challenge Section */}
