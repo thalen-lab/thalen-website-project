@@ -2879,3 +2879,6 @@
 
 ## Phase 53: Refine Icon Sizes and Positioning
 - [x] Adjust icon sizes and positioning across all pages for better visual balance
+
+## Phase 66: Fix Automation Page Icons
+- [x] Reduce icon sizes and move icons to the left of titles in cards to make cards more compact

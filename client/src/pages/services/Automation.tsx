@@ -115,12 +115,12 @@ export default function Automation() {
                 <Link href={service.link} className="block group h-full">
                   <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
                     <CardContent className="p-8">
-                      <div className="mb-6">
-                        <service.icon className="h-12 w-12 text-accent" />
+                      <div className="flex items-start gap-4 mb-4">
+                        <service.icon className="h-8 w-8 text-accent flex-shrink-0" />
+                        <h3 className="text-2xl font-bold text-white">
+                          {service.title}
+                        </h3>
                       </div>
-                      <h3 className="text-2xl font-bold mb-4 text-white">
-                        {service.title}
-                      </h3>
                       <p className="text-base text-white/80 leading-relaxed mb-6">
                         {service.description}
                       </p>
@@ -155,8 +155,8 @@ export default function Automation() {
             <h3 className="text-2xl font-bold mb-8 text-center text-white">Additional Automation Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
-                  <capability.icon className="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                <div key={index} className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
+                  <capability.icon className="h-6 w-6 text-accent flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold mb-1 text-white">{capability.name}</h4>
                     <p className="text-sm text-white/70">{capability.description}</p>
