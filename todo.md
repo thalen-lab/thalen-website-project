@@ -2967,3 +2967,10 @@
 - [x] Add "Contract Vehicles" link to main navigation menu under Federal Solutions
 - [x] Create downloadable capabilities statement PDF for hero section CTA
 - [x] Add past performance section showcasing successful task orders, contract values, and agency testimonials
+
+## Phase: Update Contract Vehicles Page Following Tygart Technology Structure
+- [x] Update Contract Vehicles page to follow Tygart Technology's presentation format
+- [x] Add specific contract numbers and descriptions for each vehicle
+- [x] Clarify prime vs subcontractor roles for each contract
+- [x] Add contract scope and capabilities for each vehicle
+- [x] Improve visual hierarchy and readability

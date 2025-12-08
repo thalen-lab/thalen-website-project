@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, FileText, Mail } from "lucide-react";
+import { ChevronDown, FileText, Mail, Building2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import SEO from "@/components/SEO";
@@ -8,10 +8,13 @@ import PastPerformance from "@/components/PastPerformance";
 interface ContractVehicle {
   name: string;
   description: string;
+  role: 'prime' | 'subcontractor' | 'pursuing';
   details?: string[];
+  scope?: string;
   contact?: string;
   contractNumber?: string;
   periodOfPerformance?: string;
+  capabilities?: string[];
 }
 
 interface VehicleCategory {
@@ -27,28 +30,36 @@ const contractCategories: VehicleCategory[] = [
     vehicles: [
       {
         name: "GSA Alliant 2",
-        description: "Comprehensive IT solutions contract vehicle for large-scale, complex IT projects across federal agencies.",
-        details: [
+        role: "pursuing",
+        description: "Comprehensive IT solutions contract vehicle for large-scale, complex IT projects across federal agencies. Alliant 2 provides agencies with access to cutting-edge technology solutions including artificial intelligence, cloud computing, cybersecurity, and data analytics services.",
+        scope: "Full lifecycle IT services including strategic planning, systems design and development, cloud migration, cybersecurity implementation, data analytics, and ongoing operations and maintenance for federal agencies.",
+        capabilities: [
           "Artificial Intelligence and Machine Learning implementation",
           "Cloud migration and modernization services",
-          "Cybersecurity and compliance solutions",
-          "Data analytics and business intelligence",
-          "Legacy system modernization"
+          "Cybersecurity and compliance solutions (FedRAMP, FISMA, NIST)",
+          "Data analytics and business intelligence platforms",
+          "Legacy system modernization and integration",
+          "DevSecOps and agile development services",
+          "IT infrastructure optimization"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Target award: 2026"
       },
       {
         name: "NIH CIO-SP4",
-        description: "Chief Information Officer Solutions and Partners 4 contract vehicle supporting health and research agencies.",
-        details: [
-          "Health IT systems integration",
-          "Research data management platforms",
-          "Clinical analytics and reporting",
+        role: "pursuing",
+        description: "Chief Information Officer Solutions and Partners 4 contract vehicle supporting the National Institutes of Health and other health and research agencies. CIO-SP4 provides comprehensive IT services for health research, clinical systems, and scientific computing.",
+        scope: "Enterprise IT solutions for health and research agencies including health IT systems integration, research data management, clinical analytics, HIPAA-compliant application development, and scientific computing infrastructure.",
+        capabilities: [
+          "Health IT systems integration and interoperability",
+          "Research data management platforms and repositories",
+          "Clinical analytics and reporting systems",
           "HIPAA-compliant application development",
-          "Scientific computing infrastructure"
+          "Scientific computing infrastructure and HPC",
+          "Electronic health record (EHR) modernization",
+          "Biomedical research informatics"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Target award: 2026"
       }
     ]
@@ -59,28 +70,36 @@ const contractCategories: VehicleCategory[] = [
     vehicles: [
       {
         name: "GSA Multiple Award Schedule (MAS) IT",
-        description: "General Services Administration schedule for commercial IT products and services at pre-negotiated prices.",
-        details: [
+        role: "pursuing",
+        description: "General Services Administration schedule for commercial IT products and services at pre-negotiated prices. The MAS IT schedule consolidates multiple IT-related Special Item Numbers (SINs) to provide agencies with streamlined access to technology solutions.",
+        scope: "Commercial IT products and services including professional services, cloud computing, cybersecurity, software as a service (SaaS), training, and staff augmentation at pre-negotiated government pricing.",
+        capabilities: [
           "IT Professional Services (SIN 54151S)",
           "Cloud Computing Services (SIN 518210C)",
           "Cybersecurity Services (SIN 54151HACS)",
           "Software as a Service (SaaS) solutions",
-          "Training and staff augmentation"
+          "Training and staff augmentation",
+          "IT consulting and advisory services",
+          "Managed IT services and support"
         ],
-        contractNumber: "Pursuing - Schedule 70 successor",
+        contractNumber: "Schedule 70 successor - Application in progress",
         periodOfPerformance: "Target award: 2026"
       },
       {
         name: "GSA ASTRO",
-        description: "Alliances, Strategy, Transformation, Research, and Operations contract for strategic consulting services.",
-        details: [
-          "Digital transformation strategy",
-          "Process optimization consulting",
-          "Change management services",
-          "Technology roadmap development",
-          "Organizational transformation"
+        role: "pursuing",
+        description: "Alliances, Strategy, Transformation, Research, and Operations contract for strategic consulting services. ASTRO provides agencies with access to management consulting, strategic planning, and organizational transformation services.",
+        scope: "Strategic consulting and advisory services including digital transformation strategy, process optimization, change management, technology roadmap development, and organizational transformation initiatives.",
+        capabilities: [
+          "Digital transformation strategy and roadmapping",
+          "Process optimization and reengineering consulting",
+          "Change management and organizational development",
+          "Technology roadmap development and planning",
+          "Organizational transformation and restructuring",
+          "Performance measurement and analytics",
+          "Innovation and emerging technology adoption"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Target award: 2026"
       }
     ]
@@ -91,54 +110,70 @@ const contractCategories: VehicleCategory[] = [
     vehicles: [
       {
         name: "NASA SEWP (Solutions for Enterprise-Wide Procurement)",
-        description: "NASA's premier GWAC for IT hardware, software, and services supporting enterprise-wide technology needs.",
-        details: [
-          "Enterprise IT hardware and software",
-          "Cloud infrastructure solutions",
-          "Data center equipment and services",
-          "Networking and telecommunications",
-          "IT security products and services"
+        role: "pursuing",
+        description: "NASA's premier GWAC for IT hardware, software, and services supporting enterprise-wide technology needs. SEWP provides streamlined procurement for IT products and solutions across federal agencies.",
+        scope: "Enterprise IT hardware, software, and services including cloud infrastructure, data center equipment, networking, telecommunications, and IT security products for federal agencies.",
+        capabilities: [
+          "Enterprise IT hardware and software procurement",
+          "Cloud infrastructure solutions and services",
+          "Data center equipment and modernization",
+          "Networking and telecommunications infrastructure",
+          "IT security products and services",
+          "End-user computing devices and support",
+          "Software licensing and enterprise agreements"
         ],
-        contractNumber: "Pursuing - SEWP VI application",
+        contractNumber: "SEWP VI - Application in progress",
         periodOfPerformance: "Target award: 2026"
       },
       {
         name: "DHS EAGLE II",
-        description: "Department of Homeland Security Enterprise Acquisition Gateway for Leading-Edge Solutions contract.",
-        details: [
-          "Homeland security IT solutions",
-          "Border security technology",
-          "Emergency response systems",
+        role: "pursuing",
+        description: "Department of Homeland Security Enterprise Acquisition Gateway for Leading-Edge Solutions contract. EAGLE II provides DHS and other agencies with access to comprehensive IT solutions for homeland security missions.",
+        scope: "Homeland security IT solutions including border security technology, emergency response systems, critical infrastructure protection, cybersecurity, and threat detection for DHS and partner agencies.",
+        capabilities: [
+          "Homeland security IT solutions and systems",
+          "Border security technology and surveillance",
+          "Emergency response and disaster recovery systems",
           "Critical infrastructure protection",
-          "Cybersecurity and threat detection"
+          "Cybersecurity and threat detection platforms",
+          "Identity and access management systems",
+          "Intelligence and information sharing solutions"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Target award: 2026"
       },
       {
         name: "Air Force NETCENTS-2",
-        description: "Network-Centric Solutions contract for Air Force networking and IT infrastructure services.",
-        details: [
-          "Enterprise network services",
+        role: "pursuing",
+        description: "Network-Centric Solutions contract for Air Force networking and IT infrastructure services. NETCENTS-2 provides comprehensive IT services for Air Force enterprise networks, applications, and infrastructure.",
+        scope: "Enterprise network services, application development and maintenance, IT infrastructure modernization, cloud computing, and cybersecurity operations for the United States Air Force.",
+        capabilities: [
+          "Enterprise network services and infrastructure",
           "Application development and maintenance",
-          "IT infrastructure modernization",
-          "Cloud computing solutions",
-          "Cybersecurity operations"
+          "IT infrastructure modernization and optimization",
+          "Cloud computing solutions and migration",
+          "Cybersecurity operations and monitoring",
+          "Network operations center (NOC) services",
+          "IT service management and support"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Target award: 2026"
       },
       {
         name: "Army ITES-SW2",
-        description: "Information Technology Enterprise Solutions - Software 2 contract for Army IT services.",
-        details: [
-          "Custom software development",
-          "Enterprise application integration",
-          "IT infrastructure support",
-          "Cloud migration services",
-          "DevSecOps implementation"
+        role: "pursuing",
+        description: "Information Technology Enterprise Solutions - Software 2 contract for Army IT services. ITES-SW2 provides comprehensive software development, integration, and IT infrastructure services for the United States Army.",
+        scope: "Custom software development, enterprise application integration, IT infrastructure support, cloud migration, and DevSecOps implementation for Army systems and applications.",
+        capabilities: [
+          "Custom software development and engineering",
+          "Enterprise application integration and APIs",
+          "IT infrastructure support and operations",
+          "Cloud migration and modernization services",
+          "DevSecOps implementation and automation",
+          "Application security and vulnerability management",
+          "Agile development and continuous delivery"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Target award: 2026"
       }
     ]
@@ -149,15 +184,19 @@ const contractCategories: VehicleCategory[] = [
     vehicles: [
       {
         name: "GSA PSS - Management Consulting",
-        description: "Professional services schedule for management consulting and organizational transformation.",
-        details: [
+        role: "pursuing",
+        description: "Professional services schedule for management consulting and organizational transformation. The PSS provides agencies with access to strategic planning, process improvement, and change management consulting services.",
+        scope: "Management consulting and advisory services including strategic planning, process improvement, change management, performance measurement, and organizational design for federal agencies.",
+        capabilities: [
           "Strategic planning and roadmap development",
-          "Process improvement and optimization",
-          "Change management consulting",
+          "Process improvement and optimization consulting",
+          "Change management and organizational transformation",
           "Performance measurement and analytics",
-          "Organizational design and development"
+          "Organizational design and development",
+          "Leadership development and training",
+          "Innovation and continuous improvement programs"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Target award: 2026"
       }
     ]
@@ -168,41 +207,53 @@ const contractCategories: VehicleCategory[] = [
     vehicles: [
       {
         name: "SBA 8(a) Program",
-        description: "Small Business Administration program providing sole-source contracting opportunities up to $4M for services.",
-        details: [
+        role: "pursuing",
+        description: "Small Business Administration program providing sole-source contracting opportunities up to $4M for services. The 8(a) Business Development Program assists small disadvantaged businesses in competing in the federal marketplace.",
+        scope: "Comprehensive IT services and solutions available through sole-source contracts up to $4M (services) or competitive set-aside opportunities for small disadvantaged businesses.",
+        capabilities: [
           "Sole-source contracts up to $4M (services)",
           "Competitive set-aside opportunities",
           "Mentor-protégé program participation",
-          "Business development support",
-          "Access to federal contracting training"
+          "Business development support and training",
+          "Access to federal contracting resources",
+          "Technical assistance and counseling",
+          "Networking and partnership opportunities"
         ],
         contractNumber: "Certification in progress",
         periodOfPerformance: "9-year program participation"
       },
       {
         name: "HUBZone Certification",
-        description: "Historically Underutilized Business Zone certification providing competitive advantages in federal procurement.",
-        details: [
-          "10% price evaluation preference",
+        role: "pursuing",
+        description: "Historically Underutilized Business Zone certification providing competitive advantages in federal procurement. HUBZone certification offers price evaluation preferences and set-aside contract opportunities.",
+        scope: "IT services and solutions with competitive advantages including 10% price evaluation preference and access to set-aside contracts for businesses located in historically underutilized business zones.",
+        capabilities: [
+          "10% price evaluation preference in competitions",
           "Set-aside contract opportunities",
           "Sole-source awards up to $7M (services)",
           "Priority consideration for competitive awards",
-          "Access to specialized training programs"
+          "Access to specialized training programs",
+          "Networking and business development events",
+          "Technical assistance and support"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Ongoing certification"
       },
       {
         name: "WOSB/EDWOSB Certification",
-        description: "Women-Owned Small Business and Economically Disadvantaged Women-Owned Small Business certifications.",
-        details: [
-          "Set-aside contract opportunities",
-          "Competitive advantages in procurement",
-          "Access to federal contracting programs",
-          "Networking and business development",
-          "Mentorship opportunities"
+        role: "pursuing",
+        description: "Women-Owned Small Business and Economically Disadvantaged Women-Owned Small Business certifications. These certifications provide access to set-aside contracts and competitive advantages in federal procurement.",
+        scope: "IT services and solutions with access to set-aside contract opportunities and competitive advantages for women-owned small businesses in designated NAICS codes.",
+        capabilities: [
+          "Set-aside contract opportunities in designated industries",
+          "Competitive advantages in federal procurement",
+          "Access to federal contracting programs and resources",
+          "Networking and business development opportunities",
+          "Mentorship and technical assistance programs",
+          "Training and professional development",
+          "Partnership opportunities with prime contractors"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Ongoing certification"
       }
     ]
@@ -213,28 +264,36 @@ const contractCategories: VehicleCategory[] = [
     vehicles: [
       {
         name: "NASPO ValuePoint",
-        description: "National Association of State Procurement Officials cooperative purchasing program.",
-        details: [
+        role: "pursuing",
+        description: "National Association of State Procurement Officials cooperative purchasing program. NASPO ValuePoint provides state and local governments with access to competitively solicited contracts for IT products and services.",
+        scope: "IT hardware, software, cloud services, cybersecurity, and professional services available to all 50 states, territories, and participating local governments through cooperative purchasing agreements.",
+        capabilities: [
           "IT hardware and software solutions",
           "Cloud services and infrastructure",
           "Cybersecurity products and services",
           "Professional services and consulting",
-          "Available to all 50 states and territories"
+          "Available to all 50 states and territories",
+          "Local government and K-12 education access",
+          "Higher education institution eligibility"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Target award: 2026"
       },
       {
         name: "Sourcewell (formerly NJPA)",
-        description: "Cooperative purchasing organization serving government, education, and nonprofit organizations.",
-        details: [
+        role: "pursuing",
+        description: "Cooperative purchasing organization serving government, education, and nonprofit organizations. Sourcewell provides access to competitively solicited contracts for technology solutions and professional services.",
+        scope: "Technology solutions, professional development, consulting services, and software licensing available to 50,000+ participating government, education, and nonprofit agencies through cooperative purchasing.",
+        capabilities: [
           "Technology solutions and services",
           "Professional development and training",
           "Consulting and advisory services",
           "Software licensing and support",
-          "Access to 50,000+ participating agencies"
+          "Access to 50,000+ participating agencies",
+          "Government, education, and nonprofit eligibility",
+          "Streamlined procurement process"
         ],
-        contractNumber: "Pursuing - Application in progress",
+        contractNumber: "Application in progress",
         periodOfPerformance: "Target award: 2026"
       }
     ]
@@ -254,6 +313,26 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
     setOpenVehicles(newOpen);
   };
 
+  const getRoleBadge = (role: 'prime' | 'subcontractor' | 'pursuing') => {
+    const styles = {
+      prime: "bg-green-100 text-green-800 border-green-200",
+      subcontractor: "bg-blue-100 text-blue-800 border-blue-200",
+      pursuing: "bg-amber-100 text-amber-800 border-amber-200"
+    };
+    
+    const labels = {
+      prime: "Prime Contractor",
+      subcontractor: "Subcontractor",
+      pursuing: "Pursuing"
+    };
+
+    return (
+      <span className={`inline-flex items-center px-3 py-1 text-xs font-semibold border ${styles[role]}`}>
+        {labels[role]}
+      </span>
+    );
+  };
+
   return (
     <div className="mb-16">
       <div className="mb-8">
@@ -271,16 +350,19 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
             >
               <button
                 onClick={() => toggleVehicle(vehicle.name)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors"
+                className="w-full px-6 py-5 flex items-start justify-between text-left hover:bg-slate-50 transition-colors"
               >
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-slate-900 mb-1">
-                    {vehicle.name}
-                  </h3>
-                  <p className="text-slate-600">{vehicle.description}</p>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-xl font-semibold text-slate-900">
+                      {vehicle.name}
+                    </h3>
+                    {getRoleBadge(vehicle.role)}
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">{vehicle.description}</p>
                 </div>
                 <ChevronDown
-                  className={`ml-4 h-5 w-5 text-slate-400 transition-transform ${
+                  className={`ml-4 h-5 w-5 text-slate-400 transition-transform flex-shrink-0 mt-1 ${
                     isOpen ? "rotate-180" : ""
                   }`}
                 />
@@ -288,30 +370,47 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
 
               {isOpen && (
                 <div className="px-6 pb-6 pt-2 border-t border-slate-100">
-                  {vehicle.details && (
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-slate-900 mb-2">Key Capabilities:</h4>
-                      <ul className="space-y-2">
-                        {vehicle.details.map((detail, idx) => (
-                          <li key={idx} className="text-slate-600 pl-4 border-l-2 border-slate-200">
-                            {detail}
-                          </li>
-                        ))}
-                      </ul>
+                  {vehicle.scope && (
+                    <div className="mb-6 p-4 bg-slate-50 border-l-4 border-slate-300">
+                      <h4 className="font-semibold text-slate-900 mb-2">Contract Scope</h4>
+                      <p className="text-slate-700 leading-relaxed">{vehicle.scope}</p>
                     </div>
                   )}
 
-                  <div className="grid md:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                  {vehicle.capabilities && (
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-slate-900 mb-3 flex items-center">
+                        <CheckCircle2 className="h-5 w-5 mr-2 text-slate-600" />
+                        Key Capabilities
+                      </h4>
+                      <div className="grid md:grid-cols-2 gap-3">
+                        {vehicle.capabilities.map((capability, idx) => (
+                          <div key={idx} className="flex items-start">
+                            <div className="flex-shrink-0 w-1.5 h-1.5 bg-slate-400 mt-2 mr-3" />
+                            <p className="text-slate-600 text-sm leading-relaxed">{capability}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
                     {vehicle.contractNumber && (
                       <div>
-                        <p className="text-sm font-semibold text-slate-700 mb-1">Status:</p>
-                        <p className="text-sm text-slate-600">{vehicle.contractNumber}</p>
+                        <p className="text-sm font-semibold text-slate-700 mb-1 flex items-center">
+                          <FileText className="h-4 w-4 mr-2" />
+                          Contract Status
+                        </p>
+                        <p className="text-sm text-slate-600 pl-6">{vehicle.contractNumber}</p>
                       </div>
                     )}
                     {vehicle.periodOfPerformance && (
                       <div>
-                        <p className="text-sm font-semibold text-slate-700 mb-1">Timeline:</p>
-                        <p className="text-sm text-slate-600">{vehicle.periodOfPerformance}</p>
+                        <p className="text-sm font-semibold text-slate-700 mb-1 flex items-center">
+                          <Building2 className="h-4 w-4 mr-2" />
+                          Period of Performance
+                        </p>
+                        <p className="text-sm text-slate-600 pl-6">{vehicle.periodOfPerformance}</p>
                       </div>
                     )}
                   </div>
@@ -320,10 +419,10 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
                     <div className="mt-4 pt-4 border-t border-slate-100">
                       <a
                         href={`mailto:${vehicle.contact}`}
-                        className="inline-flex items-center text-sm text-slate-700 hover:text-slate-900"
+                        className="inline-flex items-center text-sm text-slate-700 hover:text-slate-900 font-medium"
                       >
                         <Mail className="h-4 w-4 mr-2" />
-                        {vehicle.contact}
+                        Contact for more information
                       </a>
                     </div>
                   )}
@@ -341,8 +440,8 @@ export default function ContractVehicles() {
   return (
     <>
       <SEO
-        title="Contract Vehicles | Thalen Technologies"
-        description="Explore Thalen Technologies' federal contract vehicles including GWACs, MACs, GSA Schedules, and agency-specific IDIQs for streamlined government procurement."
+        title="Contract Vehicles | NexDyne Technology"
+        description="Explore NexDyne Technology's federal contract vehicles including GWACs, MACs, GSA Schedules, and agency-specific IDIQs for streamlined government procurement."
         keywords="federal contract vehicles, GSA schedule, GWAC, IDIQ, government contracts, federal procurement, small business set-asides"
       />
 
@@ -359,7 +458,7 @@ export default function ContractVehicles() {
                 Contract Vehicles
               </h1>
               <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                Thalen Technologies holds and is actively pursuing major government-wide acquisition contracts, multiple agency contracts, and agency-specific task order vehicles in support of federal, state, and local agencies. Our contract vehicles provide pre-negotiated terms and conditions for streamlined procurement of technology services and solutions.
+                NexDyne Technology is actively pursuing major government-wide acquisition contracts, multiple agency contracts, and agency-specific task order vehicles in support of federal, state, and local agencies. Our contract vehicles will provide pre-negotiated terms and conditions for streamlined procurement of technology services and solutions.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact">
@@ -387,7 +486,7 @@ export default function ContractVehicles() {
                 Streamlined Access to Technology Services
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                Whether you're a federal agency seeking IT modernization services or a prospective partner, our contract vehicles provide efficient procurement pathways for artificial intelligence, cloud infrastructure, cybersecurity, data analytics, and application development services under pre-competed terms and conditions.
+                Whether you're a federal agency seeking IT modernization services or a prospective partner, our contract vehicles will provide efficient procurement pathways for artificial intelligence, cloud infrastructure, cybersecurity, data analytics, and application development services under pre-competed terms and conditions.
               </p>
             </div>
           </div>
@@ -441,7 +540,7 @@ export default function ContractVehicles() {
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">SAM.gov Registration</h3>
                   <p className="text-slate-600 mb-4">
-                    Thalen Technologies maintains active registration in the System for Award Management (SAM.gov), the official U.S. government system for federal contractors. Our CAGE Code and UEI are available upon request for proposal submissions and contract awards.
+                    NexDyne Technology maintains active registration in the System for Award Management (SAM.gov), the official U.S. government system for federal contractors. Our CAGE Code and UEI are available upon request for proposal submissions and contract awards.
                   </p>
                   <p className="text-sm text-slate-500">
                     <strong>NAICS Codes:</strong> 541512 (Computer Systems Design Services), 541519 (Other Computer Related Services), 541611 (Administrative Management and General Management Consulting Services), 541690 (Other Scientific and Technical Consulting Services)
