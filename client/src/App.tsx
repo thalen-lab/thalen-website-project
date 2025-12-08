@@ -25,6 +25,7 @@ import ServiceComparison from "./pages/ServiceComparison";
 import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
 import StateLocalSolutions from "./pages/federal-solutions/StateLocal";
+import PastPerformance from "./pages/PastPerformance";
 import StateROICalculator from "./pages/federal-solutions/StateROICalculator";
 import StateComplianceChecklist from "./pages/federal-solutions/StateComplianceChecklist";
 import StateProcurementGuide from "./pages/federal-solutions/StateProcurementGuide";
@@ -188,6 +189,7 @@ function Router() {
       <Route path={"/federal-solutions/state-local/roi-calculator"} component={StateROICalculator} />
       <Route path={"/federal-solutions/state-local/compliance-checklist"} component={StateComplianceChecklist} />
       <Route path={"/federal-solutions/state-local/procurement-guide"} component={StateProcurementGuide} />
+      <Route path={"/federal-solutions/past-performance"} component={PastPerformance} />
       <Route path={"/case-studies/state-attorney-general"} component={StateAttorneyGeneralCase} />
       <Route path={"/case-studies/state-energy-commission"} component={StateEnergyCommissionCase} />
       <Route path={"/case-studies/county-health-department"} component={CountyHealthDepartmentCase} />

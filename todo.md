@@ -2986,3 +2986,28 @@
 
 ## Phase 68: Add Navigation and Footer to Contract Vehicle Page
 - [x] Add navbar and footer to contract vehicle page
+
+## Phase XX: Update Contract Vehicles with Subcontractor Positioning
+- [x] Update Contract Vehicles page messaging to reflect pursuing subcontracting opportunities
+- [x] Add GSA IT Schedule 70 (47QTCA24D001E) with appropriate positioning
+- [x] Add FBI ITSSS-2 contract vehicle
+- [x] Add PBGC ITIOSS contract vehicle
+- [x] Add FEC ITSS contract vehicle
+- [x] Organize vehicles by type: GSA Schedules, Agency-Specific Vehicles, Teaming Opportunities
+- [x] Update hero section to emphasize seeking partnerships and teaming arrangements
+- [x] Add "Seeking Teaming Opportunities" CTA section
+- [x] Ensure all messaging reflects pursuing subcontracting rather than active prime contracting
+- [ ] Test Contract Vehicles page for accurate positioning
+
+## Phase 65: Remove Past Performance Section from Contract Vehicle Page
+- [x] Remove Past Performance Highlights section from Contract Vehicle page (will be rebuilt as separate page under Federal Solutions later)
+
+## Phase 59: Update Contract Vehicle Page Content
+- [x] Update "Seeking Teaming Partnerships" section to be more concise and less promotional
+
+## Phase 69: Create Past Performance Page Under Federal Solutions
+- [x] Create Past Performance page with clean, professional layout
+- [x] Add alternating text/image sections showcasing projects
+- [x] Include commercial industry experience highlights
+- [x] Include government contract experience from team members
+- [x] Add Past Performance link to Federal Solutions dropdown in navigation

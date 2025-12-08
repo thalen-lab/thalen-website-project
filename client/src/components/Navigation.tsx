@@ -147,6 +147,12 @@ export default function Navigation() {
                   >
                     Compliance Roadmap Tool
                   </Link>
+                  <Link 
+                    href="/federal-solutions/past-performance"
+                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    Past Performance
+                  </Link>
                 </div>
               )}
             </div>
