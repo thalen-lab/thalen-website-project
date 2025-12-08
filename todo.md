@@ -2980,3 +2980,9 @@
 
 ## Phase 55: Update Contract Vehicle Page to Thalen Technologies
 - [x] Update Contract Vehicle page from NexDyne to Thalen Technologies branding
+
+## Phase 67: Fix Contract Vehicle Page Text Alignment
+- [x] Left-align text content on Contract Vehicle page
+
+## Phase 68: Add Navigation and Footer to Contract Vehicle Page
+- [x] Add navbar and footer to contract vehicle page

@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import SEO from "@/components/SEO";
 import PastPerformance from "@/components/PastPerformance";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 interface ContractVehicle {
   name: string;
@@ -444,6 +446,7 @@ export default function ContractVehicles() {
         description="Explore Thalen Technologies' federal contract vehicles including GWACs, MACs, GSA Schedules, and agency-specific IDIQs for streamlined government procurement."
         keywords="federal contract vehicles, GSA schedule, GWAC, IDIQ, government contracts, federal procurement, small business set-asides"
       />
+      <Navigation />
 
       <div className="min-h-screen bg-slate-50">
         {/* Hero Section */}
@@ -481,7 +484,7 @@ export default function ContractVehicles() {
         {/* Introduction */}
         <div className="bg-white border-b border-slate-200">
           <div className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
                 Streamlined Access to Technology Services
               </h2>
@@ -551,6 +554,7 @@ export default function ContractVehicles() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
