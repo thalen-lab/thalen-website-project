@@ -130,6 +130,12 @@ export default function Navigation() {
                     Capability Statement Generator
                   </Link>
                   <Link 
+                    href="/contract-vehicles"
+                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    Contract Vehicles
+                  </Link>
+                  <Link 
                     href="/contract-vehicle-comparison"
                     className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
                   >

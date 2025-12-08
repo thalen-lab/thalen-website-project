@@ -2962,3 +2962,8 @@
 - [x] Add route for /contract-vehicles page in App.tsx
 - [ ] Update navigation menu to include Contract Vehicles link
 - [x] Test contract vehicles page design and functionality
+
+## Phase: Navigation and Capabilities Enhancements
+- [x] Add "Contract Vehicles" link to main navigation menu under Federal Solutions
+- [x] Create downloadable capabilities statement PDF for hero section CTA
+- [x] Add past performance section showcasing successful task orders, contract values, and agency testimonials

@@ -3,6 +3,7 @@ import { ChevronDown, FileText, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import SEO from "@/components/SEO";
+import PastPerformance from "@/components/PastPerformance";
 
 interface ContractVehicle {
   name: string;
@@ -367,12 +368,12 @@ export default function ContractVehicles() {
                     Contact Our Team
                   </Button>
                 </Link>
-                <Link href="/resources">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  <a href="/nexdyne-capabilities-statement.pdf" download>
                     <FileText className="mr-2 h-5 w-5" />
                     Download Capabilities Statement
-                  </Button>
-                </Link>
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -400,6 +401,9 @@ export default function ContractVehicles() {
             ))}
           </div>
         </div>
+
+        {/* Past Performance Section */}
+        <PastPerformance />
 
         {/* Getting Started Section */}
         <div className="bg-slate-900 text-white">
