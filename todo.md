@@ -2945,3 +2945,6 @@
 - [x] Update Cybersecurity page hero and content to emphasize dual approach
 - [x] Update Application Development page hero and content to emphasize dual approach
 - [x] Update Digital Transformation page hero and content to emphasize dual approach
+
+## Phase 46: Add "Who We Are" Section to Homepage
+- [x] Add "Who We Are" section after hero section with text on right and image on left

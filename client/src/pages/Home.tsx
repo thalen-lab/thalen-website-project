@@ -172,7 +172,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Who We Are Section */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left: Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <ImageWithLoader
+                  src="/who-we-are.png"
+                  alt="Who we are - Continuous innovation meets operational excellence"
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
 
+            {/* Right: Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
+              <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Who we are</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                Continuous innovation, meet operational excellence.
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                We help customers in every industry ensure their essential systems will work when, where, and how they need them to. But steady operations aren't enough in today's dynamic IT landscape—NexDyne brings the data, insights, patterns and proven methodologies businesses need to stay competitive.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild variant="default" size="lg" className="bg-primary hover:bg-primary/90">
+                  <Link href="/about">
+                    Our story
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-2">
+                  <Link href="/about#awards">
+                    Awards and recognition
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-2">
+                  <Link href="/about#team">
+                    Join our team
+                  </Link>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Section - 2x3 Grid Layout */}
       <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
