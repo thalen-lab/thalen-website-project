@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ChevronRight, CheckCircle2 } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export default function PastPerformance() {
   return (
@@ -55,29 +55,12 @@ export default function PastPerformance() {
               <h3 className="text-3xl font-bold text-slate-900 mb-4">
                 Real-Time Fraud Detection Platform
               </h3>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
                 Designed and implemented an advanced fraud detection system for a major financial institution processing over 50 million transactions daily. The platform leveraged machine learning algorithms and real-time analytics to identify suspicious patterns and reduce false positives by 65%.
               </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>$18M annual savings</strong> through fraud prevention and reduced manual review costs</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>92% detection accuracy</strong> with machine learning models trained on historical transaction data</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Sub-second response times</strong> for transaction analysis and risk scoring</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Machine Learning</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Real-Time Analytics</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Cloud Infrastructure</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Data Engineering</span>
-              </div>
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                The solution delivered $18M in annual savings through fraud prevention and reduced manual review costs. Machine learning models trained on historical transaction data achieved 92% detection accuracy, while the system maintained sub-second response times for transaction analysis and risk scoring. The platform's ability to process massive transaction volumes in real time transformed the institution's fraud prevention capabilities and significantly reduced operational overhead.
+              </p>
             </div>
             <div className="order-1 md:order-2">
               <div className="relative rounded-lg overflow-hidden shadow-2xl">
@@ -110,29 +93,12 @@ export default function PastPerformance() {
               <h3 className="text-3xl font-bold text-slate-900 mb-4">
                 Enterprise Health Data Integration Platform
               </h3>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
                 Architected and deployed a comprehensive data integration platform connecting disparate electronic health record (EHR) systems, laboratory information systems, and imaging repositories across a multi-hospital network serving 2.3 million patients annually.
               </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>40% reduction in duplicate tests</strong> through unified patient data visibility</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>HIPAA-compliant architecture</strong> with end-to-end encryption and audit logging</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>15 million records processed daily</strong> with 99.97% uptime</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Data Integration</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">HIPAA Compliance</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">API Development</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Cloud Migration</span>
-              </div>
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                The platform achieved a 40% reduction in duplicate tests through unified patient data visibility, enabling clinicians to access complete patient histories across all facilities. The HIPAA-compliant architecture featured end-to-end encryption and comprehensive audit logging to protect sensitive health information. Processing 15 million records daily with 99.97% uptime, the system became the backbone of clinical operations across the entire hospital network.
+              </p>
             </div>
           </div>
 
@@ -145,29 +111,12 @@ export default function PastPerformance() {
               <h3 className="text-3xl font-bold text-slate-900 mb-4">
                 IoT-Enabled Predictive Maintenance System
               </h3>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                Developed an industrial IoT platform for a global manufacturing company with 47 production facilities. The system collected real-time sensor data from 12,000+ machines and used predictive analytics to forecast equipment failures before they occurred.
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                Developed an industrial IoT platform for a global manufacturing company with 47 production facilities. The system collected real-time sensor data from 12,000 machines and used predictive analytics to forecast equipment failures before they occurred.
               </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>$24M annual savings</strong> from reduced unplanned downtime and maintenance costs</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>78% reduction in equipment failures</strong> through proactive maintenance scheduling</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Real-time dashboards</strong> providing operational insights to plant managers</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">IoT Integration</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Predictive Analytics</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Edge Computing</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Data Visualization</span>
-              </div>
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                The implementation generated $24M in annual savings from reduced unplanned downtime and maintenance costs. Proactive maintenance scheduling enabled by the platform resulted in a 78% reduction in equipment failures across all facilities. Real-time dashboards provided operational insights to plant managers, enabling data-driven decisions that optimized production efficiency and extended equipment lifecycles throughout the global manufacturing network.
+              </p>
             </div>
             <div className="order-1 md:order-2">
               <div className="relative rounded-lg overflow-hidden shadow-2xl">
@@ -212,29 +161,12 @@ export default function PastPerformance() {
               <h3 className="text-3xl font-bold text-slate-900 mb-4">
                 FBI FACE Services Unit Application Development
               </h3>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
                 Team members contributed to the development and operational deployment of an automated workflow for the FBI's Facial Analysis, Comparison, and Evaluation (FACE) Services Unit. The system supported end-to-end processing of facial images from field investigations.
               </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Automated facial recognition workflow</strong> replacing manual multi-platform processes</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>75% efficiency improvement</strong> over previous manual processing methods</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Mobile application development</strong> with agile methodology and COTS integration</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Biometric Systems</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Mobile Development</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Agile Development</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">COTS Integration</span>
-              </div>
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                The automated facial recognition workflow replaced manual multi-platform processes, achieving a 75% efficiency improvement over previous methods. Mobile application development using agile methodology and commercial off-the-shelf (COTS) integration enabled field agents to capture and process biometric data in real time, significantly accelerating investigative workflows and improving the accuracy of facial recognition matches across the FBI's national database.
+              </p>
             </div>
           </div>
 
@@ -247,29 +179,12 @@ export default function PastPerformance() {
               <h3 className="text-3xl font-bold text-slate-900 mb-4">
                 Pension Benefit Guaranty Corporation (PBGC) Modernization Support
               </h3>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
                 Team members provided systems development, infrastructure modernization, and security engineering support to PBGC under multiple IDIQ and single award contracts. Work included operations and maintenance, modernization, and enhancement support for business applications.
               </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Infrastructure modernization</strong> including workstations, servers, and network infrastructure</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Security engineering</strong> with technology management systems and access controls</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Data warehousing and analytics</strong> for public-facing web applications and FOIA management</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Infrastructure Modernization</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Security Engineering</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Data Warehousing</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Application Development</span>
-              </div>
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                Infrastructure modernization efforts encompassed workstations, servers, and network infrastructure upgrades that improved system reliability and performance. Security engineering initiatives implemented technology management systems and access controls to protect sensitive pension data. Data warehousing and analytics capabilities supported public-facing web applications and Freedom of Information Act (FOIA) management, enabling PBGC to better serve pension plan participants and meet transparency requirements.
+              </p>
             </div>
             <div className="order-1 md:order-2">
               <div className="relative rounded-lg overflow-hidden shadow-2xl">
@@ -302,29 +217,12 @@ export default function PastPerformance() {
               <h3 className="text-3xl font-bold text-slate-900 mb-4">
                 FBI National Data Exchange (N-DEX) IT Services
               </h3>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
                 Team members executed a comprehensive range of IT services for the FBI's National Data Exchange (N-DEX) Program Office, supporting the exchange of authorized law enforcement information between federal, state, and local agencies nationwide.
               </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Program management services</strong> including strategic planning and system training</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Data analysis services</strong> with custom adapter development for data exchange</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-700"><strong>Quality control activities</strong> ensuring data integrity across law enforcement agencies</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Data Integration</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Program Management</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Custom Adapters</span>
-                <span className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Quality Assurance</span>
-              </div>
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                Program management services included strategic planning and system training that helped agencies effectively utilize the N-DEX platform. Data analysis services with custom adapter development enabled seamless data exchange between disparate law enforcement systems across jurisdictions. Quality control activities ensured data integrity across participating agencies, maintaining the reliability and accuracy of shared intelligence that supports criminal investigations and public safety operations nationwide.
+              </p>
             </div>
           </div>
         </div>
@@ -341,66 +239,21 @@ export default function PastPerformance() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-slate-50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Enterprise Modernization</h3>
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Legacy system migration</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Cloud infrastructure</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>API integration</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>DevOps automation</span>
-                  </li>
-                </ul>
+                <p className="text-slate-600 leading-relaxed">
+                  Our team excels in legacy system migration, cloud infrastructure deployment, API integration, and DevOps automation. We transform outdated technology stacks into modern, scalable platforms that reduce operational costs and improve system performance.
+                </p>
               </div>
               <div className="bg-slate-50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Data & Analytics</h3>
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Data integration platforms</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Machine learning models</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Real-time analytics</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Data warehousing</span>
-                  </li>
-                </ul>
+                <p className="text-slate-600 leading-relaxed">
+                  We build sophisticated data integration platforms, develop machine learning models, implement real-time analytics systems, and design enterprise data warehousing solutions. Our data engineering expertise enables organizations to extract actionable insights from complex datasets.
+                </p>
               </div>
               <div className="bg-slate-50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Security & Compliance</h3>
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>HIPAA compliance</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Security engineering</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Access control systems</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Audit logging</span>
-                  </li>
-                </ul>
+                <p className="text-slate-600 leading-relaxed">
+                  Our security practice encompasses HIPAA compliance, security engineering, access control systems, and comprehensive audit logging. We implement defense-in-depth strategies that protect sensitive data while maintaining system usability and performance.
+                </p>
               </div>
             </div>
           </div>

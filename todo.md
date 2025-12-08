@@ -3011,3 +3011,7 @@
 - [x] Include commercial industry experience highlights
 - [x] Include government contract experience from team members
 - [x] Add Past Performance link to Federal Solutions dropdown in navigation
+
+## Phase 66: Clean Up Past Performance Page
+- [x] Remove tags (up/down indicators) from Past Performance page
+- [x] Eliminate bullet points and convert all content to straight paragraphs
