@@ -3015,3 +3015,8 @@
 ## Phase 66: Clean Up Past Performance Page
 - [x] Remove tags (up/down indicators) from Past Performance page
 - [x] Eliminate bullet points and convert all content to straight paragraphs
+
+## Phase 70: Add Navigation and Footer to Past Performance Page
+- [x] Add navbar and footer to Past Performance page for consistency
+
+- [x] Update Past Performance hero with signature deep blue background and add hero image

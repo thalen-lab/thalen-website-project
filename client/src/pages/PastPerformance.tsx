@@ -1,13 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ChevronRight } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export default function PastPerformance() {
   return (
     <div className="min-h-screen">
+      <Navigation />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAgNHYyaDJ2LTJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
+      <section className="relative bg-[#003366] text-white py-24 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src="/past-performance-hero.jpg" 
+            alt="Professional team collaboration" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#003366]/95 via-[#003366]/85 to-[#003366]/70"></div>
+        </div>
         <div className="container relative z-10">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/30 rounded-full px-4 py-2 mb-6">
@@ -284,6 +295,8 @@ export default function PastPerformance() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
