@@ -39,6 +39,7 @@ import ContractVehicleComparison from "./pages/ContractVehicleComparison";
 import ComplianceRoadmap from "./pages/ComplianceRoadmap";
 import MobileContact from "./pages/MobileContact";
 import MobileAssessment from "./pages/MobileAssessment";
+import ContractVehicles from "./pages/ContractVehicles";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -196,8 +197,9 @@ function Router() {
       <Route path={"/government-resources"} component={GovernmentResources} />
       <Route path={"/contract-vehicle-comparison"} component={ContractVehicleComparison} />
       <Route path={"/compliance-roadmap"} component={ComplianceRoadmap} />
-      
-      {/* Service Routes */}
+      <Route path={"/contract-vehicles"} component={ContractVehicles} />
+
+      {/* Service Pages */}
       <Route path={"/services/automation"} component={AutomationService} />
       <Route path={"/services/automation/rpa"} component={RPAService} />
       <Route path={"/services/automation/rpa/process-assessment"} component={ProcessAssessment} />
