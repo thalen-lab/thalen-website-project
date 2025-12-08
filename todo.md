@@ -3020,3 +3020,17 @@
 - [x] Add navbar and footer to Past Performance page for consistency
 
 - [x] Update Past Performance hero with signature deep blue background and add hero image
+- [x] Fix CTA section ("Ready to Discuss Your Project?") color inconsistency - background blue appears different from other sections
+
+## Phase: Implement Socioeconomic Status & Small Business Designations Section
+- [x] Create SmallBusinessCertifications component with clean, professional design
+- [x] Add three-column section to homepage showcasing: Company Expertise, Company Values, Small Business Status
+- [x] Display Small Business status with supporting text about benefits to federal agencies
+- [x] Add "Pursuing 8(a) Certification" status with timeline/context
+- [x] Include SAM.gov registration status and UEI number availability
+- [x] Display CAGE code and primary NAICS codes
+- [x] Add official SBA badge/icon if applicable
+- [x] Link certification section to detailed certifications page
+- [x] Update footer to include small business designation information
+- [x] Ensure mobile-responsive design for certification badges
+- [x] Test certification section visibility and clarity

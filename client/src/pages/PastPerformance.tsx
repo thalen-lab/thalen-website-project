@@ -272,7 +272,7 @@ export default function PastPerformance() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 to-slate-900 text-white">
+      <section className="py-20 bg-navy-gradient text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Discuss Your Project?</h2>
