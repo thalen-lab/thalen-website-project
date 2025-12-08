@@ -440,8 +440,8 @@ export default function ContractVehicles() {
   return (
     <>
       <SEO
-        title="Contract Vehicles | NexDyne Technology"
-        description="Explore NexDyne Technology's federal contract vehicles including GWACs, MACs, GSA Schedules, and agency-specific IDIQs for streamlined government procurement."
+        title="Contract Vehicles | Thalen Technologies"
+        description="Explore Thalen Technologies' federal contract vehicles including GWACs, MACs, GSA Schedules, and agency-specific IDIQs for streamlined government procurement."
         keywords="federal contract vehicles, GSA schedule, GWAC, IDIQ, government contracts, federal procurement, small business set-asides"
       />
 
@@ -458,7 +458,7 @@ export default function ContractVehicles() {
                 Contract Vehicles
               </h1>
               <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                NexDyne Technology is actively pursuing major government-wide acquisition contracts, multiple agency contracts, and agency-specific task order vehicles in support of federal, state, and local agencies. Our contract vehicles will provide pre-negotiated terms and conditions for streamlined procurement of technology services and solutions.
+                Thalen Technologies is actively pursuing major government-wide acquisition contracts, multiple agency contracts, and agency-specific task order vehicles in support of federal, state, and local agencies. Our contract vehicles will provide pre-negotiated terms and conditions for streamlined procurement of technology services and solutions.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact">
@@ -486,7 +486,7 @@ export default function ContractVehicles() {
                 Streamlined Access to Technology Services
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                Whether you're a federal agency seeking IT modernization services or a prospective partner, our contract vehicles will provide efficient procurement pathways for artificial intelligence, cloud infrastructure, cybersecurity, data analytics, and application development services under pre-competed terms and conditions.
+                Thalen Technologies provides government agencies with a full range of IT services through solutions and Indefinite Delivery Indefinite Quantity (IDIQ) vehicles, as both a prime and subcontractor on various contract vehicles. We also have a commercialized products division with the focus on building custom software solutions that deliver high value digital media intelligence.
               </p>
             </div>
           </div>
@@ -540,7 +540,7 @@ export default function ContractVehicles() {
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">SAM.gov Registration</h3>
                   <p className="text-slate-600 mb-4">
-                    NexDyne Technology maintains active registration in the System for Award Management (SAM.gov), the official U.S. government system for federal contractors. Our CAGE Code and UEI are available upon request for proposal submissions and contract awards.
+                    Thalen Technologies maintains active registration in the System for Award Management (SAM.gov), the official U.S. government system for federal contractors. Our CAGE Code and UEI are available upon request for proposal submissions and contract awards.
                   </p>
                   <p className="text-sm text-slate-500">
                     <strong>NAICS Codes:</strong> 541512 (Computer Systems Design Services), 541519 (Other Computer Related Services), 541611 (Administrative Management and General Management Consulting Services), 541690 (Other Scientific and Technical Consulting Services)
