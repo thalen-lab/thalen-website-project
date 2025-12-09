@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import CaseStudyShowcase from '@/components/CaseStudyShowcase';
 import Footer from '@/components/Footer';
+import SmallBusinessCertifications from '@/components/SmallBusinessCertifications';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
 import { 
   ArrowRight, 
@@ -184,12 +185,14 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative overflow-hidden shadow-2xl">
                 <ImageWithLoader
-                  src="/who-we-are.png"
+                  src="/government-data-centers-t-jpg.webp"
                   alt="Who we are - Continuous innovation meets operational excellence"
                   className="w-full h-auto"
                 />
+                {/* Deep blue overlay */}
+                <div className="absolute inset-0 bg-primary/20 pointer-events-none"></div>
               </div>
             </motion.div>
 
@@ -228,6 +231,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Small Business Certifications Section */}
+      <SmallBusinessCertifications />
 
       {/* Services Section - 2x3 Grid Layout */}
       <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
