@@ -18,7 +18,7 @@ export default function SmallBusinessCertifications() {
               Our team specializes in federal technology modernization with deep experience in FedRAMP, FISMA, and agency-specific compliance requirements. We understand the unique challenges of government IT transformation and deliver solutions that meet mission-critical standards.
             </p>
             <Link href="/about">
-              <Button variant="outline" className="group border-white text-white hover:bg-white hover:text-slate-900">
+              <Button variant="outline" className="group border-white text-white hover:bg-[#FF6B35] hover:text-white hover:border-[#FF6B35] transition-all duration-300">
                 Learn More
               </Button>
             </Link>
@@ -52,7 +52,7 @@ export default function SmallBusinessCertifications() {
               </li>
             </ul>
             <Link href="/certifications">
-              <Button variant="outline" className="group border-white text-white hover:bg-white hover:text-slate-900">
+              <Button variant="outline" className="group border-white text-white hover:bg-[#FF6B35] hover:text-white hover:border-[#FF6B35] transition-all duration-300">
                 View Certifications
               </Button>
             </Link>
@@ -69,7 +69,7 @@ export default function SmallBusinessCertifications() {
               We are committed to delivering boutique, high-quality service that larger contractors cannot match. As a small business, we provide agile response times, direct access to senior leadership, and personalized attention to every engagement.
             </p>
             <Link href="/about">
-              <Button variant="outline" className="group border-white text-white hover:bg-white hover:text-slate-900">
+              <Button variant="outline" className="group border-white text-white hover:bg-[#FF6B35] hover:text-white hover:border-[#FF6B35] transition-all duration-300">
                 Our Approach
               </Button>
             </Link>
@@ -79,21 +79,33 @@ export default function SmallBusinessCertifications() {
         {/* Quick Reference Bar */}
         <div className="mt-12 p-6 border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
           <div className="grid md:grid-cols-4 gap-6 text-center">
-            <div>
-              <p className="text-slate-400 text-sm mb-1">Status</p>
-              <p className="text-white font-semibold">Small Business</p>
+            <div className="group cursor-default transition-all duration-300 hover:scale-105">
+              <p className="text-slate-400 text-sm mb-1 group-hover:text-[#FF6B35] transition-colors duration-300">Status</p>
+              <p className="text-white font-semibold relative inline-block">
+                Small Business
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF6B35] group-hover:w-full transition-all duration-300"></span>
+              </p>
             </div>
-            <div>
-              <p className="text-slate-400 text-sm mb-1">8(a) Program</p>
-              <p className="text-white font-semibold">Application Pending</p>
+            <div className="group cursor-default transition-all duration-300 hover:scale-105">
+              <p className="text-slate-400 text-sm mb-1 group-hover:text-[#FF6B35] transition-colors duration-300">8(a) Program</p>
+              <p className="text-white font-semibold relative inline-block">
+                Application Pending
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF6B35] group-hover:w-full transition-all duration-300"></span>
+              </p>
             </div>
-            <div>
-              <p className="text-slate-400 text-sm mb-1">SAM.gov</p>
-              <p className="text-white font-semibold">Active & Registered</p>
+            <div className="group cursor-default transition-all duration-300 hover:scale-105">
+              <p className="text-slate-400 text-sm mb-1 group-hover:text-[#FF6B35] transition-colors duration-300">SAM.gov</p>
+              <p className="text-white font-semibold relative inline-block">
+                Active & Registered
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF6B35] group-hover:w-full transition-all duration-300"></span>
+              </p>
             </div>
-            <div>
-              <p className="text-slate-400 text-sm mb-1">Primary NAICS</p>
-              <p className="text-white font-semibold">541512, 541519</p>
+            <div className="group cursor-default transition-all duration-300 hover:scale-105">
+              <p className="text-slate-400 text-sm mb-1 group-hover:text-[#FF6B35] transition-colors duration-300">Primary NAICS</p>
+              <p className="text-white font-semibold relative inline-block">
+                541512, 541519
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF6B35] group-hover:w-full transition-all duration-300"></span>
+              </p>
             </div>
           </div>
         </div>
