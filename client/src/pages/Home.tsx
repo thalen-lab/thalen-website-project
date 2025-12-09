@@ -5,7 +5,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import CaseStudyShowcase from '@/components/CaseStudyShowcase';
 import Footer from '@/components/Footer';
-import SmallBusinessCertifications from '@/components/SmallBusinessCertifications';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
 import { 
   ArrowRight, 
@@ -185,11 +184,11 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <div className="relative overflow-hidden shadow-2xl rounded-lg">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <ImageWithLoader
-                  src="/command-center.png"
-                  alt="Advanced command center with real-time monitoring and analytics"
-                  className="w-full h-auto object-cover"
+                  src="/who-we-are.png"
+                  alt="Who we are - Continuous innovation meets operational excellence"
+                  className="w-full h-auto"
                 />
               </div>
             </motion.div>
@@ -229,9 +228,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Small Business Certifications Section */}
-      <SmallBusinessCertifications />
 
       {/* Services Section - 2x3 Grid Layout */}
       <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">

@@ -25,7 +25,6 @@ import ServiceComparison from "./pages/ServiceComparison";
 import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
 import StateLocalSolutions from "./pages/federal-solutions/StateLocal";
-import PastPerformance from "./pages/PastPerformance";
 import StateROICalculator from "./pages/federal-solutions/StateROICalculator";
 import StateComplianceChecklist from "./pages/federal-solutions/StateComplianceChecklist";
 import StateProcurementGuide from "./pages/federal-solutions/StateProcurementGuide";
@@ -40,7 +39,6 @@ import ContractVehicleComparison from "./pages/ContractVehicleComparison";
 import ComplianceRoadmap from "./pages/ComplianceRoadmap";
 import MobileContact from "./pages/MobileContact";
 import MobileAssessment from "./pages/MobileAssessment";
-import ContractVehicles from "./pages/ContractVehicles";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -189,7 +187,6 @@ function Router() {
       <Route path={"/federal-solutions/state-local/roi-calculator"} component={StateROICalculator} />
       <Route path={"/federal-solutions/state-local/compliance-checklist"} component={StateComplianceChecklist} />
       <Route path={"/federal-solutions/state-local/procurement-guide"} component={StateProcurementGuide} />
-      <Route path={"/federal-solutions/past-performance"} component={PastPerformance} />
       <Route path={"/case-studies/state-attorney-general"} component={StateAttorneyGeneralCase} />
       <Route path={"/case-studies/state-energy-commission"} component={StateEnergyCommissionCase} />
       <Route path={"/case-studies/county-health-department"} component={CountyHealthDepartmentCase} />
@@ -199,9 +196,8 @@ function Router() {
       <Route path={"/government-resources"} component={GovernmentResources} />
       <Route path={"/contract-vehicle-comparison"} component={ContractVehicleComparison} />
       <Route path={"/compliance-roadmap"} component={ComplianceRoadmap} />
-      <Route path={"/contract-vehicles"} component={ContractVehicles} />
-
-      {/* Service Pages */}
+      
+      {/* Service Routes */}
       <Route path={"/services/automation"} component={AutomationService} />
       <Route path={"/services/automation/rpa"} component={RPAService} />
       <Route path={"/services/automation/rpa/process-assessment"} component={ProcessAssessment} />
