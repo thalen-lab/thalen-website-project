@@ -360,12 +360,9 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="group"
             >
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
+              <Card className="h-full border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-orange-50 to-orange-100">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <TrendingUp className="h-10 w-10 text-accent" />
-                    </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       Rapid Assessment & Architecture
                     </h3>
@@ -403,12 +400,9 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="group"
             >
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
+              <Card className="h-full border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-50 to-blue-100">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <Shield className="h-10 w-10 text-accent" />
-                    </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       Security-Native Implementation
                     </h3>
@@ -446,12 +440,9 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="group"
             >
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
+              <Card className="h-full border-2 border-green-200 hover:border-green-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-green-50 to-green-100">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <Code className="h-10 w-10 text-accent" />
-                    </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       Vendor-Agnostic Solutions
                     </h3>
@@ -489,12 +480,9 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="group"
             >
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white">
+              <Card className="h-full border-2 border-purple-200 hover:border-purple-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-purple-50 to-purple-100">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <div className="w-20 h-20 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <Users className="h-10 w-10 text-accent" />
-                    </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       Cleared Team Execution
                     </h3>
