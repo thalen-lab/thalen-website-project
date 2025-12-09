@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+
 
 export default function SmallBusinessCertifications() {
   return (
@@ -10,7 +10,7 @@ export default function SmallBusinessCertifications() {
           {/* Experience & Expertise */}
           <div className="p-8 hover:shadow-lg transition-shadow text-white border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold pb-3 border-b-2 border-white/30">
+              <h3 className="text-xl font-bold pb-3 border-b-2 border-white/30">
                 Government-Focused Expertise
               </h3>
             </div>
@@ -27,30 +27,30 @@ export default function SmallBusinessCertifications() {
           {/* Small Business Status */}
           <div className="p-8 hover:shadow-lg transition-shadow text-white border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold pb-3 border-b-2 border-white/30">
+              <h3 className="text-xl font-bold pb-3 border-b-2 border-white/30">
                 Small Business & 8(a) Pursuit
               </h3>
             </div>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-start gap-2">
-                <CheckCircle2 className="w-5 h-5 text-white/90 mt-0.5 flex-shrink-0" />
+            <ul className="space-y-3 mb-6 list-none">
+              <li className="flex items-start gap-2">
+                <span className="text-white/90 mt-0.5 flex-shrink-0">•</span>
                 <p className="text-white/95 text-sm">
                   <strong className="text-white">SAM.gov Registered</strong> - Ready to contract with UEI and CAGE code
                 </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <CheckCircle2 className="w-5 h-5 text-white/90 mt-0.5 flex-shrink-0" />
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-white/90 mt-0.5 flex-shrink-0">•</span>
                 <p className="text-white/95 text-sm">
                   <strong className="text-white">Pursuing 8(a) Certification</strong> - Application in progress for SBA Business Development Program
                 </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <CheckCircle2 className="w-5 h-5 text-white/90 mt-0.5 flex-shrink-0" />
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-white/90 mt-0.5 flex-shrink-0">•</span>
                 <p className="text-white/95 text-sm">
                   <strong className="text-white">Small Business Partner</strong> - Help agencies meet mandatory 23% small business contracting goals
                 </p>
-              </div>
-            </div>
+              </li>
+            </ul>
             <Link href="/certifications">
               <Button variant="outline" className="group border-white text-white hover:bg-white hover:text-slate-900">
                 View Certifications
@@ -61,7 +61,7 @@ export default function SmallBusinessCertifications() {
           {/* Values & Culture */}
           <div className="p-8 hover:shadow-lg transition-shadow text-white border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold pb-3 border-b-2 border-white/30">
+              <h3 className="text-xl font-bold pb-3 border-b-2 border-white/30">
                 Mission-Driven Partnership
               </h3>
             </div>

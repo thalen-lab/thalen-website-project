@@ -3057,3 +3057,11 @@
 - [x] Update Government-Focused Expertise card background to blue-grey (#1e3a4c)
 - [x] Update Small Business & 8(a) Pursuit card background to blue-grey (#1e3a4c)
 - [x] Update Mission-Driven Partnership card background to blue-grey (#1e3a4c)
+
+- [x] Increase the size of titles on Socioeconomic cards
+
+## Phase 67: Revise Section Titles for Conciseness
+- [ ] Revise section titles to be concise and fit on single line
+
+## Phase 68: Reduce Socioeconomics Card Title Sizes
+- [x] Reduce font size of titles on socioeconomics cards for better readability
