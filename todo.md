@@ -3046,3 +3046,9 @@
 
 - [x] Update socioeconomic cards to use same gradient background as solutions cards
 - [x] Update About page socioeconomic cards to remove icons and match CTA style from homepage solutions cards
+
+## Phase 58: Update Card Styling for Government-Focused Section
+- [x] Update cards to have sharp edges (remove rounded corners)
+- [x] Increase title size for boldness in Government-Focused Expertise section
+- [x] Increase title size for boldness in Small Business & 8(a) Pursuit section
+- [x] Increase title size for boldness in Mission-Driven Partnership section
