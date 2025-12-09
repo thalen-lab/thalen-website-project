@@ -3065,3 +3065,6 @@
 
 ## Phase 68: Reduce Socioeconomics Card Title Sizes
 - [x] Reduce font size of titles on socioeconomics cards for better readability
+
+## Phase 69: Adjust Card Title Sizes for Single-Line Fit
+- [x] Increase title sizes to optimal level for single-line display without wrapping
