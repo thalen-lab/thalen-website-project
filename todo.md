@@ -3040,3 +3040,6 @@
 
 ## Phase 48: Update Socioeconomic Section Design
 - [x] Update socioeconomic section with EisnerAmper-inspired card design (blue shades, border under title)
+
+## Phase 50: Update Feature Card Backgrounds
+- [x] Update feature cards to use signature blue background color

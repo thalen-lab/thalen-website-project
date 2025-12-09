@@ -8,20 +8,20 @@ export default function SmallBusinessCertifications() {
       <div className="container">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Experience & Expertise */}
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-8 rounded-lg hover:shadow-lg transition-shadow">
+          <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-8 rounded-lg hover:shadow-lg transition-shadow text-white">
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-blue-600" />
+              <div className="w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 pb-3 border-b-2 border-blue-600">
+              <h3 className="text-xl font-bold pb-3 border-b-2 border-white/30">
                 Government-Focused Expertise
               </h3>
             </div>
-            <p className="text-slate-700 mb-6 leading-relaxed">
+            <p className="text-white/95 mb-6 leading-relaxed">
               Our team specializes in federal technology modernization with deep experience in FedRAMP, FISMA, and agency-specific compliance requirements. We understand the unique challenges of government IT transformation and deliver solutions that meet mission-critical standards.
             </p>
             <Link href="/about">
-              <Button variant="outline" className="w-full bg-white hover:bg-blue-50">
+              <Button className="w-full bg-white text-blue-700 hover:bg-blue-50">
                 Learn More
               </Button>
             </Link>
@@ -65,20 +65,20 @@ export default function SmallBusinessCertifications() {
           </div>
 
           {/* Values & Culture */}
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-8 rounded-lg hover:shadow-lg transition-shadow">
+          <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-8 rounded-lg hover:shadow-lg transition-shadow text-white">
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center mb-4">
-                <Building2 className="w-6 h-6 text-blue-600" />
+              <div className="w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center mb-4">
+                <Building2 className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 pb-3 border-b-2 border-blue-600">
+              <h3 className="text-xl font-bold pb-3 border-b-2 border-white/30">
                 Mission-Driven Partnership
               </h3>
             </div>
-            <p className="text-slate-700 mb-6 leading-relaxed">
+            <p className="text-white/95 mb-6 leading-relaxed">
               We are committed to delivering boutique, high-quality service that larger contractors cannot match. As a small business, we provide agile response times, direct access to senior leadership, and personalized attention to every engagement.
             </p>
             <Link href="/about">
-              <Button variant="outline" className="w-full bg-white hover:bg-blue-50">
+              <Button className="w-full bg-white text-blue-700 hover:bg-blue-50">
                 Our Approach
               </Button>
             </Link>
