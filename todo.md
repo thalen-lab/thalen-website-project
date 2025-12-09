@@ -3078,3 +3078,4 @@
 - [x] Implement subtle underline animations on hover/scroll
 
 - [x] Remove icons from approach cards and add varying background colors
+- [x] Add strong varying blue gradient backgrounds to feature cards

@@ -360,17 +360,17 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="group"
             >
-              <Card className="h-full border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-orange-50 to-orange-100">
+              <Card className="h-full border-2 border-blue-300 hover:border-blue-500 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                    <h3 className="text-2xl font-bold text-white mb-4">
                       Rapid Assessment & Architecture
                     </h3>
                   </div>
-                  <p className="text-base text-slate-600 leading-relaxed mb-6">
+                  <p className="text-base text-blue-50 leading-relaxed mb-6">
                     We begin every engagement with a comprehensive 2-week discovery phase that maps your current state, identifies compliance gaps, and designs a vendor-neutral architecture aligned with your mission objectives. Our assessments include stakeholder interviews, technical infrastructure review, security posture analysis, and detailed ROI projections.
                   </p>
-                  <ul className="space-y-3 text-slate-700">
+                  <ul className="space-y-3 text-white">
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Stakeholder alignment workshops</span>
@@ -400,17 +400,17 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="group"
             >
-              <Card className="h-full border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-50 to-blue-100">
+              <Card className="h-full border-2 border-blue-400 hover:border-blue-600 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                    <h3 className="text-2xl font-bold text-white mb-4">
                       Security-Native Implementation
                     </h3>
                   </div>
-                  <p className="text-muted-foreground">
+                  <p className="text-blue-50 leading-relaxed mb-6">
                     Security and compliance are embedded from day one—not bolted on afterward. We implement only FedRAMP and StateRAMP-authorized platforms, configure zero-trust architectures by default, and prepare all security documentation needed for agency authorization. Every integration follows NIST 800-53 controls and agency-specific security requirements.
                   </p>
-                  <ul className="space-y-3 text-slate-700">
+                  <ul className="space-y-3 text-white">
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>FedRAMP/StateRAMP-authorized platforms only</span>
@@ -440,17 +440,17 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="group"
             >
-              <Card className="h-full border-2 border-green-200 hover:border-green-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-green-50 to-green-100">
+              <Card className="h-full border-2 border-blue-500 hover:border-blue-700 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                    <h3 className="text-2xl font-bold text-white mb-4">
                       Vendor-Agnostic Solutions
                     </h3>
                   </div>
-                  <p className="text-base text-slate-600 leading-relaxed mb-6">
+                  <p className="text-base text-blue-50 leading-relaxed mb-6">
                     We are not tied to any single vendor or platform. Our recommendations are based solely on your mission requirements, budget constraints, and technical environment. We evaluate 50+ FedRAMP-authorized platforms across automation, analytics, cloud, and integration categories to identify the best-fit solutions—then implement them with full transparency and knowledge transfer.
                   </p>
-                  <ul className="space-y-3 text-slate-700">
+                  <ul className="space-y-3 text-white">
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Independent platform evaluation and selection</span>
@@ -480,17 +480,17 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="group"
             >
-              <Card className="h-full border-2 border-purple-200 hover:border-purple-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-purple-50 to-purple-100">
+              <Card className="h-full border-2 border-blue-600 hover:border-blue-800 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-800 via-blue-900 to-slate-900">
                 <CardContent className="p-10">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                    <h3 className="text-2xl font-bold text-white mb-4">
                       Cleared Team Execution
                     </h3>
                   </div>
-                  <p className="text-base text-slate-600 leading-relaxed mb-6">
+                  <p className="text-base text-blue-50 leading-relaxed mb-6">
                     Our team includes Top Secret/SCI cleared personnel with decades of federal government experience. We understand agency culture, procurement processes, and the unique challenges of implementing technology in classified and sensitive environments. Every project is staffed with experienced consultants who have delivered similar implementations for agencies like yours.
                   </p>
-                  <ul className="space-y-3 text-slate-700">
+                  <ul className="space-y-3 text-white">
                     <li className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                       <span>Top Secret/SCI cleared team members available</span>
