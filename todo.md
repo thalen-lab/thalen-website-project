@@ -3043,3 +3043,5 @@
 
 ## Phase 50: Update Feature Card Backgrounds
 - [x] Update feature cards to use signature blue background color
+
+- [x] Update socioeconomic cards to use same gradient background as solutions cards
