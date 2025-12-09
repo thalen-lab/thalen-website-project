@@ -360,7 +360,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="group"
             >
-              <Card className="h-full border-2 border-blue-300 hover:border-blue-500 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700">
+              <Card className="h-full border-2 border-blue-300 hover:border-blue-500 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-[#0A2463] via-[#0E3B8F] to-[#1E5BC6]">
                 <CardContent className="p-10">
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">
@@ -400,7 +400,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="group"
             >
-              <Card className="h-full border-2 border-blue-400 hover:border-blue-600 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
+              <Card className="h-full border-2 border-blue-400 hover:border-blue-600 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-[#0A2463] via-[#0E3B8F] to-[#1E5BC6]">
                 <CardContent className="p-10">
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">
@@ -440,7 +440,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="group"
             >
-              <Card className="h-full border-2 border-blue-500 hover:border-blue-700 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900">
+              <Card className="h-full border-2 border-blue-500 hover:border-blue-700 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-[#0A2463] via-[#0E3B8F] to-[#1E5BC6]">
                 <CardContent className="p-10">
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">
@@ -480,7 +480,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="group"
             >
-              <Card className="h-full border-2 border-blue-600 hover:border-blue-800 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-800 via-blue-900 to-slate-900">
+              <Card className="h-full border-2 border-blue-600 hover:border-blue-800 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-[#0A2463] via-[#0E3B8F] to-[#1E5BC6]">
                 <CardContent className="p-10">
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">

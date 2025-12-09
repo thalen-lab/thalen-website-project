@@ -3079,3 +3079,6 @@
 
 - [x] Remove icons from approach cards and add varying background colors
 - [x] Add strong varying blue gradient backgrounds to feature cards
+
+## Phase 66: Update Approach Cards Background
+- [x] Update approach cards to use deep signature blue gradient background
