@@ -92,39 +92,32 @@ export default function Home() {
 
 
 
-  const certifications = [
+  // Featured certifications (top 3 most important for government/enterprise)
+  const featuredCertifications = [
     {
       name: 'FedRAMP & StateRAMP Expert',
-      description: 'Deep expertise implementing FedRAMP and StateRAMP-authorized platforms for federal, state, and local agencies at Moderate and High impact levels with proven ATO support.'
-    },
-    {
-      name: 'CMMC Compliance Partner',
-      description: 'Certified to help defense contractors achieve CMMC Level 2 and Level 3 compliance through gap analysis, controls implementation, and audit preparation.'
+      description: 'Deep expertise implementing FedRAMP and StateRAMP-authorized platforms for federal, state, and local agencies at Moderate and High impact levels with proven ATO support.',
+      icon: Shield
     },
     {
       name: 'ISO 27001 Certified',
-      description: 'ISO 27001:2022 certified organization with proven methodologies for implementing information security management systems for government clients.'
+      description: 'ISO 27001:2022 certified organization with proven methodologies for implementing information security management systems for government clients.',
+      icon: Shield
     },
     {
-      name: 'NIST Framework Expertise',
-      description: 'Extensive experience implementing NIST Cybersecurity Framework v2.0 controls and security assessments for federal and defense agencies.'
-    },
-    {
-      name: 'GSA Schedule Holder',
-      description: 'GSA IT Schedule 70 contract holder providing streamlined procurement for government agencies seeking implementation and integration services.'
-    },
-    {
-      name: 'ATO Support Services',
-      description: 'experience supporting agencies through FISMA Authority to Operate (ATO) processes with security documentation and compliance assessments.'
-    },
-    {
-      name: 'CJIS & State Compliance',
-      description: 'CJIS-compliant implementations for state and local law enforcement agencies, plus expertise with state-specific compliance frameworks and data sovereignty requirements.'
-    },
-    {
-      name: 'Cleared Personnel Available',
-      description: 'Top Secret/SCI cleared team members available for classified projects and sensitive government implementations requiring security clearances.'
+      name: 'CMMC Compliance Partner',
+      description: 'Certified to help defense contractors achieve CMMC Level 2 and Level 3 compliance through gap analysis, controls implementation, and audit preparation.',
+      icon: Shield
     }
+  ];
+
+  // Additional credentials displayed as compact badges
+  const additionalCredentials = [
+    { name: 'NIST Framework', shortDesc: 'Cybersecurity Framework v2.0' },
+    { name: 'GSA Schedule', shortDesc: 'IT Schedule 70 Holder' },
+    { name: 'ATO Support', shortDesc: 'FISMA Authority to Operate' },
+    { name: 'CJIS Compliant', shortDesc: 'State & Local Law Enforcement' },
+    { name: 'Cleared Personnel', shortDesc: 'Top Secret/SCI Available' }
   ];
 
 
@@ -280,7 +273,7 @@ export default function Home() {
       {/* Case Studies Section - Incentro Style */}
       <CaseStudyShowcase />
 
-      {/* Certifications Section - Editorial Layout */}
+      {/* Certifications Section - Featured + Grid Layout (GovTech Best Practice) */}
       <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
         <div className="container">
           <motion.div 
@@ -299,25 +292,29 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* 3-Column Grid with Hover-Reveal Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => {
+          {/* Featured Certifications - Top 3 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {featuredCertifications.map((cert, index) => {
+              const IconComponent = cert.icon;
               return (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative"
                 >
                   <Card className="h-full border border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-lg bg-white">
                     <CardContent className="p-8">
-                      <div className="text-center">
-                        <h3 className="text-xl font-bold text-slate-900 mb-4">
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                          <IconComponent className="w-8 h-8 text-accent" />
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-900 mb-3">
                           {cert.name}
                         </h3>
-                        <p className="text-base text-slate-600 leading-relaxed">
+                        <p className="text-sm text-slate-600 leading-relaxed">
                           {cert.description}
                         </p>
                       </div>
@@ -327,6 +324,28 @@ export default function Home() {
               );
             })}
           </div>
+
+          {/* Additional Credentials - Compact Badge Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="bg-white border border-slate-200 rounded-lg p-8"
+          >
+            <h3 className="text-lg font-semibold text-slate-900 mb-6 text-center">Additional Credentials & Authorizations</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+              {additionalCredentials.map((cred, index) => (
+                <div key={index} className="flex flex-col items-center text-center group">
+                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-3 group-hover:bg-accent/10 transition-colors">
+                    <Shield className="w-6 h-6 text-slate-600 group-hover:text-accent transition-colors" />
+                  </div>
+                  <h4 className="text-sm font-bold text-slate-900 mb-1">{cred.name}</h4>
+                  <p className="text-xs text-slate-600">{cred.shortDesc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
