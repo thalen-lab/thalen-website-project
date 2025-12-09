@@ -191,6 +191,8 @@ export default function Home() {
                   alt="Who we are - Continuous innovation meets operational excellence"
                   className="w-full h-auto"
                 />
+                {/* Deep blue overlay */}
+                <div className="absolute inset-0 bg-primary/20 pointer-events-none"></div>
               </div>
             </motion.div>
 

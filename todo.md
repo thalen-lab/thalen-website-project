@@ -3034,3 +3034,6 @@
 - [x] Update footer to include small business designation information
 - [x] Ensure mobile-responsive design for certification badges
 - [x] Test certification section visibility and clarity
+
+## Phase: Add Deep Blue Overlay to Who We Are Section
+- [x] Add deep blue overlay to the "Who we are" section image
