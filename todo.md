@@ -3037,3 +3037,6 @@
 
 ## Phase: Add Deep Blue Overlay to Who We Are Section
 - [x] Add deep blue overlay to the "Who we are" section image
+
+## Phase 48: Update Socioeconomic Section Design
+- [x] Update socioeconomic section with EisnerAmper-inspired card design (blue shades, border under title)
