@@ -274,7 +274,7 @@ export default function Home() {
       <CaseStudyShowcase />
 
       {/* Certifications Section - Featured + Grid Layout (GovTech Best Practice) */}
-      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+      <section className="py-24 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
         <div className="container">
           <motion.div 
             className="text-center max-w-4xl mx-auto mb-16"
@@ -284,10 +284,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Trusted & Certified</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Enterprise & Government Security & Compliance
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed">
+            <p className="text-xl text-slate-200 leading-relaxed">
               Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
             </p>
           </motion.div>
@@ -305,16 +305,16 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative"
                 >
-                  <Card className="h-full border border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-lg bg-white">
+                  <Card className="h-full border border-slate-700 hover:border-accent transition-all duration-300 hover:shadow-lg bg-slate-800/50">
                     <CardContent className="p-8">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
                           <IconComponent className="w-8 h-8 text-accent" />
                         </div>
-                        <h3 className="text-xl font-bold text-slate-900 mb-3">
+                        <h3 className="text-xl font-bold text-white mb-3">
                           {cert.name}
                         </h3>
-                        <p className="text-sm text-slate-600 leading-relaxed">
+                        <p className="text-sm text-slate-300 leading-relaxed">
                           {cert.description}
                         </p>
                       </div>
@@ -331,17 +331,17 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-white border border-slate-200 rounded-lg p-8"
+            className="bg-slate-800/50 border border-slate-700 rounded-lg p-8"
           >
-            <h3 className="text-lg font-semibold text-slate-900 mb-6 text-center">Additional Credentials & Authorizations</h3>
+            <h3 className="text-lg font-semibold text-white mb-6 text-center">Additional Credentials & Authorizations</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {additionalCredentials.map((cred, index) => (
                 <div key={index} className="flex flex-col items-center text-center group">
-                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-3 group-hover:bg-accent/10 transition-colors">
-                    <Shield className="w-6 h-6 text-slate-600 group-hover:text-accent transition-colors" />
+                  <div className="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center mb-3 group-hover:bg-accent/10 transition-colors">
+                    <Shield className="w-6 h-6 text-slate-300 group-hover:text-accent transition-colors" />
                   </div>
-                  <h4 className="text-sm font-bold text-slate-900 mb-1">{cred.name}</h4>
-                  <p className="text-xs text-slate-600">{cred.shortDesc}</p>
+                  <h4 className="text-sm font-bold text-white mb-1">{cred.name}</h4>
+                  <p className="text-xs text-slate-300">{cred.shortDesc}</p>
                 </div>
               ))}
             </div>
@@ -350,7 +350,7 @@ export default function Home() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
+      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
         <div className="container max-w-7xl">
           <motion.div 
             className="text-center max-w-4xl mx-auto mb-20"

@@ -3102,3 +3102,8 @@
 - [x] Implement bottom row with 5 compact icon badges (NIST, GSA, ATO, CJIS, Cleared Personnel)
 - [x] Reduce section height by ~50% while maintaining all credential information
 - [x] Ensure design follows GovTech best practices for scannability and mobile-first design
+
+## Phase 49: Update Section Background Colors
+- [x] Update certifications/compliance section background to match site color scheme
+- [x] Update approach/methodology section background to match site color scheme
+- [x] Update why choose section background to match site color scheme
