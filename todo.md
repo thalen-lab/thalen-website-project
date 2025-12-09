@@ -3052,3 +3052,8 @@
 - [x] Increase title size for boldness in Government-Focused Expertise section
 - [x] Increase title size for boldness in Small Business & 8(a) Pursuit section
 - [x] Increase title size for boldness in Mission-Driven Partnership section
+
+## Phase: Update Card Background Colors to Blue-Grey Shade
+- [x] Update Government-Focused Expertise card background to blue-grey (#1e3a4c)
+- [x] Update Small Business & 8(a) Pursuit card background to blue-grey (#1e3a4c)
+- [x] Update Mission-Driven Partnership card background to blue-grey (#1e3a4c)

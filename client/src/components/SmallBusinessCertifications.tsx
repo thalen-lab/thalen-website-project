@@ -8,7 +8,7 @@ export default function SmallBusinessCertifications() {
       <div className="container">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Experience & Expertise */}
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 hover:shadow-lg transition-shadow text-white border border-slate-700">
+          <div className="p-8 hover:shadow-lg transition-shadow text-white border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
             <div className="mb-6">
               <h3 className="text-2xl font-bold pb-3 border-b-2 border-white/30">
                 Government-Focused Expertise
@@ -25,7 +25,7 @@ export default function SmallBusinessCertifications() {
           </div>
 
           {/* Small Business Status */}
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 hover:shadow-lg transition-shadow text-white border border-slate-700">
+          <div className="p-8 hover:shadow-lg transition-shadow text-white border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
             <div className="mb-6">
               <h3 className="text-2xl font-bold pb-3 border-b-2 border-white/30">
                 Small Business & 8(a) Pursuit
@@ -59,7 +59,7 @@ export default function SmallBusinessCertifications() {
           </div>
 
           {/* Values & Culture */}
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 hover:shadow-lg transition-shadow text-white border border-slate-700">
+          <div className="p-8 hover:shadow-lg transition-shadow text-white border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
             <div className="mb-6">
               <h3 className="text-2xl font-bold pb-3 border-b-2 border-white/30">
                 Mission-Driven Partnership
@@ -77,7 +77,7 @@ export default function SmallBusinessCertifications() {
         </div>
 
         {/* Quick Reference Bar */}
-        <div className="mt-12 p-6 bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-700">
+        <div className="mt-12 p-6 border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div>
               <p className="text-slate-400 text-sm mb-1">Status</p>
