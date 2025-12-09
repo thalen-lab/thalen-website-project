@@ -232,8 +232,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Small Business Certifications Section */}
-      <SmallBusinessCertifications />
+
 
       {/* Services Section - 2x3 Grid Layout */}
       <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
@@ -533,6 +532,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Small Business Certifications Section */}
+      <SmallBusinessCertifications />
 
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">

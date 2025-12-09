@@ -3082,3 +3082,6 @@
 
 ## Phase 66: Update Approach Cards Background
 - [x] Update approach cards to use deep signature blue gradient background
+
+## Phase 46: Reorder Homepage Sections
+- [x] Move socioeconomic section (Government-Focused Expertise, Small Business & 8(a) Pursuit, Mission-Driven Partnership) after "Our Approach" section and before footer
