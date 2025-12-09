@@ -185,9 +185,9 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative overflow-hidden shadow-2xl">
                 <ImageWithLoader
-                  src="/who-we-are.png"
+                  src="/government-data-centers-t-jpg.webp"
                   alt="Who we are - Continuous innovation meets operational excellence"
                   className="w-full h-auto"
                 />
