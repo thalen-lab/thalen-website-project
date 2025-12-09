@@ -185,14 +185,12 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <div className="relative overflow-hidden shadow-2xl">
+              <div className="relative overflow-hidden shadow-2xl rounded-lg">
                 <ImageWithLoader
-                  src="/government-data-centers-t-jpg.webp"
-                  alt="Who we are - Continuous innovation meets operational excellence"
-                  className="w-full h-auto"
+                  src="/command-center.png"
+                  alt="Advanced command center with real-time monitoring and analytics"
+                  className="w-full h-auto object-cover"
                 />
-                {/* Deep blue overlay */}
-                <div className="absolute inset-0 bg-primary/20 pointer-events-none"></div>
               </div>
             </motion.div>
 

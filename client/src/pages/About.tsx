@@ -284,6 +284,42 @@ export default function About() {
         </div>
       </section>
 
+      {/* Who We Are */}
+      <section className="py-20">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Who we are</h2>
+              <h3 className="text-2xl md:text-3xl text-muted-foreground mb-8">
+                Continuous innovation, meet operational excellence.
+              </h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We help customers in every industry ensure their essential systems will work when, where, and how they need them to. But steady operations aren't enough in today's dynamic IT landscape—NexDyne brings the data, insights, patterns and proven methodologies businesses need to stay competitive.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <img 
+                src="/industries-circle.png" 
+                alt="NexDyne serves multiple industries including renewable energy, shipping, and industrial sectors"
+                className="w-full h-auto rounded-lg shadow-2xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Values - CBAM */}
       <section className="py-20 bg-muted">
         <div className="container">
