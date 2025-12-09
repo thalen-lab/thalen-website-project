@@ -3107,3 +3107,5 @@
 - [x] Update certifications/compliance section background to match site color scheme
 - [x] Update approach/methodology section background to match site color scheme
 - [x] Update why choose section background to match site color scheme
+
+- [x] Update "Our Approach" section cards with darker blue-grey color scheme and remove icons
