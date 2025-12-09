@@ -3045,3 +3045,4 @@
 - [x] Update feature cards to use signature blue background color
 
 - [x] Update socioeconomic cards to use same gradient background as solutions cards
+- [x] Update About page socioeconomic cards to remove icons and match CTA style from homepage solutions cards

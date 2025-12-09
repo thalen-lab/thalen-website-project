@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Award, Building2, Target, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export default function SmallBusinessCertifications() {
   return (
@@ -10,9 +10,6 @@ export default function SmallBusinessCertifications() {
           {/* Experience & Expertise */}
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg hover:shadow-lg transition-shadow text-white border border-slate-700">
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-orange-500" />
-              </div>
               <h3 className="text-xl font-bold pb-3 border-b-2 border-white/30">
                 Government-Focused Expertise
               </h3>
@@ -21,7 +18,7 @@ export default function SmallBusinessCertifications() {
               Our team specializes in federal technology modernization with deep experience in FedRAMP, FISMA, and agency-specific compliance requirements. We understand the unique challenges of government IT transformation and deliver solutions that meet mission-critical standards.
             </p>
             <Link href="/about">
-              <Button className="w-full bg-orange-500 text-white hover:bg-orange-600">
+              <Button variant="outline" className="group border-white text-white hover:bg-white hover:text-slate-900">
                 Learn More
               </Button>
             </Link>
@@ -30,9 +27,6 @@ export default function SmallBusinessCertifications() {
           {/* Small Business Status */}
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg hover:shadow-lg transition-shadow text-white border border-slate-700">
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                <Award className="w-6 h-6 text-orange-500" />
-              </div>
               <h3 className="text-xl font-bold pb-3 border-b-2 border-white/30">
                 Small Business & 8(a) Pursuit
               </h3>
@@ -58,7 +52,7 @@ export default function SmallBusinessCertifications() {
               </div>
             </div>
             <Link href="/certifications">
-              <Button className="w-full bg-orange-500 text-white hover:bg-orange-600">
+              <Button variant="outline" className="group border-white text-white hover:bg-white hover:text-slate-900">
                 View Certifications
               </Button>
             </Link>
@@ -67,9 +61,6 @@ export default function SmallBusinessCertifications() {
           {/* Values & Culture */}
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg hover:shadow-lg transition-shadow text-white border border-slate-700">
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                <Building2 className="w-6 h-6 text-orange-500" />
-              </div>
               <h3 className="text-xl font-bold pb-3 border-b-2 border-white/30">
                 Mission-Driven Partnership
               </h3>
@@ -78,7 +69,7 @@ export default function SmallBusinessCertifications() {
               We are committed to delivering boutique, high-quality service that larger contractors cannot match. As a small business, we provide agile response times, direct access to senior leadership, and personalized attention to every engagement.
             </p>
             <Link href="/about">
-              <Button className="w-full bg-orange-500 text-white hover:bg-orange-600">
+              <Button variant="outline" className="group border-white text-white hover:bg-white hover:text-slate-900">
                 Our Approach
               </Button>
             </Link>
