@@ -10,7 +10,7 @@ export default function SmallBusinessCertifications() {
           {/* Experience & Expertise */}
           <div className="p-8 hover:shadow-lg transition-shadow text-white border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold pb-3 border-b-2 border-white/30">
+              <h3 className="text-2xl font-bold pb-3 border-b-4 border-[#FF6B35]">
                 Government-Focused Expertise
               </h3>
             </div>
@@ -27,7 +27,7 @@ export default function SmallBusinessCertifications() {
           {/* Small Business Status */}
           <div className="p-8 hover:shadow-lg transition-shadow text-white border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold pb-3 border-b-2 border-white/30">
+              <h3 className="text-2xl font-bold pb-3 border-b-4 border-[#FF6B35]">
                 Small Business & 8(a) Pursuit
               </h3>
             </div>
@@ -61,7 +61,7 @@ export default function SmallBusinessCertifications() {
           {/* Values & Culture */}
           <div className="p-8 hover:shadow-lg transition-shadow text-white border border-slate-700" style={{ backgroundColor: '#1e3a4c' }}>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold pb-3 border-b-2 border-white/30">
+              <h3 className="text-2xl font-bold pb-3 border-b-4 border-[#FF6B35]">
                 Mission-Driven Partnership
               </h3>
             </div>
