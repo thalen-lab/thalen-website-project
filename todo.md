@@ -3138,3 +3138,6 @@
 - [x] Replace placeholder hero images with real technology/intelligence themed images
 ## Phase 100: Use Real Building and Infrastructure Images
 - [x] Replace hero carousel images with real critical infrastructure and regulated industry photos
+
+## Phase 53: Increase Hero Section Height
+- [x] Increase hero section height for better image visibility
