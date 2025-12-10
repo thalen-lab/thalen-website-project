@@ -41,7 +41,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-6">
             {/* Services Dropdown */}
             <div 
               className="relative"
@@ -176,7 +176,7 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="xl:hidden p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -186,7 +186,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden pb-6 space-y-4">
+          <div className="xl:hidden pb-6 space-y-4">
             <div>
               <button 
                 className="flex items-center justify-between w-full py-3 min-h-[44px] font-medium"
