@@ -363,12 +363,12 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               {teamStats.map((stat, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow border-none" style={{ background: 'linear-gradient(135deg, #C9A961 0%, #B8935A 50%, #9D7A3C 100%)' }}>
                   <CardContent className="p-8">
-                    <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                    <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm text-white/90">
                       {stat.label}
                     </div>
                   </CardContent>
