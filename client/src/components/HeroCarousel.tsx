@@ -16,7 +16,7 @@ interface CarouselSlide {
 const slides: CarouselSlide[] = [
   {
     id: 1,
-    image: "/government-tech.jpg",
+    image: "/hero-tech-dashboard.jpg",
     title: "Government Technology Implementation Services",
     subtitle:
       "We deliver end-to-end technology solutions that modernize government operations, enhance security, and improve citizen services through proven implementation expertise",
@@ -27,7 +27,7 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 2,
-    image: "/financial-healthcare.jpg",
+    image: "/hero-analytics-viz.png",
     title: "Commercial Financial Services & Healthcare",
     subtitle:
       "Empowering financial institutions and healthcare organizations with secure, compliant technology solutions that drive operational excellence and enhance customer experiences",
@@ -38,7 +38,7 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 3,
-    image: "/critical-infrastructure.png",
+    image: "/hero-neural-network.jpeg",
     title: "Critical Infrastructure & Regulated Industries",
     subtitle:
       "Protecting and modernizing critical infrastructure with enterprise-grade security, resilience, and compliance frameworks for energy, manufacturing, and regulated sectors",
