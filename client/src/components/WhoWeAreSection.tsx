@@ -15,25 +15,25 @@ interface CarouselSlide {
 
 const slides: CarouselSlide[] = [
   {
-    title: "Intelligence, Delivered",
+    title: "Govern Smart",
     subtitle: "Who we are",
-    description: "We help customers in every industry ensure their essential systems will work when, where, and how they need them to. But steady operations aren't enough in today's dynamic IT landscape—NexDyne brings the data, insights, patterns and proven methodologies businesses need to stay competitive.",
-    image: "/government-data-centers-t-jpg.webp",
-    imageAlt: "Intelligence delivered through advanced data analytics"
+    description: "We serve government agencies and highly regulated industries, ensuring their mission-critical systems deliver when it matters most. Thalen combines deep compliance expertise, proven methodologies, and cutting-edge technology to help public sector organizations navigate complex IT challenges while maintaining the highest security and regulatory standards.",
+    image: "/cybersecurity-operations-center.jpg",
+    imageAlt: "Government cybersecurity operations center"
   },
   {
-    title: "Data-Driven Decisions",
+    title: "Comprehensive Technology Solutions",
     subtitle: "What we do",
-    description: "Transform raw data into actionable intelligence. Our advanced analytics platforms and AI-powered insights enable federal agencies and enterprises to make informed decisions faster, reduce operational costs, and achieve measurable mission outcomes.",
-    image: "/hero-analytics-viz.png",
-    imageAlt: "Real-time data analytics and business intelligence"
+    description: "From cloud modernization and cybersecurity to data analytics and AI/ML, we deliver end-to-end technology solutions tailored for government and regulated sectors. Our services include intelligent automation, DevSecOps, application development, and digital transformation—all designed with compliance-first architecture and measurable outcomes.",
+    image: "/security-operations-team.jpg",
+    imageAlt: "Security operations team monitoring critical infrastructure"
   },
   {
-    title: "Strategic Insights",
+    title: "Compliance-First Approach",
     subtitle: "How we deliver",
-    description: "Leverage proven methodologies and cutting-edge technology to unlock strategic advantages. From predictive analytics to process automation, we deliver solutions that drive competitive edge and operational excellence across your organization.",
-    image: "/hero-tech-dashboard.jpg",
-    imageAlt: "Strategic planning and technology roadmap"
+    description: "Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, CMMC, FISMA, HIPAA, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.",
+    image: "/federal-data-center.jpg",
+    imageAlt: "Federal data center infrastructure"
   },
   {
     title: "Operational Excellence",
