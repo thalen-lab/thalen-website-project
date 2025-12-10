@@ -7,6 +7,7 @@ import CaseStudyShowcase from '@/components/CaseStudyShowcase';
 import Footer from '@/components/Footer';
 import SmallBusinessCertifications from '@/components/SmallBusinessCertifications';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
+import HeroCarousel from '@/components/HeroCarousel';
 import { 
   ArrowRight, 
   TrendingUp, 
@@ -138,37 +139,8 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[500px] sm:h-[600px] overflow-hidden">
-        {/* Video Background */}
-        <div className="absolute inset-0">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-            <source src="/videos/hero-video.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
-        </div>
-        
-        {/* Hero Content */}
-        <div className="relative container h-full flex items-center">
-          <div className="max-w-3xl text-primary-foreground">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">Government Technology Implementation Services</h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 text-white/95 leading-relaxed">We deliver end-to-end technology solutions that modernize government operations, enhance security, and improve citizen services through proven implementation expertise</p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
-                <Link href="/contact">
-                  Request Assessment
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
-                <Link href="/methodology">View ROI Methodology</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Carousel Section */}
+      <HeroCarousel />
 
       {/* Who We Are Section */}
       <section className="py-20 md:py-28 bg-white">
@@ -348,6 +320,171 @@ export default function Home() {
                   <p className="text-xs text-slate-300">{cred.shortDesc}</p>
                 </div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Choose NexDyne Section */}
+      <section className="py-24 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
+        <div className="container max-w-7xl">
+          <motion.div 
+            className="text-center max-w-4xl mx-auto mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Why Choose NexDyne</p>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Your Strategic Technology Partner
+            </h2>
+            <p className="text-xl text-slate-200 leading-relaxed">
+              We combine deep government expertise, small business agility, and mission-focused commitment to deliver exceptional results.
+            </p>
+          </motion.div>
+
+          {/* Three Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+            {/* Card 1: Government-Focused Expertise */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="group"
+            >
+              <Card className="h-full bg-slate-800/50 border border-slate-700 hover:border-accent hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
+                      <Award className="h-8 w-8 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Government-Focused Expertise
+                    </h3>
+                  </div>
+                  <p className="text-base text-slate-300 leading-relaxed mb-6">
+                    Our team specializes in federal technology modernization with deep experience in FedRAMP, FISMA, and agency-specific compliance requirements. We understand the unique challenges of government IT transformation and deliver solutions that meet mission-critical standards.
+                  </p>
+                  <Button asChild variant="outline" size="lg" className="border-slate-600 text-white hover:bg-accent hover:text-white hover:border-accent w-full">
+                    <Link href="/about">
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Card 2: Small Business & 8(a) Pursuit */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="group"
+            >
+              <Card className="h-full bg-slate-800/50 border border-slate-700 hover:border-accent hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
+                      <TrendingUp className="h-8 w-8 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Small Business & 8(a) Pursuit
+                    </h3>
+                  </div>
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
+                      <p className="text-base text-slate-300">
+                        <strong className="text-white">SAM.gov Registered</strong><br />
+                        <span className="text-sm">Ready to contract with UEI and CAGE code</span>
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
+                      <p className="text-base text-slate-300">
+                        <strong className="text-white">Pursuing 8(a) Certification</strong><br />
+                        <span className="text-sm">Application in progress for SBA Business Development Program</span>
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
+                      <p className="text-base text-slate-300">
+                        <strong className="text-white">Small Business Partner</strong><br />
+                        <span className="text-sm">Help agencies meet mandatory 23% small business contracting goals</span>
+                      </p>
+                    </div>
+                  </div>
+                  <Button asChild variant="outline" size="lg" className="border-slate-600 text-white hover:bg-accent hover:text-white hover:border-accent w-full">
+                    <Link href="/certifications">
+                      View Certifications
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Card 3: Mission-Driven Partnership */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="group"
+            >
+              <Card className="h-full bg-slate-800/50 border border-slate-700 hover:border-accent hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
+                      <Users className="h-8 w-8 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Mission-Driven Partnership
+                    </h3>
+                  </div>
+                  <p className="text-base text-slate-300 leading-relaxed mb-6">
+                    We are committed to delivering boutique, high-quality service that larger contractors cannot match. As a small business, we provide agile response times, direct access to senior leadership, and personalized attention to every engagement.
+                  </p>
+                  <Button asChild variant="outline" size="lg" className="border-slate-600 text-white hover:bg-accent hover:text-white hover:border-accent w-full">
+                    <Link href="/methodology">
+                      Our Approach
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+
+          {/* Certification Status Table */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-16 bg-white rounded-lg p-8 shadow-xl"
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">Status</p>
+                <p className="text-lg font-bold text-slate-900">Small Business</p>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">8(a) Program</p>
+                <p className="text-lg font-bold text-slate-900">Application Pending</p>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">SAM.gov</p>
+                <p className="text-lg font-bold text-slate-900">Active & Registered</p>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">Primary NAICS</p>
+                <p className="text-lg font-bold text-slate-900">541512, 541519</p>
+              </div>
             </div>
           </motion.div>
         </div>
