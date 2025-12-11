@@ -79,7 +79,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full h-[800px] overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+    <div className="relative w-full h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
