@@ -143,14 +143,11 @@ export default function Home() {
       {/* Hero Carousel Section */}
       <HeroCarousel />
 
-      {/* Who We Are Section - Enhanced with Kyndryl-inspired Interactive Elements */}
-      <WhoWeAreSection />
-
-      {/* What We Do Section - Rotating Content Before Core Capabilities */}
+      {/* What We Do Section */}
       <WhoWeAreSection />
 
       {/* Services Section - 2x3 Grid Layout */}
-      <section className="py-20 md:py-24 lg:py-28 bg-navy-gradient text-primary-foreground">
+      <section id="services" className="py-20 md:py-24 lg:py-28 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="mb-12 md:mb-16 lg:mb-20 text-center max-w-4xl mx-auto">
             <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Core Capabilities</p>
