@@ -79,7 +79,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -101,17 +101,17 @@ export default function HeroCarousel() {
           {/* Content */}
           <div className="relative h-full flex items-center">
             <div className="container">
-              <div className="max-w-3xl">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
                   {slide.title}
                 </h1>
-                <p className="text-lg md:text-xl text-slate-200 mb-8 leading-relaxed">
+                <p className="text-base md:text-lg lg:text-xl text-slate-200 mb-6 md:mb-8 leading-relaxed">
                   {slide.subtitle}
                 </p>
                 {slide.cta && (
                   <Button
                     size="lg"
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-6 text-lg"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 md:px-8 py-4 md:py-6 text-base md:text-lg"
                     onClick={() => (window.location.href = slide.cta!.link)}
                   >
                     {slide.cta.text}
@@ -140,7 +140,7 @@ export default function HeroCarousel() {
       </button>
 
       {/* Dots Navigation */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
         {slides.map((_, index) => (
           <button
             key={index}

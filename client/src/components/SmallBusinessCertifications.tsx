@@ -4,9 +4,9 @@ import { Award, Building2, Handshake } from "lucide-react";
 
 export default function SmallBusinessCertifications() {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
+    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
       <div className="container">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {/* Experience & Expertise */}
           <div className="bg-slate-800/50 p-8 border border-slate-700 hover:border-[#FF6B35] transition-all duration-300 hover:shadow-xl group">
             <div className="mb-6">
@@ -95,7 +95,7 @@ export default function SmallBusinessCertifications() {
         </div>
 
         {/* Quick Reference Bar */}
-        <div className="mt-12 bg-white p-8 border border-slate-200 rounded-lg shadow-sm">
+        <div className="mt-10 md:mt-12 lg:mt-16 bg-white p-6 md:p-8 border border-slate-200 rounded-lg shadow-sm">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center group cursor-default">
               <p className="text-slate-500 text-xs uppercase tracking-wider mb-2 font-semibold">Status</p>

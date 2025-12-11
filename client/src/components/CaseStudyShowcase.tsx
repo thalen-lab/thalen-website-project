@@ -78,11 +78,11 @@ export default function CaseStudyShowcase() {
   const featuredCaseStudies = caseStudies.slice(0, 3);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-slate-50 to-white">
       <div className="container">
         {/* Header */}
         <motion.div 
-          className="grid lg:grid-cols-2 gap-8 mb-12"
+          className="grid lg:grid-cols-2 gap-8 mb-10 md:mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -107,7 +107,7 @@ export default function CaseStudyShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12"
         >
           {featuredCaseStudies.map((study) => (
             <Card 

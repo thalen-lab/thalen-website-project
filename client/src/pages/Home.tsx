@@ -149,9 +149,9 @@ export default function Home() {
 
 
       {/* Services Section - 2x3 Grid Layout */}
-      <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 md:py-24 lg:py-28 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-16 text-center max-w-4xl mx-auto">
+          <div className="mb-12 md:mb-16 lg:mb-20 text-center max-w-4xl mx-auto">
             <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Core Capabilities</p>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
               Government Technology Services
@@ -195,10 +195,10 @@ export default function Home() {
       <CaseStudyShowcase />
 
       {/* Certifications Section - Featured + Grid Layout (GovTech Best Practice) */}
-      <section className="py-24 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
+      <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
         <div className="container">
           <motion.div 
-            className="text-center max-w-4xl mx-auto mb-16"
+            className="text-center max-w-4xl mx-auto mb-12 md:mb-16 lg:mb-20"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -214,7 +214,7 @@ export default function Home() {
           </motion.div>
 
           {/* Featured Certifications - Top 3 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
             {featuredCertifications.map((cert, index) => {
               const IconComponent = cert.icon;
               return (
@@ -666,7 +666,7 @@ export default function Home() {
       <SmallBusinessCertifications />
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-16 md:py-20 lg:py-24 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">

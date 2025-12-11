@@ -63,12 +63,12 @@ export default function WhoWeAreSection() {
 
   return (
     <section 
-      className="relative py-20 md:py-28 bg-white overflow-hidden"
+      className="relative py-16 md:py-24 lg:py-28 bg-white overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
           
           {/* Left: Animated Text Content */}
           <motion.div
