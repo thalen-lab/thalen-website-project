@@ -146,7 +146,8 @@ export default function Home() {
       {/* Who We Are Section - Enhanced with Kyndryl-inspired Interactive Elements */}
       <WhoWeAreSection />
 
-
+      {/* What We Do Section - Rotating Content Before Core Capabilities */}
+      <WhoWeAreSection />
 
       {/* Services Section - 2x3 Grid Layout */}
       <section className="py-20 md:py-24 lg:py-28 bg-navy-gradient text-primary-foreground">

@@ -3171,3 +3171,6 @@
 - [x] Adjust content spacing for better visual rhythm throughout the page
 - [x] Optimize mobile hero height with responsive adjustments
 - [x] Add subtle hero animations for enhanced visual appeal
+
+## Phase 48: Add Rotating What We Do Section Before Core Capabilities
+- [x] Add rotating "What We Do" section before Core Capabilities with all text variations and images
