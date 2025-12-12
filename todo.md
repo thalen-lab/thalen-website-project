@@ -3174,13 +3174,3 @@
 
 ## Phase 48: Add Rotating What We Do Section Before Core Capabilities
 - [x] Add rotating "What We Do" section before Core Capabilities with all text variations and images
-
-## Phase 58: Remove Carousel from What We Do Section
-- [x] Remove carousel from What We Do section, keep only single comprehensive technology solutions content
-
-## Phase 50: Update Hero Section Layout and CTAs
-- [x] Change first CTA button from "Our Story" to "Core Capabilities"
-- [x] Remove "Our Story" CTA button completely
-- [x] Keep "Join our team" CTA button
-- [x] Remove "15+ Years of Excellence" metric overlay from hero image
-- [x] Move hero image to left side (swap positions with text content)
