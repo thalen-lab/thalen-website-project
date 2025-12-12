@@ -3174,3 +3174,8 @@
 
 ## Phase 48: Add Rotating What We Do Section Before Core Capabilities
 - [x] Add rotating "What We Do" section before Core Capabilities with all text variations and images
+
+## Phase 49: Remove Carousel and Enhance Core Capabilities Section
+- [x] Remove carousel functionality from homepage "What We Do" section
+- [x] Create static "Comprehensive Technology Solutions" section with core capabilities image
+- [x] Enhance CTA buttons to focus on core capabilities instead of generic actions
