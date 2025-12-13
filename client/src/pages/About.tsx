@@ -62,7 +62,7 @@ export default function About() {
       icon: Users,
       title: 'Mastery',
       letter: 'M',
-      description: 'Deep expertise across the full automation stack. Our team maintains elite certifications (FedRAMP, StateRAMP, CMMC, AWS, Azure) and 15+ years of specialized experience in federal, state, and local government transformation.'
+      description: 'Deep expertise across the full automation stack. Our team maintains implementation expertise in FedRAMP, StateRAMP, and CMMC frameworks, along with cloud platform certifications (AWS, Azure), backed by 15+ years of specialized experience in federal, state, and local government transformation.'
     }
   ];
 
@@ -449,9 +449,9 @@ export default function About() {
                   <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Shield className="h-10 w-10 text-blue-500" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3">CMMC Certified</h3>
+                  <h3 className="text-lg font-bold mb-3">CMMC Consulting Services</h3>
                   <p className="text-sm text-muted-foreground">
-                    Certified to help defense contractors achieve CMMC Level 2 and Level 3 compliance through gap analysis and controls implementation.
+                    Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis and controls implementation.
                   </p>
                 </CardContent>
               </Card>
@@ -485,7 +485,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <p className="text-muted-foreground mb-4">
-              Additional certifications: ISO 27001:2022, NIST Cybersecurity Framework v2.0, GSA Schedule 70, Top Secret/SCI cleared personnel available
+              Additional expertise: ISO 27001:2022 implementation services, NIST Cybersecurity Framework v2.0, GSA Schedule application in progress, Top Secret/SCI cleared personnel available upon contract award
             </p>
             <Card className="border-2 bg-gradient-to-br from-primary/5 to-accent/5 max-w-4xl mx-auto">
               <CardContent className="p-6">

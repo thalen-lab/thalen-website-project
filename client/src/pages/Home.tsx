@@ -101,29 +101,29 @@ export default function Home() {
   // Featured certifications (top 3 most important for government/enterprise)
   const featuredCertifications = [
     {
-      name: 'FedRAMP & StateRAMP Expert',
-      description: 'Deep expertise implementing FedRAMP and StateRAMP-authorized platforms for federal, state, and local agencies at Moderate and High impact levels with proven ATO support.',
+      name: 'FedRAMP & StateRAMP Implementation',
+      description: 'Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.',
       icon: Shield
     },
     {
-      name: 'ISO 27001 Certified',
-      description: 'ISO 27001:2022 certified organization with proven methodologies for implementing information security management systems for government clients.',
+      name: 'ISO 27001 Implementation Services',
+      description: 'Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.',
       icon: Shield
     },
     {
-      name: 'CMMC Compliance Partner',
-      description: 'Certified to help defense contractors achieve CMMC Level 2 and Level 3 compliance through gap analysis, controls implementation, and audit preparation.',
+      name: 'CMMC Consulting Services',
+      description: 'Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis, controls implementation, and audit preparation.',
       icon: Shield
     }
   ];
 
   // Additional credentials displayed as compact badges
   const additionalCredentials = [
-    { name: 'NIST Framework', shortDesc: 'Cybersecurity Framework v2.0' },
-    { name: 'GSA Schedule', shortDesc: 'IT Schedule 70 Holder' },
-    { name: 'ATO Support', shortDesc: 'FISMA Authority to Operate' },
-    { name: 'CJIS Compliant', shortDesc: 'State & Local Law Enforcement' },
-    { name: 'Cleared Personnel', shortDesc: 'Top Secret/SCI Available' }
+    { name: 'NIST Framework', shortDesc: 'Cybersecurity Framework v2.0 Expertise' },
+    { name: 'GSA Schedule', shortDesc: 'Application in Progress' },
+    { name: 'ATO Support', shortDesc: 'FISMA Authority to Operate Services' },
+    { name: 'CJIS Compliance', shortDesc: 'Implementation Services' },
+    { name: 'Cleared Personnel', shortDesc: 'TS/SCI Available Upon Award' }
   ];
 
 
@@ -227,7 +227,7 @@ export default function Home() {
                 className="absolute -bottom-8 -left-8 bg-white shadow-xl rounded-lg p-6 border-l-4 border-accent hidden lg:block"
               >
                 <div className="text-4xl font-bold text-primary mb-1">15+</div>
-                <div className="text-sm text-slate-600 font-medium">Years of Excellence</div>
+                <div className="text-sm text-slate-600 font-medium">Years Team Experience</div>
               </motion.div>
             </motion.div>
 

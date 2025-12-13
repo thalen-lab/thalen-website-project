@@ -91,7 +91,7 @@ export default function Cybersecurity() {
   ];
 
   const governmentExperience = [
-    { agency: 'Defense Contractors', project: 'CMMC Level 3 Certification', outcome: '15 contractors certified' },
+    { agency: 'Defense Contractors', project: 'CMMC Level 3 Compliance Support', outcome: '15 contractors supported' },
     { agency: 'Government Civilian Agencies', project: 'FedRAMP/StateRAMP ATO Support', outcome: '8 ATOs achieved' },
     { agency: 'Intelligence Community', project: 'Zero Trust Implementation', outcome: 'TS/SCI environments secured' }
   ];

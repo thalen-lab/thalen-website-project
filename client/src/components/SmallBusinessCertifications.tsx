@@ -19,7 +19,7 @@ export default function SmallBusinessCertifications() {
               <div className="w-16 h-1 bg-[#FF6B35] rounded-full"></div>
             </div>
             <p className="text-slate-300 mb-6 leading-relaxed">
-              Our team specializes in federal technology modernization with deep experience in FedRAMP, FISMA, and agency-specific compliance requirements. We understand the unique challenges of government IT transformation and deliver solutions that meet mission-critical standards.
+              Our team specializes in federal technology modernization with deep experience implementing FedRAMP-authorized platforms, FISMA compliance frameworks, and agency-specific security requirements. We understand the unique challenges of government IT transformation and deliver solutions that meet mission-critical standards.
             </p>
             <Link href="/about">
               <Button variant="outline" className="group/btn border-slate-400 text-white hover:bg-[#FF6B35] hover:text-white hover:border-[#FF6B35] transition-all duration-300">
