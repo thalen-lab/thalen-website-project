@@ -285,6 +285,74 @@ export default function Home() {
       {/* Case Studies Section - Incentro Style */}
       <CaseStudyShowcase />
 
+      {/* Compliance-First Approach Section */}
+      <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-slate-50 to-white">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">How We Deliver</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+                Compliance-First Approach
+              </h2>
+              <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, CMMC, FISMA, HIPAA, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.
+              </p>
+              
+              {/* Action Buttons */}
+              <div className="flex flex-wrap gap-4">
+                <Button 
+                  variant="default" 
+                  size="lg"
+                  className="bg-[#0A2540] hover:bg-[#0A2540]/90 text-white"
+                  onClick={() => window.location.href = '/about#story'}
+                >
+                  Our story
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-slate-300 text-slate-700 hover:bg-slate-100"
+                  onClick={() => window.location.href = '/services/cybersecurity'}
+                >
+                  Awards and recognition
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-slate-300 text-slate-700 hover:bg-slate-100"
+                  onClick={() => window.location.href = '/contact'}
+                >
+                  Join our team
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative rounded-lg overflow-hidden shadow-2xl">
+                <ImageWithLoader
+                  src="/compliance-approach.png"
+                  alt="Server infrastructure representing compliance-first approach"
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Certifications Section - Featured + Grid Layout (GovTech Best Practice) */}
       <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
         <div className="container">
