@@ -3198,3 +3198,6 @@
 
 ## Phase 118: Add CMMC Compliance Images to Service Cards
 - [x] Add CMMC compliance images to service cards on Cybersecurity & Compliance page
+
+## Phase 49: Replace Shield Icons with Images
+- [x] Replace FedRAMP & StateRAMP shield icon with Capitol building image

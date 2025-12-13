@@ -103,7 +103,8 @@ export default function Home() {
     {
       name: 'FedRAMP & StateRAMP Implementation',
       description: 'Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.',
-      icon: Shield
+      icon: Shield,
+      image: '/fedramp-capitol.jpg'
     },
     {
       name: 'ISO 27001 Implementation Services',
@@ -385,12 +386,22 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative"
                 >
-                  <Card className="h-full border border-slate-700 hover:border-accent transition-all duration-300 hover:shadow-lg bg-slate-800/50">
+                   <Card className="h-full border border-slate-700 hover:border-accent transition-all duration-300 hover:shadow-lg bg-slate-800/50">
                     <CardContent className="p-8">
                       <div className="flex flex-col items-center text-center">
-                        <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                          <IconComponent className="w-8 h-8 text-accent" />
-                        </div>
+                        {cert.image ? (
+                          <div className="w-full h-40 rounded-lg overflow-hidden mb-4 group-hover:shadow-xl transition-shadow">
+                            <img 
+                              src={cert.image} 
+                              alt={cert.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        ) : (
+                          <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                            <IconComponent className="w-8 h-8 text-accent" />
+                          </div>
+                        )}
                         <h3 className="text-xl font-bold text-white mb-3">
                           {cert.name}
                         </h3>
