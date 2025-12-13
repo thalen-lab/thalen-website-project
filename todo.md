@@ -3182,3 +3182,6 @@
 
 ## Phase 51: Add Compliance-First Approach Section
 - [x] Add "Compliance-First Approach" section above "Trusted & Certified" section on homepage
+
+## Phase 54: Replace Compliance-First Approach Image
+- [x] Replace compliance-first approach image with new version

@@ -343,7 +343,7 @@ export default function Home() {
             >
               <div className="relative rounded-lg overflow-hidden shadow-2xl">
                 <ImageWithLoader
-                  src="/compliance-approach.png"
+                  src="/compliance-first-approach.jpg"
                   alt="Server infrastructure representing compliance-first approach"
                   className="w-full h-auto"
                 />
