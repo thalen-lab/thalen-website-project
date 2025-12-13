@@ -109,7 +109,8 @@ export default function Home() {
     {
       name: 'ISO 27001 Implementation Services',
       description: 'Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.',
-      icon: Shield
+      icon: Shield,
+      image: '/iso-logo.jpg'
     },
     {
       name: 'CMMC Consulting Services',

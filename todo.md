@@ -3201,3 +3201,6 @@
 
 ## Phase 49: Replace Shield Icons with Images
 - [x] Replace FedRAMP & StateRAMP shield icon with Capitol building image
+
+## Phase 50: Fix ISO 27001 Image Display
+- [x] Fix ISO 27001 card to display ISO logo image instead of shield icon

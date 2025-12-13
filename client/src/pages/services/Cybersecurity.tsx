@@ -157,17 +157,21 @@ export default function Cybersecurity() {
             </Card>
 
             {/* ISO 27001 Card */}
-            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="mb-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
-                    <Shield className="h-8 w-8 text-white" />
-                  </div>
+            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="w-full h-48 overflow-hidden">
+                  <img 
+                    src="/iso27001-service.jpg" 
+                    alt="ISO 27001 Implementation Services" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-white">ISO 27001 Implementation Services</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.
-                </p>
+                <div className="p-8 text-center">
+                  <h3 className="text-xl font-bold mb-4 text-white">ISO 27001 Implementation Services</h3>
+                  <p className="text-slate-300 leading-relaxed">
+                    Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
