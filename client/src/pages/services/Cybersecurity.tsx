@@ -130,6 +130,65 @@ export default function Cybersecurity() {
         </div>
       </section>
 
+      {/* Compliance Services Cards */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Compliance</h2>
+            <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto">
+              Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* FedRAMP & StateRAMP Card */}
+            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">FedRAMP & StateRAMP Implementation</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* ISO 27001 Card */}
+            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">ISO 27001 Implementation Services</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* CMMC Card */}
+            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">CMMC Consulting Services</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis, controls implementation, and audit preparation.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Key Differentiators */}
       <section className="py-16 bg-background">
         <div className="container">

@@ -3195,3 +3195,6 @@
 - [x] Add disclaimer for Top Secret/SCI cleared personnel - "available upon contract award" if not currently active
 - [x] Update additional credentials section with accurate descriptions
 - [x] Ensure all claims are verifiable and properly worded to avoid misleading language
+
+## Phase 118: Add CMMC Compliance Images to Service Cards
+- [x] Add CMMC compliance images to service cards on Cybersecurity & Compliance page
