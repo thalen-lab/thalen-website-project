@@ -138,7 +138,7 @@ export default function CMMC() {
         </div>
         
         {/* Decorative diagonal cut */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-white" style={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 40%, 0 100%)' }}></div>
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-white" style={{ clipPath: 'polygon(0 40%, 100% 0%, 100% 100%, 0 100%)' }}></div>
       </section>
 
       {/* What is CMMC Section */}

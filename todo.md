@@ -3274,3 +3274,6 @@
 
 ## Phase 57: CMMC Page Professional Tone Revision
 - [x] Revise CMMC Compliance Services page to match professional GovTech tone (remove sales language, focus on expertise and clarity)
+
+## Phase 58: Fix CMMC Hero Diagonal Line Issue
+- [x] Fix diagonal line issue in CMMC Consulting Services hero section
