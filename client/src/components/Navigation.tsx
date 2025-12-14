@@ -28,6 +28,13 @@ export default function Navigation() {
     { name: 'Financial Services', href: '/industries/financial' },
   ];
 
+  const federalSolutions = [
+    { name: 'FedRAMP Authorized Solutions', href: '/federal/fedramp' },
+    { name: 'CMMC Compliance', href: '/federal/cmmc' },
+    { name: 'ATO Support & Authorization', href: '/services/ato-support' },
+    { name: 'Government Cloud Migration', href: '/federal/cloud-migration' },
+  ];
+
   return (
     <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
       <div className="container">
@@ -92,12 +99,6 @@ export default function Navigation() {
               )}
             </div>
 
-            <Link href="/insights" className="hover:text-accent transition-colors">
-              Insights
-            </Link>
-            <Link href="/case-studies" className="hover:text-accent transition-colors">
-              Case Studies
-            </Link>
             {/* Federal Solutions Dropdown */}
             <div 
               className="relative"
@@ -110,52 +111,25 @@ export default function Navigation() {
               </button>
               {federalSolutionsOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
-                  <Link 
-                    href="/federal-solutions"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors font-semibold"
-                  >
-                    Government Solutions Overview
-                  </Link>
-                  <div className="border-t border-border my-2"></div>
-                  <Link 
-                    href="/federal-solutions/state-local"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    State & Local Government
-                  </Link>
-                  <Link 
-                    href="/capability-generator"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    Capability Statement Generator
-                  </Link>
-                  <Link 
-                    href="/contract-vehicles"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    Contract Vehicles
-                  </Link>
-                  <Link 
-                    href="/contract-vehicle-comparison"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    Contract Vehicle Comparison
-                  </Link>
-                  <Link 
-                    href="/compliance-roadmap"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    Compliance Roadmap Tool
-                  </Link>
-                  <Link 
-                    href="/federal-solutions/past-performance"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    Past Performance
-                  </Link>
+                  {federalSolutions.map((solution) => (
+                    <Link 
+                      key={solution.href} 
+                      href={solution.href}
+                      className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      {solution.name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
+
+            <Link href="/insights" className="hover:text-accent transition-colors">
+              Insights
+            </Link>
+            <Link href="/case-studies" className="hover:text-accent transition-colors">
+              Case Studies
+            </Link>
             <Link href="/government-resources" className="hover:text-accent transition-colors">
               Resources
             </Link>
@@ -235,6 +209,30 @@ export default function Navigation() {
               )}
             </div>
 
+            <div>
+              <button 
+                className="flex items-center justify-between w-full py-3 min-h-[44px] font-medium"
+                onClick={() => setFederalSolutionsOpen(!federalSolutionsOpen)}
+              >
+                <span>Federal Solutions</span>
+                <ChevronDown className={`h-4 w-4 transition-transform ${federalSolutionsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {federalSolutionsOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  {federalSolutions.map((solution) => (
+                    <Link 
+                      key={solution.href} 
+                      href={solution.href}
+                      className="block py-3 min-h-[44px] text-sm hover:text-accent flex items-center"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {solution.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link 
               href="/insights" 
               className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
@@ -248,13 +246,6 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Case Studies
-            </Link>
-            <Link 
-              href="/federal-solutions" 
-              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Federal Solutions
             </Link>
             <Link 
               href="/government-resources" 
