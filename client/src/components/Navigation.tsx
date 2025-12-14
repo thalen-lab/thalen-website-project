@@ -29,10 +29,10 @@ export default function Navigation() {
   ];
 
   const federalSolutions = [
-    { name: 'FedRAMP Authorized Solutions', href: '/federal/fedramp' },
-    { name: 'CMMC Compliance', href: '/federal/cmmc' },
+    { name: 'FedRAMP Authorized Solutions', href: '/federal-solutions/fedramp' },
+    { name: 'CMMC Compliance', href: '/federal-solutions/cmmc' },
     { name: 'ATO Support & Authorization', href: '/services/ato-support' },
-    { name: 'Government Cloud Migration', href: '/federal/cloud-migration' },
+    { name: 'Government Cloud Migration', href: '/federal-solutions/cloud-migration' },
   ];
 
   return (

@@ -3239,3 +3239,11 @@
 - [x] Implement email validation and database storage for leads
 - [x] Add automatic PDF delivery after form submission
 - [x] Link resources from federal solutions landing pages
+
+## Phase 47: Add Missing Federal Solutions Pages
+- [x] Create /federal-solutions/fedramp page
+- [x] Create /federal-solutions/cmmc page
+- [x] Create /federal-solutions/cloud-migration page
+- [x] Verify all navigation dropdown items have corresponding pages
+- [x] Update App.tsx with all Federal Solutions routes
+- [x] Fix Navigation component Federal Solutions links to match actual routes
