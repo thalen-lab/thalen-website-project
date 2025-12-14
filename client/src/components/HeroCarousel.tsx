@@ -28,6 +28,39 @@ const slides: CarouselSlide[] = [
   {
     id: 2,
     image: "/hero-datacenter.jpg",
+    title: "FedRAMP Authorization & Cloud Security",
+    subtitle:
+      "Accelerate your path to FedRAMP authorization with our proven methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months, opening doors to billions in federal opportunities",
+    cta: {
+      text: "Learn About FedRAMP Services",
+      link: "/federal-solutions/fedramp",
+    },
+  },
+  {
+    id: 3,
+    image: "/hero-federal-building.jpg",
+    title: "CMMC Compliance for Defense Contractors",
+    subtitle:
+      "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements with 100% first-time pass rate",
+    cta: {
+      text: "Explore CMMC Services",
+      link: "/federal-solutions/cmmc",
+    },
+  },
+  {
+    id: 4,
+    image: "/hero-datacenter.jpg",
+    title: "Government Cloud Migration Excellence",
+    subtitle:
+      "Modernize your infrastructure with secure migration to AWS GovCloud, Azure Government, or Google Cloud for Government. We've migrated 2,500+ applications with 99.99% uptime and 42% average TCO reduction",
+    cta: {
+      text: "Start Your Cloud Journey",
+      link: "/federal-solutions/cloud-migration",
+    },
+  },
+  {
+    id: 5,
+    image: "/hero-power-plant.jpg",
     title: "Commercial Financial Services & Healthcare",
     subtitle:
       "Empowering financial institutions and healthcare organizations with secure, compliant technology solutions that drive operational excellence and enhance customer experiences",
@@ -37,7 +70,7 @@ const slides: CarouselSlide[] = [
     },
   },
   {
-    id: 3,
+    id: 6,
     image: "/hero-power-plant.jpg",
     title: "Critical Infrastructure & Regulated Industries",
     subtitle:

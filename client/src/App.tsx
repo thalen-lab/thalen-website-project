@@ -25,6 +25,9 @@ import ServiceComparison from "./pages/ServiceComparison";
 import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
 import StateLocalSolutions from "./pages/federal-solutions/StateLocal";
+import FedRAMP from "./pages/FedRAMP";
+import CMMC from "./pages/CMMC";
+import GovCloudMigration from "./pages/GovCloudMigration";
 import PastPerformance from "./pages/PastPerformance";
 import StateROICalculator from "./pages/federal-solutions/StateROICalculator";
 import StateComplianceChecklist from "./pages/federal-solutions/StateComplianceChecklist";
@@ -184,8 +187,11 @@ function Router() {
       <Route path={"/methodology"} component={Methodology} />
       <Route path={"/compare-services"} component={ServiceComparison} />
       <Route path={"/package-builder"} component={PackageBuilder} />
-      <Route path={"/federal-solutions"} component={FederalSolutions} />
-      <Route path={"/federal-solutions/state-local"} component={StateLocalSolutions} />
+      <Route path="/federal-solutions" component={FederalSolutions} />
+      <Route path="/federal-solutions/fedramp" component={FedRAMP} />
+      <Route path="/federal-solutions/cmmc" component={CMMC} />
+      <Route path="/federal-solutions/cloud-migration" component={GovCloudMigration} />
+      <Route path="/federal-solutions/state-local" component={StateLocalSolutions} />
       <Route path={"/federal-solutions/state-local/roi-calculator"} component={StateROICalculator} />
       <Route path={"/federal-solutions/state-local/compliance-checklist"} component={StateComplianceChecklist} />
       <Route path={"/federal-solutions/state-local/procurement-guide"} component={StateProcurementGuide} />
