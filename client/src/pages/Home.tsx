@@ -255,7 +255,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {services.map((service, index) => (
               <Link
                 key={index}
@@ -263,7 +263,7 @@ export default function Home() {
                 className="block group"
               >
                 <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
-                  <CardContent className="p-8">
+                  <CardContent className="p-10">
                     <div className="mb-6">
                       <service.icon className="h-14 w-14 text-accent" />
                     </div>
@@ -388,30 +388,42 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative"
                 >
-                   <Card className="h-full border border-slate-700 hover:border-accent transition-all duration-300 hover:shadow-lg bg-slate-800/50">
-                    <CardContent className="p-8">
-                      <div className="flex flex-col items-center text-center">
-                        {cert.image ? (
-                          <div className="w-full h-40 rounded-lg overflow-hidden mb-4 group-hover:shadow-xl transition-shadow">
-                            <img 
-                              src={cert.image} 
-                              alt={cert.name}
-                              className="w-full h-full object-cover"
-                            />
+                   <Card className="h-full border border-slate-700 hover:border-accent transition-all duration-300 hover:shadow-lg bg-slate-800/50 overflow-hidden">
+                    {cert.image ? (
+                      <>
+                        <div className="w-full h-48 overflow-hidden">
+                          <img 
+                            src={cert.image} 
+                            alt={cert.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                        <CardContent className="p-6">
+                          <div className="flex flex-col items-center text-center">
+                            <h3 className="text-xl font-bold text-white mb-3">
+                              {cert.name}
+                            </h3>
+                            <p className="text-sm text-slate-300 leading-relaxed">
+                              {cert.description}
+                            </p>
                           </div>
-                        ) : (
+                        </CardContent>
+                      </>
+                    ) : (
+                      <CardContent className="p-8">
+                        <div className="flex flex-col items-center text-center">
                           <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
                             <IconComponent className="w-8 h-8 text-accent" />
                           </div>
-                        )}
-                        <h3 className="text-xl font-bold text-white mb-3">
-                          {cert.name}
-                        </h3>
-                        <p className="text-sm text-slate-300 leading-relaxed">
-                          {cert.description}
-                        </p>
-                      </div>
-                    </CardContent>
+                          <h3 className="text-xl font-bold text-white mb-3">
+                            {cert.name}
+                          </h3>
+                          <p className="text-sm text-slate-300 leading-relaxed">
+                            {cert.description}
+                          </p>
+                        </div>
+                      </CardContent>
+                    )}
                   </Card>
                 </motion.div>
               );

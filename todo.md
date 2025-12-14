@@ -3204,3 +3204,9 @@
 
 ## Phase 50: Fix ISO 27001 Image Display
 - [x] Fix ISO 27001 card to display ISO logo image instead of shield icon
+
+## Phase 125: Fix Service Card Image Display
+- [ ] Fix service cards images to span fully edge-to-edge without gaps
+
+## Phase 126: Adjust Feature Card Spacing
+- [x] Adjust spacing in upper feature cards to better utilize available space
