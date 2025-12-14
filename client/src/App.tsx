@@ -44,6 +44,9 @@ import ComplianceRoadmap from "./pages/ComplianceRoadmap";
 import MobileContact from "./pages/MobileContact";
 import MobileAssessment from "./pages/MobileAssessment";
 import ContractVehicles from "./pages/ContractVehicles";
+import ResourceDownloadFedRAMP from "./pages/ResourceDownloadFedRAMP";
+import ResourceDownloadCMMC from "./pages/ResourceDownloadCMMC";
+import ResourceDownloadCloudMigration from "./pages/ResourceDownloadCloudMigration";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -206,9 +209,11 @@ function Router() {
       <Route path={"/contract-vehicle-comparison"} component={ContractVehicleComparison} />
       <Route path={"/compliance-roadmap"} component={ComplianceRoadmap} />
       <Route path={"/contract-vehicles"} component={ContractVehicles} />
+      <Route path={"/resources/download/fedramp-readiness-checklist"} component={ResourceDownloadFedRAMP} />
+      <Route path={"/resources/download/cmmc-implementation-guide"} component={ResourceDownloadCMMC} />
+      <Route path={"/resources/download/cloud-migration-playbook"} component={ResourceDownloadCloudMigration} />
 
-      {/* Service Pages */}
-      <Route path={"/services/automation"} component={AutomationService} />
+      {/* Service Pages */}      <Route path={"/services/automation"} component={AutomationService} />
       <Route path={"/services/automation/rpa"} component={RPAService} />
       <Route path={"/services/automation/rpa/process-assessment"} component={ProcessAssessment} />
       <Route path={"/services/automation/rpa/platform-implementation"} component={PlatformImplementation} />

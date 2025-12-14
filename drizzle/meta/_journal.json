@@ -78,6 +78,13 @@
       "when": 1765140842336,
       "tag": "0010_right_stingray",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1765681408767,
+      "tag": "0011_ancient_pepper_potts",
+      "breakpoints": true
     }
   ]
 }
