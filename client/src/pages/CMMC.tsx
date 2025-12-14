@@ -70,8 +70,15 @@ export default function CMMC() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-32">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6bTAtMzZjMC02LjYyNyA1LjM3My0xMiAxMi0xMnMxMiA1LjM3MyAxMiAxMi01LjM3MyAxMi0xMiAxMi0xMi01LjM3My0xMi0xMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/cmmc-hero.jpg" 
+            alt="Department of Energy and Pentagon" 
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/80 to-slate-900/80"></div>
+        </div>
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-400/30 rounded-full px-4 py-2 mb-6">
@@ -102,7 +109,7 @@ export default function CMMC() {
 
       {/* What is CMMC Section */}
       <section className="py-24 bg-slate-50">
-        <div className="container max-w-7xl">
+        <div className="container max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Understanding CMMC</h2>
@@ -131,7 +138,7 @@ export default function CMMC() {
 
       {/* Regulatory Updates */}
       <section className="py-24 bg-white">
-        <div className="container max-w-7xl">
+        <div className="container max-w-6xl">
           <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">CMMC Regulatory Status</h2>
           
           <div className="grid lg:grid-cols-3 gap-8">
@@ -182,7 +189,7 @@ export default function CMMC() {
 
       {/* Methodology Section */}
       <section className="py-24 bg-slate-50">
-        <div className="container max-w-7xl">
+        <div className="container max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img 
@@ -239,7 +246,7 @@ export default function CMMC() {
 
       {/* Expertise Section */}
       <section className="py-24 bg-white">
-        <div className="container max-w-7xl">
+        <div className="container max-w-6xl">
           <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">Experience & Credentials</h2>
           
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
@@ -301,7 +308,7 @@ export default function CMMC() {
 
       {/* CMMC Levels Section */}
       <section className="py-24 bg-slate-50">
-        <div className="container max-w-7xl">
+        <div className="container max-w-6xl">
           <h2 className="text-4xl font-bold text-slate-900 mb-4 text-center">CMMC Maturity Levels</h2>
           <p className="text-xl text-slate-600 mb-12 text-center max-w-3xl mx-auto">
             CMMC consists of three levels, each building upon the previous to provide progressively advanced cybersecurity protection.
@@ -384,7 +391,7 @@ export default function CMMC() {
 
       {/* Services Section */}
       <section className="py-24 bg-white">
-        <div className="container max-w-7xl">
+        <div className="container max-w-6xl">
           <h2 className="text-4xl font-bold text-slate-900 mb-4 text-center">Comprehensive CMMC Services</h2>
           <p className="text-xl text-slate-600 mb-12 text-center max-w-3xl mx-auto">
             End-to-end support from contract analysis through certification and ongoing compliance. Our services address the full spectrum of CMMC requirements across all certification levels, including technical evaluations, supply chain management, and strategic compliance planning.
@@ -418,7 +425,7 @@ export default function CMMC() {
 
       {/* Security Domains Section */}
       <section className="py-24 bg-slate-50">
-        <div className="container max-w-7xl">
+        <div className="container max-w-6xl">
           <h2 className="text-4xl font-bold text-slate-900 mb-4 text-center">CMMC Level 2 Security Domains</h2>
           <p className="text-xl text-slate-600 mb-12 text-center max-w-3xl mx-auto">
             CMMC Level 2 encompasses 110 practices across 17 security domains aligned with NIST SP 800-171.
@@ -455,7 +462,7 @@ export default function CMMC() {
 
       {/* Case Study Section */}
       <section className="py-24 bg-white">
-        <div className="container max-w-7xl">
+        <div className="container max-w-6xl">
           <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">Client Success Story</h2>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
