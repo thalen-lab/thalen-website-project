@@ -58,9 +58,9 @@ export default function CMMC() {
     },
     {
       icon: TrendingUp,
-      title: "Continuous Compliance Monitoring",
-      description: "Ongoing monitoring and maintenance of your CMMC compliance posture with automated tools and regular assessments.",
-      deliverables: ["Continuous monitoring platform", "Monthly compliance reports", "Annual re-assessment support", "Change management"]
+      title: "Continuous Compliance & Annual Attestation",
+      description: "Ongoing monitoring and maintenance of your CMMC compliance posture with automated tools, regular assessments, and annual attestation support required to maintain your certification.",
+      deliverables: ["Continuous monitoring platform", "Monthly compliance reports", "Annual attestation preparation and submission", "Change management", "Compliance evidence management"]
     },
     {
       icon: Shield,
@@ -181,6 +181,370 @@ export default function CMMC() {
               <p>
                 Unlike self-attestation approaches, CMMC requires third-party assessment by certified CMMC Third Party Assessment Organizations (C3PAOs), ensuring objective verification of cybersecurity practices and providing DoD with confidence in contractor security postures.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Regulatory Context Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-slate-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-slate-900 mb-8">Regulatory Timeline & Requirements</h2>
+            
+            <div className="space-y-6">
+              <Card className="border-orange-200 bg-orange-50/50">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-orange-500 text-white p-3 rounded-lg">
+                      <Shield className="h-6 w-6" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">CMMC 2.0 Final Rule (32 CFR Part 170)</h3>
+                      <p className="text-slate-700 mb-3">
+                        The Department of Defense published the final CMMC rule in the Federal Register, effective <strong>December 16, 2024</strong>. This rule establishes CMMC as a mandatory requirement for DoD contractors handling Federal Contract Information (FCI) and Controlled Unclassified Information (CUI).
+                      </p>
+                      <p className="text-slate-700">
+                        Under 32 CFR Part 170, organizations must achieve the appropriate CMMC level based on the type of information they handle. CMMC requirements will be phased into DoD contracts over the next 12-24 months, with high-priority programs requiring certification first.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-blue-200 bg-blue-50/50">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-600 text-white p-3 rounded-lg">
+                      <FileCheck className="h-6 w-6" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">DFARS Clause Integration (48 CFR 252.204-7021)</h3>
+                      <p className="text-slate-700 mb-3">
+                        The Defense Federal Acquisition Regulation Supplement (DFARS) clause 252.204-7021 requires contractors to have a current CMMC certificate at the level required by the contract. This clause is being incorporated into new DoD solicitations and contract modifications.
+                      </p>
+                      <p className="text-slate-700">
+                        Contractors must maintain their CMMC certification throughout the contract performance period and provide evidence of certification to the Contracting Officer upon request.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-slate-200">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-slate-600 text-white p-3 rounded-lg">
+                      <Target className="h-6 w-6" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">SPRS Self-Assessment & Annual Attestation</h3>
+                      <p className="text-slate-700 mb-3">
+                        Until CMMC certification is required in your contracts, organizations handling CUI must conduct annual self-assessments using the Supplier Performance Risk System (SPRS). These assessments evaluate your implementation of NIST SP 800-171 security requirements.
+                      </p>
+                      <p className="text-slate-700 mb-3">
+                        <strong>Critical requirement:</strong> Even after achieving CMMC Level 2 certification, organizations must submit annual attestations confirming continued compliance with all 110 security practices. Failure to maintain compliance can result in certificate suspension or revocation.
+                      </p>
+                      <p className="text-sm text-slate-600 bg-white p-4 rounded border border-slate-200">
+                        <strong>Important:</strong> You can pass a CMMC assessment but still be non-compliant if your contractual CUI requirements weren't properly validated during scoping. Our contract-first approach ensures alignment between your DoD contracts and your CMMC scope.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Unique Methodology Section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-orange-500/20 text-orange-700 border-orange-500/30">
+                NexDyne Difference
+              </Badge>
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Contract-First CMMC Methodology</h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                Unlike traditional compliance approaches that focus solely on security controls, our proven methodology starts with your DoD contracts to ensure complete alignment between certification scope and contractual obligations.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="border-slate-200">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-slate-900">
+                    <div className="bg-red-100 text-red-700 p-2 rounded">
+                      <span className="text-2xl">⚠️</span>
+                    </div>
+                    Traditional Approach Risk
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    Many organizations pass their CMMC assessment but remain non-compliant because they didn't properly identify all CUI flows in their DoD contracts.
+                  </p>
+                  <ul className="space-y-2 text-slate-600">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>Assessment scope defined without contract analysis</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>CUI identification based on assumptions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>Systems handling CUI excluded from scope</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>Certification achieved but contracts remain at risk</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="border-green-200 bg-green-50/30">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-slate-900">
+                    <div className="bg-green-100 text-green-700 p-2 rounded">
+                      <CheckCircle2 className="h-6 w-6" />
+                    </div>
+                    NexDyne Contract-First Approach
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    We begin every engagement with comprehensive DoD contract analysis to identify all CUI requirements and ensure your certification scope protects your business.
+                  </p>
+                  <ul className="space-y-2 text-slate-600">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Analyze all DoD contracts and task orders for CUI clauses</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Map CUI flows across your entire organization</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Define assessment scope that covers all contractual obligations</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Certification that truly protects your DoD contracts</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="border-blue-200 bg-gradient-to-br from-blue-50 to-slate-50">
+              <CardContent className="pt-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Our 4-Phase Implementation Process</h3>
+                <div className="grid md:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">1</div>
+                    <h4 className="font-bold text-slate-900 mb-2">Contract Analysis</h4>
+                    <p className="text-sm text-slate-600">Review all DoD contracts, identify CUI requirements, and map information flows</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">2</div>
+                    <h4 className="font-bold text-slate-900 mb-2">Scope Definition</h4>
+                    <p className="text-sm text-slate-600">Define assessment boundary that covers all systems handling CUI</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
+                    <h4 className="font-bold text-slate-900 mb-2">Gap Remediation</h4>
+                    <p className="text-sm text-slate-600">Implement security controls and document compliance evidence</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">4</div>
+                    <h4 className="font-bold text-slate-900 mb-2">Assessment & Maintenance</h4>
+                    <p className="text-sm text-slate-600">C3PAO assessment coordination and ongoing annual attestation support</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Credentials & Authority Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Credentials & Expertise</h2>
+              <p className="text-xl text-slate-600">
+                Our team brings certified expertise and decades of cross-industry experience to your CMMC journey.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="border-slate-200">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-slate-900">
+                    <Award className="h-6 w-6 text-orange-500" />
+                    Cyber AB Registered Practitioner Organization
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    NexDyne Technologies is a Cyber AB Registered Practitioner Organization (RPO) with credentialed CMMC consultants authorized to provide advisory services to organizations pursuing CMMC certification.
+                  </p>
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                    <p className="text-sm text-slate-700">
+                      <strong>What this means for you:</strong> Our consultants have completed rigorous training and maintain current knowledge of CMMC requirements, assessment processes, and best practices as validated by the Cyber Accreditation Body.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-slate-200">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-slate-900">
+                    <Shield className="h-6 w-6 text-blue-600" />
+                    Cross-Industry Security Expertise
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    Our team has successfully supported CMMC certifications across diverse industries and organization sizes, from small defense subcontractors to large prime contractors.
+                  </p>
+                  <ul className="space-y-2 text-slate-600">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
+                      <span>15+ years federal cybersecurity experience</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
+                      <span>FedRAMP, FISMA, and NIST 800-171 expertise</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
+                      <span>50+ successful CMMC certifications</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
+                      <span>100% first-time assessment pass rate</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Competitive Edge Section */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-blue-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-orange-500 text-white">
+                Strategic Advantage
+              </Badge>
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Gain a Competitive Edge with Early CMMC Compliance</h2>
+              <p className="text-xl text-slate-600">
+                Organizations that achieve CMMC certification early gain significant competitive advantages in the DoD marketplace.
+              </p>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <Card className="border-slate-200">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-green-100 text-green-700 p-3 rounded-lg flex-shrink-0">
+                      <TrendingUp className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Bid on Contracts Your Competitors Cannot</h3>
+                      <p className="text-slate-600">
+                        As CMMC requirements are phased into DoD solicitations, certified organizations can compete for opportunities that non-certified competitors must pass on. Early certification expands your addressable market immediately.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-slate-200">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-100 text-blue-700 p-3 rounded-lg flex-shrink-0">
+                      <Award className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Prime Contractor Advantages</h3>
+                      <p className="text-slate-600 mb-3">
+                        Prime contractors with CMMC certification can pursue high-value programs without supply chain delays. You control your timeline rather than waiting for subcontractors to achieve compliance.
+                      </p>
+                      <p className="text-slate-600">
+                        <strong>Additional benefit:</strong> Certified primes can offer compliance guidance to subcontractors, strengthening partnerships and reducing supply chain risk.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-slate-200">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-purple-100 text-purple-700 p-3 rounded-lg flex-shrink-0">
+                      <Shield className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Subcontractor Positioning</h3>
+                      <p className="text-slate-600">
+                        Subcontractors with current CMMC certification become preferred partners for prime contractors. Many primes are building approved vendor lists of certified subcontractors to ensure they can respond quickly to opportunities requiring CUI handling.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-slate-200">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-orange-100 text-orange-700 p-3 rounded-lg flex-shrink-0">
+                      <Target className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Avoid Last-Minute Certification Pressure</h3>
+                      <p className="text-slate-600">
+                        The CMMC assessment ecosystem has limited capacity. As requirements are phased in, C3PAOs will face increasing demand. Organizations that wait until certification is required in their contracts may face 6-12 month delays simply to schedule an assessment. Early movers avoid this bottleneck.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="bg-slate-900 text-white p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">The Cost of Waiting</h3>
+              <p className="text-blue-100 mb-4">
+                Organizations that delay CMMC compliance face several risks:
+              </p>
+              <ul className="space-y-2 text-blue-100">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-400 mt-1">▸</span>
+                  <span><strong>Contract loss:</strong> Inability to bid on or continue performance of contracts requiring CMMC</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-400 mt-1">▸</span>
+                  <span><strong>Revenue impact:</strong> Existing DoD contracts may require CMMC through modifications</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-400 mt-1">▸</span>
+                  <span><strong>Assessment delays:</strong> Limited C3PAO capacity as demand increases</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-400 mt-1">▸</span>
+                  <span><strong>Competitive disadvantage:</strong> Certified competitors capture market share</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
