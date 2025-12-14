@@ -115,7 +115,8 @@ export default function Home() {
     {
       name: 'CMMC Consulting Services',
       description: 'Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis, controls implementation, and audit preparation.',
-      icon: Shield
+      icon: Shield,
+      image: '/cmmc-consulting.jpg'
     }
   ];
 
