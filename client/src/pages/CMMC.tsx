@@ -1,44 +1,68 @@
-import { Award, CheckCircle2, FileText, Shield, Users } from 'lucide-react';
+import { Award, CheckCircle2, FileText, Shield, Users, Search, Settings, Network, TestTube, Scale } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'wouter';
 
 const services = [
   {
-    title: "Gap Assessment & Readiness",
-    description: "Evaluate current cybersecurity posture against CMMC requirements, identifying gaps in security controls and prioritizing remediation activities.",
-    icon: FileText
+    title: "Contractual Requirements Analysis",
+    description: "Identify DoD contractual obligations for Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) handling. Analyze prime and subcontractor flow-down requirements to ensure proper scoping before assessment.",
+    icon: Search,
+    levels: "All Levels"
   },
   {
-    title: "Security Controls Implementation",
-    description: "Implement required CMMC practices across IT infrastructure, networks, and operational processes to address identified gaps.",
-    icon: Shield
+    title: "Contract Compliance Strategy Development",
+    description: "Develop comprehensive compliance strategies aligned with your contract portfolio, including certification timelines for prime contractors and subcontractors. Establish roadmaps for achieving required CMMC levels.",
+    icon: Scale,
+    levels: "All Levels"
   },
   {
-    title: "Documentation & Policies",
-    description: "Document security controls, policies, and procedures aligned with CMMC requirements and NIST SP 800-171.",
-    icon: FileText
+    title: "Readiness Assessment & Self-Assessment Support",
+    description: "Assess organizational readiness for CMMC Level 1, Level 2, or Level 3 certification. Support self-assessment processes including control testing, gap identification, and evidence collection against all applicable security practices.",
+    icon: FileText,
+    levels: "Level 1, 2, 3"
   },
   {
-    title: "Assessment Preparation",
-    description: "Prepare for CMMC Third Party Assessment Organization (C3PAO) assessment, including evidence collection and assessment coordination.",
-    icon: Users
+    title: "Gap Remediation & Security Program Development",
+    description: "Provide guidance on security control system design, security program development, and implementation of technical and administrative controls. Address identified gaps with prioritized remediation plans aligned with certification timelines.",
+    icon: Settings,
+    levels: "Level 2, 3"
   },
   {
-    title: "Ongoing Compliance Support",
-    description: "Support ongoing compliance maintenance and annual attestation requirements to maintain CMMC certification.",
-    icon: CheckCircle2
+    title: "Third-Party & Supply Chain Management",
+    description: "Assist prime contractors with subcontractor compliance management, including scoping support, flow-down requirement implementation, and auditing subcontractor CMMC compliance status throughout the supply chain.",
+    icon: Network,
+    levels: "All Levels"
+  },
+  {
+    title: "Technical Security Evaluations",
+    description: "Perform comprehensive technical assessments including vulnerability scanning, penetration testing, web application security testing, and network security evaluations to validate control effectiveness before C3PAO assessment.",
+    icon: TestTube,
+    levels: "Level 2, 3"
+  },
+  {
+    title: "C3PAO Assessment Preparation",
+    description: "Prepare for CMMC Third Party Assessment Organization (C3PAO) assessment with evidence collection, artifact review, control validation, and mock assessments. Coordinate with C3PAOs and manage assessment logistics.",
+    icon: Users,
+    levels: "Level 2, 3"
+  },
+  {
+    title: "Ongoing Compliance & Annual Attestation",
+    description: "Support continuous compliance monitoring, annual attestation preparation, and compliance maintenance activities. Provide ongoing advisory services to maintain certification status and address evolving threats.",
+    icon: CheckCircle2,
+    levels: "Level 2, 3"
   }
 ];
 
 const caseStudy = {
   title: "Mid-Sized Defense Contractor: CMMC Level 2 Certification",
-  challenge: "A defense contractor with $120M in annual DoD contracts needed CMMC Level 2 certification to maintain contract eligibility. Initial assessment identified significant gaps in security controls implementation and documentation.",
+  challenge: "A defense contractor with $120M in annual DoD contracts needed CMMC Level 2 certification to maintain contract eligibility. Initial contract analysis revealed CUI handling requirements across 15 active contracts with varying scoping needs. The organization faced significant gaps in security controls, inadequate documentation, and unclear subcontractor compliance requirements.",
   results: [
-    "CMMC Level 2 certification achieved in 6 months",
-    "Zero findings during C3PAO assessment",
-    "Maintained $120M contract portfolio eligibility",
-    "Positioned for growth in DoD market"
+    "CMMC Level 2 certification achieved in 7 months following contract-first methodology",
+    "Zero findings during C3PAO assessment with comprehensive evidence package",
+    "Subcontractor compliance program established for 8 key suppliers",
+    "Vulnerability assessment identified and remediated 47 security gaps pre-assessment",
+    "Maintained $120M contract portfolio eligibility and positioned for $45M in new opportunities"
   ]
 };
 
@@ -58,7 +82,7 @@ export default function CMMC() {
               CMMC Consulting Services
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis, controls implementation, and audit preparation.
+              Comprehensive CMMC consulting services for defense contractors pursuing Level 1, Level 2, and Level 3 certification. From contractual requirements analysis and technical security evaluations to supply chain management and C3PAO assessment preparation, we deliver end-to-end compliance support aligned with your DoD contract obligations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact/government">
@@ -154,10 +178,10 @@ export default function CMMC() {
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-slate-900 mb-4">Explore Our CMMC Compliance Methodology</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Contract-First CMMC Methodology</h2>
               <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Unlike typical technical approaches to CMMC assessments, our approach prioritizes scoping, identifying DoD FCI and CUI handling requirements. Failing to do so can lead to CMMC assessment success without actual contract compliance. It is possible to pass a CMMC assessment and achieve a NIST 800-171 score of 110, yet still be non-compliant with the contract if contractual CUI handling requirements were never initially validated. This can include performing upfront DoD contract analyses where available. This refined scope of work increases compliance success.
+                Our methodology begins with contractual requirements analysis—not technical assessments. We identify DoD Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) handling obligations before defining assessment scope. This contract-first approach prevents a critical failure mode: achieving CMMC certification while remaining non-compliant with actual contractual obligations. Organizations can pass C3PAO assessments and achieve perfect NIST 800-171 scores, yet still violate contract terms if CUI requirements were improperly scoped. Our upfront contract analysis ensures certification aligns with your actual compliance obligations.
               </p>
             </div>
 
@@ -274,9 +298,14 @@ export default function CMMC() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600 mb-4">
-                    Basic cyber hygiene practices to protect Federal Contract Information (FCI). Suitable for contractors handling only FCI without CUI.
+                    Basic cyber hygiene practices to protect Federal Contract Information (FCI). Suitable for contractors handling only FCI without CUI. Implements foundational security controls including access control, identification and authentication, media protection, physical protection, system and communications protection, and system and information integrity.
                   </p>
-                  <p className="text-sm text-slate-500">Assessment Method: Annual self-assessment</p>
+                  <div className="space-y-2">
+                    <p className="text-sm font-semibold text-slate-700">Assessment Method:</p>
+                    <p className="text-sm text-slate-600">Annual self-assessment with affirmation statement</p>
+                    <p className="text-sm font-semibold text-slate-700 mt-3">Typical Timeline:</p>
+                    <p className="text-sm text-slate-600">2-4 months for implementation and self-assessment</p>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -286,9 +315,16 @@ export default function CMMC() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600 mb-4">
-                    Implements NIST SP 800-171 security requirements to protect Controlled Unclassified Information (CUI). Required for most DoD contractors handling CUI.
+                    Implements all NIST SP 800-171 security requirements to protect Controlled Unclassified Information (CUI). Required for most DoD contractors and subcontractors handling CUI. Encompasses 17 security domains including access control, incident response, risk assessment, security assessment, system and communications protection, and system and information integrity.
                   </p>
-                  <p className="text-sm text-slate-500">Assessment Method: Third-party assessment by C3PAO (triennial) + annual self-attestation</p>
+                  <div className="space-y-2">
+                    <p className="text-sm font-semibold text-slate-700">Assessment Method:</p>
+                    <p className="text-sm text-slate-600">Third-party assessment by certified C3PAO (triennial cycle) with annual self-attestation between assessments</p>
+                    <p className="text-sm font-semibold text-slate-700 mt-3">Typical Timeline:</p>
+                    <p className="text-sm text-slate-600">6-12 months for gap remediation, implementation, and C3PAO assessment</p>
+                    <p className="text-sm font-semibold text-slate-700 mt-3">Contract Requirements:</p>
+                    <p className="text-sm text-slate-600">DFARS clause 252.204-7021 requires Level 2 for contracts involving CUI</p>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -298,9 +334,16 @@ export default function CMMC() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600 mb-4">
-                    Advanced and progressive cybersecurity practices to protect CUI against Advanced Persistent Threats (APTs). Required for high-priority programs and critical national security information.
+                    Advanced and progressive cybersecurity practices to protect CUI against Advanced Persistent Threats (APTs). Builds upon Level 2 with 20 additional practices focused on threat hunting, advanced monitoring, and proactive defense. Required for high-priority programs, critical national security information, and contracts explicitly requiring Level 3 certification.
                   </p>
-                  <p className="text-sm text-slate-500">Assessment Method: Government-led assessment</p>
+                  <div className="space-y-2">
+                    <p className="text-sm font-semibold text-slate-700">Assessment Method:</p>
+                    <p className="text-sm text-slate-600">Government-led assessment by Defense Industrial Base Cybersecurity Assessment Center (DIBCAC) or authorized government assessors</p>
+                    <p className="text-sm font-semibold text-slate-700 mt-3">Typical Timeline:</p>
+                    <p className="text-sm text-slate-600">12-18 months for comprehensive implementation and government assessment</p>
+                    <p className="text-sm font-semibold text-slate-700 mt-3">Contract Requirements:</p>
+                    <p className="text-sm text-slate-600">Specified in individual contracts for critical programs and APT-targeted environments</p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -312,24 +355,29 @@ export default function CMMC() {
       <section className="py-20 bg-slate-50">
         <div className="container">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">CMMC Consulting Services</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Comprehensive CMMC Services</h2>
             <p className="text-xl text-slate-600 mb-12">
-              Comprehensive support throughout your CMMC certification journey
+              End-to-end support from contract analysis through certification and ongoing compliance. Our services address the full spectrum of CMMC requirements across all certification levels, including technical evaluations, supply chain management, and strategic compliance planning.
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 return (
                   <Card key={index} className="border-slate-200 hover:border-blue-300 transition-colors">
                     <CardHeader>
-                      <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3">
-                        <Icon className="h-6 w-6 text-blue-600" />
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                          <Icon className="h-6 w-6 text-blue-600" />
+                        </div>
+                        <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                          {service.levels}
+                        </span>
                       </div>
                       <CardTitle className="text-lg text-slate-900">{service.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-slate-600 text-sm">{service.description}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{service.description}</p>
                     </CardContent>
                   </Card>
                 );
