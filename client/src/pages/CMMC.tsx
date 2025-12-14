@@ -1,159 +1,94 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { Link } from "wouter";
-import { CheckCircle2, Shield, Target, Award, FileCheck, TrendingUp, ArrowRight } from "lucide-react";
+import { Award, CheckCircle2, FileText, Shield, Users } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'wouter';
+
+const services = [
+  {
+    title: "Gap Assessment & Readiness",
+    description: "Evaluate current cybersecurity posture against CMMC requirements, identifying gaps in security controls and prioritizing remediation activities.",
+    icon: FileText
+  },
+  {
+    title: "Security Controls Implementation",
+    description: "Implement required CMMC practices across IT infrastructure, networks, and operational processes to address identified gaps.",
+    icon: Shield
+  },
+  {
+    title: "Documentation & Policies",
+    description: "Document security controls, policies, and procedures aligned with CMMC requirements and NIST SP 800-171.",
+    icon: FileText
+  },
+  {
+    title: "Assessment Preparation",
+    description: "Prepare for CMMC Third Party Assessment Organization (C3PAO) assessment, including evidence collection and assessment coordination.",
+    icon: Users
+  },
+  {
+    title: "Ongoing Compliance Support",
+    description: "Support ongoing compliance maintenance and annual attestation requirements to maintain CMMC certification.",
+    icon: CheckCircle2
+  }
+];
+
+const caseStudy = {
+  title: "Mid-Sized Defense Contractor: CMMC Level 2 Certification",
+  challenge: "A defense contractor with $120M in annual DoD contracts needed CMMC Level 2 certification to maintain contract eligibility. Initial assessment identified significant gaps in security controls implementation and documentation.",
+  results: [
+    "CMMC Level 2 certification achieved in 6 months",
+    "Zero findings during C3PAO assessment",
+    "Maintained $120M contract portfolio eligibility",
+    "Positioned for growth in DoD market"
+  ]
+};
 
 export default function CMMC() {
-  const levels = [
-    {
-      level: "Level 1",
-      title: "Foundational",
-      description: "Basic cyber hygiene practices to protect Federal Contract Information (FCI)",
-      controls: "17 practices",
-      suitable: "Contractors handling FCI only"
-    },
-    {
-      level: "Level 2",
-      title: "Advanced",
-      description: "Intermediate cyber hygiene practices to protect Controlled Unclassified Information (CUI)",
-      controls: "110 practices",
-      suitable: "Most DoD contractors handling CUI"
-    },
-    {
-      level: "Level 3",
-      title: "Expert",
-      description: "Advanced/progressive cybersecurity practices for protecting CUI from Advanced Persistent Threats (APTs)",
-      controls: "130 practices",
-      suitable: "Critical national security programs"
-    }
-  ];
-
-  const services = [
-    {
-      icon: Target,
-      title: "Contract Analysis & Scope Definition",
-      description: "Review DoD contracts and task orders to identify Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) handling requirements, establishing the appropriate assessment scope.",
-      deliverables: ["Contract review documentation", "CUI identification analysis", "Assessment scope definition", "Flow-down requirements mapping"]
-    },
-    {
-      icon: Target,
-      title: "Gap Assessment",
-      description: "Evaluate current cybersecurity posture against CMMC requirements, identifying gaps in security controls and prioritizing remediation activities.",
-      deliverables: ["Gap analysis report", "Prioritized remediation roadmap", "Implementation timeline", "Resource requirements"]
-    },
-    {
-      icon: Shield,
-      title: "Security Controls Implementation",
-      description: "Implement required CMMC practices across IT infrastructure, networks, and operational processes to address identified gaps.",
-      deliverables: ["Implemented security controls", "Configuration documentation", "Policy and procedure templates", "Training materials"]
-    },
-    {
-      icon: FileCheck,
-      title: "System Security Plan (SSP) Development",
-      description: "Document security controls, policies, and procedures aligned with CMMC requirements and NIST SP 800-171.",
-      deliverables: ["System Security Plan", "Control implementation descriptions", "Network diagrams", "Data flow documentation"]
-    },
-    {
-      icon: Award,
-      title: "C3PAO Assessment Preparation",
-      description: "Prepare for CMMC Third Party Assessment Organization (C3PAO) assessment, including evidence collection and assessment coordination.",
-      deliverables: ["Evidence packages", "Assessment readiness review", "Finding remediation support", "Assessment coordination"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Annual Attestation Support",
-      description: "Support ongoing compliance maintenance and annual attestation requirements to maintain CMMC certification.",
-      deliverables: ["Compliance monitoring", "Annual attestation preparation", "Change management support", "Evidence management"]
-    }
-  ];
-
-  const domains = [
-    { name: "Access Control", practices: "AC.1.001 - AC.2.016" },
-    { name: "Awareness and Training", practices: "AT.2.056 - AT.2.057" },
-    { name: "Audit and Accountability", practices: "AU.2.041 - AU.2.046" },
-    { name: "Configuration Management", practices: "CM.2.061 - CM.2.065" },
-    { name: "Identification and Authentication", practices: "IA.1.076 - IA.2.081" },
-    { name: "Incident Response", practices: "IR.2.092 - IR.2.096" },
-    { name: "Maintenance", practices: "MA.2.111 - MA.2.113" },
-    { name: "Media Protection", practices: "MP.2.118 - MP.2.121" },
-    { name: "Personnel Security", practices: "PS.2.127 - PS.2.128" },
-    { name: "Physical Protection", practices: "PE.2.134 - PE.2.137" },
-    { name: "Recovery", practices: "RE.2.137 - RE.2.139" },
-    { name: "Risk Management", practices: "RM.2.141 - RM.2.143" },
-    { name: "Security Assessment", practices: "CA.2.157 - CA.2.159" },
-    { name: "Situational Awareness", practices: "SA.2.163 - SA.2.165" },
-    { name: "System and Communications Protection", practices: "SC.1.175 - SC.2.179" },
-    { name: "System and Information Integrity", practices: "SI.1.210 - SI.2.216" }
-  ];
-
-  const caseStudy = {
-    title: "Mid-Sized Defense Contractor: CMMC Level 2 Certification",
-    challenge: "A defense contractor with $120M in annual DoD contracts needed CMMC Level 2 certification to maintain contract eligibility. Initial assessment identified significant gaps in security controls implementation and documentation.",
-    solution: "NexDyne conducted contract analysis to define assessment scope, performed gap assessment across all 110 required practices, implemented remediation plan, developed System Security Plan documentation, and coordinated C3PAO assessment.",
-    results: [
-      "CMMC Level 2 certification achieved in 6 months",
-      "110 security practices implemented across 17 domains",
-      "C3PAO assessment completed with zero findings",
-      "Contract eligibility maintained for $120M annual revenue",
-      "Continuous monitoring program established"
-    ]
-  };
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40"></div>
-        
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-32">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6bTAtMzZjMC02LjYyNyA1LjM3My0xMiAxMi0xMnMxMiA1LjM3MyAxMiAxMi01LjM3MyAxMi0xMiAxMi0xMi01LjM3My0xMi0xMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
         <div className="container relative z-10">
-          <div className="max-w-4xl">
-            <Badge className="mb-4 bg-orange-500/20 text-orange-300 border-orange-500/30">
-              Cybersecurity Maturity Model Certification
-            </Badge>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-400/30 rounded-full px-4 py-2 mb-6">
+              <Shield className="h-4 w-4" />
+              <span className="text-sm font-medium">Defense Industrial Base Cybersecurity</span>
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               CMMC Consulting Services
             </h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Supporting federal contractors and subcontractors through the Cybersecurity Maturity Model Certification process to meet DoD requirements and maintain contract eligibility.
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis, controls implementation, and audit preparation.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact/government">
                 <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-                  Schedule Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Schedule Assessment
                 </Button>
               </Link>
               <Link href="/resources">
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                  Download Implementation Guide
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  Download CMMC Resources
                 </Button>
               </Link>
             </div>
           </div>
         </div>
-        
-        {/* Decorative diagonal cut */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-white" style={{ clipPath: 'polygon(0 40%, 100% 0%, 100% 100%, 0 100%)' }}></div>
       </section>
 
       {/* What is CMMC Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Understanding CMMC</h2>
-            <div className="prose prose-lg max-w-none text-slate-600 space-y-4">
-              <p>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-700 leading-relaxed mb-4">
                 The Cybersecurity Maturity Model Certification (CMMC) is a unified standard for implementing cybersecurity across the Defense Industrial Base (DIB). The Department of Defense developed CMMC to protect Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) within the defense supply chain.
               </p>
-              <p>
+              <p className="text-slate-700 leading-relaxed mb-4">
                 CMMC certification is required for Department of Defense contractors and subcontractors. The framework incorporates cybersecurity standards and best practices, including NIST SP 800-171, mapped to processes and practices across maturity levels.
               </p>
-              <p>
+              <p className="text-slate-700 leading-relaxed">
                 Unlike self-attestation approaches, CMMC requires third-party assessment by certified CMMC Third Party Assessment Organizations (C3PAOs), providing objective verification of cybersecurity practices.
               </p>
             </div>
@@ -161,70 +96,52 @@ export default function CMMC() {
         </div>
       </section>
 
-      {/* Regulatory Context Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-slate-50">
+      {/* Regulatory Updates */}
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-slate-900 mb-8">Regulatory Framework</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-8 text-center">CMMC Regulatory Status</h2>
             
             <div className="space-y-6">
-              <Card className="border-slate-200">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-blue-600 text-white p-3 rounded-lg">
-                      <Shield className="h-6 w-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">32 CFR Part 170</h3>
-                      <p className="text-slate-700 mb-3">
-                        The Department of Defense published the final CMMC rule in the Federal Register, effective December 16, 2024. This regulation establishes CMMC as a requirement for DoD contractors handling Federal Contract Information (FCI) and Controlled Unclassified Information (CUI).
-                      </p>
-                      <p className="text-slate-700">
-                        Under 32 CFR Part 170, organizations must achieve the CMMC level corresponding to the type of information they handle. CMMC requirements will be phased into DoD contracts over 12-24 months, with high-priority programs requiring certification first.
-                      </p>
-                    </div>
-                  </div>
+              <Card className="border-blue-200 bg-blue-50/30">
+                <CardHeader>
+                  <CardTitle className="text-slate-900">Final Rule Published (December 2024)</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-700 leading-relaxed">
+                    The Department of Defense published the final CMMC rule in the Federal Register, effective December 16, 2024. This regulation establishes CMMC as a requirement for DoD contractors handling Federal Contract Information (FCI) and Controlled Unclassified Information (CUI).
+                  </p>
+                  <p className="text-slate-700 leading-relaxed mt-4">
+                    Under 32 CFR Part 170, organizations must achieve the CMMC level corresponding to the type of information they handle. CMMC requirements will be phased into DoD contracts over 12-24 months, with high-priority programs requiring certification first.
+                  </p>
                 </CardContent>
               </Card>
 
               <Card className="border-slate-200">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-slate-600 text-white p-3 rounded-lg">
-                      <FileCheck className="h-6 w-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">DFARS 252.204-7021</h3>
-                      <p className="text-slate-700 mb-3">
-                        The Defense Federal Acquisition Regulation Supplement (DFARS) clause 252.204-7021 requires contractors to maintain a current CMMC certificate at the level specified in the contract. This clause is being incorporated into new DoD solicitations and contract modifications.
-                      </p>
-                      <p className="text-slate-700">
-                        Contractors must maintain CMMC certification throughout the contract performance period and provide certification evidence to the Contracting Officer upon request.
-                      </p>
-                    </div>
-                  </div>
+                <CardHeader>
+                  <CardTitle className="text-slate-900">DFARS Clause 252.204-7021</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-700 leading-relaxed">
+                    The Defense Federal Acquisition Regulation Supplement (DFARS) clause 252.204-7021 requires contractors to maintain a current CMMC certificate at the level specified in the contract. This clause is being incorporated into new DoD solicitations and contract modifications.
+                  </p>
+                  <p className="text-slate-700 leading-relaxed mt-4">
+                    Contractors must maintain CMMC certification throughout the contract performance period and provide certification evidence to the Contracting Officer upon request.
+                  </p>
                 </CardContent>
               </Card>
 
               <Card className="border-slate-200">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-orange-600 text-white p-3 rounded-lg">
-                      <Target className="h-6 w-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">SPRS Self-Assessment & Annual Attestation</h3>
-                      <p className="text-slate-700 mb-3">
-                        Organizations handling CUI conduct annual self-assessments using the Supplier Performance Risk System (SPRS). These assessments evaluate implementation of NIST SP 800-171 security requirements.
-                      </p>
-                      <p className="text-slate-700 mb-3">
-                        After achieving CMMC Level 2 certification, organizations must submit annual attestations confirming continued compliance with all 110 security practices. Failure to maintain compliance can result in certificate suspension or revocation.
-                      </p>
-                      <p className="text-sm text-slate-600 bg-white p-4 rounded border border-slate-200">
-                        <strong>Note:</strong> Organizations can pass a CMMC assessment but remain non-compliant if contractual CUI requirements were not properly validated during scoping. Contract analysis before assessment scope definition helps ensure alignment between certification and contractual obligations.
-                      </p>
-                    </div>
-                  </div>
+                <CardHeader>
+                  <CardTitle className="text-slate-900">Annual Attestation Requirement</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-700 leading-relaxed">
+                    After achieving CMMC Level 2 certification, organizations must submit annual attestations confirming continued compliance with all 110 security practices. Failure to maintain compliance can result in certificate suspension or revocation.
+                  </p>
+                  <p className="text-slate-700 leading-relaxed mt-4">
+                    <strong>Note:</strong> Organizations can pass a CMMC assessment but remain non-compliant if contractual CUI requirements were not properly validated during scoping. Contract analysis before assessment scope definition helps ensure alignment between certification and contractual obligations.
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -237,109 +154,50 @@ export default function CMMC() {
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-slate-900 mb-4">CMMC Compliance Methodology</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Explore Our CMMC Compliance Methodology</h2>
+              <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Our approach prioritizes contract analysis and scope definition to ensure CMMC certification aligns with DoD contractual requirements.
+                Unlike typical technical approaches to CMMC assessments, our approach prioritizes scoping, identifying DoD FCI and CUI handling requirements. Failing to do so can lead to CMMC assessment success without actual contract compliance. It is possible to pass a CMMC assessment and achieve a NIST 800-171 score of 110, yet still be non-compliant with the contract if contractual CUI handling requirements were never initially validated. This can include performing upfront DoD contract analyses where available. This refined scope of work increases compliance success.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="border-slate-200">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-slate-900">
-                    <div className="bg-red-100 text-red-700 p-2 rounded">
-                      <span className="text-2xl">⚠️</span>
-                    </div>
-                    Common Compliance Gap
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 mb-4">
-                    Organizations can pass CMMC assessments but remain non-compliant when assessment scope does not cover all CUI flows identified in DoD contracts.
-                  </p>
-                  <ul className="space-y-2 text-slate-600">
-                    <li className="flex items-start gap-2">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>Assessment scope defined without contract review</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>CUI identification based on assumptions</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>Systems handling CUI excluded from assessment</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>Certification achieved without full contract compliance</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-green-200 bg-green-50/30">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-slate-900">
-                    <div className="bg-green-100 text-green-700 p-2 rounded">
-                      <CheckCircle2 className="h-6 w-6" />
-                    </div>
-                    Contract-First Approach
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 mb-4">
-                    We begin engagements with DoD contract analysis to identify CUI requirements and establish assessment scope that addresses contractual obligations.
-                  </p>
-                  <ul className="space-y-2 text-slate-600">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Review DoD contracts and task orders for CUI clauses</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Map CUI flows across organizational systems</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Define assessment scope covering contractual obligations</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Align certification scope with contract requirements</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+            <div className="mb-12">
+              <p className="text-lg text-slate-600 mb-8">
+                This approach allows us to tailor services to provide:
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                    <span className="text-slate-700">NIST 800-171 assessment services</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                    <span className="text-slate-700">CMMC Level 1 self-assessment support</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                    <span className="text-slate-700">CMMC Level 2 readiness</span>
+                  </li>
+                </ul>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                    <span className="text-slate-700">Self-assessment support</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                    <span className="text-slate-700">Accurate CMMC documentation</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <Card className="border-blue-200 bg-gradient-to-br from-blue-50 to-slate-50">
-              <CardContent className="pt-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Implementation Process</h3>
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">1</div>
-                    <h4 className="font-bold text-slate-900 mb-2">Contract Analysis</h4>
-                    <p className="text-sm text-slate-600">Review DoD contracts, identify CUI requirements, map information flows</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">2</div>
-                    <h4 className="font-bold text-slate-900 mb-2">Gap Assessment</h4>
-                    <p className="text-sm text-slate-600">Evaluate current security posture, identify gaps, prioritize remediation</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
-                    <h4 className="font-bold text-slate-900 mb-2">Implementation</h4>
-                    <p className="text-sm text-slate-600">Implement security controls, develop documentation, prepare evidence</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">4</div>
-                    <h4 className="font-bold text-slate-900 mb-2">Assessment</h4>
-                    <p className="text-sm text-slate-600">Coordinate C3PAO assessment, address findings, obtain certification</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="bg-slate-50 border border-slate-200 rounded-lg p-8">
+              <p className="text-slate-700 leading-relaxed">
+                Upon successful awarding of a CMMC certification, we also provide ongoing support for the required annual attestation and subsequent contracting arrangements.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -359,10 +217,10 @@ export default function CMMC() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600 mb-4">
+                  <p className="text-slate-600 leading-relaxed">
                     NexDyne Technologies is a Cyber AB Registered Practitioner Organization (RPO) with credentialed CMMC consultants authorized to provide advisory services to organizations pursuing CMMC certification.
                   </p>
-                  <p className="text-slate-600">
+                  <p className="text-slate-600 leading-relaxed mt-4">
                     Our consultants have completed training and maintain current knowledge of CMMC requirements, assessment processes, and implementation practices as validated by the Cyber Accreditation Body.
                   </p>
                 </CardContent>
@@ -371,26 +229,26 @@ export default function CMMC() {
               <Card className="border-slate-200">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-slate-900">
-                    <Shield className="h-6 w-6 text-blue-600" />
-                    Federal Cybersecurity Experience
+                    <CheckCircle2 className="h-6 w-6 text-blue-600" />
+                    Proven Track Record
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600 mb-4">
+                  <p className="text-slate-600 leading-relaxed">
                     Our team has supported CMMC certifications across defense contractors, from small subcontractors to large prime contractors.
                   </p>
-                  <ul className="space-y-2 text-slate-600">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
-                      <span>15+ years federal cybersecurity experience</span>
+                  <ul className="mt-4 space-y-2">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-600">15+ CMMC Level 2 certifications supported</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
-                      <span>NIST 800-171 and FedRAMP expertise</span>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-600">100% assessment success rate</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
-                      <span>Defense Industrial Base sector knowledge</span>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-600">Average 6-8 month implementation timeline</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -403,35 +261,49 @@ export default function CMMC() {
       {/* CMMC Levels Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">CMMC Maturity Levels</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 mb-12">
               CMMC consists of three levels, each building upon the previous to provide progressively advanced cybersecurity protection.
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {levels.map((level, index) => (
-              <Card key={index} className="border-slate-200 hover:shadow-lg transition-shadow">
+            <div className="space-y-6">
+              <Card className="border-slate-200">
                 <CardHeader>
-                  <Badge className="w-fit mb-2 bg-blue-100 text-blue-700 hover:bg-blue-100">
-                    {level.level}
-                  </Badge>
-                  <CardTitle className="text-2xl text-slate-900">{level.title}</CardTitle>
+                  <CardTitle className="text-slate-900">Level 1: Foundational (17 practices)</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-slate-600">{level.description}</p>
-                  <div className="pt-4 border-t border-slate-200">
-                    <div className="text-sm font-semibold text-slate-700 mb-1">Security Practices</div>
-                    <div className="text-2xl font-bold text-blue-600">{level.controls}</div>
-                  </div>
-                  <div className="pt-2">
-                    <div className="text-sm font-semibold text-slate-700 mb-1">Applicable To</div>
-                    <div className="text-sm text-slate-600">{level.suitable}</div>
-                  </div>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    Basic cyber hygiene practices to protect Federal Contract Information (FCI). Suitable for contractors handling only FCI without CUI.
+                  </p>
+                  <p className="text-sm text-slate-500">Assessment Method: Annual self-assessment</p>
                 </CardContent>
               </Card>
-            ))}
+
+              <Card className="border-blue-200 bg-blue-50/20">
+                <CardHeader>
+                  <CardTitle className="text-slate-900">Level 2: Advanced (110 practices)</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    Implements NIST SP 800-171 security requirements to protect Controlled Unclassified Information (CUI). Required for most DoD contractors handling CUI.
+                  </p>
+                  <p className="text-sm text-slate-500">Assessment Method: Third-party assessment by C3PAO (triennial) + annual self-attestation</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-slate-200">
+                <CardHeader>
+                  <CardTitle className="text-slate-900">Level 3: Expert (130 practices)</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-4">
+                    Advanced and progressive cybersecurity practices to protect CUI against Advanced Persistent Threats (APTs). Required for high-priority programs and critical national security information.
+                  </p>
+                  <p className="text-sm text-slate-500">Assessment Method: Government-led assessment</p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -439,64 +311,69 @@ export default function CMMC() {
       {/* Services Section */}
       <section className="py-20 bg-slate-50">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">CMMC Consulting Services</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Comprehensive support from contract analysis through certification and ongoing compliance maintenance.
+            <p className="text-xl text-slate-600 mb-12">
+              Comprehensive support throughout your CMMC certification journey
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="border-slate-200 hover:border-blue-300 transition-colors">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <CardTitle className="text-xl text-slate-900">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 mb-4">{service.description}</p>
-                  <div className="space-y-2">
-                    <div className="text-sm font-semibold text-slate-700">Deliverables:</div>
-                    {service.deliverables.map((deliverable, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-slate-600">{deliverable}</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <Card key={index} className="border-slate-200 hover:border-blue-300 transition-colors">
+                    <CardHeader>
+                      <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3">
+                        <Icon className="h-6 w-6 text-blue-600" />
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                      <CardTitle className="text-lg text-slate-900">{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-slate-600 text-sm">{service.description}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Domains Section */}
+      {/* Security Domains Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">CMMC Level 2 Security Domains</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 mb-12">
               CMMC Level 2 encompasses 110 practices across 17 security domains aligned with NIST SP 800-171.
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {domains.map((domain, index) => (
-              <Card key={index} className="border-slate-200">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-3">
-                    <Shield className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-slate-900 mb-1">{domain.name}</div>
-                      <div className="text-sm text-slate-500">{domain.practices}</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                'Access Control (AC)',
+                'Awareness and Training (AT)',
+                'Audit and Accountability (AU)',
+                'Configuration Management (CM)',
+                'Identification and Authentication (IA)',
+                'Incident Response (IR)',
+                'Maintenance (MA)',
+                'Media Protection (MP)',
+                'Personnel Security (PS)',
+                'Physical Protection (PE)',
+                'Risk Assessment (RA)',
+                'Security Assessment (CA)',
+                'System and Communications Protection (SC)',
+                'System and Information Integrity (SI)',
+                'Planning (PL)',
+                'Program Management (PM)',
+                'Recovery (RE)'
+              ].map((domain, index) => (
+                <div key={index} className="flex items-start gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-slate-700 text-sm font-medium">{domain}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -504,57 +381,53 @@ export default function CMMC() {
       {/* Case Study Section */}
       <section className="py-20 bg-slate-50">
         <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-100">
-              Implementation Example
-            </Badge>
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">{caseStudy.title}</h2>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-slate-900 mb-8 text-center">Client Success Story</h2>
             
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Situation</h3>
-                <p className="text-slate-600">{caseStudy.challenge}</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Approach</h3>
-                <p className="text-slate-600">{caseStudy.solution}</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg p-8 border border-slate-200">
-              <h3 className="text-lg font-semibold text-slate-900 mb-4">Outcome</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                {caseStudy.results.map((result, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700">{result}</span>
+            <Card className="border-slate-200">
+              <CardHeader>
+                <CardTitle className="text-2xl text-slate-900">{caseStudy.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-bold text-slate-900 mb-2">Challenge</h3>
+                    <p className="text-slate-600">{caseStudy.challenge}</p>
                   </div>
-                ))}
-              </div>
-            </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 mb-3">Results</h3>
+                    <ul className="space-y-2">
+                      {caseStudy.results.map((result, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                          <span className="text-slate-600">{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 to-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40"></div>
-        
-        <div className="container relative z-10">
+      <section className="py-20 bg-gradient-to-br from-blue-900 to-slate-900 text-white">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Begin Your CMMC Certification?</h2>
             <p className="text-xl text-blue-100 mb-8">
               Contact us to discuss your CMMC requirements and timeline. Our team can assess your current security posture and develop an implementation roadmap aligned with your DoD contracts.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/contact">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact/government">
                 <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
                   Schedule Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/resources">
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                   Download CMMC Resources
                 </Button>
               </Link>
@@ -562,8 +435,6 @@ export default function CMMC() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
