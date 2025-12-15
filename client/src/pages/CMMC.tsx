@@ -2,6 +2,8 @@ import { Award, FileText, Shield, Users, Search, Settings, Network, TestTube, Sc
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'wouter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const services = [
   {
@@ -69,6 +71,7 @@ const caseStudy = {
 export default function CMMC() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-32 overflow-hidden">
         <div className="absolute inset-0">
@@ -525,6 +528,8 @@ export default function CMMC() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

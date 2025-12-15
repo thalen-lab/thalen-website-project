@@ -3301,3 +3301,6 @@
 
 ## Phase 66: CMMC Page Margin Adjustments
 - [x] Widen left and right margins on CMMC page for better content spacing
+
+## Phase 102: CMMC Consulting Services Page
+- [x] Add navbar and footer to CMMC Consulting Services page
