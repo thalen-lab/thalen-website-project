@@ -62,7 +62,7 @@ export default function About() {
       icon: Users,
       title: 'Mastery',
       letter: 'M',
-      description: 'Deep expertise across the full automation stack. Our team maintains implementation expertise in FedRAMP, StateRAMP, and CMMC frameworks, along with cloud platform certifications (AWS, Azure), backed by 15+ years of specialized experience in federal, state, and local government transformation.'
+      description: 'Deep expertise across the full automation stack. Our team maintains implementation expertise in FedRAMP (federal agencies), StateRAMP/GovRAMP (state, local, tribal), and CMMC frameworks, along with cloud platform certifications (AWS, Azure), backed by 15+ years of specialized experience in government transformation.'
     }
   ];
 
@@ -410,7 +410,7 @@ export default function About() {
                   </div>
                   <h3 className="text-lg font-bold mb-3">FedRAMP Expert</h3>
                   <p className="text-sm text-muted-foreground">
-                    Deep expertise implementing FedRAMP-authorized platforms at Moderate and High impact levels with proven ATO support.
+                    Deep expertise implementing FedRAMP-authorized platforms for federal agencies at Moderate and High impact levels with proven ATO support.
                   </p>
                 </CardContent>
               </Card>
@@ -430,9 +430,9 @@ export default function About() {
                   <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3">
                     STATE & LOCAL
                   </div>
-                  <h3 className="text-lg font-bold mb-3">StateRAMP Authorized</h3>
+                  <h3 className="text-lg font-bold mb-3">StateRAMP/GovRAMP Authorized</h3>
                   <p className="text-sm text-muted-foreground">
-                    Certified expertise implementing StateRAMP-authorized platforms for state agencies and municipal governments with full compliance support.
+                    Certified expertise implementing StateRAMP/GovRAMP-authorized platforms for state, local, and tribal governments with full authorization support.
                   </p>
                 </CardContent>
               </Card>

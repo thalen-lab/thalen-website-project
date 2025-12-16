@@ -18,7 +18,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "federal-automation",
     title: "Federal Agency Achieves 85% Process Automation",
-    description: "Implemented UiPath Gov RPA platform with comprehensive ATO documentation, reducing claims processing time from 6 weeks to 2 days while maintaining Top Secret/SCI compliance.",
+    description: "Implemented UiPath Gov RPA platform for federal agency with comprehensive ATO documentation, reducing claims processing time from 6 weeks to 2 days while maintaining Top Secret/SCI compliance.",
     image: "/rocket-federal.webp",
     link: "/case-studies/federal-automation",
     category: "Federal Government"
@@ -26,7 +26,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "dod-manufacturing",
     title: "DoD Manufacturing Facility Achieves 99.2% Uptime",
-    description: "Deployed FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics for defense manufacturing operations, eliminating 75% of unplanned downtime across 50+ production lines.",
+    description: "Deployed FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics for DoD defense manufacturing operations, eliminating 75% of unplanned downtime across 50+ production lines.",
     image: "/manufacturing-security.jpg",
     link: "/case-studies/dod-manufacturing",
     category: "Department of Defense"
@@ -34,7 +34,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "va-healthcare",
     title: "VA Medical Center Integrates 12 Legacy Systems",
-    description: "Unified patient data across 12 disparate VA healthcare systems with FedRAMP-authorized integration platforms, reducing administrative burden by 60% and improving care coordination for 500K+ veterans.",
+    description: "Unified patient data across 12 disparate VA healthcare systems with FedRAMP-authorized integration platforms for federal healthcare operations, reducing administrative burden by 60% and improving care coordination for 500K+ veterans.",
     image: "/healthcare-legacy-it.jpg",
     link: "/case-studies/va-healthcare",
     category: "Veterans Affairs"
@@ -50,7 +50,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "defense-cloud",
     title: "Defense Agency Migrates to IL5 Cloud",
-    description: "Zero-downtime migration of mission-critical intelligence systems to FedRAMP High cloud infrastructure, achieving Impact Level 5 compliance while reducing infrastructure costs by 40%.",
+    description: "Zero-downtime migration of mission-critical intelligence systems to FedRAMP High cloud infrastructure for federal defense agency, achieving Impact Level 5 compliance while reducing infrastructure costs by 40%.",
     image: "/defense-cyber-ops.b7c4e1f3.jpg",
     link: "/case-studies/defense-cloud",
     category: "Intelligence Community"
@@ -58,7 +58,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "state-energy",
     title: "State Energy Commission Reduces Outages 65%",
-    description: "Deployed StateRAMP-authorized IoT platform monitoring 500+ substations with 15,000+ sensors and predictive maintenance analytics, reducing grid outages by 65% for 8.5 million residents.",
+    description: "Deployed StateRAMP-authorized IoT platform for state energy commission monitoring 500+ substations with 15,000+ sensors and predictive maintenance analytics, reducing grid outages by 65% for 8.5 million residents.",
     image: "/energy-grid-control.c9d5f2a4.jpg",
     link: "/case-studies/state-energy-commission",
     category: "State Government"
@@ -96,7 +96,7 @@ export default function CaseStudyShowcase() {
           </div>
           <div className="flex flex-col justify-end">
             <p className="text-lg text-slate-600">
-              Real-world case studies demonstrating measurable mission impact across federal, state, and local government agencies.
+              Real-world case studies demonstrating measurable mission impact. FedRAMP serves federal agencies; StateRAMP/GovRAMP serves state, local, and tribal governments.
             </p>
           </div>
         </motion.div>

@@ -120,7 +120,7 @@ export default function FedRAMP() {
               FedRAMP Authorization Services
             </h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Accelerate your path to FedRAMP authorization with our proven methodology, expert guidance, and comprehensive support. We help cloud service providers achieve and maintain FedRAMP compliance, opening doors to billions in federal opportunities.
+              Accelerate your path to FedRAMP authorization with our proven methodology, expert guidance, and comprehensive support. We help cloud service providers achieve and maintain FedRAMP compliance for federal agencies, opening doors to billions in federal opportunities.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -176,7 +176,7 @@ export default function FedRAMP() {
                 The Federal Risk and Authorization Management Program (FedRAMP) is a government-wide program that provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products and services used by federal agencies.
               </p>
               <p>
-                FedRAMP authorization is required for cloud service providers who want to do business with federal agencies. The program establishes rigorous security requirements based on NIST standards and provides a "do once, use many times" framework that reduces duplication of effort and accelerates the adoption of secure cloud solutions across government.
+                FedRAMP authorization is required for cloud service providers who want to do business with federal agencies. The program establishes rigorous security requirements based on NIST standards and provides a "do once, use many times" framework that reduces duplication of effort and accelerates the adoption of secure cloud solutions across federal government.
               </p>
               <p>
                 There are three FedRAMP authorization levels: Low, Moderate, and High, each corresponding to the potential impact level of the data being processed. Most federal agencies require FedRAMP Moderate authorization at minimum.

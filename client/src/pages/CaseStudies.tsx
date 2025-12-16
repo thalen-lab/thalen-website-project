@@ -32,7 +32,7 @@ export default function CaseStudies() {
     {
       category: 'Federal Government',
       title: 'Federal Agency Achieves 85% Process Automation',
-      description: 'Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
+      description: 'Implemented UiPath RPA platform with FedRAMP authorization for federal agency, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
       tags: ['RPA', 'FedRAMP'],
       image: '/rocket-federal.webp',
       href: '/case-studies/federal-automation'
@@ -40,7 +40,7 @@ export default function CaseStudies() {
     {
       category: 'Defense',
       title: 'DoD Manufacturing Facility Achieves 99.2% Uptime',
-      description: 'Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.',
+      description: 'Implemented FedRAMP-authorized predictive maintenance platform for DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.',
       tags: ['Cybersecurity', 'IoT', 'CMMC'],
       image: '/manufacturing-security.jpg',
       href: '/case-studies/dod-manufacturing'
@@ -48,7 +48,7 @@ export default function CaseStudies() {
     {
       category: 'Federal Government',
       title: 'VA Medical Center Integrates 12 Legacy Systems',
-      description: 'Integrated 12 disparate healthcare systems using FedRAMP-authorized iPaaS platform. Reduced administrative burden by 60% for 8,500 staff members.',
+      description: 'Integrated 12 disparate VA healthcare systems using FedRAMP-authorized iPaaS platform for federal operations. Reduced administrative burden by 60% for 8,500 staff members.',
       tags: ['Integration', 'HIPAA', 'FedRAMP'],
       image: '/healthcare-legacy-it.jpg',
       href: '/case-studies/va-healthcare'
@@ -65,7 +65,7 @@ export default function CaseStudies() {
       category: 'State Government',
       title: 'State Energy Commission Reduces Grid Outages 65%',
       description: 'Deployed StateRAMP-authorized smart grid platform for state energy commission. Reduced outages by 65% across 4.2M customer service area.',
-      tags: ['Automation', 'IoT', 'StateRAMP'],
+      tags: ['Automation', 'IoT', 'StateRAMP/GovRAMP'],
       image: '/images/case-studies/energy-grid-control.jpg',
       href: '/case-studies/state-energy-commission'
     },
@@ -216,7 +216,7 @@ export default function CaseStudies() {
               Case Studies
             </h1>
             <p className="text-xl md:text-2xl opacity-90">
-              Real-world government case studies demonstrating FedRAMP and StateRAMP platform implementation expertise across federal, state, and local agencies.
+              Real-world government case studies demonstrating platform implementation expertise. FedRAMP serves federal agencies; StateRAMP/GovRAMP serves state, local, and tribal governments.
             </p>
           </div>
         </div>
@@ -229,8 +229,8 @@ export default function CaseStudies() {
             {[
               { value: '15+', label: 'Years Government Experience' },
               { value: '$45M+', label: 'Government Contracts' },
-              { value: '50+', label: 'FedRAMP Platforms' },
-              { value: '100%', label: 'ATO Success Rate' }
+              { value: '50+', label: 'Authorized Platforms' },
+              { value: '100%', label: 'Authorization Success Rate' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-accent mb-2">{stat.value}</div>
