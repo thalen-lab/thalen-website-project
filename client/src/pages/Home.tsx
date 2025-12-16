@@ -104,19 +104,22 @@ export default function Home() {
       name: 'FedRAMP & StateRAMP Implementation',
       description: 'Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.',
       icon: Shield,
-      image: '/fedramp-capitol.jpg'
+      image: '/fedramp-capitol.jpg',
+      href: '/fedramp'
     },
     {
       name: 'ISO 27001 Implementation Services',
       description: 'Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.',
       icon: Shield,
-      image: '/iso-logo.jpg'
+      image: '/iso-logo.jpg',
+      href: '/services/iso-27001'
     },
     {
       name: 'CMMC Consulting Services',
       description: 'Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis, controls implementation, and audit preparation.',
       icon: Shield,
-      image: '/cmmc-consulting.jpg'
+      image: '/cmmc-consulting.jpg',
+      href: '/cmmc'
     }
   ];
 
@@ -388,7 +391,8 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative"
                 >
-                   <Card className="h-full border border-slate-700 hover:border-accent transition-all duration-300 hover:shadow-lg bg-slate-800/50 overflow-hidden">
+                  <Link href={cert.href} className="block h-full">
+                   <Card className="h-full border border-slate-700 hover:border-accent transition-all duration-300 hover:shadow-lg bg-slate-800/50 overflow-hidden cursor-pointer">
                     {cert.image ? (
                       <>
                         <div className="w-full h-48 overflow-hidden">
@@ -425,6 +429,7 @@ export default function Home() {
                       </CardContent>
                     )}
                   </Card>
+                  </Link>
                 </motion.div>
               );
             })}
