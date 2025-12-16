@@ -243,35 +243,30 @@ export default function ISO27001() {
               {
                 phase: "Phase 1",
                 title: "Gap Assessment & Scoping",
-                duration: "4-6 weeks",
                 description: "We conduct a comprehensive assessment of your current security posture against ISO 27001:2022 requirements. This phase establishes the ISMS scope, identifies gaps, and develops a prioritized remediation roadmap.",
                 deliverables: ["Gap analysis report", "ISMS scope definition", "Risk register template", "Implementation project plan"]
               },
               {
                 phase: "Phase 2",
                 title: "Risk Assessment & Treatment",
-                duration: "6-8 weeks",
                 description: "Our team facilitates a systematic risk assessment process, identifying threats and vulnerabilities to information assets. We develop risk treatment plans aligned with your organization's risk appetite and business objectives.",
                 deliverables: ["Asset inventory", "Risk assessment methodology", "Risk treatment plan", "Statement of Applicability (draft)"]
               },
               {
                 phase: "Phase 3",
                 title: "Policy & Control Implementation",
-                duration: "12-16 weeks",
                 description: "We develop and implement the required policies, procedures, and technical controls. This phase includes security awareness training, process documentation, and integration with existing management systems.",
                 deliverables: ["ISMS policy framework", "Control implementation evidence", "Security awareness program", "Operational procedures"]
               },
               {
                 phase: "Phase 4",
                 title: "Internal Audit & Management Review",
-                duration: "4-6 weeks",
                 description: "We conduct internal audits to verify ISMS effectiveness and identify improvement opportunities. Management reviews ensure leadership engagement and resource allocation for ongoing security operations.",
                 deliverables: ["Internal audit reports", "Management review minutes", "Corrective action plans", "Certification readiness assessment"]
               },
               {
                 phase: "Phase 5",
                 title: "Certification Support",
-                duration: "4-8 weeks",
                 description: "We provide comprehensive support during the external certification audit, including preparation, evidence organization, and audit accompaniment. Post-certification, we assist with surveillance audit preparation and continuous improvement.",
                 deliverables: ["Audit preparation checklist", "Evidence repository", "Certification audit support", "Surveillance audit planning"]
               }
@@ -281,7 +276,6 @@ export default function ISO27001() {
                   <div className="flex-shrink-0">
                     <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg px-4 py-2 text-center">
                       <span className="text-amber-500 font-medium text-sm">{phase.phase}</span>
-                      <p className="text-gray-400 text-xs mt-1">{phase.duration}</p>
                     </div>
                   </div>
                   <div className="flex-grow">
