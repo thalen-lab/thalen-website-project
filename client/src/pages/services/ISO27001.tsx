@@ -51,15 +51,15 @@ export default function ISO27001() {
             
             <div className="space-y-6 text-gray-300 leading-relaxed">
               <p>
-                <span className="text-amber-500 font-medium">ISO/IEC 27001:2022</span> is the internationally recognized standard for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). Published by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC), this standard provides a systematic approach to managing sensitive company information so that it remains secure.
+                <span className="text-amber-500 font-medium">ISO/IEC 27001:2022</span> is the internationally recognized standard for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). Published by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC), this standard provides a systematic approach to managing sensitive information assets so that they remain secure. The standard consists of ten main clauses (Clauses 4-10 contain mandatory requirements) and Annex A, which provides a reference catalog of 93 information security controls.
               </p>
               
               <p>
-                The standard encompasses people, processes, and technology, ensuring that organizations implement comprehensive security controls tailored to their specific risk environment. ISO 27001 certification demonstrates to clients, partners, and regulatory bodies that an organization has implemented best-practice information security processes.
+                The standard encompasses people, processes, and technology, ensuring that organizations implement comprehensive security controls tailored to their specific risk environment. ISO 27001 certification, awarded by accredited certification bodies following a formal audit process, demonstrates to clients, partners, and regulatory bodies that an organization has implemented best-practice information security processes and maintains them through continuous monitoring and improvement.
               </p>
 
               <p>
-                The 2022 revision of ISO 27001 introduced significant updates to Annex A controls, reducing the total number from 114 to 93 while reorganizing them into four themes: Organizational, People, Physical, and Technological controls. This restructuring reflects the evolving threat landscape and modern security practices, including enhanced focus on cloud security, threat intelligence, and data protection.
+                The 2022 revision of ISO 27001 introduced significant updates to Annex A controls, reducing the total number from 114 controls (in the 2013 version) to 93 controls while reorganizing them into four themes: Organizational (37 controls), People (8 controls), Physical (14 controls), and Technological (34 controls). This restructuring reflects the evolving threat landscape and modern security practices, including enhanced focus on cloud security (Clause 5.23), threat intelligence (Clause 5.7), and data protection. The revision also introduced eleven entirely new controls addressing emerging risks such as cloud services, configuration management, and secure coding.
               </p>
 
               <div className="mt-8 pt-8 border-t border-gray-700">
@@ -67,19 +67,19 @@ export default function ISO27001() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-gray-300">
                     <span className="text-amber-500 font-bold mt-0.5 flex-shrink-0">•</span>
-                    <span><strong className="text-white">Risk Assessment Framework</strong> — Systematic identification, analysis, and evaluation of information security risks</span>
+                    <span><strong className="text-white">Risk Assessment Framework (Clauses 6.1.2, 8.2)</strong> — Systematic identification, analysis, and evaluation of information security risks using defined criteria</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-300">
                     <span className="text-amber-500 font-bold mt-0.5 flex-shrink-0">•</span>
-                    <span><strong className="text-white">Statement of Applicability (SoA)</strong> — Documentation of which controls are applicable and their implementation status</span>
+                    <span><strong className="text-white">Statement of Applicability (SoA) (Clause 6.1.3d)</strong> — Mandatory documentation of which Annex A controls are applicable, their implementation status, and justification for inclusions and exclusions</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-300">
                     <span className="text-amber-500 font-bold mt-0.5 flex-shrink-0">•</span>
-                    <span><strong className="text-white">Continuous Improvement</strong> — Plan-Do-Check-Act (PDCA) cycle ensuring ongoing security enhancement</span>
+                    <span><strong className="text-white">Continuous Improvement (Clause 10)</strong> — Plan-Do-Check-Act (PDCA) cycle ensuring ongoing security enhancement through nonconformity management and corrective actions</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-300">
                     <span className="text-amber-500 font-bold mt-0.5 flex-shrink-0">•</span>
-                    <span><strong className="text-white">Management Commitment</strong> — Leadership engagement and resource allocation for security initiatives</span>
+                    <span><strong className="text-white">Management Commitment (Clause 5)</strong> — Leadership engagement, policy establishment, role assignment, and resource allocation for security initiatives</span>
                   </li>
                 </ul>
               </div>
@@ -101,7 +101,7 @@ export default function ISO27001() {
             </p>
 
             <p>
-              Government contractors and organizations working with federal agencies increasingly require ISO 27001 certification as part of their security posture. The standard complements other frameworks such as FedRAMP, NIST 800-53, and CMMC, providing a foundation for comprehensive security governance.
+              Government contractors and organizations working with federal agencies increasingly require ISO 27001 certification as part of their security posture. The standard complements other frameworks such as FedRAMP, NIST 800-53, and CMMC, providing a foundation for comprehensive security governance. Many federal contracts now explicitly reference ISO 27001 certification as a preferred or required qualification, particularly for organizations handling Controlled Unclassified Information (CUI) or operating in national security contexts.
             </p>
 
             <p>
@@ -161,7 +161,7 @@ export default function ISO27001() {
             </h2>
 
             <p className="text-gray-300 leading-relaxed mb-8">
-              The 2022 revision reorganized Annex A controls into four thematic categories, streamlining implementation while addressing modern security challenges. Organizations must evaluate each control's applicability based on their risk assessment and document justifications in the Statement of Applicability.
+              The 2022 revision reorganized Annex A controls into four thematic categories, streamlining implementation while addressing modern security challenges. Organizations must evaluate each control's applicability based on their risk assessment (Clause 6.1.3) and document justifications for both included and excluded controls in the Statement of Applicability. While not all 93 controls are mandatory for every organization, the risk assessment process must systematically consider each control's relevance to identified risks.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -235,7 +235,7 @@ export default function ISO27001() {
           </h2>
 
           <p className="text-gray-300 leading-relaxed mb-10 max-w-4xl">
-            Thalen Technologies' ISO 27001 implementation methodology is designed to minimize disruption while ensuring comprehensive coverage of all standard requirements. Our phased approach typically achieves certification readiness within 6-12 months, depending on organizational complexity and existing security maturity.
+            Thalen Technologies' ISO 27001 implementation methodology is designed to minimize disruption while ensuring comprehensive coverage of all standard requirements (Clauses 4-10 and applicable Annex A controls). Our phased approach typically achieves certification readiness within 6-12 months, depending on organizational complexity, scope definition, and existing security maturity. Implementation timelines vary based on factors including organizational size, geographic distribution, regulatory environment, and the maturity of existing security controls.
           </p>
 
           <div className="space-y-6">
@@ -243,31 +243,31 @@ export default function ISO27001() {
               {
                 phase: "Phase 1",
                 title: "Gap Assessment & Scoping",
-                description: "We conduct a comprehensive assessment of your current security posture against ISO 27001:2022 requirements. This phase establishes the ISMS scope, identifies gaps, and develops a prioritized remediation roadmap.",
+                description: "We conduct a comprehensive assessment of your current security posture against ISO 27001:2022 requirements (Clauses 4-10 and Annex A). This phase establishes the ISMS scope (Clause 4.3), defines internal and external context (Clause 4.1), identifies interested parties (Clause 4.2), and develops a prioritized remediation roadmap.",
                 deliverables: ["Gap analysis report", "ISMS scope definition", "Risk register template", "Implementation project plan"]
               },
               {
                 phase: "Phase 2",
                 title: "Risk Assessment & Treatment",
-                description: "Our team facilitates a systematic risk assessment process, identifying threats and vulnerabilities to information assets. We develop risk treatment plans aligned with your organization's risk appetite and business objectives.",
+                description: "Our team facilitates a systematic risk assessment process (Clauses 6.1.2, 8.2), identifying threats and vulnerabilities to information assets. We develop risk treatment plans (Clause 6.1.3) aligned with your organization's risk appetite and business objectives, selecting appropriate controls from Annex A and documenting decisions in the Statement of Applicability.",
                 deliverables: ["Asset inventory", "Risk assessment methodology", "Risk treatment plan", "Statement of Applicability (draft)"]
               },
               {
                 phase: "Phase 3",
                 title: "Policy & Control Implementation",
-                description: "We develop and implement the required policies, procedures, and technical controls. This phase includes security awareness training, process documentation, and integration with existing management systems.",
+                description: "We develop and implement the required policies (Clause 5.2), procedures, and technical controls selected during risk treatment. This phase includes security awareness training (Annex A Control 6.3), documented information (Clause 7.5), operational planning and control (Clause 8), and integration with existing management systems to avoid duplication.",
                 deliverables: ["ISMS policy framework", "Control implementation evidence", "Security awareness program", "Operational procedures"]
               },
               {
                 phase: "Phase 4",
                 title: "Internal Audit & Management Review",
-                description: "We conduct internal audits to verify ISMS effectiveness and identify improvement opportunities. Management reviews ensure leadership engagement and resource allocation for ongoing security operations.",
+                description: "We conduct internal audits (Clause 9.2) to verify ISMS effectiveness against planned arrangements and ISO 27001 requirements. Management reviews (Clause 9.3) ensure leadership engagement, evaluate ISMS performance, and determine resource needs for ongoing security operations and improvement initiatives.",
                 deliverables: ["Internal audit reports", "Management review minutes", "Corrective action plans", "Certification readiness assessment"]
               },
               {
                 phase: "Phase 5",
                 title: "Certification Support",
-                description: "We provide comprehensive support during the external certification audit, including preparation, evidence organization, and audit accompaniment. Post-certification, we assist with surveillance audit preparation and continuous improvement.",
+                description: "We provide comprehensive support during the external certification audit conducted by an accredited certification body, including preparation, evidence organization, and audit accompaniment. The certification process typically includes a Stage 1 audit (documentation review) and Stage 2 audit (implementation verification). Post-certification, we assist with annual surveillance audits and triennial recertification, ensuring continuous improvement and ongoing compliance.",
                 deliverables: ["Audit preparation checklist", "Evidence repository", "Certification audit support", "Surveillance audit planning"]
               }
             ].map((phase, index) => (
