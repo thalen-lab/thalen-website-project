@@ -105,7 +105,7 @@ export default function Home() {
       description: 'Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.',
       icon: Shield,
       image: '/fedramp-capitol.jpg',
-      href: '/fedramp'
+      href: '/services/fedramp'
     },
     {
       name: 'ISO 27001 Implementation Services',

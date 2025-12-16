@@ -3361,3 +3361,7 @@
 - [x] Add full official title: "Information security, cybersecurity and privacy protection — Information security management systems — Requirements"
 - [x] Add key benefits: cyber-resilience, operational excellence, cost savings
 - [x] Add current edition number (3) and 2024 climate action amendment
+
+## Phase 71: Create FedRAMP & StateRAMP Implementation Services Page
+- [x] Create /services/fedramp page with professional design matching ISO 27001 page
+- [x] Add navigation link from Federal Solutions service card to FedRAMP page
