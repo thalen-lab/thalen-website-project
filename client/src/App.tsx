@@ -100,6 +100,7 @@ import IdentityAccessManagement from "./pages/services/IdentityAccessManagement"
 import SecurityOperationsCenter from "./pages/services/SecurityOperationsCenter";
 import IncidentResponse from "./pages/services/IncidentResponse";
 import ZeroTrustArchitecture from "./pages/services/ZeroTrustArchitecture";
+import ISO27001Service from "./pages/services/ISO27001";
 
 // Application Development Subpages
 import ApplicationDevelopment from "./pages/services/ApplicationDevelopment";
@@ -237,6 +238,7 @@ function Router() {
       <Route path={"/services/disaster-recovery"} component={DisasterRecovery} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />
       <Route path={"/services/ato-support"} component={ATOSupportService} />
+      <Route path={"/services/iso-27001"} component={ISO27001Service} />
       <Route path={"/services/security-assessment"} component={SecurityAssessment} />
       <Route path={"/services/penetration-testing"} component={PenetrationTesting} />
       <Route path={"/services/identity-access-management"} component={IdentityAccessManagement} />

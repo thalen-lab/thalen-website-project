@@ -3304,3 +3304,16 @@
 
 ## Phase 102: CMMC Consulting Services Page
 - [x] Add navbar and footer to CMMC Consulting Services page
+
+
+## Phase 55: ISO 27001 Implementation Services Page
+- [x] Create ISO 27001 service page with Cyber AB-inspired dark theme styling
+- [x] Add hero section with page title and subtitle
+- [x] Add "What is ISO 27001?" section with detailed explanation
+- [x] Add "Who Needs ISO 27001 Certification?" section
+- [x] Add "ISO 27001:2022 Requirements" section with key domains
+- [x] Add "Our Implementation Methodology" section with phases
+- [x] Add "Benefits of Certification" section
+- [x] Add "Why Choose NexDyne" section
+- [x] Add call-to-action section for consultation
+- [x] Add route for /services/iso-27001 page
