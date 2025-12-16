@@ -3348,4 +3348,4 @@
 ## Phase 69: Remove Phase Timeframes from ISO 27001 Implementation Methodology
 - [x] Remove timeframe indicators (4-6 weeks, 6-8 weeks, etc.) from all phase badges on ISO 27001 page
 - [x] Test changes in browser
-- [ ] Save checkpoint
+- [x] Save checkpoint
