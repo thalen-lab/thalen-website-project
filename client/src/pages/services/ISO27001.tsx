@@ -2,13 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import {
   Shield,
-  CheckCircle,
   FileCheck,
   Users,
   Building2,
   Globe,
   Lock,
-  ClipboardCheck,
   Target,
   ArrowRight,
   Phone,
@@ -16,11 +14,9 @@ import {
   Award,
   Briefcase,
   BarChart3,
-  Settings,
   FileText,
   AlertTriangle,
   Server,
-  UserCheck,
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -69,20 +65,20 @@ export default function ISO27001() {
               <div className="mt-8 pt-8 border-t border-gray-700">
                 <h3 className="text-xl font-medium text-white mb-4">Key Components of ISO 27001</h3>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <span className="text-amber-500 font-bold mt-0.5 flex-shrink-0">•</span>
                     <span><strong className="text-white">Risk Assessment Framework</strong> — Systematic identification, analysis, and evaluation of information security risks</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <span className="text-amber-500 font-bold mt-0.5 flex-shrink-0">•</span>
                     <span><strong className="text-white">Statement of Applicability (SoA)</strong> — Documentation of which controls are applicable and their implementation status</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <span className="text-amber-500 font-bold mt-0.5 flex-shrink-0">•</span>
                     <span><strong className="text-white">Continuous Improvement</strong> — Plan-Do-Check-Act (PDCA) cycle ensuring ongoing security enhancement</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-gray-300">
+                    <span className="text-amber-500 font-bold mt-0.5 flex-shrink-0">•</span>
                     <span><strong className="text-white">Management Commitment</strong> — Leadership engagement and resource allocation for security initiatives</span>
                   </li>
                 </ul>
@@ -171,7 +167,6 @@ export default function ISO27001() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  icon: ClipboardCheck,
                   title: "Organizational Controls (37 controls)",
                   items: [
                     "Information security policies and procedures",
@@ -183,7 +178,6 @@ export default function ISO27001() {
                   ]
                 },
                 {
-                  icon: UserCheck,
                   title: "People Controls (8 controls)",
                   items: [
                     "Screening and terms of employment",
@@ -194,7 +188,6 @@ export default function ISO27001() {
                   ]
                 },
                 {
-                  icon: Building2,
                   title: "Physical Controls (14 controls)",
                   items: [
                     "Physical security perimeters and entry controls",
@@ -206,7 +199,6 @@ export default function ISO27001() {
                   ]
                 },
                 {
-                  icon: Settings,
                   title: "Technological Controls (34 controls)",
                   items: [
                     "Endpoint devices and privileged access rights",
@@ -219,10 +211,7 @@ export default function ISO27001() {
                 }
               ].map((domain, index) => (
                 <div key={index} className="border border-gray-700 rounded-lg p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <domain.icon className="w-8 h-8 text-amber-500" />
-                    <h3 className="text-lg font-medium text-white">{domain.title}</h3>
-                  </div>
+                  <h3 className="text-lg font-medium text-white mb-4">{domain.title}</h3>
                   <ul className="space-y-2">
                     {domain.items.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-gray-400 text-sm">
@@ -439,7 +428,7 @@ export default function ISO27001() {
                   "Integration expertise with SOC 2, HIPAA, and GDPR compliance programs"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-gray-400">
-                    <CheckCircle className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-amber-500 font-bold mt-0.5 flex-shrink-0">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
