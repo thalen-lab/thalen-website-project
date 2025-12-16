@@ -169,6 +169,9 @@ import EventForm from "./pages/admin/EventForm";
 import AdminMediaLibrary from "./pages/admin/MediaLibrary";
 import AdminScheduledContent from "./pages/admin/ScheduledContent";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Security from "./pages/Security";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -396,6 +399,11 @@ function Router() {
           </ProtectedRoute>
         )}
       </Route>
+      
+      {/* Legal Pages */}
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/security" component={Security} />
       
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
