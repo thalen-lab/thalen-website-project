@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-4">
-              <img src={APP_LOGO} alt="Incentro" className="h-16" />
+              <img src={APP_LOGO} alt="Thalen Technologies" className="h-16" />
             </div>
             <p className="text-sm opacity-90 mb-4 max-w-sm">
               Govern Smart. The Automation Strategy Authority for government and enterprise.
@@ -91,7 +91,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-75">
-          <p>© 2024 Incentro. All rights reserved.</p>
+          <p>© 2024 Thalen Technologies. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>

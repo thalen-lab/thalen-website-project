@@ -105,7 +105,7 @@ export default function About() {
               </p>
               
               <p>
-                We saw a need for a different kind of automation strategy company, and we knew it would take a different kind of approach to build it. That's why we founded Thalen Technologies Technologies.
+                We saw a need for a different kind of automation strategy company, and we knew it would take a different kind of approach to build it. That's why we founded Thalen Technologies.
               </p>
             </div>
           </motion.div>
