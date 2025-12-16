@@ -33,10 +33,10 @@ export default function ISO27001() {
       <section className="bg-[#0a1628] py-20 lg:py-28">
         <div className="container">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide text-white uppercase mb-6">
-            ISO 27001 Implementation Services
+            ISO/IEC 27001 Implementation Services
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-4xl leading-relaxed">
-            Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.
+            Proven methodologies for implementing ISO/IEC 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.
           </p>
         </div>
       </section>
@@ -51,15 +51,15 @@ export default function ISO27001() {
             
             <div className="space-y-6 text-gray-300 leading-relaxed">
               <p>
-                <span className="text-amber-500 font-medium">ISO/IEC 27001:2022</span> is the internationally recognized standard for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). Published by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC), this standard provides a systematic approach to managing sensitive information assets so that they remain secure. The standard consists of ten main clauses (Clauses 4-10 contain mandatory requirements) and Annex A, which provides a reference catalog of 93 information security controls.
+                <span className="text-amber-500 font-medium">ISO/IEC 27001:2022</span> — formally titled <em>"Information security, cybersecurity and privacy protection — Information security management systems — Requirements"</em> — is the world's best-known standard for Information Security Management Systems (ISMS). Published by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC), this internationally recognized standard provides a systematic approach to managing sensitive information assets so that they remain secure. The standard consists of ten main clauses (Clauses 4-10 contain mandatory requirements) and Annex A, which provides a reference catalog of 93 information security controls.
               </p>
               
               <p>
-                The standard encompasses people, processes, and technology, ensuring that organizations implement comprehensive security controls tailored to their specific risk environment. ISO 27001 certification, awarded by accredited certification bodies following a formal audit process, demonstrates to clients, partners, and regulatory bodies that an organization has implemented best-practice information security processes and maintains them through continuous monitoring and improvement.
+                The standard encompasses people, processes, and technology, ensuring that organizations implement comprehensive security controls tailored to their specific risk environment. At its core, ISO/IEC 27001 is built around the <strong className="text-white">CIA Triad</strong> — protecting the <strong className="text-white">Confidentiality</strong>, <strong className="text-white">Integrity</strong>, and <strong className="text-white">Availability</strong> of information assets. ISO 27001 certification, awarded by accredited certification bodies following a formal audit process, demonstrates to clients, partners, and regulatory bodies that an organization has implemented best-practice information security processes and maintains them through continuous monitoring and improvement. Key benefits include enhanced <strong className="text-white">cyber-resilience</strong> against evolving threats, <strong className="text-white">operational excellence</strong> through standardized security processes, and <strong className="text-white">cost savings</strong> from reduced security incidents and streamlined compliance efforts.
               </p>
 
               <p>
-                The 2022 revision of ISO 27001 introduced significant updates to Annex A controls, reducing the total number from 114 controls (in the 2013 version) to 93 controls while reorganizing them into four themes: Organizational (37 controls), People (8 controls), Physical (14 controls), and Technological (34 controls). This restructuring reflects the evolving threat landscape and modern security practices, including enhanced focus on cloud security (Clause 5.23), threat intelligence (Clause 5.7), and data protection. The revision also introduced eleven entirely new controls addressing emerging risks such as cloud services, configuration management, and secure coding.
+                The 2022 revision represents the <strong className="text-white">third edition</strong> of ISO/IEC 27001 (replacing ISO/IEC 27001:2013), introducing significant updates to Annex A controls, reducing the total number from 114 controls to 93 controls while reorganizing them into four themes: Organizational (37 controls), People (8 controls), Physical (14 controls), and Technological (34 controls). This restructuring reflects the evolving threat landscape and modern security practices, including enhanced focus on cloud security (Clause 5.23), threat intelligence (Clause 5.7), and data protection. The revision also introduced eleven entirely new controls addressing emerging risks such as cloud services, configuration management, and secure coding. In 2024, an amendment was published to incorporate climate action considerations, aligning information security practices with environmental sustainability objectives.
               </p>
 
               <div className="mt-8 pt-8 border-t border-gray-700">
