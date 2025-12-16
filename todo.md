@@ -3334,3 +3334,9 @@
 ## Phase 55: Add ISO 27001 Implementation Services
 - [ ] Add ISO 27001 Implementation Services section to Cybersecurity page
 - [x] Fix ISO 27001 Implementation Services page navigation not working
+
+## Phase 46: Rebrand from NexDyne to Thalen Technologies
+- [x] Rebrand entire website from NexDyne to Thalen Technologies across all pages and content
+
+## Phase 62: Fix ISO 27001 Page Branding
+- [ ] Update ISO 27001 services page to replace "NexDyne" with "Thalen Technologies"
