@@ -57,7 +57,7 @@ export default function Contact() {
               Get In Touch
             </h1>
             <p className="text-xl md:text-2xl opacity-90">
-              Ready to transform your operations? Let's discuss how Thalen Technologies can help achieve your strategic objectives.
+              Contact us to discuss how our services can support your agency's technology requirements.
             </p>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <Card>
                   <CardContent className="p-6 flex items-start">
-                    <Phone className="h-6 w-6 text-accent mr-4 mt-1" />
+                    <Phone className="h-7 w-7 text-accent mr-4 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
                       <p className="text-muted-foreground">+1 (555) 123-4567</p>
@@ -161,10 +161,10 @@ export default function Contact() {
 
                 <Card>
                   <CardContent className="p-6 flex items-start">
-                    <Mail className="h-6 w-6 text-accent mr-4 mt-1" />
+                    <Mail className="h-7 w-7 text-accent mr-4 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-muted-foreground">contact@nexdyne.tech</p>
+                      <p className="text-muted-foreground">contact@thalen.tech</p>
                       <p className="text-sm text-muted-foreground">24-hour response time</p>
                     </div>
                   </CardContent>
@@ -172,7 +172,7 @@ export default function Contact() {
 
                 <Card>
                   <CardContent className="p-6 flex items-start">
-                    <MapPin className="h-6 w-6 text-accent mr-4 mt-1" />
+                    <MapPin className="h-7 w-7 text-accent mr-4 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Headquarters</h3>
                       <p className="text-muted-foreground">
@@ -196,7 +196,7 @@ export default function Contact() {
             <div>
               <Card>
                 <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold mb-6">Schedule Strategic Assessment</h2>
+                  <h2 className="text-2xl font-bold mb-6">Request Assessment</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>

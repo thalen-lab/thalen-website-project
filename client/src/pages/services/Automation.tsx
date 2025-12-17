@@ -3,29 +3,32 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, TrendingUp, Shield, Users, Award, Bot, Network, GitBranch } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Shield, Users, Bot, Network, GitBranch, FileText, Search, Workflow, Settings } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Automation() {
+
+
   // Primary service offerings (3 core automation capabilities)
   const primaryServices = [
     {
       icon: Bot,
       title: 'Government RPA Implementation',
-      description: 'Implement FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov, Blue Prism Gov) with process discovery, bot development, ATO documentation, and Center of Excellence setup.',
-      benefits: ['Process assessment & discovery', 'FedRAMP platform deployment', 'ATO compliance documentation'],
+      description: 'Automate repetitive manual processes by optimizing your existing automation tools first, or implement FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov) when new capabilities or compliance requirements demand it.',
+      benefits: ['Process assessment & discovery', 'Bot development & deployment', 'Integration with existing systems'],
       link: '/services/automation/rpa'
     },
     {
       icon: Network,
       title: 'Enterprise Integration Services',
-      description: 'Connect FedRAMP-authorized platforms and legacy government systems with secure APIs, data synchronization, and compliance-ready integration patterns.',
-      benefits: ['50+ FedRAMP platform connectors', 'Legacy system modernization', 'API security & governance'],
+      description: 'Connect and modernize your existing government systems, databases, and applications with custom APIs and integration patterns—or implement FedRAMP iPaaS platforms (MuleSoft Gov, Boomi Gov) when enterprise-scale orchestration is required.',
+      benefits: ['Legacy system connectivity', 'Custom API development', 'Data synchronization & governance'],
       link: '/services/automation/integration'
     },
     {
       icon: GitBranch,
       title: 'Workflow Orchestration',
-      description: 'Automate end-to-end business processes across multiple departments and systems with intelligent workflow orchestration and process optimization.',
+      description: 'Streamline your existing cross-departmental workflows through process redesign and optimization—or deploy FedRAMP workflow platforms (ServiceNow Gov, Appian Gov) when complex orchestration across legacy systems is needed.',
       benefits: ['Cross-system automation', 'Business process management', 'Real-time monitoring'],
       link: '/services/automation/orchestration'
     }
@@ -33,255 +36,365 @@ export default function Automation() {
 
   // Additional capabilities (compact format)
   const additionalCapabilities = [
-    { name: 'Intelligent Document Processing (IDP)', description: 'AI-powered document extraction and classification for unstructured data' },
-    { name: 'Process Mining & Discovery', description: 'Identify automation opportunities through process analytics and mining' },
-    { name: 'Hyperautomation Strategy', description: 'Combine RPA, AI/ML, OCR, and workflow tools for end-to-end automation' },
-    { name: 'Bot Maintenance & Support', description: 'Ongoing monitoring, optimization, and scaling of automation solutions' }
+    { icon: FileText, name: 'Intelligent Document Processing (IDP)', description: 'AI-powered document extraction and classification for unstructured data' },
+    { icon: Search, name: 'Process Mining & Discovery', description: 'Identify automation opportunities through process analytics and mining' },
+    { icon: Workflow, name: 'Hyperautomation Strategy', description: 'Combine RPA, AI/ML, OCR, and workflow tools for end-to-end automation' },
+    { icon: Settings, name: 'Bot Maintenance & Support', description: 'Ongoing monitoring, optimization, and scaling of automation solutions' }
   ];
 
-  const keyDifferentiators = [
-    {
-      icon: Shield,
-      title: 'FedRAMP Platform Expertise',
-      description: 'Deep implementation experience with 50+ FedRAMP-authorized automation platforms including UiPath Gov, Automation Anywhere Gov, and ServiceNow Gov.'
-    },
-    {
-      icon: Users,
-      title: 'Vendor-Neutral Consulting',
-      description: 'We help you select the RIGHT automation platforms for your mission requirements, then implement them with proven government-specific best practices.'
-    },
-    {
-      icon: Award,
-      title: 'Mission-Focused Implementation',
-      description: 'Automation solutions designed for measurable mission impact—faster processing, reduced errors, compliance assurance, and operational cost savings.'
-    }
-  ];
-
-  const governmentExperience = [
-    { agency: 'Federal Agency', project: 'Claims Processing Automation', outcome: '85% automation rate achieved' },
-    { agency: 'Department of Defense', project: 'Contract Management RPA', outcome: '$4.2M annual cost savings' },
-    { agency: 'Department of Veterans Affairs', project: 'Benefits Processing Bots', outcome: '60% faster processing time' }
-  ];
-
-  const fedrampPlatforms = [
-    {
-      category: 'RPA & Intelligent Automation',
-      platforms: ['UiPath Government Cloud', 'Automation Anywhere Gov', 'Blue Prism Government', 'Microsoft Power Automate Gov']
-    },
-    {
-      category: 'Integration & iPaaS',
-      platforms: ['MuleSoft Government Cloud', 'Dell Boomi Gov', 'Informatica Gov', 'SnapLogic Gov']
-    },
-    {
-      category: 'Workflow & BPM',
-      platforms: ['ServiceNow Gov', 'Pega Government Cloud', 'Appian Government Cloud', 'Camunda']
-    },
-    {
-      category: 'Document Processing',
-      platforms: ['UiPath Document Understanding', 'Automation Anywhere IQ Bot', 'ABBYY FlexiCapture Gov', 'Kofax TotalAgility']
-    }
-  ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
+      <section className="relative py-20 md:py-32 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
-          <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+          <motion.div 
+            className="max-w-4xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
               Core Service
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Government Automation Implementation
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Intelligent Automation & Process Optimization
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies (federal, state, and local) implement FedRAMP and StateRAMP-authorized automation platforms with RPA, systems integration, and workflow orchestration. Vendor-neutral consulting with proven expertise across all major automation technologies.
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+              Thalen Technologies delivers automation through a dual approach: first, we modernize and optimize your existing workflows, systems, and processes—then implement FedRAMP/StateRAMP-authorized platforms (UiPath Gov, Automation Anywhere Gov) only when new capabilities are needed or compliance requires it.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
+                <Link href="/contact">
                   Request Automation Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/services/automation/rpa">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
+                <Link href="/services/automation/rpa">
                   Explore RPA Services
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Key Differentiators */}
-      <section className="py-16 bg-background">
-        <div className="container">
-          <div className="grid md:grid-cols-3 gap-8">
-            {keyDifferentiators.map((item, index) => (
-              <div key={index} className="text-center">
-                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Primary Automation Services */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Automation Implementation Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end automation capabilities from RPA to enterprise integration, designed for government agencies (federal, state, and local) requiring FedRAMP and StateRAMP compliance and mission-critical reliability.
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Core Capabilities</p>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
+              Core Automation Implementation Services
+            </h2>
+            <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+              End-to-end automation capabilities designed for government agencies (federal, state, and local) requiring compliance and mission-critical reliability.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {primaryServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
-                <CardContent className="p-8">
-                  <service.icon className="h-16 w-16 text-primary mb-6" />
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start text-sm">
-                        <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Link href={service.link} className="block group h-full">
+                  <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-4 mb-4">
+                        <service.icon className="h-8 w-8 text-accent flex-shrink-0" />
+                        <h3 className="text-2xl font-bold text-white">
+                          {service.title}
+                        </h3>
+                      </div>
+                      <p className="text-base text-white/80 leading-relaxed mb-6">
+                        {service.description}
+                      </p>
 
-                  <Link href={service.link}>
-                    <Button variant="outline" className="w-full border-2 border-dashed border-primary/30 hover:border-accent hover:bg-accent/5">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                      <ul className="space-y-3 mb-8">
+                        {service.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-start text-sm text-white/80">
+                            <ArrowRight className="h-4 w-4 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="flex items-center text-accent text-sm font-semibold group-hover:gap-3 gap-2 transition-all">
+                        Learn More <ArrowRight className="h-4 w-4" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
             ))}
           </div>
 
-          {/* Additional Capabilities - Compact Format */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Additional Automation Capabilities</h3>
+          {/* Additional Capabilities */}
+          <motion.div 
+            className="mt-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-bold mb-8 text-center text-white">Additional Automation Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                <div key={index} className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
+                  <capability.icon className="h-6 w-6 text-accent flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold mb-1">{capability.name}</h4>
-                    <p className="text-sm text-muted-foreground">{capability.description}</p>
+                    <h4 className="font-semibold mb-1 text-white">{capability.name}</h4>
+                    <p className="text-sm text-white/70">{capability.description}</p>
                   </div>
                 </div>
               ))}
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAR Compliance for Automation Services */}
+      <section className="py-16 bg-slate-50">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-navy-900 mb-3">Government Contracting Compliance</h2>
+              <p className="text-lg text-slate-700 max-w-2xl mx-auto">
+                Our automation implementations comply with Federal Acquisition Regulation requirements for IT services.
+              </p>
+            </div>
+
+            <Card className="border-2 border-accent/20">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-bold text-navy-900 mb-4">
+                      FAR Part 39 Compliance
+                    </h3>
+                    <p className="text-sm text-slate-700 mb-4">
+                      Automation implementations comply with FAR Part 39 (Acquisition of Information Technology) requirements governing IT professional services and cloud solutions.
+                    </p>
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-slate-900 mt-1">•</span>
+                        <span><strong>FAR 52.239-1:</strong> Privacy and security safeguards for automation platforms</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-slate-900 mt-1">•</span>
+                        <span><strong>FAR 52.204-21:</strong> Basic safeguarding of contractor information systems</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-navy-900 mb-4">
+                      Procurement Benefits
+                    </h3>
+                    <p className="text-sm text-slate-700 mb-4">
+                      Pre-established compliance frameworks enable faster contract execution and reduced oversight requirements for agency procurement officers.
+                    </p>
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-slate-900 mt-1">•</span>
+                        <span>Streamlined task order awards under GSA Schedule contracts</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-slate-900 mt-1">•</span>
+                        <span>Documented compliance reduces agency oversight burden</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Government Automation Experience */}
-      <section className="py-20 bg-background">
+      {/* Team Experience Section */}
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Government Automation Implementation Success</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing automation platforms and solutions across government agencies (federal, state, and local) with measurable mission impact.
+          <motion.div 
+            className="text-center mb-16 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Proven Expertise</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              Our Team's Experience
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              Our team members have delivered automation solutions at leading government agencies. These projects were completed during their tenure at previous organizations.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {governmentExperience.map((exp, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
-                <CardContent className="p-8">
-                  <TrendingUp className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
-                  <p className="text-lg font-bold text-primary">{exp.outcome}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/case-studies">
-              <Button variant="outline" size="lg">
-                View All Automation Case Studies
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FedRAMP Automation Platform Expertise */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Automation Platform Expertise</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We implement and integrate FedRAMP-authorized automation platforms from leading vendors, helping you select the right tools for your mission.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {fedrampPlatforms.map((category, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">{category.category}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Case Study Card 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <Link href="/case-studies/federal-agency-automation" className="block h-full">
+                <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group cursor-pointer">
+                <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-slate-400 text-sm font-medium">Project Image</div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-block px-3 py-1 bg-accent text-white text-xs font-semibold rounded-full">
+                      Federal Government
+                    </span>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-accent transition-colors">
+                    Federal Agency Achieves 85% Process Automation
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                    Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.
+                  </p>
+                  <p className="text-xs text-slate-500 mb-4 italic">
+                    Led by [Team Member Name] at [Previous Agency/Organization]
+                  </p>
                   <div className="flex flex-wrap gap-2">
-                    {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="bg-card border border-border text-primary px-3 py-1 rounded-full text-sm font-medium">
-                        {platform}
-                      </span>
-                    ))}
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">RPA</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">FedRAMP</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">CMMC</span>
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+              </Link>
+            </motion.div>
 
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
-              Plus 30+ additional FedRAMP-authorized automation and integration platforms
-            </p>
-            <Link href="/federal-solutions">
-              <Button variant="outline" size="lg">
-                View All FedRAMP Platforms
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+            {/* Case Study Card 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <Link href="/case-studies/dod-manufacturing-uptime" className="block h-full">
+                <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group cursor-pointer">
+                <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-slate-400 text-sm font-medium">Project Image</div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-block px-3 py-1 bg-accent text-white text-xs font-semibold rounded-full">
+                      Defense
+                    </span>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-accent transition-colors">
+                    DoD Manufacturing Facility Achieves 99.2% Uptime
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                    Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.
+                  </p>
+                  <p className="text-xs text-slate-500 mb-4 italic">
+                    Led by [Team Member Name] at [Previous Agency/Organization]
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">Cybersecurity</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">IoT</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">CMMC</span>
+                  </div>
+                </CardContent>
+              </Card>
+              </Link>
+            </motion.div>
+
+            {/* Case Study Card 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Link href="/case-studies/va-medical-integration" className="block h-full">
+                <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group cursor-pointer">
+                <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-slate-400 text-sm font-medium">Project Image</div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-block px-3 py-1 bg-accent text-white text-xs font-semibold rounded-full">
+                      Federal Government
+                    </span>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-accent transition-colors">
+                    VA Medical Center Integrates 12 Legacy Systems
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                    Integrated 12 disparate healthcare systems using FedRAMP iPaaS platform. Reduced administrative burden by 60% for 8,500 staff members.
+                  </p>
+                  <p className="text-xs text-slate-500 mb-4 italic">
+                    Led by [Team Member Name] at [Previous Agency/Organization]
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">Integration</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">HIPAA</span>
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">FedRAMP</span>
+                  </div>
+                </CardContent>
+              </Card>
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Final CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Automate Your Government Operations?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule an automation assessment to discuss your agency's automation opportunities, evaluate FedRAMP platform options, and develop a roadmap for mission-critical automation.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
+        <div className="container">
+          <motion.div 
+            className="max-w-4xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Automate Your Government Processes?
+            </h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Schedule a free automation assessment to identify opportunities, evaluate your existing systems, and develop a roadmap for implementation.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
+                <Link href="/contact">
+                  Schedule Free Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-            </Link>
-            <Link href="/federal-solutions">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Federal Solutions
+              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
+                <Link href="/case-studies">
+                  View Success Stories
+                </Link>
               </Button>
-            </Link>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

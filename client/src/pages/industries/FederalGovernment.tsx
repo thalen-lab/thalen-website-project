@@ -210,7 +210,7 @@ export default function FederalGovernment() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Federal Agency Experience</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record across defense, intelligence, and civilian agencies. Our cleared teams have delivered mission-critical automation and modernization projects for agencies spanning the entire federal landscape, from Cabinet-level departments to independent agencies and state/local governments.
+              Experience across defense, intelligence, and civilian agencies. Our cleared teams have delivered mission-critical automation and modernization projects for agencies spanning the entire federal landscape, from Cabinet-level departments to independent agencies and state/local governments.
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">

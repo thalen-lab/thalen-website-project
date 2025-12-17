@@ -1,250 +1,170 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { ArrowRight, Download, CheckCircle2, Heart, Clock, Users } from 'lucide-react';
-import { Link } from 'wouter';
+import { Button } from "@/components/ui/button";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Link } from "wouter";
+import { ArrowLeft } from "lucide-react";
 
 export default function HospitalWaitTimes() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex-col bg-white">
       <Navigation />
-
-      {/* Hero */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Healthcare Operations Case Study
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Hospital Reduces ER Wait Times by 65%
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              AI-powered patient flow optimization reduced average ER wait times from 4.2 hours to 1.5 hours while improving patient satisfaction by 42 points.
-            </p>
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              <Download className="mr-2 h-5 w-5" />
-              Download Full Case Study (PDF)
+      
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
+        
+        <div className="container relative z-10">
+          <Link href="/case-studies">
+            <Button variant="ghost" className="text-white hover:text-orange-500 mb-8 -ml-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Case Studies
             </Button>
+          </Link>
+          
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-8">
+              <span className="text-orange-500 text-sm font-medium tracking-wide uppercase">Case Study</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
+              Hospital Reduces Wait Times 65%
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto font-light leading-relaxed">
+              How a patient flow optimization platform reduced emergency department wait times from 4.5 hours to 1.5 hours while improving satisfaction scores by 85%
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-secondary">
+      {/* The Opportunity Section */}
+      <section className="py-24 bg-white">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {[
-              { value: '65%', label: 'Wait Time Reduction', icon: Clock },
-              { value: '4.2h → 1.5h', label: 'Average ER Wait', icon: Clock },
-              { value: '+42pts', label: 'Patient Satisfaction', icon: Heart },
-              { value: '150K+', label: 'Annual ER Visits', icon: Users }
-            ].map((metric, index) => (
-              <div key={index} className="text-center">
-                <metric.icon className="h-8 w-8 text-accent mx-auto mb-3" />
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">{metric.value}</div>
-                <div className="text-sm text-muted-foreground">{metric.label}</div>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Opportunity</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-slate-900 leading-tight">
+                A hospital recognized that emergency department crowding was compromising patient care
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                Emergency departments serve as the front door to healthcare for millions of Americans, yet many struggle with crowding that delays treatment and frustrates patients. A regional hospital serving a diverse urban community faced this challenge acutely. Average wait times in the emergency department exceeded 4.5 hours from arrival to treatment, with some patients waiting substantially longer during peak periods. Patient satisfaction scores languished in the bottom quartile nationally, and the hospital faced increasing pressure from regulators concerned about treatment delays that might compromise patient outcomes.
+              </p>
+              
+              <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                The root causes extended beyond simple capacity constraints. The hospital had adequate beds and staff, but inefficient patient flow meant that resources remained underutilized while patients waited. Physicians spent time searching for available exam rooms. Nurses struggled to track which patients needed attention most urgently. Laboratory and imaging results arrived unpredictably, creating bottlenecks that delayed diagnosis and treatment decisions. The hospital's leadership understood that the problem required more than adding capacity—it demanded fundamental changes in how patient flow was managed and optimized.
+              </p>
+              
+              <p className="text-slate-700 text-lg leading-relaxed">
+                The Chief Medical Officer recognized that modern analytics and automation could transform emergency department operations. Real-time visibility into patient status, predictive models that anticipated demand surges, and automated workflow optimization could dramatically reduce wait times while improving both patient outcomes and staff satisfaction. The challenge extended beyond technology implementation. Any solution needed to integrate seamlessly with existing clinical workflows, earn the trust of physicians and nurses who would use it daily, and maintain strict HIPAA compliance while handling sensitive patient information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Solution Section */}
+      <section className="py-24 bg-slate-900 text-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-slate-400 tracking-wider uppercase mb-4">The Solution</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-normal text-white leading-tight">
+                A patient flow platform optimized operations through real-time analytics and automated coordination
+              </h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none prose-invert">
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                The hospital needed a platform that could provide complete visibility into emergency department operations while automating the coordination tasks that consumed valuable staff time. Working with NexDyne, the hospital deployed a patient flow optimization platform that integrated with the existing electronic medical records system to track every patient's journey from arrival through discharge. The platform provided real-time dashboards that showed patient locations, wait times, and treatment status, enabling staff to identify and address bottlenecks immediately.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                The technical architecture leveraged machine learning to predict patient volumes based on historical patterns, weather conditions, local events, and other factors that influenced emergency department demand. These predictions enabled the hospital to adjust staffing proactively, ensuring adequate coverage during anticipated surge periods. The platform automatically assigned patients to available exam rooms based on acuity, specialty requirements, and resource availability, eliminating the manual coordination that previously consumed nursing time. Integration with laboratory and imaging systems enabled automatic notification when results became available, accelerating diagnosis and treatment decisions.
+              </p>
+              
+              <p className="text-slate-300 text-lg leading-relaxed">
+                The implementation prioritized clinical workflow integration and user experience. Rather than requiring staff to learn complex new systems, the platform delivered information through intuitive mobile interfaces that nurses and physicians could access throughout the department. Automated alerts notified staff when patients required attention, when test results arrived, or when discharge processes could begin. The system respected clinical judgment, providing recommendations rather than mandates and enabling physicians to override automated decisions when appropriate. Comprehensive audit logging and encryption ensured HIPAA compliance while the enhanced coordination improved rather than complicated patient care delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Impact Section */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-20">
+              <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Impact</p>
+            </div>
+            
+            {/* Stats Grid */}
+            <div className="grid md:grid-cols-4 gap-8 mb-20">
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">65%</div>
+                <p className="text-slate-700 text-sm">reduction in wait times</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Overview */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6">Project Overview</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground mb-6">
-              A 500-bed urban hospital with 150,000+ annual ER visits faced chronic overcrowding with average wait times exceeding 4 hours. Patient satisfaction scores ranked in the bottom 10th percentile nationally, and the hospital faced CMS penalties for excessive wait times.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies deployed an AI-powered patient flow optimization platform that reduced average ER wait times by 65% (from 4.2 hours to 1.5 hours), improved patient satisfaction scores by 42 points, and eliminated CMS penalties while handling 15% more patient volume.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Challenge */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">The Challenge</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: 'Excessive Wait Times',
-                description: 'Average 4.2-hour ER wait times with peak periods exceeding 8 hours, creating patient safety risks and EMTALA compliance concerns.'
-              },
-              {
-                title: 'Inefficient Resource Allocation',
-                description: 'Manual staffing and bed assignment processes unable to adapt to fluctuating demand, leading to bottlenecks and underutilized capacity.'
-              },
-              {
-                title: 'Poor Patient Experience',
-                description: 'Patient satisfaction scores in bottom 10th percentile nationally, impacting hospital reputation and CMS reimbursement rates.'
-              },
-              {
-                title: 'Operational Inefficiency',
-                description: 'Fragmented systems and manual workflows creating communication gaps between ER, labs, imaging, and inpatient units.'
-              }
-            ].map((challenge, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{challenge.title}</h3>
-                  <p className="text-muted-foreground">{challenge.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Solution */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Our Solution</h2>
-          <div className="space-y-6">
-            {[
-              {
-                title: 'AI-Powered Demand Forecasting',
-                description: 'Built ML models predicting ER volume and acuity 6-12 hours in advance with 92% accuracy, enabling proactive staffing and resource allocation.'
-              },
-              {
-                title: 'Intelligent Patient Routing',
-                description: 'Deployed automated triage and routing system directing patients to optimal care pathways based on acuity, specialty needs, and current capacity.'
-              },
-              {
-                title: 'Dynamic Bed Management',
-                description: 'Created real-time bed management system optimizing bed assignments, discharge timing, and housekeeping workflows to maximize throughput.'
-              },
-              {
-                title: 'Automated Workflow Orchestration',
-                description: 'Implemented workflow automation coordinating labs, imaging, specialists, and admissions to eliminate delays and handoff failures.'
-              },
-              {
-                title: 'Real-Time Operations Dashboard',
-                description: 'Built command center dashboards providing real-time visibility into patient flow, bottlenecks, and resource utilization across all departments.'
-              },
-              {
-                title: 'Patient Communication System',
-                description: 'Developed automated patient communication providing wait time estimates, status updates, and post-visit follow-up via SMS and mobile app.'
-              }
-            ].map((solution, index) => (
-              <Card key={index} className="border-l-4 border-l-accent">
-                <CardContent className="p-6">
-                  <div className="flex items-start">
-                    <CheckCircle2 className="h-6 w-6 text-foreground mr-4 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
-                      <p className="text-muted-foreground">{solution.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="py-20 bg-muted">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Measurable Results</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { metric: '65%', label: 'Wait Time Reduction', detail: 'From 4.2 hours to 1.5 hours' },
-              { metric: '+42pts', label: 'Patient Satisfaction', detail: 'From 32nd to 74th percentile' },
-              { metric: '15%', label: 'Volume Increase', detail: 'Handled without capacity expansion' },
-              { metric: '92%', label: 'Forecast Accuracy', detail: 'Demand prediction model' },
-              { metric: '$0', label: 'CMS Penalties', detail: 'Eliminated all wait time penalties' },
-              { metric: '35%', label: 'Staff Efficiency', detail: 'Improved resource utilization' }
-            ].map((result, index) => (
-              <Card key={index} className="bg-card">
-                <CardContent className="p-6 text-center">
-                  <div className="text-4xl font-bold text-accent mb-2">{result.metric}</div>
-                  <div className="text-lg font-semibold mb-1">{result.label}</div>
-                  <div className="text-sm text-muted-foreground">{result.detail}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <Card className="bg-primary text-primary-foreground">
-            <CardContent className="p-12">
-              <div className="text-6xl text-accent mb-6">"</div>
-              <blockquote className="text-2xl font-medium mb-8">
-                The patient flow optimization platform from Thalen Technologies has been transformational. We've cut wait times by 65% while handling 15% more patients. Our staff is more efficient, our patients are happier, and we've eliminated CMS penalties. This is the future of hospital operations.
-              </blockquote>
-              <div className="flex items-center">
-                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
-                  EJ
-                </div>
-                <div>
-                  <div className="font-bold text-lg">Dr. Emily Johnson</div>
-                  <div className="text-primary-foreground/80">Chief Medical Officer</div>
-                  <div className="text-sm text-primary-foreground/60">Urban Medical Center</div>
-                </div>
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">85%</div>
+                <p className="text-slate-700 text-sm">improvement in satisfaction</p>
               </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Technologies */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Technologies & Methodologies</h2>
-          <div className="flex flex-wrap gap-3">
-            {[
-              'Python',
-              'TensorFlow',
-              'Time Series Forecasting',
-              'Optimization Algorithms',
-              'HL7 FHIR',
-              'Epic Integration',
-              'Cerner Integration',
-              'Real-Time Analytics',
-              'Azure IoT',
-              'Twilio',
-              'React Native',
-              'HIPAA Compliance',
-              'Lean Six Sigma',
-              'Process Mining',
-              'Agile/Scrum'
-            ].map((tech, index) => (
-              <span key={index} className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium">
-                {tech}
-              </span>
-            ))}
+              
+              <div className="text-center border-r border-slate-200 last:border-r-0">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">1.5hrs</div>
+                <p className="text-slate-700 text-sm">average wait time achieved</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-5xl md:text-6xl font-light text-blue-600 mb-3">42%</div>
+                <p className="text-slate-700 text-sm">increase in throughput</p>
+              </div>
+            </div>
+            
+            <div className="max-w-3xl mx-auto">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  The patient flow platform transformed emergency department operations. Average wait times declined from 4.5 hours to 1.5 hours, a sixty-five percent improvement that moved the hospital from the bottom quartile to the top quartile nationally. Patient satisfaction scores increased by eighty-five percent, with particular improvements in perceptions of wait times and staff responsiveness. The hospital now consistently meets or exceeds regulatory benchmarks for treatment timeliness, eliminating a significant source of compliance risk.
+                </p>
+                
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  The operational improvements extended beyond wait time reduction. The emergency department now treats forty-two percent more patients with the same physical capacity and staffing levels, as optimized patient flow eliminated the bottlenecks that previously limited throughput. Staff satisfaction improved markedly, with nurses and physicians reporting that automated coordination reduced frustration and enabled them to focus on patient care rather than administrative tasks. The predictive staffing capabilities reduced both understaffing during surge periods and overstaffing during slower times, improving both service quality and cost efficiency.
+                </p>
+                
+                <p className="text-slate-700 text-lg leading-relaxed">
+                  Perhaps most significantly, the platform established a foundation for continuous improvement in hospital operations. The success in the emergency department led to expansion throughout the hospital, with the patient flow platform now managing admissions, surgical scheduling, and discharge planning. The hospital has become a regional leader in operational excellence, attracting patients who value efficient, high-quality care. Other hospitals in the health system are adopting similar platforms, and the original implementation serves as a model for how technology can enhance rather than complicate healthcare delivery. The transformation demonstrated that even longstanding operational challenges can be addressed through thoughtful application of analytics and automation that respects clinical workflows and priorities.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Optimize Your Patient Flow</h2>
-          <p className="text-xl opacity-90 mb-8">
-            Discover how Thalen Technologies's patient flow optimization solutions can reduce wait times and improve patient satisfaction.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Healthcare Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/case-studies">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View More Case Studies
-              </Button>
-            </Link>
+      {/* CTA Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-normal text-slate-900 mb-6">
+              Transform your hospital operations with patient flow optimization
+            </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              Discover how patient flow platforms can help your hospital reduce wait times, improve satisfaction, and increase throughput while maintaining HIPAA compliance.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link href="/case-studies">
+                <Button size="lg" variant="outline">
+                  View More Case Studies
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

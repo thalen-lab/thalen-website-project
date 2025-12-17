@@ -77,7 +77,7 @@ export default function MLAI() {
               Predictive Analytics & ML/AI
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Stop reacting to problems after they happen. Thalen Technologies deploys machine learning models and AI-powered analytics using FedRAMP and StateRAMP-authorized platforms that predict fraud, forecast failures, detect threats, and optimize operations before issues escalate. Our ML implementations are not black boxes—every prediction includes transparent reasoning, bias detection, and model governance to meet government accountability standards (federal, state, and local). From fraud detection to predictive maintenance, we turn your data into actionable foresight.
+              Stop reacting to problems after they happen. Thalen Technologies deploys machine learning models and AI-powered analytics that predict fraud, forecast failures, detect threats, and optimize operations before issues escalate. Our ML implementations are not black boxes—every prediction includes transparent reasoning, bias detection, and model governance to meet federal accountability standards. From fraud detection to predictive maintenance, we turn your data into actionable foresight.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -170,7 +170,7 @@ export default function MLAI() {
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 bg-secondary rounded-lg p-4">
+                  <div className="grid grid-cols-3 gap-4 bg-secondary rounded-lg p-4">
                     <div>
                       <div className="text-2xl font-bold text-primary">{useCase.impact}</div>
                       <div className="text-xs text-muted-foreground">Business Impact</div>

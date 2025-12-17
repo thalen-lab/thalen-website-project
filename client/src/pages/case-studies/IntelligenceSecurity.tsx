@@ -1,16 +1,27 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Download, CheckCircle2, Shield, Eye, Lock } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'wouter';
 
+// --- Component Definition ---
 export default function IntelligenceSecurity() {
+  // Data for the statistics grid (4 metrics required for The Impact section)
+  const impactMetrics = [
+    { value: '15', label: 'Agencies Connected' },
+    { value: '5,000+', label: 'Cleared Users' },
+    { value: '0', label: 'Security Incidents' },
+    { value: '99.1%', label: 'Classification Accuracy' }
+  ];
+
+  // Main Headline for the Hero section
+  const mainHeadline = "Establishing a Zero-Trust Cross-Domain Platform for Secure Intelligence Sharing Across Fifteen Agencies";
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="max-w-4xl">
@@ -18,18 +29,12 @@ export default function IntelligenceSecurity() {
               <span className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold">
                 Intelligence Community Case Study
               </span>
-              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-                IDIQ Contract
-              </span>
-              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-                TS/SCI Clearance
-              </span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Intelligence Agency: Secure Collaboration Platform
+            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 leading-tight">
+              {mainHeadline}
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Cross-domain collaboration platform enabled secure information sharing across 15 agencies while maintaining TS/SCI compartmentalization.
+            <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+              A secure, cross-domain collaboration platform enabling 15 partner agencies to share Top Secret/SCI information while maintaining strict compartmentalization and achieving a three-year record of zero security incidents.
             </p>
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">
               <Download className="mr-2 h-5 w-5" />
@@ -39,221 +44,88 @@ export default function IntelligenceSecurity() {
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-secondary">
-        <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {[
-              { value: '15', label: 'Agencies Connected', icon: Eye },
-              { value: 'TS/SCI', label: 'Security Level', icon: Shield },
-              { value: '5,000+', label: 'Cleared Users', icon: CheckCircle2 },
-              { value: '0', label: 'Security Incidents', icon: Lock }
-            ].map((metric, index) => (
-              <div key={index} className="text-center">
-                <metric.icon className="h-8 w-8 text-accent mx-auto mb-3" />
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">{metric.value}</div>
-                <div className="text-sm text-muted-foreground">{metric.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Overview */}
+      {/* The Opportunity */}
       <section className="py-20">
         <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6">Project Overview</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground mb-6">
-              A major intelligence agency needed to enable secure collaboration across 15 partner agencies while maintaining strict compartmentalization of Top Secret/Sensitive Compartmented Information (TS/SCI). Legacy systems created information silos that hindered mission-critical intelligence sharing.
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-3">The Opportunity</p>
+          <h2 className="text-4xl font-serif font-bold mb-8 leading-snug">
+            Bridging Information Silos While Upholding the Highest Standards of Compartmentalized Security
+          </h2>
+          <div className="space-y-8">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              The Intelligence Community (IC) operates on a foundation of shared, timely information, yet a major agency faced a critical challenge: intelligence was fragmented across 15 distinct partner organizations. Legacy systems were inherently siloed, lacking a secure, unified mechanism for cross-agency collaboration. This structural impediment significantly hindered mission-critical intelligence sharing, slowing down response times and creating operational inefficiencies in a high-stakes environment where seconds can determine mission success.
             </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies designed and deployed a cross-domain collaboration platform with attribute-based access control, automated classification, and continuous monitoring, enabling secure information sharing across 5,000+ cleared personnel while maintaining zero security incidents over 3+ years of operation.
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              The core difficulty was not merely connecting the agencies, but doing so while adhering to the most stringent security protocols. The platform required the capability to handle Top Secret/Sensitive Compartmented Information (TS/SCI) and maintain strict compartmentalization. This necessitated a system capable of fine-grained access control, ensuring that only personnel with the correct clearance, need-to-know, and special access program authorization could view specific data, a requirement that traditional perimeter-based security models could not satisfy.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Type</h3>
-                <p className="text-lg font-bold">IDIQ Task Order</p>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Value</h3>
-                <p className="text-lg font-bold">$22.3M (36 months)</p>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Security Clearance</h3>
-                <p className="text-lg font-bold">TS/SCI with Poly</p>
-              </div>
-            </div>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Furthermore, the solution had to facilitate secure information flow between different classification domains—a complex cross-domain security challenge—while preventing unauthorized disclosure or data spillage. This operational requirement was compounded by the need for a comprehensive, immutable audit trail for all access, modifications, and sharing activities, ensuring continuous compliance with rigorous IC directives such as ICD 503. The agency required a partner capable of delivering a secure, scalable, and fully compliant platform under an IDIQ contract.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Challenge */}
-      <section className="py-20 bg-secondary">
+      {/* The Solution */}
+      <section className="py-20 bg-gray-900 text-white">
         <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">The Challenge</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: 'Information Silos',
-                description: 'Critical intelligence fragmented across 15 agencies with no secure mechanism for cross-agency collaboration and information sharing.'
-              },
-              {
-                title: 'Compartmentalization Requirements',
-                description: 'Need to maintain strict TS/SCI compartmentalization with attribute-based access control across multiple classification levels and special access programs.'
-              },
-              {
-                title: 'Cross-Domain Security',
-                description: 'Requirement for secure information flow between classification domains while preventing unauthorized disclosure or data spillage.'
-              },
-              {
-                title: 'Audit & Compliance',
-                description: 'Comprehensive audit trails required for all access, modifications, and sharing activities to meet IC ICD 503 requirements.'
-              }
-            ].map((challenge, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{challenge.title}</h3>
-                  <p className="text-muted-foreground">{challenge.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-3">The Solution</p>
+          <h2 className="text-4xl font-serif font-bold mb-8 leading-snug">
+            Implementing a Zero-Trust Architecture with Automated Classification and Cross-Domain Guardrails
+          </h2>
+          <div className="space-y-8">
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Our team designed and deployed a comprehensive, Zero-Trust-based cross-domain collaboration platform. The foundational element was a fine-grained Attribute-Based Access Control (ABAC) system, which enforced access decisions dynamically based on a user's clearance level, organizational affiliation, and the specific attributes of the data being requested. This replaced outdated role-based models, providing the necessary precision to maintain strict TS/SCI compartmentalization across all 15 partner agencies.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              To manage the immense volume of classified data, we integrated an advanced Machine Learning-powered classification engine. This engine automatically tagged content with appropriate classification markings and compartment labels, achieving a verified accuracy rate of 99.1%. This automation significantly reduced human error and the administrative burden associated with manual classification. Concurrently, a secure cross-domain guard architecture was established to enable controlled, monitored information flow between different classification levels, incorporating human-in-the-loop review for all sensitive transfers.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              The platform was completed with a suite of secure collaboration tools, including classified messaging, document co-editing, and video conferencing, all protected by end-to-end encryption and ephemeral key management. Furthermore, a continuous monitoring system, utilizing behavioral analytics and anomaly detection, was implemented to identify potential insider threats and unauthorized access attempts in real-time. This holistic approach ensured both maximum operational utility and uncompromised security compliance.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Solution */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Our Solution</h2>
-          <div className="space-y-6">
-            {[
-              {
-                title: 'Attribute-Based Access Control (ABAC)',
-                description: 'Implemented fine-grained ABAC system enforcing access decisions based on clearance level, need-to-know, special access programs, and organizational affiliation.'
-              },
-              {
-                title: 'Automated Classification Engine',
-                description: 'Deployed ML-powered classification engine automatically tagging content with appropriate classification markings and compartment labels with 99.1% accuracy.'
-              },
-              {
-                title: 'Cross-Domain Guard Architecture',
-                description: 'Built secure cross-domain solution enabling controlled information flow between classification levels with human-in-the-loop review for sensitive transfers.'
-              },
-              {
-                title: 'Secure Collaboration Tools',
-                description: 'Developed classified messaging, document collaboration, and video conferencing tools with end-to-end encryption and ephemeral key management.'
-              },
-              {
-                title: 'Continuous Monitoring & Threat Detection',
-                description: 'Implemented behavioral analytics and anomaly detection identifying insider threats and unauthorized access attempts in real-time.'
-              },
-              {
-                title: 'Comprehensive Audit System',
-                description: 'Built immutable audit trail capturing all user activities with automated compliance reporting meeting IC ICD 503 requirements.'
-              }
-            ].map((solution, index) => (
-              <Card key={index} className="border-l-4 border-l-accent">
-                <CardContent className="p-6">
-                  <div className="flex items-start">
-                    <CheckCircle2 className="h-6 w-6 text-foreground mr-4 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
-                      <p className="text-muted-foreground">{solution.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
+      {/* The Impact */}
       <section className="py-20 bg-muted">
         <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Measurable Results</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { metric: '15', label: 'Agencies Connected', detail: 'Seamless cross-agency collaboration' },
-              { metric: '5,000+', label: 'Cleared Users', detail: 'Active platform users' },
-              { metric: '0', label: 'Security Incidents', detail: 'Perfect security record' },
-              { metric: '99.1%', label: 'Classification Accuracy', detail: 'Automated classification engine' },
-              { metric: '85%', label: 'Faster Intelligence Sharing', detail: 'Reduced sharing time' },
-              { metric: '100%', label: 'Audit Compliance', detail: 'IC ICD 503 compliance maintained' }
-            ].map((result, index) => (
-              <Card key={index} className="bg-card">
-                <CardContent className="p-6 text-center">
-                  <div className="text-4xl font-bold text-accent mb-2">{result.metric}</div>
-                  <div className="text-lg font-semibold mb-1">{result.label}</div>
-                  <div className="text-sm text-muted-foreground">{result.detail}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <Card className="bg-primary text-primary-foreground">
-            <CardContent className="p-12">
-              <div className="text-6xl text-accent mb-6">"</div>
-              <blockquote className="text-2xl font-medium mb-8">
-                Thalen Technologies's cross-domain collaboration platform has fundamentally transformed how we share intelligence across the IC. The platform maintains the strictest security standards while enabling the collaboration our mission requires. Three years of zero security incidents speaks to the quality of their security architecture and implementation.
-              </blockquote>
-              <div className="flex items-center">
-                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center text-accent font-bold text-xl mr-4">
-                  [REDACTED]
-                </div>
-                <div>
-                  <div className="font-bold text-lg">[Name Withheld]</div>
-                  <div className="text-primary-foreground/80">Deputy Director</div>
-                  <div className="text-sm text-primary-foreground/60">Intelligence Community Agency</div>
-                </div>
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-3">The Impact</p>
+          <h2 className="text-4xl font-serif font-bold mb-8 leading-snug">
+            Achieving Seamless Collaboration with a Three-Year Record of Perfect Security
+          </h2>
+          
+          {/* Statistics Grid - Clean Grid Format */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {impactMetrics.map((metric, index) => (
+              <div key={index} className="text-center p-4 bg-card rounded-lg shadow-sm">
+                <div className="text-4xl font-bold text-accent mb-1">{metric.value}</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">{metric.label}</div>
               </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Technologies */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Technologies & Methodologies</h2>
-          <div className="flex flex-wrap gap-3">
-            {[
-              'Attribute-Based Access Control',
-              'Cross-Domain Solution',
-              'PKI',
-              'End-to-End Encryption',
-              'Machine Learning',
-              'NLP',
-              'Behavioral Analytics',
-              'SIEM',
-              'IC ICD 503',
-              'NIST 800-53',
-              'Zero-Trust Architecture',
-              'DevSecOps',
-              'Kubernetes',
-              'PostgreSQL',
-              'Agile/SAFe'
-            ].map((tech, index) => (
-              <span key={index} className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium">
-                {tech}
-              </span>
             ))}
+          </div>
+
+          <div className="space-y-8">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              The deployment of the secure collaboration platform resulted in an immediate and measurable improvement in operational efficiency across the Intelligence Community. By connecting all 15 partner agencies and providing a unified, secure environment, the platform eliminated the critical information silos that had previously hampered intelligence operations. This integration enabled over 5,000 cleared users to actively collaborate, leading to an 85% reduction in the time required to share critical intelligence across domains.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Crucially, the platform’s robust security architecture has delivered a perfect security record, with zero security incidents reported over three years of continuous operation. This achievement is a direct result of the fine-grained ABAC, the automated classification engine, and the continuous monitoring system, which collectively enforce a strict Zero-Trust posture. The 99.1% accuracy of the automated classification engine ensures that data is correctly handled from ingestion, minimizing the risk of accidental spillage or unauthorized access.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Beyond security and speed, the solution ensured full regulatory compliance. The comprehensive, immutable audit system captures every user action, providing the necessary data for automated compliance reporting and maintaining 100% adherence to IC ICD 503 requirements. This success story demonstrates that it is possible to achieve unprecedented levels of cross-agency collaboration and speed without compromising the most stringent national security standards.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Secure Your Classified Operations</h2>
-          <p className="text-xl opacity-90 mb-8">
-            Discover how Thalen Technologies's intelligence community solutions can enable secure collaboration at the highest classification levels.
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-snug">
+            Secure Your Classified Operations
+          </h2>
+          <p className="text-xl opacity-90 mb-8 leading-relaxed">
+            Discover how our intelligence community solutions can enable secure collaboration at the highest classification levels.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

@@ -199,7 +199,7 @@ export default function Analytics() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Turn Data Into Strategic Advantage</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Discover how our analytics solutions can unlock insights and drive measurable business outcomes.
+            Learn how our analytics solutions provide insights and support measurable business outcomes.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90">
             Schedule Data Assessment

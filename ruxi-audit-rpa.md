@@ -4,7 +4,7 @@
 
 ### Rule #2: Government Agencies Positioning
 - **Requirement**: All government-focused content MUST position for "government agencies" (NOT "government contractors")
-- **Rationale**: NexDyne sells TO government agencies (the buyer), not contractors
+- **Rationale**: Thalen sells TO government agencies (the buyer), not contractors
 - **Check**: Verify all messaging speaks to agency decision-makers, not contractor audiences
 
 ### Rule #3: Visual Design Standards

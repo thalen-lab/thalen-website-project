@@ -9,12 +9,14 @@ import { comments, savedSearches } from "../drizzle/schema";
 import { eq, and, isNull, desc } from "drizzle-orm";
 import { adminRouter } from "./adminRouters";
 import { notificationsRouter } from "./routers/notifications";
+import { leadsRouter } from "./routers/leads";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
   system: systemRouter,
   admin: adminRouter,
   notifications: notificationsRouter,
+  leads: leadsRouter,
   auth: router({
     me: publicProcedure.query(opts => opts.ctx.user),
     logout: publicProcedure.mutation(({ ctx }) => {
@@ -212,7 +214,7 @@ export const appRouter = router({
         try {
           // Send notification to owner
           const emailContent = `
-New Contact Form Submission from NexDyne Website
+New Contact Form Submission from Thalen Technologies Website
 
 Name: ${input.name}
 Email: ${input.email}

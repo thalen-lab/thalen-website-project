@@ -238,7 +238,7 @@ export default function ATOCompliance() {
                         <p className="text-sm text-muted-foreground">{item.description}</p>
                       </div>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-3">
                       <div className="bg-muted rounded-lg px-3 py-2">
                         <div className="text-xs font-semibold mb-1">Authorization Levels</div>
                         <div className="text-xs">{item.levels.join(', ')}</div>

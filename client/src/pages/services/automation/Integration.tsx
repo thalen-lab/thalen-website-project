@@ -110,7 +110,7 @@ export default function Integration() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Government Integration Is Different</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Commercial integration platforms assume you're working with modern, API-enabled systems in a single cloud environment. That's not reality for government agencies (federal, state, and local). You're running mission-critical applications on mainframes from the 1980s alongside cutting-edge AI tools. You have air-gapped networks, strict data residency requirements, and systems that were never designed to communicate.
+                Commercial integration platforms assume you're working with modern, API-enabled systems in a single cloud environment. That's not reality for government agencies (federal, state, and local). You're running mission-critical applications on mainframes from the 1980s alongside current AI tools. You have air-gapped networks, strict data residency requirements, and systems that were never designed to communicate.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
                 Thalen Technologies's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs. And we do it all while maintaining FedRAMP and StateRAMP authorization with full audit trails.

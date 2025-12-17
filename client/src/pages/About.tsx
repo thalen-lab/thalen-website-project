@@ -50,7 +50,7 @@ export default function About() {
       icon: Globe,
       title: 'Balance',
       letter: 'B',
-      description: 'Harmonizing innovation with stability. We balance cutting-edge AI capabilities with proven methodologies, ensuring transformative results without operational disruption or unnecessary risk.'
+      description: 'Harmonizing innovation with stability. We balance modern AI capabilities with established methodologies, delivering results without operational disruption or unnecessary risk.'
     },
     {
       icon: Award,
@@ -62,7 +62,7 @@ export default function About() {
       icon: Users,
       title: 'Mastery',
       letter: 'M',
-      description: 'Deep expertise across the full automation stack. Our team maintains elite certifications (FedRAMP, StateRAMP, CMMC, AWS, Azure) and 15+ years of specialized experience in federal, state, and local government transformation.'
+      description: 'Deep expertise across the full automation stack. Our team maintains implementation expertise in FedRAMP (federal agencies), StateRAMP/GovRAMP (state, local, tribal), and CMMC frameworks, along with cloud platform certifications (AWS, Azure), backed by 15+ years of specialized experience in government transformation.'
     }
   ];
 
@@ -105,7 +105,7 @@ export default function About() {
               </p>
               
               <p>
-                We saw a need for a different kind of automation strategy company, and we knew it would take a different kind of approach to build it. That's why we founded Thalen Technologies Technologies.
+                We saw a need for a different kind of automation strategy company, and we knew it would take a different kind of approach to build it. That's why we founded Thalen Technologies.
               </p>
             </div>
           </motion.div>
@@ -194,7 +194,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Every engagement begins with deep process analysis to identify the highest-impact automation opportunities. We then deploy proven frameworks that integrate seamlessly with existing operations, ensuring zero disruption while delivering transformational results that scale with organizational growth.
+                Every engagement begins with deep process analysis to identify the highest-impact automation opportunities. We then deploy proven frameworks that integrate seamlessly with existing operations, ensuring zero disruption while delivering significant results that scale with organizational growth.
               </p>
               
               <Link href="/services/automation">
@@ -311,8 +311,8 @@ export default function About() {
               >
                 <Card className="text-center hover:shadow-xl transition-shadow h-full">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
-                      <value.icon className="h-8 w-8 text-accent" />
+                    <div className="w-20 h-20 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
+                      <value.icon className="h-10 w-10 text-accent" />
                     </div>
                     <div className="text-5xl font-bold text-accent/20 mb-2">{value.letter}</div>
                     <h3 className="text-xl font-bold mb-3">{value.title}</h3>
@@ -363,12 +363,12 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               {teamStats.map((stat, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow border-none" style={{ background: 'linear-gradient(135deg, #C9A961 0%, #B8935A 50%, #9D7A3C 100%)' }}>
                   <CardContent className="p-8">
-                    <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                    <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm text-white/90">
                       {stat.label}
                     </div>
                   </CardContent>
@@ -392,7 +392,7 @@ export default function About() {
             <p className="text-sm font-semibold text-accent mb-2">Certifications & Compliance</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Government-Grade Security & Compliance</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Certified expertise across federal, state, and local government compliance frameworks with proven track record in the most demanding security environments.
+              Certified expertise across federal, state, and local government compliance frameworks with experience in high-security environments.
             </p>
           </motion.div>
 
@@ -405,12 +405,12 @@ export default function About() {
             >
               <Card className="text-center hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-blue-500" />
+                  <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-10 w-10 text-blue-500" />
                   </div>
                   <h3 className="text-lg font-bold mb-3">FedRAMP Expert</h3>
                   <p className="text-sm text-muted-foreground">
-                    Deep expertise implementing FedRAMP-authorized platforms at Moderate and High impact levels with proven ATO support.
+                    Deep expertise implementing FedRAMP-authorized platforms for federal agencies at Moderate and High impact levels with proven ATO support.
                   </p>
                 </CardContent>
               </Card>
@@ -424,15 +424,15 @@ export default function About() {
             >
               <Card className="text-center hover:shadow-xl transition-shadow h-full border-2 border-accent/30">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-accent" />
+                  <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-10 w-10 text-accent" />
                   </div>
                   <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3">
                     STATE & LOCAL
                   </div>
-                  <h3 className="text-lg font-bold mb-3">StateRAMP Authorized</h3>
+                  <h3 className="text-lg font-bold mb-3">StateRAMP/GovRAMP Authorized</h3>
                   <p className="text-sm text-muted-foreground">
-                    Certified expertise implementing StateRAMP-authorized platforms for state agencies and municipal governments with full compliance support.
+                    Certified expertise implementing StateRAMP/GovRAMP-authorized platforms for state, local, and tribal governments with full authorization support.
                   </p>
                 </CardContent>
               </Card>
@@ -446,12 +446,12 @@ export default function About() {
             >
               <Card className="text-center hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-blue-500" />
+                  <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-10 w-10 text-blue-500" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3">CMMC Certified</h3>
+                  <h3 className="text-lg font-bold mb-3">CMMC Consulting Services</h3>
                   <p className="text-sm text-muted-foreground">
-                    Certified to help defense contractors achieve CMMC Level 2 and Level 3 compliance through gap analysis and controls implementation.
+                    Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis and controls implementation.
                   </p>
                 </CardContent>
               </Card>
@@ -465,8 +465,8 @@ export default function About() {
             >
               <Card className="text-center hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-blue-500" />
+                  <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-10 w-10 text-blue-500" />
                   </div>
                   <h3 className="text-lg font-bold mb-3">CJIS Compliant</h3>
                   <p className="text-sm text-muted-foreground">
@@ -485,8 +485,30 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <p className="text-muted-foreground mb-4">
-              Additional certifications: ISO 27001:2022, NIST Cybersecurity Framework v2.0, GSA Schedule 70, Top Secret/SCI cleared personnel available
+              Additional expertise: ISO 27001:2022 implementation services, NIST Cybersecurity Framework v2.0, GSA Schedule application in progress, Top Secret/SCI cleared personnel available upon contract award
             </p>
+            <Card className="border-2 bg-gradient-to-br from-primary/5 to-accent/5 max-w-4xl mx-auto">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold mb-3">Federal Acquisition Regulation (FAR) Compliance</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Thalen Technologies maintains compliance with Federal Acquisition Regulation requirements for government IT services, including FAR Part 39 (Acquisition of Information Technology) and associated security clauses.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <p className="font-semibold mb-1">FAR 52.204-21</p>
+                    <p className="text-muted-foreground text-xs">Basic Safeguarding of Covered Contractor Information Systems</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-1">FAR 52.239-1</p>
+                    <p className="text-muted-foreground text-xs">Privacy or Security Safeguards for IT systems and services</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-1">DFARS 252.204-7012</p>
+                    <p className="text-muted-foreground text-xs">Safeguarding Covered Defense Information (DoD contracts)</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
       </section>

@@ -15,6 +15,7 @@ export default function Navigation() {
     { name: 'Data Analytics & Intelligence', href: '/services/data-analytics' },
     { name: 'Cloud Infrastructure & Modernization', href: '/services/cloud' },
     { name: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
+    { name: 'ATO Support & Authorization', href: '/services/ato-support' },
     { name: 'Application Development & Integration', href: '/services/application-development' },
     { name: 'Custom Software Solutions', href: '/services/custom-software' },
     { name: 'Digital Transformation Enablement', href: '/services/digital-transformation' },
@@ -27,17 +28,31 @@ export default function Navigation() {
     { name: 'Financial Services', href: '/industries/financial' },
   ];
 
+  const federalSolutions = [
+    { name: 'Core Capabilities', href: '/core-capabilities' },
+    { name: 'FedRAMP Compliance (Federal)', href: '/compliance/fedramp' },
+    { name: 'StateRAMP/GovRAMP (State/Local)', href: '/compliance/stateramp' },
+    { name: 'CMMC Compliance', href: '/federal-solutions/cmmc' },
+    { name: 'ATO Support & Authorization', href: '/services/ato-support' },
+    { name: 'Government Cloud Migration', href: '/federal-solutions/cloud-migration' },
+    { name: 'Past Performance', href: '/federal-solutions/past-performance' },
+    { name: 'Contract Vehicles', href: '/contract-vehicles' },
+  ];
+
   return (
     <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
       <div className="container">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <span className="text-2xl font-bold">Thalen Technologies - Govern Smart</span>
+            <span className="text-xl sm:text-2xl font-bold">
+              <span className="hidden sm:inline">Thalen Technologies - Govern Smart</span>
+              <span className="sm:hidden">Thalen Tech</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-6">
             {/* Services Dropdown */}
             <div 
               className="relative"
@@ -46,7 +61,7 @@ export default function Navigation() {
             >
               <button className="flex items-center space-x-1 hover:text-accent transition-colors">
                 <span>Services</span>
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-5 w-5" />
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -71,7 +86,7 @@ export default function Navigation() {
             >
               <button className="flex items-center space-x-1 hover:text-accent transition-colors">
                 <span>Industries</span>
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-5 w-5" />
               </button>
               {industriesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -88,12 +103,6 @@ export default function Navigation() {
               )}
             </div>
 
-            <Link href="/insights" className="hover:text-accent transition-colors">
-              Insights
-            </Link>
-            <Link href="/case-studies" className="hover:text-accent transition-colors">
-              Case Studies
-            </Link>
             {/* Federal Solutions Dropdown */}
             <div 
               className="relative"
@@ -102,44 +111,29 @@ export default function Navigation() {
             >
               <button className="flex items-center space-x-1 hover:text-accent transition-colors">
                 <span>Federal Solutions</span>
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-5 w-5" />
               </button>
               {federalSolutionsOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
-                  <Link 
-                    href="/federal-solutions"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors font-semibold"
-                  >
-                    Government Solutions Overview
-                  </Link>
-                  <div className="border-t border-border my-2"></div>
-                  <Link 
-                    href="/federal-solutions/state-local"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    State & Local Government
-                  </Link>
-                  <Link 
-                    href="/capability-generator"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    Capability Statement Generator
-                  </Link>
-                  <Link 
-                    href="/contract-vehicle-comparison"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    Contract Vehicle Comparison
-                  </Link>
-                  <Link 
-                    href="/compliance-roadmap"
-                    className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    Compliance Roadmap Tool
-                  </Link>
+                  {federalSolutions.map((solution) => (
+                    <Link 
+                      key={solution.href} 
+                      href={solution.href}
+                      className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      {solution.name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
+
+            <Link href="/insights" className="hover:text-accent transition-colors">
+              Insights
+            </Link>
+            <Link href="/case-studies" className="hover:text-accent transition-colors">
+              Case Studies
+            </Link>
             <Link href="/government-resources" className="hover:text-accent transition-colors">
               Resources
             </Link>
@@ -160,17 +154,17 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="xl:hidden p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden pb-6 space-y-4">
+          <div className="xl:hidden pb-6 space-y-4">
             <div>
               <button 
                 className="flex items-center justify-between w-full py-3 min-h-[44px] font-medium"
@@ -219,6 +213,30 @@ export default function Navigation() {
               )}
             </div>
 
+            <div>
+              <button 
+                className="flex items-center justify-between w-full py-3 min-h-[44px] font-medium"
+                onClick={() => setFederalSolutionsOpen(!federalSolutionsOpen)}
+              >
+                <span>Federal Solutions</span>
+                <ChevronDown className={`h-4 w-4 transition-transform ${federalSolutionsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {federalSolutionsOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  {federalSolutions.map((solution) => (
+                    <Link 
+                      key={solution.href} 
+                      href={solution.href}
+                      className="block py-3 min-h-[44px] text-sm hover:text-accent flex items-center"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {solution.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link 
               href="/insights" 
               className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
@@ -232,13 +250,6 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Case Studies
-            </Link>
-            <Link 
-              href="/federal-solutions" 
-              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Federal Solutions
             </Link>
             <Link 
               href="/government-resources" 

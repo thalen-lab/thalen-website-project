@@ -82,8 +82,8 @@ export default function Government() {
                     <Shield className="h-5 w-5 text-accent mr-2" />
                     Government Relations
                   </h3>
-                  <a href="mailto:govrelations@nexdynetechnologies.com" className="text-accent hover:underline">
-                    govrelations@nexdynetechnologies.com
+                  <a href="mailto:govrelations@thalentechnologies.com" className="text-accent hover:underline">
+                    govrelations@thalentechnologies.com
                   </a>
                 </CardContent>
               </Card>

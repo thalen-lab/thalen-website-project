@@ -111,14 +111,14 @@ ${caseStudy.description}
 Category: ${caseStudy.category}
 Tags: ${caseStudy.tags.join(", ")}
 
-View the full case study: ${process.env.VITE_APP_URL || "https://nexdyne.manus.space"}${caseStudy.href}
+View the full case study: ${process.env.VITE_APP_URL || "https://thalen.manus.space"}${caseStudy.href}
 
 ---
 To manage your notification preferences, visit your account settings.
-To unsubscribe from these notifications, click here: ${process.env.VITE_APP_URL || "https://nexdyne.manus.space"}/settings/notifications
+To unsubscribe from these notifications, click here: ${process.env.VITE_APP_URL || "https://thalen.manus.space"}/settings/notifications
 
 Best regards,
-The NexDyne Team
+The Thalen Technologies Team
       `.trim();
 
       // Send notification using the built-in notification system

@@ -11,28 +11,28 @@ export default function DataAnalytics() {
     {
       icon: LineChart,
       title: 'Analytics Platform Implementation',
-      description: 'We implement FedRAMP-authorized analytics platforms (Tableau Government, Power BI Gov, Qlik Government) with real-time dashboards and mission intelligence.',
+      description: 'Optimize your existing analytics tools and dashboards first—or implement FedRAMP-authorized platforms (Tableau Government, Power BI Gov, Qlik Government) when compliance mandates it or your current tools lack needed capabilities.',
       benefits: ['FedRAMP platform selection', 'Custom dashboard development', 'Data source integration'],
       link: '/services/data-analytics/visualization'
     },
     {
       icon: Brain,
       title: 'AI/ML Model Development & Deployment',
-      description: 'Deploy machine learning models for predictive analytics, fraud detection, and operational optimization using government-approved AI platforms.',
+      description: 'Build custom ML models on your existing infrastructure and data science tools—or deploy FedRAMP AI/ML platforms (AWS SageMaker GovCloud, Azure ML Gov) when enterprise-scale model governance and compliance are required.',
       benefits: ['Explainable AI implementation', 'Model governance frameworks', 'Bias detection & mitigation'],
       link: '/services/data-analytics/ml-ai'
     },
     {
       icon: Database,
       title: 'Data Engineering & Pipeline Development',
-      description: 'Build scalable data pipelines using FedRAMP ETL tools (Informatica Gov, Talend, AWS Glue) for reliable, trusted data at operational scale.',
+      description: 'Modernize your existing data pipelines with custom ETL scripts and integrations—or implement FedRAMP ETL platforms (Informatica Gov, Talend, AWS Glue) when enterprise-scale data orchestration and governance are needed.',
       benefits: ['Automated data pipelines', 'Data quality frameworks', 'Real-time processing'],
       link: '/services/data-analytics/engineering'
     },
     {
       icon: BarChart3,
       title: 'Data Strategy & Governance',
-      description: 'Develop comprehensive data strategies aligned with mission objectives, including governance frameworks, data architecture, and analytics roadmaps.',
+      description: 'Develop comprehensive data strategies that maximize your existing data assets and infrastructure—with FedRAMP platform recommendations only when new capabilities align with mission objectives and compliance requirements.',
       benefits: ['6-week strategy assessment', '3-year implementation roadmap', 'Quick wins identification'],
       link: '/services/data-analytics/strategy'
     }
@@ -49,8 +49,8 @@ export default function DataAnalytics() {
   const keyDifferentiators = [
     {
       icon: Shield,
-      title: 'FedRAMP & StateRAMP Analytics Platforms',
-      description: 'Deep implementation experience with 30+ FedRAMP and StateRAMP-authorized analytics, BI, and AI/ML platforms across all major vendors.'
+      title: 'FedRAMP Analytics Platforms',
+      description: 'Deep implementation experience with 30+ FedRAMP-authorized analytics, BI, and AI/ML platforms across all major vendors.'
     },
     {
       icon: Users,
@@ -65,9 +65,24 @@ export default function DataAnalytics() {
   ];
 
   const governmentExperience = [
-    { agency: 'Department of Veterans Affairs', project: 'Predictive Analytics Platform', outcome: '60% faster claims processing' },
-    { agency: 'Department of Defense', project: 'Automated Data Pipelines', outcome: '$12M annual cost savings' },
-    { agency: 'Health & Human Services', project: 'Public Health Surveillance', outcome: 'Real-time disease tracking' }
+    { 
+      agency: 'Department of Veterans Affairs', 
+      project: 'Predictive Analytics Platform', 
+      outcome: '60% faster claims processing',
+      details: 'Deployed machine learning models on AWS SageMaker GovCloud to predict claim approval likelihood. Analyzed 2.3 million historical claims. Reduced average processing time from 28 days to 11 days. Improved first-pass approval rate from 68% to 84%.'
+    },
+    { 
+      agency: 'Department of Defense', 
+      project: 'Automated Data Pipelines', 
+      outcome: '$12M annual cost savings',
+      details: 'Built automated ETL pipelines using Informatica Gov to consolidate data from 14 legacy systems. Eliminated 85,000 hours of manual data processing annually. Reduced data latency from 48 hours to 15 minutes. Improved data accuracy to 99.7%.'
+    },
+    { 
+      agency: 'Health & Human Services', 
+      project: 'Public Health Surveillance', 
+      outcome: 'Real-time disease tracking',
+      details: 'Implemented Tableau Government platform with real-time data feeds from 50 state health departments. Built 12 interactive dashboards for epidemiological analysis. Reduced outbreak detection time from 7 days to 4 hours. Supports 300+ public health analysts.'
+    }
   ];
 
   const fedrampPlatforms = [
@@ -101,15 +116,15 @@ export default function DataAnalytics() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Government Data Analytics & Intelligence
+              Data Analytics & Intelligence
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help government agencies (federal, state, and local) implement FedRAMP and StateRAMP-authorized analytics platforms, AI/ML models, and data pipelines that transform massive datasets into mission-critical intelligence. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
+              Thalen Technologies delivers analytics through a dual approach: first, we optimize your existing data infrastructure and analytics capabilities—then implement FedRAMP-authorized BI platforms (Tableau Gov, Power BI Gov) when compliance requires it or new analytical capabilities are needed. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                  Request Analytics Assessment
+                  Request Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -144,7 +159,7 @@ export default function DataAnalytics() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Analytics Implementation Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end analytics capabilities from strategy to deployment, designed for government agencies (federal, state, and local) requiring FedRAMP and StateRAMP compliance and mission-critical reliability.
+              End-to-end analytics capabilities from strategy to deployment, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
             </p>
           </div>
 
@@ -200,7 +215,7 @@ export default function DataAnalytics() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Analytics Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
+              Experience implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
             </p>
           </div>
 
@@ -211,7 +226,8 @@ export default function DataAnalytics() {
                   <TrendingUp className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
-                  <p className="text-lg font-bold text-accent">{exp.outcome}</p>
+                  <p className="text-lg font-bold text-accent mb-4">{exp.outcome}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{exp.details}</p>
                 </CardContent>
               </Card>
             ))}
@@ -272,14 +288,14 @@ export default function DataAnalytics() {
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Data into Intelligence?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule an analytics assessment to discuss your agency's data challenges, evaluate FedRAMP platform options, and develop a roadmap for mission-critical analytics.
+            Contact us to discuss your agency's data analytics requirements and evaluate available platform options.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Analytics Assessment
+                Request Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

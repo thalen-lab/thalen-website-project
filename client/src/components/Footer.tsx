@@ -6,24 +6,24 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-4">
-              <img src={APP_LOGO} alt="Incentro" className="h-16" />
+              <img src={APP_LOGO} alt="Thalen Technologies" className="h-16" />
             </div>
             <p className="text-sm opacity-90 mb-4 max-w-sm">
               Govern Smart. The Automation Strategy Authority for government and enterprise.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-6 w-6" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                <Twitter className="h-5 w-5" />
+                <Twitter className="h-6 w-6" />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                <Facebook className="h-5 w-5" />
+                <Facebook className="h-6 w-6" />
               </a>
             </div>
           </div>
@@ -64,23 +64,23 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="border-t border-primary-foreground/20 pt-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm opacity-90">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm opacity-90">
             <div className="flex items-start space-x-3">
-              <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" />
+              <Phone className="h-6 w-6 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium mb-1">Phone</p>
                 <p>+1 (555) 123-4567</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" />
+              <Mail className="h-6 w-6 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium mb-1">Email</p>
-                <p>contact@nexdyne.tech</p>
+                <p>contact@thalen.tech</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
+              <MapPin className="h-6 w-6 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium mb-1">Headquarters</p>
                 <p>Washington, DC Metro Area</p>
@@ -91,7 +91,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-75">
-          <p>© 2024 Incentro. All rights reserved.</p>
+          <p>© 2024 Thalen Technologies. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>

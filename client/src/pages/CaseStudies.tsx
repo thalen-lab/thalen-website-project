@@ -32,7 +32,7 @@ export default function CaseStudies() {
     {
       category: 'Federal Government',
       title: 'Federal Agency Achieves 85% Process Automation',
-      description: 'Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
+      description: 'Implemented UiPath RPA platform with FedRAMP authorization for federal agency, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
       tags: ['RPA', 'FedRAMP'],
       image: '/rocket-federal.webp',
       href: '/case-studies/federal-automation'
@@ -40,7 +40,7 @@ export default function CaseStudies() {
     {
       category: 'Defense',
       title: 'DoD Manufacturing Facility Achieves 99.2% Uptime',
-      description: 'Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.',
+      description: 'Implemented FedRAMP-authorized predictive maintenance platform for DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.',
       tags: ['Cybersecurity', 'IoT', 'CMMC'],
       image: '/manufacturing-security.jpg',
       href: '/case-studies/dod-manufacturing'
@@ -48,7 +48,7 @@ export default function CaseStudies() {
     {
       category: 'Federal Government',
       title: 'VA Medical Center Integrates 12 Legacy Systems',
-      description: 'Integrated 12 disparate healthcare systems using FedRAMP-authorized iPaaS platform. Reduced administrative burden by 60% for 8,500 staff members.',
+      description: 'Integrated 12 disparate VA healthcare systems using FedRAMP-authorized iPaaS platform for federal operations. Reduced administrative burden by 60% for 8,500 staff members.',
       tags: ['Integration', 'HIPAA', 'FedRAMP'],
       image: '/healthcare-legacy-it.jpg',
       href: '/case-studies/va-healthcare'
@@ -65,7 +65,7 @@ export default function CaseStudies() {
       category: 'State Government',
       title: 'State Energy Commission Reduces Grid Outages 65%',
       description: 'Deployed StateRAMP-authorized smart grid platform for state energy commission. Reduced outages by 65% across 4.2M customer service area.',
-      tags: ['Automation', 'IoT', 'StateRAMP'],
+      tags: ['Automation', 'IoT', 'StateRAMP/GovRAMP'],
       image: '/images/case-studies/energy-grid-control.jpg',
       href: '/case-studies/state-energy-commission'
     },
@@ -213,10 +213,10 @@ export default function CaseStudies() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Proven Transformation Results
+              Case Studies
             </h1>
             <p className="text-xl md:text-2xl opacity-90">
-              Real-world government case studies demonstrating FedRAMP and StateRAMP platform implementation expertise across federal, state, and local agencies.
+              Real-world government case studies demonstrating platform implementation expertise. FedRAMP serves federal agencies; StateRAMP/GovRAMP serves state, local, and tribal governments.
             </p>
           </div>
         </div>
@@ -229,8 +229,8 @@ export default function CaseStudies() {
             {[
               { value: '15+', label: 'Years Government Experience' },
               { value: '$45M+', label: 'Government Contracts' },
-              { value: '50+', label: 'FedRAMP Platforms' },
-              { value: '100%', label: 'ATO Success Rate' }
+              { value: '50+', label: 'Authorized Platforms' },
+              { value: '100%', label: 'Authorization Success Rate' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-accent mb-2">{stat.value}</div>
@@ -409,12 +409,12 @@ export default function CaseStudies() {
       {/* CTA */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Write Your Success Story?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Discover how Thalen Technologies's proven methodology can deliver transformative results for your organization.
+            Request an assessment to discuss your agency's technology requirements.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-            Schedule Strategic Assessment
+            Request Assessment
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

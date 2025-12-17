@@ -1,4 +1,4 @@
-# NexDyne Website Comprehensive Audit
+# Thalen Website Comprehensive Audit
 
 ## Main Pages
 - [x] / (Home)

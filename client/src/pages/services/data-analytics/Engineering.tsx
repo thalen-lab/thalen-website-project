@@ -69,7 +69,7 @@ export default function Engineering() {
               Data Engineering & Pipeline Development
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Analytics platforms are only as good as the data that feeds them. If your data is stuck in legacy systems, updated manually, or riddled with quality issues, your analytics will fail. Thalen Technologies builds enterprise-grade data pipelines using FedRAMP and StateRAMP-authorized ETL tools that automate data movement, enforce quality standards, and deliver trusted data to your analytics platforms—24/7, with zero manual intervention. From batch ETL to real-time streaming, we engineer the data infrastructure that powers mission-critical analytics for government agencies (federal, state, and local).
+              Analytics platforms are only as good as the data that feeds them. If your data is stuck in legacy systems, updated manually, or riddled with quality issues, your analytics will fail. Thalen Technologies builds enterprise-grade data pipelines that automate data movement, enforce quality standards, and deliver trusted data to your analytics platforms—24/7, with zero manual intervention. From batch ETL to real-time streaming, we engineer the data infrastructure that powers mission-critical analytics.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -370,7 +370,7 @@ export default function Engineering() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">Cloud Infrastructure & Modernization</h3>
                 <p className="text-muted-foreground mb-4">
-                  Host your data pipelines on FedRAMP and StateRAMP-authorized cloud platforms. We architect scalable, secure cloud infrastructure optimized for data workloads with auto-scaling and disaster recovery.
+                  Host your data pipelines on FedRAMP-authorized cloud platforms. We architect scalable, secure cloud infrastructure optimized for data workloads with auto-scaling and disaster recovery.
                 </p>
                 <Link href="/services/cloud">
                   <Button variant="outline" className="w-full">

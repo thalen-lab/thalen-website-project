@@ -69,7 +69,7 @@ export default function Visualization() {
               Real-Time Analytics & Visualization
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Government operations (federal, state, and local) do not run on last night's batch reports. When threats emerge, operations unfold, or crises develop, decision-makers need real-time intelligence—not data that is hours or days old. Thalen Technologies builds mission-critical analytics platforms using FedRAMP and StateRAMP-authorized tools that deliver actionable insights in real-time with government-grade security. From intelligence analysis to operational command centers, our dashboards turn massive data streams into clear, actionable intelligence.
+              Federal operations do not run on last night's batch reports. When threats emerge, operations unfold, or crises develop, decision-makers need real-time intelligence—not data that is hours or days old. Thalen Technologies builds mission-critical analytics platforms that deliver actionable insights in real-time with government-grade security. From intelligence analysis to operational command centers, our dashboards turn massive data streams into clear, actionable intelligence.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -330,7 +330,7 @@ export default function Visualization() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Real-Time Analytics for Your Mission?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a demo. We will show you live examples of real-time analytics platforms we have built for government agencies (federal, state, and local) and discuss your specific requirements.
+            Schedule a demo. We will show you live examples of real-time analytics platforms we have built for government agencies and discuss your specific requirements.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -85,13 +85,6 @@
       "when": 1765681408767,
       "tag": "0011_ancient_pepper_potts",
       "breakpoints": true
-    },
-    {
-      "idx": 12,
-      "version": "5",
-      "when": 1765957136566,
-      "tag": "0012_bored_moondragon",
-      "breakpoints": true
     }
   ]
 }
