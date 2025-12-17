@@ -3447,3 +3447,6 @@
 - [x] Update navbar to add Core Capabilities link
 - [x] Update homepage What We Do section CTA to link to Core Capabilities page
 - [x] Add route for Core Capabilities page in App.tsx
+
+## Phase 81: Add How We Deliver Section to Homepage
+- [x] Add "How We Deliver" compliance-first approach section before Case Studies

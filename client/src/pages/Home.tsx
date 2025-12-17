@@ -274,11 +274,8 @@ export default function Home() {
       */}
 
 
-      {/* Case Studies Section - Incentro Style */}
-      <CaseStudyShowcase />
-
-      {/* Compliance-First Approach Section */}
-      <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-slate-50 to-white">
+      {/* How We Deliver - Compliance-First Approach Section */}
+      <section className="py-20 md:py-24 lg:py-28 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
@@ -292,7 +289,7 @@ export default function Home() {
               <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
                 Compliance-First Approach
               </h2>
-              <p className="text-lg text-slate-700 leading-relaxed mb-8">
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, CMMC, FISMA, HIPAA, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.
               </p>
               
@@ -310,7 +307,7 @@ export default function Home() {
                   variant="outline" 
                   size="lg"
                   className="border-slate-300 text-slate-700 hover:bg-slate-100"
-                  onClick={() => window.location.href = '/services/cybersecurity'}
+                  onClick={() => window.location.href = '/about#awards'}
                 >
                   Awards and recognition
                 </Button>
@@ -344,6 +341,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Case Studies Section - Incentro Style */}
+      <CaseStudyShowcase />
 
       {/* Certifications Section - Featured + Grid Layout (GovTech Best Practice) */}
       <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
