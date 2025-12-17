@@ -3435,3 +3435,4 @@
 
 ## Phase 79: Remove 15+ Years Metric from What We Do Section
 - [x] Remove floating "15+ Years Team Experience" metric card from What We Do section image
+- [x] Replace image in What we do section with tech-solutions.jpg

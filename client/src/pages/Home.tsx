@@ -167,8 +167,8 @@ export default function Home() {
             >
               <div className="relative overflow-hidden shadow-2xl rounded-lg">
                 <ImageWithLoader
-                  src="/security-operations-team.jpg"
-                  alt="Security operations team monitoring critical infrastructure"
+                  src="/healthcare-team-meeting.webp"
+                  alt="Healthcare IT professionals collaborating in a meeting with data analytics display"
                   className="w-full h-auto"
                 />
                 {/* Gradient overlay for depth */}
