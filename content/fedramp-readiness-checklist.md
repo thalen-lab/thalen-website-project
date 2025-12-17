@@ -1,7 +1,7 @@
 # FedRAMP Readiness Checklist
 ## A Comprehensive Guide to Federal Risk and Authorization Management Program Compliance
 
-**Published by NexDyne Technology**  
+**Published by Thalen Technologies**  
 *Intelligence, Delivered*
 
 ---
@@ -349,9 +349,9 @@ Track these key performance indicators throughout your FedRAMP journey:
 
 ---
 
-## How NexDyne Can Help
+## How Thalen Technologies Can Help
 
-NexDyne Technology specializes in guiding organizations through the complete FedRAMP authorization process. Our services include:
+Thalen Technologies specializes in guiding organizations through the complete FedRAMP authorization process. Our services include:
 
 ### **FedRAMP Readiness Assessment**
 Comprehensive gap analysis against FedRAMP requirements with detailed remediation roadmap and cost estimates.
@@ -378,11 +378,11 @@ Ongoing support maintaining FedRAMP compliance, submitting monthly deliverables,
 
 ## Next Steps
 
-Ready to begin your FedRAMP journey? Contact NexDyne Technology for a complimentary readiness assessment:
+Ready to begin your FedRAMP journey? Contact Thalen Technologies for a complimentary readiness assessment:
 
 **Schedule Your Assessment:**  
-Visit: www.nexdyne.com/contact  
-Email: federal@nexdyne.com  
+Visit: www.thalentech.com/contact  
+Email: federal@thalentech.com  
 Phone: (202) 555-0100
 
 **Download Additional Resources:**
@@ -394,4 +394,4 @@ Phone: (202) 555-0100
 
 *This guide is provided for informational purposes and reflects FedRAMP requirements as of 2024. Requirements may change. Always consult official FedRAMP documentation and guidance for the most current information.*
 
-**© 2024 NexDyne Technology. All rights reserved.**
+**© 2024 Thalen Technologies. All rights reserved.**

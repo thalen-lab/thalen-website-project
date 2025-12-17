@@ -1,7 +1,7 @@
 # CMMC Implementation Guide
 ## Cybersecurity Maturity Model Certification for Defense Industrial Base
 
-**Published by NexDyne Technology**  
+**Published by Thalen Technologies**  
 *Intelligence, Delivered*
 
 ---
@@ -566,9 +566,9 @@ While CMMC compliance requires significant investment, the returns are substanti
 
 ---
 
-## How NexDyne Can Help
+## How Thalen Technologies Can Help
 
-NexDyne Technology provides end-to-end CMMC implementation and certification support for defense contractors:
+Thalen Technologies provides end-to-end CMMC implementation and certification support for defense contractors:
 
 ### **CMMC Gap Assessment**
 Comprehensive evaluation of your current security posture against CMMC requirements with detailed remediation roadmap and cost estimates.
@@ -607,18 +607,18 @@ Comprehensive evaluation of your current security posture against CMMC requireme
 - 100% client retention rate
 
 **Client Success Story:**
-*"NexDyne guided us through CMMC Level 2 certification in just 8 months. Their expertise saved us over $200,000 in assessment costs and helped us win a $15M DoD contract. The ROI was immediate."*  
+*"Thalen Technologies guided us through CMMC Level 2 certification in just 8 months. Their expertise saved us over $200,000 in assessment costs and helped us win a $15M DoD contract. The ROI was immediate."*  
 — CTO, Mid-Atlantic Defense Contractor
 
 ---
 
 ## Next Steps
 
-Ready to begin your CMMC journey? NexDyne Technology offers a complimentary CMMC readiness assessment to help you understand your current posture and path to certification.
+Ready to begin your CMMC journey? Thalen Technologies offers a complimentary CMMC readiness assessment to help you understand your current posture and path to certification.
 
 **Schedule Your Free Assessment:**  
-Visit: www.nexdyne.com/contact  
-Email: cmmc@nexdyne.com  
+Visit: www.thalentech.com/contact  
+Email: cmmc@thalentech.com  
 Phone: (202) 555-0100
 
 **Download Additional Resources:**
@@ -634,4 +634,4 @@ Join our monthly "CMMC Essentials for Defense Contractors" workshop to learn imp
 
 *This guide reflects CMMC 2.0 requirements as of 2024. Requirements may evolve as the program matures. Always consult official CMMC-AB and DoD guidance for the most current information.*
 
-**© 2024 NexDyne Technology. All rights reserved.**
+**© 2024 Thalen Technologies. All rights reserved.**

@@ -10,7 +10,7 @@ A major federal agency struggled with manual, paper-based workflows that created
 
 **Solution:**
 
-NexDyne implemented a comprehensive UiPath RPA platform integrated with FedRAMP-authorized infrastructure. The solution automated 85% of manual workflows across the agency, including document processing, data validation, and inter-departmental communications. All automation processes were designed to meet federal security standards from the ground up.
+Thalen Technologies implemented a comprehensive UiPath RPA platform integrated with FedRAMP-authorized infrastructure. The solution automated 85% of manual workflows across the agency, including document processing, data validation, and inter-departmental communications. All automation processes were designed to meet federal security standards from the ground up.
 
 **Results:**
 
@@ -36,7 +36,7 @@ A Department of Defense manufacturing facility faced frequent equipment downtime
 
 **Solution:**
 
-NexDyne deployed a FedRAMP-authorized predictive maintenance platform that monitors equipment health in real time. The system uses advanced sensors and machine learning algorithms to detect anomalies and predict potential failures days or weeks in advance. Maintenance teams receive automated alerts with specific recommended actions, allowing them to schedule repairs during planned downtime.
+Thalen Technologies deployed a FedRAMP-authorized predictive maintenance platform that monitors equipment health in real time. The system uses advanced sensors and machine learning algorithms to detect anomalies and predict potential failures days or weeks in advance. Maintenance teams receive automated alerts with specific recommended actions, allowing them to schedule repairs during planned downtime.
 
 **Results:**
 
@@ -62,7 +62,7 @@ A Veterans Affairs medical center operated 12 separate legacy healthcare systems
 
 **Solution:**
 
-NexDyne implemented a FedRAMP iPaaS (Integration Platform as a Service) solution that unified all 12 legacy systems under a single interface. The platform enables seamless data exchange between systems while maintaining HIPAA compliance and federal security standards. Staff can now access all necessary information through one portal without switching between applications.
+Thalen Technologies implemented a FedRAMP iPaaS (Integration Platform as a Service) solution that unified all 12 legacy systems under a single interface. The platform enables seamless data exchange between systems while maintaining HIPAA compliance and federal security standards. Staff can now access all necessary information through one portal without switching between applications.
 
 **Results:**
 
