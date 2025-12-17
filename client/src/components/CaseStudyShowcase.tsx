@@ -78,8 +78,13 @@ export default function CaseStudyShowcase() {
   const featuredCaseStudies = caseStudies.slice(0, 3);
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-slate-50 to-white">
-      <div className="container">
+    <section className="relative py-16 md:py-20 lg:py-24 bg-[oklch(0.22_0.06_250)] overflow-hidden">
+      {/* Subtle gradient overlay for depth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.18_0.06_250)] via-[oklch(0.22_0.06_250)] to-[oklch(0.28_0.05_250)]"></div>
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+      
+      <div className="container relative z-10">
         {/* Header */}
         <motion.div 
           className="grid lg:grid-cols-2 gap-8 mb-10 md:mb-12 lg:mb-16"
@@ -89,13 +94,13 @@ export default function CaseStudyShowcase() {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <p className="text-sm font-medium text-orange-600 mb-3">Case Studies</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-3 uppercase tracking-wider text-sm">Case Studies</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
               Proven Government Results
             </h2>
           </div>
           <div className="flex flex-col justify-end">
-            <p className="text-lg text-slate-600">
+            <p className="text-lg text-white/80">
               Real-world case studies demonstrating measurable mission impact. FedRAMP serves federal agencies; StateRAMP/GovRAMP serves state, local, and tribal governments.
             </p>
           </div>
@@ -112,7 +117,7 @@ export default function CaseStudyShowcase() {
           {featuredCaseStudies.map((study) => (
             <Card 
               key={study.id}
-              className="bg-white border-2 border-slate-200 rounded-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group flex flex-col p-0"
+              className="bg-white border-0 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col p-0 hover:-translate-y-1"
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden bg-slate-200">
@@ -122,15 +127,17 @@ export default function CaseStudyShowcase() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-medium text-slate-900 rounded-full">
+                  <span className="inline-block px-3 py-1 bg-[oklch(0.22_0.06_250)]/90 backdrop-blur-sm text-xs font-medium text-white rounded-full">
                     {study.category}
                   </span>
                 </div>
+                {/* Orange accent bar at top */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)]"></div>
               </div>
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2">
+                <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3 line-clamp-2">
                   {study.title}
                 </h3>
                 <p className="text-slate-600 mb-4 line-clamp-3 flex-grow">
@@ -138,7 +145,7 @@ export default function CaseStudyShowcase() {
                 </p>
                 <Link 
                   href={study.link}
-                  className="inline-flex items-center p-0 h-auto text-slate-900 hover:text-orange-600 font-medium group/btn transition-colors"
+                  className="inline-flex items-center p-0 h-auto text-[oklch(0.20_0.05_250)] hover:text-[oklch(0.65_0.18_55)] font-medium group/btn transition-colors"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
@@ -158,12 +165,16 @@ export default function CaseStudyShowcase() {
         >
           <Link 
             href="/case-studies"
-            className="inline-flex items-center justify-center gap-2 h-10 px-6 rounded-md bg-slate-900 hover:bg-slate-800 text-white font-medium transition-colors"
+            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white font-semibold transition-all shadow-lg hover:shadow-xl"
           >
             View All Cases
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
       </div>
+
+      {/* Bottom gradient fade to next section */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[oklch(0.97_0.01_250)] to-transparent"></div>
     </section>
   );
 }

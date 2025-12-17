@@ -112,7 +112,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-[oklch(0.18_0.06_250)]">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -121,30 +121,37 @@ export default function HeroCarousel() {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Background Image with Overlay */}
+          {/* Background Image with Signature Blue Overlay */}
           <div className="absolute inset-0">
             <img
               src={slide.image}
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
+            {/* Signature blue gradient overlay matching Our Approach */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.18_0.06_250)]/95 via-[oklch(0.22_0.06_250)]/85 to-[oklch(0.28_0.05_250)]/70" />
+            {/* Additional subtle gradient for depth */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[oklch(0.18_0.06_250)]/50" />
           </div>
 
           {/* Content */}
           <div className="relative h-full flex items-center">
             <div className="container">
               <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
+                {/* Orange accent label */}
+                <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-3 uppercase tracking-wider text-sm">
+                  Intelligence, Delivered
+                </p>
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
                   {slide.title}
                 </h1>
-                <p className="text-base md:text-lg lg:text-xl text-slate-200 mb-6 md:mb-8 leading-relaxed">
+                <p className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">
                   {slide.subtitle}
                 </p>
                 {slide.cta && (
                   <Button
                     size="lg"
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 md:px-8 py-4 md:py-6 text-base md:text-lg"
+                    className="bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white font-semibold px-6 md:px-8 py-4 md:py-6 text-base md:text-lg shadow-lg hover:shadow-xl transition-all"
                     onClick={() => (window.location.href = slide.cta!.link)}
                   >
                     {slide.cta.text}
@@ -156,23 +163,23 @@ export default function HeroCarousel() {
         </div>
       ))}
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows with orange accent on hover */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-[oklch(0.65_0.18_55)]/80 backdrop-blur-sm text-white p-3 rounded-full transition-all"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-[oklch(0.65_0.18_55)]/80 backdrop-blur-sm text-white p-3 rounded-full transition-all"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Dots Navigation */}
+      {/* Dots Navigation with orange active state */}
       <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
         {slides.map((_, index) => (
           <button
@@ -180,13 +187,16 @@ export default function HeroCarousel() {
             onClick={() => goToSlide(index)}
             className={`transition-all rounded-full ${
               index === currentSlide
-                ? "bg-orange-500 w-12 h-3"
+                ? "bg-[oklch(0.65_0.18_55)] w-12 h-3"
                 : "bg-white/40 hover:bg-white/60 w-3 h-3"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
+
+      {/* Bottom gradient fade to next section */}
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent"></div>
     </div>
   );
 }
