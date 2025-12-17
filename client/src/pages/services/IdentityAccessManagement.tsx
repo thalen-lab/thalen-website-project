@@ -90,7 +90,7 @@ export default function IdentityAccessManagement() {
               Identity & Access Management (IAM)
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Implement Zero Trust identity solutions with PIV/CAC authentication, privileged access management, and automated governance. Thalen Technologies delivers government-grade IAM that meets NIST 800-63 identity assurance requirements (federal, state, local) while improving user experience.
+              Implement Zero Trust identity solutions with PIV/CAC authentication, privileged access management, and automated governance. NexDyne delivers government-grade IAM that meets NIST 800-63 identity assurance requirements (federal, state, local) while improving user experience.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -230,7 +230,7 @@ export default function IdentityAccessManagement() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Implement Zero Trust Identity</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule an IAM assessment and discover how Thalen Technologies can deliver secure, compliant identity and access management for your government environment.
+            Schedule an IAM assessment and discover how NexDyne can deliver secure, compliant identity and access management for your government environment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

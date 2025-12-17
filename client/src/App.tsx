@@ -24,14 +24,7 @@ import Methodology from "./pages/Methodology";
 import ServiceComparison from "./pages/ServiceComparison";
 import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
-import CoreCapabilities from "./pages/CoreCapabilities";
 import StateLocalSolutions from "./pages/federal-solutions/StateLocal";
-import FedRAMP from "./pages/FedRAMP";
-import FedRAMPCompliance from "./pages/compliance/FedRAMP";
-import StateRAMPCompliance from "./pages/compliance/StateRAMP";
-import CMMC from "./pages/CMMC";
-import GovCloudMigration from "./pages/GovCloudMigration";
-import PastPerformance from "./pages/PastPerformance";
 import StateROICalculator from "./pages/federal-solutions/StateROICalculator";
 import StateComplianceChecklist from "./pages/federal-solutions/StateComplianceChecklist";
 import StateProcurementGuide from "./pages/federal-solutions/StateProcurementGuide";
@@ -46,10 +39,6 @@ import ContractVehicleComparison from "./pages/ContractVehicleComparison";
 import ComplianceRoadmap from "./pages/ComplianceRoadmap";
 import MobileContact from "./pages/MobileContact";
 import MobileAssessment from "./pages/MobileAssessment";
-import ContractVehicles from "./pages/ContractVehicles";
-import ResourceDownloadFedRAMP from "./pages/ResourceDownloadFedRAMP";
-import ResourceDownloadCMMC from "./pages/ResourceDownloadCMMC";
-import ResourceDownloadCloudMigration from "./pages/ResourceDownloadCloudMigration";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -57,7 +46,6 @@ import DataAnalyticsService from "./pages/services/DataAnalytics";
 import AnalyticsService from "./pages/services/Analytics";
 import Cloud from "./pages/services/Cloud";
 import CybersecurityService from "./pages/services/Cybersecurity";
-import ATOSupportService from "./pages/services/ATOSupport";
 import AppDevelopmentService from "./pages/services/AppDevelopment";
 import CustomSoftwareService from "./pages/services/CustomSoftware";
 
@@ -103,8 +91,6 @@ import IdentityAccessManagement from "./pages/services/IdentityAccessManagement"
 import SecurityOperationsCenter from "./pages/services/SecurityOperationsCenter";
 import IncidentResponse from "./pages/services/IncidentResponse";
 import ZeroTrustArchitecture from "./pages/services/ZeroTrustArchitecture";
-import ISO27001Service from "./pages/services/ISO27001";
-import FedRAMPService from "./pages/services/FedRAMP";
 
 // Application Development Subpages
 import ApplicationDevelopment from "./pages/services/ApplicationDevelopment";
@@ -148,9 +134,6 @@ import HHSPublicHealthCase from "./pages/case-studies/HHSPublicHealth";
 import AerospaceDigitalTwinCase from "./pages/case-studies/AerospaceDigitalTwin";
 import StateDOTCase from "./pages/case-studies/StateDOT";
 import CountyHealthCase from "./pages/case-studies/CountyHealth";
-import FederalAgencyAutomation from "./pages/case-studies/FederalAgencyAutomation";
-import DoDManufacturingUptime from "./pages/case-studies/DoDManufacturingUptime";
-import VALegacyIntegration from "./pages/case-studies/VALegacyIntegration";
 import CaseStudies from "./pages/CaseStudies";
 
 // Insights Pages
@@ -173,9 +156,6 @@ import EventForm from "./pages/admin/EventForm";
 import AdminMediaLibrary from "./pages/admin/MediaLibrary";
 import AdminScheduledContent from "./pages/admin/ScheduledContent";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import Security from "./pages/Security";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -199,17 +179,10 @@ function Router() {
       <Route path={"/compare-services"} component={ServiceComparison} />
       <Route path={"/package-builder"} component={PackageBuilder} />
       <Route path={"/federal-solutions"} component={FederalSolutions} />
-      <Route path={"/core-capabilities"} component={CoreCapabilities} />
-      <Route path="/federal-solutions/fedramp" component={FedRAMP} />
-      <Route path="/compliance/fedramp" component={FedRAMPCompliance} />
-      <Route path="/compliance/stateramp" component={StateRAMPCompliance} />
-      <Route path="/federal-solutions/cmmc" component={CMMC} />
-      <Route path="/federal-solutions/cloud-migration" component={GovCloudMigration} />
-      <Route path="/federal-solutions/state-local" component={StateLocalSolutions} />
+      <Route path={"/federal-solutions/state-local"} component={StateLocalSolutions} />
       <Route path={"/federal-solutions/state-local/roi-calculator"} component={StateROICalculator} />
       <Route path={"/federal-solutions/state-local/compliance-checklist"} component={StateComplianceChecklist} />
       <Route path={"/federal-solutions/state-local/procurement-guide"} component={StateProcurementGuide} />
-      <Route path={"/federal-solutions/past-performance"} component={PastPerformance} />
       <Route path={"/case-studies/state-attorney-general"} component={StateAttorneyGeneralCase} />
       <Route path={"/case-studies/state-energy-commission"} component={StateEnergyCommissionCase} />
       <Route path={"/case-studies/county-health-department"} component={CountyHealthDepartmentCase} />
@@ -219,12 +192,9 @@ function Router() {
       <Route path={"/government-resources"} component={GovernmentResources} />
       <Route path={"/contract-vehicle-comparison"} component={ContractVehicleComparison} />
       <Route path={"/compliance-roadmap"} component={ComplianceRoadmap} />
-      <Route path={"/contract-vehicles"} component={ContractVehicles} />
-      <Route path={"/resources/download/fedramp-readiness-checklist"} component={ResourceDownloadFedRAMP} />
-      <Route path={"/resources/download/cmmc-implementation-guide"} component={ResourceDownloadCMMC} />
-      <Route path={"/resources/download/cloud-migration-playbook"} component={ResourceDownloadCloudMigration} />
-
-      {/* Service Pages */}      <Route path={"/services/automation"} component={AutomationService} />
+      
+      {/* Service Routes */}
+      <Route path={"/services/automation"} component={AutomationService} />
       <Route path={"/services/automation/rpa"} component={RPAService} />
       <Route path={"/services/automation/rpa/process-assessment"} component={ProcessAssessment} />
       <Route path={"/services/automation/rpa/platform-implementation"} component={PlatformImplementation} />
@@ -247,9 +217,6 @@ function Router() {
       <Route path={"/services/infrastructure-as-code"} component={InfrastructureAsCode} />
       <Route path={"/services/disaster-recovery"} component={DisasterRecovery} />
       <Route path={"/services/cybersecurity"} component={CybersecurityService} />
-      <Route path={"/services/ato-support"} component={ATOSupportService} />
-      <Route path="/services/iso-27001" component={ISO27001Service} />
-      <Route path="/services/fedramp" component={FedRAMPService} />
       <Route path={"/services/security-assessment"} component={SecurityAssessment} />
       <Route path={"/services/penetration-testing"} component={PenetrationTesting} />
       <Route path={"/services/identity-access-management"} component={IdentityAccessManagement} />
@@ -307,9 +274,6 @@ function Router() {
       <Route path={"/case-studies/hhs-public-health"} component={HHSPublicHealthCase} />
       <Route path={"/case-studies/state-dot"} component={StateDOTCase} />
       <Route path={"/case-studies/county-health"} component={CountyHealthCase} />
-      <Route path={"/case-studies/federal-agency-automation"} component={FederalAgencyAutomation} />
-      <Route path={"/case-studies/dod-manufacturing-uptime"} component={DoDManufacturingUptime} />
-      <Route path={"/case-studies/va-legacy-integration"} component={VALegacyIntegration} />
       
       {/* Insights Routes */}
       <Route path={"/insights/roi-methodology"} component={ROIMethodologyInsight} />
@@ -407,11 +371,6 @@ function Router() {
           </ProtectedRoute>
         )}
       </Route>
-      
-      {/* Legal Pages */}
-      <Route path="/privacy" component={Privacy} />
-      <Route path="/terms" component={Terms} />
-      <Route path="/security" component={Security} />
       
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

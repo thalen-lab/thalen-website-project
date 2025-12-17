@@ -3,12 +3,9 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
-import ResultsAtGlance from '@/components/ResultsAtGlance';
+import CaseStudyShowcase from '@/components/CaseStudyShowcase';
 import Footer from '@/components/Footer';
-import SmallBusinessCertifications from '@/components/SmallBusinessCertifications';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
-import HeroCarousel from '@/components/HeroCarousel';
-import WhoWeAreSection from '@/components/WhoWeAreSection';
 import { 
   ArrowRight, 
   TrendingUp, 
@@ -18,10 +15,14 @@ import {
   Cpu,
   Code,
   Users,
-  Search,
+  ChevronLeft,
+  ChevronRight,
+  ShieldCheck,
+  Award,
+  FileCheck,
   Lock,
-  Layers,
-  Award
+  Key,
+  Heart
 } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { motion } from 'framer-motion';
@@ -33,38 +34,38 @@ export default function Home() {
   const services = [
     {
       icon: Cpu,
-      title: 'Process Automation & Optimization',
-      description: 'Modernize your existing workflows with RPA and orchestration—or implement FedRAMP platforms (UiPath Gov, Automation Anywhere Gov) when needed. Includes legacy system integration, ATO support, and compliance documentation.',
+      title: 'Government Process Automation',
+      description: 'Comprehensive automation services including RPA implementation, FedRAMP platform integration (50+ connectors), and workflow orchestration across government agencies with ATO documentation and compliance support.',
       href: '/services/automation'
     },
     {
       icon: BarChart3,
-      title: 'Data Analytics & Intelligence',
-      description: 'Optimize your existing data infrastructure and analytics capabilities—or implement FedRAMP BI platforms (Tableau Gov, Power BI Gov) when compliance requires it. Includes data strategy, governance, and custom dashboards.',
+      title: 'Government Data Analytics Implementation',
+      description: 'Implement secure analytics solutions using FedRAMP-authorized BI tools with data governance, compliance controls, and agency-specific customization.',
       href: '/services/data-analytics'
     },
     {
       icon: Cloud,
-      title: 'Cloud Infrastructure & Modernization',
-      description: 'Modernize on-premises infrastructure or migrate to FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it. Includes hybrid architecture, legacy system integration, and ATO support.',
+      title: 'FedRAMP Cloud Migration & Integration',
+      description: 'Migrate to AWS GovCloud, Azure Government, or Salesforce Gov Cloud with ATO support, security compliance, and multi-cloud orchestration.',
       href: '/services/cloud'
     },
     {
       icon: Shield,
-      title: 'Cybersecurity & Compliance',
-      description: 'Strengthen your existing security posture or implement FedRAMP security platforms when compliance mandates it. Includes gap analysis, CMMC/FISMA compliance, zero-trust architecture, and ATO documentation.',
+      title: 'Compliance & Security Implementation',
+      description: 'Achieve FedRAMP, CMMC, and FISMA compliance through gap analysis, security controls implementation, and audit preparation support.',
       href: '/services/cybersecurity'
     },
     {
       icon: Code,
-      title: 'Application Development & Integration',
-      description: 'Integrate your existing systems with modern APIs and workflows—or connect FedRAMP platforms (Salesforce Gov, ServiceNow, Workday) when needed. Vendor-neutral architecture ensures no lock-in.',
+      title: 'Government Systems Integration',
+      description: 'Connect 50+ FedRAMP platforms (Salesforce Gov Cloud, ServiceNow, Workday) with legacy systems using secure APIs, vendor-neutral architecture, and ATO-ready patterns.',
       href: '/services/system-integration'
     },
     {
       icon: Users,
-      title: 'Digital Transformation & Modernization',
-      description: 'Transform your existing operations through process redesign, change management, and technology optimization—with FedRAMP platform implementation when compliance requires it. Includes TMF support and vendor-neutral guidance.',
+      title: 'Federal IT Modernization',
+      description: 'Vendor-neutral platform selection, legacy system modernization, change management, and Technology Modernization Fund (TMF) support for agencies.',
       href: '/services/digital-transformation'
     }
   ];
@@ -89,47 +90,56 @@ export default function Home() {
     {
       category: 'Healthcare',
       title: 'Healthcare System Integrates 12 Legacy Systems',
-      description: 'Integrated 12 legacy healthcare systems with FedRAMP-authorized platforms, delivering real-time patient data access and 170% ROI over three years with measurable productivity gains.',
-      metric: '170%',
-      metricLabel: 'ROI (3 Years)',
+      description: 'Integrated 12 legacy healthcare systems with FedRAMP-authorized platforms, delivering real-time patient data access and $12M annual operational cost savings.',
+      metric: '$12M',
+      metricLabel: 'Annual Savings',
       href: '/case-studies/hhs-public-health'
     }
   ];
 
 
 
-  // Featured certifications (top 3 most important for government/enterprise)
-  const featuredCertifications = [
+  const certifications = [
     {
-      name: 'FedRAMP & StateRAMP Implementation',
-      description: 'Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.',
+      name: 'FedRAMP & StateRAMP Expert',
       icon: Shield,
-      image: '/fedramp-capitol.jpg',
-      href: '/services/fedramp'
+      description: 'Deep expertise implementing FedRAMP and StateRAMP-authorized platforms for federal, state, and local agencies at Moderate and High impact levels with proven ATO support.'
     },
     {
-      name: 'ISO 27001 Implementation Services',
-      description: 'Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.',
-      icon: Shield,
-      image: '/iso-logo.jpg',
-      href: '/services/iso-27001'
+      name: 'CMMC Compliance Partner',
+      icon: ShieldCheck,
+      description: 'Certified to help defense contractors achieve CMMC Level 2 and Level 3 compliance through gap analysis, controls implementation, and audit preparation.'
     },
     {
-      name: 'CMMC Consulting Services',
-      description: 'Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis, controls implementation, and audit preparation.',
-      icon: Shield,
-      image: '/cmmc-consulting.jpg',
-      href: '/cmmc'
+      name: 'ISO 27001 Certified',
+      icon: Award,
+      description: 'ISO 27001:2022 certified organization with proven methodologies for implementing information security management systems for government clients.'
+    },
+    {
+      name: 'NIST Framework Expertise',
+      icon: FileCheck,
+      description: 'Extensive experience implementing NIST Cybersecurity Framework v2.0 controls and security assessments for federal and defense agencies.'
+    },
+    {
+      name: 'GSA Schedule Holder',
+      icon: Lock,
+      description: 'GSA IT Schedule 70 contract holder providing streamlined procurement for government agencies seeking implementation and integration services.'
+    },
+    {
+      name: 'ATO Support Services',
+      icon: Key,
+      description: 'Proven track record supporting agencies through FISMA Authority to Operate (ATO) processes with security documentation and compliance assessments.'
+    },
+    {
+      name: 'CJIS & State Compliance',
+      icon: Heart,
+      description: 'CJIS-compliant implementations for state and local law enforcement agencies, plus expertise with state-specific compliance frameworks and data sovereignty requirements.'
+    },
+    {
+      name: 'Cleared Personnel Available',
+      icon: Users,
+      description: 'Top Secret/SCI cleared team members available for classified projects and sensitive government implementations requiring security clearances.'
     }
-  ];
-
-  // Additional credentials displayed as compact badges
-  const additionalCredentials = [
-    { name: 'NIST Framework', shortDesc: 'Cybersecurity Framework v2.0 Expertise' },
-    { name: 'GSA Schedule', shortDesc: 'Application in Progress' },
-    { name: 'ATO Support', shortDesc: 'FISMA Authority to Operate Services' },
-    { name: 'CJIS Compliance', shortDesc: 'Implementation Services' },
-    { name: 'Cleared Personnel', shortDesc: 'TS/SCI Available Upon Award' }
   ];
 
 
@@ -146,228 +156,122 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      {/* Hero Carousel Section */}
-      <HeroCarousel />
-
-      {/* Who We Are Section - Enhanced with Kyndryl-inspired Interactive Elements */}
-      <WhoWeAreSection />
-
-      {/* Comprehensive Technology Solutions - Static Section */}
-      <section className="relative py-16 md:py-24 lg:py-28 bg-white overflow-hidden">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
+      {/* Hero Section */}
+      <section className="relative h-[400px] overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/50" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.03)_0%,transparent_70%)]" />
+        </div>
+        
+        {/* Hero Content */}
+        <div className="relative container h-full flex items-center">
+          <div className="max-w-2xl text-primary-foreground">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">Implementing FedRAMP & StateRAMP Solutions</h1>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">Vendor-neutral consulting and systems integration for federal, state, and local government agencies</p>
             
-            {/* Left: Core Capabilities Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7 }}
-              className="relative order-2 lg:order-1"
-            >
-              <div className="relative overflow-hidden shadow-2xl rounded-lg">
-<ImageWithLoader
-                                  src="/comprehensive-technology-solutions.jpg"
-                                  alt="Technology professionals collaborating on comprehensive solutions with data analytics display"
-                  className="w-full h-auto"
-                />
-                {/* Gradient overlay for depth */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10 pointer-events-none"></div>
-              </div>
-
-              {/* Decorative accent element */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl"
-              />
-
-
-            </motion.div>
-
-            {/* Right: Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative z-10 order-1 lg:order-2"
-            >
-              <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">
-                What we do
-              </p>
-
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                Comprehensive Technology Solutions
-              </h2>
-
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                From cloud modernization and cybersecurity to data analytics and AI/ML, we deliver end-to-end technology solutions tailored for government and regulated sectors. Our services include intelligent automation, DevSecOps, application development, and digital transformation—all designed with compliance-first architecture and measurable outcomes.
-              </p>
-
-              {/* CTA Buttons - Enhanced for Core Capabilities */}
-              <div className="flex flex-wrap gap-4">
-                <Button asChild variant="default" size="lg" className="bg-primary hover:bg-primary/90">
-                  <Link href="/core-capabilities">
-                    Explore Our Solutions
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-2">
-                  <Link href="/contact">
-                    Schedule a Consultation
-                  </Link>
-                </Button>
-              </div>
-            </motion.div>
-
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all touch-feedback">
+                <Link href="/contact">
+                  Schedule Strategic Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary touch-feedback">
+                <Link href="/methodology">View ROI Methodology</Link>
+              </Button>
+            </div>
           </div>
         </div>
-
-        {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
       </section>
 
-      {/* Services Section - 2x3 Grid Layout - COMMENTED OUT
-      <section className="py-20 md:py-24 lg:py-28 bg-navy-gradient text-primary-foreground">
+        {/* Mission Statement Section */}
+      <section className="relative py-16 md:py-20 overflow-hidden bg-white">
+        
+        {/* Content */}
+        <div className="container relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
+              <span className="text-sm font-medium text-orange-600">Our Mission</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">Govern Smart</h2>
+            <p className="text-xl md:text-2xl italic text-slate-600 mb-8 leading-relaxed font-light">
+              "Our philosophy has always been to offer government agencies only the finest expertise and service. We believe in building lasting relationships based on trust, excellence, and unwavering commitment to mission success."
+            </p>
+            
+            {/* Signature - Regular Format */}
+            <div className="flex flex-col items-center mb-10">
+              <p className="text-base text-slate-600 font-medium">—David Seyaker</p>
+              <p className="text-sm text-slate-500">Principal and CEO</p>
+            </div>
+            
+            <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-orange-400 mx-auto mb-10 rounded-full"></div>
+            <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
+              We implement FedRAMP and StateRAMP-authorized platforms for federal, state, and local government agencies. From cloud migration to automation to security compliance, we handle the technical complexity so you can focus on mission delivery.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section - 2x3 Grid Layout */}
+      <section className="py-16 md:py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-12 md:mb-16 lg:mb-20 text-center max-w-4xl mx-auto">
-            <p className="text-sm font-semibold text-accent mb-4 tracking-wider uppercase">Core Capabilities</p>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
-              Government Technology Services
+          <div className="mb-12">
+            <p className="text-sm font-semibold text-accent mb-3 tracking-wide uppercase">Core Capabilities</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              Government Technology Implementation Services
             </h2>
-            <p className="text-xl text-white/90 leading-relaxed">
-              Comprehensive technology solutions for federal, state, and local agencies. From automation to cybersecurity, we deliver mission-critical results.
+            <p className="text-lg md:text-xl opacity-90 max-w-4xl leading-relaxed">
+              Vendor-neutral consulting for federal, state, and local agencies. We implement FedRAMP and StateRAMP-authorized platforms with proven compliance expertise and measurable mission impact.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Link
                 key={index}
                 href={service.href}
                 className="block group"
               >
-                <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
-                  <CardContent className="p-10">
-                    <div className="mb-6">
-                      <service.icon className="h-14 w-14 text-accent" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-white/80 leading-relaxed mb-4">
-                      {service.description}
-                    </p>
-                    <div className="flex items-center text-accent text-xs font-semibold group-hover:gap-2 gap-1.5 transition-all">
-                      Learn More <ArrowRight className="h-3.5 w-3.5" />
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="h-full border-2 border-primary-foreground/20 hover:border-accent rounded-lg p-6 transition-all hover:shadow-2xl">
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-base opacity-80 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
-      */}
 
+      {/* Case Studies Section - Incentro Style */}
+      <CaseStudyShowcase />
 
-      {/* Results at a Glance Section */}
-      <ResultsAtGlance />
-
-      {/* Compliance-First Approach Section */}
-      <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-slate-50 to-white">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-            >
-              <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">How We Deliver</p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-                Compliance-First Approach
-              </h2>
-              <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, CMMC, FISMA, HIPAA, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.
-              </p>
-              
-              {/* Action Buttons */}
-              <div className="flex flex-wrap gap-4">
-                <Button 
-                  variant="default" 
-                  size="lg"
-                  className="bg-[#0A2540] hover:bg-[#0A2540]/90 text-white"
-                  onClick={() => window.location.href = '/about#story'}
-                >
-                  Our story
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-slate-300 text-slate-700 hover:bg-slate-100"
-                  onClick={() => window.location.href = '/services/cybersecurity'}
-                >
-                  Awards and recognition
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-slate-300 text-slate-700 hover:bg-slate-100"
-                  onClick={() => window.location.href = '/contact'}
-                >
-                  Join our team
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* Right Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="relative rounded-lg overflow-hidden shadow-2xl">
-                <ImageWithLoader
-                  src="/compliance-first-approach.jpg"
-                  alt="Server infrastructure representing compliance-first approach"
-                  className="w-full h-auto"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications Section - Featured + Grid Layout (GovTech Best Practice) */}
-      <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
+      {/* Certifications Section */}
+      <section className="py-20 bg-secondary">
         <div className="container">
           <motion.div 
-            className="text-center max-w-4xl mx-auto mb-12 md:mb-16 lg:mb-20"
+            className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Trusted & Certified</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Enterprise & Government Security & Compliance
-            </h2>
-            <p className="text-xl text-slate-200 leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise & Government Security & Compliance</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
             </p>
           </motion.div>
 
-          {/* Featured Certifications - Top 3 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
-            {featuredCertifications.map((cert, index) => {
-              const IconComponent = cert.icon;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {certifications.map((cert, index) => {
               return (
                 <motion.div
                   key={index}
@@ -375,317 +279,311 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative"
                 >
-                  <Link href={cert.href} className="block h-full">
-                   <Card className="h-full border border-slate-700 hover:border-accent transition-all duration-300 hover:shadow-lg bg-slate-800/50 overflow-hidden cursor-pointer">
-                    {cert.image ? (
-                      <>
-                        <div className="w-full h-48 overflow-hidden">
-                          <img 
-                            src={cert.image} 
-                            alt={cert.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <CardContent className="p-6">
-                          <div className="flex flex-col items-center text-center">
-                            <h3 className="text-xl font-bold text-white mb-3">
-                              {cert.name}
-                            </h3>
-                            <p className="text-sm text-slate-300 leading-relaxed">
-                              {cert.description}
-                            </p>
-                          </div>
-                        </CardContent>
-                      </>
-                    ) : (
-                      <CardContent className="p-8">
-                        <div className="flex flex-col items-center text-center">
-                          <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                            <IconComponent className="w-8 h-8 text-accent" />
-                          </div>
-                          <h3 className="text-xl font-bold text-white mb-3">
-                            {cert.name}
-                          </h3>
-                          <p className="text-sm text-slate-300 leading-relaxed">
-                            {cert.description}
-                          </p>
-                        </div>
-                      </CardContent>
-                    )}
-                  </Card>
-                  </Link>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="bg-card border-2 border-border hover:border-accent rounded-lg p-6 text-center flex flex-col items-center justify-center transition-all hover:shadow-lg cursor-help min-h-[100px]">
+                        <div className="text-sm font-semibold leading-tight">{cert.name}</div>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs">
+                      <p className="text-sm">{cert.description}</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </motion.div>
               );
             })}
           </div>
-
-          {/* Additional Credentials - Compact Badge Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-slate-800/50 border border-slate-700 rounded-lg p-8"
-          >
-            <h3 className="text-lg font-semibold text-white mb-6 text-center">Additional Credentials & Authorizations</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-              {additionalCredentials.map((cred, index) => (
-                <div key={index} className="flex flex-col items-center text-center group">
-                  <div className="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center mb-3 group-hover:bg-accent/10 transition-colors">
-                    <Shield className="w-6 h-6 text-slate-300 group-hover:text-accent transition-colors" />
-                  </div>
-                  <h4 className="text-sm font-bold text-white mb-1">{cred.name}</h4>
-                  <p className="text-xs text-slate-300">{cred.shortDesc}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </section>
 
-
-      {/* Our Approach Section */}
-      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
-        <div className="container max-w-7xl">
+      {/* Methodology Section - RAPID Framework */}
+      <section className="py-20 bg-muted">
+        <div className="container">
           <motion.div 
-            className="text-center max-w-4xl mx-auto mb-20"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Our Approach</p>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-900">
-              How We Deliver Mission-Critical Results
-            </h2>
-            <p className="text-xl text-slate-600 leading-relaxed">
-              Four strategic pillars that ensure compliant, secure, and vendor-neutral technology implementations for government agencies. Each pillar represents a core commitment to excellence in government technology delivery.
+            <p className="text-sm font-semibold text-accent mb-2">Our Methodology</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies RAPID Framework</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Proven Government Implementation Methodology: Structured 4-phase approach delivering compliant, on-budget FedRAMP and StateRAMP platform deployments
             </p>
           </motion.div>
 
-          {/* Four Pillars Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {/* Pillar 1: Rapid Assessment & Architecture */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="group"
-            >
-              <Card className="h-full bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 hover:border-accent hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8 lg:p-10">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
-                      <Search className="h-8 w-8 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      Rapid Assessment & Architecture
-                    </h3>
-                    <p className="text-lg font-semibold text-accent mb-4">
-                      Comprehensive discovery and vendor-neutral design in 2 weeks
-                    </p>
-                  </div>
-                  <p className="text-base text-slate-300 leading-relaxed mb-6">
-                    We begin every engagement with a comprehensive 2-week discovery phase that maps your current state, identifies compliance gaps, and designs a vendor-neutral architecture aligned with your mission objectives. Our assessments include stakeholder interviews, technical infrastructure review, security posture analysis, and detailed ROI projections.
-                  </p>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Stakeholder alignment workshops</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Compliance gap analysis (<strong className="text-white">FedRAMP, CMMC, FISMA</strong>)</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Platform-agnostic solution design</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Detailed implementation roadmap with milestones</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Phase 1 */}
+            <Card className="border-2 hover:border-accent transition-colors">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
+                  1
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Research & Assessment</h3>
+                <p className="text-muted-foreground mb-4">
+                  Comprehensive process mapping, bottleneck identification, and ROI analysis to establish baseline metrics.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Current state analysis</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Opportunity identification</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>ROI projection modeling</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
 
-            {/* Pillar 2: Security-Native Implementation */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="group"
-            >
-              <Card className="h-full bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 hover:border-accent hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8 lg:p-10">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
-                      <Lock className="h-8 w-8 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      Security-Native Implementation
-                    </h3>
-                    <p className="text-lg font-semibold text-accent mb-4">
-                      Security and compliance embedded from day one, not bolted on
-                    </p>
-                  </div>
-                  <p className="text-base text-slate-300 leading-relaxed mb-6">
-                    Security and compliance are embedded from day one—not bolted on afterward. We implement only <strong className="text-white">FedRAMP and StateRAMP-authorized platforms</strong>, configure <strong className="text-white">zero-trust architectures</strong> by default, and prepare all security documentation needed for agency authorization. Every integration follows <strong className="text-white">NIST 800-53 controls</strong> and agency-specific security requirements.
-                  </p>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm"><strong className="text-white">FedRAMP/StateRAMP-authorized</strong> platforms only</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm"><strong className="text-white">Zero-trust architecture</strong> by default</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Complete ATO documentation packages</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">NIST 800-53 controls implementation</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
+            {/* Phase 2 */}
+            <Card className="border-2 hover:border-accent transition-colors">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
+                  2
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Architecture & Planning</h3>
+                <p className="text-muted-foreground mb-4">
+                  Solution architecture design, technology stack selection, and detailed implementation roadmap.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Architecture optimization</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Technology evaluation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Phased roadmap creation</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
 
-            {/* Pillar 3: Vendor-Agnostic Solutions */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="group"
-            >
-              <Card className="h-full bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 hover:border-accent hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8 lg:p-10">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
-                      <Layers className="h-8 w-8 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      Vendor-Agnostic Solutions
-                    </h3>
-                    <p className="text-lg font-semibold text-accent mb-4">
-                      Independent evaluation of 50+ platforms with zero vendor lock-in
-                    </p>
-                  </div>
-                  <p className="text-base text-slate-300 leading-relaxed mb-6">
-                    We are not tied to any single vendor or platform. Our recommendations are based solely on your mission requirements, budget constraints, and technical environment. We evaluate <strong className="text-white">50+ FedRAMP-authorized platforms</strong> across automation, analytics, cloud, and integration categories to identify the best-fit solutions—then implement them with full transparency and knowledge transfer.
-                  </p>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Independent platform evaluation and selection</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Multi-vendor integration expertise</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Avoid vendor lock-in with open standards</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Full knowledge transfer and documentation</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
+            {/* Phase 3 */}
+            <Card className="border-2 hover:border-accent transition-colors">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
+                  3
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Implementation & Delivery</h3>
+                <p className="text-muted-foreground mb-4">
+                  Platform implementation with ATO documentation, security controls configuration, and zero-downtime migration.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Compliance documentation & ATO support</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Security controls implementation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Zero-downtime deployment</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
 
-            {/* Pillar 4: Cleared Team Execution */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="group"
-            >
-              <Card className="h-full bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 hover:border-accent hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8 lg:p-10">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
-                      <Award className="h-8 w-8 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      Cleared Team Execution
-                    </h3>
-                    <p className="text-lg font-semibold text-accent mb-4">
-                      Top Secret/SCI cleared personnel with 20+ years federal experience
-                    </p>
-                  </div>
-                  <p className="text-base text-slate-300 leading-relaxed mb-6">
-                    Our team includes <strong className="text-white">Top Secret/SCI cleared personnel</strong> with decades of federal government experience. We understand agency culture, procurement processes, and the unique challenges of implementing technology in classified and sensitive environments. Every project is staffed with experienced consultants who have delivered similar implementations for agencies like yours.
-                  </p>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm"><strong className="text-white">Top Secret/SCI cleared</strong> team members available</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Deep federal procurement expertise (GSA Schedule 70)</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Experience across 20+ federal agencies</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Proven change management and training delivery</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
+            {/* Phase 4 */}
+            <Card className="border-2 hover:border-accent transition-colors">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-2xl font-bold mb-4 text-foreground">
+                  4
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Performance & Optimization</h3>
+                <p className="text-muted-foreground mb-4">
+                  Real-time monitoring, ROI tracking, and continuous optimization with predictive analytics.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Real-time dashboards</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>ROI measurement & reporting</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Predictive maintenance</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Bottom CTA */}
-          <motion.div 
-            className="mt-16 text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <p className="text-lg text-slate-600 mb-6">
-              Contact us to discuss your agency's requirements.
+          <div className="mt-12 text-center">
+            <p className="text-lg text-muted-foreground mb-6">
+              <strong className="text-foreground">90-day ATO timeline</strong> • <strong className="text-foreground">100% authorization success rate</strong> • <strong className="text-foreground">Zero operational disruption</strong>
             </p>
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
               <Link href="/contact">
-                Request Assessment
+                Learn More About RAPID
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="flex items-start justify-between mb-12">
+            <div className="max-w-xl">
+              <p className="text-sm text-muted-foreground mb-2">Partners</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                With these partners we deliver enterprise-grade solutions
+              </h2>
+              <Link href="/partners" className="inline-flex items-center justify-center rounded-full border border-border bg-background px-6 py-3 text-base font-semibold hover:bg-accent hover:text-accent-foreground transition-colors">
+                All partners
+              </Link>
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={() => {
+                  const container = document.getElementById('partners-carousel');
+                  if (container) container.scrollBy({ left: -400, behavior: 'smooth' });
+                }}
+                className="p-3 rounded-full border border-border hover:bg-accent transition-colors"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => {
+                  const container = document.getElementById('partners-carousel');
+                  if (container) container.scrollBy({ left: 400, behavior: 'smooth' });
+                }}
+                className="p-3 rounded-full border border-border hover:bg-accent transition-colors"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+            </div>
+          </div>
 
+          <div id="partners-carousel" className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4">
+            {/* Process Automation Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-6 text-foreground">Process Automation</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  UiPath
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Automation Anywhere
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Blue Prism
+                </span>
+              </div>
+            </div>
+
+            {/* Cloud Platforms Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-6 text-foreground">Cloud Platforms</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  AWS GovCloud
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Azure Government
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Google Cloud
+                </span>
+              </div>
+            </div>
+
+            {/* Data & Analytics Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-6 text-foreground">Data & Analytics</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Snowflake
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Databricks
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Tableau
+                </span>
+              </div>
+            </div>
+
+            {/* Cybersecurity Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-6 text-foreground">Cybersecurity</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Palo Alto Networks
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  CrowdStrike
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Splunk
+                </span>
+              </div>
+            </div>
+
+            {/* AI & Machine Learning Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-6 text-foreground">AI & Machine Learning</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  OpenAI
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Anthropic
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  DataRobot
+                </span>
+              </div>
+            </div>
+
+            {/* Enterprise Software Card */}
+            <div className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-6 text-foreground">Enterprise Software</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  ServiceNow
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  Salesforce
+                </span>
+                <span className="px-6 py-3 bg-card border border-border text-primary rounded-full text-sm font-medium hover:border-primary hover:bg-muted transition-all cursor-pointer">
+                  SAP
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 bg-navy-gradient diagonal-top text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Operations?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Request an assessment to evaluate how our services can support your agency's technology requirements.
+            Schedule a comprehensive automation assessment and discover how our proven methodology can deliver measurable ROI for your organization.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
               <Link href="/contact">
-                Request Assessment
+                Schedule Strategic Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

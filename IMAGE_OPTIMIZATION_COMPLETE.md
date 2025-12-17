@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides a comprehensive overview of the responsive image optimization system implemented across the Thalen website. All optimizations are **fully implemented and operational**.
+This document provides a comprehensive overview of the responsive image optimization system implemented across the NexDyne website. All optimizations are **fully implemented and operational**.
 
 ---
 

@@ -27,9 +27,9 @@ export default function StateLocal() {
   const primaryServices = [
     {
       icon: Building2,
-      title: 'StateRAMP/GovRAMP Platform Implementation',
-      description: 'Implement StateRAMP/GovRAMP-authorized cloud platforms and SaaS solutions with state-specific compliance documentation, security controls, and authorization support.',
-      benefits: ['StateRAMP/GovRAMP compliance expertise', 'State authorization documentation', 'Multi-state deployment experience'],
+      title: 'StateRAMP Platform Implementation',
+      description: 'Implement StateRAMP-authorized cloud platforms and SaaS solutions with state-specific compliance documentation, security controls, and ATO support.',
+      benefits: ['StateRAMP compliance expertise', 'State ATO documentation', 'Multi-state deployment experience'],
       link: '/services/cloud'
     },
     {
@@ -90,8 +90,8 @@ export default function StateLocal() {
 
   const complianceFrameworks = [
     {
-      name: 'StateRAMP/GovRAMP',
-      description: 'State Risk and Authorization Management Program (recently rebranded as GovRAMP) for cloud service providers serving state, local, tribal, and educational institutions',
+      name: 'StateRAMP',
+      description: 'State Risk and Authorization Management Program for cloud service providers serving state and local governments',
       icon: Shield
     },
     {
@@ -136,10 +136,10 @@ export default function StateLocal() {
               State & Local Government Solutions
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              StateRAMP/GovRAMP & CJIS-Compliant IT Implementation
+              StateRAMP & CJIS-Compliant IT Implementation
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              We help state, local, and tribal government agencies implement StateRAMP/GovRAMP-authorized platforms, CJIS-compliant systems, and modern IT solutions with state-specific compliance expertise and procurement support.
+              We help state and local government agencies implement StateRAMP-authorized platforms, CJIS-compliant systems, and modern IT solutions with state-specific compliance expertise and procurement support.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -219,7 +219,7 @@ export default function StateLocal() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">State & Local Government Success Stories</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experience implementing IT solutions for state agencies, counties, and municipalities with measurable outcomes.
+              Proven track record implementing IT solutions for state agencies, counties, and municipalities with measurable outcomes.
             </p>
           </div>
 

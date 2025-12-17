@@ -454,7 +454,7 @@ export default function Resources() {
           </p>
           <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all text-lg px-8 py-6 h-auto">
             <Link href="/contact">
-              Request Assessment
+              Schedule Strategic Assessment
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>

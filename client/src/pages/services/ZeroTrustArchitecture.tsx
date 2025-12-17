@@ -100,7 +100,7 @@ export default function ZeroTrustArchitecture() {
               Zero Trust Architecture
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Implement modern Zero Trust security framework with micro-segmentation, continuous verification, and least-privilege access controls. Thalen Technologies delivers NIST 800-207 and DoD Zero Trust Reference Architecture implementations for government agencies (federal, state, local) eliminating implicit trust.
+              Implement modern Zero Trust security framework with micro-segmentation, continuous verification, and least-privilege access controls. NexDyne delivers NIST 800-207 and DoD Zero Trust Reference Architecture implementations for government agencies (federal, state, local) eliminating implicit trust.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -240,7 +240,7 @@ export default function ZeroTrustArchitecture() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Implement Zero Trust Security</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a Zero Trust assessment and discover how Thalen Technologies can help you eliminate implicit trust and implement modern security architecture.
+            Schedule a Zero Trust assessment and discover how NexDyne can help you eliminate implicit trust and implement modern security architecture.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

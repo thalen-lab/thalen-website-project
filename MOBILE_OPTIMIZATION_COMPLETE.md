@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides a comprehensive overview of the mobile-specific optimizations implemented across the Thalen website to ensure optimal performance and user experience on iOS Safari and Android Chrome.
+This document provides a comprehensive overview of the mobile-specific optimizations implemented across the NexDyne website to ensure optimal performance and user experience on iOS Safari and Android Chrome.
 
 ---
 

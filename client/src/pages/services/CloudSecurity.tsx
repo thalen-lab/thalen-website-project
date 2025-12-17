@@ -16,8 +16,8 @@ export default function CloudSecurity() {
     },
     {
       icon: Lock,
-      title: 'CMMC Level 3 Consulting',
-      description: 'Defense-grade security controls consulting to help organizations meet CMMC Level 3 requirements for handling Controlled Unclassified Information (CUI).'
+      title: 'CMMC Level 3 Certified',
+      description: 'Defense-grade security controls meeting CMMC Level 3 certification requirements for handling Controlled Unclassified Information (CUI).'
     },
     {
       icon: Eye,
@@ -249,7 +249,7 @@ export default function CloudSecurity() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Secure Your Cloud Infrastructure?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive security assessment and discover how Thalen Technologies can deliver FedRAMP-authorized platforms and CMMC compliance consulting for your cloud security needs.
+            Start with a comprehensive security assessment and discover how Thalen Technologies can deliver FedRAMP-authorized, CMMC-certified cloud security.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -267,7 +267,7 @@ export default function FederalSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Past Performance & Agency Experience</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              experience delivering mission-critical IT solutions across federal, state, and local government agencies.
+              Proven track record delivering mission-critical IT solutions across federal, state, and local government agencies.
             </p>
           </div>
 
@@ -318,7 +318,7 @@ export default function FederalSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Certifications & Government Credentials</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Certifications and cleared personnel supporting federal security and quality standards compliance.
+              Industry-leading certifications and cleared personnel ensure compliance with federal security and quality standards.
             </p>
           </div>
 
@@ -336,117 +336,8 @@ export default function FederalSolutions() {
         </div>
       </section>
 
-      {/* FAR Compliance & Contract Requirements */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Federal Acquisition Regulation (FAR) Compliance</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Thalen Technologies maintains compliance with Federal Acquisition Regulation requirements for government IT services, ensuring streamlined contract execution and reduced agency risk.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="border-2">
-              <CardContent className="p-8">
-                <FileText className="h-12 w-12 text-accent mb-4" />
-                <h3 className="text-2xl font-bold mb-4">IT Services Compliance</h3>
-                <p className="text-muted-foreground mb-6">
-                  Our operations comply with FAR Part 39 (Acquisition of Information Technology) and associated clauses governing IT professional services, cloud solutions, and cybersecurity implementations.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold text-sm">FAR 52.204-21:</span>
-                      <span className="text-sm text-muted-foreground ml-1">Basic Safeguarding of Covered Contractor Information Systems</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold text-sm">FAR 52.239-1:</span>
-                      <span className="text-sm text-muted-foreground ml-1">Privacy or Security Safeguards for IT systems and services</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold text-sm">FAR 52.204-25:</span>
-                      <span className="text-sm text-muted-foreground ml-1">Prohibition on Contracting for Certain Telecommunications and Video Surveillance Services or Equipment</span>
-                    </div>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2">
-              <CardContent className="p-8">
-                <Shield className="h-12 w-12 text-accent mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Defense Contracts Compliance</h3>
-                <p className="text-muted-foreground mb-6">
-                  For Department of Defense contracts, we maintain compliance with Defense Federal Acquisition Regulation Supplement (DFARS) requirements governing Controlled Unclassified Information (CUI).
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold text-sm">DFARS 252.204-7012:</span>
-                      <span className="text-sm text-muted-foreground ml-1">Safeguarding Covered Defense Information and Cyber Incident Reporting</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold text-sm">NIST SP 800-171:</span>
-                      <span className="text-sm text-muted-foreground ml-1">Protecting Controlled Unclassified Information in Nonfederal Systems</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-foreground mr-3 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="font-semibold text-sm">CMMC Level 2:</span>
-                      <span className="text-sm text-muted-foreground ml-1">Cybersecurity Maturity Model Certification for DoD supply chain</span>
-                    </div>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="border-2 bg-secondary">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6">Procurement Benefits of FAR Compliance</h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div>
-                  <Clock className="h-10 w-10 text-accent mb-4" />
-                  <h4 className="font-semibold mb-2">Faster Contract Execution</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Pre-established compliance frameworks reduce contract negotiation time and enable faster task order awards under IDIQ vehicles.
-                  </p>
-                </div>
-                <div>
-                  <Shield className="h-10 w-10 text-accent mb-4" />
-                  <h4 className="font-semibold mb-2">Reduced Agency Risk</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Documented compliance with FAR security and privacy requirements minimizes agency oversight burden and contractor performance risk.
-                  </p>
-                </div>
-                <div>
-                  <CheckCircle2 className="h-10 w-10 text-accent mb-4" />
-                  <h4 className="font-semibold mb-2">Audit-Ready Documentation</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Maintained compliance documentation supports agency audits and CPARS evaluations with evidence of regulatory adherence.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* Core Capabilities */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Core Government IT Capabilities</h2>

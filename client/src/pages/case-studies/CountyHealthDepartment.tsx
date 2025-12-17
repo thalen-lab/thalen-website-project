@@ -1,294 +1,167 @@
+import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Download, CheckCircle2, TrendingUp, Users, Clock, Heart } from 'lucide-react';
-import { Link } from 'wouter';
+import { ArrowRight, CheckCircle2, TrendingUp, Activity, Clock, Database, Users } from 'lucide-react';
 
-export default function CountyHealthDepartment() {
+export default function CountyHealthDepartmentCaseStudy() {
+  const metrics = [
+    { icon: Clock, value: '40%', label: 'Faster Outbreak Response' },
+    { icon: Database, value: '12', label: 'Systems Integrated' },
+    { icon: Users, value: '2.5M', label: 'County Residents Served' },
+    { icon: Activity, value: 'Real-Time', label: 'Disease Surveillance' }
+  ];
+
+  const challenges = [
+    '12 disconnected health systems with no data sharing capabilities',
+    'Manual disease surveillance requiring 48-72 hours for outbreak detection',
+    'HIPAA compliance requirements for protected health information (PHI)',
+    'State health department integration for mandatory reporting',
+    'Limited IT budget and 10-month implementation timeline',
+    'Need for real-time analytics accessible to 200+ county health workers'
+  ];
+
+  const solutions = [
+    {
+      title: 'HIPAA-Compliant Data Integration Hub',
+      description: 'Built secure integration platform connecting 12 county health systems (EHR, lab, immunization, vital records) with HIPAA-compliant data exchange and PHI protection controls.'
+    },
+    {
+      title: 'Real-Time Disease Surveillance',
+      description: 'Implemented automated disease surveillance system analyzing patient data in real-time to detect outbreak patterns, replacing manual 48-72 hour reporting delays.'
+    },
+    {
+      title: 'State Health Department Integration',
+      description: 'Integrated county systems with state health department for automated mandatory disease reporting, case investigation coordination, and resource allocation.'
+    },
+    {
+      title: 'Public Health Analytics Dashboard',
+      description: 'Deployed role-based analytics dashboards for epidemiologists, nurses, and administrators with real-time disease trends, outbreak alerts, and population health metrics.'
+    }
+  ];
+
+  const outcomes = [
+    {
+      title: 'Faster Outbreak Response',
+      value: '40% improvement',
+      description: 'Reduced outbreak detection and response time by 40% through real-time surveillance, enabling faster public health interventions and containment measures.'
+    },
+    {
+      title: 'Automated Reporting',
+      value: '100% compliance',
+      description: 'Achieved 100% on-time state reporting compliance with automated disease reporting, eliminating manual data entry and reducing reporting errors by 92%.'
+    },
+    {
+      title: 'Comprehensive Data Access',
+      value: '12 systems unified',
+      description: 'Unified 12 previously disconnected systems providing complete patient health history for case investigations and contact tracing.'
+    },
+    {
+      title: 'Improved Population Health',
+      value: '25% increase',
+      description: 'Increased preventive care outreach by 25% through data-driven identification of at-risk populations and targeted intervention programs.'
+    }
+  ];
+
+  const technologies = [
+    'Azure Government (HIPAA-compliant)',
+    'HL7 FHIR for health data exchange',
+    'Azure API Management for integration',
+    'Power BI Gov for public health dashboards',
+    'Azure SQL Database with encryption',
+    'State health information exchange (HIE)',
+    'Role-based access controls (RBAC)',
+    'Automated disease reporting workflows'
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
           <div className="max-w-4xl">
-            <div className="flex flex-wrap gap-3 mb-6">
-              <span className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold">
-                County Government Case Study
-              </span>
-              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-                HIPAA Compliant
-              </span>
-              <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-                Health IT Integration
-              </span>
+            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              County Government Case Study
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              County Health Department Integrates 12 Systems for Real-Time Disease Surveillance
+              County Health Department: Real-Time Disease Surveillance Integration
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Implementing HIPAA-compliant integration platform serving 2.5 million residents, reducing outbreak detection time by 40% with automated disease surveillance and state reporting.
+              How a county health department improved outbreak response time by 40% with HIPAA-compliant integration of 12 health systems and real-time disease surveillance for 2.5 million residents.
             </p>
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              <Download className="mr-2 h-5 w-5" />
-              Download Full Case Study (PDF)
-            </Button>
+            <div className="flex flex-wrap gap-3">
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">County Government</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">HIPAA Compliance</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">Health IT Integration</span>
+              <span className="bg-muted text-accent px-4 py-2 rounded-full text-sm">Public Health</span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Key Metrics */}
-      <section className="py-16 bg-secondary">
+      <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {[
-              { value: '40%', label: 'Faster Outbreak Response', icon: TrendingUp },
-              { value: '12', label: 'Systems Integrated', icon: Heart },
-              { value: '2.5M', label: 'Residents Served', icon: Users },
-              { value: '100%', label: 'State Reporting Compliance', icon: CheckCircle2 }
-            ].map((metric, index) => (
-              <div key={index} className="text-center">
-                <metric.icon className="h-8 w-8 text-accent mx-auto mb-3" />
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">{metric.value}</div>
-                <div className="text-sm text-muted-foreground">{metric.label}</div>
-              </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            {metrics.map((metric, index) => (
+              <Card key={index} className="border-2 text-center">
+                <CardContent className="p-8">
+                  <metric.icon className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <div className="text-4xl font-bold text-accent mb-2">{metric.value}</div>
+                  <p className="text-sm text-muted-foreground">{metric.label}</p>
+                </CardContent>
+              </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Overview */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6">Project Overview</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground mb-6">
-              A county health department serving 2.5 million residents operated 12 disconnected health information systems that couldn't share data. Electronic health records, laboratory systems, immunization registries, and vital records databases existed in isolation, forcing epidemiologists to manually gather data through phone calls and chart reviews. Disease surveillance required 48-72 hours to detect outbreak patterns, creating significant public health risks during seasonal flu outbreaks and emerging infectious diseases.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              NexDyne Technologies was selected through a competitive county procurement process to design and implement a HIPAA-compliant health data integration platform. The solution would connect all 12 county health systems, enable real-time disease surveillance, automate mandatory state reporting, and provide public health analytics dashboards for 200+ county health workers.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Type</h3>
-                <p className="text-lg font-bold">County Cooperative Purchase</p>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Contract Value</h3>
-                <p className="text-lg font-bold">$2.4M (10 months)</p>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">Compliance</h3>
-                <p className="text-lg font-bold">HIPAA + State HIE</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Challenge */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">The Challenge</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: 'Disconnected Health Systems',
-                description: '12 separate systems (EHR, lab, immunization, vital records) with no data sharing. Epidemiologists manually gathered data through phone calls, taking 48-72 hours to identify outbreak patterns.'
-              },
-              {
-                title: 'Manual Disease Surveillance',
-                description: 'No automated disease surveillance capabilities. Staff reviewed paper charts and spreadsheets to detect trends, missing critical early warning signs of outbreaks.'
-              },
-              {
-                title: 'HIPAA Compliance Requirements',
-                description: 'Platform needed strict HIPAA compliance for protected health information (PHI) with encryption, access controls, audit logging, and Business Associate Agreements with all providers.'
-              },
-              {
-                title: 'State Reporting Obligations',
-                description: 'Mandatory disease reporting to state health department was manual, error-prone, and often late. County needed automated reporting to achieve 100% on-time compliance.'
-              }
-            ].map((challenge, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{challenge.title}</h3>
-                  <p className="text-muted-foreground">{challenge.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Solution */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">The Solution</h2>
-          <div className="space-y-8">
-            <Card className="border-2 border-accent">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">HIPAA-Compliant Health Data Integration Platform</h3>
-                <p className="text-lg text-muted-foreground mb-6">
-                  NexDyne Technologies designed and implemented a secure integration platform on Azure Government that connected all 12 county health systems with HIPAA-compliant data exchange, enabling real-time disease surveillance and automated state reporting.
-                </p>
-                <ul className="space-y-3">
-                  {[
-                    'Built HIPAA-compliant integration hub on Azure Government with end-to-end PHI encryption',
-                    'Implemented HL7 FHIR interfaces for all 12 systems (EHR, lab, immunization, vital records)',
-                    'Established secure data pipelines with role-based access controls (RBAC) and audit logging',
-                    'Integrated with state health information exchange (HIE) for automated mandatory reporting',
-                    'Achieved Business Associate Agreements (BAAs) with all healthcare providers'
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Real-Time Disease Surveillance System</h3>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Implemented automated disease surveillance system that analyzes patient data in real-time to detect outbreak patterns, replacing manual 48-72 hour reporting delays with immediate alerts.
-                </p>
-                <ul className="space-y-3">
-                  {[
-                    'Developed real-time disease surveillance algorithms based on CDC guidelines',
-                    'Created automated outbreak detection for 45+ reportable diseases',
-                    'Built geographic heat maps showing disease distribution across county',
-                    'Implemented automated alerts for epidemiologists when thresholds exceeded',
-                    'Reduced outbreak detection time from 48-72 hours to real-time (40% improvement)'
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Public Health Analytics Dashboards</h3>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Deployed role-based analytics dashboards using Power BI Gov, providing 200+ county health workers with real-time disease trends, outbreak alerts, and population health metrics.
-                </p>
-                <ul className="space-y-3">
-                  {[
-                    'Created role-based dashboards for epidemiologists, nurses, and administrators',
-                    'Implemented real-time disease trend visualization with drill-down capabilities',
-                    'Built automated state reporting workflows eliminating manual data entry',
-                    'Enabled data-driven identification of at-risk populations for targeted interventions',
-                    'Provided complete patient health history for case investigations and contact tracing'
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Results & Impact</h2>
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {[
-              {
-                title: 'Outbreak Response',
-                metrics: [
-                  '40% faster outbreak detection and response',
-                  'Real-time surveillance for 2.5M residents',
-                  'Automated alerts for 45+ reportable diseases',
-                  '95% data accuracy vs. 67% with manual entry'
-                ]
-              },
-              {
-                title: 'Operational Efficiency',
-                metrics: [
-                  '100% on-time state reporting compliance',
-                  '92% reduction in manual data entry errors',
-                  '12 systems unified with complete patient history',
-                  '85% reduction in staff time spent on data collection'
-                ]
-              },
-              {
-                title: 'Population Health',
-                metrics: [
-                  '25% increase in preventive care outreach',
-                  'Data-driven identification of at-risk populations',
-                  'Targeted intervention programs for chronic diseases',
-                  'Improved contact tracing for infectious diseases'
-                ]
-              },
-              {
-                title: 'Compliance & Security',
-                metrics: [
-                  'Full HIPAA compliance with zero violations',
-                  'Comprehensive audit logging for all PHI access',
-                  'Business Associate Agreements with all providers',
-                  'State HIE integration for mandatory reporting'
-                ]
-              }
-            ].map((result, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">{result.title}</h3>
-                  <ul className="space-y-2">
-                    {result.metrics.map((metric, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-1" />
-                        <span className="text-sm text-muted-foreground">{metric}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold mb-4">The Challenge</h2>
+            <p className="text-xl text-muted-foreground">
+              The county health department served 2.5 million residents with 12 disconnected health systems that couldn't share data. Disease surveillance relied on manual chart reviews and phone calls, creating 48-72 hour delays in outbreak detection. This fragmented approach limited their ability to respond quickly to public health threats.
+            </p>
           </div>
 
-          <Card className="border-2 border-accent">
+          <Card className="border-2">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Client Testimonial</h3>
-              <blockquote className="text-lg italic text-muted-foreground mb-4">
-                "NexDyne's integration platform transformed our public health operations. We now detect outbreaks in real-time instead of waiting days for manual data collection. The automated state reporting ensures we never miss a deadline, and our epidemiologists can focus on protecting public health instead of gathering data. This system has become mission-critical for serving 2.5 million county residents."
-              </blockquote>
-              <p className="font-semibold">— Director of Public Health, County Health Department</p>
+              <h3 className="text-2xl font-bold mb-6">Key Challenges</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {challenges.map((challenge, index) => (
+                  <div key={index} className="flex items-start">
+                    <Activity className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{challenge}</span>
+                  </div>
+                ))}
+              </div>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Technologies */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8">Technologies & Platforms</h2>
-          <div className="grid md:grid-cols-3 gap-4">
-            {[
-              'Azure Government (HIPAA-compliant)',
-              'HL7 FHIR for health data exchange',
-              'Azure API Management',
-              'Power BI Gov dashboards',
-              'Azure SQL Database with encryption',
-              'State health information exchange (HIE)',
-              'Role-based access controls (RBAC)',
-              'Automated disease reporting workflows',
-              'CDC surveillance algorithms'
-            ].map((tech, index) => (
+      {/* Solution */}
+      <section className="py-20 bg-secondary">
+        <div className="container max-w-5xl">
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold mb-4">Our Solution</h2>
+            <p className="text-xl text-muted-foreground">
+              Thalen Technologies designed and implemented a HIPAA-compliant health data integration platform connecting 12 county systems with real-time disease surveillance, automated state reporting, and public health analytics dashboards.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
               <Card key={index} className="border-2">
-                <CardContent className="p-4">
-                  <p className="text-sm font-semibold">{tech}</p>
+                <CardContent className="p-8">
+                  <CheckCircle2 className="h-10 w-10 text-foreground mb-4" />
+                  <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
+                  <p className="text-sm text-muted-foreground">{solution.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -296,22 +169,168 @@ export default function CountyHealthDepartment() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-accent text-accent-foreground">
+      {/* Implementation Approach */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <h2 className="text-4xl font-bold mb-12">Implementation Approach</h2>
+          
+          <div className="space-y-8">
+            <Card className="border-2">
+              <CardContent className="p-8">
+                <div className="flex items-start">
+                  <div className="bg-accent text-accent-foreground rounded-full h-10 w-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">HIPAA Assessment & System Discovery (Weeks 1-3)</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Conducted comprehensive HIPAA compliance assessment, documented security controls for PHI protection, inventoried all 12 health systems (EHR, lab, immunization, vital records), and established data governance framework.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">HIPAA Assessment</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">System Inventory</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Data Governance</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardContent className="p-8">
+                <div className="flex items-start">
+                  <div className="bg-accent text-accent-foreground rounded-full h-10 w-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Integration Platform Build & System Connections (Weeks 4-22)</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Built HIPAA-compliant integration hub on Azure Government, implemented HL7 FHIR interfaces for each system, established secure data pipelines with PHI encryption, and validated data quality and completeness.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Integration Hub</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">HL7 FHIR</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">PHI Encryption</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardContent className="p-8">
+                <div className="flex items-start">
+                  <div className="bg-accent text-accent-foreground rounded-full h-10 w-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Surveillance System & State Integration (Weeks 18-32)</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Developed real-time disease surveillance algorithms, built automated state health department reporting workflows, created public health analytics dashboards with role-based access, and integrated with state HIE.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Disease Surveillance</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">State Reporting</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Analytics Dashboards</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardContent className="p-8">
+                <div className="flex items-start">
+                  <div className="bg-accent text-accent-foreground rounded-full h-10 w-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Training & Production Launch (Weeks 33-40)</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Trained 200+ county health workers (epidemiologists, nurses, administrators) on new platform, validated HIPAA compliance with county privacy officer, and launched production system with 24/7 monitoring.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">User Training</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">HIPAA Validation</span>
+                      <span className="text-xs bg-muted text-accent px-2 py-1 rounded">Production Launch</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Outcomes */}
+      <section className="py-20 bg-secondary">
+        <div className="container max-w-5xl">
+          <h2 className="text-4xl font-bold mb-12">Outcomes & Impact</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {outcomes.map((outcome, index) => (
+              <Card key={index} className="border-2">
+                <CardContent className="p-8">
+                  <TrendingUp className="h-10 w-10 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-2">{outcome.title}</h3>
+                  <div className="text-3xl font-bold text-accent mb-3">{outcome.value}</div>
+                  <p className="text-sm text-muted-foreground">{outcome.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-5xl">
+          <h2 className="text-4xl font-bold mb-12">Technologies & Platforms</h2>
+          
+          <Card className="border-2">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-3 gap-4">
+                {technologies.map((tech, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle2 className="h-5 w-5 text-foreground mr-2 flex-shrink-0" />
+                    <span className="text-sm">{tech}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Client Testimonial */}
+      <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your Health IT Systems?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Learn how NexDyne can help your organization integrate health systems, enable real-time surveillance, and achieve HIPAA compliance.
+          <div className="text-6xl mb-6">"</div>
+          <blockquote className="text-2xl md:text-3xl font-medium mb-8 italic">
+            Thalen Technologies's health data integration platform has revolutionized our public health response capabilities. The 40% improvement in outbreak detection time has been critical for protecting our 2.5 million residents, and the automated state reporting has eliminated countless hours of manual work. Their deep understanding of HIPAA requirements and health IT standards was essential to our success.
+          </blockquote>
+          <div className="font-semibold text-xl">Director of Public Health</div>
+          <div className="text-accent">County Health Department</div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-background">
+        <div className="container text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your County Agency?</h2>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Learn how Thalen Technologies can help your county or local government agency implement HIPAA-compliant health IT integration and analytics solutions with proven results.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="bg-background text-foreground hover:bg-background/90">
-                Schedule Consultation
+              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                Schedule State/Local Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link href="/case-studies">
-              <Button size="lg" variant="outline" className="bg-background text-foreground hover:bg-background/90">
-                View More Case Studies
+            <Link href="/federal-solutions/state-local">
+              <Button size="lg" variant="outline">
+                View State/Local Solutions
               </Button>
             </Link>
           </div>

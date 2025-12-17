@@ -226,8 +226,8 @@ export async function showTestNotification(): Promise<void> {
 
   const registration = await navigator.serviceWorker.ready;
   
-  await registration.showNotification('Thalen Technologies Test Notification', {
-    body: 'This is a test notification from Thalen Technologies',
+  await registration.showNotification('NexDyne Test Notification', {
+    body: 'This is a test notification from NexDyne',
     icon: '/pwa-icon-192.png',
     badge: '/badge.png',
     tag: 'test-notification',

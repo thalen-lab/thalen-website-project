@@ -10,29 +10,29 @@ export default function Cloud() {
   const primaryServices = [
     {
       icon: RefreshCw,
-      title: 'Cloud Migration & Modernization',
-      description: 'Modernize your on-premises infrastructure with hybrid cloud architectures first—or migrate to FedRAMP-authorized platforms (AWS GovCloud, Azure Government, Google Cloud) when compliance mandates it or operational needs require cloud-native capabilities.',
+      title: 'FedRAMP Cloud Migration Services',
+      description: 'We help agencies migrate to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) with zero downtime and full ATO support.',
       benefits: ['Zero business disruption', 'ATO package preparation', 'Multi-vendor platform expertise'],
       link: '/services/cloud-migration'
     },
     {
       icon: Globe,
       title: 'Multi-Cloud Integration & Orchestration',
-      description: 'Integrate your existing on-premises and cloud infrastructure with unified management—or implement multi-cloud FedRAMP architectures when workload distribution and vendor diversification align with mission requirements.',
+      description: 'Vendor-neutral architecture design and implementation across multiple FedRAMP platforms with unified management and seamless interoperability.',
       benefits: ['Best-of-breed platform selection', 'Unified management layer', 'Workload portability'],
       link: '/services/multi-cloud'
     },
     {
       icon: Shield,
       title: 'Cloud Security & Compliance Implementation',
-      description: 'Strengthen your existing infrastructure security posture with NIST 800-53 controls and compliance frameworks—with FedRAMP-authorized security tools deployed only when compliance requirements or threat models demand certified platforms.',
+      description: 'Deploy and configure FedRAMP-authorized security tools with CMMC, FISMA, and NIST 800-53 compliance frameworks for mission-critical workloads.',
       benefits: ['FedRAMP High implementation', 'CMMC Level 2/3 readiness', 'Continuous monitoring setup'],
       link: '/services/cloud-security'
     },
     {
       icon: GitBranch,
       title: 'Infrastructure as Code (IaC) Implementation',
-      description: 'Automate your existing infrastructure provisioning with custom scripts and configuration management—or implement enterprise IaC platforms (Terraform Enterprise, CloudFormation) when governance and compliance require centralized control.',
+      description: 'Implement automated infrastructure provisioning using Terraform, CloudFormation, and Ansible for consistent, auditable deployments.',
       benefits: ['Automated provisioning', 'Version-controlled infrastructure', 'Compliance-ready templates'],
       link: '/services/infrastructure-as-code'
     }
@@ -100,10 +100,10 @@ export default function Cloud() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Cloud Infrastructure & Modernization
+              FedRAMP Cloud Migration & Integration
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Thalen Technologies delivers cloud transformation through a dual approach: first, we modernize your on-premises infrastructure with hybrid architectures and legacy system optimization—then migrate to FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it or compliance requires it. Zero-downtime migrations with full ATO support.
+              We help federal, state, and local government agencies implement FedRAMP-authorized cloud platforms through vendor-neutral consulting, systems integration, and ATO support. Zero-downtime migrations with full compliance documentation.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -199,7 +199,7 @@ export default function Cloud() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Cloud Implementation Experience</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experience implementing FedRAMP-authorized cloud solutions across federal, state, and local government agencies.
+              Proven track record implementing FedRAMP-authorized cloud solutions across federal, state, and local government agencies.
             </p>
           </div>
 
@@ -263,65 +263,6 @@ export default function Cloud() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FAR Compliance for Cloud Services */}
-      <section className="py-16 bg-slate-50">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-3">Government Contracting Compliance</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Cloud migration and infrastructure services comply with Federal Acquisition Regulation requirements for government IT acquisitions.
-              </p>
-            </div>
-
-            <Card className="border-2">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-lg font-bold mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                      Cloud Security Requirements
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Cloud implementations comply with FAR 52.239-1 (Privacy or Security Safeguards) and FAR 52.204-21 (Basic Safeguarding), ensuring federal data protection throughout migration and operations.
-                    </p>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>FedRAMP-authorized platforms meet FAR security requirements</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>Continuous monitoring ensures ongoing compliance</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                      Streamlined Procurement
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Pre-established compliance with FAR requirements enables faster contract execution through GSA Schedule vehicles, reducing procurement time and agency oversight burden.
-                    </p>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>GSA Schedule 70 for IT Professional Services</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>Documented compliance reduces contract negotiation time</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

@@ -11,28 +11,28 @@ export default function Cybersecurity() {
     {
       icon: FileSearch,
       title: 'CMMC & FedRAMP Compliance Implementation',
-      description: 'Strengthen your existing security controls and close compliance gaps through assessments and remediation—with FedRAMP-authorized tools recommended only when CMMC Level 2/3 or ATO requirements demand certified platforms.',
+      description: 'We help agencies and contractors achieve CMMC Level 2/3 certification and FedRAMP authorization through gap assessments, security control implementation, and ATO support.',
       benefits: ['CMMC gap assessment', 'Security controls implementation', 'ATO package preparation'],
       link: '/services/security-assessment'
     },
     {
       icon: Network,
       title: 'Zero Trust Architecture Implementation',
-      description: 'Implement Zero Trust principles with your existing network infrastructure and security tools—or deploy FedRAMP Zero Trust platforms when micro-segmentation and continuous verification require enterprise-scale orchestration.',
+      description: 'Deploy NIST 800-207 Zero Trust frameworks using FedRAMP-authorized security platforms with micro-segmentation, continuous verification, and identity-centric controls.',
       benefits: ['NIST 800-207 implementation', 'Micro-segmentation design', 'Identity-centric security'],
       link: '/services/zero-trust-architecture'
     },
     {
       icon: Eye,
       title: 'Security Operations Center (SOC) Setup',
-      description: 'Build security monitoring capabilities with your existing log aggregation and detection tools—or implement FedRAMP SIEM/SOAR platforms (Splunk Gov, LogRhythm) when compliance or threat volume requires enterprise-grade correlation.',
+      description: 'Implement 24/7 security monitoring using FedRAMP SIEM/SOAR platforms (Splunk Gov, LogRhythm, Palo Alto Cortex) with automated threat detection and response.',
       benefits: ['24/7 threat monitoring', 'SIEM/SOAR deployment', 'Automated incident response'],
       link: '/services/security-operations-center'
     },
     {
       icon: Lock,
       title: 'Identity & Access Management (IAM)',
-      description: 'Modernize your existing identity and access controls with PIV/CAC integration and privilege management—or deploy FedRAMP IAM platforms (Okta Gov, Ping Identity Gov) when identity governance at scale is required.',
+      description: 'Deploy Zero Trust identity solutions using FedRAMP IAM platforms with PIV/CAC integration, privileged access management, and identity governance.',
       benefits: ['PIV/CAC integration', 'Privileged access management', 'Identity governance frameworks'],
       link: '/services/identity-access-management'
     }
@@ -60,7 +60,7 @@ export default function Cybersecurity() {
     {
       icon: Award,
       title: 'CMMC & ATO Success Record',
-      description: 'Experience achieving CMMC Level 2/3 certifications and FedRAMP ATOs with 100% success rate across 25+ agencies.'
+      description: 'Proven track record achieving CMMC Level 2/3 certifications and FedRAMP ATOs with 100% success rate across 25+ agencies.'
     }
   ];
 
@@ -91,7 +91,7 @@ export default function Cybersecurity() {
   ];
 
   const governmentExperience = [
-    { agency: 'Defense Contractors', project: 'CMMC Level 3 Compliance Support', outcome: '15 contractors supported' },
+    { agency: 'Defense Contractors', project: 'CMMC Level 3 Certification', outcome: '15 contractors certified' },
     { agency: 'Government Civilian Agencies', project: 'FedRAMP/StateRAMP ATO Support', outcome: '8 ATOs achieved' },
     { agency: 'Intelligence Community', project: 'Zero Trust Implementation', outcome: 'TS/SCI environments secured' }
   ];
@@ -108,10 +108,10 @@ export default function Cybersecurity() {
               Implementation Services
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Cybersecurity & Compliance
+              Government Cybersecurity & Compliance Services
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Thalen Technologies delivers security through a dual approach: first, we strengthen your existing security posture with gap assessments, control implementation, and compliance frameworks—then deploy FedRAMP security platforms (Splunk Gov, CrowdStrike Gov) when compliance mandates it or threat models require certified tools. Vendor-neutral consulting with cleared security professionals and proven ATO success.
+              We help government agencies (federal, state, and local) and defense contractors implement FedRAMP and StateRAMP-authorized security platforms, achieve CMMC certification, and deploy Zero Trust architectures. Vendor-neutral consulting with cleared security professionals and proven ATO success.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -126,69 +126,6 @@ export default function Cybersecurity() {
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance Services Cards */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Compliance</h2>
-            <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto">
-              Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* FedRAMP & StateRAMP Card */}
-            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="mb-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
-                    <Shield className="h-8 w-8 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white">FedRAMP & StateRAMP Implementation</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* ISO 27001 Card */}
-            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="w-full h-48 overflow-hidden">
-                  <img 
-                    src="/iso27001-service.jpg" 
-                    alt="ISO 27001 Implementation Services" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-8 text-center">
-                  <h3 className="text-xl font-bold mb-4 text-white">ISO 27001 Implementation Services</h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* CMMC Card */}
-            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="mb-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
-                    <Shield className="h-8 w-8 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white">CMMC Consulting Services</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis, controls implementation, and audit preparation.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -295,7 +232,7 @@ export default function Cybersecurity() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Government Security Implementation Success</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experience implementing security platforms and achieving compliance certifications across government agencies and defense contractors.
+              Proven track record implementing security platforms and achieving compliance certifications across government agencies and defense contractors.
             </p>
           </div>
 
@@ -360,86 +297,6 @@ export default function Cybersecurity() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FAR Compliance for Cybersecurity Services */}
-      <section className="py-16 bg-slate-50">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-3">Government Contracting Compliance</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Cybersecurity implementations comply with Federal Acquisition Regulation requirements and Defense Federal Acquisition Regulation Supplement (DFARS) for DoD contracts.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <Card className="border-2">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-bold mb-3 flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                    IT Security Requirements (FAR)
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Cybersecurity services comply with FAR 52.239-1 (Privacy or Security Safeguards) and FAR 52.204-21 (Basic Safeguarding), implementing NIST controls for federal information protection.
-                  </p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>NIST 800-53 control implementation and documentation</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Security assessment and continuous monitoring</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-bold mb-3 flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                    DoD Contracts (DFARS)
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    For Department of Defense contracts, we maintain compliance with DFARS 252.204-7012 (Safeguarding Covered Defense Information) and CMMC requirements for CUI protection.
-                  </p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>NIST SP 800-171 controls for CUI safeguarding</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>CMMC Level 2 certification support and implementation</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-
-            <Card className="border-2 bg-gradient-to-br from-primary/5 to-accent/5">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-4">Procurement Benefits</h3>
-                <div className="grid md:grid-cols-3 gap-6 text-sm">
-                  <div>
-                    <p className="font-semibold mb-2">Faster Contract Execution</p>
-                    <p className="text-muted-foreground">Pre-established compliance frameworks reduce contract negotiation time for security services.</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-2">Reduced Agency Risk</p>
-                    <p className="text-muted-foreground">Documented FAR and DFARS compliance minimizes contractor performance risk and oversight burden.</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-2">Audit-Ready Documentation</p>
-                    <p className="text-muted-foreground">Maintained compliance records support agency audits and CPARS evaluations.</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

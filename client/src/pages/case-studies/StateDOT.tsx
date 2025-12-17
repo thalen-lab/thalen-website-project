@@ -262,7 +262,7 @@ export default function StateDOT() {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Client Testimonial</h3>
               <p className="text-lg mb-6 leading-relaxed">
-                "Thalen Technologies improved our 40-year-old mainframe system into a modern, mobile-first platform in just 14 months. Our field crews now have real-time access to asset data on their tablets, and we've reduced emergency response times by 40%. The StateRAMP-authorized Salesforce platform gave our CISO confidence that we were meeting all state security requirements. This project has fundamentally changed how we manage infrastructure."
+                "Thalen Technologies transformed our 40-year-old mainframe system into a modern, mobile-first platform in just 14 months. Our field crews now have real-time access to asset data on their tablets, and we've reduced emergency response times by 40%. The StateRAMP-authorized Salesforce platform gave our CISO confidence that we were meeting all state security requirements. This project has fundamentally changed how we manage infrastructure."
               </p>
               <div className="border-t border-accent/20 pt-4">
                 <div className="font-semibold">Jennifer Martinez</div>

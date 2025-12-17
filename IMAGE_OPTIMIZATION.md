@@ -1,6 +1,6 @@
 # Image Optimization System
 
-This document describes the advanced image optimization features implemented in the Thalen website.
+This document describes the advanced image optimization features implemented in the NexDyne website.
 
 ## Overview
 
@@ -287,7 +287,7 @@ function MyCard({ image, href }) {
 To regenerate all responsive images:
 
 ```bash
-cd /home/ubuntu/thalen-website
+cd /home/ubuntu/nexdyne-website
 python3 generate_responsive_images.py
 ```
 

@@ -18,7 +18,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "federal-automation",
     title: "Federal Agency Achieves 85% Process Automation",
-    description: "Implemented UiPath Gov RPA platform for federal agency with comprehensive ATO documentation, reducing claims processing time from 6 weeks to 2 days while maintaining Top Secret/SCI compliance.",
+    description: "Implemented UiPath Gov RPA platform with comprehensive ATO documentation, reducing claims processing time from 6 weeks to 2 days while maintaining Top Secret/SCI compliance.",
     image: "/rocket-federal.webp",
     link: "/case-studies/federal-automation",
     category: "Federal Government"
@@ -26,7 +26,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "dod-manufacturing",
     title: "DoD Manufacturing Facility Achieves 99.2% Uptime",
-    description: "Deployed FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics for DoD defense manufacturing operations, eliminating 75% of unplanned downtime across 50+ production lines.",
+    description: "Deployed FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics for defense manufacturing operations, eliminating 75% of unplanned downtime across 50+ production lines.",
     image: "/manufacturing-security.jpg",
     link: "/case-studies/dod-manufacturing",
     category: "Department of Defense"
@@ -34,7 +34,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "va-healthcare",
     title: "VA Medical Center Integrates 12 Legacy Systems",
-    description: "Unified patient data across 12 disparate VA healthcare systems with FedRAMP-authorized integration platforms for federal healthcare operations, reducing administrative burden by 60% and improving care coordination for 500K+ veterans.",
+    description: "Unified patient data across 12 disparate VA healthcare systems with FedRAMP-authorized integration platforms, reducing administrative burden by 60% and improving care coordination for 500K+ veterans.",
     image: "/healthcare-legacy-it.jpg",
     link: "/case-studies/va-healthcare",
     category: "Veterans Affairs"
@@ -50,7 +50,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "defense-cloud",
     title: "Defense Agency Migrates to IL5 Cloud",
-    description: "Zero-downtime migration of mission-critical intelligence systems to FedRAMP High cloud infrastructure for federal defense agency, achieving Impact Level 5 compliance while reducing infrastructure costs by 40%.",
+    description: "Zero-downtime migration of mission-critical intelligence systems to FedRAMP High cloud infrastructure, achieving Impact Level 5 compliance while reducing infrastructure costs by 40%.",
     image: "/defense-cyber-ops.b7c4e1f3.jpg",
     link: "/case-studies/defense-cloud",
     category: "Intelligence Community"
@@ -58,7 +58,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "state-energy",
     title: "State Energy Commission Reduces Outages 65%",
-    description: "Deployed StateRAMP-authorized IoT platform for state energy commission monitoring 500+ substations with 15,000+ sensors and predictive maintenance analytics, reducing grid outages by 65% for 8.5 million residents.",
+    description: "Deployed StateRAMP-authorized IoT platform monitoring 500+ substations with 15,000+ sensors and predictive maintenance analytics, reducing grid outages by 65% for 8.5 million residents.",
     image: "/energy-grid-control.c9d5f2a4.jpg",
     link: "/case-studies/state-energy-commission",
     category: "State Government"
@@ -78,11 +78,11 @@ export default function CaseStudyShowcase() {
   const featuredCaseStudies = caseStudies.slice(0, 3);
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="container">
         {/* Header */}
         <motion.div 
-          className="grid lg:grid-cols-2 gap-8 mb-10 md:mb-12 lg:mb-16"
+          className="grid lg:grid-cols-2 gap-8 mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -96,7 +96,7 @@ export default function CaseStudyShowcase() {
           </div>
           <div className="flex flex-col justify-end">
             <p className="text-lg text-slate-600">
-              Real-world case studies demonstrating measurable mission impact. FedRAMP serves federal agencies; StateRAMP/GovRAMP serves state, local, and tribal governments.
+              Real-world case studies demonstrating measurable mission impact across federal, state, and local government agencies.
             </p>
           </div>
         </motion.div>
@@ -107,7 +107,7 @@ export default function CaseStudyShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
         >
           {featuredCaseStudies.map((study) => (
             <Card 
@@ -136,12 +136,14 @@ export default function CaseStudyShowcase() {
                 <p className="text-slate-600 mb-4 line-clamp-3 flex-grow">
                   {study.description}
                 </p>
-                <Link 
-                  href={study.link}
-                  className="inline-flex items-center p-0 h-auto text-slate-900 hover:text-orange-600 font-medium group/btn transition-colors"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                <Link href={study.link}>
+                  <Button 
+                    variant="ghost" 
+                    className="p-0 h-auto text-slate-900 hover:text-orange-600 font-medium hover:bg-transparent group/btn"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
                 </Link>
               </div>
             </Card>
@@ -156,12 +158,16 @@ export default function CaseStudyShowcase() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex justify-center"
         >
-          <Link 
-            href="/case-studies"
-            className="inline-flex items-center justify-center gap-2 h-10 px-6 rounded-md bg-slate-900 hover:bg-slate-800 text-white font-medium transition-colors"
+          <Button 
+            asChild
+            variant="default"
+            size="lg"
+            className="bg-slate-900 hover:bg-slate-800 text-white"
           >
-            View All Cases
-          </Link>
+            <Link href="/case-studies">
+              View All Cases
+            </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

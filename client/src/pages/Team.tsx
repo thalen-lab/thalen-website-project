@@ -14,7 +14,7 @@ const teamMembers = [
     certifications: ["AWS Solutions Architect", "CISSP", "PMP"],
     clearance: "TS/SCI",
     experience: "18+ years",
-    bio: "Led automation architecture for Department of Defense systems from 2015-2023. Implemented machine learning frameworks for three federal agencies. Background includes systems engineering at Lockheed Martin and graduate research in distributed AI at MIT."
+    bio: "Former DoD automation architect with expertise in large-scale AI implementations for government and enterprise clients."
   },
   {
     name: "Michael Rodriguez",
@@ -24,7 +24,7 @@ const teamMembers = [
     certifications: ["CMMC Level 3", "Azure Expert", "CISM"],
     clearance: "TS/SCI",
     experience: "15+ years",
-    bio: "Managed FedRAMP authorization processes for six government cloud migrations. Previously served as security architect at Booz Allen Hamilton. Holds CMMC Level 3 certification and has supported ATO processes for DoD and civilian agencies."
+    bio: "Specialized in mission-critical federal deployments with deep expertise in compliance frameworks and secure cloud architectures."
   },
   {
     name: "Jennifer Park",
@@ -34,7 +34,7 @@ const teamMembers = [
     certifications: ["UiPath Advanced", "Blue Prism", "Six Sigma Black Belt"],
     clearance: "Secret",
     experience: "12+ years",
-    bio: "Implemented RPA solutions for healthcare claims processing and manufacturing quality control systems. Certified in UiPath and Blue Prism platforms. Background includes process engineering at Johnson & Johnson and operational consulting."
+    bio: "Healthcare and manufacturing automation specialist with proven track record of 60%+ efficiency gains in complex operational environments."
   },
   {
     name: "David Thompson",
@@ -44,7 +44,7 @@ const teamMembers = [
     certifications: ["CISSP", "CEH", "GIAC GPEN"],
     clearance: "TS/SCI",
     experience: "20+ years",
-    bio: "Served as cybersecurity analyst at NSA from 2010-2018. Designed security architectures for automated intelligence systems. Holds CISSP and CEH certifications. Currently leads security assessments for government automation projects."
+    bio: "Former NSA analyst specializing in securing automation frameworks for defense and intelligence community clients."
   },
   {
     name: "Dr. Aisha Williams",
@@ -54,7 +54,7 @@ const teamMembers = [
     certifications: ["Google Cloud Professional", "Databricks Certified", "PhD Data Science"],
     clearance: "Secret",
     experience: "14+ years",
-    bio: "PhD in Data Science from Stanford University. Built predictive analytics platforms for hospital systems and public health agencies. Published research on machine learning applications in healthcare operations. Previously worked at Kaiser Permanente's analytics division."
+    bio: "Healthcare analytics expert with focus on patient outcome optimization and operational intelligence for mission-critical systems."
   },
   {
     name: "James Martinez",
@@ -64,7 +64,7 @@ const teamMembers = [
     certifications: ["AWS DevOps Professional", "Kubernetes CKA", "Terraform Associate"],
     clearance: "Secret",
     experience: "16+ years",
-    bio: "Managed cloud infrastructure migrations for defense contractors requiring Impact Level 5 compliance. AWS Certified DevOps Professional with experience in Kubernetes orchestration. Previously led infrastructure teams at Northrop Grumman and SAIC."
+    bio: "Specialized in zero-downtime migrations and IL5-compliant infrastructure for defense contractors and government agencies."
   }
 ];
 

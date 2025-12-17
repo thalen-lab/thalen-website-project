@@ -194,7 +194,7 @@ export default function FederalROICalculator() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card>
             <CardContent className="p-6 text-center">
-              <DollarSign className="h-12 w-12 text-accent mx-auto mb-3" />
+              <DollarSign className="h-10 w-10 text-accent mx-auto mb-3" />
               <div className="text-3xl font-bold text-accent mb-2">{result.annualSavings}</div>
               <div className="text-sm font-semibold mb-1">Annual Cost Savings</div>
               <div className="text-xs text-muted-foreground">Year 1 projected savings</div>
@@ -203,7 +203,7 @@ export default function FederalROICalculator() {
 
           <Card>
             <CardContent className="p-6 text-center">
-              <TrendingUp className="h-12 w-12 text-accent mx-auto mb-3" />
+              <TrendingUp className="h-10 w-10 text-accent mx-auto mb-3" />
               <div className="text-3xl font-bold text-accent mb-2">{result.efficiencyGain}</div>
               <div className="text-sm font-semibold mb-1">Efficiency Improvement</div>
               <div className="text-xs text-muted-foreground">Operational efficiency gain</div>
@@ -212,7 +212,7 @@ export default function FederalROICalculator() {
 
           <Card>
             <CardContent className="p-6 text-center">
-              <Clock className="h-12 w-12 text-accent mx-auto mb-3" />
+              <Clock className="h-10 w-10 text-accent mx-auto mb-3" />
               <div className="text-3xl font-bold text-accent mb-2">{result.implementationTimeline}</div>
               <div className="text-sm font-semibold mb-1">Implementation Time</div>
               <div className="text-xs text-muted-foreground">From kickoff to production</div>
@@ -221,7 +221,7 @@ export default function FederalROICalculator() {
 
           <Card>
             <CardContent className="p-6 text-center">
-              <DollarSign className="h-12 w-12 text-accent mx-auto mb-3" />
+              <DollarSign className="h-10 w-10 text-accent mx-auto mb-3" />
               <div className="text-3xl font-bold text-accent mb-2">{result.paybackPeriod}</div>
               <div className="text-sm font-semibold mb-1">Payback Period</div>
               <div className="text-xs text-muted-foreground">Time to ROI breakeven</div>
@@ -234,7 +234,7 @@ export default function FederalROICalculator() {
             <h4 className="text-xl font-bold mb-6">Detailed ROI Breakdown</h4>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start">
-                <DollarSign className="h-7 w-7 text-accent mr-3 flex-shrink-0 mt-1" />
+                <DollarSign className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
                 <div>
                   <div className="font-semibold mb-1">Labor Cost Savings</div>
                   <div className="text-2xl font-bold text-accent">{result.details.laborSavings}</div>
@@ -243,7 +243,7 @@ export default function FederalROICalculator() {
               </div>
 
               <div className="flex items-start">
-                <TrendingUp className="h-7 w-7 text-accent mr-3 flex-shrink-0 mt-1" />
+                <TrendingUp className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
                 <div>
                   <div className="font-semibold mb-1">Error Reduction</div>
                   <div className="text-2xl font-bold text-accent">{result.details.errorReduction}</div>
@@ -252,7 +252,7 @@ export default function FederalROICalculator() {
               </div>
 
               <div className="flex items-start">
-                <Clock className="h-7 w-7 text-accent mr-3 flex-shrink-0 mt-1" />
+                <Clock className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
                 <div>
                   <div className="font-semibold mb-1">Processing Time Reduction</div>
                   <div className="text-2xl font-bold text-accent">{result.details.processingTime}</div>
@@ -261,7 +261,7 @@ export default function FederalROICalculator() {
               </div>
 
               <div className="flex items-start">
-                <Users className="h-7 w-7 text-accent mr-3 flex-shrink-0 mt-1" />
+                <Users className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
                 <div>
                   <div className="font-semibold mb-1">Staff Redeployment</div>
                   <div className="text-2xl font-bold text-accent">{result.details.staffRedeployment}</div>

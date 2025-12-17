@@ -332,7 +332,7 @@ export default function CapabilityGenerator() {
               <CardContent className="p-12 space-y-8">
                 {/* Header */}
                 <div className="text-center border-b pb-8">
-                  <h1 className="text-4xl font-bold mb-2">Thalen Technologies</h1>
+                  <h1 className="text-4xl font-bold mb-2">Thalen Technologies Technology</h1>
                   <p className="text-xl text-muted-foreground">Govern Smart</p>
                   <p className="text-sm text-muted-foreground mt-4">
                     Capability Statement | Generated {generatedStatement.generatedDate}
@@ -343,7 +343,7 @@ export default function CapabilityGenerator() {
                 <div>
                   <h3 className="text-2xl font-bold mb-4">Company Overview</h3>
                   <p className="text-muted-foreground mb-4">
-                    Thalen Technologies is a leading {agencyType === 'federal' ? 'federal' : 'state and local'} government IT implementation consulting firm specializing in FedRAMP cloud solutions, cybersecurity compliance, data analytics, and intelligent automation. We deliver vendor-neutral expertise implementing and integrating best-of-breed platforms to help government agencies achieve mission outcomes.
+                    Thalen Technologies Technology is a leading {agencyType === 'federal' ? 'federal' : 'state and local'} government IT implementation consulting firm specializing in FedRAMP cloud solutions, cybersecurity compliance, data analytics, and intelligent automation. We deliver vendor-neutral expertise implementing and integrating best-of-breed platforms to help government agencies achieve mission outcomes.
                   </p>
                   <div className="grid md:grid-cols-4 gap-4 mt-6">
                     <div className="text-center p-4 bg-background rounded-lg">
@@ -456,9 +456,9 @@ export default function CapabilityGenerator() {
                 <div className="border-t pt-8 text-center">
                   <h3 className="text-xl font-bold mb-4">Contact Information</h3>
                   <div className="space-y-2 text-sm text-muted-foreground">
-                    <p>Thalen Technologies, Inc.</p>
-                    <p>Email: contracts@thalen.tech | Phone: (555) 123-4567</p>
-                    <p>Website: www.thalen.tech</p>
+                    <p>Thalen Technologies Technology, Inc.</p>
+                    <p>Email: contracts@nexdyne.tech | Phone: (555) 123-4567</p>
+                    <p>Website: www.nexdyne.tech</p>
                   </div>
                 </div>
               </CardContent>

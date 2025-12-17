@@ -312,34 +312,3 @@ export const notificationHistory = mysqlTable("notification_history", {
 
 export type NotificationHistory = typeof notificationHistory.$inferSelect;
 export type InsertNotificationHistory = typeof notificationHistory.$inferInsert;
-
-/**
- * Leads table for gated resource downloads.
- * Captures contact information from users downloading federal solution guides.
- */
-export const leads = mysqlTable("leads", {
-  id: int("id").autoincrement().primaryKey(),
-  /** Lead's full name */
-  name: varchar("name", { length: 255 }).notNull(),
-  /** Lead's email address */
-  email: varchar("email", { length: 320 }).notNull(),
-  /** Lead's company/organization */
-  company: varchar("company", { length: 255 }),
-  /** Lead's job title */
-  jobTitle: varchar("jobTitle", { length: 255 }),
-  /** Lead's phone number */
-  phone: varchar("phone", { length: 50 }),
-  /** Resource that was downloaded (e.g., "fedramp-readiness-checklist") */
-  resource: varchar("resource", { length: 255 }).notNull(),
-  /** Lead source/campaign tracking */
-  source: varchar("source", { length: 255 }),
-  /** Additional notes or comments from lead */
-  notes: text("notes"),
-  /** Lead status for CRM tracking */
-  status: mysqlEnum("status", ["new", "contacted", "qualified", "converted", "unqualified"]).default("new").notNull(),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-});
-
-export type Lead = typeof leads.$inferSelect;
-export type InsertLead = typeof leads.$inferInsert;

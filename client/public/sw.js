@@ -1,7 +1,7 @@
-// Service Worker for Thalen PWA
+// Service Worker for NexDyne PWA
 // Provides offline capability and caching for resources and case studies
 
-const CACHE_NAME = 'thalen-v1';
+const CACHE_NAME = 'nexdyne-v1';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache immediately on install
@@ -169,7 +169,7 @@ self.addEventListener('push', (event) => {
   console.log('[Service Worker] Push received:', event);
   
   let notificationData = {
-    title: 'Thalen',
+    title: 'NexDyne',
     body: 'You have a new notification',
     icon: '/pwa-icon-192.png',
     badge: '/badge.png',

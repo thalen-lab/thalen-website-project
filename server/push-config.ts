@@ -11,4 +11,4 @@ export const VAPID_KEYS = {
   privateKey: '_E29KMGDuTNFjtvHGC3RJmicJpG5NFO3fNgbtYYuO1I'
 };
 
-export const VAPID_SUBJECT = 'mailto:contact@thalen.com';
+export const VAPID_SUBJECT = 'mailto:contact@nexdyne.com';

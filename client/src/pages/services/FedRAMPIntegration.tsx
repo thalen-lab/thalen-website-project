@@ -247,62 +247,6 @@ export default function FedRAMPIntegration() {
         </div>
       </section>
 
-      {/* Compliance Program CTAs */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Explore Our Compliance Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Learn more about our specialized FedRAMP and StateRAMP implementation services
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 hover:border-accent transition-colors">
-              <CardContent className="pt-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-7 w-7 text-muted-foreground" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3">FedRAMP Implementation</h3>
-                    <p className="text-muted-foreground mb-6">
-                      Comprehensive FedRAMP authorization services for federal agencies. From readiness assessments to ATO support, we guide you through every step of the federal authorization process.
-                    </p>
-                    <Link href="/compliance/fedramp">
-                      <Button className="bg-orange-gradient hover:opacity-90">
-                        Learn About FedRAMP Services
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="border-2 hover:border-accent transition-colors">
-              <CardContent className="pt-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Award className="h-7 w-7 text-muted-foreground" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3">StateRAMP Implementation</h3>
-                    <p className="text-muted-foreground mb-6">
-                      Specialized StateRAMP/GovRAMP authorization services for state, local, and tribal governments. We help you achieve authorization for government cloud services at the state level.
-                    </p>
-                    <Link href="/compliance/stateramp">
-                      <Button className="bg-orange-gradient hover:opacity-90">
-                        Learn About StateRAMP Services
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-background">
         <div className="container">

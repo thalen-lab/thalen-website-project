@@ -54,7 +54,7 @@ export default function ResponsibleAI() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Artificial intelligence offers significant potential for government operations—from automating routine tasks to enabling data-driven policy decisions. However, the deployment of AI in government contexts carries unique responsibilities and risks. Unlike private sector applications, government AI systems directly impact citizens' rights, access to services, and fundamental fairness. This comprehensive guide provides a framework for responsible AI implementation in government, drawing from Thalen Technologies's experience deploying AI solutions across federal, state, and local agencies while maintaining accountability, transparency, and ethical standards.
+                Artificial intelligence offers transformative potential for government operations—from automating routine tasks to enabling data-driven policy decisions. However, the deployment of AI in government contexts carries unique responsibilities and risks. Unlike private sector applications, government AI systems directly impact citizens' rights, access to services, and fundamental fairness. This comprehensive guide provides a framework for responsible AI implementation in government, drawing from Thalen Technologies's experience deploying AI solutions across federal, state, and local agencies while maintaining accountability, transparency, and ethical standards.
               </p>
             </div>
 
