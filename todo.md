@@ -3378,3 +3378,6 @@
 - [x] Create dedicated StateRAMP/GovRAMP page (state/local/tribal governments)
 - [x] Update navigation to show both compliance options
 - [x] Update routing for new compliance pages
+
+## Phase 72: Add CTAs to Compliance Services Page
+- [x] Add CTAs on Compliance Services page linking to FedRAMP and StateRAMP pages
