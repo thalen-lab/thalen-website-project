@@ -3441,3 +3441,9 @@
 ## Phase 49: Update What We Do Section CTAs
 - [x] Update "What We Do" section CTAs: "Explore Our Solutions" + "Schedule a Consultation"
 - [x] Update Solutions section with 6 service cards matching reference design
+
+## Phase 80: Create Federal Solutions Page
+- [x] Create dedicated Core Capabilities page with all solution cards
+- [x] Update navbar to add Core Capabilities link
+- [x] Update homepage What We Do section CTA to link to Core Capabilities page
+- [x] Add route for Core Capabilities page in App.tsx

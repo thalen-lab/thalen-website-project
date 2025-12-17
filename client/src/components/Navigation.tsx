@@ -29,6 +29,7 @@ export default function Navigation() {
   ];
 
   const federalSolutions = [
+    { name: 'Core Capabilities', href: '/core-capabilities' },
     { name: 'FedRAMP Compliance (Federal)', href: '/compliance/fedramp' },
     { name: 'StateRAMP/GovRAMP (State/Local)', href: '/compliance/stateramp' },
     { name: 'CMMC Compliance', href: '/federal-solutions/cmmc' },

@@ -24,6 +24,7 @@ import Methodology from "./pages/Methodology";
 import ServiceComparison from "./pages/ServiceComparison";
 import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
+import CoreCapabilities from "./pages/CoreCapabilities";
 import StateLocalSolutions from "./pages/federal-solutions/StateLocal";
 import FedRAMP from "./pages/FedRAMP";
 import FedRAMPCompliance from "./pages/compliance/FedRAMP";
@@ -197,7 +198,8 @@ function Router() {
       <Route path={"/methodology"} component={Methodology} />
       <Route path={"/compare-services"} component={ServiceComparison} />
       <Route path={"/package-builder"} component={PackageBuilder} />
-      <Route path="/federal-solutions" component={FederalSolutions} />
+      <Route path={"/federal-solutions"} component={FederalSolutions} />
+      <Route path={"/core-capabilities"} component={CoreCapabilities} />
       <Route path="/federal-solutions/fedramp" component={FedRAMP} />
       <Route path="/compliance/fedramp" component={FedRAMPCompliance} />
       <Route path="/compliance/stateramp" component={StateRAMPCompliance} />
