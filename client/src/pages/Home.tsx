@@ -184,17 +184,7 @@ export default function Home() {
                 className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl"
               />
 
-              {/* Floating metric card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="absolute -bottom-8 -right-8 bg-white shadow-xl rounded-lg p-6 border-l-4 border-accent hidden lg:block"
-              >
-                <div className="text-4xl font-bold text-primary mb-1">15+</div>
-                <div className="text-sm text-slate-600 font-medium">Years Team Experience</div>
-              </motion.div>
+
             </motion.div>
 
             {/* Right: Text Content */}

@@ -3432,3 +3432,6 @@
 
 ## Phase 78: Move Image to Left in What We Do Section
 - [x] Move image to left side in What We Do section (swap layout order)
+
+## Phase 79: Remove 15+ Years Metric from What We Do Section
+- [x] Remove floating "15+ Years Team Experience" metric card from What We Do section image
