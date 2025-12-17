@@ -3471,3 +3471,8 @@
 ## Phase 48: Update Branding to Thalen Technologies
 - [x] Update VITE_APP_TITLE environment variable to Thalen Technologies (requires manual update in Settings → General)
 - [x] Verify all NexDyne references are replaced with Thalen Technologies
+
+## Phase 55: Create Dedicated Services/Consulting Page
+- [x] Create dedicated Services/Consulting page with security & compliance content
+- [x] Remove consulting section from homepage
+- [x] Add navigation link to Services page

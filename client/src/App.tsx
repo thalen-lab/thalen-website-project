@@ -51,6 +51,7 @@ import ContractVehicles from "./pages/ContractVehicles";
 import ResourceDownloadFedRAMP from "./pages/ResourceDownloadFedRAMP";
 import ResourceDownloadCMMC from "./pages/ResourceDownloadCMMC";
 import ResourceDownloadCloudMigration from "./pages/ResourceDownloadCloudMigration";
+import ConsultingServices from "./pages/ConsultingServices";
 
 // Service Pages
 import AutomationService from "./pages/services/Automation";
@@ -184,6 +185,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/about"} component={About} />
+      <Route path={"/consulting-services"} component={ConsultingServices} />
       <Route path={"/team"} component={Team} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/m/contact"} component={MobileContact} />
