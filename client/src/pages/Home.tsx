@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
-import CaseStudyShowcase from '@/components/CaseStudyShowcase';
+import ResultsAtGlance from '@/components/ResultsAtGlance';
 import Footer from '@/components/Footer';
 import SmallBusinessCertifications from '@/components/SmallBusinessCertifications';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
@@ -274,8 +274,8 @@ export default function Home() {
       */}
 
 
-      {/* Case Studies Section - Incentro Style */}
-      <CaseStudyShowcase />
+      {/* Results at a Glance Section */}
+      <ResultsAtGlance />
 
       {/* Compliance-First Approach Section */}
       <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-slate-50 to-white">

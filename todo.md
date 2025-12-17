@@ -3447,3 +3447,9 @@
 - [x] Update navbar to add Core Capabilities link
 - [x] Update homepage What We Do section CTA to link to Core Capabilities page
 - [x] Add route for Core Capabilities page in App.tsx
+
+## Phase 75: Redesign Case Studies Section
+- [x] Redesign case studies into compact 'Results at a Glance' section
+- [x] Show 3-4 key metrics with agency type badges
+- [x] Link to full Case Studies page
+- [x] Add compliance badges (FedRAMP, StateRAMP, etc.)
