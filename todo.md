@@ -3495,3 +3495,7 @@
 - [x] Create IndustryUpdates component with GovTech and regulated enterprise news
 - [x] Add hyperlinks to authoritative sources (regulations, compliance updates)
 - [x] Integrate section after hero on homepage
+
+## Phase 53: Industry Updates Ticker Improvements
+- [x] Increase height of Industry Updates ticker section for better readability
+- [x] Remove icons from Industry Updates ticker section
