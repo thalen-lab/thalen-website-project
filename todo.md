@@ -3411,3 +3411,6 @@
 ## Phase 46: Add Past Performance and Contract Vehicles to Federal Solutions Dropdown
 - [x] Add Past Performance page link under Federal Solutions dropdown
 - [x] Add Contract Vehicles page link under Federal Solutions dropdown
+
+## Phase 47: Add Who We Are Section to Homepage
+- [x] Add "Who We Are" section after hero with heading, description, and command center image

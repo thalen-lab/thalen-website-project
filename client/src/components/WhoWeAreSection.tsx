@@ -1,76 +1,13 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'wouter';
-import { Button } from '@/components/ui/button';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Play } from 'lucide-react';
-
-interface CarouselSlide {
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-}
-
-const slides: CarouselSlide[] = [
-  {
-    title: "Govern Smart",
-    subtitle: "Who we are",
-    description: "We serve government agencies and highly regulated industries, ensuring their mission-critical systems deliver when it matters most. Thalen combines deep compliance expertise, proven methodologies, and cutting-edge technology to help public sector organizations navigate complex IT challenges while maintaining the highest security and regulatory standards.",
-    image: "/cybersecurity-operations-center.jpg",
-    imageAlt: "Government cybersecurity operations center"
-  },
-  {
-    title: "Comprehensive Technology Solutions",
-    subtitle: "What we do",
-    description: "From cloud modernization and cybersecurity to data analytics and AI/ML, we deliver end-to-end technology solutions tailored for government and regulated sectors. Our services include intelligent automation, DevSecOps, application development, and digital transformation—all designed with compliance-first architecture and measurable outcomes.",
-    image: "/security-operations-team.jpg",
-    imageAlt: "Security operations team monitoring critical infrastructure"
-  },
-  {
-    title: "Compliance-First Approach",
-    subtitle: "How we deliver",
-    description: "Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, CMMC, FISMA, HIPAA, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.",
-    image: "/federal-data-center.jpg",
-    imageAlt: "Federal data center infrastructure"
-  },
-  {
-    title: "Operational Excellence",
-    subtitle: "Why it matters",
-    description: "Achieve sustained performance improvements through continuous innovation. Our FedRAMP-authorized platforms and compliance-first approach ensure your mission-critical systems operate at peak efficiency while meeting the strictest security standards.",
-    image: "/hero-datacenter.jpg",
-    imageAlt: "Operational excellence and continuous improvement"
-  }
-];
+import { motion } from 'framer-motion';
 
 export default function WhoWeAreSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  // Auto-advance carousel every 5 seconds
-  useEffect(() => {
-    if (isPaused) return;
-    
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isPaused]);
-
-  const currentContent = slides[currentSlide];
-
   return (
-    <section 
-      className="relative py-16 md:py-24 lg:py-28 bg-white overflow-hidden"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
+    <section className="relative py-16 md:py-24 lg:py-28 bg-white overflow-hidden">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
           
-          {/* Left: Animated Text Content */}
+          {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,85 +15,20 @@ export default function WhoWeAreSection() {
             transition={{ duration: 0.7 }}
             className="relative z-10"
           >
-            {/* Subtitle with fade transition */}
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={`subtitle-${currentSlide}`}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.4 }}
-                className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider"
-              >
-                {currentContent.subtitle}
-              </motion.p>
-            </AnimatePresence>
+            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">
+              WHO WE ARE
+            </p>
 
-            {/* Main title with fade transition */}
-            <AnimatePresence mode="wait">
-              <motion.h2
-                key={`title-${currentSlide}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight"
-              >
-                {currentContent.title}
-              </motion.h2>
-            </AnimatePresence>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+              Govern Smart
+            </h2>
 
-            {/* Description with fade transition */}
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={`description-${currentSlide}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="text-lg text-slate-600 leading-relaxed mb-8"
-              >
-                {currentContent.description}
-              </motion.p>
-            </AnimatePresence>
-
-            {/* Progress indicators */}
-            <div className="flex gap-2 mb-8">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`h-1 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'w-12 bg-accent' 
-                      : 'w-8 bg-slate-300 hover:bg-slate-400'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Button asChild variant="default" size="lg" className="bg-primary hover:bg-primary/90">
-                <Link href="/about">
-                  Our story
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-2">
-                <Link href="/about#awards">
-                  Awards and recognition
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-2">
-                <Link href="/about#team">
-                  Join our team
-                </Link>
-              </Button>
-            </div>
+            <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              We serve government agencies and highly regulated industries, ensuring their mission-critical systems deliver when it matters most. Thalen combines deep compliance expertise, proven methodologies, and cutting-edge technology to help public sector organizations navigate complex IT challenges while maintaining the highest security and regulatory standards.
+            </p>
           </motion.div>
 
-          {/* Right: Dynamic Image with parallax effect */}
+          {/* Right: Command Center Image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -165,33 +37,10 @@ export default function WhoWeAreSection() {
             className="relative"
           >
             <div className="relative overflow-hidden shadow-2xl rounded-lg">
-              {/* Image carousel with crossfade */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={`image-${currentSlide}`}
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.6 }}
-                  className="relative"
-                >
-                  <ImageWithLoader
-                    src={currentContent.image}
-                    alt={currentContent.imageAlt}
-                    className="w-full h-auto"
-                  />
-                  {/* Gradient overlay for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10 pointer-events-none"></div>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Decorative accent element */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl"
+              <ImageWithLoader
+                src="/command-center.png"
+                alt="Government command center with monitoring displays"
+                className="w-full h-auto"
               />
             </div>
 
