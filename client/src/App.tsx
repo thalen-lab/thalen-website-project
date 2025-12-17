@@ -26,6 +26,8 @@ import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
 import StateLocalSolutions from "./pages/federal-solutions/StateLocal";
 import FedRAMP from "./pages/FedRAMP";
+import FedRAMPCompliance from "./pages/compliance/FedRAMP";
+import StateRAMPCompliance from "./pages/compliance/StateRAMP";
 import CMMC from "./pages/CMMC";
 import GovCloudMigration from "./pages/GovCloudMigration";
 import PastPerformance from "./pages/PastPerformance";
@@ -197,6 +199,8 @@ function Router() {
       <Route path={"/package-builder"} component={PackageBuilder} />
       <Route path="/federal-solutions" component={FederalSolutions} />
       <Route path="/federal-solutions/fedramp" component={FedRAMP} />
+      <Route path="/compliance/fedramp" component={FedRAMPCompliance} />
+      <Route path="/compliance/stateramp" component={StateRAMPCompliance} />
       <Route path="/federal-solutions/cmmc" component={CMMC} />
       <Route path="/federal-solutions/cloud-migration" component={GovCloudMigration} />
       <Route path="/federal-solutions/state-local" component={StateLocalSolutions} />

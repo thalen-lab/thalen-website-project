@@ -3372,3 +3372,9 @@
 - [x] Add StateRAMP/GovRAMP rebrand note where appropriate
 - [x] Update all references to clearly separate federal (FedRAMP) vs state/local (StateRAMP) scopes
 - [x] Review and correct any other instances of scope confusion throughout the site
+
+## Phase 67: Separate FedRAMP and StateRAMP/GovRAMP Compliance Pages
+- [x] Create dedicated FedRAMP page (federal agencies only)
+- [x] Create dedicated StateRAMP/GovRAMP page (state/local/tribal governments)
+- [x] Update navigation to show both compliance options
+- [x] Update routing for new compliance pages
