@@ -290,7 +290,7 @@ export default function Home() {
                 Compliance-First Approach
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, CMMC, FISMA, HIPAA, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.
+                Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, StateRAMP, CMMC, FISMA, HIPAA, GDPR, SOC 2, PCI-DSS, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.
               </p>
               
               {/* Action Buttons */}
