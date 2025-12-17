@@ -3407,3 +3407,7 @@
 
 ## Phase 54: Remove Small Business Certifications Section
 - [x] Remove Small Business Certifications section (status bar with Small Business, Application Pending, Active & Registered, NAICS codes)
+
+## Phase 46: Add Past Performance and Contract Vehicles to Federal Solutions Dropdown
+- [x] Add Past Performance page link under Federal Solutions dropdown
+- [x] Add Contract Vehicles page link under Federal Solutions dropdown

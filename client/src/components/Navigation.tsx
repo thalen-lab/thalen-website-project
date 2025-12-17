@@ -34,6 +34,8 @@ export default function Navigation() {
     { name: 'CMMC Compliance', href: '/federal-solutions/cmmc' },
     { name: 'ATO Support & Authorization', href: '/services/ato-support' },
     { name: 'Government Cloud Migration', href: '/federal-solutions/cloud-migration' },
+    { name: 'Past Performance', href: '/federal-solutions/past-performance' },
+    { name: 'Contract Vehicles', href: '/contract-vehicles' },
   ];
 
   return (
