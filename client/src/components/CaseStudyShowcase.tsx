@@ -173,8 +173,7 @@ export default function CaseStudyShowcase() {
         </motion.div>
       </div>
 
-      {/* Bottom gradient fade to next section */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[oklch(0.97_0.01_250)] to-transparent"></div>
+
     </section>
   );
 }
