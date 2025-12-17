@@ -22,23 +22,21 @@ export default function ATOSupport() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-navy-gradient">
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
         
         <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">
-              ATO Support Built Into Every Implementation
+            <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-400/30 mb-6">
+              <Shield className="h-4 w-4 text-blue-300" />
+              <span className="text-sm font-medium text-blue-200">ATO Support Built Into Every Implementation</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Implementation Expertise
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-600 mt-2">
-                Plus ATO Authorization
-              </span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              ATO SUPPORT & AUTHORIZATION
             </h1>
             
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
               When federal agencies choose Thalen Technologies to implement cloud migrations, automation platforms, 
               or data systems, they get more than technical expertise—they get a contractor who navigates 
               the entire ATO process from day one, ensuring your system goes live on schedule.
@@ -46,13 +44,13 @@ export default function ATOSupport() {
             
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
                   Discuss Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link href="/methodology">
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
+                <Button size="lg" variant="outline" className="border-blue-300 text-blue-100 hover:bg-blue-800/50">
                   View RAPID Framework
                 </Button>
               </Link>
@@ -66,7 +64,7 @@ export default function ATOSupport() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
-              <h2 className="text-4xl font-bold text-navy-900">Our ATO Approach</h2>
+              <h2 className="text-4xl font-bold text-slate-900">Our ATO Approach</h2>
             </div>
             
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
@@ -75,39 +73,39 @@ export default function ATOSupport() {
               your system achieves ATO on schedule without delays.
             </p>
             
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg p-8 border border-accent/20">
-              <h3 className="text-2xl font-bold text-navy-900 mb-4">What Sets Thalen Technologies Apart</h3>
+            <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-lg p-8 border border-blue-200">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">What Sets Thalen Technologies Apart</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-navy-900 mb-3">Deep Security Expertise</h4>
+                  <h4 className="font-semibold text-slate-900 mb-3">Deep Security Expertise</h4>
                   <ul className="space-y-2 text-slate-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
+                      <span className="text-blue-600 mt-1">•</span>
                       <span>NIST 800-53 control implementation specialists on every project</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
+                      <span className="text-blue-600 mt-1">•</span>
                       <span>Proven System Security Plan (SSP) development methodology</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
+                      <span className="text-blue-600 mt-1">•</span>
                       <span>Established relationships with 3PAO assessment organizations</span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-navy-900 mb-3">Parallel Development Model</h4>
+                  <h4 className="font-semibold text-slate-900 mb-3">Parallel Development Model</h4>
                   <ul className="space-y-2 text-slate-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
+                      <span className="text-blue-600 mt-1">•</span>
                       <span>Security documentation progresses alongside technical development</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
+                      <span className="text-blue-600 mt-1">•</span>
                       <span>Continuous monitoring built into system architecture</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
+                      <span className="text-blue-600 mt-1">•</span>
                       <span>ATO milestones integrated into project timelines from kickoff</span>
                     </li>
                   </ul>
@@ -119,7 +117,7 @@ export default function ATOSupport() {
       </section>
 
       {/* How We Integrate ATO Section */}
-      <section className="py-20 bg-navy-gradient relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-blue-900 to-slate-900 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -134,7 +132,7 @@ export default function ATOSupport() {
             
             <div className="grid gap-8">
               {/* Phase 1 */}
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
+              <Card className="h-full border-2 border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center">
@@ -142,7 +140,7 @@ export default function ATOSupport() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-navy-900 mb-3">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3">
                       Project Kickoff: Security by Design
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
@@ -154,7 +152,7 @@ export default function ATOSupport() {
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Key Activities</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">Key Activities</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• Authorization framework determination</li>
                           <li>• Security control baseline selection</li>
@@ -163,7 +161,7 @@ export default function ATOSupport() {
                         </ul>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Deliverables</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">Deliverables</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• Security requirements document</li>
                           <li>• Control inheritance matrix</li>
@@ -176,7 +174,7 @@ export default function ATOSupport() {
               </Card>
               
               {/* Phase 2 */}
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
+              <Card className="h-full border-2 border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center">
@@ -184,7 +182,7 @@ export default function ATOSupport() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-navy-900 mb-3">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3">
                       Development: Documentation in Parallel
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
@@ -196,7 +194,7 @@ export default function ATOSupport() {
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Key Activities</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">Key Activities</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• System Security Plan (SSP) development</li>
                           <li>• Security control implementation</li>
@@ -205,7 +203,7 @@ export default function ATOSupport() {
                         </ul>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Deliverables</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">Deliverables</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• Complete SSP documentation</li>
                           <li>• Security policies and procedures</li>
@@ -218,7 +216,7 @@ export default function ATOSupport() {
               </Card>
               
               {/* Phase 3 */}
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
+              <Card className="h-full border-2 border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center">
@@ -226,7 +224,7 @@ export default function ATOSupport() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-navy-900 mb-3">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3">
                       Testing: Security Assessment Coordination
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
@@ -238,7 +236,7 @@ export default function ATOSupport() {
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Key Activities</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">Key Activities</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• Pre-assessment readiness review</li>
                           <li>• 3PAO coordination and support</li>
@@ -247,7 +245,7 @@ export default function ATOSupport() {
                         </ul>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Deliverables</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">Deliverables</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• Security Assessment Report (SAR)</li>
                           <li>• Plan of Action & Milestones (POA&M)</li>
@@ -260,7 +258,7 @@ export default function ATOSupport() {
               </Card>
               
               {/* Phase 4 */}
-              <Card className="h-full border-2 border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl bg-white p-8">
+              <Card className="h-full border-2 border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl bg-white p-8">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center">
@@ -268,7 +266,7 @@ export default function ATOSupport() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-navy-900 mb-3">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3">
                       Authorization & Go-Live
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
@@ -280,7 +278,7 @@ export default function ATOSupport() {
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Key Activities</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">Key Activities</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• Authorization package preparation</li>
                           <li>• Authorizing Official (AO) coordination</li>
@@ -289,7 +287,7 @@ export default function ATOSupport() {
                         </ul>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-navy-900 mb-2">Deliverables</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">Deliverables</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           <li>• ATO approval letter</li>
                           <li>• Continuous monitoring plan</li>
@@ -310,7 +308,7 @@ export default function ATOSupport() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
-              <h2 className="text-4xl font-bold text-navy-900">Leveraging FedRAMP & StateRAMP</h2>
+              <h2 className="text-4xl font-bold text-slate-900">Leveraging FedRAMP & StateRAMP</h2>
             </div>
             
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
@@ -319,7 +317,7 @@ export default function ATOSupport() {
               grant your agency ATO—your specific implementation still requires authorization.
             </p>
             
-            <div className="bg-navy-gradient rounded-lg p-8 mb-8">
+            <div className="bg-gradient-to-br from-blue-900 to-slate-900 rounded-lg p-8 mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">Understanding Control Inheritance</h3>
               <p className="text-slate-200 mb-4 leading-relaxed">
                 FedRAMP authorization means the cloud platform infrastructure (AWS GovCloud, Azure Government, 
@@ -336,8 +334,8 @@ export default function ATOSupport() {
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="group p-6 border border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                <h3 className="text-xl font-bold text-navy-900 mb-3">FedRAMP Advantages</h3>
+              <Card className="group p-6 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">FedRAMP Advantages</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
                     <span className="text-black mt-1">•</span>
@@ -358,8 +356,8 @@ export default function ATOSupport() {
                 </ul>
               </Card>
               
-              <Card className="group p-6 border border-slate-200 hover:border-accent transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                <h3 className="text-xl font-bold text-navy-900 mb-3">Agency Responsibilities</h3>
+              <Card className="group p-6 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Agency Responsibilities</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
                     <span className="text-black mt-1">•</span>
@@ -389,78 +387,78 @@ export default function ATOSupport() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-navy-900 mb-4">FAR Compliance Integrated with ATO Process</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">FAR Compliance Integrated with ATO Process</h2>
               <p className="text-xl text-slate-700 max-w-3xl mx-auto">
                 Federal Acquisition Regulation requirements are integrated into our ATO methodology, ensuring contract compliance throughout the security authorization lifecycle.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-6 border-2 border-accent/20">
-                <FileText className="h-10 w-10 text-accent mb-4" />
-                <h3 className="text-xl font-bold text-navy-900 mb-3">Security Safeguards (FAR 52.239-1)</h3>
+              <Card className="p-6 border-2 border-blue-200">
+                <FileText className="h-10 w-10 text-blue-600 mb-4" />
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Security Safeguards (FAR 52.239-1)</h3>
                 <p className="text-slate-700 mb-4">
                   Our ATO process ensures compliance with FAR 52.239-1 Privacy or Security Safeguards, documenting security controls and privacy protections required for federal IT systems.
                 </p>
                 <ul className="space-y-2 text-sm text-slate-700">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-600 mt-1 flex-shrink-0" />
                     <span>Security control implementation documented in System Security Plan (SSP)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-600 mt-1 flex-shrink-0" />
                     <span>Privacy Impact Assessment (PIA) completed for systems handling PII</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-600 mt-1 flex-shrink-0" />
                     <span>Continuous monitoring ensures ongoing compliance with security requirements</span>
                   </li>
                 </ul>
               </Card>
 
-              <Card className="p-6 border-2 border-accent/20">
-                <Shield className="h-10 w-10 text-accent mb-4" />
-                <h3 className="text-xl font-bold text-navy-900 mb-3">Information Safeguarding (FAR 52.204-21)</h3>
+              <Card className="p-6 border-2 border-blue-200">
+                <Shield className="h-10 w-10 text-blue-600 mb-4" />
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Information Safeguarding (FAR 52.204-21)</h3>
                 <p className="text-slate-700 mb-4">
                   ATO implementations include FAR 52.204-21 Basic Safeguarding requirements for Covered Contractor Information Systems, protecting federal information throughout the project lifecycle.
                 </p>
                 <ul className="space-y-2 text-sm text-slate-700">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-600 mt-1 flex-shrink-0" />
                     <span>NIST SP 800-171 controls implemented for CUI protection</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-600 mt-1 flex-shrink-0" />
                     <span>Incident response procedures documented and tested</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-600 mt-1 flex-shrink-0" />
                     <span>Security assessment validates safeguarding effectiveness</span>
                   </li>
                 </ul>
               </Card>
             </div>
 
-            <Card className="mt-8 p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-accent/20">
-              <h3 className="text-2xl font-bold text-navy-900 mb-4">Procurement Advantages</h3>
+            <Card className="mt-8 p-8 bg-gradient-to-br from-blue-50 to-slate-50 border-2 border-blue-200">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Procurement Advantages</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
-                  <Target className="h-8 w-8 text-accent mb-3" />
-                  <h4 className="font-semibold text-navy-900 mb-2">Streamlined Contract Execution</h4>
+                  <Target className="h-8 w-8 text-blue-600 mb-3" />
+                  <h4 className="font-semibold text-slate-900 mb-2">Streamlined Contract Execution</h4>
                   <p className="text-sm text-slate-700">
                     Pre-established FAR compliance frameworks reduce contract negotiation time and enable faster project initiation.
                   </p>
                 </div>
                 <div>
-                  <Shield className="h-8 w-8 text-accent mb-3" />
-                  <h4 className="font-semibold text-navy-900 mb-2">Reduced Oversight Burden</h4>
+                  <Shield className="h-8 w-8 text-blue-600 mb-3" />
+                  <h4 className="font-semibold text-slate-900 mb-2">Reduced Oversight Burden</h4>
                   <p className="text-sm text-slate-700">
                     Documented compliance with FAR security requirements minimizes agency oversight and contractor management effort.
                   </p>
                 </div>
                 <div>
-                  <FileCheck className="h-8 w-8 text-accent mb-3" />
-                  <h4 className="font-semibold text-navy-900 mb-2">Audit-Ready Documentation</h4>
+                  <FileCheck className="h-8 w-8 text-blue-600 mb-3" />
+                  <h4 className="font-semibold text-slate-900 mb-2">Audit-Ready Documentation</h4>
                   <p className="text-sm text-slate-700">
                     Maintained compliance records support agency audits and CPARS evaluations with evidence of regulatory adherence.
                   </p>
@@ -472,7 +470,7 @@ export default function ATOSupport() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-blue-900 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
         
         <div className="container relative z-10 mx-auto px-4">
@@ -480,19 +478,19 @@ export default function ATOSupport() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Implementation Expertise with ATO Built-In
             </h2>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
               Partner with Thalen Technologies for implementation expertise that includes security 
               authorization from day one. Your systems go live on schedule with full ATO in place.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
                   Discuss Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link href="/case-studies">
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
+                <Button size="lg" variant="outline" className="border-blue-300 text-blue-100 hover:bg-blue-800/50">
                   View Case Studies
                 </Button>
               </Link>

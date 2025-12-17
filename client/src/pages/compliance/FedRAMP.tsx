@@ -142,9 +142,9 @@ export default function FedRAMP() {
                 </div>
               </Card>
 
-              <Card className="p-8 border-2 border-red-200 bg-red-50">
+              <Card className="p-8 border-2 border-blue-200 bg-blue-50">
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="h-12 w-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -154,11 +154,11 @@ export default function FedRAMP() {
                     </p>
                     <ul className="space-y-2 text-slate-600">
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span>421 security controls</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span>Required for law enforcement, emergency services, and critical infrastructure</span>
                       </li>
                     </ul>
@@ -373,7 +373,7 @@ export default function FedRAMP() {
                     <tr className="bg-slate-100">
                       <th className="px-6 py-4 text-left text-sm font-bold text-slate-900 w-1/4">Aspect</th>
                       <th className="px-6 py-4 text-left text-sm font-bold text-blue-900 w-3/8 border-l-2 border-slate-200">FedRAMP</th>
-                      <th className="px-6 py-4 text-left text-sm font-bold text-emerald-900 w-3/8 border-l-2 border-slate-200">StateRAMP</th>
+                      <th className="px-6 py-4 text-left text-sm font-bold text-slate-900 w-3/8 border-l-2 border-slate-200">StateRAMP</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200">
@@ -444,7 +444,7 @@ export default function FedRAMP() {
                       </Button>
                     </Link>
                     <Link href="/compliance/stateramp">
-                      <Button variant="outline" className="border-emerald-600 text-emerald-700 hover:bg-emerald-50">
+                      <Button variant="outline" className="border-blue-600 text-blue-700 hover:bg-blue-50">
                         Learn About StateRAMP
                       </Button>
                     </Link>

@@ -10,19 +10,19 @@ export default function StateRAMP() {
     <div className="min-h-screen">
       <Navigation />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-900 text-white py-24">
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iIzFmMmU0YSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==')] opacity-10"></div>
         <div className="container relative z-10">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-emerald-400/30 mb-6">
-              <Building2 className="h-4 w-4 text-emerald-300" />
-              <span className="text-sm font-medium text-emerald-200">State & Local Government Compliance</span>
+            <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-400/30 mb-6">
+              <Building2 className="h-4 w-4 text-blue-300" />
+              <span className="text-sm font-medium text-blue-200">State & Local Government Compliance</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               StateRAMP & GovRAMP
-              <span className="block text-emerald-300 mt-2">For State, Local & Tribal Governments</span>
+              <span className="block text-blue-300 mt-2">For State, Local & Tribal Governments</span>
             </h1>
-            <p className="text-xl text-emerald-100 mb-8 leading-relaxed max-w-3xl">
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl">
               Navigate state and local government cloud security requirements with confidence. NexDyne delivers secure, compliant cloud solutions tailored to the unique needs of state agencies, municipalities, and tribal governments.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -32,7 +32,7 @@ export default function StateRAMP() {
                 </Button>
               </Link>
               <Link href="/resources">
-                <Button size="lg" variant="outline" className="border-emerald-300 text-emerald-100 hover:bg-emerald-800/50">
+                <Button size="lg" variant="outline" className="border-blue-300 text-blue-100 hover:bg-blue-800/50">
                   Download StateRAMP Checklist
                 </Button>
               </Link>
@@ -57,8 +57,8 @@ export default function StateRAMP() {
 
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <Card className="p-6 border-2 border-slate-200">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-emerald-600" />
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-slate-900">State-Focused Baseline</h3>
                 <p className="text-slate-600">
@@ -67,8 +67,8 @@ export default function StateRAMP() {
               </Card>
 
               <Card className="p-6 border-2 border-slate-200">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <FileCheck className="h-6 w-6 text-emerald-600" />
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <FileCheck className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-slate-900">Reciprocity</h3>
                 <p className="text-slate-600">
@@ -77,8 +77,8 @@ export default function StateRAMP() {
               </Card>
 
               <Card className="p-6 border-2 border-slate-200">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <Lock className="h-6 w-6 text-emerald-600" />
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <Lock className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-slate-900">Continuous Assurance</h3>
                 <p className="text-slate-600">
@@ -104,9 +104,9 @@ export default function StateRAMP() {
               </p>
             </div>
 
-            <Card className="p-8 border-2 border-emerald-200 bg-emerald-50 mt-8">
+            <Card className="p-8 border-2 border-blue-200 bg-blue-50 mt-8">
               <div className="flex items-start gap-4">
-                <div className="h-12 w-12 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="h-12 w-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Building2 className="h-6 w-6 text-white" />
                 </div>
                 <div className="flex-1">
@@ -116,15 +116,15 @@ export default function StateRAMP() {
                   </p>
                   <ul className="space-y-2 text-slate-600">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                       <span>Cross-jurisdictional reciprocity</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                       <span>Harmonized security controls</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                       <span>Reduced compliance burden for multi-level deployments</span>
                     </li>
                   </ul>
@@ -142,9 +142,9 @@ export default function StateRAMP() {
             <h2 className="text-4xl font-bold mb-12 text-center text-slate-900">StateRAMP Impact Levels</h2>
             
             <div className="space-y-6">
-              <Card className="p-8 border-2 border-green-200 bg-green-50">
+              <Card className="p-8 border-2 border-blue-200 bg-blue-50">
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="h-12 w-12 bg-blue-200 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -170,9 +170,9 @@ export default function StateRAMP() {
                 </div>
               </Card>
 
-              <Card className="p-8 border-2 border-emerald-200 bg-emerald-50">
+              <Card className="p-8 border-2 border-blue-200 bg-blue-50">
                 <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 bg-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="h-12 w-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -182,15 +182,15 @@ export default function StateRAMP() {
                     </p>
                     <ul className="space-y-2 text-slate-600">
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span>Personally Identifiable Information (PII)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span>Financial and tax systems</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span>Healthcare and social services data</span>
                       </li>
                     </ul>
@@ -240,9 +240,9 @@ export default function StateRAMP() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8 border-2 border-slate-200 hover:border-emerald-400 transition-colors">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <FileCheck className="h-6 w-6 text-emerald-600" />
+              <Card className="p-8 border-2 border-slate-200 hover:border-blue-300 transition-colors">
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <FileCheck className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">Compliance Readiness Assessment</h3>
                 <p className="text-slate-600 mb-4">
@@ -250,23 +250,23 @@ export default function StateRAMP() {
                 </p>
                 <ul className="space-y-2 text-slate-600">
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Security control gap analysis</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Risk assessment and prioritization</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Budget and timeline planning</span>
                   </li>
                 </ul>
               </Card>
 
-              <Card className="p-8 border-2 border-slate-200 hover:border-emerald-400 transition-colors">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-emerald-600" />
+              <Card className="p-8 border-2 border-slate-200 hover:border-blue-300 transition-colors">
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">Security Documentation</h3>
                 <p className="text-slate-600 mb-4">
@@ -274,23 +274,23 @@ export default function StateRAMP() {
                 </p>
                 <ul className="space-y-2 text-slate-600">
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>SSP and security package development</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Control implementation evidence</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Policy and procedure templates</span>
                   </li>
                 </ul>
               </Card>
 
-              <Card className="p-8 border-2 border-slate-200 hover:border-emerald-400 transition-colors">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-emerald-600" />
+              <Card className="p-8 border-2 border-slate-200 hover:border-blue-300 transition-colors">
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">Third-Party Assessment Coordination</h3>
                 <p className="text-slate-600 mb-4">
@@ -298,23 +298,23 @@ export default function StateRAMP() {
                 </p>
                 <ul className="space-y-2 text-slate-600">
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Assessor selection and coordination</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Testing support and artifact collection</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Finding remediation and retesting</span>
                   </li>
                 </ul>
               </Card>
 
-              <Card className="p-8 border-2 border-slate-200 hover:border-emerald-400 transition-colors">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <Lock className="h-6 w-6 text-emerald-600" />
+              <Card className="p-8 border-2 border-slate-200 hover:border-blue-300 transition-colors">
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <Lock className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">Continuous Compliance Management</h3>
                 <p className="text-slate-600 mb-4">
@@ -322,15 +322,15 @@ export default function StateRAMP() {
                 </p>
                 <ul className="space-y-2 text-slate-600">
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Continuous monitoring and reporting</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Vulnerability scanning and patching</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>Annual re-assessment support</span>
                   </li>
                 </ul>
@@ -347,9 +347,9 @@ export default function StateRAMP() {
             <h2 className="text-4xl font-bold mb-12 text-center text-slate-900">Who Should Use StateRAMP?</h2>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="p-8 border-2 border-emerald-200">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <Building2 className="h-6 w-6 text-emerald-600" />
+              <Card className="p-8 border-2 border-blue-200">
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <Building2 className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">State Agencies</h3>
                 <p className="text-slate-600">
@@ -357,9 +357,9 @@ export default function StateRAMP() {
                 </p>
               </Card>
 
-              <Card className="p-8 border-2 border-emerald-200">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <Building2 className="h-6 w-6 text-emerald-600" />
+              <Card className="p-8 border-2 border-blue-200">
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <Building2 className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">Local Governments</h3>
                 <p className="text-slate-600">
@@ -367,9 +367,9 @@ export default function StateRAMP() {
                 </p>
               </Card>
 
-              <Card className="p-8 border-2 border-emerald-200">
-                <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <Building2 className="h-6 w-6 text-emerald-600" />
+              <Card className="p-8 border-2 border-blue-200">
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <Building2 className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">Tribal Governments</h3>
                 <p className="text-slate-600">
@@ -451,9 +451,9 @@ export default function StateRAMP() {
               </div>
             </div>
 
-            <div className="mt-12 p-8 bg-emerald-50 border-2 border-emerald-200 rounded-lg">
+            <div className="mt-12 p-8 bg-blue-50 border-2 border-blue-200 rounded-lg">
               <div className="flex items-start gap-4">
-                <div className="h-12 w-12 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="h-12 w-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Building2 className="h-6 w-6 text-white" />
                 </div>
                 <div className="flex-1">
@@ -463,7 +463,7 @@ export default function StateRAMP() {
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link href="/contact">
-                      <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                      <Button className="bg-blue-600 hover:bg-emerald-700 text-white">
                         Schedule Assessment
                       </Button>
                     </Link>
@@ -487,15 +487,15 @@ export default function StateRAMP() {
             <h2 className="text-3xl font-bold mb-8 text-center text-slate-900">Comprehensive Compliance Services</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <Link href="/services/fedramp">
-                <Card className="p-8 border-2 border-emerald-200 hover:border-emerald-400 transition-colors cursor-pointer h-full">
-                  <div className="h-12 w-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                    <Building2 className="h-6 w-6 text-emerald-600" />
+                <Card className="p-8 border-2 border-blue-200 hover:border-blue-300 transition-colors cursor-pointer h-full">
+                  <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <Building2 className="h-6 w-6 text-blue-600" />
                   </div>
                   <h3 className="text-2xl font-bold mb-3 text-slate-900">StateRAMP Implementation Services</h3>
                   <p className="text-slate-600 mb-4">
                     Explore our full suite of StateRAMP implementation services, including readiness assessments, documentation support, and continuous monitoring.
                   </p>
-                  <div className="text-emerald-600 font-semibold flex items-center gap-2">
+                  <div className="text-blue-600 font-semibold flex items-center gap-2">
                     View Services →
                   </div>
                 </Card>
@@ -535,7 +535,7 @@ export default function StateRAMP() {
                 </Button>
               </Link>
               <Link href="/resources">
-                <Button size="lg" variant="outline" className="border-emerald-300 text-emerald-100 hover:bg-emerald-800/50">
+                <Button size="lg" variant="outline" className="border-blue-300 text-blue-100 hover:bg-blue-800/50">
                   Download StateRAMP Guide
                 </Button>
               </Link>
