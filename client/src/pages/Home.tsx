@@ -230,7 +230,7 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
       </section>
 
-      {/* Services Section - 2x3 Grid Layout */}
+      {/* Services Section - 2x3 Grid Layout - COMMENTED OUT
       <section className="py-20 md:py-24 lg:py-28 bg-navy-gradient text-primary-foreground">
         <div className="container">
           <div className="mb-12 md:mb-16 lg:mb-20 text-center max-w-4xl mx-auto">
@@ -271,6 +271,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
 
       {/* Case Studies Section - Incentro Style */}
