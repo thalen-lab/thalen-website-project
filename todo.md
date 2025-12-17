@@ -3404,3 +3404,6 @@
 
 ## Phase 76: Remove "Why Choose NexDyne" Section from Homepage
 - [x] Remove entire "Why Choose NexDyne" section from homepage (heading, description, three feature cards, status table)
+
+## Phase 54: Remove Small Business Certifications Section
+- [x] Remove Small Business Certifications section (status bar with Small Business, Application Pending, Active & Registered, NAICS codes)

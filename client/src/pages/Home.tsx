@@ -687,8 +687,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Small Business Certifications Section */}
-      <SmallBusinessCertifications />
+
 
       {/* CTA Section */}
       <section className="py-16 md:py-20 lg:py-24 bg-navy-gradient text-primary-foreground">
