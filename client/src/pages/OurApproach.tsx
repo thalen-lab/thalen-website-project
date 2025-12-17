@@ -126,7 +126,7 @@ export default function OurApproach() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[oklch(0.75_0.15_220)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               How We Deliver Mission-Critical Results
             </h1>
@@ -145,7 +145,7 @@ export default function OurApproach() {
                   key={sector.label}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium"
                 >
-                  <sector.icon className="h-4 w-4 text-[oklch(0.75_0.15_220)]" />
+                  <sector.icon className="h-4 w-4 text-[oklch(0.75_0.15_55)]" />
                   {sector.label}
                 </div>
               ))}
@@ -186,9 +186,9 @@ export default function OurApproach() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <Card className="h-full bg-white border border-slate-200 hover:border-[oklch(0.45_0.12_250)] hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  {/* Top accent bar */}
-                  <div className="h-1.5 bg-gradient-to-r from-[oklch(0.35_0.10_250)] to-[oklch(0.45_0.12_250)]"></div>
+                <Card className="h-full bg-white border border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  {/* Top accent bar - Orange accent */}
+                  <div className="h-1.5 bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)]"></div>
                   <CardContent className="p-8 lg:p-10">
                     {/* Icon and Title */}
                     <div className="mb-6">
@@ -198,7 +198,7 @@ export default function OurApproach() {
                       <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-2">
                         {pillar.title}
                       </h3>
-                      <p className="text-base font-semibold text-[oklch(0.45_0.12_250)]">
+                      <p className="text-base font-semibold text-[oklch(0.65_0.18_55)]">
                         {pillar.tagline}
                       </p>
                     </div>
@@ -212,7 +212,7 @@ export default function OurApproach() {
                     <ul className="space-y-3 mb-6">
                       {pillar.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-3">
-                          <CheckCircle2 className="h-5 w-5 text-[oklch(0.45_0.12_250)] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="h-5 w-5 text-[oklch(0.65_0.18_55)] flex-shrink-0 mt-0.5" />
                           <span className="text-sm text-slate-700">{feature}</span>
                         </li>
                       ))}
@@ -254,7 +254,7 @@ export default function OurApproach() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[oklch(0.45_0.12_250)] font-semibold mb-4 uppercase tracking-wider">Compliance Expertise</p>
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance Expertise</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Frameworks We Navigate
             </h2>
@@ -284,9 +284,9 @@ export default function OurApproach() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="bg-[oklch(0.97_0.01_250)] border border-slate-200 rounded-lg p-4 text-center hover:border-[oklch(0.45_0.12_250)] hover:shadow-md transition-all duration-300"
+                className="bg-[oklch(0.97_0.01_250)] border border-slate-200 rounded-lg p-4 text-center hover:border-[oklch(0.70_0.18_55)] hover:shadow-md transition-all duration-300"
               >
-                <FileCheck className="h-6 w-6 text-[oklch(0.35_0.10_250)] mx-auto mb-2" />
+                <FileCheck className="h-6 w-6 text-[oklch(0.65_0.18_55)] mx-auto mb-2" />
                 <p className="font-bold text-[oklch(0.20_0.05_250)] text-sm">{framework.name}</p>
                 <p className="text-xs text-slate-500">{framework.type}</p>
               </motion.div>
@@ -305,7 +305,7 @@ export default function OurApproach() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[oklch(0.45_0.12_250)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               From Discovery to Delivery
             </h2>
@@ -366,7 +366,7 @@ export default function OurApproach() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-[oklch(0.45_0.12_250)] font-semibold mb-4 uppercase tracking-wider">Why It Works</p>
+              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why It Works</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
                 Built for Public Sector & Regulated Industry Success
               </h2>
@@ -382,7 +382,7 @@ export default function OurApproach() {
                   'Proven methodology reduces implementation risk across all sectors'
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-6 w-6 text-[oklch(0.45_0.12_250)] flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-6 w-6 text-[oklch(0.65_0.18_55)] flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">{item}</span>
                   </div>
                 ))}
@@ -405,7 +405,7 @@ export default function OurApproach() {
                 { icon: Scale, value: '30+', label: 'Regulated Enterprises' },
                 { icon: Award, value: 'TS/SCI', label: 'Cleared Personnel Available' }
               ].map((stat, index) => (
-                <Card key={index} className="bg-[oklch(0.97_0.01_250)] border-slate-200 hover:border-[oklch(0.45_0.12_250)] transition-colors duration-300">
+                <Card key={index} className="bg-[oklch(0.97_0.01_250)] border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
                   <CardContent className="p-6 text-center">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[oklch(0.22_0.06_250)] mb-4">
                       <stat.icon className="h-6 w-6 text-white" />
