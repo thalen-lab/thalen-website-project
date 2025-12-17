@@ -82,11 +82,11 @@ const industryUpdates: UpdateItem[] = [
 ];
 
 const categoryConfig = {
-  regulation: { label: "Regulation", color: "text-amber-400" },
-  compliance: { label: "Compliance", color: "text-emerald-400" },
-  policy: { label: "Policy", color: "text-blue-400" },
-  security: { label: "Security", color: "text-red-400" },
-  procurement: { label: "Procurement", color: "text-purple-400" },
+  regulation: { label: "Regulation", color: "text-white" },
+  compliance: { label: "Compliance", color: "text-white" },
+  policy: { label: "Policy", color: "text-white" },
+  security: { label: "Security", color: "text-white" },
+  procurement: { label: "Procurement", color: "text-white" },
 };
 
 export default function IndustryUpdates() {
@@ -120,8 +120,8 @@ export default function IndustryUpdates() {
       <div className="container relative py-5 md:py-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
           {/* Label */}
-          <div className="flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full shrink-0">
-            <span className="text-sm font-semibold text-orange-400 uppercase tracking-wider">Industry Updates</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full shrink-0">
+            <span className="text-sm font-semibold text-white uppercase tracking-wider">Industry Updates</span>
           </div>
 
           {/* Main ticker content */}
@@ -153,16 +153,16 @@ export default function IndustryUpdates() {
               </div>
 
               {/* Source and date */}
-              <div className="hidden lg:flex items-center gap-4 text-sm text-slate-400 shrink-0">
+              <div className="hidden lg:flex items-center gap-4 text-sm text-white/70 shrink-0">
                 <span className="flex items-center gap-1.5">
                   <ExternalLink className="w-4 h-4" />
                   {activeUpdate.source}
                 </span>
-                <span className="text-slate-500">|</span>
+                <span className="text-white/50">|</span>
                 <span>{activeUpdate.date}</span>
               </div>
 
-              <ChevronRight className="hidden sm:block w-5 h-5 text-slate-500 group-hover:text-orange-400 transition-colors shrink-0" />
+              <ChevronRight className="hidden sm:block w-5 h-5 text-white/50 group-hover:text-orange-400 transition-colors shrink-0" />
             </a>
           </div>
 
@@ -186,12 +186,12 @@ export default function IndustryUpdates() {
 
         {/* Quick links - moved to separate row for better spacing */}
         <div className="hidden xl:flex items-center gap-3 mt-4 pt-4 border-t border-slate-700/50">
-          <span className="text-sm text-slate-500 mr-2">Quick Links:</span>
+          <span className="text-sm text-white/60 mr-2">Quick Links:</span>
           <a
             href="https://www.fedramp.gov/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-colors"
+            className="px-3 py-1.5 text-sm font-medium text-white/70 hover:text-orange-400 hover:bg-white/5 rounded-md transition-colors"
           >
             FedRAMP
           </a>
@@ -199,7 +199,7 @@ export default function IndustryUpdates() {
             href="https://www.cisa.gov/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-colors"
+            className="px-3 py-1.5 text-sm font-medium text-white/70 hover:text-orange-400 hover:bg-white/5 rounded-md transition-colors"
           >
             CISA
           </a>
@@ -207,7 +207,7 @@ export default function IndustryUpdates() {
             href="https://csrc.nist.gov/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-colors"
+            className="px-3 py-1.5 text-sm font-medium text-white/70 hover:text-orange-400 hover:bg-white/5 rounded-md transition-colors"
           >
             NIST
           </a>
@@ -215,7 +215,7 @@ export default function IndustryUpdates() {
             href="https://sam.gov/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-colors"
+            className="px-3 py-1.5 text-sm font-medium text-white/70 hover:text-orange-400 hover:bg-white/5 rounded-md transition-colors"
           >
             SAM.gov
           </a>

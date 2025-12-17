@@ -3502,3 +3502,7 @@
 
 ## Phase 61: UI Adjustments
 - [x] Reduce hero section height
+
+## Phase 84: Industry Updates Ticker Styling Fix
+- [x] Make all text white in Industry Updates ticker section
+- [x] Keep orange hover effects on titles only
