@@ -3454,3 +3454,10 @@
 - [x] Link to full Case Studies page
 - [x] Add compliance badges (FedRAMP, StateRAMP, etc.)
 - [x] Update Results at a Glance section - signature blue background with flip card hover animation
+- [ ] Redesign case studies section with image cards + stats overlay (no flipping)
+
+## Phase 65: Redesign Case Studies Section
+- [x] Redesign case studies section with image cards + stats overlay (no flipping)
+- [x] Use existing images that load properly (datacenter, cyber ops, healthcare IT, fraud SOC)
+- [x] Display category badges, large stat numbers, descriptions, and "View Case Study" links
+- [x] Maintain compliance badges and CTA button below cards

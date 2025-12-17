@@ -8,6 +8,7 @@ interface ResultMetric {
   agencyType: string;
   caseStudyLink: string;
   image: string;
+  description?: string;
 }
 
 const resultMetrics: ResultMetric[] = [
@@ -16,28 +17,32 @@ const resultMetrics: ResultMetric[] = [
     label: "Process Automation",
     agencyType: "Federal Agency",
     caseStudyLink: "/case-studies/federal-automation",
-    image: "/images/results/federal-automation.jpg"
+    image: "/hero-datacenter.jpg",
+    description: "Reduced claims processing from 6 weeks to 2 days"
   },
   {
     value: "99.2%",
     label: "System Uptime",
-    agencyType: "DoD Manufacturing",
+    agencyType: "Defense & Aerospace",
     caseStudyLink: "/case-studies/dod-manufacturing",
-    image: "/images/results/manufacturing-uptime.jpg"
+    image: "/defense-cyber-ops.b7c4e1f3.jpg",
+    description: "Eliminated 75% of unplanned downtime across 50+ facilities"
   },
   {
     value: "12",
     label: "Systems Integrated",
     agencyType: "VA Healthcare",
     caseStudyLink: "/case-studies/va-healthcare",
-    image: "/images/results/healthcare-systems.jpg"
+    image: "/healthcare-legacy-it.jpg",
+    description: "Real-time patient data access with 170% ROI"
   },
   {
     value: "$50M",
     label: "Fraud Prevented",
     agencyType: "State Government",
     caseStudyLink: "/case-studies/state-attorney-general",
-    image: "/images/results/fraud-prevention.jpg"
+    image: "/financial-fraud-soc.a8f3d9e2.jpg",
+    description: "AI-powered detection protecting taxpayer funds"
   }
 ];
 
@@ -79,69 +84,65 @@ export default function ResultsAtGlance() {
           </p>
         </motion.div>
 
-        {/* Flip Cards Grid */}
+        {/* Image Cards Grid with Stats Overlay */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10 md:mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10 md:mb-12"
         >
           {resultMetrics.map((metric, index) => (
             <Link 
               key={index}
               href={metric.caseStudyLink}
-              className="group perspective-1000"
+              className="group block"
             >
-              <div className="relative h-[200px] md:h-[240px] lg:h-[260px] transition-transform duration-700 transform-style-3d group-hover:rotate-y-180">
-                {/* Front Face - Stats */}
-                <div className="absolute inset-0 backface-hidden">
-                  <div className="bg-[#0d3050]/80 backdrop-blur-sm border border-blue-400/20 rounded-lg p-5 md:p-6 text-center h-full flex flex-col justify-center hover:border-orange-500/50 transition-all duration-300">
-                    {/* Agency Badge */}
-                    <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-medium rounded-full mb-3 mx-auto">
+              <div className="relative h-[280px] md:h-[320px] lg:h-[340px] rounded-xl overflow-hidden border border-blue-400/20 hover:border-orange-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10">
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <img 
+                    src={metric.image} 
+                    alt={metric.label}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                
+                {/* Gradient Overlay - stronger at bottom for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/70 to-transparent" />
+                
+                {/* Content Overlay */}
+                <div className="absolute inset-0 flex flex-col justify-between p-5 md:p-6">
+                  {/* Top: Category Badge */}
+                  <div>
+                    <span className="inline-block px-3 py-1.5 bg-orange-500/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full shadow-lg">
                       {metric.agencyType}
                     </span>
-                    
-                    {/* Metric Value */}
-                    <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
+                  </div>
+                  
+                  {/* Bottom: Stats and Description */}
+                  <div>
+                    {/* Big Stat Number */}
+                    <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-1 drop-shadow-lg">
                       {metric.value}
                     </div>
                     
-                    {/* Metric Label */}
-                    <p className="text-blue-200/70 text-sm md:text-base font-medium">
+                    {/* Stat Label */}
+                    <p className="text-lg md:text-xl font-semibold text-white/95 mb-2">
                       {metric.label}
                     </p>
                     
-                    {/* Hover Hint */}
-                    <div className="mt-3 text-blue-300/50 text-xs">
-                      Hover to see more
-                    </div>
-                  </div>
-                </div>
-
-                {/* Back Face - Image */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180">
-                  <div className="relative h-full rounded-lg overflow-hidden border border-orange-500/50">
-                    <img 
-                      src={metric.image} 
-                      alt={metric.label}
-                      className="w-full h-full object-cover"
-                    />
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/60 to-transparent" />
-                    
-                    {/* Content on Image */}
-                    <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5">
-                      <span className="inline-block px-2 py-0.5 bg-orange-500 text-white text-xs font-medium rounded mb-2 w-fit">
-                        {metric.agencyType}
-                      </span>
-                      <p className="text-white font-bold text-lg md:text-xl mb-1">
-                        {metric.value} {metric.label}
+                    {/* Description */}
+                    {metric.description && (
+                      <p className="text-sm text-blue-100/80 mb-3 line-clamp-2">
+                        {metric.description}
                       </p>
-                      <div className="flex items-center text-orange-400 text-sm font-medium">
-                        View Case Study
-                        <ArrowRight className="w-3 h-3 ml-1" />
-                      </div>
+                    )}
+                    
+                    {/* View Case Study Link */}
+                    <div className="flex items-center text-orange-400 text-sm font-semibold group-hover:text-orange-300 transition-colors">
+                      View Case Study
+                      <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
                 </div>
@@ -189,26 +190,6 @@ export default function ResultsAtGlance() {
           </Link>
         </motion.div>
       </div>
-
-      {/* Custom CSS for 3D flip effect */}
-      <style>{`
-        .perspective-1000 {
-          perspective: 1000px;
-        }
-        .transform-style-3d {
-          transform-style: preserve-3d;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-          -webkit-backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-        .group:hover .group-hover\\:rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-      `}</style>
     </section>
   );
 }
