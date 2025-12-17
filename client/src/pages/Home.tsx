@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import SmallBusinessCertifications from '@/components/SmallBusinessCertifications';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
 import HeroCarousel from '@/components/HeroCarousel';
+import IndustryUpdates from '@/components/IndustryUpdates';
 import WhoWeAreSection from '@/components/WhoWeAreSection';
 import { 
   ArrowRight, 
@@ -117,6 +118,9 @@ export default function Home() {
       
       {/* Hero Carousel Section */}
       <HeroCarousel />
+
+      {/* Industry Updates Ticker */}
+      <IndustryUpdates />
 
       {/* Who We Are Section - Enhanced with Signature Blue */}
       <WhoWeAreSection />
