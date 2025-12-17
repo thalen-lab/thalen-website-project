@@ -1,9 +1,12 @@
 import { ImageWithLoader } from '@/components/ImageWithLoader';
+import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'wouter';
 
 export default function WhoWeAreSection() {
   return (
-    <section className="relative py-16 md:py-24 lg:py-28 bg-white overflow-hidden">
+    <section className="relative py-10 md:py-14 lg:py-16 bg-white overflow-hidden">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
           
@@ -20,12 +23,26 @@ export default function WhoWeAreSection() {
             </p>
 
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Govern Smart
+              Thalen Technology
             </h2>
 
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
               We serve government agencies and highly regulated industries, ensuring their mission-critical systems deliver when it matters most. Thalen combines deep compliance expertise, proven methodologies, and cutting-edge technology to help public sector organizations navigate complex IT challenges while maintaining the highest security and regulatory standards.
             </p>
+
+            <div className="flex flex-wrap gap-4">
+              <Button asChild size="lg" className="group">
+                <Link href="/about">
+                  Learn More About Us
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                <Link href="/contact">
+                  Get in Touch
+                </Link>
+              </Button>
+            </div>
           </motion.div>
 
           {/* Right: Command Center Image */}
