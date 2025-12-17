@@ -198,8 +198,6 @@ function Router() {
       <Route path={"/compare-services"} component={ServiceComparison} />
       <Route path={"/package-builder"} component={PackageBuilder} />
       <Route path="/federal-solutions" component={FederalSolutions} />
-      <Route path="/fedramp" component={FedRAMP} />
-      <Route path="/stateramp" component={StateRAMPCompliance} />
       <Route path="/federal-solutions/fedramp" component={FedRAMP} />
       <Route path="/compliance/fedramp" component={FedRAMPCompliance} />
       <Route path="/compliance/stateramp" component={StateRAMPCompliance} />
