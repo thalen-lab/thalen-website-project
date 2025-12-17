@@ -3426,3 +3426,6 @@
 
 ## Phase 62: Update Who We Are Section Image
 - [x] Update Who We Are section image to public-sectors.jpg
+
+## Phase 63: Remove Floating Metric from Who We Are Section
+- [x] Remove "15+ Years of Excellence" floating metric card from Who We Are section image
