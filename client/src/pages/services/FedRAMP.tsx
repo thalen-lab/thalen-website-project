@@ -37,9 +37,17 @@ export default function FedRAMP() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide text-white uppercase mb-6">
             FedRAMP & StateRAMP Implementation Services
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-4xl leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 max-w-4xl leading-relaxed mb-8">
             Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.
           </p>
+          <div className="flex flex-wrap gap-4">
+            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
+              Request Consultation
+            </Button>
+            <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
+              View Our Certifications
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -150,6 +158,88 @@ export default function FedRAMP() {
                 <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dedicated Services CTAs */}
+      <section className="bg-[#0a1628] py-16 lg:py-20">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-light tracking-wide text-white uppercase mb-4">
+              Explore Our Specialized Compliance Services
+            </h2>
+            <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Dive deeper into our dedicated FedRAMP and StateRAMP/GovRAMP services, tailored to your specific government sector needs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* FedRAMP CTA Card */}
+            <div className="bg-gradient-to-br from-[#12243d] to-[#0d1c30] rounded-lg p-8 border border-blue-500/30 hover:border-blue-500/60 transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-blue-500/20 rounded-lg p-3">
+                  <Shield className="w-8 h-8 text-blue-400" />
+                </div>
+                <h3 className="text-2xl font-medium text-white">FedRAMP</h3>
+              </div>
+              <p className="text-gray-300 mb-4 leading-relaxed">
+                Comprehensive FedRAMP compliance services for federal agencies. Navigate the rigorous security requirements with our expert guidance.
+              </p>
+              <ul className="space-y-2 mb-6 text-sm text-gray-400">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span>Federal agency authorization (ATO)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span>Low, Moderate, and High impact levels</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span>NIST 800-53 control implementation</span>
+                </li>
+              </ul>
+              <Link href="/compliance/fedramp">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  Explore FedRAMP Services
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+
+            {/* StateRAMP CTA Card */}
+            <div className="bg-gradient-to-br from-[#12243d] to-[#0d1c30] rounded-lg p-8 border border-amber-500/30 hover:border-amber-500/60 transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-amber-500/20 rounded-lg p-3">
+                  <Building2 className="w-8 h-8 text-amber-400" />
+                </div>
+                <h3 className="text-2xl font-medium text-white">StateRAMP/GovRAMP</h3>
+              </div>
+              <p className="text-gray-300 mb-4 leading-relaxed">
+                Specialized StateRAMP/GovRAMP compliance services for state, local, and tribal governments. Achieve multi-state authorization reciprocity.
+              </p>
+              <ul className="space-y-2 mb-6 text-sm text-gray-400">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <span>State and local government authorization</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <span>Multi-state reciprocity framework</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <span>State-specific compliance requirements</span>
+                </li>
+              </ul>
+              <Link href="/compliance/stateramp">
+                <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white">
+                  Explore StateRAMP Services
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
