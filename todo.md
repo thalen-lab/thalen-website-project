@@ -3454,3 +3454,8 @@
 ## Phase 82: Update How We Deliver Section Copy
 - [ ] Update "How We Deliver" section with new compliance-first approach copy
 - [x] Enhance compliance frameworks to include StateRAMP, GDPR, and additional frameworks
+
+## Phase 83: Move Our Approach Section to Dedicated Page
+- [x] Create dedicated /our-approach page with four strategic pillars
+- [x] Remove Our Approach section from homepage
+- [x] Link Our Approach page from homepage CTA

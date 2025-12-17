@@ -21,6 +21,7 @@ import Resources from "./pages/Resources";
 import Events from "./pages/Events";
 import Insights from "./pages/Insights";
 import Methodology from "./pages/Methodology";
+import OurApproach from "./pages/OurApproach";
 import ServiceComparison from "./pages/ServiceComparison";
 import PackageBuilder from "./pages/PackageBuilder";
 import FederalSolutions from "./pages/FederalSolutions";
@@ -196,6 +197,7 @@ function Router() {
       <Route path={"/events"} component={Events} />
       <Route path={"/insights"} component={Insights} />
       <Route path={"/methodology"} component={Methodology} />
+      <Route path={"/our-approach"} component={OurApproach} />
       <Route path={"/compare-services"} component={ServiceComparison} />
       <Route path={"/package-builder"} component={PackageBuilder} />
       <Route path={"/federal-solutions"} component={FederalSolutions} />

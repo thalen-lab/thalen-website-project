@@ -446,226 +446,26 @@ export default function Home() {
       </section>
 
 
-      {/* Our Approach Section */}
-      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
-        <div className="container max-w-7xl">
+      {/* Our Approach Teaser Section - Links to Dedicated Page */}
+      <section className="py-16 md:py-20 bg-gradient-to-b from-slate-50 to-white">
+        <div className="container max-w-5xl">
           <motion.div 
-            className="text-center max-w-4xl mx-auto mb-20"
+            className="text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Our Approach</p>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-900">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">
               How We Deliver Mission-Critical Results
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed">
-              Four strategic pillars that ensure compliant, secure, and vendor-neutral technology implementations for government agencies. Each pillar represents a core commitment to excellence in government technology delivery.
-            </p>
-          </motion.div>
-
-          {/* Four Pillars Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {/* Pillar 1: Rapid Assessment & Architecture */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="group"
-            >
-              <Card className="h-full bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 hover:border-accent hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8 lg:p-10">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
-                      <Search className="h-8 w-8 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      Rapid Assessment & Architecture
-                    </h3>
-                    <p className="text-lg font-semibold text-accent mb-4">
-                      Comprehensive discovery and vendor-neutral design in 2 weeks
-                    </p>
-                  </div>
-                  <p className="text-base text-slate-300 leading-relaxed mb-6">
-                    We begin every engagement with a comprehensive 2-week discovery phase that maps your current state, identifies compliance gaps, and designs a vendor-neutral architecture aligned with your mission objectives. Our assessments include stakeholder interviews, technical infrastructure review, security posture analysis, and detailed ROI projections.
-                  </p>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Stakeholder alignment workshops</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Compliance gap analysis (<strong className="text-white">FedRAMP, CMMC, FISMA</strong>)</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Platform-agnostic solution design</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Detailed implementation roadmap with milestones</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Pillar 2: Security-Native Implementation */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="group"
-            >
-              <Card className="h-full bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 hover:border-accent hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8 lg:p-10">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
-                      <Lock className="h-8 w-8 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      Security-Native Implementation
-                    </h3>
-                    <p className="text-lg font-semibold text-accent mb-4">
-                      Security and compliance embedded from day one, not bolted on
-                    </p>
-                  </div>
-                  <p className="text-base text-slate-300 leading-relaxed mb-6">
-                    Security and compliance are embedded from day one—not bolted on afterward. We implement only <strong className="text-white">FedRAMP and StateRAMP-authorized platforms</strong>, configure <strong className="text-white">zero-trust architectures</strong> by default, and prepare all security documentation needed for agency authorization. Every integration follows <strong className="text-white">NIST 800-53 controls</strong> and agency-specific security requirements.
-                  </p>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm"><strong className="text-white">FedRAMP/StateRAMP-authorized</strong> platforms only</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm"><strong className="text-white">Zero-trust architecture</strong> by default</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Complete ATO documentation packages</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">NIST 800-53 controls implementation</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Pillar 3: Vendor-Agnostic Solutions */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="group"
-            >
-              <Card className="h-full bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 hover:border-accent hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8 lg:p-10">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
-                      <Layers className="h-8 w-8 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      Vendor-Agnostic Solutions
-                    </h3>
-                    <p className="text-lg font-semibold text-accent mb-4">
-                      Independent evaluation of 50+ platforms with zero vendor lock-in
-                    </p>
-                  </div>
-                  <p className="text-base text-slate-300 leading-relaxed mb-6">
-                    We are not tied to any single vendor or platform. Our recommendations are based solely on your mission requirements, budget constraints, and technical environment. We evaluate <strong className="text-white">50+ FedRAMP-authorized platforms</strong> across automation, analytics, cloud, and integration categories to identify the best-fit solutions—then implement them with full transparency and knowledge transfer.
-                  </p>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Independent platform evaluation and selection</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Multi-vendor integration expertise</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Avoid vendor lock-in with open standards</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Full knowledge transfer and documentation</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Pillar 4: Cleared Team Execution */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="group"
-            >
-              <Card className="h-full bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 hover:border-accent hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8 lg:p-10">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-4">
-                      <Award className="h-8 w-8 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      Cleared Team Execution
-                    </h3>
-                    <p className="text-lg font-semibold text-accent mb-4">
-                      Top Secret/SCI cleared personnel with 20+ years federal experience
-                    </p>
-                  </div>
-                  <p className="text-base text-slate-300 leading-relaxed mb-6">
-                    Our team includes <strong className="text-white">Top Secret/SCI cleared personnel</strong> with decades of federal government experience. We understand agency culture, procurement processes, and the unique challenges of implementing technology in classified and sensitive environments. Every project is staffed with experienced consultants who have delivered similar implementations for agencies like yours.
-                  </p>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm"><strong className="text-white">Top Secret/SCI cleared</strong> team members available</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Deep federal procurement expertise (GSA Schedule 70)</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Experience across 20+ federal agencies</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                      <span className="text-sm">Proven change management and training delivery</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-
-          {/* Bottom CTA */}
-          <motion.div 
-            className="mt-16 text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <p className="text-lg text-slate-600 mb-6">
-              Contact us to discuss your agency's requirements.
+            <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+              Four strategic pillars ensure compliant, secure, and vendor-neutral technology implementations for government agencies—from rapid assessment to cleared team execution.
             </p>
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
-              <Link href="/contact">
-                Request Assessment
+              <Link href="/our-approach">
+                Learn About Our Approach
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
