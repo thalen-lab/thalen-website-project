@@ -3437,3 +3437,6 @@
 - [x] Remove floating "15+ Years Team Experience" metric card from What We Do section image
 - [x] Replace image in What we do section with tech-solutions.jpg
 - [x] Replace image in Who We Are section with thalen_technologies.jpg
+
+## Phase 49: Update What We Do Section CTAs
+- [x] Update "What We Do" section CTAs: "Explore Our Solutions" + "Schedule a Consultation"

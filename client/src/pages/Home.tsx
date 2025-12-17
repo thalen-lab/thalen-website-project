@@ -210,18 +210,13 @@ export default function Home() {
               {/* CTA Buttons - Enhanced for Core Capabilities */}
               <div className="flex flex-wrap gap-4">
                 <Button asChild variant="default" size="lg" className="bg-primary hover:bg-primary/90">
-                  <Link href="/services/automation">
-                    Explore Process Automation
+                  <Link href="/services">
+                    Explore Our Solutions
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-2">
-                  <Link href="/services/data-analytics">
-                    Data & Analytics Solutions
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-2">
-                  <Link href="/services/cloud">
-                    Cloud Modernization
+                  <Link href="/contact">
+                    Schedule a Consultation
                   </Link>
                 </Button>
               </div>
