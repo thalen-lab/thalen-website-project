@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 interface CarouselSlide {
   id: number;
@@ -16,7 +16,7 @@ interface CarouselSlide {
 const slides: CarouselSlide[] = [
   {
     id: 1,
-    image: "/hero-federal-building.jpg",
+    image: "/hero-government.jpg",
     title: "Government Technology Implementation Services",
     subtitle:
       "We deliver end-to-end technology solutions that modernize government operations, enhance security, and improve citizen services through proven implementation expertise",
@@ -27,7 +27,7 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 2,
-    image: "/hero-datacenter.jpg",
+    image: "/hero-cloud.jpg",
     title: "FedRAMP Authorization & Cloud Security",
     subtitle:
       "Accelerate your path to FedRAMP authorization with our proven methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months, opening doors to billions in federal opportunities",
@@ -38,7 +38,7 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 3,
-    image: "/hero-federal-building.jpg",
+    image: "/hero-cybersecurity.jpg",
     title: "CMMC Compliance for Defense Contractors",
     subtitle:
       "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements with 100% first-time pass rate",
@@ -60,7 +60,7 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 5,
-    image: "/hero-power-plant.jpg",
+    image: "/hero-financial.jpg",
     title: "Commercial Financial Services & Healthcare",
     subtitle:
       "Empowering financial institutions and healthcare organizations with secure, compliant technology solutions that drive operational excellence and enhance customer experiences",
@@ -71,7 +71,7 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 6,
-    image: "/hero-power-plant.jpg",
+    image: "/hero-infrastructure.jpg",
     title: "Critical Infrastructure & Regulated Industries",
     subtitle:
       "Protecting and modernizing critical infrastructure with enterprise-grade security, resilience, and compliance frameworks for energy, manufacturing, and regulated sectors",
@@ -84,77 +84,78 @@ const slides: CarouselSlide[] = [
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Auto-advance every 5 seconds
+    }, 6000); // Auto-advance every 6 seconds for better readability
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
-  };
-
-  const goToPrevious = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    setIsAutoPlaying(false);
-  };
-
-  const goToNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-    setIsAutoPlaying(false);
-  };
+  }, []);
 
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-[oklch(0.18_0.06_250)]">
+    <div className="relative w-full h-[500px] md:h-[650px] lg:h-[750px] xl:h-[800px] overflow-hidden bg-[oklch(0.15_0.04_250)]">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-700 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
-          {/* Background Image with Signature Blue Overlay */}
+          {/* Background Image with Professional Overlay */}
           <div className="absolute inset-0">
             <img
               src={slide.image}
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            {/* Signature blue gradient overlay matching Our Approach */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.18_0.06_250)]/95 via-[oklch(0.22_0.06_250)]/85 to-[oklch(0.28_0.05_250)]/70" />
-            {/* Additional subtle gradient for depth */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[oklch(0.18_0.06_250)]/50" />
+            {/* Multi-layer gradient overlay for depth and readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.12_0.04_250)]/95 via-[oklch(0.15_0.04_250)]/80 to-[oklch(0.20_0.04_250)]/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_250)]/70 via-transparent to-[oklch(0.12_0.04_250)]/30" />
+            {/* Subtle texture overlay */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_oklch(0.10_0.04_250)/20_100%)]" />
           </div>
 
           {/* Content */}
           <div className="relative h-full flex items-center">
             <div className="container">
-              <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
-                {/* Orange accent label */}
-                <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-3 uppercase tracking-wider text-sm">
+              <div 
+                className={`max-w-3xl xl:max-w-4xl transition-all duration-700 ${
+                  index === currentSlide 
+                    ? "opacity-100 translate-y-0" 
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: index === currentSlide ? "200ms" : "0ms" }}
+              >
+                {/* Accent line */}
+                <div className="w-16 h-1 bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.75_0.15_55)] mb-6 rounded-full" />
+                
+                {/* Tagline */}
+                <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-[0.2em] text-xs md:text-sm">
                   Intelligence, Delivered
                 </p>
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+                
+                {/* Title */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 md:mb-8 leading-[1.1] tracking-tight">
                   {slide.title}
                 </h1>
-                <p className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">
+                
+                {/* Subtitle */}
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/85 mb-8 md:mb-10 leading-relaxed max-w-2xl xl:max-w-3xl font-light">
                   {slide.subtitle}
                 </p>
+                
+                {/* CTA Button */}
                 {slide.cta && (
                   <Button
+                    asChild
                     size="lg"
-                    className="bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white font-semibold px-6 md:px-8 py-4 md:py-6 text-base md:text-lg shadow-lg hover:shadow-xl transition-all"
-                    onClick={() => (window.location.href = slide.cta!.link)}
+                    className="bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white font-semibold px-8 md:px-10 py-5 md:py-6 text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg"
                   >
-                    {slide.cta.text}
+                    <Link href={slide.cta.link}>
+                      {slide.cta.text}
+                    </Link>
                   </Button>
                 )}
               </div>
@@ -163,39 +164,19 @@ export default function HeroCarousel() {
         </div>
       ))}
 
-      {/* Navigation Arrows with orange accent on hover */}
-      <button
-        onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-[oklch(0.65_0.18_55)]/80 backdrop-blur-sm text-white p-3 rounded-full transition-all"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-      <button
-        onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-[oklch(0.65_0.18_55)]/80 backdrop-blur-sm text-white p-3 rounded-full transition-all"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
-
-      {/* Dots Navigation with orange active state */}
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`transition-all rounded-full ${
-              index === currentSlide
-                ? "bg-[oklch(0.65_0.18_55)] w-12 h-3"
-                : "bg-white/40 hover:bg-white/60 w-3 h-3"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+      {/* Subtle progress indicator at bottom - minimal and professional */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-20">
+        <div 
+          className="h-full bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.75_0.15_55)] transition-all duration-300 ease-linear"
+          style={{ 
+            width: `${((currentSlide + 1) / slides.length) * 100}%`,
+          }}
+        />
       </div>
 
-
+      {/* Decorative corner accent */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[oklch(0.65_0.18_55)]/10 to-transparent pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[oklch(0.65_0.18_55)]/5 to-transparent pointer-events-none z-10" />
     </div>
   );
 }
