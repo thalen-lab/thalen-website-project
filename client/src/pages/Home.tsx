@@ -157,13 +157,53 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
             
-            {/* Left: Text Content */}
+            {/* Left: Core Capabilities Image */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
-              className="relative z-10"
+              className="relative order-2 lg:order-1"
+            >
+              <div className="relative overflow-hidden shadow-2xl rounded-lg">
+                <ImageWithLoader
+                  src="/security-operations-team.jpg"
+                  alt="Security operations team monitoring critical infrastructure"
+                  className="w-full h-auto"
+                />
+                {/* Gradient overlay for depth */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10 pointer-events-none"></div>
+              </div>
+
+              {/* Decorative accent element */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl"
+              />
+
+              {/* Floating metric card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="absolute -bottom-8 -right-8 bg-white shadow-xl rounded-lg p-6 border-l-4 border-accent hidden lg:block"
+              >
+                <div className="text-4xl font-bold text-primary mb-1">15+</div>
+                <div className="text-sm text-slate-600 font-medium">Years Team Experience</div>
+              </motion.div>
+            </motion.div>
+
+            {/* Right: Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative z-10 order-1 lg:order-2"
             >
               <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">
                 What we do
@@ -195,46 +235,6 @@ export default function Home() {
                   </Link>
                 </Button>
               </div>
-            </motion.div>
-
-            {/* Right: Core Capabilities Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="relative overflow-hidden shadow-2xl rounded-lg">
-                <ImageWithLoader
-                  src="/security-operations-team.jpg"
-                  alt="Security operations team monitoring critical infrastructure"
-                  className="w-full h-auto"
-                />
-                {/* Gradient overlay for depth */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10 pointer-events-none"></div>
-              </div>
-
-              {/* Decorative accent element */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl"
-              />
-
-              {/* Floating metric card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="absolute -bottom-8 -left-8 bg-white shadow-xl rounded-lg p-6 border-l-4 border-accent hidden lg:block"
-              >
-                <div className="text-4xl font-bold text-primary mb-1">15+</div>
-                <div className="text-sm text-slate-600 font-medium">Years Team Experience</div>
-              </motion.div>
             </motion.div>
 
           </div>

@@ -3429,3 +3429,6 @@
 
 ## Phase 63: Remove Floating Metric from Who We Are Section
 - [x] Remove "15+ Years of Excellence" floating metric card from Who We Are section image
+
+## Phase 78: Move Image to Left in What We Do Section
+- [x] Move image to left side in What We Do section (swap layout order)
