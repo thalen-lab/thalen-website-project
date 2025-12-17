@@ -1,57 +1,46 @@
-import { ArrowRight, Shield, CheckCircle2, Award } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from 'framer-motion';
 
-interface ResultMetric {
-  value: string;
-  label: string;
+interface CaseStudyCard {
+  title: string;
   agencyType: string;
   caseStudyLink: string;
   image: string;
-  description?: string;
+  description: string;
 }
 
-const resultMetrics: ResultMetric[] = [
+const caseStudies: CaseStudyCard[] = [
   {
-    value: "85%",
-    label: "Process Automation",
+    title: "Claims Processing Transformation",
     agencyType: "Federal Agency",
     caseStudyLink: "/case-studies/federal-automation",
     image: "/hero-datacenter.jpg",
-    description: "Reduced claims processing from 6 weeks to 2 days"
+    description: "Streamlined claims processing through intelligent automation, reducing turnaround time and improving citizen services."
   },
   {
-    value: "99.2%",
-    label: "System Uptime",
+    title: "Predictive Maintenance Platform",
     agencyType: "Defense & Aerospace",
     caseStudyLink: "/case-studies/dod-manufacturing",
     image: "/defense-cyber-ops.b7c4e1f3.jpg",
-    description: "Eliminated 75% of unplanned downtime across 50+ facilities"
+    description: "Implemented predictive analytics to optimize maintenance schedules and ensure mission-critical system availability."
   },
   {
-    value: "12",
-    label: "Systems Integrated",
+    title: "Healthcare Systems Integration",
     agencyType: "VA Healthcare",
     caseStudyLink: "/case-studies/va-healthcare",
     image: "/healthcare-legacy-it.jpg",
-    description: "Real-time patient data access with 170% ROI"
+    description: "Unified disparate healthcare systems to enable real-time patient data access and improved care coordination."
   },
   {
-    value: "$50M",
-    label: "Fraud Prevented",
+    title: "Fraud Detection & Prevention",
     agencyType: "State Government",
     caseStudyLink: "/case-studies/state-attorney-general",
     image: "/financial-fraud-soc.a8f3d9e2.jpg",
-    description: "AI-powered detection protecting taxpayer funds"
+    description: "Deployed AI-powered analytics to identify and prevent fraudulent activities, protecting taxpayer resources."
   }
 ];
 
-const complianceBadges = [
-  { name: "FedRAMP High", icon: Shield },
-  { name: "StateRAMP", icon: CheckCircle2 },
-  { name: "CMMC Level 2", icon: Award },
-  { name: "IL5 Authorized", icon: Shield }
-];
 
 export default function ResultsAtGlance() {
   return (
@@ -75,16 +64,16 @@ export default function ResultsAtGlance() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm font-medium text-orange-400 mb-3 tracking-wider uppercase">Proven Results</p>
+          <p className="text-sm font-medium text-blue-300 mb-3 tracking-wider uppercase">Featured Work</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Results at a Glance
+            Case Studies
           </h2>
           <p className="text-lg text-blue-100/80 max-w-2xl mx-auto">
-            Measurable outcomes from federal, state, and local government engagements
+            See how we've helped government agencies and enterprises solve complex challenges.
           </p>
         </motion.div>
 
-        {/* Image Cards Grid with Stats Overlay */}
+        {/* Case Study Cards Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,18 +81,18 @@ export default function ResultsAtGlance() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10 md:mb-12"
         >
-          {resultMetrics.map((metric, index) => (
+          {caseStudies.map((study, index) => (
             <Link 
               key={index}
-              href={metric.caseStudyLink}
+              href={study.caseStudyLink}
               className="group block"
             >
               <div className="relative h-[280px] md:h-[320px] lg:h-[340px] rounded-xl overflow-hidden border border-blue-400/20 hover:border-orange-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                   <img 
-                    src={metric.image} 
-                    alt={metric.label}
+                    src={study.image} 
+                    alt={study.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -115,29 +104,22 @@ export default function ResultsAtGlance() {
                 <div className="absolute inset-0 flex flex-col justify-between p-5 md:p-6">
                   {/* Top: Category Badge */}
                   <div>
-                    <span className="inline-block px-3 py-1.5 bg-orange-500/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full shadow-lg">
-                      {metric.agencyType}
+                    <span className="inline-block px-3 py-1.5 bg-slate-700/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full shadow-lg">
+                      {study.agencyType}
                     </span>
                   </div>
                   
-                  {/* Bottom: Stats and Description */}
+                  {/* Bottom: Title and Description */}
                   <div>
-                    {/* Big Stat Number */}
-                    <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-1 drop-shadow-lg">
-                      {metric.value}
-                    </div>
-                    
-                    {/* Stat Label */}
-                    <p className="text-lg md:text-xl font-semibold text-white/95 mb-2">
-                      {metric.label}
-                    </p>
+                    {/* Title */}
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-2 leading-tight">
+                      {study.title}
+                    </h3>
                     
                     {/* Description */}
-                    {metric.description && (
-                      <p className="text-sm text-blue-100/80 mb-3 line-clamp-2">
-                        {metric.description}
-                      </p>
-                    )}
+                    <p className="text-sm text-blue-100/80 mb-4 line-clamp-3">
+                      {study.description}
+                    </p>
                     
                     {/* View Case Study Link */}
                     <div className="flex items-center text-orange-400 text-sm font-semibold group-hover:text-orange-300 transition-colors">
@@ -151,27 +133,6 @@ export default function ResultsAtGlance() {
           ))}
         </motion.div>
 
-        {/* Compliance Badges */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8"
-        >
-          {complianceBadges.map((badge, index) => {
-            const IconComponent = badge.icon;
-            return (
-              <div 
-                key={index}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0d3050]/50 border border-blue-400/20 rounded-full"
-              >
-                <IconComponent className="w-4 h-4 text-green-400" />
-                <span className="text-sm text-blue-100/80 font-medium">{badge.name}</span>
-              </div>
-            );
-          })}
-        </motion.div>
 
         {/* CTA */}
         <motion.div

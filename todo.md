@@ -3461,3 +3461,11 @@
 - [x] Use existing images that load properly (datacenter, cyber ops, healthcare IT, fraud SOC)
 - [x] Display category badges, large stat numbers, descriptions, and "View Case Study" links
 - [x] Maintain compliance badges and CTA button below cards
+
+## Phase 62: Clean Up Results Section
+- [x] Remove 'Results at a Glance' heading, make subtitle the main heading
+- [x] Remove orange color from card tags in Results section
+
+## Phase 61: Simplify Results Section
+- [x] Remove big statistics numbers (85%, 99.2%, 12, $50M) from Results section
+- [x] Replace with simpler, less sales-like case study presentation
