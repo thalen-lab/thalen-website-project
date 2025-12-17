@@ -106,7 +106,7 @@ export default function IndustryUpdates() {
 
   return (
     <section 
-      className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-y border-slate-700/50"
+      className="relative bg-gradient-to-r from-primary via-primary/95 to-primary border-y border-primary/50"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
