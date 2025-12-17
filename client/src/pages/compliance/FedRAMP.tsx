@@ -357,6 +357,145 @@ export default function FedRAMP() {
         </div>
       </section>
 
+      {/* FedRAMP vs StateRAMP Comparison */}
+      <section className="py-20 bg-slate-50">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-center text-slate-900">FedRAMP vs StateRAMP: Which Do You Need?</h2>
+            <p className="text-xl text-slate-600 text-center mb-12 max-w-3xl mx-auto">
+              Understanding the differences between federal and state/local compliance frameworks helps you choose the right path for your organization.
+            </p>
+
+            <div className="bg-white rounded-lg border-2 border-slate-200 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-slate-100">
+                      <th className="px-6 py-4 text-left text-sm font-bold text-slate-900 w-1/4">Aspect</th>
+                      <th className="px-6 py-4 text-left text-sm font-bold text-blue-900 w-3/8 border-l-2 border-slate-200">FedRAMP</th>
+                      <th className="px-6 py-4 text-left text-sm font-bold text-emerald-900 w-3/8 border-l-2 border-slate-200">StateRAMP</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    <tr>
+                      <td className="px-6 py-4 font-semibold text-slate-900">Target Audience</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">Federal agencies and departments</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">State, local, and tribal governments</td>
+                    </tr>
+                    <tr className="bg-slate-50">
+                      <td className="px-6 py-4 font-semibold text-slate-900">Authorization Scope</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">Mandatory for federal cloud services</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">Voluntary but increasingly adopted by states</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-semibold text-slate-900">Security Baseline</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">NIST 800-53 controls (125-421 controls)</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">NIST 800-53 controls adapted for state/local needs</td>
+                    </tr>
+                    <tr className="bg-slate-50">
+                      <td className="px-6 py-4 font-semibold text-slate-900">Impact Levels</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">Low, Moderate, High</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">Low, Moderate, High</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-semibold text-slate-900">Authorization Process</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">JAB P-ATO or Agency ATO</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">StateRAMP authorization with state reciprocity</td>
+                    </tr>
+                    <tr className="bg-slate-50">
+                      <td className="px-6 py-4 font-semibold text-slate-900">Timeline</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">12-18 months (Moderate), 18-24 months (High)</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">9-15 months depending on impact level</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-semibold text-slate-900">Cost Range</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">$250K-$5M+ depending on complexity</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">$150K-$3M+ depending on scope</td>
+                    </tr>
+                    <tr className="bg-slate-50">
+                      <td className="px-6 py-4 font-semibold text-slate-900">Reciprocity</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">Accepted by all federal agencies</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">Growing reciprocity across participating states</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-semibold text-slate-900">Best For</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">Organizations serving federal government exclusively</td>
+                      <td className="px-6 py-4 text-slate-700 border-l-2 border-slate-200">Organizations serving state/local governments or multi-level deployments</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="mt-12 p-8 bg-blue-50 border-2 border-blue-200 rounded-lg">
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Shield className="h-6 w-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3 text-slate-900">Need Help Choosing?</h3>
+                  <p className="text-slate-700 mb-4">
+                    Our compliance experts can assess your specific requirements and recommend the optimal compliance path. Many organizations pursue both FedRAMP and StateRAMP to serve clients across all government levels.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link href="/contact">
+                      <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                        Schedule Assessment
+                      </Button>
+                    </Link>
+                    <Link href="/compliance/stateramp">
+                      <Button variant="outline" className="border-emerald-600 text-emerald-700 hover:bg-emerald-50">
+                        Learn About StateRAMP
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services CTA */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center text-slate-900">Comprehensive Compliance Services</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link href="/services/fedramp">
+                <Card className="p-8 border-2 border-blue-200 hover:border-blue-400 transition-colors cursor-pointer h-full">
+                  <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <Shield className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3 text-slate-900">FedRAMP Implementation Services</h3>
+                  <p className="text-slate-600 mb-4">
+                    Explore our full suite of FedRAMP implementation services, including readiness assessments, documentation support, and continuous monitoring.
+                  </p>
+                  <div className="text-blue-600 font-semibold flex items-center gap-2">
+                    View Services →
+                  </div>
+                </Card>
+              </Link>
+
+              <Link href="/services/cybersecurity">
+                <Card className="p-8 border-2 border-slate-200 hover:border-slate-400 transition-colors cursor-pointer h-full">
+                  <div className="h-12 w-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
+                    <Lock className="h-6 w-6 text-slate-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3 text-slate-900">Cybersecurity & Compliance</h3>
+                  <p className="text-slate-600 mb-4">
+                    Discover our broader cybersecurity and compliance services, including CMMC, NIST 800-171, and Zero Trust Architecture.
+                  </p>
+                  <div className="text-slate-600 font-semibold flex items-center gap-2">
+                    View Services →
+                  </div>
+                </Card>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 to-slate-900 text-white">
         <div className="container">

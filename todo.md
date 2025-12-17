@@ -3387,3 +3387,8 @@
 - [x] Create FedRAMP CTA card with blue styling linking to /compliance/fedramp
 - [x] Create StateRAMP/GovRAMP CTA card with amber styling linking to /compliance/stateramp
 - [x] Verify both CTA buttons navigate correctly to dedicated pages
+
+## Phase 74: Add Cross-Linking CTAs and Comparison Table
+- [x] Add cross-linking CTAs on FedRAMP page to guide users back to general implementation services
+- [x] Add cross-linking CTAs on StateRAMP page to guide users back to general implementation services
+- [x] Create compliance comparison table (FedRAMP vs StateRAMP) to help users choose the right path
