@@ -94,7 +94,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="relative w-full h-[500px] md:h-[650px] lg:h-[750px] xl:h-[800px] overflow-hidden bg-[oklch(0.15_0.04_250)]">
+    <div className="relative w-full h-[420px] md:h-[520px] lg:h-[580px] xl:h-[620px] overflow-hidden bg-[oklch(0.15_0.04_250)]">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div

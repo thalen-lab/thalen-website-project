@@ -3499,3 +3499,6 @@
 ## Phase 53: Industry Updates Ticker Improvements
 - [x] Increase height of Industry Updates ticker section for better readability
 - [x] Remove icons from Industry Updates ticker section
+
+## Phase 61: UI Adjustments
+- [x] Reduce hero section height
