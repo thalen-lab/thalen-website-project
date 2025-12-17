@@ -3401,3 +3401,6 @@
 - [x] Redesign entire Government Cloud Migration page with professional blue styling for all sections
 - [x] Apply consistent blue backgrounds, colors, and styling throughout all sections
 - [x] Keep all existing content/copy intact, only update design and styling
+
+## Phase 76: Remove "Why Choose NexDyne" Section from Homepage
+- [x] Remove entire "Why Choose NexDyne" section from homepage (heading, description, three feature cards, status table)
