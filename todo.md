@@ -3453,3 +3453,4 @@
 - [x] Show 3-4 key metrics with agency type badges
 - [x] Link to full Case Studies page
 - [x] Add compliance badges (FedRAMP, StateRAMP, etc.)
+- [x] Update Results at a Glance section - signature blue background with flip card hover animation
