@@ -3423,3 +3423,6 @@
 
 ## Phase 77: Reduce Spacing Between Hero and Who We Are Section
 - [x] Reduce white space between hero section and Who We Are section
+
+## Phase 62: Update Who We Are Section Image
+- [x] Update Who We Are section image to public-sectors.jpg

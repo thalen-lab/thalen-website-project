@@ -55,8 +55,8 @@ export default function WhoWeAreSection() {
           >
             <div className="relative overflow-hidden shadow-2xl rounded-lg">
               <ImageWithLoader
-                src="/command-center.png"
-                alt="Government command center with monitoring displays"
+                src="/public-sectors.jpg"
+                alt="Public sector professionals collaborating in government services"
                 className="w-full h-auto"
               />
             </div>
