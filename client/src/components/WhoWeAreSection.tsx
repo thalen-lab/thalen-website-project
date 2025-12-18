@@ -19,13 +19,13 @@ export default function WhoWeAreSection() {
             transition={{ duration: 0.7 }}
             className="relative z-10"
           >
-            <p className="text-[#E07020] font-semibold mb-4 uppercase tracking-wider text-sm">
-              WHO WE ARE
-            </p>
-
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#0A2540] mb-6 leading-tight">
-              Thalen Technology
+            <h2 className="text-2xl md:text-3xl font-bold text-[#0A2540] mb-4 leading-tight">
+              Thalen Technologies Overview
             </h2>
+
+            <p className="text-[#0A2540]/70 italic text-base md:text-lg mb-6">
+              Intelligence, Delivered
+            </p>
 
             <p className="text-lg text-[#0A2540]/80 leading-relaxed mb-8">
               We serve government agencies and highly regulated industries, ensuring their mission-critical systems deliver when it matters most. Thalen combines deep compliance expertise, proven methodologies, and cutting-edge technology to help public sector organizations navigate complex IT challenges while maintaining the highest security and regulatory standards.
