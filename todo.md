@@ -3635,3 +3635,5 @@
 
 ## Phase 95: Industry Updates Ticker Two-Line Titles
 - [x] Allow ticker titles to wrap to two lines for better readability
+
+- [x] Redesign Events page to match About page clean professional style (reverted)
