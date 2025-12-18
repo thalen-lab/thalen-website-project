@@ -3625,3 +3625,5 @@
 
 ## Phase 94: Update Hover States to Signature Orange
 - [x] Update hover states to use signature orange color (#FF6B35)
+## Phase 73: Fix CTA Hover Effect
+- [x] Fix CTA hover effect - border should change to orange on hover, not entire card background
