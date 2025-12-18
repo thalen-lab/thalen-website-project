@@ -3509,3 +3509,6 @@
 
 ## Phase 59: Industry Updates Ticker Styling
 - [x] Change Industry Updates ticker section background to signature blue
+
+## Phase 85: Industry Updates Ticker Background Fix
+- [x] Update Industry Updates ticker section background to use signature NexDyne blue

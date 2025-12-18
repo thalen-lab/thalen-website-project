@@ -106,7 +106,8 @@ export default function IndustryUpdates() {
 
   return (
     <section 
-      className="relative bg-gradient-to-r from-primary via-primary/95 to-primary border-y border-primary/50"
+      className="relative border-y border-[oklch(0.20_0.05_250)]"
+      style={{ background: 'linear-gradient(to right, oklch(0.20 0.05 250), oklch(0.22 0.05 250), oklch(0.20 0.05 250))' }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
