@@ -588,3 +588,399 @@ html {
     margin-right: 0;
   }
 }
+
+
+/* ===== TABLET-SPECIFIC BREAKPOINT OPTIMIZATIONS (768px-1024px) ===== */
+
+/* Tablet portrait and landscape optimizations */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet container adjustments */
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Tablet-optimized grid layouts */
+  .tablet-grid-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .tablet-grid-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  /* Tablet-specific flex adjustments */
+  .tablet-flex-row {
+    flex-direction: row !important;
+  }
+
+  .tablet-flex-col {
+    flex-direction: column !important;
+  }
+
+  .tablet-flex-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  /* Tablet spacing utilities */
+  .tablet-gap-4 {
+    gap: 1rem !important;
+  }
+
+  .tablet-gap-6 {
+    gap: 1.5rem !important;
+  }
+
+  .tablet-gap-8 {
+    gap: 2rem !important;
+  }
+
+  /* Tablet padding utilities */
+  .tablet-py-12 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .tablet-py-16 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .tablet-px-6 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* Tablet text sizing */
+  .tablet-text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+
+  .tablet-text-3xl {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+
+  .tablet-text-4xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+  }
+
+  /* Tablet card optimizations */
+  .tablet-card-horizontal {
+    flex-direction: row !important;
+  }
+
+  .tablet-card-horizontal > * {
+    flex: 1;
+  }
+
+  /* Tablet navigation adjustments */
+  .tablet-nav-compact {
+    gap: 0.5rem;
+  }
+
+  .tablet-nav-compact > * {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  /* Tablet hero section adjustments */
+  .tablet-hero-height {
+    min-height: 60vh;
+  }
+
+  /* Tablet image aspect ratios */
+  .tablet-aspect-video {
+    aspect-ratio: 16/9;
+  }
+
+  .tablet-aspect-4-3 {
+    aspect-ratio: 4/3;
+  }
+
+  /* Tablet button sizing */
+  .tablet-btn-md {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  /* Tablet sidebar adjustments */
+  .tablet-sidebar-collapsed {
+    width: 4rem;
+  }
+
+  .tablet-sidebar-collapsed .sidebar-text {
+    display: none;
+  }
+
+  /* Tablet modal/dialog adjustments */
+  .tablet-modal-lg {
+    max-width: 90vw;
+    max-height: 85vh;
+  }
+
+  /* Tablet form layout */
+  .tablet-form-inline {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .tablet-form-inline > * {
+    flex: 1;
+  }
+
+  /* Tablet stats grid */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Tablet service cards */
+  .service-card-tablet {
+    padding: 1.5rem;
+  }
+
+  /* Tablet case study cards - 2 columns */
+  .case-study-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tablet insights grid - 2 columns */
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tablet footer adjustments */
+  .tablet-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Tablet testimonial cards */
+  .tablet-testimonial {
+    padding: 1.5rem;
+  }
+
+  /* Tablet partner logo grid */
+  .partner-logo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Tablet certification badges */
+  .cert-badges {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Tablet timeline adjustments */
+  .tablet-timeline-compact .timeline-item {
+    padding-left: 2rem;
+  }
+
+  /* Tablet team grid */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Tablet pricing cards */
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Tablet feature comparison table */
+  .tablet-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Tablet breadcrumb adjustments */
+  .tablet-breadcrumb {
+    font-size: 0.875rem;
+  }
+
+  /* Tablet filter buttons */
+  .tablet-filter-wrap {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  /* Tablet search bar */
+  .tablet-search-full {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Tablet CTA section */
+  .tablet-cta-stack {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  /* Tablet image gallery */
+  .tablet-gallery-2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tablet accordion adjustments */
+  .tablet-accordion-compact {
+    padding: 1rem;
+  }
+
+  /* Tablet tab navigation */
+  .tablet-tabs-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tablet-tabs-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* iPad-specific optimizations (768px portrait, 1024px landscape) */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  
+  /* iPad touch targets */
+  button, 
+  a, 
+  [role="button"] {
+    min-height: 44px;
+  }
+
+  /* iPad navigation spacing */
+  nav a {
+    padding: 0.75rem 1rem;
+  }
+
+  /* iPad form inputs */
+  input, 
+  textarea, 
+  select {
+    min-height: 44px;
+    font-size: 16px;
+  }
+}
+
+/* iPad Pro specific (1024px-1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .ipad-pro-container {
+    max-width: 1200px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .ipad-pro-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ipad-pro-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== PULL-TO-REFRESH STYLES ===== */
+
+/* Pull-to-refresh container */
+.pull-to-refresh-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pull indicator */
+.pull-indicator {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  transition: transform 0.2s ease-out;
+}
+
+.pull-indicator-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border);
+}
+
+/* Pull-to-refresh animation */
+@keyframes pullRefreshSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pull-refresh-spinning {
+  animation: pullRefreshSpin 1s linear infinite;
+}
+
+/* Disable pull-to-refresh on desktop */
+@media (hover: hover) and (pointer: fine) {
+  .pull-to-refresh-container {
+    touch-action: auto;
+  }
+}
+
+/* ===== LAZY LOADING IMAGE STYLES ===== */
+
+/* Lazy image placeholder */
+.lazy-image-placeholder {
+  background: linear-gradient(
+    90deg,
+    var(--muted) 0%,
+    var(--muted-foreground) 50%,
+    var(--muted) 100%
+  );
+  background-size: 200% 100%;
+  animation: lazyImageShimmer 1.5s infinite;
+}
+
+@keyframes lazyImageShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Lazy image fade-in */
+.lazy-image-loaded {
+  animation: lazyImageFadeIn 0.3s ease-out forwards;
+}
+
+@keyframes lazyImageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Native lazy loading support indicator */
+@supports (loading: lazy) {
+  img[loading="lazy"] {
+    /* Browser supports native lazy loading */
+  }
+}

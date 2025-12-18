@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,12 +12,25 @@ import Breadcrumb from '@/components/Breadcrumb';
 import SaveSearchDialog from '@/components/SaveSearchDialog';
 import SavedSearchesDropdown from '@/components/SavedSearchesDropdown';
 import { trpc } from '@/lib/trpc';
+import PullToRefresh from '@/components/PullToRefresh';
+import { toast } from 'sonner';
 
 export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedService, setSelectedService] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
+  const [lastRefreshed, setLastRefreshed] = useState<Date>(new Date());
+
+  // Pull-to-refresh handler
+  const handleRefresh = useCallback(async () => {
+    // Simulate fetching fresh data
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setLastRefreshed(new Date());
+    toast.success('Content refreshed', {
+      description: `Last updated: ${new Date().toLocaleTimeString()}`,
+    });
+  }, []);
 
   const { data: user } = trpc.auth.me.useQuery();
 
@@ -206,6 +219,7 @@ export default function CaseStudies() {
   });
 
   return (
+    <PullToRefresh onRefresh={handleRefresh}>
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
@@ -439,5 +453,6 @@ export default function CaseStudies() {
         service={selectedService}
       />
     </div>
+    </PullToRefresh>
   );
 }
