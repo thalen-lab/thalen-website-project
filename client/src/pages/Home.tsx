@@ -448,7 +448,7 @@ export default function Home() {
                     <img
                       src={customer.src}
                       alt={customer.name}
-                      className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                      className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer mix-blend-multiply"
                     />
                   </TooltipTrigger>
                   <TooltipContent>
