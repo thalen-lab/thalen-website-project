@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, CheckCircle2, Shield, FileSearch, Lock, Eye, Network, Users, Award, Target } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Cybersecurity() {
   // Primary service offerings (4 core capabilities)
@@ -103,6 +104,16 @@ export default function Cybersecurity() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Cybersecurity' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl">
             <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Implementation Services

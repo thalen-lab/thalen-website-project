@@ -4,6 +4,7 @@ import { APP_TITLE } from "@/const";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const teamMembers = [
   {
@@ -85,6 +86,16 @@ export default function Team() {
       {/* Hero Section */}
       <section className="relative bg-navy-gradient text-primary-foreground py-24">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'About Us', href: '/about' },
+                { label: 'Our Team' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <motion.div
             initial="hidden"
             animate="visible"

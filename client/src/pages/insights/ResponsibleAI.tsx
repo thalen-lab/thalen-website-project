@@ -1,6 +1,7 @@
 import InsightArticleLayout from '@/components/InsightArticleLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Scale, Eye, Users, CheckCircle2, AlertTriangle } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function ResponsibleAI() {
   return (

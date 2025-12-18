@@ -16,6 +16,7 @@ import {
   Mail,
   Award
 } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Events() {
   const [selectedCategory, setSelectedCategory] = useState('upcoming');
@@ -205,6 +206,13 @@ export default function Events() {
           }} />
         </div>
         <div className="container relative">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Events' }]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Webinars & Events

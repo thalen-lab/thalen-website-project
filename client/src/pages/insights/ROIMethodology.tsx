@@ -1,6 +1,7 @@
 import InsightArticleLayout from '@/components/InsightArticleLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calculator, TrendingUp, Target, CheckCircle2, BarChart3, DollarSign } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function ROIMethodology() {
   return (

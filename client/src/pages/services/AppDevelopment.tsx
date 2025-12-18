@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Code, Workflow, Zap, Layers, Shield, CheckCircle2, Clock, Users } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
 
 export default function AppDevelopment() {

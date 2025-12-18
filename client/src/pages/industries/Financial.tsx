@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, DollarSign, Shield, Brain, Lock, TrendingUp, FileCheck, AlertTriangle, Users } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Financial() {
   const challenges = [
@@ -53,6 +54,16 @@ export default function Financial() {
 
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Industries' },
+                { label: 'Financial Services' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl">
             <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Financial Innovation

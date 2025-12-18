@@ -17,6 +17,7 @@ import {
   Zap,
   Target
 } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 
 export default function CoreCapabilities() {
@@ -105,6 +106,15 @@ export default function CoreCapabilities() {
       <section className="relative py-20 md:py-28 lg:py-32 bg-navy-gradient text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
         <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Core Capabilities' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

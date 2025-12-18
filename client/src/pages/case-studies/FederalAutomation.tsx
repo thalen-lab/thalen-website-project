@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function FederalAutomation() {
   return (
@@ -40,6 +41,16 @@ export default function FederalAutomation() {
       {/* The Opportunity Section */}
       <section className="py-24 bg-white">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Case Studies', href: '/case-studies' },
+                { label: 'Federal Agency Automation' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-4">The Opportunity</p>

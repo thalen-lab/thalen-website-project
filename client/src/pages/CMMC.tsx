@@ -1,4 +1,5 @@
 import { Award, FileText, Shield, Users, Search, Settings, Network, TestTube, Scale } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'wouter';
@@ -83,6 +84,15 @@ export default function CMMC() {
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/80 to-slate-900/80"></div>
         </div>
         <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'CMMC' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-400/30 rounded-full px-4 py-2 mb-6">
               <Shield className="h-4 w-4" />

@@ -1,6 +1,7 @@
 import InsightArticleLayout from '@/components/InsightArticleLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Users, Target, TrendingUp, CheckCircle2, MessageSquare, Award } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function ChangeManagement() {
   return (

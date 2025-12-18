@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Cloud, Lock, Database, Zap, Cpu } from "lucide-react";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function Partners() {
   return (
@@ -12,6 +13,13 @@ export default function Partners() {
       {/* Hero Section - Clean White/Navy Editorial Design */}
       <section className="relative bg-white py-24 border-b border-border">
         <div className="container max-w-5xl">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Partners' }]} 
+              variant="dark" 
+            />
+          </div>
           <div className="max-w-3xl">
             <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">Technology Partnerships</p>
             <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 leading-tight">

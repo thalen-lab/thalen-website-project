@@ -19,6 +19,7 @@ import {
   Mail,
   Circle
 } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Resources() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -287,6 +288,13 @@ export default function Resources() {
           }} />
         </div>
         <div className="container relative">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Resources' }]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               Expert Resources for Government Agencies

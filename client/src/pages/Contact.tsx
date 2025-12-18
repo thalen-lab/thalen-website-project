@@ -7,6 +7,7 @@ import { Mail, Phone, MapPin, Send, ArrowRight, Shield, AlertCircle, Code } from
 import { Link } from 'wouter';
 import { toast } from 'sonner';
 import { trpc } from '@/lib/trpc';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -52,6 +53,13 @@ export default function Contact() {
       {/* Hero */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Contact' }]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Get In Touch

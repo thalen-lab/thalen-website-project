@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
 
 // Custom components for editorial style

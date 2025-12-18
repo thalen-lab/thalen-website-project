@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Shield, ArrowRight, CheckCircle2, Building2, FileCheck, Award, Users, Lock, ChevronRight } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -119,6 +120,15 @@ export default function ConsultingServices() {
         </div>
         
         <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Consulting Services' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <motion.div 
             className="max-w-4xl mx-auto text-center"
             initial={{ opacity: 0, y: 30 }}

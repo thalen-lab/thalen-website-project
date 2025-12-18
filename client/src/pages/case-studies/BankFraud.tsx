@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
 
 // Define the statistics data structure for the clean grid
@@ -20,6 +21,16 @@ export default function BankFraud() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Case Studies', href: '/case-studies' },
+                { label: 'Bank Fraud Detection' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl">
             <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 font-sans">
               Financial Services Case Study

@@ -8,6 +8,7 @@ import { useLQIP } from '@/hooks/useLQIP';
 import { usePrefetch } from '@/hooks/usePrefetch';
 import Footer from '@/components/Footer';
 import { ArrowRight, Search, X, Bookmark } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import SaveSearchDialog from '@/components/SaveSearchDialog';
 import SavedSearchesDropdown from '@/components/SavedSearchesDropdown';
 import { trpc } from '@/lib/trpc';
@@ -211,6 +212,13 @@ export default function CaseStudies() {
       {/* Hero */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Case Studies' }]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Case Studies

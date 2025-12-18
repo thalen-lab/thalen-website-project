@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Send, CheckCircle } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { toast } from 'sonner';
 import { trpc } from '@/lib/trpc';
 
@@ -55,6 +56,16 @@ export default function Partnerships() {
       {/* Hero */}
       <section className="relative py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 text-white">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Contact', href: '/contact' },
+                { label: 'Strategic Partnerships' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Strategic Partnerships

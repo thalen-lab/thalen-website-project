@@ -18,6 +18,7 @@ import {
   Scale,
   FileCheck
 } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 
 export default function OurApproach() {

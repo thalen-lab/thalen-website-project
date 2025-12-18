@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { FileText, Mail } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { APP_TITLE } from '@/const';
 
 export default function Terms() {
@@ -13,6 +14,13 @@ export default function Terms() {
       {/* Hero */}
       <section className="relative py-16 bg-navy-gradient text-primary-foreground">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Terms of Service' }]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl mx-auto text-center">
             <FileText className="h-12 w-12 mx-auto mb-4 text-accent" />
             <h1 className="text-4xl md:text-5xl font-bold mb-4">

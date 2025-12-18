@@ -9,6 +9,7 @@ import { usePrefetch } from '@/hooks/usePrefetch';
 import { prefetchImage } from '@/lib/prefetch';
 import Footer from '@/components/Footer';
 import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Insights() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -159,6 +160,13 @@ export default function Insights() {
       {/* Hero */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Insights' }]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Insights & Thought Leadership

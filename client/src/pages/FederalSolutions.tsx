@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FederalROICalculator from '@/components/FederalROICalculator';
 import { ArrowRight, CheckCircle2, Shield, FileText, Award, Users, Building2, Target, Clock, DollarSign } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function FederalSolutions() {
   const contractVehicles = [
@@ -172,6 +173,13 @@ export default function FederalSolutions() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Federal Solutions' }]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl">
             <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Government Services

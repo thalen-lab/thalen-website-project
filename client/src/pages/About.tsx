@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Target, Award, Users, Globe, Shield, TrendingUp, CheckCircle2 } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 
 export default function About() {
@@ -84,6 +85,13 @@ export default function About() {
 
       {/* Hero - Founding Story */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
+        {/* Breadcrumb */}
+        <div className="container mb-8">
+          <Breadcrumb 
+            items={[{ label: 'About Us' }]} 
+            variant="light" 
+          />
+        </div>
         <div className="container">
           <motion.div 
             className="max-w-4xl mx-auto"

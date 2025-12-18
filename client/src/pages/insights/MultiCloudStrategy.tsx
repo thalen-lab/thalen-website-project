@@ -1,6 +1,7 @@
 import InsightArticleLayout from '@/components/InsightArticleLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Cloud, Shield, Zap, CheckCircle2, Server, GitBranch } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function MultiCloudStrategy() {
   return (

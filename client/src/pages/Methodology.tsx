@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Download } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Methodology() {
   const handleDownloadPDF = () => {
@@ -16,8 +17,16 @@ export default function Methodology() {
       
       {/* Hero Section - Clean and Minimal */}
       <section className="pt-32 pb-20 px-4">
-        <div className="container max-w-4xl text-center">
-          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Our Methodology</p>
+        <div className="container max-w-4xl">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Methodology' }]} 
+              variant="dark" 
+            />
+          </div>
+          <div className="text-center">
+            <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Our Methodology</p>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             The RAPID Framework
           </h1>
@@ -34,6 +43,7 @@ export default function Methodology() {
             <Download className="w-5 h-5" />
             Download Framework Overview (PDF)
           </Button>
+          </div>
         </div>
       </section>
 

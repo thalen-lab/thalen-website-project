@@ -1,6 +1,7 @@
 import InsightArticleLayout from '@/components/InsightArticleLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Lock, Eye, CheckCircle2, Server, Database } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function ZeroTrustArchitecture() {
   return (

@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, CheckCircle2, Shield, Users, Bot, Network, GitBranch, FileText, Search, Workflow, Settings } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 
 export default function Automation() {
@@ -50,6 +51,16 @@ export default function Automation() {
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Intelligent Automation' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <motion.div 
             className="max-w-4xl"
             initial={{ opacity: 0, y: 20 }}

@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { 
   ArrowRight, Cloud, Code2, Smartphone, Rocket, CheckCircle2, Layers, Database, Users, TrendingUp 
 } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
 
 export default function CustomSoftware() {
@@ -152,6 +153,16 @@ export default function CustomSoftware() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Custom Software' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl">
             <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-6">
               Commercial & Enterprise Solutions

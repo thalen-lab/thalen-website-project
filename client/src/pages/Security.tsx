@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Shield, Lock, Eye, Server, CheckCircle, Mail, AlertTriangle } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
@@ -46,6 +47,13 @@ export default function Security() {
       {/* Hero */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[{ label: 'Security' }]} 
+              variant="light" 
+            />
+          </div>
           <div className="max-w-4xl mx-auto text-center">
             <Shield className="h-16 w-16 mx-auto mb-6 text-accent" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
