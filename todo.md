@@ -3601,3 +3601,7 @@
 
 ## Phase 52: Homepage Section Styling
 - [x] Apply alternating white/neutral and blue sections to homepage
+
+## Phase 93: Fix Hero Section Display Issue
+- [x] Fix hero section not displaying properly - hero carousel is collapsed/missing
+- [x] Ensure all page sections are visible and properly spaced
