@@ -3716,3 +3716,4 @@
 - [x] Create manifest.json for PWA installation
 - [x] Add skeleton loading states for card grids and content sections
 - [x] Implement swipe gestures for case study and insight card navigation on mobile
+- [x] Add swipe gestures to Insights page grid for consistent mobile UX
