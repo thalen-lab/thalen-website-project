@@ -363,7 +363,7 @@ export default function Home() {
               ))}
             </div>
             
-            <Button asChild size="lg" className="bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white shadow-lg hover:shadow-xl transition-all">
+            <Button asChild size="lg" className="bg-gradient-to-r from-[oklch(0.45_0.12_250)] to-[oklch(0.35_0.14_250)] hover:from-[oklch(0.40_0.14_250)] hover:to-[oklch(0.30_0.14_250)] text-white shadow-lg hover:shadow-xl transition-all">
               <Link href="/our-approach">
                 Learn About Our Approach
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -389,7 +389,7 @@ export default function Home() {
             Request an assessment to evaluate how our services can support your agency's technology requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white shadow-lg hover:shadow-xl transition-all">
+            <Button asChild size="lg" className="bg-gradient-to-r from-[oklch(0.45_0.12_250)] to-[oklch(0.35_0.14_250)] hover:from-[oklch(0.40_0.14_250)] hover:to-[oklch(0.30_0.14_250)] text-white shadow-lg hover:shadow-xl transition-all">
               <Link href="/contact">
                 Request Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />

@@ -41,6 +41,13 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  /* CTA colors for govtech professionalism */
+  --color-cta-primary: var(--cta-primary);
+  --color-cta-primary-hover: var(--cta-primary-hover);
+  --color-cta-secondary: var(--cta-secondary);
+  /* Strategic accent orange */
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-orange-subtle: var(--accent-orange-subtle);
 }
 
 :root {
@@ -66,8 +73,8 @@
   --secondary-foreground: oklch(0.25 0.05 250);
   --muted: oklch(0.96 0.01 250);
   --muted-foreground: oklch(0.50 0.03 250);
-  /* Orange accent for CTAs */
-  --accent: oklch(0.65 0.20 40);
+  /* Professional slate blue for CTAs - govtech appropriate */
+  --accent: oklch(0.45 0.12 250);
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
@@ -86,6 +93,13 @@
   --navy-light: oklch(0.35 0.05 250);
   --orange: oklch(0.65 0.20 40);
   --orange-dark: oklch(0.55 0.22 40);
+  /* Professional CTA colors - slate blue for govtech */
+  --cta-primary: oklch(0.45 0.12 250);
+  --cta-primary-hover: oklch(0.40 0.14 250);
+  --cta-secondary: oklch(0.35 0.10 250);
+  /* Strategic accent orange - for highlights only */
+  --accent-orange: oklch(0.65 0.20 40);
+  --accent-orange-subtle: oklch(0.70 0.15 40);
 }
 
 .dark {
@@ -175,9 +189,24 @@
     background: linear-gradient(135deg, oklch(0.20 0.05 250) 0%, oklch(0.25 0.05 250) 100%);
   }
 
-  /* Orange gradient for CTAs */
+  /* Professional slate blue gradient for CTAs - govtech appropriate */
   .bg-orange-gradient {
+    background: linear-gradient(135deg, oklch(0.45 0.12 250) 0%, oklch(0.35 0.14 250) 100%);
+  }
+
+  /* Strategic accent orange - use sparingly for highlights */
+  .bg-accent-orange {
     background: linear-gradient(135deg, oklch(0.65 0.20 40) 0%, oklch(0.55 0.22 40) 100%);
+  }
+
+  /* Orange decorative line */
+  .border-accent-orange {
+    border-color: oklch(0.65 0.20 40);
+  }
+
+  /* Orange text for highlights */
+  .text-accent-orange {
+    color: oklch(0.65 0.20 40);
   }
 
   /* Hide scrollbar for carousel */

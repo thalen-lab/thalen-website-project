@@ -146,12 +146,12 @@ export default function HeroCarousel() {
                   {slide.subtitle}
                 </p>
                 
-                {/* CTA Button */}
+                {/* CTA Button - Professional slate blue for govtech */}
                 {slide.cta && (
                   <Button
                     asChild
                     size="lg"
-                    className="bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white font-semibold px-8 md:px-10 py-5 md:py-6 text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg"
+                    className="bg-gradient-to-r from-[oklch(0.45_0.12_250)] to-[oklch(0.35_0.14_250)] hover:from-[oklch(0.40_0.14_250)] hover:to-[oklch(0.30_0.14_250)] text-white font-semibold px-8 md:px-10 py-5 md:py-6 text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg"
                   >
                     <Link href={slide.cta.link}>
                       {slide.cta.text}
