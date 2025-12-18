@@ -6,10 +6,10 @@ import { Link } from 'wouter';
 
 export default function WhoWeAreSection() {
   return (
-    <section className="relative py-20 md:py-24 lg:py-28 bg-white overflow-hidden">
+    <section className="relative pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20 bg-white overflow-hidden">
       
       <div className="container relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
           
           {/* Left: Text Content */}
           <motion.div
@@ -19,7 +19,7 @@ export default function WhoWeAreSection() {
             transition={{ duration: 0.7 }}
             className="relative z-10"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0A2540] mb-6 leading-tight">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A2540] mb-6 leading-tight">
               Thalen Technologies Overview
             </h2>
 
@@ -32,13 +32,13 @@ export default function WhoWeAreSection() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white group shadow-lg hover:shadow-xl transition-all px-6">
+              <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white group shadow-lg hover:shadow-xl transition-all">
                 <Link href="/about">
                   Learn More About Us
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-[#0A2540]/30 text-[#0A2540] hover:bg-[#0A2540]/5 hover:border-[#0A2540]/50 bg-transparent px-6">
+              <Button asChild size="lg" variant="outline" className="border-[#0A2540]/30 text-[#0A2540] hover:bg-[#0A2540]/5 hover:border-[#0A2540]/50 bg-transparent">
                 <Link href="/contact">
                   Get in Touch
                 </Link>
@@ -54,16 +54,12 @@ export default function WhoWeAreSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative overflow-hidden shadow-2xl rounded-sm bg-slate-100">
-              <div className="aspect-[4/3] w-full">
-                <ImageWithLoader
-                  src="/images/who-we-are-capitol.png"
-                  alt="U.S. Capitol building dome with puzzle pieces representing government technology solutions"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Orange accent bar */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#E07020] to-[#F08030]"></div>
+            <div className="relative overflow-hidden shadow-2xl">
+              <ImageWithLoader
+                src="/images/who-we-are-capitol.png"
+                alt="U.S. Capitol building dome with puzzle pieces representing government technology solutions"
+                className="w-full h-auto"
+              />
             </div>
           </motion.div>
 
