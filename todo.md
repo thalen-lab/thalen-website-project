@@ -3632,3 +3632,6 @@
 - [x] Fix inconsistent text sizes in Industry Updates ticker
 - [x] Remove tags (Regulation, NEW, etc.) from ticker
 - [x] Replace dot indicators with arrow navigation
+
+## Phase 95: Industry Updates Ticker Two-Line Titles
+- [x] Allow ticker titles to wrap to two lines for better readability

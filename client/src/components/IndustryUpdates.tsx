@@ -120,10 +120,10 @@ export default function IndustryUpdates() {
               href={activeUpdate.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-4 hover:opacity-90 transition-opacity"
+              className="group flex items-start md:items-center gap-4 hover:opacity-90 transition-opacity"
             >
               {/* Title */}
-              <span className="flex-1 text-base md:text-lg text-white font-medium leading-snug group-hover:text-orange-300 transition-colors line-clamp-1">
+              <span className="flex-1 text-base md:text-lg text-white font-medium leading-snug group-hover:text-orange-300 transition-colors line-clamp-2">
                 {activeUpdate.title}
               </span>
 
