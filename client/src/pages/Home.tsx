@@ -126,7 +126,7 @@ export default function Home() {
       <WhoWeAreSection />
 
       {/* Comprehensive Technology Solutions - Clean White Section */}
-      <section className="relative pt-8 pb-20 md:pt-10 md:pb-24 lg:pt-12 lg:pb-28 bg-white overflow-hidden">
+      <section className="relative pt-16 pb-20 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28 bg-white overflow-hidden">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
             
@@ -246,7 +246,7 @@ export default function Home() {
 
 
       {/* How We Deliver - Compliance-First Approach Section */}
-      <section className="pt-24 pb-20 md:pt-28 md:pb-24 lg:pt-32 lg:pb-28 bg-[#f5f5f5] -mt-24 md:-mt-28 lg:-mt-32">
+      <section className="pt-20 pb-20 md:pt-24 md:pb-24 lg:pt-28 lg:pb-28 bg-[#f5f5f5]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
@@ -318,6 +318,9 @@ export default function Home() {
       {/* Case Studies Section - Signature Blue */}
       <CaseStudyShowcase />
 
+      {/* Subtle divider line between dark sections */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
       {/* Our Approach Teaser Section - Signature Blue Background */}
       <section className="relative py-20 md:py-28 bg-[#0A2540] overflow-hidden">
         {/* Subtle gradient overlay for depth */}
@@ -342,22 +345,47 @@ export default function Home() {
             </p>
             
             {/* Sector badges */}
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
+            <motion.div 
+              className="flex flex-wrap justify-center gap-3 mb-10"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: 0.1,
+                    delayChildren: 0.3,
+                  },
+                },
+              }}
+            >
               {[
                 { label: 'Federal Government', icon: Landmark },
                 { label: 'State Government', icon: Building2 },
                 { label: 'Local Government', icon: Users },
                 { label: 'Regulated Industries', icon: Scale }
               ].map((sector) => (
-                <div 
+                <motion.div 
                   key={sector.label}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white hover:bg-white/15 transition-colors"
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9 },
+                    visible: { 
+                      opacity: 1, 
+                      scale: 1,
+                      transition: {
+                        duration: 0.4,
+                        ease: [0.25, 0.1, 0.25, 1],
+                      },
+                    },
+                  }}
                 >
                   <sector.icon className="h-4 w-4 text-[#E07020]" />
                   {sector.label}
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
             
             <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all">
               <Link href="/our-approach">
@@ -370,7 +398,8 @@ export default function Home() {
 
       </section>
 
-
+      {/* Subtle divider line between dark sections */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       {/* CTA Section - Signature Blue */}
       <section className="relative py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
@@ -379,7 +408,13 @@ export default function Home() {
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
         
-        <div className="container text-center relative z-10">
+        <motion.div 
+          className="container text-center relative z-10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Contact Us</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Request an assessment to evaluate how our services can support your agency's technology requirements.
@@ -397,7 +432,7 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <Footer />

@@ -107,17 +107,37 @@ export default function CaseStudyShowcase() {
 
         {/* Case Study Cards - Static 3-column grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12"
         >
           {featuredCaseStudies.map((study) => (
-            <Card 
+            <motion.div
               key={study.id}
-              className="bg-white border-0 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col p-0 hover:-translate-y-1"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.25, 0.1, 0.25, 1],
+                  },
+                },
+              }}
             >
+              <Card 
+                className="h-full bg-white border-0 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col p-0 hover:-translate-y-1"
+              >
               {/* Image */}
               <div className="relative h-64 overflow-hidden bg-slate-200">
                 <ImageWithLoader
@@ -150,7 +170,8 @@ export default function CaseStudyShowcase() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </Card>
+              </Card>
+            </motion.div>
           ))}
         </motion.div>
 

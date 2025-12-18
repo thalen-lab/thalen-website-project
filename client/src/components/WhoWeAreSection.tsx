@@ -6,7 +6,7 @@ import { Link } from 'wouter';
 
 export default function WhoWeAreSection() {
   return (
-    <section className="relative pt-12 pb-8 md:pt-16 md:pb-10 lg:pt-20 lg:pb-12 bg-white overflow-hidden">
+    <section className="relative pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20 bg-white overflow-hidden">
       
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
