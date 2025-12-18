@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useRoute, useLocation } from 'wouter';
 import { trpc } from '@/lib/trpc';
+import AdminLayout from '@/components/AdminLayout';
+import AdminBreadcrumb from '@/components/AdminBreadcrumb';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -125,21 +127,30 @@ export default function EventForm() {
   }
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center gap-4">
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => navigate('/admin/events')}
-        >
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Back
-        </Button>
-        <h1 className="text-3xl font-bold">
-          {isEdit ? 'Edit Event' : 'New Event'}
-        </h1>
-      </div>
+    <AdminLayout>
+      <div className="space-y-6">
+        {/* Breadcrumb */}
+        <AdminBreadcrumb 
+          items={[
+            { label: "Events", href: "/admin/events" },
+            { label: isEdit ? "Edit Event" : "New Event" }
+          ]} 
+        />
+
+        {/* Header */}
+        <div className="flex items-center gap-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate('/admin/events')}
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back
+          </Button>
+          <h1 className="text-3xl font-bold">
+            {isEdit ? 'Edit Event' : 'New Event'}
+          </h1>
+        </div>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Content */}
@@ -348,6 +359,7 @@ export default function EventForm() {
           </Button>
         </div>
       </form>
-    </div>
+      </div>
+    </AdminLayout>
   );
 }

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 import { trpc } from '@/lib/trpc';
+import AdminLayout from '@/components/AdminLayout';
+import AdminBreadcrumb from '@/components/AdminBreadcrumb';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -151,11 +153,19 @@ export default function AdminEvents() {
   };
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold">Events</h1>
+    <AdminLayout>
+      <div className="space-y-6">
+        {/* Breadcrumb */}
+        <AdminBreadcrumb 
+          items={[
+            { label: "Events" }
+          ]} 
+        />
+
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold">Events</h1>
           <p className="text-muted-foreground mt-1">
             Manage webinars, conferences, and other events
           </p>
@@ -362,6 +372,7 @@ export default function AdminEvents() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </div>
+      </div>
+    </AdminLayout>
   );
 }

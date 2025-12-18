@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 import { trpc } from '@/lib/trpc';
+import AdminLayout from '@/components/AdminLayout';
+import AdminBreadcrumb from '@/components/AdminBreadcrumb';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -167,11 +169,19 @@ export default function AdminMediaLibrary() {
   };
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold">Media Library</h1>
+    <AdminLayout>
+      <div className="space-y-6">
+        {/* Breadcrumb */}
+        <AdminBreadcrumb 
+          items={[
+            { label: "Media Library" }
+          ]} 
+        />
+
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold">Media Library</h1>
           <p className="text-muted-foreground mt-1">
             Manage your uploaded images and media assets
           </p>
@@ -440,6 +450,7 @@ export default function AdminMediaLibrary() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </div>
+      </div>
+    </AdminLayout>
   );
 }

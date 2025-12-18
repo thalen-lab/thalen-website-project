@@ -1,4 +1,5 @@
 import AdminLayout from "@/components/AdminLayout";
+import AdminBreadcrumb from "@/components/AdminBreadcrumb";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { trpc } from "@/lib/trpc";
@@ -59,11 +60,18 @@ export default function AdminDashboard() {
   return (
     <AdminLayout>
       <div className="space-y-8">
+        {/* Breadcrumb */}
+        <AdminBreadcrumb 
+          items={[
+            { label: "Dashboard" }
+          ]} 
+        />
+
         {/* Header */}
         <div>
           <h1 className="text-3xl font-bold text-navy-900">Dashboard</h1>
           <p className="text-gray-600 mt-2">
-            Welcome to the Thalen Technologies content management system
+            Welcome to the NexDyne content management system
           </p>
         </div>
 

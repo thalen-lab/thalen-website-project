@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRoute, useLocation } from "wouter";
 import AdminLayout from "@/components/AdminLayout";
+import AdminBreadcrumb from "@/components/AdminBreadcrumb";
 import RichTextEditor from "@/components/RichTextEditor";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -132,6 +133,14 @@ export default function BlogPostForm() {
   return (
     <AdminLayout>
       <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Breadcrumb */}
+        <AdminBreadcrumb 
+          items={[
+            { label: "Blog Posts", href: "/admin/blog-posts" },
+            { label: isEdit ? "Edit Post" : "New Post" }
+          ]} 
+        />
+
         {/* Header */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">

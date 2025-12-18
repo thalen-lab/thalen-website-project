@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { trpc } from '@/lib/trpc';
+import AdminLayout from '@/components/AdminLayout';
+import AdminBreadcrumb from '@/components/AdminBreadcrumb';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -100,9 +102,17 @@ export default function AdminScheduledContent() {
   };
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold">Scheduled Content</h1>
+    <AdminLayout>
+      <div className="space-y-6">
+        {/* Breadcrumb */}
+        <AdminBreadcrumb 
+          items={[
+            { label: "Scheduled Content" }
+          ]} 
+        />
+
+        <div>
+          <h1 className="text-3xl font-bold">Scheduled Content</h1>
         <p className="text-muted-foreground mt-2">
           View and manage all scheduled content across blog posts, case studies, and events
         </p>
@@ -201,6 +211,7 @@ export default function AdminScheduledContent() {
           )}
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </AdminLayout>
   );
 }
