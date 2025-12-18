@@ -126,7 +126,7 @@ export default function Home() {
       <WhoWeAreSection />
 
       {/* Comprehensive Technology Solutions - Clean White Section */}
-      <section className="relative pt-8 pb-16 md:pt-10 md:pb-24 lg:pt-12 lg:pb-28 bg-white overflow-hidden">
+      <section className="relative pt-8 pb-20 md:pt-10 md:pb-24 lg:pt-12 lg:pb-28 bg-white overflow-hidden">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
             
@@ -246,7 +246,7 @@ export default function Home() {
 
 
       {/* How We Deliver - Compliance-First Approach Section */}
-      <section className="py-20 md:py-24 lg:py-28 bg-[#f5f5f5]">
+      <section className="pt-24 pb-20 md:pt-28 md:pb-24 lg:pt-32 lg:pb-28 bg-[#f5f5f5] -mt-24 md:-mt-28 lg:-mt-32">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
