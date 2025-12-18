@@ -245,19 +245,19 @@ export default function Home() {
       */}
 
 
-      {/* How We Deliver - Compliance-First Approach Section */}
-      <section className="pt-20 pb-20 md:pt-24 md:pb-24 lg:pt-28 lg:pb-28 bg-[#f5f5f5]">
+      {/* Compliance-First Approach Section */}
+      <section className="relative pt-16 pb-20 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28 bg-[#f5f5f5] overflow-hidden">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
             {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.7 }}
+              className="relative z-10"
             >
-              <p className="text-[#E07020] font-semibold mb-4 uppercase tracking-wider text-sm">How We Deliver</p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#0A2540] mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#0A2540] mb-6 leading-tight">
                 Compliance-First Approach
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">

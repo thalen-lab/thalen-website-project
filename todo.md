@@ -3570,3 +3570,5 @@
 - [x] Review section transitions and fix spacing issues
 - [x] Add smooth scroll-triggered animations
 - [x] Test and verify mobile responsiveness
+- [x] Remove 'How We Deliver' label from Compliance-First Approach section
+- [x] Adjust Compliance-First Approach section size to match other homepage sections
