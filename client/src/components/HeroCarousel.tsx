@@ -110,11 +110,11 @@ export default function HeroCarousel() {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            {/* Multi-layer gradient overlay for depth and readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.12_0.04_250)]/95 via-[oklch(0.15_0.04_250)]/80 to-[oklch(0.20_0.04_250)]/60" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_250)]/70 via-transparent to-[oklch(0.12_0.04_250)]/30" />
-            {/* Subtle texture overlay */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_oklch(0.10_0.04_250)/20_100%)]" />
+            {/* Multi-layer gradient overlay for depth and readability - reduced intensity */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.12_0.04_250)]/75 via-[oklch(0.15_0.04_250)]/55 to-[oklch(0.20_0.04_250)]/35" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_250)]/50 via-transparent to-[oklch(0.12_0.04_250)]/15" />
+            {/* Subtle texture overlay - reduced */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_oklch(0.10_0.04_250)/10_100%)]" />
           </div>
 
           {/* Content */}

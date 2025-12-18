@@ -3518,3 +3518,4 @@
 
 ## Phase 74: Update FedRAMP Hero Section Image
 - [x] Update FedRAMP Authorization & Cloud Security hero section image with new Capitol building security image
+- [x] Reduce gradient overlay intensity on hero section images
