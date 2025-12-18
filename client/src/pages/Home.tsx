@@ -145,9 +145,9 @@ export default function Home() {
                   className="w-full h-auto"
                 />
                 {/* Gradient overlay for depth */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.22_0.06_250)]/20 via-transparent to-[oklch(0.65_0.18_55)]/10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/20 via-transparent to-[#E07020]/10 pointer-events-none"></div>
                 {/* Orange accent bar */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)]"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#E07020] to-[#F08030]"></div>
               </div>
 
               {/* Decorative accent element */}
@@ -156,7 +156,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute -bottom-6 -left-6 w-32 h-32 bg-[oklch(0.65_0.18_55)]/20 rounded-full blur-3xl"
+                className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#E07020]/20 rounded-full blur-3xl"
               />
 
 
@@ -170,11 +170,11 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative z-10 order-1 lg:order-2"
             >
-              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-sm">
+              <p className="text-[#E07020] font-semibold mb-4 uppercase tracking-wider text-sm">
                 What we do
               </p>
 
-              <h2 className="text-4xl lg:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#0A2540] mb-6 leading-tight">
                 Comprehensive Technology Solutions
               </h2>
 
@@ -184,12 +184,12 @@ export default function Home() {
 
               {/* CTA Buttons - Enhanced for Core Capabilities */}
               <div className="flex flex-wrap gap-4">
-                <Button asChild variant="default" size="lg" className="bg-[oklch(0.22_0.06_250)] hover:bg-[oklch(0.18_0.06_250)]">
+                <Button asChild variant="default" size="lg" className="bg-[#0A2540] hover:bg-[#081C30]">
                   <Link href="/core-capabilities">
                     Explore Our Solutions
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-[oklch(0.22_0.06_250)] text-[oklch(0.22_0.06_250)] hover:bg-[oklch(0.22_0.06_250)] hover:text-white">
+                <Button asChild variant="outline" size="lg" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white">
                   <Link href="/contact">
                     Schedule a Consultation
                   </Link>
@@ -201,8 +201,8 @@ export default function Home() {
         </div>
 
         {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[oklch(0.65_0.18_55)]/5 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[oklch(0.22_0.06_250)]/5 rounded-full blur-3xl -z-10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#E07020]/5 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A2540]/5 rounded-full blur-3xl -z-10" />
       </section>
 
       {/* Services Section - 2x3 Grid Layout - COMMENTED OUT
@@ -250,7 +250,7 @@ export default function Home() {
 
 
       {/* How We Deliver - Compliance-First Approach Section */}
-      <section className="py-20 md:py-24 lg:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-20 md:py-24 lg:py-28 bg-[#f5f5f5]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
@@ -260,8 +260,8 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-sm">How We Deliver</p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
+              <p className="text-[#E07020] font-semibold mb-4 uppercase tracking-wider text-sm">How We Deliver</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#0A2540] mb-6">
                 Compliance-First Approach
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
@@ -273,7 +273,7 @@ export default function Home() {
                 <Button 
                   variant="default" 
                   size="lg"
-                  className="bg-[oklch(0.22_0.06_250)] hover:bg-[oklch(0.18_0.06_250)] text-white"
+                  className="bg-[#0A2540] hover:bg-[#081C30] text-white"
                   onClick={() => window.location.href = '/about#story'}
                 >
                   Our story
@@ -281,7 +281,7 @@ export default function Home() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-[oklch(0.22_0.06_250)]/30 text-[oklch(0.22_0.06_250)] hover:bg-[oklch(0.22_0.06_250)]/10"
+                  className="border-[#0A2540]/30 text-[#0A2540] hover:bg-[#0A2540]/10"
                   onClick={() => window.location.href = '/about#awards'}
                 >
                   Awards and recognition
@@ -289,7 +289,7 @@ export default function Home() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-[oklch(0.22_0.06_250)]/30 text-[oklch(0.22_0.06_250)] hover:bg-[oklch(0.22_0.06_250)]/10"
+                  className="border-[#0A2540]/30 text-[#0A2540] hover:bg-[#0A2540]/10"
                   onClick={() => window.location.href = '/contact'}
                 >
                   Join our team
@@ -312,7 +312,7 @@ export default function Home() {
                   className="w-full h-auto"
                 />
                 {/* Orange accent bar */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)]"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#E07020] to-[#F08030]"></div>
               </div>
             </motion.div>
           </div>
@@ -323,9 +323,9 @@ export default function Home() {
       <CaseStudyShowcase />
 
       {/* Our Approach Teaser Section - Signature Blue Background */}
-      <section className="relative py-20 md:py-28 bg-[oklch(0.22_0.06_250)] overflow-hidden">
+      <section className="relative py-20 md:py-28 bg-[#0A2540] overflow-hidden">
         {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.18_0.06_250)] via-[oklch(0.22_0.06_250)] to-[oklch(0.28_0.05_250)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
         
@@ -337,7 +337,7 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider text-sm">Our Approach</p>
+            <p className="text-[#E07020] font-semibold mb-4 uppercase tracking-wider text-sm">Our Approach</p>
             <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
               How We Deliver Mission-Critical Results
             </h2>
@@ -357,13 +357,13 @@ export default function Home() {
                   key={sector.label}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white"
                 >
-                  <sector.icon className="h-4 w-4 text-[oklch(0.75_0.15_55)]" />
+                  <sector.icon className="h-4 w-4 text-[#E07020]" />
                   {sector.label}
                 </div>
               ))}
             </div>
             
-            <Button asChild size="lg" className="bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white shadow-lg hover:shadow-xl transition-all">
+            <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all">
               <Link href="/our-approach">
                 Learn About Our Approach
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -377,9 +377,9 @@ export default function Home() {
 
 
       {/* CTA Section - Signature Blue */}
-      <section className="relative py-16 md:py-20 lg:py-24 bg-[oklch(0.22_0.06_250)] overflow-hidden">
+      <section className="relative py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
         {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.18_0.06_250)] via-[oklch(0.22_0.06_250)] to-[oklch(0.28_0.05_250)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
         
@@ -389,7 +389,7 @@ export default function Home() {
             Request an assessment to evaluate how our services can support your agency's technology requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white shadow-lg hover:shadow-xl transition-all">
+            <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all">
               <Link href="/contact">
                 Request Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />

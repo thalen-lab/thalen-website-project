@@ -3518,3 +3518,18 @@
 
 ## Phase 74: Update FedRAMP Hero Section Image
 - [x] Update FedRAMP Authorization & Cloud Security hero section image with new Capitol building security image
+
+## Phase 55: Fix Text Visibility and Color Contrast Issues
+- [ ] Fix text visibility/color contrast issues across all sections
+- [ ] Ensure all section content renders properly
+- [ ] Verify fixes work across all pages
+
+
+## Phase 55: Fix Text Visibility Issues
+- [x] Fix text visibility/color contrast issues in navy blue sections
+- [x] Replace custom CSS classes (bg-navy, bg-navy-depth, text-orange-accent) with hex color values
+- [x] Ensure all section content renders properly across the homepage
+- [x] Verify WHO WE ARE section displays correctly with white text on navy background
+- [x] Verify Case Studies section displays correctly
+- [x] Verify Our Approach section displays correctly
+- [x] Verify Contact Us section displays correctly

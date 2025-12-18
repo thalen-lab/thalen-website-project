@@ -180,6 +180,38 @@
     background: linear-gradient(135deg, oklch(0.65 0.20 40) 0%, oklch(0.55 0.22 40) 100%);
   }
 
+  /* Navy solid backgrounds - for sections with white text */
+  .bg-navy {
+    background-color: oklch(0.22 0.06 250);
+  }
+
+  .bg-navy-dark {
+    background-color: oklch(0.18 0.06 250);
+  }
+
+  .bg-navy-light {
+    background-color: oklch(0.28 0.05 250);
+  }
+
+  /* Navy gradient overlay for depth */
+  .bg-navy-depth {
+    background: linear-gradient(135deg, oklch(0.18 0.06 250) 0%, oklch(0.22 0.06 250) 50%, oklch(0.28 0.05 250) 100%);
+  }
+
+  /* Light gray background */
+  .bg-gray-light {
+    background-color: oklch(0.97 0.01 250);
+  }
+
+  /* Orange accent colors */
+  .text-orange-accent {
+    color: oklch(0.75 0.15 55);
+  }
+
+  .bg-orange-accent {
+    background-color: oklch(0.65 0.18 55);
+  }
+
   /* Hide scrollbar for carousel */
   .scrollbar-hide {
     -ms-overflow-style: none;
