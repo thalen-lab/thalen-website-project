@@ -1,18 +1,10 @@
-// Service Worker for NexDyne PWA
-// Enhanced offline capability with advanced caching strategies
+// Service Worker for Thalen PWA
+// Provides offline capability and caching for resources and case studies
 
-const CACHE_VERSION = 'v2';
-const STATIC_CACHE = `nexdyne-static-${CACHE_VERSION}`;
-const DYNAMIC_CACHE = `nexdyne-dynamic-${CACHE_VERSION}`;
-const IMAGE_CACHE = `nexdyne-images-${CACHE_VERSION}`;
-const API_CACHE = `nexdyne-api-${CACHE_VERSION}`;
+const CACHE_NAME = 'thalen-v1';
 const OFFLINE_URL = '/offline.html';
 
-// Maximum items in dynamic cache
-const MAX_DYNAMIC_CACHE_ITEMS = 50;
-const MAX_IMAGE_CACHE_ITEMS = 100;
-
-// Assets to cache immediately on install (critical for app shell)
+// Assets to cache immediately on install
 const PRECACHE_ASSETS = [
   '/',
   '/offline.html',
@@ -21,35 +13,29 @@ const PRECACHE_ASSETS = [
   '/pwa-icon-512.png'
 ];
 
-// Routes that should use stale-while-revalidate strategy
-const STALE_WHILE_REVALIDATE_ROUTES = [
+// Routes to cache with network-first strategy (dynamic content)
+const NETWORK_FIRST_ROUTES = [
   '/case-studies',
-  '/insights',
   '/resources',
+  '/insights',
   '/about',
-  '/contact',
-  '/services',
-  '/industries',
-  '/methodology',
-  '/partners',
-  '/events'
+  '/contact'
 ];
 
-// API endpoints to cache
-const CACHEABLE_API_PATTERNS = [
-  /\/api\/trpc\/.*\.query/
+// Routes to cache with cache-first strategy (static content)
+const CACHE_FIRST_PATTERNS = [
+  /\.(js|css|woff2?|ttf|eot)$/,
+  /\.(png|jpg|jpeg|svg|gif|webp|ico)$/
 ];
 
 // Install event - precache essential assets
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing v2...');
+  console.log('[Service Worker] Installing...');
   event.waitUntil(
-    caches.open(STATIC_CACHE)
-      .then((cache) => {
-        console.log('[Service Worker] Precaching app shell');
-        return cache.addAll(PRECACHE_ASSETS);
-      })
-      .then(() => self.skipWaiting())
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log('[Service Worker] Precaching assets');
+      return cache.addAll(PRECACHE_ASSETS);
+    }).then(() => self.skipWaiting())
   );
 });
 
@@ -57,24 +43,16 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   console.log('[Service Worker] Activating...');
   event.waitUntil(
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames
-            .filter((name) => {
-              return name.startsWith('nexdyne-') && 
-                     name !== STATIC_CACHE && 
-                     name !== DYNAMIC_CACHE && 
-                     name !== IMAGE_CACHE &&
-                     name !== API_CACHE;
-            })
-            .map((name) => {
-              console.log('[Service Worker] Deleting old cache:', name);
-              return caches.delete(name);
-            })
-        );
-      })
-      .then(() => self.clients.claim())
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('[Service Worker] Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => self.clients.claim())
   );
 });
 
@@ -88,71 +66,35 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Skip chrome-extension and other non-http(s) requests
-  if (!url.protocol.startsWith('http')) {
+  // Skip cross-origin requests (except for fonts/images)
+  if (url.origin !== location.origin && !request.url.match(/\.(woff2?|ttf|eot|png|jpg|jpeg|svg|gif|webp)$/)) {
     return;
   }
 
-  // Handle API requests
-  if (url.pathname.startsWith('/api/')) {
-    if (CACHEABLE_API_PATTERNS.some(pattern => pattern.test(url.pathname))) {
-      event.respondWith(networkFirstWithCache(request, API_CACHE, 60 * 5)); // 5 min cache
-    }
+  // Cache-first strategy for static assets
+  if (CACHE_FIRST_PATTERNS.some(pattern => pattern.test(url.pathname))) {
+    event.respondWith(cacheFirst(request));
     return;
   }
 
-  // Handle image requests - cache-first with long expiry
-  if (isImageRequest(request)) {
-    event.respondWith(cacheFirstWithExpiry(request, IMAGE_CACHE, MAX_IMAGE_CACHE_ITEMS));
+  // Network-first strategy for dynamic content (case studies, resources, insights)
+  if (NETWORK_FIRST_ROUTES.some(route => url.pathname.startsWith(route)) || 
+      url.pathname.match(/\/(case-studies|resources|insights)\//)) {
+    event.respondWith(networkFirst(request));
     return;
   }
 
-  // Handle static assets (JS, CSS, fonts) - cache-first
-  if (isStaticAsset(request)) {
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-    return;
-  }
-
-  // Handle navigation and page requests
-  if (request.mode === 'navigate' || isPageRequest(request)) {
-    // Check if this is a stale-while-revalidate route
-    if (STALE_WHILE_REVALIDATE_ROUTES.some(route => url.pathname.startsWith(route))) {
-      event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE));
-    } else {
-      event.respondWith(networkFirstWithFallback(request, DYNAMIC_CACHE));
-    }
-    return;
-  }
-
-  // Default: network-first
-  event.respondWith(networkFirstWithFallback(request, DYNAMIC_CACHE));
+  // Default: network-first with offline fallback
+  event.respondWith(networkFirst(request));
 });
 
-// Helper functions
-function isImageRequest(request) {
-  const url = new URL(request.url);
-  return /\.(png|jpg|jpeg|gif|webp|svg|ico|avif)$/i.test(url.pathname) ||
-         request.destination === 'image';
-}
-
-function isStaticAsset(request) {
-  const url = new URL(request.url);
-  return /\.(js|css|woff2?|ttf|eot|otf)$/i.test(url.pathname);
-}
-
-function isPageRequest(request) {
-  const url = new URL(request.url);
-  return url.pathname === '/' || 
-         !url.pathname.includes('.') ||
-         url.pathname.endsWith('.html');
-}
-
-// Cache-first strategy with cache limit
-async function cacheFirst(request, cacheName) {
-  const cache = await caches.open(cacheName);
+// Cache-first strategy: Try cache, fall back to network
+async function cacheFirst(request) {
+  const cache = await caches.open(CACHE_NAME);
   const cached = await cache.match(request);
   
   if (cached) {
+    console.log('[Service Worker] Cache hit:', request.url);
     return cached;
   }
 
@@ -163,150 +105,47 @@ async function cacheFirst(request, cacheName) {
     }
     return response;
   } catch (error) {
-    console.log('[SW] Cache-first fetch failed:', request.url);
-    return new Response('Offline', { status: 503 });
+    console.log('[Service Worker] Fetch failed:', request.url);
+    return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
   }
 }
 
-// Cache-first with expiry and limit for images
-async function cacheFirstWithExpiry(request, cacheName, maxItems) {
-  const cache = await caches.open(cacheName);
-  const cached = await cache.match(request);
-  
-  if (cached) {
-    return cached;
-  }
+// Network-first strategy: Try network, fall back to cache, then offline page
+async function networkFirst(request) {
+  const cache = await caches.open(CACHE_NAME);
 
   try {
     const response = await fetch(request);
     if (response.ok) {
-      // Clone and store with timestamp
-      const responseToCache = response.clone();
-      cache.put(request, responseToCache);
-      
-      // Trim cache if needed
-      trimCache(cacheName, maxItems);
-    }
-    return response;
-  } catch (error) {
-    console.log('[SW] Image fetch failed:', request.url);
-    // Return a placeholder or empty response for images
-    return new Response('', { status: 503 });
-  }
-}
-
-// Network-first with cache fallback
-async function networkFirstWithCache(request, cacheName, maxAgeSeconds) {
-  const cache = await caches.open(cacheName);
-
-  try {
-    const response = await fetch(request);
-    if (response.ok) {
+      // Cache successful responses
       cache.put(request, response.clone());
     }
     return response;
   } catch (error) {
-    const cached = await cache.match(request);
-    if (cached) {
-      return cached;
-    }
-    return new Response(JSON.stringify({ error: 'Offline' }), {
-      status: 503,
-      headers: { 'Content-Type': 'application/json' }
-    });
-  }
-}
-
-// Network-first with offline fallback for navigation
-async function networkFirstWithFallback(request, cacheName) {
-  const cache = await caches.open(cacheName);
-
-  try {
-    const response = await fetch(request);
-    if (response.ok) {
-      cache.put(request, response.clone());
-    }
-    return response;
-  } catch (error) {
-    console.log('[SW] Network failed, trying cache:', request.url);
+    console.log('[Service Worker] Network failed, trying cache:', request.url);
     
+    // Try cache
     const cached = await cache.match(request);
     if (cached) {
       return cached;
     }
 
-    // For navigation requests, show offline page
+    // If it's a navigation request and we have no cache, show offline page
     if (request.mode === 'navigate') {
-      const offlinePage = await caches.match(OFFLINE_URL);
+      const offlinePage = await cache.match(OFFLINE_URL);
       if (offlinePage) {
         return offlinePage;
       }
     }
 
+    // Last resort: generic offline response
     return new Response('Offline - Content not available', {
       status: 503,
-      headers: { 'Content-Type': 'text/plain' }
+      statusText: 'Service Unavailable',
+      headers: new Headers({
+        'Content-Type': 'text/plain'
+      })
     });
-  }
-}
-
-// Stale-while-revalidate strategy
-async function staleWhileRevalidate(request, cacheName) {
-  const cache = await caches.open(cacheName);
-  const cached = await cache.match(request);
-
-  // Start network fetch in background
-  const fetchPromise = fetch(request)
-    .then((response) => {
-      if (response.ok) {
-        cache.put(request, response.clone());
-      }
-      return response;
-    })
-    .catch((error) => {
-      console.log('[SW] Background fetch failed:', request.url);
-      return null;
-    });
-
-  // Return cached version immediately if available
-  if (cached) {
-    // Trigger background update
-    fetchPromise;
-    return cached;
-  }
-
-  // No cache, wait for network
-  try {
-    const response = await fetchPromise;
-    if (response) {
-      return response;
-    }
-    
-    // Network failed and no cache
-    if (request.mode === 'navigate') {
-      const offlinePage = await caches.match(OFFLINE_URL);
-      if (offlinePage) {
-        return offlinePage;
-      }
-    }
-    
-    return new Response('Offline', { status: 503 });
-  } catch (error) {
-    const offlinePage = await caches.match(OFFLINE_URL);
-    return offlinePage || new Response('Offline', { status: 503 });
-  }
-}
-
-// Trim cache to max items (FIFO)
-async function trimCache(cacheName, maxItems) {
-  const cache = await caches.open(cacheName);
-  const keys = await cache.keys();
-  
-  if (keys.length > maxItems) {
-    const deleteCount = keys.length - maxItems;
-    for (let i = 0; i < deleteCount; i++) {
-      await cache.delete(keys[i]);
-    }
   }
 }
 
@@ -318,60 +157,28 @@ self.addEventListener('message', (event) => {
   
   if (event.data && event.data.type === 'CACHE_URLS') {
     event.waitUntil(
-      caches.open(DYNAMIC_CACHE).then((cache) => {
+      caches.open(CACHE_NAME).then((cache) => {
         return cache.addAll(event.data.urls);
-      })
-    );
-  }
-
-  if (event.data && event.data.type === 'CLEAR_CACHE') {
-    event.waitUntil(
-      caches.keys().then((names) => {
-        return Promise.all(
-          names.filter(name => name.startsWith('nexdyne-'))
-               .map(name => caches.delete(name))
-        );
-      })
-    );
-  }
-
-  if (event.data && event.data.type === 'GET_CACHE_STATUS') {
-    event.waitUntil(
-      getCacheStatus().then((status) => {
-        event.ports[0].postMessage(status);
       })
     );
   }
 });
 
-// Get cache status for debugging
-async function getCacheStatus() {
-  const cacheNames = await caches.keys();
-  const status = {};
-  
-  for (const name of cacheNames) {
-    if (name.startsWith('nexdyne-')) {
-      const cache = await caches.open(name);
-      const keys = await cache.keys();
-      status[name] = keys.length;
-    }
-  }
-  
-  return status;
-}
-
-// Push notification handling
+// Push event - handle incoming push notifications
 self.addEventListener('push', (event) => {
   console.log('[Service Worker] Push received:', event);
   
   let notificationData = {
-    title: 'NexDyne',
+    title: 'Thalen',
     body: 'You have a new notification',
     icon: '/pwa-icon-192.png',
     badge: '/badge.png',
-    data: { url: '/' }
+    data: {
+      url: '/'
+    }
   };
 
+  // Parse notification data from push event
   if (event.data) {
     try {
       const payload = event.data.json();
@@ -390,8 +197,9 @@ self.addEventListener('push', (event) => {
     }
   }
 
-  event.waitUntil(
-    self.registration.showNotification(notificationData.title, {
+  const promiseChain = self.registration.showNotification(
+    notificationData.title,
+    {
       body: notificationData.body,
       icon: notificationData.icon,
       badge: notificationData.badge,
@@ -399,23 +207,44 @@ self.addEventListener('push', (event) => {
       tag: notificationData.tag,
       requireInteraction: notificationData.requireInteraction,
       actions: notificationData.actions
-    })
+    }
   );
+
+  event.waitUntil(promiseChain);
 });
 
-// Notification click handling
+// Notification click event - handle user clicking on notification
 self.addEventListener('notificationclick', (event) => {
+  console.log('[Service Worker] Notification clicked:', event);
+  
   event.notification.close();
+
   const urlToOpen = event.notification.data?.url || '/';
 
+  // Track notification click
+  if (event.notification.data?.notificationId) {
+    fetch('/api/trpc/notifications.trackClick', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        notificationId: event.notification.data.notificationId
+      })
+    }).catch(err => console.error('Failed to track click:', err));
+  }
+
+  // Open the URL in a new window or focus existing window
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true })
       .then((clientList) => {
+        // Check if there's already a window open with this URL
         for (const client of clientList) {
           if (client.url === urlToOpen && 'focus' in client) {
             return client.focus();
           }
         }
+        // If no window is open, open a new one
         if (clients.openWindow) {
           return clients.openWindow(urlToOpen);
         }
@@ -423,15 +252,20 @@ self.addEventListener('notificationclick', (event) => {
   );
 });
 
-// Background sync for offline form submissions
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'sync-forms') {
-    event.waitUntil(syncForms());
+// Notification close event - track when user dismisses notification
+self.addEventListener('notificationclose', (event) => {
+  console.log('[Service Worker] Notification closed:', event);
+  
+  // Track notification dismissal
+  if (event.notification.data?.notificationId) {
+    fetch('/api/trpc/notifications.trackDismiss', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        notificationId: event.notification.data.notificationId
+      })
+    }).catch(err => console.error('Failed to track dismiss:', err));
   }
 });
-
-async function syncForms() {
-  // Get pending form submissions from IndexedDB
-  // This would be implemented with actual IndexedDB logic
-  console.log('[SW] Syncing offline forms...');
-}
