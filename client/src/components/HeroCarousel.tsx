@@ -94,13 +94,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div 
-      className="relative w-full overflow-hidden shrink-0"
-      style={{ 
-        height: 'clamp(380px, 50vh, 620px)',
-        backgroundColor: 'oklch(0.15 0.04 250)'
-      }}
-    >
+    <div className="relative w-full h-[380px] sm:h-[420px] md:h-[520px] lg:h-[580px] xl:h-[620px] overflow-hidden bg-[oklch(0.15_0.04_250)] shrink-0">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
