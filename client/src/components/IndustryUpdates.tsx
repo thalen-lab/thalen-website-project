@@ -106,8 +106,7 @@ export default function IndustryUpdates() {
 
   return (
     <section 
-      className="relative border-y border-[oklch(0.35_0.02_240)]"
-      style={{ background: 'linear-gradient(to right, oklch(0.40 0.02 240), oklch(0.42 0.02 240), oklch(0.40 0.02 240))' }}
+      className="relative bg-primary"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -180,7 +179,7 @@ export default function IndustryUpdates() {
         </div>
 
         {/* Quick links - moved to separate row for better spacing */}
-        <div className="hidden xl:flex items-center gap-3 mt-4 pt-4 border-t border-slate-500/30">
+        <div className="hidden xl:flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
           <span className="text-sm text-white/60 mr-2">Quick Links:</span>
           <a
             href="https://www.fedramp.gov/"

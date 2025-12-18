@@ -3540,3 +3540,4 @@
 - [x] Generate custom visual asset (Capitol building with orange background and puzzle pieces)
 - [x] Add "Learn More About Us" and "Get in Touch" CTAs
 - [x] Position section appropriately on homepage
+- [x] Update industry updates ticker section background to signature blue
