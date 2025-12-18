@@ -94,7 +94,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="relative w-full h-[420px] md:h-[520px] lg:h-[580px] xl:h-[620px] overflow-hidden bg-[oklch(0.15_0.04_250)] shrink-0">
+    <div className="relative w-full h-[380px] sm:h-[420px] md:h-[520px] lg:h-[580px] xl:h-[620px] overflow-hidden bg-[oklch(0.15_0.04_250)] shrink-0">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -129,7 +129,7 @@ export default function HeroCarousel() {
                 style={{ transitionDelay: index === currentSlide ? "200ms" : "0ms" }}
               >
                 {/* Accent line */}
-                <div className="w-16 h-1 bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.75_0.15_55)] mb-6 rounded-full" />
+                <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.75_0.15_55)] mb-4 sm:mb-6 rounded-full" />
                 
                 {/* Tagline */}
                 <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-[0.2em] text-xs md:text-sm">
@@ -151,7 +151,7 @@ export default function HeroCarousel() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:border-[oklch(0.65_0.18_55)] hover:bg-white/15 text-white font-semibold px-8 md:px-10 py-5 md:py-6 text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg"
+                    className="bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:border-[oklch(0.65_0.18_55)] hover:bg-white/15 text-white font-semibold px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg min-h-[48px] w-full sm:w-auto"
                   >
                     <Link href={slide.cta.link}>
                       {slide.cta.text}

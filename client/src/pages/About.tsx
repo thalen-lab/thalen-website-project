@@ -84,9 +84,9 @@ export default function About() {
       <Navigation />
 
       {/* Hero - Founding Story */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
+      <section className="relative py-12 sm:py-16 md:py-20 bg-navy-gradient text-primary-foreground">
         {/* Breadcrumb */}
-        <div className="container mb-8">
+        <div className="container mb-6 md:mb-8">
           <Breadcrumb 
             items={[{ label: 'About Us' }]} 
             variant="light" 
@@ -99,11 +99,11 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 text-center leading-tight">
               With the right strategy and proven automation frameworks, government and enterprise organizations can still solve complex problems and transform operations for measurable impact.
             </h1>
             
-            <div className="space-y-6 text-lg opacity-90">
+            <div className="space-y-4 md:space-y-6 text-base md:text-lg opacity-90">
               <p>
                 When we looked at the automation landscape in 2024, we saw solutions that were too rigid to handle novel challenges, systems that took too long to deploy, and platforms that required too many specialists to maintain and improve.
               </p>

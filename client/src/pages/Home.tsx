@@ -112,7 +112,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navigation />
       
       {/* Hero Carousel Section */}
@@ -125,9 +125,9 @@ export default function Home() {
       <WhoWeAreSection />
 
       {/* Comprehensive Technology Solutions - Clean White Section */}
-      <section className="relative py-20 md:py-24 lg:py-28 bg-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-white overflow-hidden">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             
             {/* Left: Core Capabilities Image */}
             <motion.div
@@ -169,22 +169,22 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative z-10 order-1 lg:order-2"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0A2540] mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0A2540] mb-4 md:mb-6 leading-tight">
                 Comprehensive Technology Solutions
               </h2>
 
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              <p className="text-base md:text-lg text-slate-600 leading-relaxed mb-6 md:mb-8">
                 We serve government agencies and highly regulated industries, ensuring their mission-critical systems deliver when it matters most. NexDyne combines deep compliance expertise, proven methodologies, and cutting-edge technology to help public sector organizations navigate complex IT challenges while maintaining the highest security and regulatory standards.
               </p>
 
               {/* CTA Buttons - Consistent sizing */}
-              <div className="flex flex-wrap gap-4">
-                <Button asChild variant="default" size="lg" className="bg-[#E07020] hover:bg-[#C85D15] text-white px-6">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button asChild variant="default" size="lg" className="bg-[#E07020] hover:bg-[#C85D15] text-white px-6 min-h-[48px] w-full sm:w-auto">
                   <Link href="/services">
                     Explore Our Services
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white px-6">
+                <Button asChild variant="outline" size="lg" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white px-6 min-h-[48px] w-full sm:w-auto">
                   <Link href="/contact">
                     Get in Touch
                   </Link>
@@ -201,13 +201,13 @@ export default function Home() {
       </section>
 
       {/* Compliance-First Approach Section - Signature Blue */}
-      <section className="relative py-20 md:py-24 lg:py-28 bg-[#0A2540] overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-[#0A2540] overflow-hidden">
         {/* Subtle gradient overlay for depth */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
         <div className="container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -216,21 +216,21 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="relative z-10"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white mb-4 md:mb-6 leading-tight">
                 Compliance-First Approach
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed mb-8">
+              <p className="text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8">
                 Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, StateRAMP, CMMC, FISMA, HIPAA, GDPR, SOC 2, PCI-DSS, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.
               </p>
               
               {/* Action Buttons - Streamlined to 2 buttons */}
-              <div className="flex flex-wrap gap-4">
-                <Button asChild variant="default" size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all px-6">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button asChild variant="default" size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all px-6 min-h-[48px] w-full sm:w-auto">
                   <Link href="/about#story">
                     Our Story
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-6">
+                <Button asChild variant="outline" size="lg" className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-6 min-h-[48px] w-full sm:w-auto">
                   <Link href="/about#approach">
                     Learn Our Approach
                   </Link>
@@ -263,7 +263,7 @@ export default function Home() {
       </section>
 
       {/* Our Approach Teaser Section - Clean White Background */}
-      <section className="relative py-20 md:py-24 lg:py-28 bg-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-white overflow-hidden">
         {/* Subtle background decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#E07020]/5 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A2540]/5 rounded-full blur-3xl -z-10" />
@@ -276,17 +276,17 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[#E07020] font-semibold mb-4 uppercase tracking-wider text-sm">Our Approach</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#0A2540] leading-tight">
+            <p className="text-[#E07020] font-semibold mb-3 md:mb-4 uppercase tracking-wider text-xs sm:text-sm">Our Approach</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#0A2540] leading-tight">
               How We Deliver Mission-Critical Results
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-10 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-slate-600 leading-relaxed mb-8 md:mb-10 max-w-3xl mx-auto">
               Four strategic pillars ensure compliant, secure, and vendor-neutral technology implementations for government agencies—from rapid assessment to cleared team execution.
             </p>
             
             {/* Sector badges */}
             <motion.div 
-              className="flex flex-wrap justify-center gap-3 mb-10"
+              className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 md:mb-10"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -308,7 +308,7 @@ export default function Home() {
               ].map((sector) => (
                 <motion.div 
                   key={sector.label}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#0A2540]/10 border border-[#0A2540]/20 text-sm font-medium text-[#0A2540] hover:bg-[#0A2540]/15 transition-colors"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-[#0A2540]/10 border border-[#0A2540]/20 text-xs sm:text-sm font-medium text-[#0A2540] hover:bg-[#0A2540]/15 transition-colors"
                   variants={{
                     hidden: { opacity: 0, scale: 0.9 },
                     visible: { 
@@ -327,7 +327,7 @@ export default function Home() {
               ))}
             </motion.div>
             
-            <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all px-8">
+            <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all px-6 sm:px-8 min-h-[48px] w-full sm:w-auto">
               <Link href="/our-approach">
                 Learn About Our Approach
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -355,7 +355,7 @@ export default function Home() {
           </motion.h2>
           
           <motion.div 
-            className="flex flex-wrap items-center justify-start gap-8 md:gap-10 lg:gap-12"
+            className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8 lg:gap-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -400,7 +400,7 @@ export default function Home() {
                       <img
                         src={customer.src}
                         alt={customer.name}
-                        className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                        className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain"
                       />
                     </div>
                   </TooltipTrigger>
@@ -415,7 +415,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Clean White */}
-      <section className="relative py-20 md:py-24 lg:py-28 bg-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-white overflow-hidden">
         {/* Subtle background decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#E07020]/5 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A2540]/5 rounded-full blur-3xl -z-10" />
@@ -427,18 +427,18 @@ export default function Home() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#0A2540]">Contact Us</h2>
-          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#0A2540]">Contact Us</h2>
+          <p className="text-base md:text-lg lg:text-xl text-slate-600 mb-8 md:mb-10 max-w-2xl mx-auto">
             Request an assessment to evaluate how our services can support your agency's technology requirements.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all px-8">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all px-6 sm:px-8 min-h-[48px] w-full sm:w-auto">
               <Link href="/contact">
                 Request Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white px-8">
+            <Button asChild size="lg" variant="outline" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white px-6 sm:px-8 min-h-[48px] w-full sm:w-auto">
               <Link href="/about">
                 Learn About Our Team
               </Link>

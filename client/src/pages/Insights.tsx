@@ -158,20 +158,20 @@ export default function Insights() {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
+      <section className="relative py-12 sm:py-16 md:py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-6 md:mb-8">
             <Breadcrumb 
               items={[{ label: 'Insights' }]} 
               variant="light" 
             />
           </div>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               Insights & Thought Leadership
             </h1>
-            <p className="text-xl md:text-2xl opacity-90">
+            <p className="text-lg sm:text-xl md:text-2xl opacity-90">
               Expert perspectives on automation strategy, cybersecurity, digital transformation, and emerging technologies.
             </p>
           </div>
@@ -179,12 +179,12 @@ export default function Insights() {
       </section>
 
       {/* Featured Insight */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container">
           <Card className="overflow-hidden max-w-5xl mx-auto hover:shadow-xl transition-shadow p-0 rounded-none border-2">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2">
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden aspect-video md:aspect-auto">
                   <ImageWithLoader
                     src="/kearney-rpa-security.png" 
                     alt="Three Practical Recommendations to Secure RPA in Federal IT"
@@ -193,16 +193,16 @@ export default function Insights() {
                     skeletonClassName="h-full"
                   />
                 </div>
-                <div className="p-12 flex flex-col justify-center">
+                <div className="p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
                   <div className="text-sm font-semibold text-accent mb-2">Featured Article</div>
-                  <h3 className="text-3xl font-bold mb-4">Three Practical Recommendations to Secure RPA in Federal IT</h3>
-                  <p className="text-muted-foreground mb-6">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4">Three Practical Recommendations to Secure RPA in Federal IT</h3>
+                  <p className="text-muted-foreground mb-4 md:mb-6 text-sm md:text-base">
                     This article provides three overarching recommendations for RPA Program Teams to support the successful implementation and operation of the program.
                   </p>
-                  <p className="text-sm text-muted-foreground mb-6">
+                  <p className="text-sm text-muted-foreground mb-4 md:mb-6">
                     Written by Kearney Principal Mark Munster
                   </p>
-                  <Button className="bg-orange-gradient hover:opacity-90 w-fit">
+                  <Button className="bg-orange-gradient hover:opacity-90 w-full sm:w-fit min-h-[44px]">
                     Download Report
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -238,12 +238,12 @@ export default function Insights() {
           </div>
 
           {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex gap-3 overflow-x-auto pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center mb-12 scrollbar-hide">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
+                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all shrink-0 min-h-[44px] ${
                   selectedCategory === category
                     ? 'bg-accent text-accent-foreground shadow-md'
                     : 'bg-background border border-border hover:border-accent hover:text-accent'

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -9,6 +9,29 @@ export default function Navigation() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const [federalSolutionsOpen, setFederalSolutionsOpen] = useState(false);
+
+  // Close mobile menu on resize to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1280) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const services = [
     { name: 'Intelligent Automation & Process Optimization', href: '/services/automation' },
@@ -41,28 +64,28 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
+    <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg safe-area-inset">
       <div className="container">
-        <div className="flex items-center justify-between h-20 sm:h-24">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <span className="text-xl sm:text-2xl font-bold">
-              <span className="hidden sm:inline">Thalen Technologies - Govern Smart</span>
-              <span className="sm:hidden">Thalen Tech</span>
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity shrink-0">
+            <span className="text-lg sm:text-xl lg:text-2xl font-bold">
+              <span className="hidden md:inline">Thalen Technologies - Govern Smart</span>
+              <span className="md:hidden">Thalen Tech</span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center space-x-6">
+          <div className="hidden xl:flex items-center space-x-5 2xl:space-x-6">
             {/* Services Dropdown */}
             <div 
               className="relative"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors">
+              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
                 <span>Services</span>
-                <ChevronDown className="h-5 w-5" />
+                <ChevronDown className="h-4 w-4" />
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -85,9 +108,9 @@ export default function Navigation() {
               onMouseEnter={() => setIndustriesOpen(true)}
               onMouseLeave={() => setIndustriesOpen(false)}
             >
-              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors">
+              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
                 <span>Industries</span>
-                <ChevronDown className="h-5 w-5" />
+                <ChevronDown className="h-4 w-4" />
               </button>
               {industriesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -110,9 +133,9 @@ export default function Navigation() {
               onMouseEnter={() => setFederalSolutionsOpen(true)}
               onMouseLeave={() => setFederalSolutionsOpen(false)}
             >
-              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors">
+              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
                 <span>Federal Solutions</span>
-                <ChevronDown className="h-5 w-5" />
+                <ChevronDown className="h-4 w-4" />
               </button>
               {federalSolutionsOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
@@ -129,22 +152,22 @@ export default function Navigation() {
               )}
             </div>
 
-            <Link href="/insights" className="hover:text-orange-signature transition-colors">
+            <Link href="/insights" className="hover:text-orange-signature transition-colors py-2">
               Insights
             </Link>
-            <Link href="/case-studies" className="hover:text-orange-signature transition-colors">
+            <Link href="/case-studies" className="hover:text-orange-signature transition-colors py-2">
               Case Studies
             </Link>
-            <Link href="/government-resources" className="hover:text-orange-signature transition-colors">
+            <Link href="/government-resources" className="hover:text-orange-signature transition-colors py-2">
               Resources
             </Link>
-            <Link href="/events" className="hover:text-orange-signature transition-colors">
+            <Link href="/events" className="hover:text-orange-signature transition-colors py-2">
               Events
             </Link>
-            <Link href="/about" className="hover:text-orange-signature transition-colors">
+            <Link href="/about" className="hover:text-orange-signature transition-colors py-2">
               About
             </Link>
-            <Link href="/contact" className="hover:text-orange-signature transition-colors">
+            <Link href="/contact" className="hover:text-orange-signature transition-colors py-2">
               Contact
             </Link>
             
@@ -155,135 +178,147 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="xl:hidden p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="xl:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center -mr-3 touch-feedback"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Full Screen Overlay */}
         {mobileMenuOpen && (
-          <div className="xl:hidden pb-6 space-y-4">
-            <div>
-              <button 
-                className="flex items-center justify-between w-full py-3 min-h-[44px] font-medium"
-                onClick={() => setServicesOpen(!servicesOpen)}
-              >
-                <span>Services</span>
-                <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {servicesOpen && (
-                <div className="pl-4 space-y-2 mt-2">
-                  {services.map((service) => (
-                    <Link 
-                      key={service.href} 
-                      href={service.href}
-                      className="block py-3 min-h-[44px] text-sm hover:text-orange-signature flex items-center"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+          <div className="xl:hidden fixed inset-0 top-16 sm:top-20 bg-primary z-40 overflow-y-auto overscroll-contain">
+            <div className="container py-6 pb-24 space-y-2">
+              {/* Services Accordion */}
+              <div className="border-b border-primary-foreground/20">
+                <button 
+                  className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {servicesOpen && (
+                  <div className="pb-4 space-y-1">
+                    {services.map((service) => (
+                      <Link 
+                        key={service.href} 
+                        href={service.href}
+                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-            <div>
-              <button 
-                className="flex items-center justify-between w-full py-3 min-h-[44px] font-medium"
-                onClick={() => setIndustriesOpen(!industriesOpen)}
-              >
-                <span>Industries</span>
-                <ChevronDown className={`h-4 w-4 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {industriesOpen && (
-                <div className="pl-4 space-y-2 mt-2">
-                  {industries.map((industry) => (
-                    <Link 
-                      key={industry.href} 
-                      href={industry.href}
-                      className="block py-3 min-h-[44px] text-sm hover:text-orange-signature flex items-center"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {industry.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+              {/* Industries Accordion */}
+              <div className="border-b border-primary-foreground/20">
+                <button 
+                  className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
+                  onClick={() => setIndustriesOpen(!industriesOpen)}
+                >
+                  <span>Industries</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${industriesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {industriesOpen && (
+                  <div className="pb-4 space-y-1">
+                    {industries.map((industry) => (
+                      <Link 
+                        key={industry.href} 
+                        href={industry.href}
+                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {industry.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-            <div>
-              <button 
-                className="flex items-center justify-between w-full py-3 min-h-[44px] font-medium"
-                onClick={() => setFederalSolutionsOpen(!federalSolutionsOpen)}
-              >
-                <span>Federal Solutions</span>
-                <ChevronDown className={`h-4 w-4 transition-transform ${federalSolutionsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {federalSolutionsOpen && (
-                <div className="pl-4 space-y-2 mt-2">
-                  {federalSolutions.map((solution) => (
-                    <Link 
-                      key={solution.href} 
-                      href={solution.href}
-                      className="block py-3 min-h-[44px] text-sm hover:text-orange-signature flex items-center"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {solution.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+              {/* Federal Solutions Accordion */}
+              <div className="border-b border-primary-foreground/20">
+                <button 
+                  className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
+                  onClick={() => setFederalSolutionsOpen(!federalSolutionsOpen)}
+                >
+                  <span>Federal Solutions</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${federalSolutionsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {federalSolutionsOpen && (
+                  <div className="pb-4 space-y-1">
+                    {federalSolutions.map((solution) => (
+                      <Link 
+                        key={solution.href} 
+                        href={solution.href}
+                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {solution.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-            <Link 
-              href="/insights" 
-              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Insights
-            </Link>
-            <Link 
-              href="/case-studies" 
-              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Case Studies
-            </Link>
-            <Link 
-              href="/government-resources" 
-              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Resources
-            </Link>
-            <Link 
-              href="/events" 
-              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Events
-            </Link>
-            <Link 
-              href="/about" 
-              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link 
-              href="/contact" 
-              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            
-            <Button asChild className="w-full min-h-[44px] bg-orange-gradient hover:opacity-90 transition-opacity mt-4">
-              <Link href="/contact">Schedule Assessment</Link>
-            </Button>
+              {/* Direct Links */}
+              <Link 
+                href="/insights" 
+                className="block py-4 min-h-[52px] font-medium text-lg hover:text-orange-signature border-b border-primary-foreground/20 flex items-center touch-feedback"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Insights
+              </Link>
+              <Link 
+                href="/case-studies" 
+                className="block py-4 min-h-[52px] font-medium text-lg hover:text-orange-signature border-b border-primary-foreground/20 flex items-center touch-feedback"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Case Studies
+              </Link>
+              <Link 
+                href="/government-resources" 
+                className="block py-4 min-h-[52px] font-medium text-lg hover:text-orange-signature border-b border-primary-foreground/20 flex items-center touch-feedback"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Resources
+              </Link>
+              <Link 
+                href="/events" 
+                className="block py-4 min-h-[52px] font-medium text-lg hover:text-orange-signature border-b border-primary-foreground/20 flex items-center touch-feedback"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Events
+              </Link>
+              <Link 
+                href="/about" 
+                className="block py-4 min-h-[52px] font-medium text-lg hover:text-orange-signature border-b border-primary-foreground/20 flex items-center touch-feedback"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                href="/contact" 
+                className="block py-4 min-h-[52px] font-medium text-lg hover:text-orange-signature border-b border-primary-foreground/20 flex items-center touch-feedback"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              
+              {/* CTA Button */}
+              <div className="pt-6">
+                <Button asChild className="w-full min-h-[52px] text-lg bg-orange-gradient hover:opacity-90 transition-opacity touch-feedback">
+                  <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+                    Schedule Assessment
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         )}
       </div>

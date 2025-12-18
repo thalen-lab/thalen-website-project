@@ -165,10 +165,10 @@ export default function AdminBlogPosts() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-3xl font-bold">Blog Posts</h1>
-          <p className="text-muted-foreground mt-1">
-            Manage your blog content and articles
-          </p>
-        </div>
+            <p className="text-muted-foreground mt-1">
+              Manage your blog content and articles
+            </p>
+          </div>
         <div className="flex gap-2">
           <ImportExportButtons
             onExport={async (format) => {

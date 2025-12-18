@@ -61,10 +61,10 @@ export default function Contact() {
             />
           </div>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               Get In Touch
             </h1>
-            <p className="text-xl md:text-2xl opacity-90">
+            <p className="text-lg sm:text-xl md:text-2xl opacity-90">
               Contact us to discuss how our services can support your agency's technology requirements.
             </p>
           </div>
@@ -203,7 +203,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div>
               <Card>
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h2 className="text-2xl font-bold mb-6">Request Assessment</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
