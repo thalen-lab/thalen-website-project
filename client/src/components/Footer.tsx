@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { APP_LOGO } from '@/const';
-import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin, Shield, Award, Building2, FileCheck } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -84,6 +84,54 @@ export default function Footer() {
               <div>
                 <p className="font-medium mb-1">Headquarters</p>
                 <p>Washington, DC Metro Area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Certifications & Credentials Section */}
+        <div className="border-t border-primary-foreground/20 pt-8 mb-8">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10">
+            {/* Small Business Certification Badge */}
+            <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 border border-primary-foreground/20">
+              <div className="flex items-center gap-2 mb-2">
+                <Building2 className="h-8 w-8 text-accent" />
+                <span className="text-lg font-bold text-accent">SBA</span>
+              </div>
+              <span className="text-xs text-primary-foreground/80">U.S. Small Business</span>
+              <span className="text-xs text-primary-foreground/80 mb-2">Administration</span>
+              <div className="bg-accent text-accent-foreground px-3 py-1 rounded text-xs font-semibold">
+                SMALL BUSINESS CERTIFIED
+              </div>
+            </div>
+
+            {/* ISO 9001:2015 Certification Badge */}
+            <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 border border-primary-foreground/20 min-w-[280px]">
+              <div className="text-center mb-2">
+                <span className="text-xl font-bold text-accent">ISO 9001:2015</span>
+              </div>
+              <span className="text-sm font-semibold text-primary-foreground mb-1">CERTIFIED COMPANY</span>
+              <div className="flex items-center gap-2 mt-1">
+                <Award className="h-5 w-5 text-primary-foreground/70" />
+                <span className="text-xs text-primary-foreground/70">Quality Management System</span>
+              </div>
+            </div>
+
+            {/* UEI & CAGE Code Badge */}
+            <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 border border-primary-foreground/20">
+              <div className="flex items-center gap-2 mb-3">
+                <FileCheck className="h-6 w-6 text-accent" />
+                <span className="text-sm font-semibold text-primary-foreground">Federal Credentials</span>
+              </div>
+              <div className="grid grid-cols-2 gap-4 text-center">
+                <div>
+                  <span className="text-xs text-primary-foreground/70 block">UEI</span>
+                  <span className="text-sm font-mono font-semibold text-accent">XXXXXXXXX123</span>
+                </div>
+                <div>
+                  <span className="text-xs text-primary-foreground/70 block">CAGE Code</span>
+                  <span className="text-sm font-mono font-semibold text-accent">XXXXX</span>
+                </div>
               </div>
             </div>
           </div>
