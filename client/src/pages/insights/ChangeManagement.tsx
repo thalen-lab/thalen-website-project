@@ -1,360 +1,211 @@
-import { Button } from '@/components/ui/button';
+import InsightArticleLayout from '@/components/InsightArticleLayout';
 import { Card, CardContent } from '@/components/ui/card';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import RelatedArticles from '@/components/RelatedArticles';
-import SocialShare from '@/components/SocialShare';
-import CommentSection from '@/components/CommentSection';
-import { ArrowRight, Download, Users, TrendingUp, Target, CheckCircle2 } from 'lucide-react';
-import { Link } from 'wouter';
+import { Users, Target, TrendingUp, CheckCircle2, MessageSquare, Award } from 'lucide-react';
 
 export default function ChangeManagement() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
+    <InsightArticleLayout
+      category="Digital Transformation"
+      categoryColor="bg-orange-400 text-white"
+      title="Change Management: The Key to Digital Transformation Success"
+      author="Lisa Martinez"
+      authorSlug="lisa-martinez"
+      date="October 28, 2024"
+      readTime="11 min read"
+      description="Why 70% of digital transformations fail and how to ensure yours succeeds through effective change management strategies that address the human side of technology adoption."
+      articleSlug="change-management"
+      tags={['Transformation', 'Leadership', 'Change Management', 'Culture', 'Federal']}
+    >
+      {/* Introduction */}
+      <p className="text-xl leading-relaxed">
+        Digital transformation initiatives fail at an alarming rate—studies consistently show that 70% or more do not achieve their intended objectives. The primary cause is not technology failure but change management failure. Organizations invest heavily in new systems and processes while underinvesting in the human elements that determine adoption and sustained use. This guide provides a comprehensive framework for change management in government digital transformation.
+      </p>
 
-      {/* Hero */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Digital Transformation & Leadership
+      {/* Key Takeaways */}
+      <Card className="bg-orange-50 border-l-4 border-l-orange-400 my-10">
+        <CardContent className="p-8">
+          <h3 className="text-2xl font-bold mb-4 flex items-center">
+            <CheckCircle2 className="mr-3 h-6 w-6 text-orange-600" />
+            Key Takeaways
+          </h3>
+          <ul className="space-y-3 text-muted-foreground">
+            <li className="flex items-start">
+              <span className="mr-3 text-orange-600">•</span>
+              Technology is the easy part—people and process change determine transformation success
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 text-orange-600">•</span>
+              Executive sponsorship must be visible, sustained, and authentic throughout the transformation
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 text-orange-600">•</span>
+              Communication should be continuous, multi-channel, and tailored to different stakeholder groups
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 text-orange-600">•</span>
+              Training alone is insufficient—ongoing support and reinforcement drive sustained adoption
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 text-orange-600">•</span>
+              Resistance is natural and often contains valuable feedback—engage rather than dismiss resisters
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      {/* Section 1 */}
+      <h2 className="flex items-center">
+        <Target className="mr-3 h-8 w-8 text-orange-600" />
+        Understanding Why Transformations Fail
+      </h2>
+      <p>
+        Digital transformation failures rarely stem from technology problems. Modern enterprise software, cloud platforms, and automation tools are mature and capable. Failures occur when organizations cannot successfully transition people from old ways of working to new ones. Understanding common failure patterns enables proactive mitigation.
+      </p>
+      <p>
+        Insufficient executive sponsorship undermines transformation efforts. When leaders delegate transformation to IT without visible, sustained engagement, employees conclude that the initiative is not truly important. Competing priorities, organizational politics, and change fatigue create resistance that only executive commitment can overcome.
+      </p>
+      <p>
+        Poor communication leaves employees confused about why change is happening, what it means for them, and how to succeed in the new environment. Organizations often communicate the "what" of transformation without adequately addressing the "why" and "how." This gap breeds anxiety, rumors, and resistance.
+      </p>
+      <p>
+        Inadequate training and support leave employees unable to perform effectively with new tools and processes. Training events without ongoing reinforcement result in rapid skill decay. Employees revert to familiar methods when new approaches prove difficult, undermining transformation objectives.
+      </p>
+
+      {/* Section 2 */}
+      <h2 className="flex items-center">
+        <Users className="mr-3 h-8 w-8 text-orange-600" />
+        The ADKAR Model for Individual Change
+      </h2>
+      <p>
+        Successful organizational change requires successful individual change. The ADKAR model provides a framework for understanding and facilitating individual transitions through five sequential stages: Awareness, Desire, Knowledge, Ability, and Reinforcement.
+      </p>
+      
+      <h3>Awareness</h3>
+      <p>
+        Individuals must understand why change is necessary before they can engage with it. Awareness building explains the business drivers, competitive pressures, or mission requirements that necessitate transformation. Without awareness, employees perceive change as arbitrary or threatening.
+      </p>
+
+      <h3>Desire</h3>
+      <p>
+        Understanding why change is necessary does not automatically create willingness to participate. Desire emerges when individuals see personal benefit in the change or understand consequences of not changing. Leaders must address "what's in it for me" questions honestly and compellingly.
+      </p>
+
+      <h3>Knowledge</h3>
+      <p>
+        Once individuals want to change, they need knowledge of how to change. This includes understanding new processes, learning new tools, and knowing where to find help. Knowledge transfer occurs through training, documentation, and peer learning.
+      </p>
+
+      <h3>Ability</h3>
+      <p>
+        Knowledge does not equal ability. Individuals need practice, coaching, and time to develop proficiency with new ways of working. The gap between knowing and doing often surprises organizations that underinvest in hands-on skill development.
+      </p>
+
+      <h3>Reinforcement</h3>
+      <p>
+        Sustained change requires reinforcement through recognition, rewards, accountability, and ongoing support. Without reinforcement, individuals drift back to familiar patterns. Reinforcement mechanisms must be designed into the transformation from the beginning.
+      </p>
+
+      {/* Change Readiness Assessment */}
+      <Card className="bg-slate-50 border my-8">
+        <CardContent className="p-8">
+          <h4 className="font-bold mb-4">Change Readiness Assessment Dimensions</h4>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h5 className="font-semibold text-orange-700 mb-2">Organizational Factors</h5>
+              <ul className="text-sm text-muted-foreground space-y-1">
+                <li>• History of change success/failure</li>
+                <li>• Current change saturation level</li>
+                <li>• Leadership alignment and commitment</li>
+                <li>• Available resources and capacity</li>
+              </ul>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Change Management for Digital Transformation: Why Technology Projects Fail Without It
-            </h1>
-            <div className="flex items-center gap-6 text-sm opacity-90 mb-8">
-              <span>By Thalen Technologies Transformation Team</span>
-              <span>•</span>
-              <span>14 min read</span>
-              <span>•</span>
-              <span>Updated November 2025</span>
+            <div>
+              <h5 className="font-semibold text-orange-700 mb-2">Individual Factors</h5>
+              <ul className="text-sm text-muted-foreground space-y-1">
+                <li>• Understanding of change rationale</li>
+                <li>• Perceived personal impact</li>
+                <li>• Trust in leadership</li>
+                <li>• Skill and confidence levels</li>
+              </ul>
             </div>
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              <Download className="mr-2 h-5 w-5" />
-              Download as PDF
-            </Button>
           </div>
-        </div>
-      </section>
+        </CardContent>
+      </Card>
 
-      {/* Article Content */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          {/* Social Share */}
-          <div className="mb-8 pb-8 border-b">
-            <SocialShare 
-              title="Change Management for Digital Transformation: Why Technology Projects Fail Without It"
-              url="/insights/change-management"
-              description="The human dimension of transformation and why 70% of digital initiatives fail without proper change management."
-            />
-          </div>
-          <div className="prose prose-lg max-w-none">
-            
-            {/* Introduction */}
-            <div className="mb-12">
-              <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Digital transformation projects fail at alarming rates—studies consistently show 70% of transformation initiatives fail to achieve their objectives. The culprit is rarely technology. Modern cloud platforms, AI systems, and automation tools work as advertised. The failure lies in the human dimension: resistance to change, inadequate training, misaligned incentives, and organizational inertia. This comprehensive guide examines change management for digital transformation in government, providing a framework for addressing the human factors that determine success or failure. Drawing from Thalen Technologies's experience leading transformations across government agencies, we explore why change management is not optional—it is the difference between transformation and expensive technology deployment.
-              </p>
-            </div>
+      {/* Section 3 */}
+      <h2 className="flex items-center">
+        <MessageSquare className="mr-3 h-8 w-8 text-orange-600" />
+        Communication Strategies for Transformation
+      </h2>
+      
+      <h3>The Communication Cascade</h3>
+      <p>
+        Effective transformation communication follows a cascade pattern. Executive leaders communicate vision and strategic rationale. Middle managers translate strategy into operational implications for their teams. Front-line supervisors address individual concerns and provide day-to-day guidance. Each level plays an essential role—skipping levels creates gaps that breed confusion and resistance.
+      </p>
 
-            {/* Key Takeaways */}
-            <Card className="bg-muted border-l-4 border-l-accent mb-12">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4 flex items-center">
-                  <CheckCircle2 className="mr-3 h-6 w-6 text-foreground" />
-                  Key Takeaways
-                </h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• 70% of digital transformation failures stem from people and process issues, not technology</li>
-                  <li>• Executive sponsorship and visible leadership commitment are non-negotiable for success</li>
-                  <li>• Change management must begin before technology deployment, not as an afterthought</li>
-                  <li>• Resistance to change is natural and predictable—effective change management addresses it proactively</li>
-                  <li>• Measuring adoption and behavior change is as important as measuring technical metrics</li>
-                </ul>
-              </CardContent>
-            </Card>
+      <h3>Multi-Channel Approach</h3>
+      <p>
+        Different stakeholders consume information through different channels. Town halls reach broad audiences but lack personalization. Team meetings enable dialogue and Q&A. Email and intranet provide reference material. Informal conversations address individual concerns. Effective communication strategies employ multiple channels, with consistent messaging adapted to each channel's strengths.
+      </p>
 
-            {/* Section 1 */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 flex items-center">
-                <Users className="mr-3 h-8 w-8 text-accent" />
-                Understanding Resistance to Change
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Resistance to change is not irrational or malicious—it is a natural human response to uncertainty and perceived threat. When organizations announce digital transformation, employees hear potential job loss, skill obsolescence, and disruption to familiar routines. Even when transformation promises long-term benefits, the short-term costs (learning new systems, changing workflows, accepting uncertainty) are immediate and personal.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                The <a href="https://www.prosci.com/methodology/adkar" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ADKAR model</a> (Awareness, Desire, Knowledge, Ability, Reinforcement) provides a framework for understanding individual change. People must first become aware of why change is necessary, then develop desire to participate, acquire knowledge of how to change, build ability to implement new skills, and receive reinforcement to sustain change. Failure at any stage derails transformation.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Government organizations face unique change management challenges. Civil service protections mean leadership cannot simply replace resistant employees. Organizational cultures often value stability and risk avoidance over innovation. Political cycles create uncertainty about whether transformation initiatives will survive leadership changes. These factors demand change management approaches tailored to government contexts rather than importing private sector practices wholesale.
-              </p>
-            </div>
+      <h3>Two-Way Communication</h3>
+      <p>
+        Communication must flow both ways. Feedback mechanisms—surveys, focus groups, suggestion systems, office hours—enable employees to voice concerns, ask questions, and contribute ideas. Leaders who listen and respond build trust and often receive valuable insights that improve transformation outcomes.
+      </p>
 
-            {/* Section 2 */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 flex items-center">
-                <Target className="mr-3 h-8 w-8 text-accent" />
-                The Five Pillars of Transformation Change Management
-              </h2>
-              
-              <h3 className="text-2xl font-bold mt-8 mb-4">1. Executive Sponsorship and Leadership Alignment</h3>
-              <p className="text-muted-foreground mb-4">
-                Transformation requires active, visible executive sponsorship. Passive support is insufficient—leaders must personally champion change, communicate its importance, and hold organization accountable for adoption. When employees see leadership commitment, they recognize change is serious and inevitable. When leadership commitment wavers, employees wait out the initiative.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Leadership alignment across the organization is equally critical. Transformation cannot succeed if senior leaders publicly support it while middle managers undermine it. Securing alignment requires addressing leaders' concerns, demonstrating how transformation serves their objectives, and creating accountability for change leadership. Leadership development programs can build change leadership capabilities across management ranks.
-              </p>
+      {/* Section 4 */}
+      <h2 className="flex items-center">
+        <TrendingUp className="mr-3 h-8 w-8 text-orange-600" />
+        Building and Sustaining Momentum
+      </h2>
+      
+      <h3>Quick Wins</h3>
+      <p>
+        Early, visible successes build confidence and momentum. Identify opportunities for quick wins that demonstrate transformation value and build credibility for larger changes. Quick wins should be genuine improvements, not manufactured successes—employees quickly recognize and discount artificial victories.
+      </p>
 
-              <h3 className="text-2xl font-bold mt-8 mb-4">2. Stakeholder Engagement and Communication</h3>
-              <p className="text-muted-foreground mb-4">
-                Effective communication is continuous, multi-channel, and two-way. One-time announcements are insufficient—people need repeated exposure to messages before they internalize them. Communication should address both rational concerns (what is changing, when, why) and emotional concerns (what does this mean for me, will I succeed, is my job secure).
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Stakeholder analysis identifies who is affected by change and how. Different stakeholders have different concerns and information needs. Frontline employees need tactical information about new workflows. Middle managers need information about how to support their teams through change. Executives need strategic information about transformation progress and risks. Tailored communication addresses each audience's specific needs.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Two-way communication enables feedback and course correction. Town halls, focus groups, and feedback channels allow employees to voice concerns and ask questions. Listening to feedback demonstrates respect for employees' perspectives and can surface legitimate issues that should influence transformation approach. Ignoring feedback breeds cynicism and resistance.
-              </p>
+      <h3>Change Champions</h3>
+      <p>
+        Change champions are influential employees who advocate for transformation within their peer groups. Champions provide peer-to-peer support, surface concerns before they become crises, and model successful adoption. Identifying, equipping, and supporting change champions multiplies change management capacity.
+      </p>
 
-              <h3 className="text-2xl font-bold mt-8 mb-4">3. Training and Capability Building</h3>
-              <p className="text-muted-foreground mb-4">
-                Training must go beyond technical skills to address mindset and behavior change. Learning new software is necessary but insufficient—people must understand why they should use it, how it fits into their work, and what benefits it provides. Training should be role-based, providing relevant content for different user populations rather than one-size-fits-all approaches.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Timing matters. Training delivered too early is forgotten before people use new systems. Training delivered too late leaves people struggling without support. Just-in-time training, delivered shortly before go-live, maximizes retention and application. Ongoing support through help desks, super users, and refresher training addresses questions that emerge during actual use.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Capability building extends beyond end users to include technical teams, managers, and support staff. Technical teams need skills to operate new systems. Managers need skills to lead teams through change. Support staff need skills to assist users. Comprehensive capability building ensures the entire ecosystem can support transformation.
-              </p>
+      <h3>Managing Resistance</h3>
+      <p>
+        Resistance is a natural response to change and often contains valuable information. Rather than dismissing or suppressing resistance, effective change managers engage with it. Understanding the sources of resistance—fear, loss of status, legitimate concerns about the change approach—enables targeted responses that address root causes.
+      </p>
 
-              <h3 className="text-2xl font-bold mt-8 mb-4">4. Process and Organizational Design</h3>
-              <p className="text-muted-foreground mb-4">
-                Technology enables new ways of working, but organizations must redesign processes to realize benefits. Automating broken processes simply creates faster broken processes. Transformation requires examining current processes, identifying inefficiencies, and redesigning workflows to leverage new capabilities. Process redesign should involve people who actually do the work—they understand current pain points and can identify improvement opportunities.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Organizational design may need to evolve to support transformation. Roles and responsibilities may shift as automation eliminates some tasks and creates others. Reporting structures may need adjustment to enable new collaboration patterns. Performance metrics should align with desired behaviors—if metrics reward old ways of working, people will continue old ways regardless of new technology.
-              </p>
+      {/* Section 5 */}
+      <h2 className="flex items-center">
+        <Award className="mr-3 h-8 w-8 text-orange-600" />
+        Government-Specific Change Challenges
+      </h2>
+      
+      <h3>Civil Service Dynamics</h3>
+      <p>
+        Government workforce dynamics differ from private sector. Civil service protections, union considerations, and tenure patterns create different change dynamics. Leaders cannot simply mandate change—they must build genuine buy-in. The upside is that government employees often have deep mission commitment that can be leveraged to support transformation aligned with mission improvement.
+      </p>
 
-              <h3 className="text-2xl font-bold mt-8 mb-4">5. Reinforcement and Sustainment</h3>
-              <p className="text-muted-foreground mb-4">
-                Change is not complete at go-live—it requires ongoing reinforcement to become permanent. People naturally revert to familiar behaviors under stress or when oversight diminishes. Reinforcement mechanisms including performance management, recognition programs, and continuous improvement processes sustain change over time.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Celebrating wins builds momentum and demonstrates value. Early successes should be publicized to show transformation is working. Quick wins provide proof points that motivate continued effort. However, celebration must be authentic—manufactured wins that don't reflect real value breed cynicism.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Continuous improvement ensures transformation evolves with changing needs. User feedback should drive ongoing refinements. Metrics should track not just system usage but business outcomes. Regular retrospectives identify lessons learned and opportunities for improvement. Transformation is not a project with an end date—it is an ongoing journey of organizational evolution.
-              </p>
-            </div>
+      <h3>Political Transitions</h3>
+      <p>
+        Government transformations must survive political transitions. Initiatives closely associated with particular administrations may face scrutiny or reversal when leadership changes. Building bipartisan support, demonstrating concrete results, and institutionalizing changes help transformations persist across political cycles.
+      </p>
 
-            {/* Section 3 */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 flex items-center">
-                <TrendingUp className="mr-3 h-8 w-8 text-accent" />
-                Change Management Roadmap
-              </h2>
-              
-              <h3 className="text-2xl font-bold mt-8 mb-4">Phase 1: Prepare for Change (Pre-Project)</h3>
-              <p className="text-muted-foreground mb-4">
-                Change management begins before technology selection. Conduct organizational readiness assessment to understand current culture, change history, and capacity for transformation. Identify stakeholders and analyze their influence, impact, and likely response to change. Secure executive sponsorship and establish governance structures for transformation.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Develop change management strategy aligned with transformation objectives. Define change vision articulating desired future state. Create communication plan, training strategy, and stakeholder engagement approach. Establish metrics for measuring change adoption and impact. Allocate resources—change management typically requires 10-20% of transformation budget but is often underfunded.
-              </p>
+      <h3>Procurement Constraints</h3>
+      <p>
+        Government procurement processes can extend transformation timelines and limit flexibility. Change management strategies must account for procurement realities, maintaining momentum during lengthy acquisition processes and adapting to constraints that private sector transformations do not face.
+      </p>
 
-              <h3 className="text-2xl font-bold mt-8 mb-4">Phase 2: Manage Change (During Project)</h3>
-              <p className="text-muted-foreground mb-4">
-                Execute communication plan with regular updates on transformation progress, benefits, and timeline. Engage stakeholders through workshops, focus groups, and feedback sessions. Address concerns and resistance proactively rather than hoping they resolve themselves. Build coalition of change champions who advocate for transformation within their teams.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Deliver training aligned with deployment schedule. Provide multiple learning modalities (classroom, online, hands-on) to accommodate different learning styles. Create job aids and reference materials for ongoing support. Establish help desk and super user network to assist during transition.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Monitor adoption through usage metrics, feedback surveys, and direct observation. Identify pockets of resistance and intervene with targeted support. Recognize and celebrate early adopters who demonstrate desired behaviors. Adjust change approach based on what is and isn't working—change management should be adaptive, not rigidly following initial plan.
-              </p>
-
-              <h3 className="text-2xl font-bold mt-8 mb-4">Phase 3: Reinforce Change (Post-Project)</h3>
-              <p className="text-muted-foreground mb-4">
-                Sustain momentum after go-live through ongoing communication, recognition, and support. Conduct post-implementation reviews to assess what worked and what didn't. Document lessons learned to inform future transformation initiatives. Transition from project-based change management to ongoing organizational change capability.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Integrate new ways of working into organizational culture. Update policies, procedures, and performance expectations to reflect transformed state. Embed continuous improvement processes that enable ongoing evolution. Develop internal change management capability so organization can lead future transformations without external support.
-              </p>
-            </div>
-
-            {/* Measuring Success */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-6">Measuring Change Management Success</h2>
-              <p className="text-muted-foreground mb-6">
-                Change management success requires measuring both leading indicators (predictive of future success) and lagging indicators (outcomes achieved). Comprehensive measurement includes:
-              </p>
-              
-              <Card className="mb-6">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Leading Indicators</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Stakeholder engagement levels (attendance at events, feedback participation)</li>
-                    <li>• Training completion rates and assessment scores</li>
-                    <li>• Communication reach and engagement (email opens, intranet views)</li>
-                    <li>• Change champion network growth and activity</li>
-                    <li>• Resistance incidents and resolution</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="mb-6">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Lagging Indicators</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• System adoption rates (active users, feature usage)</li>
-                    <li>• Process compliance with new workflows</li>
-                    <li>• Business outcomes (efficiency gains, cost savings, quality improvements)</li>
-                    <li>• Employee satisfaction and engagement scores</li>
-                    <li>• Sustainment of change over time (no reversion to old ways)</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <p className="text-muted-foreground mb-6">
-                Qualitative feedback complements quantitative metrics. Focus groups and interviews provide context for metrics and surface issues that numbers alone don't reveal. Combining quantitative and qualitative data provides comprehensive view of change management effectiveness.
-              </p>
-            </div>
-
-            {/* Common Pitfalls */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-6">Common Change Management Pitfalls</h2>
-              
-              <Card className="mb-6">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Pitfall: Treating Change Management as Communications</h3>
-                  <p className="text-muted-foreground mb-3">
-                    <strong>Problem:</strong> Organizations equate change management with sending emails about transformation, missing the deeper work of addressing resistance, building capabilities, and reinforcing new behaviors.
-                  </p>
-                  <p className="text-muted-foreground">
-                    <strong>Solution:</strong> Recognize change management as comprehensive discipline spanning communication, training, process redesign, and organizational development. Communication is necessary but insufficient.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="mb-6">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Pitfall: Starting Change Management Too Late</h3>
-                  <p className="text-muted-foreground mb-3">
-                    <strong>Problem:</strong> Change management begins months into transformation when resistance has already solidified and opportunities for stakeholder input have passed.
-                  </p>
-                  <p className="text-muted-foreground">
-                    <strong>Solution:</strong> Integrate change management from transformation inception. Conduct stakeholder analysis and readiness assessment before technology selection. Build change strategy in parallel with technical strategy.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="mb-6">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Pitfall: Underestimating Resistance</h3>
-                  <p className="text-muted-foreground mb-3">
-                    <strong>Problem:</strong> Leaders assume people will embrace change because benefits are obvious, failing to recognize that benefits to organization may create costs for individuals.
-                  </p>
-                  <p className="text-muted-foreground">
-                    <strong>Solution:</strong> Expect resistance and plan for it. Identify likely sources of resistance through stakeholder analysis. Develop strategies for addressing resistance proactively. Recognize that some resistance is legitimate and should influence transformation approach.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="mb-6">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Pitfall: Insufficient Executive Sponsorship</h3>
-                  <p className="text-muted-foreground mb-3">
-                    <strong>Problem:</strong> Executives delegate transformation to project teams without providing active, visible leadership, signaling to organization that change is not truly important.
-                  </p>
-                  <p className="text-muted-foreground">
-                    <strong>Solution:</strong> Secure explicit executive commitment including time allocation for transformation activities. Make executive sponsorship visible through town halls, communications, and decision-making participation. Hold executives accountable for change leadership.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Conclusion */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-6">Conclusion: Change Management as Strategic Imperative</h2>
-              <p className="text-muted-foreground mb-6">
-                Digital transformation is fundamentally about people, not technology. The most sophisticated AI systems, cloud platforms, and automation tools deliver no value if people don't adopt them. Change management is not soft or optional—it is the hard work of addressing human factors that determine transformation success or failure.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Government organizations that invest in change management alongside technology investment position themselves for transformation success. Those that treat change management as afterthought or communications exercise join the 70% of failed transformations. The difference is not luck or technology choice—it is deliberate, disciplined attention to the human dimension of change.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Thalen Technologies's transformation methodology integrates change management from the beginning, not as separate workstream but as core element of transformation strategy. We recognize that delivering technology is necessary but insufficient—delivering organizational change is what creates lasting value. This is the foundation for transformation that endures beyond project completion and delivers the mission outcomes government agencies seek.
-              </p>
-            </div>
-
-            {/* Related Resources */}
-            <Card className="bg-secondary">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Related Resources</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="https://www.prosci.com/methodology/adkar" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                      Prosci ADKAR Model for Individual Change
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.kotterinc.com/8-steps-process-for-leading-change/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                      Kotter's 8-Step Change Model
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-people-power-of-transformations" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                      McKinsey: The People Power of Transformations
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.gao.gov/products/gao-18-427" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                      GAO: Information Technology Reform
-                    </a>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Transform Your Organization Successfully</h2>
-          <p className="text-xl opacity-90 mb-8">
-            Thalen Technologies's proven change management methodology addresses the human factors that determine transformation success.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Change Readiness Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/insights">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View More Insights
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Comments Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container max-w-4xl">
-          <CommentSection articleSlug="change-management" />
-        </div>
-      </section>
-
-      <RelatedArticles currentArticleHref="/insights/change-management" />
-
-      <Footer />
-    </div>
+      {/* Conclusion */}
+      <h2>Making Change Stick</h2>
+      <p>
+        Successful digital transformation requires equal attention to technology and people. Organizations that invest in change management alongside technology implementation dramatically improve their odds of success. The investment pays dividends not only in the current transformation but in building organizational change capability for future initiatives.
+      </p>
+      <p>
+        Change management is not a one-time activity but an ongoing discipline. As transformation progresses, change management strategies must evolve to address emerging challenges and opportunities. Continuous assessment of adoption, engagement, and resistance enables course corrections before problems become crises.
+      </p>
+      <p>
+        NexDyne's transformation practice integrates change management into every engagement. We believe that technology implementation without change management is incomplete—and that effective change management is often the difference between transformation success and failure. Contact our team to discuss how we can support your transformation journey.
+      </p>
+    </InsightArticleLayout>
   );
 }
