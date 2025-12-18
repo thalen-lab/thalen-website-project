@@ -3578,3 +3578,7 @@
 
 ## Phase 89: Add Our Customers Section
 - [x] Add Our Customers section after Our Approach section with Michigan-relevant government badges
+## Phase 90: Replace JPG Seal Images with Transparent PNGs
+- [x] Replace Army seal JPG with transparent PNG version
+- [x] Replace DHS seal JPG with transparent PNG version
+- [x] Replace FBI seal JPG with transparent PNG version

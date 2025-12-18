@@ -420,11 +420,11 @@ export default function Home() {
           >
             {[
               { name: 'Department of Defense', src: '/customers/dod-seal.png' },
-              { name: 'Department of Homeland Security', src: '/customers/dhs-seal.jpg' },
-              { name: 'U.S. Army', src: '/customers/army-seal.jpg' },
+              { name: 'Department of Homeland Security', src: '/customers/dhs-seal.png' },
+              { name: 'U.S. Army', src: '/customers/army-seal.png' },
               { name: 'State of Michigan', src: '/customers/michigan-seal.png' },
               { name: 'Department of Veterans Affairs', src: '/customers/va-seal.png' },
-              { name: 'Federal Bureau of Investigation', src: '/customers/fbi-seal.jpg' },
+              { name: 'Federal Bureau of Investigation', src: '/customers/fbi-seal.png' },
               { name: 'General Services Administration', src: '/customers/gsa-seal.png' },
               { name: 'Department of Health & Human Services', src: '/customers/hhs-seal.png' },
             ].map((customer) => (
