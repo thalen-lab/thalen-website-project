@@ -3707,3 +3707,7 @@
 
 ## Phase 63: Fix Section Visibility Issue
 - [x] Fix visibility issue with website sections not displaying properly - Fixed HeroCarousel height issue by using inline styles instead of Tailwind arbitrary values
+
+## Phase 54: Fix Preview vs Published Display Discrepancy
+- [x] Fix header/navigation showing 'Thalen Tech' instead of full 'Thalen Technologies - Govern Smart'
+- [x] Fix hero section layout not matching published version
