@@ -4,6 +4,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, CheckCircle2, ArrowLeft } from 'lucide-react';
 import { Link } from 'wouter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { trpc } from '@/lib/trpc';
 import { triggerHaptic } from '@/lib/haptics';
 import { toast } from 'sonner';
@@ -57,8 +59,10 @@ export default function MobileContact() {
   // Success state
   if (submitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
-        <div className="max-w-md w-full text-center">
+      <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+        <Navigation />
+        <div className="flex-1 flex items-center justify-center p-4">
+          <div className="max-w-md w-full text-center">
           <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 className="w-10 h-10 text-green-500" />
           </div>
@@ -83,12 +87,15 @@ export default function MobileContact() {
             </Button>
           </div>
         </div>
+        </div>
+        <Footer />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+      <Navigation />
       {/* Header */}
       <div className="bg-slate-900/50 border-b border-slate-700 sticky top-0 z-10 backdrop-blur-sm">
         <div className="container max-w-2xl py-4">
@@ -248,6 +255,7 @@ export default function MobileContact() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

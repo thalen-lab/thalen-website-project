@@ -7,6 +7,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { CheckCircle2, Download, FileText, Shield } from "lucide-react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function ResourceDownloadFedRAMP() {
   const [formData, setFormData] = useState({
@@ -61,6 +63,7 @@ export default function ResourceDownloadFedRAMP() {
   if (submitted) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <Navigation />
         <div className="container py-20">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-6 flex justify-center">
@@ -274,6 +277,7 @@ export default function ResourceDownloadFedRAMP() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

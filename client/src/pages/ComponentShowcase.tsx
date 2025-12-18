@@ -158,6 +158,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useTheme } from "@/contexts/ThemeContext";
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { format } from "date-fns";
 import { zhCN } from "date-fns/locale";
 import {
@@ -228,7 +230,8 @@ export default function ComponentsShowcase() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <main className="container max-w-6xl mx-auto">
+      <Navigation />
+      <main className="container max-w-6xl mx-auto py-12">
         <div className="space-y-2 justify-between flex">
           <h2 className="text-3xl font-bold tracking-tight mb-6">
             Shadcn/ui Component Library
@@ -1427,11 +1430,7 @@ export default function ComponentsShowcase() {
         </div>
       </main>
 
-      <footer className="border-t py-6 mt-12">
-        <div className="container text-center text-sm text-muted-foreground">
-          <p>Shadcn/ui Component Showcase</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
