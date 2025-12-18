@@ -390,21 +390,21 @@ export default function Home() {
 
       </section>
 
-      {/* Our Customers Section */}
-      <section className="relative py-16 md:py-20 bg-[#6B7280] overflow-hidden">
+      {/* Our Customers Section - Tygart Style */}
+      <section className="py-16 md:py-20 bg-[#B8BCC2]">
         <div className="container">
-          <motion.div
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="text-2xl md:text-3xl font-normal text-[#3D4852] mb-10 md:mb-12"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white">Our Customers</h2>
-          </motion.div>
+            Our Customers
+          </motion.h2>
           
           <motion.div 
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8"
+            className="flex flex-wrap items-center justify-start gap-6 md:gap-8 lg:gap-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -412,8 +412,8 @@ export default function Home() {
               hidden: {},
               visible: {
                 transition: {
-                  staggerChildren: 0.1,
-                  delayChildren: 0.2,
+                  staggerChildren: 0.08,
+                  delayChildren: 0.1,
                 },
               },
             }}
@@ -432,10 +432,10 @@ export default function Home() {
                 key={customer.name}
                 className="flex items-center justify-center"
                 variants={{
-                  hidden: { opacity: 0, scale: 0.8 },
+                  hidden: { opacity: 0, y: 10 },
                   visible: { 
                     opacity: 1, 
-                    scale: 1,
+                    y: 0,
                     transition: {
                       duration: 0.4,
                       ease: [0.25, 0.1, 0.25, 1],
@@ -445,11 +445,11 @@ export default function Home() {
               >
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <div className="bg-white rounded-full p-4 md:p-5 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105">
+                    <div className="cursor-pointer transition-all duration-300 hover:scale-105 grayscale hover:grayscale-0">
                       <img
                         src={customer.src}
                         alt={customer.name}
-                        className="h-14 md:h-16 lg:h-20 w-14 md:w-16 lg:w-20 object-contain"
+                        className="h-16 md:h-20 lg:h-24 w-auto object-contain"
                       />
                     </div>
                   </TooltipTrigger>

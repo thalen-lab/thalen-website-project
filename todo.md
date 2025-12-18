@@ -3583,3 +3583,6 @@
 - [x] Replace DHS seal JPG with transparent PNG version
 - [x] Replace FBI seal JPG with transparent PNG version
 - [x] Update 'Our Customers' section logos to normal black and white style (not transparent)
+
+## Phase 51: Update Our Customers Section
+- [x] Update "Our Customers" section to match reference design (gray background, horizontal logo row)
