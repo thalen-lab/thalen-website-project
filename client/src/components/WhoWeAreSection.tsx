@@ -19,7 +19,7 @@ export default function WhoWeAreSection() {
             transition={{ duration: 0.7 }}
             className="relative z-10"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0A2540] mb-4 leading-tight">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A2540] mb-6 leading-tight">
               Thalen Technologies Overview
             </h2>
 

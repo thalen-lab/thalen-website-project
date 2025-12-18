@@ -170,28 +170,24 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative z-10 order-1 lg:order-2"
             >
-              <p className="text-[#E07020] font-semibold mb-4 uppercase tracking-wider text-sm">
-                What we do
-              </p>
-
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#0A2540] mb-6 leading-tight">
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#0A2540] mb-6 leading-tight">
                 Comprehensive Technology Solutions
               </h2>
 
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                From cloud modernization and cybersecurity to data analytics and AI/ML, we deliver end-to-end technology solutions tailored for government and regulated sectors. Our services include intelligent automation, DevSecOps, application development, and digital transformation—all designed with compliance-first architecture and measurable outcomes.
+                We serve government agencies and highly regulated industries, ensuring their mission-critical systems deliver when it matters most. NexDyne combines deep compliance expertise, proven methodologies, and cutting-edge technology to help public sector organizations navigate complex IT challenges while maintaining the highest security and regulatory standards.
               </p>
 
-              {/* CTA Buttons - Enhanced for Core Capabilities */}
+              {/* CTA Buttons - Thalen Style */}
               <div className="flex flex-wrap gap-4">
-                <Button asChild variant="default" size="lg" className="bg-[#0A2540] hover:bg-[#081C30]">
-                  <Link href="/core-capabilities">
-                    Explore Our Solutions
+                <Button asChild variant="default" size="lg" className="bg-[#E07020] hover:bg-[#C85D15] text-white">
+                  <Link href="/services">
+                    Explore Our Services
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white">
                   <Link href="/contact">
-                    Schedule a Consultation
+                    Get in Touch
                   </Link>
                 </Button>
               </div>

@@ -3551,3 +3551,11 @@
 - [x] Fix excessive spacing between Who We Are and What We Do sections
 - [x] Reduce bottom padding of WhoWeAreSection
 - [x] Reduce top padding of Comprehensive Technology Solutions section
+
+## Phase 53: Update Services Section and CTAs
+- [x] Remove "What we do" label from services section
+- [x] Adjust "Comprehensive Technology Solutions" heading size
+- [x] Update CTAs to match Thalen Technologies style
+
+## Phase 52: Replace Overview Section Image
+- [x] Replace image in Thalen Technologies Overview section with new NexDyne-appropriate image
