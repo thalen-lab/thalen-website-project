@@ -3512,3 +3512,9 @@
 
 ## Phase 85: Industry Updates Ticker Background Fix
 - [x] Update Industry Updates ticker section background to use signature NexDyne blue
+
+## Phase 74: Update FedRAMP Hero Section Image
+- [ ] Update FedRAMP Authorization & Cloud Security hero section image with new provided image
+
+## Phase 74: Update FedRAMP Hero Section Image
+- [x] Update FedRAMP Authorization & Cloud Security hero section image with new Capitol building security image

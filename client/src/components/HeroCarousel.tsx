@@ -27,7 +27,7 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 2,
-    image: "/hero-cloud.jpg",
+    image: "/hero-fedramp.jpg",
     title: "FedRAMP Authorization & Cloud Security",
     subtitle:
       "Accelerate your path to FedRAMP authorization with our proven methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months, opening doors to billions in federal opportunities",

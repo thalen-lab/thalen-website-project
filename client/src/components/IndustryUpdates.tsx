@@ -106,17 +106,11 @@ export default function IndustryUpdates() {
 
   return (
     <section 
-      className="relative border-y border-[oklch(0.20_0.05_250)]"
-      style={{ background: 'linear-gradient(to right, oklch(0.20 0.05 250), oklch(0.22 0.05 250), oklch(0.20 0.05 250))' }}
+      className="relative border-y border-[oklch(0.35_0.02_240)]"
+      style={{ background: 'linear-gradient(to right, oklch(0.40 0.02 240), oklch(0.42 0.02 240), oklch(0.40 0.02 240))' }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
 
       <div className="container relative py-5 md:py-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
@@ -177,7 +171,7 @@ export default function IndustryUpdates() {
                   "w-2 h-2 rounded-full transition-all duration-300",
                   idx === activeIndex 
                     ? "bg-orange-400 w-6" 
-                    : "bg-slate-600 hover:bg-slate-500"
+                    : "bg-slate-500 hover:bg-slate-400"
                 )}
                 aria-label={`Go to update ${idx + 1}`}
               />
@@ -186,7 +180,7 @@ export default function IndustryUpdates() {
         </div>
 
         {/* Quick links - moved to separate row for better spacing */}
-        <div className="hidden xl:flex items-center gap-3 mt-4 pt-4 border-t border-slate-700/50">
+        <div className="hidden xl:flex items-center gap-3 mt-4 pt-4 border-t border-slate-500/30">
           <span className="text-sm text-white/60 mr-2">Quick Links:</span>
           <a
             href="https://www.fedramp.gov/"
