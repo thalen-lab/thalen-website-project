@@ -200,9 +200,13 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A2540]/5 rounded-full blur-3xl -z-10" />
       </section>
 
-      {/* Compliance-First Approach Section */}
-      <section className="relative py-20 md:py-24 lg:py-28 bg-[#f5f5f5] overflow-hidden">
-        <div className="container">
+      {/* Compliance-First Approach Section - Signature Blue */}
+      <section className="relative py-20 md:py-24 lg:py-28 bg-[#0A2540] overflow-hidden">
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+        <div className="container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
             <motion.div
@@ -212,21 +216,21 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="relative z-10"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0A2540] mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white mb-6 leading-tight">
                 Compliance-First Approach
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              <p className="text-lg text-white/90 leading-relaxed mb-8">
                 Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, StateRAMP, CMMC, FISMA, HIPAA, GDPR, SOC 2, PCI-DSS, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.
               </p>
               
               {/* Action Buttons - Streamlined to 2 buttons */}
               <div className="flex flex-wrap gap-4">
-                <Button asChild variant="default" size="lg" className="bg-[#E07020] hover:bg-[#C85D15] text-white px-6">
+                <Button asChild variant="default" size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all px-6">
                   <Link href="/about#story">
                     Our Story
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white px-6">
+                <Button asChild variant="outline" size="lg" className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-6">
                   <Link href="/about#approach">
                     Learn Our Approach
                   </Link>
@@ -242,7 +246,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative overflow-hidden shadow-2xl rounded-sm">
+              <div className="relative overflow-hidden shadow-2xl rounded-sm border border-white/10">
                 <div className="aspect-[4/3] w-full">
                   <ImageWithLoader
                     src="/compliance-first-approach.jpg"
@@ -258,12 +262,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Approach Teaser Section - Signature Blue Background */}
-      <section className="relative py-20 md:py-24 lg:py-28 bg-[#0A2540] overflow-hidden">
-        {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+      {/* Our Approach Teaser Section - Clean White Background */}
+      <section className="relative py-20 md:py-24 lg:py-28 bg-white overflow-hidden">
+        {/* Subtle background decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#E07020]/5 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A2540]/5 rounded-full blur-3xl -z-10" />
         
         <div className="container max-w-5xl relative z-10">
           <motion.div 
@@ -274,10 +277,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[#E07020] font-semibold mb-4 uppercase tracking-wider text-sm">Our Approach</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#0A2540] leading-tight">
               How We Deliver Mission-Critical Results
             </h2>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-10 max-w-3xl mx-auto">
               Four strategic pillars ensure compliant, secure, and vendor-neutral technology implementations for government agencies—from rapid assessment to cleared team execution.
             </p>
             
@@ -305,7 +308,7 @@ export default function Home() {
               ].map((sector) => (
                 <motion.div 
                   key={sector.label}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white hover:bg-white/15 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#0A2540]/10 border border-[#0A2540]/20 text-sm font-medium text-[#0A2540] hover:bg-[#0A2540]/15 transition-colors"
                   variants={{
                     hidden: { opacity: 0, scale: 0.9 },
                     visible: { 
@@ -334,15 +337,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Customers Section - Tygart Style */}
-      <section className="py-16 md:py-20 lg:py-24 bg-[#B8BCC2]">
-        <div className="container">
+      {/* Our Customers Section - Signature Blue */}
+      <section className="relative py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+        <div className="container relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="text-2xl md:text-3xl font-normal text-[#3D4852] mb-10 md:mb-12"
+            className="text-2xl md:text-3xl font-normal text-white mb-10 md:mb-12"
           >
             Our Customers
           </motion.h2>
@@ -389,7 +396,7 @@ export default function Home() {
               >
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <div className="cursor-pointer transition-all duration-300 hover:scale-105 grayscale hover:grayscale-0">
+                    <div className="cursor-pointer transition-all duration-300 hover:scale-105 brightness-0 invert opacity-70 hover:opacity-100">
                       <img
                         src={customer.src}
                         alt={customer.name}
@@ -407,12 +414,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section - Signature Blue */}
-      <section className="relative py-20 md:py-24 lg:py-28 bg-[#0A2540] overflow-hidden">
-        {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+      {/* CTA Section - Clean White */}
+      <section className="relative py-20 md:py-24 lg:py-28 bg-white overflow-hidden">
+        {/* Subtle background decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#E07020]/5 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A2540]/5 rounded-full blur-3xl -z-10" />
         
         <motion.div 
           className="container text-center relative z-10"
@@ -421,8 +427,8 @@ export default function Home() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Contact Us</h2>
-          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#0A2540]">Contact Us</h2>
+          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
             Request an assessment to evaluate how our services can support your agency's technology requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -432,7 +438,7 @@ export default function Home() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8">
+            <Button asChild size="lg" variant="outline" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white px-8">
               <Link href="/about">
                 Learn About Our Team
               </Link>
