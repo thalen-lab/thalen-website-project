@@ -3572,3 +3572,9 @@
 - [x] Test and verify mobile responsiveness
 - [x] Remove 'How We Deliver' label from Compliance-First Approach section
 - [x] Adjust Compliance-First Approach section size to match other homepage sections
+
+## Phase 88: Update Compliance-First Approach CTAs
+- [x] Update Compliance-First Approach section CTAs to match other sections styling (orange primary, navy outline)
+
+## Phase 89: Add Our Customers Section
+- [x] Add Our Customers section after Our Approach section with Michigan-relevant government badges

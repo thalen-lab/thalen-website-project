@@ -266,29 +266,20 @@ export default function Home() {
               
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-4">
-                <Button 
-                  variant="default" 
-                  size="lg"
-                  className="bg-[#0A2540] hover:bg-[#081C30] text-white"
-                  onClick={() => window.location.href = '/about#story'}
-                >
-                  Our story
+                <Button asChild variant="default" size="lg" className="bg-[#E07020] hover:bg-[#C85D15] text-white">
+                  <Link href="/about#story">
+                    Our story
+                  </Link>
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-[#0A2540]/30 text-[#0A2540] hover:bg-[#0A2540]/10"
-                  onClick={() => window.location.href = '/about#awards'}
-                >
-                  Awards and recognition
+                <Button asChild variant="outline" size="lg" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white">
+                  <Link href="/about#awards">
+                    Awards and recognition
+                  </Link>
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-[#0A2540]/30 text-[#0A2540] hover:bg-[#0A2540]/10"
-                  onClick={() => window.location.href = '/contact'}
-                >
-                  Join our team
+                <Button asChild variant="outline" size="lg" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white">
+                  <Link href="/about#approach">
+                    Learn About Our Approach
+                  </Link>
                 </Button>
               </div>
             </motion.div>
@@ -315,8 +306,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Case Studies Section - Signature Blue */}
+      {/* Case Studies Section - Signature Blue - COMMENTED OUT FOR NOW
       <CaseStudyShowcase />
+      */}
 
       {/* Subtle divider line between dark sections */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -396,6 +388,77 @@ export default function Home() {
           </motion.div>
         </div>
 
+      </section>
+
+      {/* Our Customers Section */}
+      <section className="relative py-16 md:py-20 bg-[#f5f5f5] overflow-hidden">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A2540]">Our Customers</h2>
+          </motion.div>
+          
+          <motion.div 
+            className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.1,
+                  delayChildren: 0.2,
+                },
+              },
+            }}
+          >
+            {[
+              { name: 'Department of Defense', src: '/customers/dod-seal.png' },
+              { name: 'Department of Homeland Security', src: '/customers/dhs-seal.jpg' },
+              { name: 'U.S. Army', src: '/customers/army-seal.jpg' },
+              { name: 'State of Michigan', src: '/customers/michigan-seal.png' },
+              { name: 'Department of Veterans Affairs', src: '/customers/va-seal.png' },
+              { name: 'Federal Bureau of Investigation', src: '/customers/fbi-seal.jpg' },
+              { name: 'General Services Administration', src: '/customers/gsa-seal.png' },
+              { name: 'Department of Health & Human Services', src: '/customers/hhs-seal.png' },
+            ].map((customer) => (
+              <motion.div
+                key={customer.name}
+                className="flex items-center justify-center"
+                variants={{
+                  hidden: { opacity: 0, scale: 0.8 },
+                  visible: { 
+                    opacity: 1, 
+                    scale: 1,
+                    transition: {
+                      duration: 0.4,
+                      ease: [0.25, 0.1, 0.25, 1],
+                    },
+                  },
+                }}
+              >
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <img
+                      src={customer.src}
+                      alt={customer.name}
+                      className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                    />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{customer.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </section>
 
       {/* Subtle divider line between dark sections */}
