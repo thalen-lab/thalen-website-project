@@ -391,7 +391,7 @@ export default function Home() {
       </section>
 
       {/* Our Customers Section */}
-      <section className="relative py-16 md:py-20 bg-[#f5f5f5] overflow-hidden">
+      <section className="relative py-16 md:py-20 bg-[#6B7280] overflow-hidden">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -400,11 +400,11 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A2540]">Our Customers</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white">Our Customers</h2>
           </motion.div>
           
           <motion.div 
-            className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -445,11 +445,13 @@ export default function Home() {
               >
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <img
-                      src={customer.src}
-                      alt={customer.name}
-                      className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer mix-blend-multiply"
-                    />
+                    <div className="bg-white rounded-full p-4 md:p-5 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105">
+                      <img
+                        src={customer.src}
+                        alt={customer.name}
+                        className="h-14 md:h-16 lg:h-20 w-14 md:w-16 lg:w-20 object-contain"
+                      />
+                    </div>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>{customer.name}</p>

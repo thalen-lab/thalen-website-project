@@ -3582,3 +3582,4 @@
 - [x] Replace Army seal JPG with transparent PNG version
 - [x] Replace DHS seal JPG with transparent PNG version
 - [x] Replace FBI seal JPG with transparent PNG version
+- [x] Update 'Our Customers' section logos to normal black and white style (not transparent)
