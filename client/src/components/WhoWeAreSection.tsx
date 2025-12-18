@@ -54,7 +54,7 @@ export default function WhoWeAreSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative overflow-hidden shadow-2xl rounded-lg">
+            <div className="relative overflow-hidden shadow-2xl">
               <ImageWithLoader
                 src="/images/who-we-are-capitol.png"
                 alt="U.S. Capitol building dome with puzzle pieces representing government technology solutions"

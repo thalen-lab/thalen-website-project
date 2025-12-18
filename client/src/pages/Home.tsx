@@ -138,7 +138,7 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="relative order-2 lg:order-1"
             >
-              <div className="relative overflow-hidden shadow-2xl rounded-lg">
+              <div className="relative overflow-hidden shadow-2xl">
 <ImageWithLoader
                                   src="/comprehensive-technology-solutions.jpg"
                                   alt="Technology professionals collaborating on comprehensive solutions with data analytics display"
@@ -305,7 +305,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative rounded-lg overflow-hidden shadow-2xl">
+              <div className="relative overflow-hidden shadow-2xl">
                 <ImageWithLoader
                   src="/compliance-first-approach.jpg"
                   alt="Server infrastructure representing compliance-first approach"

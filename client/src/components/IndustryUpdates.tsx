@@ -114,8 +114,8 @@ export default function IndustryUpdates() {
       <div className="container relative py-5 md:py-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
           {/* Label */}
-          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full shrink-0">
-            <span className="text-sm font-semibold text-white uppercase tracking-wider">Industry Updates</span>
+          <div className="flex items-center gap-2 px-4 py-2.5 bg-white/10 border border-white/20 rounded-full shrink-0">
+            <span className="text-sm md:text-base font-semibold text-white uppercase tracking-wider">Industry Updates</span>
           </div>
 
           {/* Main ticker content */}
@@ -141,7 +141,7 @@ export default function IndustryUpdates() {
                     New
                   </span>
                 )}
-                <span className="text-base md:text-lg text-white font-medium leading-snug group-hover:text-orange-300 transition-colors">
+                <span className="text-lg md:text-xl lg:text-2xl text-white font-medium leading-snug group-hover:text-orange-300 transition-colors">
                   {activeUpdate.title}
                 </span>
               </div>
@@ -178,42 +178,7 @@ export default function IndustryUpdates() {
           </div>
         </div>
 
-        {/* Quick links - moved to separate row for better spacing */}
-        <div className="hidden xl:flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
-          <span className="text-sm text-white/60 mr-2">Quick Links:</span>
-          <a
-            href="https://www.fedramp.gov/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1.5 text-sm font-medium text-white/70 hover:text-orange-400 hover:bg-white/5 rounded-md transition-colors"
-          >
-            FedRAMP
-          </a>
-          <a
-            href="https://www.cisa.gov/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1.5 text-sm font-medium text-white/70 hover:text-orange-400 hover:bg-white/5 rounded-md transition-colors"
-          >
-            CISA
-          </a>
-          <a
-            href="https://csrc.nist.gov/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1.5 text-sm font-medium text-white/70 hover:text-orange-400 hover:bg-white/5 rounded-md transition-colors"
-          >
-            NIST
-          </a>
-          <a
-            href="https://sam.gov/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1.5 text-sm font-medium text-white/70 hover:text-orange-400 hover:bg-white/5 rounded-md transition-colors"
-          >
-            SAM.gov
-          </a>
-        </div>
+
       </div>
     </section>
   );

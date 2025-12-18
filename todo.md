@@ -3541,3 +3541,8 @@
 - [x] Add "Learn More About Us" and "Get in Touch" CTAs
 - [x] Position section appropriately on homepage
 - [x] Update industry updates ticker section background to signature blue
+- [x] Make hero image sharp edges (no rounded corners)
+
+## Phase 86: Industry Updates Ticker Final Adjustments
+- [x] Increase text size in Industry Updates ticker section
+- [x] Remove Quick Links line from ticker section (keep only top ticker)
