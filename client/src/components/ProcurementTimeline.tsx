@@ -246,13 +246,13 @@ export default function ProcurementTimeline() {
             <button
               key={option.value}
               onClick={() => handleAnswer(option.value)}
-              className="w-full text-left p-6 border-2 border-border rounded-lg hover:border-accent hover:bg-accent/5 transition-all duration-200 group"
+              className="w-full text-left p-6 border-2 border-border rounded-lg hover:border-[#FF6B35] hover:bg-[#FF6B35]/5 transition-all duration-200 group"
             >
               <div className="flex items-center justify-between">
-                <span className="text-lg font-medium group-hover:text-accent transition-colors">
+                <span className="text-lg font-medium group-hover:text-[#FF6B35] transition-colors">
                   {option.label}
                 </span>
-                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent transition-colors" />
+                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-[#FF6B35] transition-colors" />
               </div>
             </button>
           ))}

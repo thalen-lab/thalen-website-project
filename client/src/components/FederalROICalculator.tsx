@@ -325,7 +325,7 @@ export default function FederalROICalculator() {
                   <div key={option.value}>
                     <Label
                       htmlFor={option.value}
-                      className="flex items-start p-4 border-2 border-border rounded-lg cursor-pointer hover:border-accent transition-colors"
+                      className="flex items-start p-4 border-2 border-border rounded-lg cursor-pointer hover:border-[#FF6B35] transition-colors"
                     >
                       <RadioGroupItem value={option.value} id={option.value} className="mt-1" />
                       <div className="ml-4 flex-1">

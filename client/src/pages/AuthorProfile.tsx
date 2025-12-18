@@ -317,7 +317,7 @@ export default function AuthorProfile() {
                     <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer">
                       <CardContent className="p-8 flex flex-col flex-1">
                         <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
-                        <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                        <h3 className="text-xl font-bold mb-3 group-hover:text-[#FF6B35] transition-colors">
                           {insight.title}
                         </h3>
                         <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
@@ -337,7 +337,7 @@ export default function AuthorProfile() {
 
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-muted-foreground">{insight.date}</span>
-                          <Button variant="ghost" size="sm" className="group-hover:text-accent">
+                          <Button variant="ghost" size="sm" className="group-hover:text-[#FF6B35]">
                             Read More
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </Button>

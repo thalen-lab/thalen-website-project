@@ -26,7 +26,7 @@ export default function RelatedArticles({ currentArticleHref, limit = 3 }: Relat
                 <Card className="group hover:shadow-xl transition-all h-full cursor-pointer">
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="text-sm font-semibold text-accent mb-2">{article.category}</div>
-                    <h3 className="text-lg font-bold mb-3 group-hover:text-accent transition-colors line-clamp-2">
+                    <h3 className="text-lg font-bold mb-3 group-hover:text-[#FF6B35] transition-colors line-clamp-2">
                       {article.title}
                     </h3>
                     <p className="text-sm text-muted-foreground mb-4 flex-1 line-clamp-3">

@@ -16,13 +16,13 @@ export default function Footer() {
               Govern Smart. The Automation Strategy Authority for government and enterprise.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-signature transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-signature transition-colors">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-signature transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
             </div>
@@ -32,10 +32,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-sm opacity-90">
-              <li><Link href="/services/automation" className="hover:text-accent transition-colors">Automation Strategy</Link></li>
-              <li><Link href="/services/analytics" className="hover:text-accent transition-colors">Data Analytics</Link></li>
-              <li><Link href="/services/cloud" className="hover:text-accent transition-colors">Cloud Modernization</Link></li>
-              <li><Link href="/services/cybersecurity" className="hover:text-accent transition-colors">Cybersecurity</Link></li>
+              <li><Link href="/services/automation" className="hover:text-orange-signature transition-colors">Automation Strategy</Link></li>
+              <li><Link href="/services/analytics" className="hover:text-orange-signature transition-colors">Data Analytics</Link></li>
+              <li><Link href="/services/cloud" className="hover:text-orange-signature transition-colors">Cloud Modernization</Link></li>
+              <li><Link href="/services/cybersecurity" className="hover:text-orange-signature transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
 
@@ -43,10 +43,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Industries</h3>
             <ul className="space-y-2 text-sm opacity-90">
-              <li><Link href="/industries/federal-government" className="hover:text-accent transition-colors">Federal Government</Link></li>
-              <li><Link href="/industries/healthcare" className="hover:text-accent transition-colors">Healthcare</Link></li>
-              <li><Link href="/industries/manufacturing" className="hover:text-accent transition-colors">Manufacturing</Link></li>
-              <li><Link href="/industries/financial" className="hover:text-accent transition-colors">Financial Services</Link></li>
+              <li><Link href="/industries/federal-government" className="hover:text-orange-signature transition-colors">Federal Government</Link></li>
+              <li><Link href="/industries/healthcare" className="hover:text-orange-signature transition-colors">Healthcare</Link></li>
+              <li><Link href="/industries/manufacturing" className="hover:text-orange-signature transition-colors">Manufacturing</Link></li>
+              <li><Link href="/industries/financial" className="hover:text-orange-signature transition-colors">Financial Services</Link></li>
             </ul>
           </div>
 
@@ -54,10 +54,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2 text-sm opacity-90">
-              <li><Link href="/about" className="hover:text-accent transition-colors">About Us</Link></li>
-              <li><Link href="/insights" className="hover:text-accent transition-colors">Insights</Link></li>
-              <li><Link href="/case-studies" className="hover:text-accent transition-colors">Case Studies</Link></li>
-              <li><Link href="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
+              <li><Link href="/about" className="hover:text-orange-signature transition-colors">About Us</Link></li>
+              <li><Link href="/insights" className="hover:text-orange-signature transition-colors">Insights</Link></li>
+              <li><Link href="/case-studies" className="hover:text-orange-signature transition-colors">Case Studies</Link></li>
+              <li><Link href="/contact" className="hover:text-orange-signature transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>
@@ -141,9 +141,9 @@ export default function Footer() {
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-75">
           <p>© 2024 Thalen Technologies. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>
-            <Link href="/security" className="hover:text-accent transition-colors">Security</Link>
+            <Link href="/privacy" className="hover:text-orange-signature transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-orange-signature transition-colors">Terms of Service</Link>
+            <Link href="/security" className="hover:text-orange-signature transition-colors">Security</Link>
           </div>
         </div>
       </div>

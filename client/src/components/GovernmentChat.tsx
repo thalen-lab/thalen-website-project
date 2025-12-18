@@ -174,14 +174,14 @@ export default function GovernmentChat() {
                 <div>
                   <Label className="text-sm font-semibold mb-2 block">Agency Type *</Label>
                   <RadioGroup value={agencyType} onValueChange={(value: any) => setAgencyType(value)}>
-                    <div className="flex items-center space-x-2 p-3 border rounded-lg hover:border-accent transition-colors cursor-pointer">
+                    <div className="flex items-center space-x-2 p-3 border rounded-lg hover:border-[#FF6B35] transition-colors cursor-pointer">
                       <RadioGroupItem value="federal" id="chat-federal" />
                       <Label htmlFor="chat-federal" className="cursor-pointer flex-1">
                         <div className="font-medium">Federal Government</div>
                         <div className="text-xs text-muted-foreground">Cleared specialists available</div>
                       </Label>
                     </div>
-                    <div className="flex items-center space-x-2 p-3 border rounded-lg hover:border-accent transition-colors cursor-pointer">
+                    <div className="flex items-center space-x-2 p-3 border rounded-lg hover:border-[#FF6B35] transition-colors cursor-pointer">
                       <RadioGroupItem value="state-local" id="chat-state-local" />
                       <Label htmlFor="chat-state-local" className="cursor-pointer flex-1">
                         <div className="font-medium">State & Local Government</div>
@@ -327,7 +327,7 @@ export default function GovernmentChat() {
                     onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                     className="flex-1"
                   />
-                  <Button onClick={handleSendMessage} size="icon" className="bg-accent hover:bg-accent/90">
+                  <Button onClick={handleSendMessage} size="icon" className="bg-[#FF6B35] hover:bg-[#FF6B35]/90">
                     <Send className="h-4 w-4" />
                   </Button>
                 </div>

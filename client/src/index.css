@@ -212,6 +212,19 @@
     background-color: oklch(0.65 0.18 55);
   }
 
+  /* Signature orange hover color (#FF6B35) */
+  .hover\:text-orange-signature:hover {
+    color: #FF6B35;
+  }
+
+  .hover\:bg-orange-signature:hover {
+    background-color: #FF6B35;
+  }
+
+  .hover\:border-orange-signature:hover {
+    border-color: #FF6B35;
+  }
+
   /* Hide scrollbar for carousel */
   .scrollbar-hide {
     -ms-overflow-style: none;

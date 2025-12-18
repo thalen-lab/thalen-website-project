@@ -33,10 +33,10 @@ export default function RelatedServices({
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Link key={index} href={service.href}>
-              <Card className="border-2 hover:border-accent transition-all hover:shadow-xl cursor-pointer h-full group">
+              <Card className="border-2 hover:border-[#FF6B35] transition-all hover:shadow-xl cursor-pointer h-full group">
                 <CardContent className="p-8">
                   <service.icon className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-[#FF6B35] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground mb-4 text-sm">

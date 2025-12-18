@@ -60,7 +60,7 @@ export default function Navigation() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center space-x-1 hover:text-accent transition-colors">
+              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors">
                 <span>Services</span>
                 <ChevronDown className="h-5 w-5" />
               </button>
@@ -70,7 +70,7 @@ export default function Navigation() {
                     <Link 
                       key={service.href} 
                       href={service.href}
-                      className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                      className="block px-4 py-3 hover:bg-orange-signature/10 hover:text-orange-signature transition-colors"
                     >
                       {service.name}
                     </Link>
@@ -85,7 +85,7 @@ export default function Navigation() {
               onMouseEnter={() => setIndustriesOpen(true)}
               onMouseLeave={() => setIndustriesOpen(false)}
             >
-              <button className="flex items-center space-x-1 hover:text-accent transition-colors">
+              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors">
                 <span>Industries</span>
                 <ChevronDown className="h-5 w-5" />
               </button>
@@ -95,7 +95,7 @@ export default function Navigation() {
                     <Link 
                       key={industry.href} 
                       href={industry.href}
-                      className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                      className="block px-4 py-3 hover:bg-orange-signature/10 hover:text-orange-signature transition-colors"
                     >
                       {industry.name}
                     </Link>
@@ -110,7 +110,7 @@ export default function Navigation() {
               onMouseEnter={() => setFederalSolutionsOpen(true)}
               onMouseLeave={() => setFederalSolutionsOpen(false)}
             >
-              <button className="flex items-center space-x-1 hover:text-accent transition-colors">
+              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors">
                 <span>Federal Solutions</span>
                 <ChevronDown className="h-5 w-5" />
               </button>
@@ -120,7 +120,7 @@ export default function Navigation() {
                     <Link 
                       key={solution.href} 
                       href={solution.href}
-                      className="block px-4 py-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+                      className="block px-4 py-3 hover:bg-orange-signature/10 hover:text-orange-signature transition-colors"
                     >
                       {solution.name}
                     </Link>
@@ -129,22 +129,22 @@ export default function Navigation() {
               )}
             </div>
 
-            <Link href="/insights" className="hover:text-accent transition-colors">
+            <Link href="/insights" className="hover:text-orange-signature transition-colors">
               Insights
             </Link>
-            <Link href="/case-studies" className="hover:text-accent transition-colors">
+            <Link href="/case-studies" className="hover:text-orange-signature transition-colors">
               Case Studies
             </Link>
-            <Link href="/government-resources" className="hover:text-accent transition-colors">
+            <Link href="/government-resources" className="hover:text-orange-signature transition-colors">
               Resources
             </Link>
-            <Link href="/events" className="hover:text-accent transition-colors">
+            <Link href="/events" className="hover:text-orange-signature transition-colors">
               Events
             </Link>
-            <Link href="/about" className="hover:text-accent transition-colors">
+            <Link href="/about" className="hover:text-orange-signature transition-colors">
               About
             </Link>
-            <Link href="/contact" className="hover:text-accent transition-colors">
+            <Link href="/contact" className="hover:text-orange-signature transition-colors">
               Contact
             </Link>
             
@@ -180,7 +180,7 @@ export default function Navigation() {
                     <Link 
                       key={service.href} 
                       href={service.href}
-                      className="block py-3 min-h-[44px] text-sm hover:text-accent flex items-center"
+                      className="block py-3 min-h-[44px] text-sm hover:text-orange-signature flex items-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {service.name}
@@ -204,7 +204,7 @@ export default function Navigation() {
                     <Link 
                       key={industry.href} 
                       href={industry.href}
-                      className="block py-3 min-h-[44px] text-sm hover:text-accent flex items-center"
+                      className="block py-3 min-h-[44px] text-sm hover:text-orange-signature flex items-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {industry.name}
@@ -228,7 +228,7 @@ export default function Navigation() {
                     <Link 
                       key={solution.href} 
                       href={solution.href}
-                      className="block py-3 min-h-[44px] text-sm hover:text-accent flex items-center"
+                      className="block py-3 min-h-[44px] text-sm hover:text-orange-signature flex items-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {solution.name}
@@ -240,42 +240,42 @@ export default function Navigation() {
 
             <Link 
               href="/insights" 
-              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
+              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Insights
             </Link>
             <Link 
               href="/case-studies" 
-              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
+              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Case Studies
             </Link>
             <Link 
               href="/government-resources" 
-              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
+              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Resources
             </Link>
             <Link 
               href="/events" 
-              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
+              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Events
             </Link>
             <Link 
               href="/about" 
-              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
+              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               href="/contact" 
-              className="block py-3 min-h-[44px] font-medium hover:text-accent flex items-center"
+              className="block py-3 min-h-[44px] font-medium hover:text-orange-signature flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact

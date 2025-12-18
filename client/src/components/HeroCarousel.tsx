@@ -151,7 +151,7 @@ export default function HeroCarousel() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)] hover:from-[oklch(0.60_0.18_55)] hover:to-[oklch(0.65_0.18_55)] text-white font-semibold px-8 md:px-10 py-5 md:py-6 text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg"
+                    className="bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-gradient-to-r hover:from-[oklch(0.65_0.18_55)] hover:to-[oklch(0.70_0.18_55)] hover:border-transparent text-white font-semibold px-8 md:px-10 py-5 md:py-6 text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg"
                   >
                     <Link href={slide.cta.link}>
                       {slide.cta.text}
