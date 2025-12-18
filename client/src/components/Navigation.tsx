@@ -69,9 +69,9 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity shrink-0">
-            <span className="text-lg sm:text-xl lg:text-2xl font-bold">
-              <span className="hidden md:inline">Thalen Technologies - Govern Smart</span>
-              <span className="md:hidden">Thalen Tech</span>
+            <span className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold">
+              <span className="hidden sm:inline">Thalen Technologies - Govern Smart</span>
+              <span className="sm:hidden">Thalen Tech</span>
             </span>
           </Link>
 
