@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,12 +10,25 @@ import { prefetchImage } from '@/lib/prefetch';
 import Footer from '@/components/Footer';
 import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import PullToRefresh from '@/components/PullToRefresh';
+import { toast } from 'sonner';
 
 export default function Insights() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
+  const [lastRefreshed, setLastRefreshed] = useState<Date>(new Date());
   const itemsPerPage = 9;
+
+  // Pull-to-refresh handler
+  const handleRefresh = useCallback(async () => {
+    // Simulate fetching fresh data
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setLastRefreshed(new Date());
+    toast.success('Content refreshed', {
+      description: `Last updated: ${new Date().toLocaleTimeString()}`,
+    });
+  }, []);
 
   const insights = [
     {
@@ -154,6 +167,7 @@ export default function Insights() {
   };
 
   return (
+    <PullToRefresh onRefresh={handleRefresh}>
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
@@ -435,5 +449,6 @@ export default function Insights() {
 
       <Footer />
     </div>
+    </PullToRefresh>
   );
 }

@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import GovernmentChat from "./components/GovernmentChat";
 import LiveChat from "./components/LiveChat";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
+import { OfflineIndicator } from "./components/OfflineIndicator";
 import { NotificationBanner } from "./components/NotificationBanner";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -441,6 +442,7 @@ function App() {
           <Router />
           <GovernmentChat />
           <NotificationBanner />
+          <OfflineIndicator position="bottom" />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
