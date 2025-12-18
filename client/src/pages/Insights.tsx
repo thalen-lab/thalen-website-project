@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,10 +8,11 @@ import { useLQIP } from '@/hooks/useLQIP';
 import { usePrefetch } from '@/hooks/usePrefetch';
 import { prefetchImage } from '@/lib/prefetch';
 import Footer from '@/components/Footer';
-import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight, Hand } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import PullToRefresh from '@/components/PullToRefresh';
 import { toast } from 'sonner';
+import { triggerHaptic } from '@/lib/haptics';
 
 export default function Insights() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -19,6 +20,14 @@ export default function Insights() {
   const [currentPage, setCurrentPage] = useState(1);
   const [lastRefreshed, setLastRefreshed] = useState<Date>(new Date());
   const itemsPerPage = 9;
+
+  // Swipe gesture state for mobile navigation
+  const gridRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const [swipeDeltaX, setSwipeDeltaX] = useState(0);
+  const [isSwiping, setIsSwiping] = useState(false);
+  const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null);
 
   // Pull-to-refresh handler
   const handleRefresh = useCallback(async () => {
@@ -129,6 +138,62 @@ export default function Insights() {
   useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery, selectedCategory]);
+
+  // Swipe gesture handlers for mobile pagination
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    setIsSwiping(true);
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    
+    const currentX = e.touches[0].clientX;
+    const currentY = e.touches[0].clientY;
+    const diffX = currentX - touchStartX.current;
+    const diffY = currentY - touchStartY.current;
+    
+    // Only track horizontal swipes (ignore vertical scrolling)
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+      setSwipeDeltaX(diffX);
+      setSwipeDirection(diffX > 0 ? 'right' : 'left');
+    }
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    const threshold = 80; // Minimum swipe distance to trigger page change
+    
+    if (Math.abs(swipeDeltaX) >= threshold) {
+      if (swipeDeltaX < 0 && currentPage < totalPages) {
+        // Swipe left - go to next page
+        setCurrentPage(prev => prev + 1);
+        triggerHaptic('selection');
+        toast.success(`Page ${currentPage + 1} of ${totalPages}`, {
+          duration: 1500,
+          position: 'bottom-center',
+        });
+      } else if (swipeDeltaX > 0 && currentPage > 1) {
+        // Swipe right - go to previous page
+        setCurrentPage(prev => prev - 1);
+        triggerHaptic('selection');
+        toast.success(`Page ${currentPage - 1} of ${totalPages}`, {
+          duration: 1500,
+          position: 'bottom-center',
+        });
+      } else {
+        // At boundary - provide feedback
+        triggerHaptic('warning');
+      }
+    }
+    
+    // Reset swipe state
+    touchStartX.current = null;
+    touchStartY.current = null;
+    setSwipeDeltaX(0);
+    setIsSwiping(false);
+    setSwipeDirection(null);
+  }, [swipeDeltaX, currentPage, totalPages]);
 
   // Generate page numbers to display
   const getPageNumbers = () => {
@@ -287,10 +352,31 @@ export default function Insights() {
             </p>
           </div>
 
+          {/* Swipe hint for mobile */}
+          {totalPages > 1 && (
+            <div className="md:hidden text-center mb-6">
+              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50">
+                <ChevronLeft className="h-4 w-4" />
+                <Hand className="h-4 w-4" />
+                <span>Swipe to navigate pages</span>
+                <ChevronRight className="h-4 w-4" />
+              </div>
+            </div>
+          )}
+
           {/* Insights Grid */}
           {paginatedInsights.length > 0 ? (
             <>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              <div 
+                ref={gridRef}
+                className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 touch-pan-y transition-transform duration-200 ${isSwiping ? 'transition-none' : ''}`}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+                style={{
+                  transform: isSwiping ? `translateX(${swipeDeltaX * 0.15}px)` : 'translateX(0)',
+                  opacity: isSwiping ? 0.9 : 1,
+                }}>
                 {paginatedInsights.map((insight, index) => {
                   const InsightCard = () => {
                     const prefetchHandlers = usePrefetch(insight.href);
@@ -335,6 +421,18 @@ export default function Insights() {
                   
                   return <InsightCard key={index} />;
                 })}
+                
+                {/* Swipe direction indicator */}
+                {isSwiping && Math.abs(swipeDeltaX) > 30 && (
+                  <div className="fixed inset-x-0 top-1/2 -translate-y-1/2 pointer-events-none z-50 flex justify-between px-4 md:hidden">
+                    <div className={`p-3 rounded-full bg-accent/90 text-accent-foreground shadow-lg transition-opacity ${swipeDirection === 'right' && currentPage > 1 ? 'opacity-100' : 'opacity-0'}`}>
+                      <ChevronLeft className="h-6 w-6" />
+                    </div>
+                    <div className={`p-3 rounded-full bg-accent/90 text-accent-foreground shadow-lg transition-opacity ${swipeDirection === 'left' && currentPage < totalPages ? 'opacity-100' : 'opacity-0'}`}>
+                      <ChevronRight className="h-6 w-6" />
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Pagination Controls */}
