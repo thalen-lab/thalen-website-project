@@ -3704,3 +3704,6 @@
 - [x] Fix any typography scaling issues
 - [x] Ensure touch-friendly tap targets
 - [x] Test and verify all breakpoints
+
+## Phase 63: Fix Section Visibility Issue
+- [x] Fix visibility issue with website sections not displaying properly - Fixed HeroCarousel height issue by using inline styles instead of Tailwind arbitrary values
