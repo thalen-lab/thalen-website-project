@@ -126,7 +126,7 @@ export default function Home() {
       <WhoWeAreSection />
 
       {/* Comprehensive Technology Solutions - Clean White Section */}
-      <section className="relative py-16 md:py-24 lg:py-28 bg-white overflow-hidden">
+      <section className="relative pt-8 pb-16 md:pt-10 md:pb-24 lg:pt-12 lg:pb-28 bg-white overflow-hidden">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
             
