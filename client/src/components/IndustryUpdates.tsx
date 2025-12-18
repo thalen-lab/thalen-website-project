@@ -1,39 +1,32 @@
 import { useState, useEffect } from "react";
-import { ExternalLink, ChevronRight } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface UpdateItem {
   id: string;
-  category: "regulation" | "compliance" | "policy" | "security" | "procurement";
   title: string;
   source: string;
   sourceUrl: string;
   date: string;
-  isNew?: boolean;
 }
 
 const industryUpdates: UpdateItem[] = [
   {
     id: "1",
-    category: "regulation",
     title: "OMB M-24-18: AI Governance Requirements for Federal Agencies",
     source: "Office of Management and Budget",
     sourceUrl: "https://www.whitehouse.gov/omb/management/ofcio/",
     date: "Dec 2024",
-    isNew: true,
   },
   {
     id: "2",
-    category: "compliance",
     title: "FedRAMP Rev 5 Transition Deadline Extended to March 2025",
     source: "FedRAMP PMO",
     sourceUrl: "https://www.fedramp.gov/",
     date: "Dec 2024",
-    isNew: true,
   },
   {
     id: "3",
-    category: "security",
     title: "CISA Zero Trust Maturity Model 2.0 Implementation Guide Released",
     source: "CISA",
     sourceUrl: "https://www.cisa.gov/zero-trust-maturity-model",
@@ -41,7 +34,6 @@ const industryUpdates: UpdateItem[] = [
   },
   {
     id: "4",
-    category: "policy",
     title: "Executive Order 14110: Safe AI Development Standards Now Effective",
     source: "White House",
     sourceUrl: "https://www.whitehouse.gov/briefing-room/presidential-actions/",
@@ -49,7 +41,6 @@ const industryUpdates: UpdateItem[] = [
   },
   {
     id: "5",
-    category: "compliance",
     title: "CMMC 2.0 Final Rule Published - Phased Rollout Begins Q1 2025",
     source: "DoD CIO",
     sourceUrl: "https://dodcio.defense.gov/CMMC/",
@@ -57,7 +48,6 @@ const industryUpdates: UpdateItem[] = [
   },
   {
     id: "6",
-    category: "procurement",
     title: "GSA MAS IT Category Refresh: New SINs for AI/ML Services",
     source: "GSA",
     sourceUrl: "https://www.gsa.gov/technology/technology-purchasing-programs/mas-information-technology",
@@ -65,7 +55,6 @@ const industryUpdates: UpdateItem[] = [
   },
   {
     id: "7",
-    category: "regulation",
     title: "HIPAA Security Rule Update: Enhanced Cybersecurity Requirements",
     source: "HHS OCR",
     sourceUrl: "https://www.hhs.gov/hipaa/for-professionals/security/index.html",
@@ -73,21 +62,12 @@ const industryUpdates: UpdateItem[] = [
   },
   {
     id: "8",
-    category: "security",
     title: "NIST SP 800-53 Rev 5.1: Updated Security Controls Catalog",
     source: "NIST",
     sourceUrl: "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
     date: "Sep 2024",
   },
 ];
-
-const categoryConfig = {
-  regulation: { label: "Regulation", color: "text-white" },
-  compliance: { label: "Compliance", color: "text-white" },
-  policy: { label: "Policy", color: "text-white" },
-  security: { label: "Security", color: "text-white" },
-  procurement: { label: "Procurement", color: "text-white" },
-};
 
 export default function IndustryUpdates() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -104,81 +84,79 @@ export default function IndustryUpdates() {
 
   const activeUpdate = industryUpdates[activeIndex];
 
+  const goToPrevious = () => {
+    setActiveIndex((prev) => (prev - 1 + industryUpdates.length) % industryUpdates.length);
+  };
+
+  const goToNext = () => {
+    setActiveIndex((prev) => (prev + 1) % industryUpdates.length);
+  };
+
   return (
     <section 
       className="relative bg-primary"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-
-      <div className="container relative py-5 md:py-6">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
+      <div className="container relative py-4 md:py-5">
+        <div className="flex items-center gap-4 md:gap-6">
           {/* Label */}
-          <div className="flex items-center gap-2 px-4 py-2.5 bg-white/10 border border-white/20 rounded-full shrink-0">
-            <span className="text-sm md:text-base font-semibold text-white uppercase tracking-wider">Industry Updates</span>
+          <div className="hidden sm:flex items-center px-4 py-2 bg-white/10 border border-white/20 rounded-full shrink-0">
+            <span className="text-sm font-semibold text-white uppercase tracking-wider">Industry Updates</span>
           </div>
 
+          {/* Left Arrow */}
+          <button
+            onClick={goToPrevious}
+            className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-colors shrink-0"
+            aria-label="Previous update"
+          >
+            <ChevronLeft className="w-4 h-4 text-white" />
+          </button>
+
           {/* Main ticker content */}
-          <div className="flex-1 min-w-0 w-full">
+          <div className="flex-1 min-w-0">
             <a
               href={activeUpdate.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 hover:opacity-90 transition-opacity"
+              className="group flex items-center gap-4 hover:opacity-90 transition-opacity"
             >
-              {/* Category badge */}
-              <div className={cn(
-                "inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-white/5 border border-white/10 shrink-0",
-                categoryConfig[activeUpdate.category].color
-              )}>
-                <span>{categoryConfig[activeUpdate.category].label}</span>
-              </div>
-
               {/* Title */}
-              <div className="flex-1 min-w-0 flex items-center gap-3">
-                {activeUpdate.isNew && (
-                  <span className="shrink-0 px-2 py-1 text-xs font-bold uppercase tracking-wider bg-orange-500 text-white rounded">
-                    New
-                  </span>
-                )}
-                <span className="text-lg md:text-xl lg:text-2xl text-white font-medium leading-snug group-hover:text-orange-300 transition-colors">
-                  {activeUpdate.title}
-                </span>
-              </div>
+              <span className="flex-1 text-base md:text-lg text-white font-medium leading-snug group-hover:text-orange-300 transition-colors line-clamp-1">
+                {activeUpdate.title}
+              </span>
 
               {/* Source and date */}
-              <div className="hidden lg:flex items-center gap-4 text-sm text-white/70 shrink-0">
+              <div className="hidden lg:flex items-center gap-3 text-sm text-white/70 shrink-0">
                 <span className="flex items-center gap-1.5">
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                   {activeUpdate.source}
                 </span>
-                <span className="text-white/50">|</span>
+                <span className="text-white/40">|</span>
                 <span>{activeUpdate.date}</span>
               </div>
 
-              <ChevronRight className="hidden sm:block w-5 h-5 text-white/50 group-hover:text-orange-400 transition-colors shrink-0" />
+              <ChevronRight className="hidden md:block w-4 h-4 text-white/50 group-hover:text-orange-400 transition-colors shrink-0" />
             </a>
           </div>
 
-          {/* Navigation dots */}
-          <div className="flex items-center gap-2 shrink-0 mt-2 sm:mt-0">
-            {industryUpdates.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActiveIndex(idx)}
-                className={cn(
-                  "w-2 h-2 rounded-full transition-all duration-300",
-                  idx === activeIndex 
-                    ? "bg-orange-400 w-6" 
-                    : "bg-slate-500 hover:bg-slate-400"
-                )}
-                aria-label={`Go to update ${idx + 1}`}
-              />
-            ))}
+          {/* Right Arrow */}
+          <button
+            onClick={goToNext}
+            className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-colors shrink-0"
+            aria-label="Next update"
+          >
+            <ChevronRight className="w-4 h-4 text-white" />
+          </button>
+
+          {/* Counter indicator */}
+          <div className="hidden sm:flex items-center gap-1 text-sm text-white/60 shrink-0 tabular-nums">
+            <span className="text-white font-medium">{activeIndex + 1}</span>
+            <span>/</span>
+            <span>{industryUpdates.length}</span>
           </div>
         </div>
-
-
       </div>
     </section>
   );

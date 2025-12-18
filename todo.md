@@ -3627,3 +3627,8 @@
 - [x] Update hover states to use signature orange color (#FF6B35)
 ## Phase 73: Fix CTA Hover Effect
 - [x] Fix CTA hover effect - border should change to orange on hover, not entire card background
+
+## Phase 60: Industry Updates Ticker Improvements
+- [x] Fix inconsistent text sizes in Industry Updates ticker
+- [x] Remove tags (Regulation, NEW, etc.) from ticker
+- [x] Replace dot indicators with arrow navigation
