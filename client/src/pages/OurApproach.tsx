@@ -3,28 +3,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { 
-  ArrowRight, 
-  Search,
-  ShieldCheck,
-  Layers,
-  Award,
-  CheckCircle2,
-  Target,
-  Shield,
-  Users,
-  Building2,
-  Landmark,
-  Scale,
-  FileCheck
-} from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function OurApproach() {
   const pillars = [
     {
-      icon: Search,
       title: 'Rapid Assessment & Architecture',
       tagline: 'Comprehensive discovery and vendor-neutral design in 2 weeks',
       description: 'We begin every engagement with a comprehensive 2-week discovery phase that maps your current state, identifies compliance gaps, and designs a vendor-neutral architecture aligned with your mission objectives. Whether you are a federal agency, state department, local municipality, or regulated enterprise, our assessments are tailored to your specific regulatory environment and operational requirements.',
@@ -37,7 +21,6 @@ export default function OurApproach() {
       sectors: ['Federal', 'State', 'Local', 'Regulatory']
     },
     {
-      icon: ShieldCheck,
       title: 'Security-Native Implementation',
       tagline: 'Security and compliance embedded from day one, not bolted on',
       description: 'Security and compliance are embedded from day one—not bolted on afterward. We implement only authorized platforms appropriate for your jurisdiction: FedRAMP for federal, StateRAMP for state and local, and industry-specific frameworks for regulated sectors. Every integration follows NIST 800-53 controls, zero-trust principles, and your agency or organization-specific security requirements.',
@@ -50,7 +33,6 @@ export default function OurApproach() {
       sectors: ['Federal', 'State', 'Local', 'Regulatory']
     },
     {
-      icon: Layers,
       title: 'Vendor-Agnostic Solutions',
       tagline: 'Independent evaluation of 50+ platforms with zero vendor lock-in',
       description: 'We are not tied to any single vendor or platform. Our recommendations are based solely on your mission requirements, budget constraints, and regulatory environment. We evaluate 50+ authorized platforms across automation, analytics, cloud, and integration categories—selecting the best-fit solutions for federal agencies, state governments, local municipalities, and regulated industries alike.',
@@ -63,7 +45,6 @@ export default function OurApproach() {
       sectors: ['Federal', 'State', 'Local', 'Regulatory']
     },
     {
-      icon: Award,
       title: 'Cleared & Credentialed Team',
       tagline: 'Top Secret/SCI cleared personnel with deep public sector expertise',
       description: 'Our team includes Top Secret/SCI cleared personnel with decades of experience across federal, state, local, and regulated industry environments. We understand agency culture, procurement processes, and the unique challenges of implementing technology in sensitive environments—from classified federal systems to state health departments to local emergency services to financial institutions.',
@@ -76,13 +57,6 @@ export default function OurApproach() {
       sectors: ['Federal', 'State', 'Local', 'Regulatory']
     }
   ];
-
-  const sectorIcons = {
-    'Federal': Landmark,
-    'State': Building2,
-    'Local': Users,
-    'Regulatory': Scale
-  };
 
   const processSteps = [
     {
@@ -111,15 +85,29 @@ export default function OurApproach() {
     }
   ];
 
+  const stats = [
+    { value: '50+', label: 'Authorized Platforms Evaluated' },
+    { value: '100%', label: 'Compliance Rate' },
+    { value: '20+', label: 'Federal Agencies Served' },
+    { value: '15+', label: 'State & Local Governments' },
+    { value: '30+', label: 'Regulated Enterprises' },
+    { value: 'TS/SCI', label: 'Cleared Personnel Available' }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      {/* Hero Section - Signature Blue */}
-      <section className="relative py-24 md:py-32 bg-[oklch(0.22_0.06_250)] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.18_0.06_250)] via-[oklch(0.22_0.06_250)] to-[oklch(0.28_0.05_250)]"></div>
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/approach-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
         <div className="container relative z-10">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
@@ -134,28 +122,19 @@ export default function OurApproach() {
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
               Four strategic pillars that ensure compliant, secure, and vendor-neutral technology implementations for government at every level and regulated industries.
             </p>
-            {/* Sector badges */}
+            {/* Sector badges - text only, no icons */}
             <div className="flex flex-wrap justify-center gap-3">
-              {[
-                { label: 'Federal Government', icon: Landmark },
-                { label: 'State Government', icon: Building2 },
-                { label: 'Local Government', icon: Users },
-                { label: 'Regulated Industries', icon: Scale }
-              ].map((sector) => (
+              {['Federal Government', 'State Government', 'Local Government', 'Regulated Industries'].map((sector) => (
                 <div 
-                  key={sector.label}
+                  key={sector}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium"
                 >
-                  <sector.icon className="h-4 w-4 text-[oklch(0.75_0.15_55)]" />
-                  {sector.label}
+                  {sector}
                 </div>
               ))}
             </div>
           </motion.div>
         </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[oklch(0.97_0.01_250)] to-transparent"></div>
       </section>
 
       {/* Four Pillars Section - Clean Professional Design */}
@@ -176,7 +155,7 @@ export default function OurApproach() {
             </p>
           </motion.div>
 
-          {/* Pillars Grid - Signature Blue Design */}
+          {/* Pillars Grid - Orange border on hover, no top accent bar */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {pillars.map((pillar, index) => (
               <motion.div
@@ -187,15 +166,10 @@ export default function OurApproach() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <Card className="h-full bg-white border border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  {/* Top accent bar - Orange accent */}
-                  <div className="h-1.5 bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.70_0.18_55)]"></div>
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
                   <CardContent className="p-8 lg:p-10">
-                    {/* Icon and Title */}
+                    {/* Title */}
                     <div className="mb-6">
-                      <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[oklch(0.22_0.06_250)] mb-4 group-hover:scale-105 transition-transform duration-300">
-                        <pillar.icon className="h-7 w-7 text-white" />
-                      </div>
                       <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-2">
                         {pillar.title}
                       </h3>
@@ -209,32 +183,28 @@ export default function OurApproach() {
                       {pillar.description}
                     </p>
                     
-                    {/* Features */}
+                    {/* Features - Bullet points instead of checkmarks */}
                     <ul className="space-y-3 mb-6">
                       {pillar.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-3">
-                          <CheckCircle2 className="h-5 w-5 text-[oklch(0.65_0.18_55)] flex-shrink-0 mt-0.5" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                           <span className="text-sm text-slate-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     
-                    {/* Sector Tags */}
+                    {/* Sector Tags - text only, no icons */}
                     <div className="pt-4 border-t border-slate-100">
                       <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Serving</p>
                       <div className="flex flex-wrap gap-2">
-                        {pillar.sectors.map((sector) => {
-                          const SectorIcon = sectorIcons[sector as keyof typeof sectorIcons];
-                          return (
-                            <span 
-                              key={sector}
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[oklch(0.95_0.02_250)] text-[oklch(0.30_0.05_250)] text-xs font-medium"
-                            >
-                              <SectorIcon className="h-3.5 w-3.5" />
-                              {sector}
-                            </span>
-                          );
-                        })}
+                        {pillar.sectors.map((sector) => (
+                          <span 
+                            key={sector}
+                            className="inline-flex items-center px-3 py-1.5 rounded-full bg-[oklch(0.95_0.02_250)] text-[oklch(0.30_0.05_250)] text-xs font-medium"
+                          >
+                            {sector}
+                          </span>
+                        ))}
                       </div>
                     </div>
                   </CardContent>
@@ -245,7 +215,7 @@ export default function OurApproach() {
         </div>
       </section>
 
-      {/* Compliance Frameworks Section */}
+      {/* Compliance Frameworks Section - No icons */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container max-w-6xl">
           <motion.div 
@@ -285,9 +255,8 @@ export default function OurApproach() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="bg-[oklch(0.97_0.01_250)] border border-slate-200 rounded-lg p-4 text-center hover:border-[oklch(0.70_0.18_55)] hover:shadow-md transition-all duration-300"
+                className="bg-[oklch(0.97_0.01_250)] border-2 border-slate-200 rounded-lg p-4 text-center hover:border-[oklch(0.70_0.18_55)] hover:shadow-md transition-all duration-300"
               >
-                <FileCheck className="h-6 w-6 text-[oklch(0.65_0.18_55)] mx-auto mb-2" />
                 <p className="font-bold text-[oklch(0.20_0.05_250)] text-sm">{framework.name}</p>
                 <p className="text-xs text-slate-500">{framework.type}</p>
               </motion.div>
@@ -332,7 +301,7 @@ export default function OurApproach() {
                 >
                   {/* Content */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                    <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200">
+                    <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
                       <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                         <span className="text-4xl font-bold text-[oklch(0.35_0.10_250)]/20">{step.number}</span>
                         <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{step.title}</h3>
@@ -356,7 +325,7 @@ export default function OurApproach() {
         </div>
       </section>
 
-      {/* Why Our Approach Works Section */}
+      {/* Why Our Approach Works Section - No icons, bullet points */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -375,6 +344,7 @@ export default function OurApproach() {
                 Our approach was developed specifically for the unique challenges of government and regulated industry technology implementation. We understand the regulatory landscape, procurement processes, and security requirements that define success across federal, state, local, and enterprise environments.
               </p>
               
+              {/* Bullet points instead of checkmarks */}
               <div className="space-y-4">
                 {[
                   'Compliance-first architecture ensures authorization readiness',
@@ -383,14 +353,14 @@ export default function OurApproach() {
                   'Proven methodology reduces implementation risk across all sectors'
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-6 w-6 text-[oklch(0.65_0.18_55)] flex-shrink-0 mt-0.5" />
+                    <span className="w-2 h-2 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                     <span className="text-slate-700">{item}</span>
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Right Stats */}
+            {/* Right Stats - No icons */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -398,19 +368,9 @@ export default function OurApproach() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="grid grid-cols-2 gap-6"
             >
-              {[
-                { icon: Target, value: '50+', label: 'Authorized Platforms Evaluated' },
-                { icon: Shield, value: '100%', label: 'Compliance Rate' },
-                { icon: Landmark, value: '20+', label: 'Federal Agencies Served' },
-                { icon: Building2, value: '15+', label: 'State & Local Governments' },
-                { icon: Scale, value: '30+', label: 'Regulated Enterprises' },
-                { icon: Award, value: 'TS/SCI', label: 'Cleared Personnel Available' }
-              ].map((stat, index) => (
-                <Card key={index} className="bg-[oklch(0.97_0.01_250)] border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
+              {stats.map((stat, index) => (
+                <Card key={index} className="bg-[oklch(0.97_0.01_250)] border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
                   <CardContent className="p-6 text-center">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[oklch(0.22_0.06_250)] mb-4">
-                      <stat.icon className="h-6 w-6 text-white" />
-                    </div>
                     <div className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-1">{stat.value}</div>
                     <div className="text-sm text-slate-600">{stat.label}</div>
                   </CardContent>

@@ -3895,3 +3895,10 @@
 - [x] Add orange border on hover for news cards
 - [x] Add overview section between hero and NexDyne overview with three clickable links: Capabilities, Our Approach, Contract Vehicles (REVERTED per user request)
 - [x] Standardize blue color palette to two primary blues (deep navy + lighter accent)
+
+## Phase 57: Our Approach Page Design Updates
+- [x] Add hero image to Our Approach page
+- [x] Remove fade-in gradient between hero and next section
+- [x] Remove orange lines from top of cards - add orange border on hover instead
+- [x] Replace all checkmarks with bullet points
+- [x] Remove all icons from the page
