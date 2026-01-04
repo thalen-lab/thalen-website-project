@@ -460,7 +460,7 @@ export default function Home() {
               {
                 title: 'Federal Government',
                 description: 'Supporting federal agencies with FedRAMP-authorized solutions, cleared personnel, and mission-critical technology implementations.',
-                image: '/federal-government.jpg',
+                image: '/federal-handshake.png',
                 link: '/industries/federal'
               },
               {
@@ -484,7 +484,7 @@ export default function Home() {
             ].map((category, index) => (
               <motion.div
                 key={category.title}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100"
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { 
@@ -515,13 +515,13 @@ export default function Home() {
                 </div>
                 
                 {/* Content */}
-                <div className="p-5 sm:p-6">
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
+                <div className="p-4 sm:p-5 flex flex-col flex-grow">
+                  <p className="text-sm text-slate-600 leading-relaxed flex-grow">
                     {category.description}
                   </p>
                   <Link 
                     href={category.link}
-                    className="inline-flex items-center text-[#E07020] font-semibold text-sm hover:text-[#D06010] transition-colors group/link"
+                    className="inline-flex items-center text-[#E07020] font-semibold text-sm hover:text-[#D06010] transition-colors group/link mt-3"
                   >
                     Learn More
                     <ArrowRight className="ml-1.5 w-4 h-4 transition-transform group-hover/link:translate-x-1" />

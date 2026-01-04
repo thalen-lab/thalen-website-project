@@ -126,8 +126,8 @@ export default function WhoWeAreSection() {
               <div className="relative overflow-hidden rounded-sm shadow-xl">
                 <div className="aspect-[4/3] w-full">
                   <ImageWithLoader
-                    src="/images/who-we-are-capitol.png"
-                    alt="U.S. Capitol building representing NexDyne's federal government partnership"
+                    src="/about-hero.jpg"
+                    alt="Federal government technology operations center showcasing NexDyne's mission-critical solutions"
                     className="w-full h-full object-cover"
                   />
                 </div>
