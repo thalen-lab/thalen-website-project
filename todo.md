@@ -3988,3 +3988,8 @@
 - No accent bars on cards
 - Orange accent color for labels and highlights
 - Consistent typography and spacing
+
+## Phase 140: Apply Enhanced Design to Automation Subpages
+- [x] Apply enhanced design to Government RPA Implementation subpage (/services/automation/rpa)
+- [x] Apply enhanced design to Enterprise Integration Platform subpage (/services/automation/integration)
+- [x] Apply enhanced design to Process Orchestration subpage (/services/automation/orchestration)

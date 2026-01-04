@@ -3,35 +3,32 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Bot, FileCheck, Shield, GraduationCap, CheckCircle2 } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function RPA() {
   // Primary service offerings (4 core capabilities)
   const primaryServices = [
     {
-      icon: FileCheck,
       title: 'Process Assessment & Discovery',
       description: 'We identify high-value automation opportunities through comprehensive process analysis, ROI modeling, and feasibility assessment for government agencies (federal, state, and local).',
       benefits: ['Process discovery workshops', 'Automation ROI analysis', 'Feasibility assessment'],
       link: '/services/automation/rpa/process-assessment'
     },
     {
-      icon: Bot,
       title: 'RPA Platform Selection & Implementation',
       description: 'Vendor-neutral selection and implementation of FedRAMP-authorized RPA platforms (UiPath Gov, Automation Anywhere Gov, Blue Prism Gov) tailored to your mission.',
       benefits: ['FedRAMP platform selection', 'Bot development & deployment', 'System integration'],
       link: '/services/automation/rpa/platform-implementation'
     },
     {
-      icon: Shield,
       title: 'ATO & Compliance Documentation',
       description: 'Complete security controls documentation, FedRAMP/FISMA compliance packages, and ATO support for RPA deployments in government environments.',
       benefits: ['Security controls documentation', 'FedRAMP compliance packages', 'ATO support'],
       link: '/services/automation/rpa/ato-compliance'
     },
     {
-      icon: GraduationCap,
       title: 'RPA Center of Excellence (CoE) Setup',
       description: 'Establish governance frameworks, development standards, training programs, and ongoing support for sustainable enterprise RPA programs.',
       benefits: ['Governance frameworks', 'Developer training programs', 'Best practices & standards'],
@@ -47,36 +44,80 @@ export default function RPA() {
     { name: 'Hyperautomation Strategy', description: 'Combine RPA with AI/ML, OCR, and workflow orchestration for end-to-end automation' }
   ];
 
+  const caseStudies = [
+    {
+      category: 'Federal Government',
+      title: 'Federal Agency Achieves 85% Process Automation',
+      description: 'Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
+      attribution: 'Led by [Team Member Name] at [Previous Agency/Organization]',
+      tags: ['RPA', 'FedRAMP', 'CMMC'],
+      link: '/case-studies/federal-agency-automation'
+    },
+    {
+      category: 'Defense',
+      title: 'DoD Manufacturing Facility Achieves 99.2% Uptime',
+      description: 'Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.',
+      attribution: 'Led by [Team Member Name] at [Previous Agency/Organization]',
+      tags: ['Cybersecurity', 'IoT', 'CMMC'],
+      link: '/case-studies/dod-manufacturing-uptime'
+    },
+    {
+      category: 'Federal Government',
+      title: 'VA Medical Center Integrates 12 Legacy Systems',
+      description: 'Integrated 12 disparate healthcare systems using FedRAMP iPaaS platform. Reduced administrative burden by 60% for 8,500 staff members.',
+      attribution: 'Led by [Team Member Name] at [Previous Agency/Organization]',
+      tags: ['Integration', 'HIPAA', 'FedRAMP'],
+      link: '/case-studies/va-medical-integration'
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <motion.div 
-            className="max-w-4xl"
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/rpa-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Intelligent Automation', href: '/services/automation' },
+                { label: 'Government RPA Implementation' }
+              ]} 
+              variant="light" 
+            />
+          </div>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="max-w-4xl"
           >
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
-              Implementation Services
-            </div>
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Implementation Services</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Government RPA Implementation
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
               We help government agencies (federal, state, and local) implement FedRAMP and StateRAMP-authorized RPA platforms with process discovery, bot development, ATO documentation, and Center of Excellence setup. Vendor-neutral consulting with proven expertise across all major RPA platforms.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Request RPA Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                 <Link href="/case-studies">
                   View Success Stories
                 </Link>
@@ -87,56 +128,51 @@ export default function RPA() {
       </section>
 
       {/* Primary RPA Services */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <motion.div 
-            className="text-center mb-16"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center mb-12"
           >
-            <p className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Core Capabilities</p>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Capabilities</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Core RPA Implementation Services
             </h2>
-            <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               End-to-end RPA capabilities from process discovery to Center of Excellence, designed for government agencies (federal, state, and local) requiring FedRAMP and StateRAMP compliance and mission-critical reliability.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {primaryServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link href={service.link} className="block group h-full">
-                  <Card className="h-full border border-white/10 hover:border-accent bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
-                    <CardContent className="p-8">
-                      <div className="mb-6">
-                        <service.icon className="h-12 w-12 text-accent" />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4 text-white">
+                  <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3 group-hover:text-[oklch(0.65_0.18_55)] transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-base text-white/80 leading-relaxed mb-6">
+                      <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                         {service.description}
                       </p>
-
-                      <ul className="space-y-3 mb-8">
+                      <ul className="space-y-2 mb-4">
                         {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-start text-sm text-white/80">
-                            <ArrowRight className="h-4 w-4 text-accent mt-0.5 mr-3 flex-shrink-0" />
-                            <span>{benefit}</span>
+                          <li key={idx} className="flex items-start gap-3">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                            <span className="text-sm text-slate-700">{benefit}</span>
                           </li>
                         ))}
                       </ul>
-
-                      <div className="flex items-center text-accent text-sm font-semibold group-hover:gap-3 gap-2 transition-all">
+                      <div className="flex items-center text-[oklch(0.65_0.18_55)] text-sm font-semibold group-hover:gap-3 gap-2 transition-all">
                         Learn More <ArrowRight className="h-4 w-4" />
                       </div>
                     </CardContent>
@@ -145,114 +181,191 @@ export default function RPA() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Additional Capabilities */}
-          <motion.div 
-            className="mt-16"
+      {/* Additional Capabilities */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+        <div className="container">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center mb-12"
           >
-            <h3 className="text-2xl font-bold mb-8 text-center text-white">Additional RPA Capabilities</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
-                  <ArrowRight className="h-4 w-4 text-accent mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold mb-1 text-white">{capability.name}</h4>
-                    <p className="text-sm text-white/70">{capability.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Extended Services</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Additional RPA Capabilities</h2>
           </motion.div>
-        </div>
-      </section>
 
-      {/* FAR Compliance for RPA Services */}
-      <section className="py-16 bg-slate-50">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-navy-900 mb-3">Government Contracting Compliance</h2>
-              <p className="text-lg text-slate-700 max-w-2xl mx-auto">
-                Our RPA implementations comply with Federal Acquisition Regulation requirements for IT services.
-              </p>
-            </div>
-
-            <Card className="border-2 border-accent/20">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                      FAR Part 39 Compliance
-                    </h3>
-                    <p className="text-sm text-slate-700 mb-4">
-                      RPA implementations comply with FAR Part 39 (Acquisition of Information Technology) requirements governing IT professional services and cloud solutions.
-                    </p>
-                    <ul className="space-y-2 text-sm text-slate-700">
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span><strong>FAR 52.239-1:</strong> Privacy and security safeguards for RPA platforms</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span><strong>FAR 52.204-21:</strong> Basic safeguarding of contractor information systems</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-navy-900 mb-3 flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                      Procurement Benefits
-                    </h3>
-                    <p className="text-sm text-slate-700 mb-4">
-                      Pre-established compliance frameworks enable faster contract execution and reduced oversight requirements for agency procurement officers.
-                    </p>
-                    <ul className="space-y-2 text-sm text-slate-700">
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>Streamlined task order awards under GSA Schedule contracts</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
-                        <span>Documented compliance reduces agency oversight burden</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {additionalCapabilities.map((capability, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <h4 className="font-semibold text-[oklch(0.20_0.05_250)] mb-2">{capability.name}</h4>
+                  <p className="text-sm text-slate-600">{capability.description}</p>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      {/* FAR Compliance for RPA Services */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Government Contracting Compliance</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Our RPA implementations comply with Federal Acquisition Regulation requirements for IT services.
+            </p>
+          </motion.div>
+
+          <Card className="p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-all duration-300">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-4">
+                  FAR Part 39 Compliance
+                </h3>
+                <p className="text-sm text-slate-600 mb-4">
+                  RPA implementations comply with FAR Part 39 (Acquisition of Information Technology) requirements governing IT professional services and cloud solutions.
+                </p>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                    <span><strong>FAR 52.239-1:</strong> Privacy and security safeguards for RPA platforms</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                    <span><strong>FAR 52.204-21:</strong> Basic safeguarding of contractor information systems</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-4">
+                  Procurement Benefits
+                </h3>
+                <p className="text-sm text-slate-600 mb-4">
+                  Pre-established compliance frameworks enable faster contract execution and reduced oversight requirements for agency procurement officers.
+                </p>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                    <span>Streamlined task order awards under GSA Schedule contracts</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                    <span>Documented compliance reduces agency oversight burden</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* Team Experience Section */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Expertise</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Our Team's Experience
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Our team members have delivered RPA solutions at leading government agencies. These projects were completed during their tenure at previous organizations.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {caseStudies.map((study, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Link href={study.link} className="block h-full group">
+                  <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-slate-400 text-sm font-medium">Project Image</div>
+                      </div>
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-block px-3 py-1 bg-[oklch(0.65_0.18_55)] text-white text-xs font-semibold rounded-full">
+                          {study.category}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3 group-hover:text-[oklch(0.65_0.18_55)] transition-colors">
+                        {study.title}
+                      </h3>
+                      <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                        {study.description}
+                      </p>
+                      <p className="text-xs text-slate-500 mb-4 italic">
+                        {study.attribution}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {study.tags.map((tag, idx) => (
+                          <span key={idx} className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </Card>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Automate Your Government Operations?
             </h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-8">
               Schedule an RPA assessment to discuss your agency's automation opportunities, evaluate FedRAMP platform options, and develop a roadmap for mission-critical automation.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Schedule Free Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                 <Link href="/case-studies">
                   View Success Stories
                 </Link>
