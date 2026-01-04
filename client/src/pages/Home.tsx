@@ -127,15 +127,31 @@ export default function Home() {
       {/* Who We Are Section - Enhanced with Signature Blue */}
       <WhoWeAreSection />
 
-      {/* Mission-Focused Solutions Section - Dark Navy with Cards */}
-      <section className="relative py-20 sm:py-24 md:py-32 lg:py-40 xl:py-48 bg-[#0A2540] overflow-hidden">
-        {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+      {/* Mission-Focused Solutions Section - Premium GovTech Design */}
+      <section className="relative py-20 sm:py-24 md:py-32 lg:py-40 xl:py-48 bg-[#0a0f1a] overflow-hidden">
+        {/* Multi-layer gradient background for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1a] via-[#0d1526] to-[#111c32]"></div>
+        
+        {/* Animated grid pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `linear-gradient(rgba(6, 182, 212, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 182, 212, 0.3) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}></div>
+        
+        {/* Radial glow effects */}
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#E07020]/5 rounded-full blur-[100px]"></div>
+        
+        {/* Floating particles effect */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/5 w-1 h-1 bg-cyan-400/40 rounded-full animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-[#E07020]/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-cyan-400/30 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-2/3 right-1/3 w-1 h-1 bg-cyan-400/40 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        </div>
         
         <div className="container relative z-10">
-          {/* Header Section */}
+          {/* Header Section with enhanced typography */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-12 mb-12 md:mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -144,29 +160,36 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="max-w-2xl"
             >
+              {/* Section label */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-px w-8 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                <span className="text-cyan-400 text-xs font-semibold tracking-[0.2em] uppercase">Capabilities</span>
+              </div>
+              
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white mb-4 md:mb-6 leading-[1.1] tracking-tight uppercase">
-                Mission-Focused<br />Solutions
+                Mission-Focused<br />
+                <span className="bg-gradient-to-r from-white via-white to-cyan-200 bg-clip-text text-transparent">Solutions</span>
               </h2>
-              <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed">
+              <p className="text-base md:text-lg lg:text-xl text-slate-400 leading-relaxed">
                 We don't just implement technology; we solve mission-critical challenges. Our solutions are purpose-built for the unique constraints and requirements of the public sector.
               </p>
             </motion.div>
             
-            {/* View All Capabilities Link */}
+            {/* View All Capabilities Link - Enhanced */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Link href="/services" className="group inline-flex items-center gap-2 text-[#E07020] hover:text-[#F08030] font-semibold tracking-wider text-sm uppercase transition-colors">
+              <Link href="/services" className="group inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-cyan-500/30 bg-cyan-500/5 hover:bg-cyan-500/10 hover:border-cyan-400/50 text-cyan-400 font-semibold tracking-wider text-sm uppercase transition-all duration-300">
                 View All Capabilities
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
           </div>
 
-          {/* Service Cards Grid */}
+          {/* Service Cards Grid - Premium glassmorphism design */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Card 1: Citizen Services Modernization */}
             <motion.div
@@ -175,36 +198,55 @@ export default function Home() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020]/40 transition-all duration-300 overflow-hidden">
-                <CardContent className="p-6 md:p-8 h-full flex flex-col">
+              <Card className="group relative h-full bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-cyan-500/40 transition-all duration-500 overflow-hidden rounded-2xl">
+                {/* Top accent line */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <CardContent className="relative p-6 md:p-8 h-full flex flex-col">
                   {/* Icon and Badge Row */}
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-[#E07020]/10 flex items-center justify-center">
-                      <Layers className="w-6 h-6 text-[#E07020]" />
+                    <div className="relative">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-600/10 flex items-center justify-center border border-cyan-500/20 group-hover:border-cyan-400/40 transition-colors duration-300">
+                        <Layers className="w-7 h-7 text-cyan-400" />
+                      </div>
+                      {/* Icon glow */}
+                      <div className="absolute inset-0 w-14 h-14 rounded-xl bg-cyan-400/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
                     </div>
-                    {/* Decorative Badge */}
-                    <div className="w-16 h-16 opacity-20">
+                    {/* Decorative Badge - Enhanced */}
+                    <div className="w-16 h-16 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
                       <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="28" stroke="#E07020" strokeWidth="2" strokeDasharray="4 4" />
-                        <circle cx="32" cy="32" r="20" stroke="#E07020" strokeWidth="1.5" />
-                        <path d="M32 16v32M16 32h32" stroke="#E07020" strokeWidth="1" />
+                        <circle cx="32" cy="32" r="28" stroke="url(#grad1)" strokeWidth="2" strokeDasharray="4 4" />
+                        <circle cx="32" cy="32" r="20" stroke="#06b6d4" strokeWidth="1.5" />
+                        <path d="M32 16v32M16 32h32" stroke="#06b6d4" strokeWidth="1" />
+                        <defs>
+                          <linearGradient id="grad1" x1="0" y1="0" x2="64" y2="64">
+                            <stop offset="0%" stopColor="#06b6d4" />
+                            <stop offset="100%" stopColor="#E07020" />
+                          </linearGradient>
+                        </defs>
                       </svg>
                     </div>
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wide group-hover:text-cyan-50 transition-colors duration-300">
                     Citizen Services<br />Modernization
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-white/70 text-sm md:text-base leading-relaxed mb-6 flex-grow">
+                  <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-6 flex-grow group-hover:text-slate-300 transition-colors duration-300">
                     Transforming how agencies interact with the public through accessible, secure, and efficient digital platforms.
                   </p>
                   
-                  {/* Explore Link */}
-                  <Link href="/services/digital-transformation" className="group/link inline-flex items-center gap-2 text-[#E07020] hover:text-[#F08030] font-semibold text-sm uppercase tracking-wider transition-colors">
-                    Explore
+                  {/* Explore Link - Enhanced */}
+                  <Link href="/services/digital-transformation" className="group/link inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm uppercase tracking-wider transition-colors">
+                    <span className="relative">
+                      Explore
+                      <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-cyan-400 group-hover/link:w-full transition-all duration-300"></span>
+                    </span>
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </CardContent>
@@ -218,15 +260,25 @@ export default function Home() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020]/40 transition-all duration-300 overflow-hidden">
-                <CardContent className="p-6 md:p-8 h-full flex flex-col">
+              <Card className="group relative h-full bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#E07020]/40 transition-all duration-500 overflow-hidden rounded-2xl">
+                {/* Top accent line */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#E07020] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#E07020]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <CardContent className="relative p-6 md:p-8 h-full flex flex-col">
                   {/* Icon and Badge Row */}
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-[#E07020]/10 flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-[#E07020]" />
+                    <div className="relative">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#E07020]/20 to-[#E07020]/10 flex items-center justify-center border border-[#E07020]/20 group-hover:border-[#E07020]/40 transition-colors duration-300">
+                        <Shield className="w-7 h-7 text-[#E07020]" />
+                      </div>
+                      {/* Icon glow */}
+                      <div className="absolute inset-0 w-14 h-14 rounded-xl bg-[#E07020]/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
                     </div>
                     {/* Decorative Badge */}
-                    <div className="w-16 h-16 opacity-20">
+                    <div className="w-16 h-16 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
                       <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M32 8L52 18v16c0 12-8.5 22-20 26-11.5-4-20-14-20-26V18L32 8z" stroke="#E07020" strokeWidth="2" />
                         <path d="M32 16L44 22v10c0 8-5.5 14.5-12 17-6.5-2.5-12-9-12-17V22L32 16z" stroke="#E07020" strokeWidth="1.5" strokeDasharray="3 3" />
@@ -235,18 +287,21 @@ export default function Home() {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wide group-hover:text-orange-50 transition-colors duration-300">
                     Mission-Critical<br />Security
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-white/70 text-sm md:text-base leading-relaxed mb-6 flex-grow">
+                  <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-6 flex-grow group-hover:text-slate-300 transition-colors duration-300">
                     Protecting sensitive government data and operations with Zero Trust architectures and advanced threat detection.
                   </p>
                   
                   {/* Explore Link */}
                   <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-2 text-[#E07020] hover:text-[#F08030] font-semibold text-sm uppercase tracking-wider transition-colors">
-                    Explore
+                    <span className="relative">
+                      Explore
+                      <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-[#E07020] group-hover/link:w-full transition-all duration-300"></span>
+                    </span>
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </CardContent>
@@ -260,37 +315,50 @@ export default function Home() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020]/40 transition-all duration-300 overflow-hidden">
-                <CardContent className="p-6 md:p-8 h-full flex flex-col">
+              <Card className="group relative h-full bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-emerald-500/40 transition-all duration-500 overflow-hidden rounded-2xl">
+                {/* Top accent line */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-emerald-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <CardContent className="relative p-6 md:p-8 h-full flex flex-col">
                   {/* Icon and Badge Row */}
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-[#E07020]/10 flex items-center justify-center">
-                      <Lock className="w-6 h-6 text-[#E07020]" />
+                    <div className="relative">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center border border-emerald-500/20 group-hover:border-emerald-400/40 transition-colors duration-300">
+                        <Lock className="w-7 h-7 text-emerald-400" />
+                      </div>
+                      {/* Icon glow */}
+                      <div className="absolute inset-0 w-14 h-14 rounded-xl bg-emerald-400/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
                     </div>
                     {/* Decorative Badge */}
-                    <div className="w-16 h-16 opacity-20">
+                    <div className="w-16 h-16 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
                       <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="12" y="24" width="40" height="32" rx="4" stroke="#E07020" strokeWidth="2" />
-                        <path d="M22 24V16a10 10 0 0 1 20 0v8" stroke="#E07020" strokeWidth="2" />
-                        <circle cx="32" cy="40" r="4" stroke="#E07020" strokeWidth="1.5" />
-                        <path d="M32 44v6" stroke="#E07020" strokeWidth="1.5" />
+                        <rect x="12" y="24" width="40" height="32" rx="4" stroke="#10b981" strokeWidth="2" />
+                        <path d="M22 24V16a10 10 0 0 1 20 0v8" stroke="#10b981" strokeWidth="2" />
+                        <circle cx="32" cy="40" r="4" stroke="#10b981" strokeWidth="1.5" />
+                        <path d="M32 44v6" stroke="#10b981" strokeWidth="1.5" />
                       </svg>
                     </div>
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wide group-hover:text-emerald-50 transition-colors duration-300">
                     Regulatory<br />Compliance
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-white/70 text-sm md:text-base leading-relaxed mb-6 flex-grow">
+                  <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-6 flex-grow group-hover:text-slate-300 transition-colors duration-300">
                     Navigating complex frameworks like FedRAMP, CMMC, and FISMA to ensure continuous authorization to operate.
                   </p>
                   
                   {/* Explore Link */}
-                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-2 text-[#E07020] hover:text-[#F08030] font-semibold text-sm uppercase tracking-wider transition-colors">
-                    Explore
+                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold text-sm uppercase tracking-wider transition-colors">
+                    <span className="relative">
+                      Explore
+                      <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-emerald-400 group-hover/link:w-full transition-all duration-300"></span>
+                    </span>
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </CardContent>
@@ -299,9 +367,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Background decorative elements */}
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#E07020]/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-[#E07020]/3 rounded-full blur-3xl" />
+        {/* Corner accent lines */}
+        <div className="absolute top-0 left-0 w-32 h-32 pointer-events-none">
+          <div className="absolute top-8 left-0 w-16 h-px bg-gradient-to-r from-cyan-500/50 to-transparent"></div>
+          <div className="absolute top-0 left-8 w-px h-16 bg-gradient-to-b from-cyan-500/50 to-transparent"></div>
+        </div>
+        <div className="absolute bottom-0 right-0 w-32 h-32 pointer-events-none">
+          <div className="absolute bottom-8 right-0 w-16 h-px bg-gradient-to-l from-[#E07020]/50 to-transparent"></div>
+          <div className="absolute bottom-0 right-8 w-px h-16 bg-gradient-to-t from-[#E07020]/50 to-transparent"></div>
+        </div>
       </section>
 
       {/* Our Approach & Core Capabilities Section - Clean Professional Design */}
