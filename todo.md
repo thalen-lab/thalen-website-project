@@ -3827,3 +3827,8 @@
 - [x] Add subtitle text under main titles in hero banner
 - [x] Keep clean Tygart-style design with subtitles
 - [x] Test hero section with subtitles
+## Phase 110: Update Typography to Bold Non-Italic Fonts
+- [x] Change title fonts from italic to strong bold fonts like Tygart Technology
+- [x] Update font family in CSS to use bold display fonts
+- [x] Test typography changes across all pages
+- [x] Change to clean sans-serif font like Tygart (not condensed Oswald)

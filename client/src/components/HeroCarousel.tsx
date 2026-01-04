@@ -84,8 +84,7 @@ export default function HeroCarousel() {
           <div className="container py-5 sm:py-6 md:py-8">
             {/* Main Title */}
             <h1 
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white tracking-wide italic mb-2 sm:mb-3"
-              style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide mb-2 sm:mb-3"
             >
               {slides[currentSlide].title}
             </h1>

@@ -5,6 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-family-display: 'Inter', system-ui, sans-serif;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -129,6 +131,13 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  /* Display font for headings - Clean sans-serif like Tygart */
+  h1, h2, h3, .font-display {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 600;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
