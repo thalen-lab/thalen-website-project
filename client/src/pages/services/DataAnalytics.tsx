@@ -130,7 +130,7 @@ export default function DataAnalytics() {
               Data Analytics & Intelligence
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Thalen Technologies delivers analytics through a dual approach: first, we optimize your existing data infrastructure and analytics capabilities—then implement FedRAMP-authorized BI platforms (Tableau Gov, Power BI Gov) when compliance requires it or new analytical capabilities are needed. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
+              NexDyne Technology delivers analytics through a dual approach: first, we optimize your existing data infrastructure and analytics capabilities—then implement FedRAMP-authorized BI platforms (Tableau Gov, Power BI Gov) when compliance requires it or new analytical capabilities are needed. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

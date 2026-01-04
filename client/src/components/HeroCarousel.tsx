@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { Shield, Award, Clock } from "lucide-react";
 
 interface CarouselSlide {
   id: number;
@@ -17,9 +18,9 @@ const slides: CarouselSlide[] = [
   {
     id: 1,
     image: "/hero-government.jpg",
-    title: "Government Technology Implementation Services",
+    title: "Powering Government Mission Success",
     subtitle:
-      "We deliver end-to-end technology solutions that modernize government operations, enhance security, and improve citizen services through proven implementation expertise",
+      "For 25 years, we have partnered with federal, state, and local agencies to modernize critical systems, secure sensitive data, and deliver superior citizen services. Our deep government expertise ensures your mission always comes first.",
     cta: {
       text: "Explore Government Solutions",
       link: "/industries/federal-government",
@@ -28,9 +29,9 @@ const slides: CarouselSlide[] = [
   {
     id: 2,
     image: "/hero-fedramp.jpg",
-    title: "FedRAMP Authorization & Cloud Security",
+    title: "Mission-First, Compliance-Assured",
     subtitle:
-      "Accelerate your path to FedRAMP authorization with our proven methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months, opening doors to billions in federal opportunities",
+      "Accelerate your path to FedRAMP authorization with our battle-tested methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months, opening doors to billions in federal opportunities.",
     cta: {
       text: "Learn About FedRAMP Services",
       link: "/federal-solutions/fedramp",
@@ -39,9 +40,9 @@ const slides: CarouselSlide[] = [
   {
     id: 3,
     image: "/hero-cybersecurity.jpg",
-    title: "CMMC Compliance for Defense Contractors",
+    title: "Defending the Nation's Digital Infrastructure",
     subtitle:
-      "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements with 100% first-time pass rate",
+      "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements with 100% first-time pass rate—mission success guaranteed.",
     cta: {
       text: "Explore CMMC Services",
       link: "/federal-solutions/cmmc",
@@ -50,9 +51,9 @@ const slides: CarouselSlide[] = [
   {
     id: 4,
     image: "/hero-datacenter.jpg",
-    title: "Government Cloud Migration Excellence",
+    title: "Secure Cloud Migration for Government",
     subtitle:
-      "Modernize your infrastructure with secure migration to AWS GovCloud, Azure Government, or Google Cloud for Government. We've migrated 2,500+ applications with 99.99% uptime and 42% average TCO reduction",
+      "Modernize your infrastructure with secure migration to AWS GovCloud, Azure Government, or Google Cloud for Government. We've migrated 2,500+ applications with 99.99% uptime and 42% average TCO reduction.",
     cta: {
       text: "Start Your Cloud Journey",
       link: "/federal-solutions/cloud-migration",
@@ -61,23 +62,23 @@ const slides: CarouselSlide[] = [
   {
     id: 5,
     image: "/hero-financial.jpg",
-    title: "Commercial Financial Services & Healthcare",
+    title: "Government-Grade Solutions for Regulated Industries",
     subtitle:
-      "Empowering financial institutions and healthcare organizations with secure, compliant technology solutions that drive operational excellence and enhance customer experiences",
+      "We apply the same rigorous standards of security and compliance demanded by our government partners to solve challenges for regulated industries like healthcare and finance.",
     cta: {
-      text: "View Commercial Solutions",
+      text: "View Regulated Industry Solutions",
       link: "/industries/financial-services",
     },
   },
   {
     id: 6,
     image: "/hero-infrastructure.jpg",
-    title: "Critical Infrastructure & Regulated Industries",
+    title: "Protecting Critical Infrastructure",
     subtitle:
-      "Protecting and modernizing critical infrastructure with enterprise-grade security, resilience, and compliance frameworks for energy, manufacturing, and regulated sectors",
+      "Safeguarding and modernizing the nation's critical infrastructure with enterprise-grade security, resilience, and compliance frameworks battle-tested in government environments.",
     cta: {
       text: "Discover Infrastructure Solutions",
-      link: "/industries/manufacturing-energy",
+      link: "/industries/manufacturing",
     },
   },
 ];
@@ -88,13 +89,13 @@ export default function HeroCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000); // Auto-advance every 6 seconds for better readability
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full h-[380px] sm:h-[420px] md:h-[520px] lg:h-[580px] xl:h-[620px] overflow-hidden bg-[oklch(0.15_0.04_250)] shrink-0">
+    <div className="relative w-full h-[420px] sm:h-[480px] md:h-[560px] lg:h-[640px] xl:h-[700px] overflow-hidden bg-[oklch(0.12_0.04_250)] shrink-0">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -110,11 +111,11 @@ export default function HeroCarousel() {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            {/* Multi-layer gradient overlay for depth and readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.12_0.04_250)]/95 via-[oklch(0.15_0.04_250)]/80 to-[oklch(0.20_0.04_250)]/60" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.04_250)]/70 via-transparent to-[oklch(0.12_0.04_250)]/30" />
+            {/* Multi-layer gradient overlay for depth - darker for sophisticated look */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.08_0.04_250)]/98 via-[oklch(0.10_0.04_250)]/90 to-[oklch(0.15_0.04_250)]/70" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.08_0.04_250)]/80 via-transparent to-[oklch(0.08_0.04_250)]/40" />
             {/* Subtle texture overlay */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_oklch(0.10_0.04_250)/20_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_oklch(0.06_0.04_250)/30_100%)]" />
           </div>
 
           {/* Content */}
@@ -128,12 +129,22 @@ export default function HeroCarousel() {
                 }`}
                 style={{ transitionDelay: index === currentSlide ? "200ms" : "0ms" }}
               >
+                {/* 25 Years Badge - Only on first slide */}
+                {index === 0 && (
+                  <div className="inline-flex items-center gap-2 bg-[oklch(0.65_0.18_55)]/20 border border-[oklch(0.65_0.18_55)]/40 rounded-full px-4 py-2 mb-6">
+                    <Award className="w-4 h-4 text-[oklch(0.75_0.15_55)]" />
+                    <span className="text-[oklch(0.75_0.15_55)] font-semibold text-sm tracking-wide">
+                      25 Years of Federal Government Service
+                    </span>
+                  </div>
+                )}
+                
                 {/* Accent line */}
                 <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.75_0.15_55)] mb-4 sm:mb-6 rounded-full" />
                 
                 {/* Tagline */}
                 <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-[0.2em] text-xs md:text-sm">
-                  Intelligence, Delivered
+                  Powering Government Mission Success
                 </p>
                 
                 {/* Title */}
@@ -151,7 +162,7 @@ export default function HeroCarousel() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:border-[oklch(0.65_0.18_55)] hover:bg-white/15 text-white font-semibold px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg min-h-[48px] w-full sm:w-auto"
+                    className="bg-[oklch(0.65_0.18_55)] hover:bg-[oklch(0.55_0.20_55)] text-white font-semibold px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg min-h-[48px] w-full sm:w-auto border-0"
                   >
                     <Link href={slide.cta.link}>
                       {slide.cta.text}
@@ -164,7 +175,29 @@ export default function HeroCarousel() {
         </div>
       ))}
 
-      {/* Subtle progress indicator at bottom - minimal and professional */}
+      {/* Trust Indicators Bar - Bottom of Hero */}
+      <div className="absolute bottom-12 left-0 right-0 z-20">
+        <div className="container">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 md:gap-8 text-white/70 text-sm">
+            <div className="flex items-center gap-2">
+              <Shield className="w-4 h-4 text-[oklch(0.65_0.18_55)]" />
+              <span>FedRAMP Authorized</span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-white/20" />
+            <div className="flex items-center gap-2">
+              <Shield className="w-4 h-4 text-[oklch(0.65_0.18_55)]" />
+              <span>CMMC Certified</span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-white/20" />
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4 text-[oklch(0.65_0.18_55)]" />
+              <span>25+ Years Federal Service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Subtle progress indicator at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-20">
         <div 
           className="h-full bg-gradient-to-r from-[oklch(0.65_0.18_55)] to-[oklch(0.75_0.15_55)] transition-all duration-300 ease-linear"

@@ -114,7 +114,7 @@ export default function Cloud() {
               Cloud Infrastructure & Modernization
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Thalen Technologies delivers cloud transformation through a dual approach: first, we modernize your on-premises infrastructure with hybrid architectures and legacy system optimization—then migrate to FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it or compliance requires it. Zero-downtime migrations with full ATO support.
+              NexDyne Technology delivers cloud transformation through a dual approach: first, we modernize your on-premises infrastructure with hybrid architectures and legacy system optimization—then migrate to FedRAMP cloud platforms (AWS GovCloud, Azure Gov) when mission demands it or compliance requires it. Zero-downtime migrations with full ATO support.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

@@ -26,7 +26,7 @@ export default function SEO({
   modifiedTime,
 }: SEOProps) {
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
-  const fullTitle = `${title} | Thalen Technologies - Govern Smart`;
+  const fullTitle = `${title} | NexDyne Technology - Powering Government Mission Success`;
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : (typeof window !== 'undefined' ? window.location.href : '');
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
@@ -59,7 +59,7 @@ export default function SEO({
     setMetaTag('og:type', ogType, true);
     setMetaTag('og:url', fullCanonical, true);
     setMetaTag('og:image', fullOgImage, true);
-    setMetaTag('og:site_name', 'Thalen Technologies', true);
+    setMetaTag('og:site_name', 'NexDyne Technology', true);
 
     // Twitter Card tags
     setMetaTag('twitter:card', twitterCard);

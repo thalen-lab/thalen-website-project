@@ -62,7 +62,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           <div className="flex flex-col h-full">
             {/* Logo */}
             <div className="p-6 border-b border-navy-800">
-              <h1 className="text-2xl font-bold">Thalen Technologies</h1>
+              <h1 className="text-2xl font-bold">NexDyne Technology</h1>
               <p className="text-sm text-gray-400 mt-1">Admin Panel</p>
             </div>
 

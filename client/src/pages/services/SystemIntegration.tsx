@@ -131,7 +131,7 @@ export default function SystemIntegration() {
       <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Agencies Choose Thalen Technologies for Integration</h2>
+            <h2 className="text-4xl font-bold mb-4">Why Agencies Choose NexDyne Technology for Integration</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We're not a platform vendor—we're integration specialists who make your chosen FedRAMP platforms work together seamlessly.
             </p>

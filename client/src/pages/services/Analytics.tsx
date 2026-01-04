@@ -123,7 +123,7 @@ export default function Analytics() {
                   <div className="text-sm font-semibold text-accent mb-2">Featured Success Story</div>
                   <h3 className="text-3xl font-bold mb-4">Healthcare System Saves $12M Through AI Analytics</h3>
                   <p className="text-primary-foreground/90 mb-6">
-                    Thalen Technologies's data intelligence platform transformed a multi-facility healthcare network's decision-making, delivering real-time insights that improved patient outcomes and operational efficiency by 40%.
+                    NexDyne Technology's data intelligence platform transformed a multi-facility healthcare network's decision-making, delivering real-time insights that improved patient outcomes and operational efficiency by 40%.
                   </p>
                   <Button className="bg-orange-gradient hover:opacity-90 w-fit">
                     Read Full Case Study

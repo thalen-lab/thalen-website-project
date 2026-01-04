@@ -129,8 +129,8 @@ export function ImageWithLoader({
           alt={alt}
           loading={loadingAttr}
           decoding={priority ? 'sync' : 'async'}
-          // @ts-ignore - fetchpriority is a valid HTML attribute
-          fetchpriority={fetchPriority}
+          // @ts-ignore - fetchPriority is a valid HTML attribute
+          fetchPriority={fetchPriority}
           className={cn(
             'transition-opacity duration-500',
             isLoading ? 'opacity-0' : 'opacity-100',

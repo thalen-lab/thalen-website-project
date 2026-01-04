@@ -69,7 +69,7 @@ export default function DataStrategy() {
               Data Strategy & Roadmap
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Your agency collects massive amounts of data, but are you using it to drive mission outcomes? Most federal organizations lack a coherent data strategy—analytics projects happen in silos, data quality is inconsistent, and nobody owns data governance. Thalen Technologies builds comprehensive data strategies that align analytics investments with mission priorities, establish sustainable governance, and deliver measurable results within 12 months.
+              Your agency collects massive amounts of data, but are you using it to drive mission outcomes? Most federal organizations lack a coherent data strategy—analytics projects happen in silos, data quality is inconsistent, and nobody owns data governance. NexDyne Technology builds comprehensive data strategies that align analytics investments with mission priorities, establish sustainable governance, and deliver measurable results within 12 months.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -117,7 +117,7 @@ export default function DataStrategy() {
               Government agencies spend millions on analytics tools, data platforms, and dashboards—but without a coherent strategy, these investments fail to deliver value. Projects get funded based on who asks loudest, not what drives mission impact. Data quality problems persist because nobody owns governance. Analytics teams build solutions that leadership does not use because requirements were never aligned.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies's Data Strategy Basecamp is a 6-week engagement that gives you clarity. We assess your current state, define your target vision, and build a prioritized roadmap with quick wins and long-term significant projects. You will know exactly what to build, in what order, and why it matters to your mission.
+              NexDyne Technology's Data Strategy Basecamp is a 6-week engagement that gives you clarity. We assess your current state, define your target vision, and build a prioritized roadmap with quick wins and long-term significant projects. You will know exactly what to build, in what order, and why it matters to your mission.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -150,7 +150,7 @@ export default function DataStrategy() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">What is Included in a Thalen Technologies Data Strategy</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">What is Included in a NexDyne Technology Data Strategy</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Our Data Strategy Basecamp delivers four key components over 6 weeks.
             </p>
@@ -208,12 +208,12 @@ export default function DataStrategy() {
         </div>
       </section>
 
-      {/* The Thalen Technologies Approach */}
+      {/* The NexDyne Technology Approach */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies Data Strategy Framework</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne Technology Data Strategy Framework</h2>
               <p className="text-xl text-muted-foreground">
                 Our proven approach balances strategic vision with tactical execution.
               </p>
@@ -282,7 +282,7 @@ export default function DataStrategy() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Maximize your data strategy impact with these related Thalen Technologies offerings
+              Maximize your data strategy impact with these related NexDyne Technology offerings
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">

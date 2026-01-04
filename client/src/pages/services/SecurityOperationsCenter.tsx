@@ -230,7 +230,7 @@ export default function SecurityOperationsCenter() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Protect Your Assets 24/7</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a SOC consultation and discover how Thalen Technologies can deliver continuous security monitoring and threat detection for your mission-critical government environment.
+            Schedule a SOC consultation and discover how NexDyne Technology can deliver continuous security monitoring and threat detection for your mission-critical government environment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -37,7 +37,7 @@ export default function ATOSupport() {
             </h1>
             
             <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-              When federal agencies choose Thalen Technologies to implement cloud migrations, automation platforms, 
+              When federal agencies choose NexDyne Technology to implement cloud migrations, automation platforms, 
               or data systems, they get more than technical expertise—they get a contractor who navigates 
               the entire ATO process from day one, ensuring your system goes live on schedule.
             </p>
@@ -68,13 +68,13 @@ export default function ATOSupport() {
             </div>
             
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-              Federal systems require Authority to Operate (ATO) before going live. Thalen Technologies 
+              Federal systems require Authority to Operate (ATO) before going live. NexDyne Technology 
               integrates security authorization into every implementation project from day one, ensuring 
               your system achieves ATO on schedule without delays.
             </p>
             
             <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-lg p-8 border border-blue-200">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">What Sets Thalen Technologies Apart</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">What Sets NexDyne Technology Apart</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-3">Deep Security Expertise</h4>
@@ -125,7 +125,7 @@ export default function ATOSupport() {
                 <h2 className="text-4xl font-bold text-white">ATO Support Throughout Implementation</h2>
               </div>
               <p className="text-xl text-slate-200 max-w-3xl mx-auto">
-                Thalen Technologies integrates ATO activities into every phase of system implementation, ensuring 
+                NexDyne Technology integrates ATO activities into every phase of system implementation, ensuring 
                 security authorization progresses in parallel with technical development—not as an afterthought.
               </p>
             </div>
@@ -144,7 +144,7 @@ export default function ATOSupport() {
                       Project Kickoff: Security by Design
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      During initial project planning, Thalen Technologies conducts a security requirements assessment 
+                      During initial project planning, NexDyne Technology conducts a security requirements assessment 
                       to determine the appropriate authorization framework (FedRAMP, FISMA Moderate/High, 
                       DoD IL-4/5). We architect the system with security controls built in from the start, 
                       not bolted on later. This includes selecting FedRAMP-authorized cloud platforms when 
@@ -186,7 +186,7 @@ export default function ATOSupport() {
                       Development: Documentation in Parallel
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      As Thalen Technologies develops and configures the system, our security team simultaneously 
+                      As NexDyne Technology develops and configures the system, our security team simultaneously 
                       documents security controls in the System Security Plan (SSP). We implement required 
                       controls using Infrastructure as Code and automated configuration management, creating 
                       auditable evidence of compliance. This parallel approach eliminates the typical 
@@ -228,7 +228,7 @@ export default function ATOSupport() {
                       Testing: Security Assessment Coordination
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      Thalen Technologies coordinates with third-party assessment organizations (3PAO) to validate 
+                      NexDyne Technology coordinates with third-party assessment organizations (3PAO) to validate 
                       security control effectiveness. We prepare the environment for assessment, manage 
                       the testing process, and rapidly remediate any findings. Our experience with federal 
                       security assessments means we anticipate common issues and address them proactively, 
@@ -270,7 +270,7 @@ export default function ATOSupport() {
                       Authorization & Go-Live
                     </h3>
                     <p className="text-slate-700 mb-4 leading-relaxed">
-                      Thalen Technologies prepares the authorization package and coordinates with the agency's 
+                      NexDyne Technology prepares the authorization package and coordinates with the agency's 
                       Authorizing Official (AO) to secure final ATO approval. We establish continuous 
                       monitoring capabilities to maintain authorization and provide ongoing compliance 
                       support. The system goes live on schedule with full authorization in place—no delays, 
@@ -312,7 +312,7 @@ export default function ATOSupport() {
             </div>
             
             <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-              Thalen Technologies leverages FedRAMP and StateRAMP authorized platforms to accelerate 
+              NexDyne Technology leverages FedRAMP and StateRAMP authorized platforms to accelerate 
               ATO timelines when appropriate. Using a FedRAMP-authorized platform does not automatically 
               grant your agency ATO—your specific implementation still requires authorization.
             </p>
@@ -328,7 +328,7 @@ export default function ATOSupport() {
               <p className="text-slate-200 leading-relaxed">
                 However, <strong>customer-managed controls</strong> remain your responsibility: platform 
                 configuration, user access management, system integration, and data handling all require 
-                documentation and validation. Thalen Technologies manages this inheritance model by documenting 
+                documentation and validation. NexDyne Technology manages this inheritance model by documenting 
                 which controls are inherited versus agency-managed, and implementing customer-managed controls correctly.
               </p>
             </div>
@@ -479,7 +479,7 @@ export default function ATOSupport() {
               Implementation Expertise with ATO Built-In
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Partner with Thalen Technologies for implementation expertise that includes security 
+              Partner with NexDyne Technology for implementation expertise that includes security 
               authorization from day one. Your systems go live on schedule with full ATO in place.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

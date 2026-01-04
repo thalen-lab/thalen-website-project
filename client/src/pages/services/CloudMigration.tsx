@@ -124,7 +124,7 @@ export default function CloudMigration() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose Thalen Technologies Migration</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Choose NexDyne Technology Migration</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Unlike commercial migration services, we understand government compliance requirements (FedRAMP, StateRAMP, CJIS), security clearances, and mission continuity imperatives.
             </p>
@@ -238,7 +238,7 @@ export default function CloudMigration() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Migrate to the Cloud?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive migration assessment and discover how Thalen Technologies can deliver zero-downtime cloud adoption with FedRAMP compliance.
+            Start with a comprehensive migration assessment and discover how NexDyne Technology can deliver zero-downtime cloud adoption with FedRAMP compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -188,7 +188,7 @@ export default function FederalSolutions() {
               Government Solutions & Contract Vehicles
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Thalen Technologies Technology is a trusted government IT implementation partner with GSA Schedule contracts, StateRAMP expertise, proven past performance, and cleared personnel ready to support federal, state, and local government agencies.
+              NexDyne Technology Technology is a trusted government IT implementation partner with GSA Schedule contracts, StateRAMP expertise, proven past performance, and cleared personnel ready to support federal, state, and local government agencies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -251,7 +251,7 @@ export default function FederalSolutions() {
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Procure Through Thalen Technologies?</h2>
+            <h2 className="text-4xl font-bold mb-4">Why Procure Through NexDyne Technology?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Streamlined acquisition, competitive pricing, and proven delivery reduce risk and accelerate mission outcomes.
             </p>
@@ -350,7 +350,7 @@ export default function FederalSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Federal Acquisition Regulation (FAR) Compliance</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Thalen Technologies maintains compliance with Federal Acquisition Regulation requirements for government IT services, ensuring streamlined contract execution and reduced agency risk.
+              NexDyne Technology maintains compliance with Federal Acquisition Regulation requirements for government IT services, ensuring streamlined contract execution and reduced agency risk.
             </p>
           </div>
 
@@ -498,7 +498,7 @@ export default function FederalSolutions() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Teaming & Subcontracting Partnerships</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Thalen Technologies partners with certified small businesses to strengthen proposals for set-aside contracts and deliver comprehensive solutions.
+              NexDyne Technology partners with certified small businesses to strengthen proposals for set-aside contracts and deliver comprehensive solutions.
             </p>
           </div>
 
@@ -560,7 +560,7 @@ export default function FederalSolutions() {
                     Complementary Expertise
                   </h4>
                   <p className="text-sm text-muted-foreground ml-7">
-                    Partners bring specialized capabilities in niche technologies, regional presence, and industry-specific domain knowledge that complement Thalen Technologies's core competencies.
+                    Partners bring specialized capabilities in niche technologies, regional presence, and industry-specific domain knowledge that complement NexDyne Technology's core competencies.
                   </p>
                 </div>
                 <div>
@@ -587,7 +587,7 @@ export default function FederalSolutions() {
 
           <div className="text-center mt-12">
             <p className="text-muted-foreground mb-6">
-              Interested in teaming with Thalen Technologies on an upcoming opportunity? Contact our partnerships team.
+              Interested in teaming with NexDyne Technology on an upcoming opportunity? Contact our partnerships team.
             </p>
             <Link href="/contact/partnerships">
               <Button variant="outline" size="lg">
@@ -794,7 +794,7 @@ export default function FederalSolutions() {
       {/* CTA Section */}
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Work with Thalen Technologies?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Work with NexDyne Technology?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Generate a customized capability statement, schedule a consultation, or learn more about our government contract vehicles and past performance.
           </p>

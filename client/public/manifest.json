@@ -1,7 +1,7 @@
 {
-  "name": "Thalen Technologies - Govern Smart",
-  "short_name": "Thalen",
-  "description": "Government technology consulting delivering FedRAMP and StateRAMP platform implementation expertise across federal, state, and local agencies.",
+  "name": "NexDyne Technology - Powering Government Mission Success",
+  "short_name": "NexDyne",
+  "description": "For 25 years, NexDyne has partnered with federal, state, and local agencies to deliver mission-enabling technology. FedRAMP authorized, CMMC certified.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -46,7 +46,7 @@
     {
       "name": "Case Studies",
       "short_name": "Cases",
-      "description": "View client success stories",
+      "description": "View agency partner success stories",
       "url": "/case-studies",
       "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
     },

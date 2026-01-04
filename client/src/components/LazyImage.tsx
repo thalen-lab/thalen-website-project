@@ -134,7 +134,7 @@ export function LazyImage({
         loading={loadingAttr}
         decoding={priority ? 'sync' : 'async'}
         // @ts-ignore - fetchPriority is a valid attribute
-        fetchpriority={fetchPriority}
+        fetchPriority={fetchPriority}
         className={cn(
           'transition-opacity duration-300',
           isLoaded ? 'opacity-100' : 'opacity-0',

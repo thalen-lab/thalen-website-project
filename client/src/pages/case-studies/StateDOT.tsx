@@ -68,7 +68,7 @@ export default function StateDOT() {
               A state Department of Transportation managing 12,000+ miles of highway, 2,400 bridges, and $800M in annual infrastructure spending relied on a 40-year-old COBOL mainframe system for asset management. The legacy system lacked mobile access, real-time reporting, and integration with modern GIS platforms, creating operational inefficiencies and limiting the agency's ability to respond to infrastructure emergencies.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies was selected through a competitive RFP process to migrate the DOT's asset management system to Salesforce Government Cloud, a StateRAMP-authorized platform. The project required zero downtime during migration, integration with existing GIS and financial systems, and comprehensive training for 850+ field and office personnel.
+              NexDyne Technology was selected through a competitive RFP process to migrate the DOT's asset management system to Salesforce Government Cloud, a StateRAMP-authorized platform. The project required zero downtime during migration, integration with existing GIS and financial systems, and comprehensive training for 850+ field and office personnel.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
               <div>
@@ -131,7 +131,7 @@ export default function StateDOT() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Salesforce Government Cloud Migration</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Thalen Technologies designed and implemented a comprehensive asset management solution on Salesforce Government Cloud (StateRAMP Authorized), replacing the 40-year-old mainframe with a modern, mobile-first platform.
+                  NexDyne Technology designed and implemented a comprehensive asset management solution on Salesforce Government Cloud (StateRAMP Authorized), replacing the 40-year-old mainframe with a modern, mobile-first platform.
                 </p>
                 <ul className="space-y-3">
                   {[
@@ -262,7 +262,7 @@ export default function StateDOT() {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Client Testimonial</h3>
               <p className="text-lg mb-6 leading-relaxed">
-                "Thalen Technologies improved our 40-year-old mainframe system into a modern, mobile-first platform in just 14 months. Our field crews now have real-time access to asset data on their tablets, and we've reduced emergency response times by 40%. The StateRAMP-authorized Salesforce platform gave our CISO confidence that we were meeting all state security requirements. This project has fundamentally changed how we manage infrastructure."
+                "NexDyne Technology improved our 40-year-old mainframe system into a modern, mobile-first platform in just 14 months. Our field crews now have real-time access to asset data on their tablets, and we've reduced emergency response times by 40%. The StateRAMP-authorized Salesforce platform gave our CISO confidence that we were meeting all state security requirements. This project has fundamentally changed how we manage infrastructure."
               </p>
               <div className="border-t border-accent/20 pt-4">
                 <div className="font-semibold">Jennifer Martinez</div>
@@ -312,7 +312,7 @@ export default function StateDOT() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your State Infrastructure?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Learn how Thalen Technologies can help your state agency migrate from legacy systems to StateRAMP-authorized cloud platforms.
+            Learn how NexDyne Technology can help your state agency migrate from legacy systems to StateRAMP-authorized cloud platforms.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90">

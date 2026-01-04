@@ -320,7 +320,7 @@ export default function FedRAMP() {
           </h2>
 
           <p className="text-gray-300 leading-relaxed mb-10 max-w-4xl">
-            Thalen Technologies employs a proven, phased approach to FedRAMP and StateRAMP authorization that minimizes time-to-ATO while ensuring comprehensive security control implementation. Our methodology leverages deep expertise in federal compliance frameworks, cloud security architecture, and government authorization processes.
+            NexDyne Technology employs a proven, phased approach to FedRAMP and StateRAMP authorization that minimizes time-to-ATO while ensuring comprehensive security control implementation. Our methodology leverages deep expertise in federal compliance frameworks, cloud security architecture, and government authorization processes.
           </p>
 
           <div className="space-y-6">
@@ -471,11 +471,11 @@ export default function FedRAMP() {
         </div>
       </section>
 
-      {/* Why Choose Thalen Section */}
+      {/* Why Choose NexDyne Section */}
       <section className="bg-[#0a1628] py-16 lg:py-20">
         <div className="container">
           <h2 className="text-2xl md:text-3xl font-light tracking-wide text-white uppercase mb-8">
-            Why Choose Thalen Technologies
+            Why Choose NexDyne Technology
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">

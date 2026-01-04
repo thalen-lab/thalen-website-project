@@ -298,7 +298,7 @@ export default function Insights() {
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest Insights</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Stay informed with expert analysis and practical guidance from Thalen Technologies's thought leaders.
+              Stay informed with expert analysis and practical guidance from NexDyne Technology's thought leaders.
             </p>
           </div>
 

@@ -15,7 +15,7 @@ export default function StateProcurementGuide() {
       scope: 'All 50 states and territories',
       process: [
         'Verify your state participates in NASPO ValuePoint Cloud Solutions contract',
-        'Review Thalen Technologies\'s NASPO contract number and scope of services',
+        'Review NexDyne Technology\'s NASPO contract number and scope of services',
         'Issue purchase order or task order against NASPO contract',
         'No RFP required - pre-negotiated pricing and terms'
       ],
@@ -29,9 +29,9 @@ export default function StateProcurementGuide() {
       scope: 'Government, education, nonprofit nationwide',
       process: [
         'Confirm your agency is eligible for Sourcewell contracts (most government entities qualify)',
-        'Review Thalen Technologies\'s Sourcewell contract #012345-ABC',
+        'Review NexDyne Technology\'s Sourcewell contract #012345-ABC',
         'Complete Sourcewell registration (if not already registered)',
-        'Issue purchase order directly to Thalen Technologies'
+        'Issue purchase order directly to NexDyne Technology'
       ],
       timeline: '1-3 weeks from PO to project start',
       benefits: ['No membership fees', 'Simplified procurement', 'Compliant with state purchasing laws', 'Volume pricing']
@@ -43,7 +43,7 @@ export default function StateProcurementGuide() {
       scope: 'Public sector entities nationwide',
       process: [
         'Verify your agency\'s eligibility for OMNIA Partners contracts',
-        'Review Thalen Technologies\'s OMNIA contract R191902',
+        'Review NexDyne Technology\'s OMNIA contract R191902',
         'Complete OMNIA participation agreement (one-time)',
         'Issue purchase order or statement of work'
       ],
@@ -56,7 +56,7 @@ export default function StateProcurementGuide() {
       description: 'Direct state-specific IT services contracts',
       scope: '12 state master agreements',
       process: [
-        'Check if your state has a master agreement with Thalen Technologies (contact us for list)',
+        'Check if your state has a master agreement with NexDyne Technology (contact us for list)',
         'Review state-specific contract terms and pricing',
         'Issue task order or purchase order against state contract',
         'Follow state-specific procurement procedures'
@@ -118,7 +118,7 @@ export default function StateProcurementGuide() {
               State & Local Procurement Guide
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Step-by-step guide to procuring Thalen Technologies IT implementation services through cooperative purchasing contracts, state master agreements, RFP processes, and grant-funded projects.
+              Step-by-step guide to procuring NexDyne Technology IT implementation services through cooperative purchasing contracts, state master agreements, RFP processes, and grant-funded projects.
             </p>
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">
               <Download className="mr-2 h-5 w-5" />
@@ -248,7 +248,7 @@ export default function StateProcurementGuide() {
           <div className="mb-12">
             <h2 className="text-4xl font-bold mb-4">Traditional RFP Support</h2>
             <p className="text-xl text-muted-foreground">
-              For county and municipal governments requiring competitive RFP processes, Thalen Technologies provides comprehensive response support with local references and transparent pricing.
+              For county and municipal governments requiring competitive RFP processes, NexDyne Technology provides comprehensive response support with local references and transparent pricing.
             </p>
           </div>
 
@@ -307,7 +307,7 @@ export default function StateProcurementGuide() {
           <div className="mb-12">
             <h2 className="text-4xl font-bold mb-4">Grant-Funded Project Support</h2>
             <p className="text-xl text-muted-foreground">
-              Thalen Technologies supports state and local agencies with federally-funded projects including ARPA, BEAD, and state-specific technology grants with compliance tracking and audit-ready documentation.
+              NexDyne Technology supports state and local agencies with federally-funded projects including ARPA, BEAD, and state-specific technology grants with compliance tracking and audit-ready documentation.
             </p>
           </div>
 
@@ -322,7 +322,7 @@ export default function StateProcurementGuide() {
                     </div>
                   </div>
                   <div className="bg-muted p-4 rounded-lg">
-                    <p className="text-sm"><span className="font-semibold">Thalen Technologies Support:</span> {grant.support}</p>
+                    <p className="text-sm"><span className="font-semibold">NexDyne Technology Support:</span> {grant.support}</p>
                   </div>
                 </CardContent>
               </Card>

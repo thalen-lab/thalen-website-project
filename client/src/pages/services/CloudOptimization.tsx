@@ -138,7 +138,7 @@ export default function CloudOptimization() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Measurable Optimization Results</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Government agencies achieve dramatic cost savings and performance improvements through Thalen Technologies's data-driven optimization approach.
+              Government agencies achieve dramatic cost savings and performance improvements through NexDyne Technology's data-driven optimization approach.
             </p>
           </div>
 
@@ -241,7 +241,7 @@ export default function CloudOptimization() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Optimize Your Cloud Spending?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Start with a comprehensive cost optimization assessment and discover how much your agency can save with Thalen Technologies's proven optimization framework.
+            Start with a comprehensive cost optimization assessment and discover how much your agency can save with NexDyne Technology's proven optimization framework.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">

@@ -68,7 +68,7 @@ export default function CountyHealth() {
               A county health department serving 1.2 million residents relied on manual, paper-based disease surveillance processes that took 14+ days to identify potential outbreaks. Healthcare providers faxed or mailed disease reports to the health department, where staff manually entered data into spreadsheets. This delay created significant public health risks, particularly during seasonal flu outbreaks and emerging infectious diseases.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies was selected through a competitive procurement process to design and implement a real-time public health surveillance platform that would integrate with 120+ healthcare providers, labs, and pharmacies while maintaining strict HIPAA compliance and meeting CJIS requirements for law enforcement integration.
+              NexDyne Technology was selected through a competitive procurement process to design and implement a real-time public health surveillance platform that would integrate with 120+ healthcare providers, labs, and pharmacies while maintaining strict HIPAA compliance and meeting CJIS requirements for law enforcement integration.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary rounded-lg">
               <div>
@@ -131,7 +131,7 @@ export default function CountyHealth() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Real-Time Public Health Surveillance Platform</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Thalen Technologies designed and implemented a HIPAA-compliant real-time surveillance platform that automatically ingests disease reports from 120+ healthcare providers, labs, and pharmacies, enabling outbreak detection within 3 days instead of 14.
+                  NexDyne Technology designed and implemented a HIPAA-compliant real-time surveillance platform that automatically ingests disease reports from 120+ healthcare providers, labs, and pharmacies, enabling outbreak detection within 3 days instead of 14.
                 </p>
                 <ul className="space-y-3">
                   {[
@@ -262,7 +262,7 @@ export default function CountyHealth() {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Client Testimonial</h3>
               <p className="text-lg mb-6 leading-relaxed">
-                "Thalen Technologies improved our disease surveillance from a 14-day manual process to real-time automated monitoring. Last flu season, we detected an outbreak 11 days earlier than the previous year, allowing us to launch targeted vaccination campaigns that reduced community transmission by 34%. The platform's HIPAA compliance and seamless integration with 120+ healthcare providers gave us confidence that we were protecting both public health and patient privacy. This system has fundamentally changed how we respond to infectious disease threats."
+                "NexDyne Technology improved our disease surveillance from a 14-day manual process to real-time automated monitoring. Last flu season, we detected an outbreak 11 days earlier than the previous year, allowing us to launch targeted vaccination campaigns that reduced community transmission by 34%. The platform's HIPAA compliance and seamless integration with 120+ healthcare providers gave us confidence that we were protecting both public health and patient privacy. This system has fundamentally changed how we respond to infectious disease threats."
               </p>
               <div className="border-t border-accent/20 pt-4">
                 <div className="font-semibold">Dr. Michael Chen, MD, MPH</div>
@@ -312,7 +312,7 @@ export default function CountyHealth() {
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Public Health Infrastructure?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Learn how Thalen Technologies can help your health department implement real-time surveillance with HIPAA-compliant infrastructure.
+            Learn how NexDyne Technology can help your health department implement real-time surveillance with HIPAA-compliant infrastructure.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90">

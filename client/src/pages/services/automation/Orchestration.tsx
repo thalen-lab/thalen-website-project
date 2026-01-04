@@ -67,7 +67,7 @@ export default function Orchestration() {
               Process Orchestration for Government Agencies (Federal, State, and Local)
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Your most important work involves multiple departments, systems, and decision points. Approvals get stuck in email chains. Work sits in queues waiting for the next step. Nobody has visibility into where things stand. Thalen Technologies Process Orchestration automates these complex, multi-step workflows from end to end—routing work intelligently, enforcing policy automatically, and giving you real-time visibility into every process.
+              Your most important work involves multiple departments, systems, and decision points. Approvals get stuck in email chains. Work sits in queues waiting for the next step. Nobody has visibility into where things stand. NexDyne Technology Process Orchestration automates these complex, multi-step workflows from end to end—routing work intelligently, enforcing policy automatically, and giving you real-time visibility into every process.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -114,7 +114,7 @@ export default function Orchestration() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Common Orchestration Scenarios</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From procurement to case management, government agencies (federal, state, and local) orchestrate their most complex processes with Thalen Technologies.
+              From procurement to case management, government agencies (federal, state, and local) orchestrate their most complex processes with NexDyne Technology.
             </p>
           </div>
 
@@ -161,12 +161,12 @@ export default function Orchestration() {
         </div>
       </section>
 
-      {/* The Thalen Technologies Approach */}
+      {/* The NexDyne Technology Approach */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The Thalen Technologies Orchestration Framework</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne Technology Orchestration Framework</h2>
               <p className="text-xl text-muted-foreground">
                 We do not just automate your current process—we optimize it first.
               </p>

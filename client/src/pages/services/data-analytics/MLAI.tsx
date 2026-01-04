@@ -28,7 +28,7 @@ export default function MLAI() {
   const mlUseCases = [
     {
       title: 'Benefits Fraud Detection',
-      description: 'Federal benefits programs lose billions to fraudulent claims annually. Thalen Technologies built an ML-powered fraud detection system for a major benefits agency that analyzes claim patterns, applicant behavior, and third-party data to flag suspicious claims before payment. The system reduced fraud losses by 40% while maintaining a 95% accuracy rate to avoid false positives that delay legitimate claims.',
+      description: 'Federal benefits programs lose billions to fraudulent claims annually. NexDyne Technology built an ML-powered fraud detection system for a major benefits agency that analyzes claim patterns, applicant behavior, and third-party data to flag suspicious claims before payment. The system reduced fraud losses by 40% while maintaining a 95% accuracy rate to avoid false positives that delay legitimate claims.',
       impact: '$500M fraud prevented annually',
       accuracy: '95% detection accuracy',
       falsePositives: '<2% false positive rate'
@@ -42,7 +42,7 @@ export default function MLAI() {
     },
     {
       title: 'Insider Threat Detection',
-      description: 'Insider threats are the hardest security risks to detect. Thalen Technologies built an ML system for a defense agency that analyzes user behavior patterns—file access, email activity, network connections, physical access—to identify anomalies that indicate potential insider threats. The system flags high-risk users for security review without overwhelming analysts with false alarms.',
+      description: 'Insider threats are the hardest security risks to detect. NexDyne Technology built an ML system for a defense agency that analyzes user behavior patterns—file access, email activity, network connections, physical access—to identify anomalies that indicate potential insider threats. The system flags high-risk users for security review without overwhelming analysts with false alarms.',
       impact: '12 insider threats detected',
       accuracy: '88% detection accuracy',
       response: '90% faster investigation time'
@@ -77,7 +77,7 @@ export default function MLAI() {
               Predictive Analytics & ML/AI
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Stop reacting to problems after they happen. Thalen Technologies deploys machine learning models and AI-powered analytics that predict fraud, forecast failures, detect threats, and optimize operations before issues escalate. Our ML implementations are not black boxes—every prediction includes transparent reasoning, bias detection, and model governance to meet federal accountability standards. From fraud detection to predictive maintenance, we turn your data into actionable foresight.
+              Stop reacting to problems after they happen. NexDyne Technology deploys machine learning models and AI-powered analytics that predict fraud, forecast failures, detect threats, and optimize operations before issues escalate. Our ML implementations are not black boxes—every prediction includes transparent reasoning, bias detection, and model governance to meet federal accountability standards. From fraud detection to predictive maintenance, we turn your data into actionable foresight.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -125,7 +125,7 @@ export default function MLAI() {
               Commercial ML platforms are optimized for marketing and sales predictions where mistakes are tolerable. Federal applications—fraud detection, threat assessment, benefits eligibility—require explainability, bias detection, and accountability. You cannot tell Congress "the algorithm decided" when a decision is challenged.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Thalen Technologies builds explainable AI systems where every prediction includes transparent reasoning. Our ML implementations include bias detection, fairness metrics, model governance, and full audit trails. You will understand not just what the model predicts, but why—and you will have documentation to defend decisions under congressional oversight and IG audits.
+              NexDyne Technology builds explainable AI systems where every prediction includes transparent reasoning. Our ML implementations include bias detection, fairness metrics, model governance, and full audit trails. You will understand not just what the model predicts, but why—and you will have documentation to defend decisions under congressional oversight and IG audits.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -160,7 +160,7 @@ export default function MLAI() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Proven ML/AI Use Cases for Government Agencies</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Thalen Technologies has deployed production ML systems for fraud detection, predictive maintenance, threat intelligence, and operational optimization.
+              NexDyne Technology has deployed production ML systems for fraud detection, predictive maintenance, threat intelligence, and operational optimization.
             </p>
           </div>
 
@@ -306,7 +306,7 @@ export default function MLAI() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Maximize your ML/AI impact with these related Thalen Technologies offerings
+              Maximize your ML/AI impact with these related NexDyne Technology offerings
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">

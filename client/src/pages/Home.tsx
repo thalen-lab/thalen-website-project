@@ -170,11 +170,11 @@ export default function Home() {
               className="relative z-10 order-1 lg:order-2"
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0A2540] mb-4 md:mb-6 leading-tight">
-                Comprehensive Technology Solutions
+                Mission-Enabling Technology Solutions
               </h2>
 
               <p className="text-base md:text-lg text-slate-600 leading-relaxed mb-6 md:mb-8">
-                We serve government agencies and highly regulated industries, ensuring their mission-critical systems deliver when it matters most. NexDyne combines deep compliance expertise, proven methodologies, and cutting-edge technology to help public sector organizations navigate complex IT challenges while maintaining the highest security and regulatory standards.
+                For 25 years, NexDyne has partnered with federal, state, and local government agencies to deliver mission-critical technology that makes a difference. Our deep government expertise, battle-tested methodologies, and unwavering commitment to compliance ensure your agency partners achieve mission success while maintaining the highest security standards.
               </p>
 
               {/* CTA Buttons - Consistent sizing */}
@@ -217,10 +217,10 @@ export default function Home() {
               className="relative z-10"
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white mb-4 md:mb-6 leading-tight">
-                Compliance-First Approach
+                Mission-First, Compliance-Assured
               </h2>
               <p className="text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8">
-                Every solution we implement starts with regulatory requirements. Our team brings deep expertise in FedRAMP, StateRAMP, CMMC, FISMA, HIPAA, GDPR, SOC 2, PCI-DSS, and other critical frameworks, ensuring your technology investments meet compliance mandates while driving operational efficiency and mission success.
+                Every solution we implement starts with your mission objectives. Our team brings deep expertise in FedRAMP, StateRAMP, CMMC, FISMA, HIPAA, and other critical frameworks—battle-tested in government environments. We ensure your technology investments drive mission success while meeting the most stringent compliance mandates.
               </p>
               
               {/* Action Buttons - Streamlined to 2 buttons */}
@@ -351,7 +351,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-2xl md:text-3xl font-normal text-white mb-10 md:mb-12"
           >
-            Our Customers
+            Our Agency Partners
           </motion.h2>
           
           <motion.div 

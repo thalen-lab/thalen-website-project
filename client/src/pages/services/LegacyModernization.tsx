@@ -236,7 +236,7 @@ export default function LegacyModernization() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-bold mb-3 text-green-600">Thalen Technologies Solution:</h4>
+                    <h4 className="font-bold mb-3 text-green-600">NexDyne Technology Solution:</h4>
                     <p className="text-sm text-muted-foreground">{system.solution}</p>
                   </div>
                 </div>

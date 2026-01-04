@@ -23,7 +23,7 @@ export default function AppDevelopment() {
               Application Development & Integration for Mission-Critical Systems
             </h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Your agency needs applications that meet strict security requirements while delivering modern user experiences. Thalen Technologies builds FedRAMP-authorized, CMMC-compliant applications using proven methodologies that balance innovation with the stability your mission demands.
+              Your agency needs applications that meet strict security requirements while delivering modern user experiences. NexDyne Technology builds FedRAMP-authorized, CMMC-compliant applications using proven methodologies that balance innovation with the stability your mission demands.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -42,11 +42,11 @@ export default function AppDevelopment() {
         </div>
       </section>
 
-      {/* Why Federal Agencies Choose Thalen Technologies */}
+      {/* Why Federal Agencies Choose NexDyne Technology */}
       <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Federal Agencies Choose Thalen Technologies for Application Development</h2>
+            <h2 className="text-4xl font-bold mb-4">Why Federal Agencies Choose NexDyne Technology for Application Development</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Unlike commercial development shops, we understand the unique challenges of building applications for government—from ATO requirements to legacy system integration.
             </p>
@@ -188,7 +188,7 @@ export default function AppDevelopment() {
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">The Thalen Technologies Application Development Approach</h2>
+            <h2 className="text-4xl font-bold mb-4">The NexDyne Technology Application Development Approach</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We don't just write code—we partner with your team to deliver mission-critical applications that meet security requirements and user needs.
             </p>

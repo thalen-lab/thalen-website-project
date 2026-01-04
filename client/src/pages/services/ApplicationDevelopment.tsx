@@ -122,7 +122,7 @@ export default function ApplicationDevelopment() {
             </h1>
             
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Thalen Technologies delivers application solutions through a dual approach: first, we integrate and modernize your existing systems with custom APIs and workflows—then connect FedRAMP platforms (Salesforce Gov, ServiceNow Gov, Workday) when vendor-neutral architecture ensures no lock-in. Our TS/SCI cleared teams ensure compliance and mission continuity.
+              NexDyne Technology delivers application solutions through a dual approach: first, we integrate and modernize your existing systems with custom APIs and workflows—then connect FedRAMP platforms (Salesforce Gov, ServiceNow Gov, Workday) when vendor-neutral architecture ensures no lock-in. Our TS/SCI cleared teams ensure compliance and mission continuity.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -297,12 +297,12 @@ export default function ApplicationDevelopment() {
         </div>
       </section>
 
-      {/* Why Thalen Technologies */}
+      {/* Why NexDyne Technology */}
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">Why Choose Thalen Technologies for Application Development?</h2>
+              <h2 className="text-4xl font-bold mb-6">Why Choose NexDyne Technology for Application Development?</h2>
               <p className="text-lg text-muted-foreground mb-8">
                 We combine deep federal expertise with current development practices to deliver applications that meet the unique challenges of government missions.
               </p>
@@ -366,7 +366,7 @@ export default function ApplicationDevelopment() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Integration Architecture</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore how Thalen Technologies's solutions integrate with your existing federal infrastructure. Click on any layer to see detailed implementation approaches.
+              Explore how NexDyne Technology's solutions integrate with your existing federal infrastructure. Click on any layer to see detailed implementation approaches.
             </p>
           </div>
           <ArchitectureDiagram />

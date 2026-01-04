@@ -130,7 +130,7 @@ export default function DigitalTransformation() {
               Digital Transformation & Modernization
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
-              Thalen Technologies delivers transformation through a dual approach: first, we modernize your existing operations through process redesign, change management, and technology optimization—with FedRAMP platforms implemented only when compliance requires it or new capabilities align with mission objectives. Vendor-neutral consulting with TMF support and proven adoption strategies.
+              NexDyne Technology delivers transformation through a dual approach: first, we modernize your existing operations through process redesign, change management, and technology optimization—with FedRAMP platforms implemented only when compliance requires it or new capabilities align with mission objectives. Vendor-neutral consulting with TMF support and proven adoption strategies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -153,7 +153,7 @@ export default function DigitalTransformation() {
       <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Agencies Choose Thalen Technologies for Modernization</h2>
+            <h2 className="text-4xl font-bold mb-4">Why Agencies Choose NexDyne Technology for Modernization</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We're not a platform vendor—we're modernization specialists who help you select and implement the right solutions for your mission.
             </p>

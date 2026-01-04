@@ -34,7 +34,7 @@ const contractCategories: VehicleCategory[] = [
         name: "GSA IT Schedule 70",
         role: "pursuing",
         contractNumber: "47QTCA24D001E",
-        description: "IT Professional Services schedule providing pre-negotiated pricing and terms for federal agencies. Thalen holds this vehicle and is actively seeking subcontracting and teaming opportunities with prime contractors.",
+        description: "IT Professional Services schedule providing pre-negotiated pricing and terms for federal agencies. NexDyne holds this vehicle and is actively seeking subcontracting and teaming opportunities with prime contractors.",
         scope: "IT professional services including cloud solutions, cybersecurity, data analytics, application development, and IT consulting services available to federal, state, and local government agencies.",
         capabilities: [
           "IT Professional Services (SIN 54151S)",
@@ -51,12 +51,12 @@ const contractCategories: VehicleCategory[] = [
   },
   {
     title: "Agency-Specific Contract Vehicles",
-    description: "Specialized contract vehicles for specific federal agencies. Thalen is positioned to support prime contractors through subcontracting and teaming arrangements.",
+    description: "Specialized contract vehicles for specific federal agencies. NexDyne is positioned to support prime contractors through subcontracting and teaming arrangements.",
     vehicles: [
       {
         name: "FBI ITSSS-2",
         role: "pursuing",
-        description: "Federal Bureau of Investigation IT Support and Services contract vehicle. Thalen holds access to this vehicle and is seeking subcontracting opportunities with prime contractors supporting FBI IT modernization initiatives.",
+        description: "Federal Bureau of Investigation IT Support and Services contract vehicle. NexDyne holds access to this vehicle and is seeking subcontracting opportunities with prime contractors supporting FBI IT modernization initiatives.",
         scope: "Comprehensive IT support services for FBI including application development, infrastructure support, cybersecurity operations, data analytics, and IT service management.",
         capabilities: [
           "Application development and maintenance",
@@ -73,7 +73,7 @@ const contractCategories: VehicleCategory[] = [
       {
         name: "FEC ITSS",
         role: "pursuing",
-        description: "Federal Election Commission IT Support Services contract vehicle. Thalen holds this vehicle and is actively pursuing subcontracting opportunities to support FEC's technology modernization and application support needs.",
+        description: "Federal Election Commission IT Support Services contract vehicle. NexDyne holds this vehicle and is actively pursuing subcontracting opportunities to support FEC's technology modernization and application support needs.",
         scope: "Application support, system maintenance, IT infrastructure services, and technology consulting for the Federal Election Commission's mission-critical systems.",
         capabilities: [
           "Application support and maintenance",
@@ -91,12 +91,12 @@ const contractCategories: VehicleCategory[] = [
   },
   {
     title: "Teaming & Subcontracting Vehicles",
-    description: "Contract vehicles where Thalen actively seeks partnerships with prime contractors to deliver specialized IT services.",
+    description: "Contract vehicles where NexDyne actively seeks partnerships with prime contractors to deliver specialized IT services.",
     vehicles: [
       {
         name: "PBGC ITIOSS",
         role: "pursuing",
-        description: "Pension Benefit Guaranty Corporation IT Infrastructure Operations and Support Services. Thalen is positioned as a subcontractor and actively seeking teaming arrangements with prime contractors supporting PBGC's IT infrastructure needs.",
+        description: "Pension Benefit Guaranty Corporation IT Infrastructure Operations and Support Services. NexDyne is positioned as a subcontractor and actively seeking teaming arrangements with prime contractors supporting PBGC's IT infrastructure needs.",
         scope: "IT infrastructure operations, system administration, network management, cybersecurity operations, and technical support services for PBGC's enterprise IT environment.",
         capabilities: [
           "IT infrastructure operations and monitoring",
@@ -374,8 +374,8 @@ export default function ContractVehicles() {
   return (
     <>
       <SEO
-        title="Contract Vehicles | Thalen Technologies"
-        description="Explore Thalen Technologies' federal contract vehicles including GWACs, MACs, GSA Schedules, and agency-specific IDIQs for streamlined government procurement."
+        title="Contract Vehicles | NexDyne Technology"
+        description="Explore NexDyne Technology' federal contract vehicles including GWACs, MACs, GSA Schedules, and agency-specific IDIQs for streamlined government procurement."
         keywords="federal contract vehicles, GSA schedule, GWAC, IDIQ, government contracts, federal procurement, small business set-asides"
       />
       <Navigation />
@@ -393,7 +393,7 @@ export default function ContractVehicles() {
                 Contract Vehicles & Teaming Opportunities
               </h1>
               <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                Thalen Technologies holds multiple federal contract vehicles and is actively seeking subcontracting and teaming opportunities with prime contractors. We bring specialized IT capabilities, small business credentials, and proven past performance to support your agency's technology initiatives through strategic partnerships.
+                NexDyne Technology holds multiple federal contract vehicles and is actively seeking subcontracting and teaming opportunities with prime contractors. We bring specialized IT capabilities, small business credentials, and proven past performance to support your agency's technology initiatives through strategic partnerships.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact">
@@ -421,7 +421,7 @@ export default function ContractVehicles() {
                 Strategic Partnerships for Government IT Services
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                Thalen Technologies holds access to key federal contract vehicles including GSA IT Schedule 70, FBI ITSSS-2, PBGC ITIOSS, and FEC ITSS. We are actively seeking subcontracting and teaming partnerships with prime contractors to deliver specialized IT services across federal agencies. Our approach emphasizes collaboration, bringing deep technical expertise and agile delivery capabilities to support your contract performance and agency mission success.
+                NexDyne Technology holds access to key federal contract vehicles including GSA IT Schedule 70, FBI ITSSS-2, PBGC ITIOSS, and FEC ITSS. We are actively seeking subcontracting and teaming partnerships with prime contractors to deliver specialized IT services across federal agencies. Our approach emphasizes collaboration, bringing deep technical expertise and agile delivery capabilities to support your contract performance and agency mission success.
               </p>
             </div>
           </div>
@@ -442,7 +442,7 @@ export default function ContractVehicles() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-4">Seeking Teaming Partnerships</h2>
               <p className="text-lg text-slate-300 mb-8">
-                Thalen Technologies is actively seeking teaming opportunities with prime contractors to support agency contracts.
+                NexDyne Technology is actively seeking teaming opportunities with prime contractors to support agency contracts.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/contact">
@@ -472,7 +472,7 @@ export default function ContractVehicles() {
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">SAM.gov Registration</h3>
                   <p className="text-slate-600 mb-4">
-                    Thalen Technologies maintains active registration in the System for Award Management (SAM.gov), the official U.S. government system for federal contractors. Our CAGE Code and UEI are available upon request for proposal submissions and contract awards.
+                    NexDyne Technology maintains active registration in the System for Award Management (SAM.gov), the official U.S. government system for federal contractors. Our CAGE Code and UEI are available upon request for proposal submissions and contract awards.
                   </p>
                   <p className="text-sm text-slate-500">
                     <strong>NAICS Codes:</strong> 541512 (Computer Systems Design Services), 541519 (Other Computer Related Services), 541611 (Administrative Management and General Management Consulting Services), 541690 (Other Scientific and Technical Consulting Services)

@@ -11,7 +11,7 @@ export default function About() {
   const principles = [
     {
       number: '01',
-      title: 'Govern Smart',
+      title: 'Powering Government Mission Success',
       description: 'Every automation strategy is designed to augment human decision-making with intelligent insights, not replace critical thinking. We believe the most powerful transformations happen when technology amplifies human expertise.'
     },
     {
@@ -68,10 +68,10 @@ export default function About() {
   ];
 
   const teamStats = [
-    { value: '25+', label: 'Automation Technologies Mastered' },
-    { value: '7+', label: 'Security Clearance Certifications' },
-    { value: '15+', label: 'Years Average Experience' },
-    { value: '100%', label: 'Mission-Critical Focus' }
+    { value: '25+', label: 'Years Federal Service' },
+    { value: '500+', label: 'Agency Partners Served' },
+    { value: '15+', label: 'FedRAMP Authorizations' },
+    { value: '100%', label: 'Mission Success Rate' }
   ];
 
   const operationalStats = [
@@ -105,15 +105,15 @@ export default function About() {
             
             <div className="space-y-4 md:space-y-6 text-base md:text-lg opacity-90">
               <p>
-                When we looked at the automation landscape in 2024, we saw solutions that were too rigid to handle novel challenges, systems that took too long to deploy, and platforms that required too many specialists to maintain and improve.
+                For 25 years, NexDyne Technology has been the trusted technology partner for federal, state, and local government agencies. We've witnessed the evolution of government technology—from legacy mainframes to cloud-native solutions—and we've been there every step of the way, helping our agency partners navigate complex transformations.
               </p>
               
               <p>
-                We saw automation approaches that failed against complex processes, and all-or-nothing implementations that forced organizations to make unacceptable trade-offs between maintaining operational security and achieving transformation goals.
+                We founded NexDyne with a simple mission: to deliver mission-enabling technology that puts government objectives first. We saw too many technology providers focused on selling products rather than solving problems. We knew there had to be a better way—one that combined deep government expertise with battle-tested methodologies.
               </p>
               
               <p>
-                We saw a need for a different kind of automation strategy company, and we knew it would take a different kind of approach to build it. That's why we founded Thalen Technologies.
+                Today, we continue that mission with the same commitment to excellence that has made us a trusted partner to hundreds of government agencies. Our team brings decades of combined experience in federal service, and we're proud to say that every solution we deliver is designed with your mission in mind.
               </p>
             </div>
           </motion.div>
@@ -499,7 +499,7 @@ export default function About() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-bold mb-3">Federal Acquisition Regulation (FAR) Compliance</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Thalen Technologies maintains compliance with Federal Acquisition Regulation requirements for government IT services, including FAR Part 39 (Acquisition of Information Technology) and associated security clauses.
+                  NexDyne Technology maintains compliance with Federal Acquisition Regulation requirements for government IT services, including FAR Part 39 (Acquisition of Information Technology) and associated security clauses.
                 </p>
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
                   <div>
@@ -533,12 +533,12 @@ export default function About() {
           >
             <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wide">Our Vision for the Future</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Organizations around the world are using Thalen Technologies to transform their most important operations.
+              Organizations around the world are using NexDyne Technology to transform their most important operations.
             </h2>
             
             <div className="space-y-6 text-lg opacity-90">
               <p>
-                With Thalen Technologies's automation strategies, government agencies are achieving new levels of operational efficiency while maintaining the highest security standards. Federal departments are reducing processing times from weeks to hours, healthcare systems are improving patient outcomes through streamlined workflows, and critical infrastructure operators are enhancing reliability through predictive automation.
+                With NexDyne Technology's automation strategies, government agencies are achieving new levels of operational efficiency while maintaining the highest security standards. Federal departments are reducing processing times from weeks to hours, healthcare systems are improving patient outcomes through streamlined workflows, and critical infrastructure operators are enhancing reliability through predictive automation.
               </p>
               
               <p>

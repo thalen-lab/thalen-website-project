@@ -96,13 +96,13 @@ const pastPerformance: PastPerformanceProject[] = [
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Thalen's automation solution transformed our operations. The 85% automation rate exceeded our expectations and the ROI was realized within 8 months.",
+    quote: "NexDyne's automation solution transformed our operations. The 85% automation rate exceeded our expectations and the ROI was realized within 8 months.",
     author: "Director of Digital Transformation",
     agency: "Department of Defense",
     project: "Process Automation Initiative"
   },
   {
-    quote: "The cloud migration was executed flawlessly. Zero downtime, full FedRAMP compliance, and significant cost savings. Thalen is our trusted partner for mission-critical modernization.",
+    quote: "The cloud migration was executed flawlessly. Zero downtime, full FedRAMP compliance, and significant cost savings. NexDyne is our trusted partner for mission-critical modernization.",
     author: "Chief Information Officer",
     agency: "Defense Agency",
     project: "Cloud Migration Program"
@@ -206,7 +206,7 @@ export default function PastPerformance() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Agency Testimonials</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              What federal leaders say about working with Thalen Technologies
+              What federal leaders say about working with NexDyne Technology
             </p>
           </div>
 

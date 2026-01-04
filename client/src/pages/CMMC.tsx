@@ -272,7 +272,7 @@ export default function CMMC() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 leading-relaxed">
-                  Thalen Technologies is a Cyber AB Registered Practitioner Organization (RPO) with credentialed CMMC consultants authorized to provide advisory services to organizations pursuing CMMC certification.
+                  NexDyne Technology is a Cyber AB Registered Practitioner Organization (RPO) with credentialed CMMC consultants authorized to provide advisory services to organizations pursuing CMMC certification.
                 </p>
                 <p className="text-slate-600 leading-relaxed mt-4">
                   Our consultants have completed training and maintain current knowledge of CMMC requirements, assessment processes, and implementation practices as validated by the Cyber Accreditation Body.

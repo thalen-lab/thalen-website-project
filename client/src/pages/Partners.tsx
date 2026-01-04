@@ -26,7 +26,7 @@ export default function Partners() {
               We implement the platforms you need—without vendor lock-in
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Thalen Technologies maintains strategic partnerships with 50+ FedRAMP and StateRAMP-authorized technology providers. We don't sell platforms—we help federal, state, and local agencies implement the right solutions for their mission requirements.
+              NexDyne Technology maintains strategic partnerships with 50+ FedRAMP and StateRAMP-authorized technology providers. We don't sell platforms—we help federal, state, and local agencies implement the right solutions for their mission requirements.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
