@@ -3888,3 +3888,8 @@
 - [x] Redesign Industry Updates component with card-based layout like case studies
 - [x] Add visual styling consistent with case study cards
 
+
+## Phase 54: Update News Cards Styling
+- [x] Remove colored category badges from news cards
+- [x] Remove orange top borders from news cards
+- [x] Add orange border on hover for news cards

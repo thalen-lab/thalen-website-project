@@ -1,8 +1,9 @@
 import { useState, useRef, useCallback } from "react";
-import { ExternalLink, ChevronLeft, ChevronRight, TrendingUp, FileText, Shield, Scale, Cpu } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils";
+
 
 interface UpdateItem {
   id: string;
@@ -70,20 +71,6 @@ const industryUpdates: UpdateItem[] = [
     description: "New Special Item Numbers (SINs) added for AI/ML services, expanding procurement pathways for emerging technologies.",
   },
 ];
-
-const categoryIcons = {
-  compliance: FileText,
-  security: Shield,
-  policy: Scale,
-  technology: Cpu,
-};
-
-const categoryColors = {
-  compliance: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-  security: "bg-red-500/10 text-red-400 border-red-500/20",
-  policy: "bg-purple-500/10 text-purple-400 border-purple-500/20",
-  technology: "bg-green-500/10 text-green-400 border-green-500/20",
-};
 
 const categoryLabels = {
   compliance: "Compliance",
@@ -252,8 +239,6 @@ export default function IndustryUpdates() {
 
 // Update Card Component
 function UpdateCard({ update }: { update: UpdateItem }) {
-  const CategoryIcon = categoryIcons[update.category];
-  
   return (
     <a
       href={update.sourceUrl}
@@ -262,20 +247,13 @@ function UpdateCard({ update }: { update: UpdateItem }) {
       className="block h-full"
     >
       <Card 
-        className="h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020]/40 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col p-0 hover:-translate-y-1"
+        className="h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col p-0 hover:-translate-y-1"
       >
-        {/* Orange accent bar at top */}
-        <div className="h-1 bg-gradient-to-r from-[#E07020] to-[#F08030]"></div>
-
         {/* Content */}
         <div className="p-6 flex flex-col flex-grow">
-          {/* Category Badge and Date */}
+          {/* Category Label and Date */}
           <div className="flex items-center justify-between mb-4">
-            <span className={cn(
-              "inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full border",
-              categoryColors[update.category]
-            )}>
-              <CategoryIcon className="w-3.5 h-3.5" />
+            <span className="text-xs text-white/60 font-medium uppercase tracking-wider">
               {categoryLabels[update.category]}
             </span>
             <span className="text-xs text-white/50 font-medium">{update.date}</span>
