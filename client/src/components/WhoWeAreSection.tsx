@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, FileCheck, Lock, Building2, Award, Users, Target } from 'lucide-react';
+import { ArrowRight, Shield, FileCheck, Lock, Building2 } from 'lucide-react';
 import { Link } from 'wouter';
 
 export default function WhoWeAreSection() {
@@ -25,12 +25,6 @@ export default function WhoWeAreSection() {
       title: 'Acquisition Alignment',
       description: 'Solutions structured for federal procurement and contract requirements'
     }
-  ];
-
-  const stats = [
-    { value: '25+', label: 'Years of Service', icon: Award },
-    { value: '150+', label: 'Federal Projects', icon: Target },
-    { value: '98%', label: 'Client Retention', icon: Users }
   ];
 
   const certifications = ['FedRAMP', 'CMMC', 'FISMA', 'IL4/IL5', 'SOC 2', 'ISO 27001'];
@@ -67,32 +61,6 @@ export default function WhoWeAreSection() {
           <p className="text-[#0A2540]/70 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
             NexDyne delivers mission-critical technology solutions to federal agencies, defense organizations, and the intelligence community. We specialize in modernizing legacy systems, securing sensitive data, and enabling digital transformation across government operations.
           </p>
-        </motion.div>
-
-        {/* Stats Row */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-3 gap-4 md:gap-8 max-w-3xl mx-auto mb-16 md:mb-20"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.15 + index * 0.1 }}
-              className="text-center group"
-            >
-              <div className="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#E07020]/10 mb-3 group-hover:bg-[#E07020]/15 transition-colors">
-                <stat.icon className="w-5 h-5 md:w-6 md:h-6 text-[#E07020]" />
-              </div>
-              <div className="text-2xl md:text-4xl font-bold text-[#0A2540] mb-1">{stat.value}</div>
-              <div className="text-xs md:text-sm text-[#0A2540]/60 font-medium">{stat.label}</div>
-            </motion.div>
-          ))}
         </motion.div>
 
         {/* Main Content - Two Columns */}
