@@ -410,6 +410,119 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Compliance-First Approach Section - Professional Government Design */}
+      <section className="relative py-20 sm:py-24 md:py-32 lg:py-40 xl:py-48 bg-[#0A2540] overflow-hidden">
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+        
+        <div className="container relative z-10">
+          {/* Section Header - Centered */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
+              <Shield className="w-4 h-4 text-[#4A90D9]" />
+              <span className="text-sm font-medium text-white/90 tracking-wide uppercase">Compliance Excellence</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight">
+              Mission-First, Compliance-Assured
+            </h2>
+            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Every solution we implement starts with your mission objectives. Our team brings deep expertise in critical compliance frameworks—battle-tested in government environments.
+            </p>
+          </motion.div>
+
+          {/* Compliance Certifications Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="mb-12 md:mb-16"
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+              {/* FedRAMP */}
+              <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#E07020]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#E07020]/10">
+                <div className="flex flex-col items-center text-center">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#E07020] transition-colors">FedRAMP</h3>
+                  <p className="text-sm text-white/70 leading-relaxed">Federal Risk & Authorization Program for cloud service providers serving government agencies.</p>
+                </div>
+              </div>
+
+              {/* StateRAMP */}
+              <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#E07020]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#E07020]/10">
+                <div className="flex flex-col items-center text-center">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#E07020] transition-colors">StateRAMP</h3>
+                  <p className="text-sm text-white/70 leading-relaxed">Standardized security framework for state and local government cloud solutions.</p>
+                </div>
+              </div>
+
+              {/* CMMC */}
+              <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#E07020]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#E07020]/10">
+                <div className="flex flex-col items-center text-center">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#E07020] transition-colors">CMMC</h3>
+                  <p className="text-sm text-white/70 leading-relaxed">Cybersecurity Maturity Model Certification for defense industrial base contractors.</p>
+                </div>
+              </div>
+
+              {/* FISMA */}
+              <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#E07020]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#E07020]/10">
+                <div className="flex flex-col items-center text-center">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#E07020] transition-colors">FISMA</h3>
+                  <p className="text-sm text-white/70 leading-relaxed">Federal Information Security Management Act compliance for federal systems.</p>
+                </div>
+              </div>
+
+              {/* HIPAA */}
+              <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#E07020]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#E07020]/10 col-span-2 sm:col-span-1">
+                <div className="flex flex-col items-center text-center">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#E07020] transition-colors">HIPAA</h3>
+                  <p className="text-sm text-white/70 leading-relaxed">Healthcare data protection and privacy standards for medical information systems.</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Bottom Content - Value Proposition & CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-r from-white/5 to-transparent rounded-2xl p-8 md:p-10 border border-white/10"
+          >
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="flex-1 text-center lg:text-left">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                  Your Technology Investments, Protected
+                </h3>
+                <p className="text-white/70 max-w-2xl">
+                  We ensure your technology investments drive mission success while meeting the most stringent compliance mandates. Our compliance-first approach is embedded in every solution we deliver.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild variant="default" size="lg" className="bg-white hover:bg-white/90 text-[#0A2540] font-semibold shadow-lg hover:shadow-xl transition-all px-8 min-h-[52px]">
+                  <Link href="/about#story">
+                    Our Story
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 min-h-[52px]">
+                  <Link href="/our-approach">
+                    Learn Our Approach
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Who We Serve Section - Clean White Background */}
       <section className="relative py-16 sm:py-20 md:py-28 lg:py-36 xl:py-44 bg-white overflow-hidden">
         {/* Subtle background decorative elements */}
