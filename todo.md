@@ -3835,3 +3835,6 @@
 
 ## Phase 53: Hero Section Text Background Update
 - [x] Update hero section text to have neutral grey/dark background like Tygart Technology
+
+## Phase 58: Update Hero Images
+- [x] Update hero image for "Powering Government Mission Success" slide with US Capitol building image

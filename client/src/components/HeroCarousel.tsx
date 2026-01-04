@@ -10,7 +10,7 @@ interface CarouselSlide {
 const slides: CarouselSlide[] = [
   {
     id: 1,
-    image: "/hero-operations-center.jpg",
+    image: "/hero-capitol.jpg",
     title: "Powering Government Mission Success",
     subtitle: "For 25 years, we have partnered with federal, state, and local agencies to modernize critical systems, secure sensitive data, and deliver superior citizen services.",
   },
