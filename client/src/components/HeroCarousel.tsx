@@ -80,7 +80,7 @@ export default function HeroCarousel() {
 
       {/* Bottom Title Banner - Tygart Style with Subtitle */}
       <div className="absolute bottom-0 left-0 right-0 z-20">
-        <div className="bg-[#5C4033]/85 backdrop-blur-sm">
+        <div className="bg-[#3D3D3D]/90 backdrop-blur-sm">
           <div className="container py-5 sm:py-6 md:py-8">
             {/* Main Title */}
             <h1 
