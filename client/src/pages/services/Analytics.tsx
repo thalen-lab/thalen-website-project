@@ -1,39 +1,34 @@
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, BarChart3, Brain, Database, LineChart, Zap, TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Analytics() {
   const capabilities = [
     {
-      icon: Database,
       title: 'Data Infrastructure',
       description: 'Build robust, secure data infrastructure with enterprise-scale reliability and government-grade security.'
     },
     {
-      icon: BarChart3,
       title: 'Real-Time Analytics',
       description: 'Live dashboards and analytics platforms that provide actionable insights at operational scale.'
     },
     {
-      icon: Brain,
       title: 'ML/AI Models',
       description: 'Custom machine learning models for intelligent automation, prediction, and optimization.'
     },
     {
-      icon: LineChart,
       title: 'Predictive Insights',
       description: 'Advanced analytics that forecast trends, identify risks, and optimize decision-making.'
     },
     {
-      icon: Zap,
       title: 'Performance Optimization',
       description: 'Query optimization and data pipeline engineering for maximum performance.'
     },
     {
-      icon: TrendingUp,
       title: 'Business Intelligence',
       description: 'Executive dashboards and reporting that translate data into strategic business value.'
     }
@@ -63,25 +58,28 @@ export default function Analytics() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
+      <section className="relative py-20 text-white bg-[oklch(0.18_0.06_250)]/85">
+        {/* Add background image pattern here */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="container relative">
           <div className="max-w-4xl">
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Data & Analytics</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Data Analytics & Intelligence
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 mb-8">
               Real-time analytics platforms with ML/AI models for intelligent automation and optimized performance at operational scale with government-grade security and predictive insights.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Schedule Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                 View Case Studies
               </Button>
             </div>
@@ -90,22 +88,27 @@ export default function Analytics() {
       </section>
 
       {/* Capabilities Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive Analytics Capabilities</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Capabilities</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Comprehensive Analytics Capabilities</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               From data infrastructure to advanced AI models, we deliver end-to-end analytics solutions.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((capability, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all border-2">
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                 <CardContent className="p-8">
-                  <capability.icon className="h-12 w-12 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-bold mb-3">{capability.title}</h3>
-                  <p className="text-muted-foreground">{capability.description}</p>
+                  <div className="flex items-start">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-4"></span>
+                    <div>
+                      <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{capability.title}</h3>
+                      <p className="text-slate-600">{capability.description}</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -114,28 +117,28 @@ export default function Analytics() {
       </section>
 
       {/* Featured Case Study */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <Card className="overflow-hidden max-w-5xl mx-auto">
+          <Card className="overflow-hidden max-w-5xl mx-auto bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2">
-                <div className="bg-primary text-primary-foreground p-12 flex flex-col justify-center">
-                  <div className="text-sm font-semibold text-accent mb-2">Featured Success Story</div>
+                <div className="bg-[oklch(0.22_0.06_250)] text-white p-12 flex flex-col justify-center">
+                  <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Featured Success Story</p>
                   <h3 className="text-3xl font-bold mb-4">Healthcare System Saves $12M Through AI Analytics</h3>
-                  <p className="text-primary-foreground/90 mb-6">
+                  <p className="text-white/90 mb-6">
                     NexDyne Technology's data intelligence platform transformed a multi-facility healthcare network's decision-making, delivering real-time insights that improved patient outcomes and operational efficiency by 40%.
                   </p>
-                  <Button className="bg-orange-gradient hover:opacity-90 w-fit">
+                  <Button className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 w-fit">
                     Read Full Case Study
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
-                <div className="bg-muted p-12 flex items-center justify-center">
+                <div className="p-12 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-7xl font-bold text-accent mb-2">$12M</div>
-                    <div className="text-lg text-muted-foreground mb-4">Annual Savings</div>
-                    <div className="text-5xl font-bold text-accent mb-2">40%</div>
-                    <div className="text-lg text-muted-foreground">Efficiency Improvement</div>
+                    <div className="text-7xl font-bold text-[oklch(0.65_0.18_55)] mb-2">$12M</div>
+                    <div className="text-lg text-slate-600 mb-4">Annual Savings</div>
+                    <div className="text-5xl font-bold text-[oklch(0.65_0.18_55)] mb-2">40%</div>
+                    <div className="text-lg text-slate-600">Efficiency Improvement</div>
                   </div>
                 </div>
               </div>
@@ -145,24 +148,25 @@ export default function Analytics() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Industry-Specific Use Cases</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Use Cases</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Industry-Specific Use Cases</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Proven analytics solutions tailored to the unique challenges of your industry.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {useCases.map((useCase, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow">
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-3">{useCase.title}</h3>
-                  <p className="text-muted-foreground mb-4">{useCase.description}</p>
+                  <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{useCase.title}</h3>
+                  <p className="text-slate-600 mb-4">{useCase.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {useCase.industries.map((industry, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full">
+                      <span key={idx} className="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full">
                         {industry}
                       </span>
                     ))}
@@ -175,18 +179,19 @@ export default function Analytics() {
       </section>
 
       {/* Technology Stack */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Advanced Analytics Technology Stack</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Technology</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Advanced Analytics Technology Stack</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Enterprise-grade tools and platforms for data analytics and machine learning.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
             {['Snowflake', 'Databricks', 'AWS Redshift', 'Google BigQuery', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Apache Spark', 'Tableau', 'Power BI', 'Looker', 'Grafana'].map((tech, index) => (
-              <div key={index} className="bg-card border border-border rounded-lg p-4 text-center font-medium">
+              <div key={index} className="bg-white border-2 border-slate-200 rounded-lg p-4 text-center font-medium text-[oklch(0.20_0.05_250)]">
                 {tech}
               </div>
             ))}
@@ -195,13 +200,13 @@ export default function Analytics() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Turn Data Into Strategic Advantage</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Learn how our analytics solutions provide insights and support measurable business outcomes.
           </p>
-          <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+          <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
             Schedule Data Assessment
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

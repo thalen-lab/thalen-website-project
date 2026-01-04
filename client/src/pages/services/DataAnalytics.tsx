@@ -1,37 +1,34 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, BarChart3, Brain, Database, LineChart, Shield, Users, Award, TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { motion } from 'framer-motion';
 
 export default function DataAnalytics() {
   // Primary service offerings (4 core capabilities)
   const primaryServices = [
     {
-      icon: LineChart,
       title: 'Analytics Platform Implementation',
       description: 'Optimize your existing analytics tools and dashboards first—or implement FedRAMP-authorized platforms (Tableau Government, Power BI Gov, Qlik Government) when compliance mandates it or your current tools lack needed capabilities.',
       benefits: ['FedRAMP platform selection', 'Custom dashboard development', 'Data source integration'],
       link: '/services/data-analytics/visualization'
     },
     {
-      icon: Brain,
       title: 'AI/ML Model Development & Deployment',
       description: 'Build custom ML models on your existing infrastructure and data science tools—or deploy FedRAMP AI/ML platforms (AWS SageMaker GovCloud, Azure ML Gov) when enterprise-scale model governance and compliance are required.',
       benefits: ['Explainable AI implementation', 'Model governance frameworks', 'Bias detection & mitigation'],
       link: '/services/data-analytics/ml-ai'
     },
     {
-      icon: Database,
       title: 'Data Engineering & Pipeline Development',
       description: 'Modernize your existing data pipelines with custom ETL scripts and integrations—or implement FedRAMP ETL platforms (Informatica Gov, Talend, AWS Glue) when enterprise-scale data orchestration and governance are needed.',
       benefits: ['Automated data pipelines', 'Data quality frameworks', 'Real-time processing'],
       link: '/services/data-analytics/engineering'
     },
     {
-      icon: BarChart3,
       title: 'Data Strategy & Governance',
       description: 'Develop comprehensive data strategies that maximize your existing data assets and infrastructure—with FedRAMP platform recommendations only when new capabilities align with mission objectives and compliance requirements.',
       benefits: ['6-week strategy assessment', '3-year implementation roadmap', 'Quick wins identification'],
@@ -49,17 +46,14 @@ export default function DataAnalytics() {
 
   const keyDifferentiators = [
     {
-      icon: Shield,
       title: 'FedRAMP Analytics Platforms',
       description: 'Deep implementation experience with 30+ FedRAMP-authorized analytics, BI, and AI/ML platforms across all major vendors.'
     },
     {
-      icon: Users,
       title: 'Vendor-Neutral Analytics Consulting',
       description: 'We help you select the RIGHT analytics platforms for your mission requirements, then integrate them with existing systems.'
     },
     {
-      icon: Award,
       title: 'Mission-Focused Outcomes',
       description: 'Analytics solutions designed for measurable mission impact—faster decisions, improved outcomes, and operational efficiency.'
     }
@@ -109,9 +103,17 @@ export default function DataAnalytics() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/data-analytics-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
           {/* Breadcrumb */}
           <div className="mb-8">
             <Breadcrumb 
@@ -122,241 +124,301 @@ export default function DataAnalytics() {
               variant="light" 
             />
           </div>
-          <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Implementation Services
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Implementation Services</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Data Analytics & Intelligence
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
               NexDyne Technology delivers analytics through a dual approach: first, we optimize your existing data infrastructure and analytics capabilities—then implement FedRAMP-authorized BI platforms (Tableau Gov, Power BI Gov) when compliance requires it or new analytical capabilities are needed. Vendor-neutral consulting with proven expertise across 30+ analytics platforms.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
                   Request Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/services/data-analytics/assessment">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/data-analytics/assessment">
                   Take Data Maturity Assessment
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Key Differentiators */}
-      <section className="py-16 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             {keyDifferentiators.map((item, index) => (
-              <div key={index} className="text-center">
-                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{item.title}</h3>
+                <p className="text-slate-600">{item.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Primary Analytics Services */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Analytics Implementation Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Capabilities</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Core Analytics Implementation Services</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               End-to-end analytics capabilities from strategy to deployment, designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {primaryServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
-                <CardContent className="p-8">
-                  <service.icon className="h-16 w-16 text-primary mb-6" />
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 group">
+                  <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{service.title}</h3>
+                  <p className="text-slate-600 leading-relaxed mb-6">{service.description}</p>
                   
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-2 mb-8">
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start text-sm">
-                        <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-2"></span>
-                        <span>{benefit}</span>
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                        <span className="text-sm text-slate-700">{benefit}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <Link href={service.link}>
-                    <Button variant="outline" className="w-full border-2 border-dashed border-primary/30 hover:border-accent hover:bg-accent/5">
+                  <Button asChild variant="outline" className="w-full border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:bg-[oklch(0.97_0.01_250)]">
+                    <Link href={service.link}>
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                    </Link>
+                  </Button>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
           {/* Additional Capabilities - Compact Format */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Additional Analytics Capabilities</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16"
+          >
+            <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-8 text-center">Additional Analytics Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 flex-shrink-0 mr-4"></span>
-                  <div>
-                    <h4 className="font-semibold mb-1">{capability.name}</h4>
-                    <p className="text-sm text-muted-foreground">{capability.description}</p>
-                  </div>
-                </div>
+                <Card key={index} className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <h4 className="font-semibold text-[oklch(0.20_0.05_250)] mb-2">{capability.name}</h4>
+                  <p className="text-sm text-slate-600">{capability.description}</p>
+                </Card>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Government Analytics Experience */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Government Analytics Implementation Success</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Results</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Government Analytics Implementation Success</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Experience implementing analytics platforms and AI/ML solutions across government agencies with measurable mission impact.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {governmentExperience.map((exp, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
-                <CardContent className="p-8">
-                  <TrendingUp className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
-                  <p className="text-lg font-bold text-accent mb-4">{exp.outcome}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{exp.details}</p>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{exp.agency}</h3>
+                  <p className="text-sm text-slate-500 mb-3">{exp.project}</p>
+                  <p className="text-lg font-bold text-[oklch(0.65_0.18_55)] mb-4">{exp.outcome}</p>
+                  <p className="text-sm text-slate-600 leading-relaxed">{exp.details}</p>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/case-studies">
-              <Button variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)]">
+              <Link href="/case-studies">
                 View All Analytics Case Studies
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* FedRAMP Analytics Platform Expertise */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Analytics Platform Expertise</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Expertise</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">FedRAMP-Authorized Analytics Platform Expertise</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We implement and integrate FedRAMP-authorized analytics platforms from leading vendors, helping you select the right tools for your mission.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {fedrampPlatforms.map((category, index) => (
-              <Card key={index} className="border-2 hover:border-accent hover:shadow-2xl transition-all active:scale-95">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">{category.category}</h3>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{category.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
+                      <span key={idx} className="text-xs bg-[oklch(0.97_0.01_250)] text-slate-700 px-3 py-1 rounded-full font-semibold">
                         {platform}
                       </span>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
+            <p className="text-slate-600 mb-6">
               Plus 20+ additional FedRAMP-authorized analytics platforms including SAS Government, SPSS, Alteryx, and more.
             </p>
-            <Link href="/partners">
-              <Button variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)]">
+              <Link href="/partners">
                 View All Analytics Platforms
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Contact us to discuss your agency's data analytics requirements and evaluate available platform options.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact Us</h2>
+            <p className="text-xl text-white/90 mb-8">
+              Contact us to discuss your agency's data analytics requirements and evaluate available platform options.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Request Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-            </Link>
-            <Link href="/services/data-analytics/assessment">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Take Data Maturity Assessment
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/data-analytics/assessment">
+                  Take Data Maturity Assessment
+                </Link>
               </Button>
-            </Link>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Case Study CTA */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Success Story
-            </div>
-            <h2 className="text-4xl font-bold mb-4">See Government Data Analytics in Action</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">See Government Data Analytics in Action</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Learn how a state attorney general's office prevented $50M in fraud with CJIS-compliant real-time ML analytics processing 10M+ daily transactions.
             </p>
-          </div>
-          <Card className="max-w-4xl mx-auto overflow-hidden hover:shadow-2xl transition-all active:scale-95">
+          </motion.div>
+          <Card className="max-w-4xl mx-auto overflow-hidden border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
             <div className="grid md:grid-cols-2">
-              <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
-                <div className="inline-block bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
+              <div className="bg-[oklch(0.97_0.01_250)] p-12 flex flex-col justify-center">
+                <span className="inline-block px-3 py-1 bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.55_0.18_55)] rounded-full text-xs font-semibold mb-4 w-fit">
                   State Government
-                </div>
-                <h3 className="text-3xl font-bold mb-4">State Attorney General Prevents $50M in Fraud</h3>
-                <p className="text-muted-foreground mb-6">
+                </span>
+                <h3 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State Attorney General Prevents $50M in Fraud</h3>
+                <p className="text-slate-600 mb-6">
                   Implemented CJIS-compliant fraud detection system processing 10M+ daily transactions with real-time ML analytics and preventing $50M in fraudulent activities annually.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div>
-                    <div className="text-3xl font-bold text-accent">$50M+</div>
-                    <div className="text-sm text-muted-foreground">Annual Fraud Prevented</div>
+                    <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)]">$50M+</div>
+                    <div className="text-sm text-slate-500">Annual Fraud Prevented</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-accent">10M+</div>
-                    <div className="text-sm text-muted-foreground">Daily Transactions</div>
+                    <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)]">10M+</div>
+                    <div className="text-sm text-slate-500">Daily Transactions</div>
                   </div>
                 </div>
-                <Link href="/case-studies/state-attorney-general">
-                  <Button size="lg" className="bg-orange-gradient hover:opacity-90 w-full">
+                <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg w-full">
+                  <Link href="/case-studies/state-attorney-general">
                     View Full Case Study
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
               <div className="relative h-64 md:h-auto">
                 <img 

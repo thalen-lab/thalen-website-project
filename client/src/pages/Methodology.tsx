@@ -2,265 +2,203 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { motion } from 'framer-motion';
 
 export default function Methodology() {
   const handleDownloadPDF = () => {
-    // PDF will be generated and placed in public folder
     window.open('/rapid-framework-methodology.pdf', '_blank');
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
-      
-      {/* Hero Section - Clean and Minimal */}
-      <section className="pt-32 pb-20 px-4">
-        <div className="container max-w-4xl">
-          {/* Breadcrumb */}
-          <div className="mb-8">
-            <Breadcrumb 
-              items={[{ label: 'Methodology' }]} 
-              variant="dark" 
-            />
+
+      {/* Hero Section */}
+      <section className="relative pt-40 pb-24 px-4 bg-cover bg-center" style={{ backgroundImage: "url('/images/methodology-hero-bg.jpg')" }}>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="container max-w-4xl relative z-10">
+          <div className="mb-6">
+            <Breadcrumb items={[{ label: 'Methodology' }]} />
           </div>
           <div className="text-center">
-            <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Our Methodology</p>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            The RAPID Framework
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
-            Structured 4-phase approach helping federal, state, and local agencies modernize operations, achieve compliance, and deliver mission-critical results
-          </p>
-          
-          {/* Download PDF Button */}
-          <Button 
-            onClick={handleDownloadPDF}
-            size="lg"
-            className="gap-2"
-          >
-            <Download className="w-5 h-5" />
-            Download Framework Overview (PDF)
-          </Button>
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Our Methodology</p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+              The RAPID Framework
+            </h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-10">
+              Structured 4-phase approach helping federal, state, and local agencies modernize operations, achieve compliance, and deliver mission-critical results
+            </p>
+            <Button 
+              onClick={handleDownloadPDF}
+              size="lg"
+              className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-slate-200 gap-2"
+            >
+              Download Framework Overview
+              <ArrowRight className="w-5 h-5" />
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Timeline Overview - Minimal Design */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container max-w-6xl">
+      {/* Timeline Overview */}
+      <section className="py-16 px-4 bg-[oklch(0.97_0.01_250)]">
+        <div className="container max-w-6xl text-center text-[oklch(0.20_0.05_250)]">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div className="text-center">
+            <div>
               <div className="text-4xl font-bold mb-2">2-3 weeks</div>
-              <div className="text-sm text-muted-foreground">Research & Assessment</div>
+              <div className="text-sm text-slate-600">Research & Assessment</div>
             </div>
-            <div className="text-center">
+            <div>
               <div className="text-4xl font-bold mb-2">3-4 weeks</div>
-              <div className="text-sm text-muted-foreground">Architecture & Planning</div>
+              <div className="text-sm text-slate-600">Architecture & Planning</div>
             </div>
-            <div className="text-center">
+            <div>
               <div className="text-4xl font-bold mb-2">8-10 weeks</div>
-              <div className="text-sm text-muted-foreground">Implementation & Delivery</div>
+              <div className="text-sm text-slate-600">Implementation & Delivery</div>
             </div>
-            <div className="text-center">
+            <div>
               <div className="text-4xl font-bold mb-2">Ongoing</div>
-              <div className="text-sm text-muted-foreground">Performance & Optimization</div>
+              <div className="text-sm text-slate-600">Performance & Optimization</div>
             </div>
           </div>
-          
-          <div className="text-center pt-8 border-t border-border/50">
-            <div className="text-2xl font-bold mb-2">90-day implementation timeline · 100% client success rate · Zero operational disruption</div>
+          <div className="pt-8 border-t border-slate-200">
+            <p className="text-2xl font-bold">90-day implementation timeline · 100% client success rate · Zero operational disruption</p>
           </div>
         </div>
       </section>
 
-      {/* Four Phases - 2x2 Grid Layout */}
-      <section className="py-20 px-4">
+      {/* Four Phases */}
+      <section className="py-20 px-4 bg-white">
         <div className="container max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+          <div className="text-center mb-12">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Framework</p>
+            <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)]">Four Phases to Modernization Success</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            {/* Phase 1: Research & Assessment */}
-            <div>
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
-                  1
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold mb-2">Research & Assessment</h2>
-                  <div className="h-px bg-border mb-4"></div>
-                  <p className="text-muted-foreground mb-4">
-                    Comprehensive assessment of your agency's current operations, systems, and processes to identify modernization opportunities and establish ROI baseline.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Current state assessment and stakeholder interviews</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Opportunity identification matrix with impact scores</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>ROI projection model with payback period analysis</span>
-                    </div>
+            {/* Phase 1-4 Cards */}
+            {[{
+              phase: 1,
+              title: "Research & Assessment",
+              description: "Comprehensive assessment of your agency's current operations, systems, and processes to identify modernization opportunities and establish ROI baseline.",
+              items: [
+                "Current state assessment and stakeholder interviews",
+                "Opportunity identification matrix with impact scores",
+                "ROI projection model with payback period analysis"
+              ]
+            }, {
+              phase: 2,
+              title: "Architecture & Planning",
+              description: "Solution architecture design - whether modernizing existing systems, implementing FedRAMP/StateRAMP platforms, or integrating both - with detailed implementation roadmap.",
+              items: [
+                "FedRAMP/StateRAMP platform evaluation and selection",
+                "Integration patterns and data flow architecture",
+                "Security controls mapping and ATO documentation plan"
+              ]
+            }, {
+              phase: 3,
+              title: "Implementation & Delivery",
+              description: "Hands-on implementation of system modernization, process automation, and compliance documentation - delivering measurable results with zero operational disruption.",
+              items: [
+                "Agile sprints with continuous testing and validation",
+                "Comprehensive ATO package preparation and submission",
+                "Stakeholder training and change management support"
+              ]
+            }, {
+              phase: 4,
+              title: "Performance & Optimization",
+              description: "Ongoing monitoring, optimization, and support to ensure sustained performance improvements and continuous ROI growth.",
+              items: [
+                "Performance dashboards with real-time KPI tracking",
+                "Quarterly optimization reviews and enhancement roadmap",
+                "Predictive analytics for proactive issue resolution"
+              ]
+            }].map((phaseItem, index) => (
+              <motion.div 
+                key={phaseItem.phase}
+                className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="flex items-start gap-6">
+                  <div className="text-4xl font-bold text-[oklch(0.65_0.18_55)]">0{phaseItem.phase}</div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{phaseItem.title}</h3>
+                    <p className="text-slate-600 mb-6">{phaseItem.description}</p>
+                    <ul className="space-y-3 text-slate-600">
+                      {phaseItem.items.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Phase 2: Architecture & Planning */}
-            <div>
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
-                  2
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold mb-2">Architecture & Planning</h2>
-                  <div className="h-px bg-border mb-4"></div>
-                  <p className="text-muted-foreground mb-4">
-                    Solution architecture design - whether modernizing existing systems, implementing FedRAMP/StateRAMP platforms, or integrating both - with detailed implementation roadmap.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>FedRAMP/StateRAMP platform evaluation and selection</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Integration patterns and data flow architecture</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Security controls mapping and ATO documentation plan</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Phase 3: Implementation & Delivery */}
-            <div>
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
-                  3
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold mb-2">Implementation & Delivery</h2>
-                  <div className="h-px bg-border mb-4"></div>
-                  <p className="text-muted-foreground mb-4">
-                    Hands-on implementation of system modernization, process automation, and compliance documentation - delivering measurable results with zero operational disruption.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Agile sprints with continuous testing and validation</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Comprehensive ATO package preparation and submission</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Stakeholder training and change management support</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Phase 4: Performance & Optimization */}
-            <div>
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 border-2 border-border rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
-                  4
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold mb-2">Performance & Optimization</h2>
-                  <div className="h-px bg-border mb-4"></div>
-                  <p className="text-muted-foreground mb-4">
-                    Ongoing monitoring, optimization, and support to ensure sustained performance improvements and continuous ROI growth.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Performance dashboards with real-time KPI tracking</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Quarterly optimization reviews and enhancement roadmap</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Predictive analytics for proactive issue resolution</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </motion.div>
+            ))}
 
           </div>
         </div>
       </section>
 
       {/* Success Metrics */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container max-w-4xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Framework Success Metrics</h2>
+      <section className="py-16 px-4 bg-[oklch(0.97_0.01_250)]">
+        <div className="container max-w-4xl text-center">
+          <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Results</p>
+          <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-12">Framework Success Metrics</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-[oklch(0.20_0.05_250)]">
+            <div>
               <div className="text-5xl font-bold mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Client Project Success Rate</div>
+              <div className="text-sm text-slate-600">Client Project Success Rate</div>
             </div>
-            <div className="text-center">
+            <div>
               <div className="text-5xl font-bold mb-2">90 Days</div>
-              <div className="text-sm text-muted-foreground">Average ATO Achievement Timeline</div>
+              <div className="text-sm text-slate-600">Average ATO Achievement</div>
             </div>
-            <div className="text-center">
+            <div>
               <div className="text-5xl font-bold mb-2">Zero</div>
-              <div className="text-sm text-muted-foreground">Client Operational Disruptions</div>
+              <div className="text-sm text-slate-600">Operational Disruptions</div>
             </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            <div className="text-center">
+            <div className="sm:col-span-1">
               <div className="text-5xl font-bold mb-2">$2.3B</div>
-              <div className="text-sm text-muted-foreground">Total Agency ROI Delivered</div>
+              <div className="text-sm text-slate-600">Total Agency ROI Delivered</div>
             </div>
-            <div className="text-center">
+            <div className="sm:col-span-1">
               <div className="text-5xl font-bold mb-2">85%</div>
-              <div className="text-sm text-muted-foreground">Average Agency Efficiency Gain</div>
+              <div className="text-sm text-slate-600">Average Efficiency Gain</div>
             </div>
-            <div className="text-center">
+            <div className="sm:col-span-1">
               <div className="text-5xl font-bold mb-2">18 Mo</div>
-              <div className="text-sm text-muted-foreground">Average Agency ROI Payback</div>
+              <div className="text-sm text-slate-600">Average ROI Payback</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Request an assessment to evaluate how our methodology applies to your agency's requirements.
+          <h2 className="text-3xl font-bold mb-4">Modernize Your Agency with Confidence</h2>
+          <p className="text-lg text-white/80 mb-8">
+            Request a complimentary assessment to see how the RAPID Framework can be tailored to your agency's specific modernization and compliance requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg">
-                Request Assessment
+              <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-slate-200 w-full sm:w-auto">
+                Request Free Assessment
               </Button>
             </Link>
             <Button 
               variant="outline" 
               size="lg"
               onClick={handleDownloadPDF}
-              className="gap-2"
+              className="border-white/50 text-white hover:bg-white/10 hover:text-white w-full sm:w-auto gap-2"
             >
-              <Download className="w-5 h-5" />
               Download Framework PDF
             </Button>
           </div>

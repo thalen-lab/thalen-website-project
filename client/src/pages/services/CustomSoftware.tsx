@@ -2,16 +2,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { 
-  ArrowRight, Cloud, Code2, Smartphone, Rocket, CheckCircle2, Layers, Database, Users, TrendingUp 
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 
 export default function CustomSoftware() {
   const services = [
     {
-      icon: Cloud,
       title: "Enterprise SaaS Platforms",
       description: "Multi-tenant SaaS applications with subscription management, analytics, and scalable infrastructure.",
       features: [
@@ -23,7 +21,6 @@ export default function CustomSoftware() {
       link: "/services/custom-software/enterprise-saas"
     },
     {
-      icon: Rocket,
       title: "Startup MVP Development",
       description: "Rapid prototyping and MVP development to validate your product-market fit and secure funding.",
       features: [
@@ -35,7 +32,6 @@ export default function CustomSoftware() {
       link: "/services/custom-software/startup-mvp"
     },
     {
-      icon: Code2,
       title: "Custom Business Applications",
       description: "Tailored internal tools, CRMs, ERPs, and workflow automation to streamline operations.",
       features: [
@@ -47,7 +43,6 @@ export default function CustomSoftware() {
       link: "/services/custom-software/business-apps"
     },
     {
-      icon: Layers,
       title: "API & Microservices Development",
       description: "RESTful APIs, GraphQL, and microservices architecture for modern, scalable applications.",
       features: [
@@ -59,7 +54,6 @@ export default function CustomSoftware() {
       link: "/services/custom-software/api-microservices"
     },
     {
-      icon: Smartphone,
       title: "Mobile App Development",
       description: "Native iOS/Android apps and cross-platform solutions with React Native or Flutter.",
       features: [
@@ -71,7 +65,6 @@ export default function CustomSoftware() {
       link: "/services/custom-software/mobile-apps"
     },
     {
-      icon: Database,
       title: "Legacy System Modernization",
       description: "Transform outdated monolithic applications into modern, cloud-native microservices.",
       features: [
@@ -127,19 +120,16 @@ export default function CustomSoftware() {
 
   const engagementModels = [
     {
-      icon: Rocket,
       title: "Fixed-Price Projects",
       description: "Well-defined scope with fixed timeline and budget. Ideal for MVPs and small projects.",
       bestFor: "MVPs, prototypes, defined requirements"
     },
     {
-      icon: Users,
       title: "Dedicated Team",
       description: "Dedicated developers working exclusively on your project. Full control and flexibility.",
       bestFor: "Long-term projects, evolving requirements"
     },
     {
-      icon: TrendingUp,
       title: "Time & Materials",
       description: "Pay for actual time and resources used. Maximum flexibility for changing requirements.",
       bestFor: "Complex projects, uncertain scope"
@@ -147,13 +137,13 @@ export default function CustomSoftware() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          {/* Breadcrumb */}
+      <section className="relative bg-cover bg-center text-white" style={{ backgroundImage: "url(/img/patterns/hero-pattern.svg)" }}>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="relative container py-20">
           <div className="mb-8">
             <Breadcrumb 
               items={[
@@ -164,23 +154,23 @@ export default function CustomSoftware() {
             />
           </div>
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-6">
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               Commercial & Enterprise Solutions
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            </p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Custom Software Solutions
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 mb-8">
               Bespoke software engineered to solve your unique business challenges. From concept to deployment, we deliver SaaS platforms, mobile apps, and enterprise solutions that drive competitive advantage.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>
+              <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90" asChild>
                 <Link href="/contact">
                   Discuss Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                 View Case Studies
               </Button>
             </div>
@@ -189,78 +179,69 @@ export default function CustomSoftware() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Custom Software Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Services</p>
+            <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Our Custom Software Services</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               From startup MVPs to enterprise-grade platforms, we build software that scales with your business.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all group">
-                <CardContent className="p-8">
-                  <service.icon className="h-12 w-12 text-accent mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href={service.link}>
-                    <a className="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all active:scale-95">
-                      Learn More
-                      <ArrowRight className="h-5 w-5" />
-                    </a>
-                  </Link>
-                </CardContent>
-              </Card>
+              <motion.div key={index} whileHover={{ y: -5 }}>
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-8 flex flex-col h-full">
+                    <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{service.title}</h3>
+                    <p className="text-slate-600 mb-6 flex-grow">{service.description}</p>
+                    <ul className="space-y-3 mb-6">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-slate-600">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href={service.link}>
+                      <a className="inline-flex items-center gap-2 text-[oklch(0.65_0.18_55)] font-semibold hover:gap-3 transition-all active:scale-95">
+                        Learn More
+                        <ArrowRight className="h-5 w-5" />
+                      </a>
+                    </Link>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Development Process */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Agile Development Process</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
+            <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Our Agile Development Process</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               A proven methodology that delivers working software in weeks, not months.
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              {
-                phase: "Discovery",
-                description: "Requirements gathering, user research, and technical architecture planning."
-              },
-              {
-                phase: "Design",
-                description: "UI/UX design, prototyping, and user testing for optimal experience."
-              },
-              {
-                phase: "Development",
-                description: "Agile sprints with continuous integration and weekly demos."
-              },
-              {
-                phase: "Launch & Support",
-                description: "Deployment, monitoring, and ongoing maintenance and enhancements."
-              }
+              { phase: "Discovery", description: "Requirements gathering, user research, and technical architecture planning." },
+              { phase: "Design", description: "UI/UX design, prototyping, and user testing for optimal experience." },
+              { phase: "Development", description: "Agile sprints with continuous integration and weekly demos." },
+              { phase: "Launch & Support", description: "Deployment, monitoring, and ongoing maintenance and enhancements." }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-[oklch(0.75_0.15_55)] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{item.phase}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
+                <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{item.phase}</h3>
+                <p className="text-slate-600">{item.description}</p>
               </div>
             ))}
           </div>
@@ -268,22 +249,23 @@ export default function CustomSoftware() {
       </section>
 
       {/* Technology Stack */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Modern Technology Stack</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Technologies</p>
+            <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Modern Technology Stack</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We use current technologies to build fast, scalable, and maintainable applications.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {techStack.map((stack, index) => (
-              <div key={index} className="text-center">
-                <h3 className="text-lg font-bold mb-4 text-accent">{stack.category}</h3>
-                <div className="space-y-2">
+              <div key={index}>
+                <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-4 text-center">{stack.category}</h3>
+                <div className="flex flex-col gap-2">
                   {stack.technologies.map((tech, idx) => (
-                    <div key={idx} className="px-4 py-2 bg-secondary rounded-lg text-sm">
+                    <div key={idx} className="px-4 py-2 bg-[oklch(0.97_0.01_250)] rounded-lg text-sm text-slate-600 text-center">
                       {tech}
                     </div>
                   ))}
@@ -295,80 +277,85 @@ export default function CustomSoftware() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Success Stories</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Stories</p>
+            <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Real Results, Real Impact</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Real results from our custom software engagements with startups and enterprises.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
-                  <div className="text-sm text-accent font-semibold mb-2">{study.industry}</div>
-                  <h3 className="text-2xl font-bold mb-4">{study.title}</h3>
-                  <p className="text-muted-foreground mb-6">{study.description}</p>
-                  <div className="space-y-3">
-                    {study.metrics.map((metric, idx) => (
-                      <div key={idx} className="flex justify-between items-center border-t pt-3">
-                        <span className="text-sm text-muted-foreground">{metric.label}</span>
-                        <span className="text-lg font-bold text-accent">{metric.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <motion.div key={index} whileHover={{ y: -5 }}>
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-8 flex flex-col h-full">
+                    <p className="text-sm text-[oklch(0.65_0.18_55)] font-semibold mb-2">{study.industry}</p>
+                    <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4 flex-grow">{study.title}</h3>
+                    <p className="text-slate-600 mb-6">{study.description}</p>
+                    <div className="space-y-3 mt-auto">
+                      {study.metrics.map((metric, idx) => (
+                        <div key={idx} className="flex justify-between items-center border-t border-slate-200 pt-3">
+                          <span className="text-sm text-slate-600">{metric.label}</span>
+                          <span className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{metric.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Engagement Models */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Flexible Engagement Models</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Collaboration Models</p>
+            <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Flexible Engagement Models</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Choose the engagement model that best fits your project needs and budget.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {engagementModels.map((model, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8 text-center">
-                  <model.icon className="h-12 w-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{model.title}</h3>
-                  <p className="text-muted-foreground mb-6">{model.description}</p>
-                  <div className="pt-4 border-t">
-                    <div className="text-sm font-semibold text-accent mb-1">Best For:</div>
-                    <div className="text-sm text-muted-foreground">{model.bestFor}</div>
-                  </div>
-                </CardContent>
-              </Card>
+              <motion.div key={index} whileHover={{ y: -5 }}>
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-8 text-center flex flex-col h-full">
+                    <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{model.title}</h3>
+                    <p className="text-slate-600 mb-6 flex-grow">{model.description}</p>
+                    <div className="pt-4 border-t border-slate-200 mt-auto">
+                      <div className="text-sm font-semibold text-[oklch(0.65_0.18_55)] mb-1">Best For:</div>
+                      <div className="text-sm text-slate-600">{model.bestFor}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Your Custom Solution?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Let's discuss your project requirements and create a tailored development plan.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>
+            <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90" asChild>
               <Link href="/contact">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10" asChild>
+            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]" asChild>
               <Link href="/methodology">
                 View Our Process
               </Link>

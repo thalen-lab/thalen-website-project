@@ -1,5 +1,5 @@
+
 import { motion } from "framer-motion";
-import { Award, Shield, Code, Database, Cloud, Lock, Users, Briefcase } from "lucide-react";
 import { APP_TITLE } from "@/const";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
@@ -80,13 +80,14 @@ export default function Team() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-navy-gradient text-primary-foreground py-24">
-        <div className="container">
-          {/* Breadcrumb */}
+      <section className="relative text-white py-24">
+        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?fit=crop&w=1920&q=80')"}}></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="container relative z-10">
           <div className="mb-8">
             <Breadcrumb 
               items={[
@@ -103,13 +104,13 @@ export default function Team() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <span className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              OUR TEAM
-            </span>
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
+              Our Team
+            </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Meet Our Automation Experts
             </h1>
-            <p className="text-xl opacity-90 leading-relaxed">
+            <p className="text-xl text-white/90 leading-relaxed">
               Elite team of automation strategists, security architects, and technology leaders with active clearances and deep expertise in government and enterprise transformation.
             </p>
           </motion.div>
@@ -117,59 +118,31 @@ export default function Team() {
       </section>
 
       {/* Team Stats */}
-      <section className="py-16 bg-secondary">
+      <section className="py-16 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              transition={{ duration: 0.5 }}
-              className="text-center"
-            >
-              <div className="text-4xl font-bold text-primary mb-2">150+</div>
-              <div className="text-muted-foreground">Combined Years Experience</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ duration: 0.5 }}>
+              <div className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-2">150+</div>
+              <div className="text-slate-600">Combined Years Experience</div>
             </motion.div>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-center"
-            >
-              <div className="text-4xl font-bold text-primary mb-2">40+</div>
-              <div className="text-muted-foreground">Active Certifications</div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ duration: 0.5, delay: 0.1 }}>
+              <div className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-2">40+</div>
+              <div className="text-slate-600">Active Certifications</div>
             </motion.div>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-muted-foreground">Security Cleared</div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ duration: 0.5, delay: 0.2 }}>
+              <div className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-2">100%</div>
+              <div className="text-slate-600">Security Cleared</div>
             </motion.div>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-center"
-            >
-              <div className="text-4xl font-bold text-primary mb-2">200+</div>
-              <div className="text-muted-foreground">Successful Deployments</div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ duration: 0.5, delay: 0.3 }}>
+              <div className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-2">200+</div>
+              <div className="text-slate-600">Successful Deployments</div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Team Members */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -179,10 +152,11 @@ export default function Team() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Leadership & Expertise
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Leadership & Expertise</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Our Core Team
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Our team combines deep technical expertise with real-world operational experience in the most demanding government and enterprise environments.
             </p>
           </motion.div>
@@ -196,7 +170,7 @@ export default function Team() {
                 viewport={{ once: true }}
                 variants={fadeInUp}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-lg border-2 border-border overflow-hidden hover:border-accent hover:shadow-lg transition-all"
+                className="bg-white border-2 border-slate-200 rounded-lg overflow-hidden hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300"
               >
                 <div className="aspect-square overflow-hidden">
                   <img
@@ -206,56 +180,41 @@ export default function Team() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-accent font-semibold mb-4">{member.title}</p>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{member.bio}</p>
+                  <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-1">{member.name}</h3>
+                  <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4">{member.title}</p>
+                  <p className="text-slate-600 text-sm mb-6 leading-relaxed">{member.bio}</p>
 
-                  <div className="space-y-3 mb-4">
-                    <div className="flex items-start gap-2">
-                      <Shield className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                      <div className="text-sm">
-                        <span className="font-semibold">Clearance:</span> {member.clearance}
-                      </div>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-sm font-semibold text-[oklch(0.20_0.05_250)] mb-3">Key Details</p>
+                      <ul className="space-y-2 text-sm text-slate-600">
+                        <li className="flex items-start"><span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span><span className="ml-3"><span className="font-semibold">Clearance:</span> {member.clearance}</span></li>
+                        <li className="flex items-start"><span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span><span className="ml-3"><span className="font-semibold">Experience:</span> {member.experience}</span></li>
+                      </ul>
                     </div>
-                    <div className="flex items-start gap-2">
-                      <Briefcase className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                      <div className="text-sm">
-                        <span className="font-semibold">Experience:</span> {member.experience}
-                      </div>
-                    </div>
-                  </div>
 
-                  <div className="mb-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Code className="w-4 h-4 text-accent" />
-                      <span className="text-sm font-semibold">Specializations</span>
+                    <div>
+                      <p className="text-sm font-semibold text-[oklch(0.20_0.05_250)] mb-3">Specializations</p>
+                      <ul className="space-y-2 text-sm text-slate-600">
+                        {member.specializations.map((spec) => (
+                          <li key={spec} className="flex items-start">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                            <span className="ml-3">{spec}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="flex flex-wrap gap-2">
-                      {member.specializations.map((spec) => (
-                        <span
-                          key={spec}
-                          className="text-xs bg-muted text-accent px-2 py-1 rounded"
-                        >
-                          {spec}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
 
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Award className="w-4 h-4 text-accent" />
-                      <span className="text-sm font-semibold">Certifications</span>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {member.certifications.map((cert) => (
-                        <span
-                          key={cert}
-                          className="text-xs bg-secondary text-foreground px-2 py-1 rounded"
-                        >
-                          {cert}
-                        </span>
-                      ))}
+                    <div>
+                      <p className="text-sm font-semibold text-[oklch(0.20_0.05_250)] mb-3">Certifications</p>
+                      <ul className="space-y-2 text-sm text-slate-600">
+                        {member.certifications.map((cert) => (
+                          <li key={cert} className="flex items-start">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                            <span className="ml-3">{cert}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -266,7 +225,7 @@ export default function Team() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient diagonal-top text-primary-foreground">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -279,19 +238,19 @@ export default function Team() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Work with Our Team?
             </h2>
-            <p className="text-xl opacity-90 mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Schedule a strategic assessment with our automation experts to discuss your transformation objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 bg-orange-gradient text-white font-semibold rounded-lg hover:opacity-90 transition-opacity"
+                className="inline-flex items-center justify-center px-8 py-3 bg-white text-[oklch(0.22_0.06_250)] font-semibold rounded-lg hover:bg-white/90 transition-colors"
               >
                 Schedule Assessment
               </a>
               <a
                 href="/case-studies"
-                className="inline-flex items-center justify-center px-8 py-3 bg-transparent border-2 border-primary-foreground text-primary-foreground font-semibold rounded-lg hover:bg-primary-foreground hover:text-primary transition-colors"
+                className="inline-flex items-center justify-center px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[oklch(0.22_0.06_250)] transition-colors"
               >
                 View Case Studies
               </a>

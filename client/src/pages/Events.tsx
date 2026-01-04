@@ -1,21 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
-  Video,
-  ArrowRight,
-  Play,
-  Download,
-  Mail,
-  Award
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Events() {
@@ -166,7 +157,7 @@ export default function Events() {
       recording: true,
       slides: true,
       presenter: 'Marcus Williams, CTO',
-      description: 'Introduction to NexDyne Technology\' proprietary RAPID Framework delivering average 312% ROI for federal agencies through structured automation implementation and change management.'
+      description: 'Introduction to NexDyne Technology\'s proprietary RAPID Framework delivering average 312% ROI for federal agencies through structured automation implementation and change management.'
     },
     {
       id: 'past-multi-cloud',
@@ -195,355 +186,159 @@ export default function Events() {
   const selectedEvent = upcomingEvents.find(e => e.id === registeringEvent);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="bg-white text-slate-900">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative py-24 md:py-32 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
-          }} />
-        </div>
-        <div className="container relative">
-          {/* Breadcrumb */}
-          <div className="mb-8">
-            <Breadcrumb 
-              items={[{ label: 'Events' }]} 
-              variant="light" 
-            />
-          </div>
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Webinars & Events
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl opacity-90 mb-10 leading-relaxed max-w-3xl mx-auto">
-              Expert-led training, workshops, and thought leadership sessions on automation, cybersecurity, and digital transformation for federal, state, and local government agencies.
-            </p>
-            <div className="flex flex-wrap justify-center gap-8 text-sm md:text-base">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-white" />
-                <span>Free Registration</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-white" />
-                <span>Live Q&A Sessions</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-white" />
-                <span>CPE Credits Available</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Category Toggle */}
-      <section className="py-8 bg-secondary border-b">
-        <div className="container">
-          <div className="flex justify-center gap-4">
-            <Button
-              variant={selectedCategory === 'upcoming' ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory('upcoming')}
-              className={selectedCategory === 'upcoming' ? 'bg-accent hover:bg-accent/90 transition-all' : 'hover:bg-secondary/80 transition-all'}
-            >
-              <Calendar className="mr-2 h-4 w-4" />
-              Upcoming Events
-            </Button>
-            <Button
-              variant={selectedCategory === 'past' ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory('past')}
-              className={selectedCategory === 'past' ? 'bg-accent hover:bg-accent/90 transition-all' : 'hover:bg-secondary/80 transition-all'}
-            >
-              <Video className="mr-2 h-4 w-4" />
-              Past Recordings
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events */}
-      {selectedCategory === 'upcoming' && (
-        <section className="py-20 bg-background">
-          <div className="container">
-            <div className="space-y-8 max-w-5xl mx-auto">
-              {upcomingEvents.map((event) => (
-                <Card 
-                  key={event.id} 
-                  className="hover:shadow-2xl transition-all duration-300 border-border hover:border-primary/20 group"
-                >
-                  <CardContent className="p-8 md:p-10">
-                    <div className="flex flex-col lg:flex-row gap-8">
-                      <div className="flex-1">
-                        <div className="flex items-start gap-4 mb-6">
-                          <div className="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
-                            <Calendar className="h-7 w-7 text-primary" />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight group-hover:text-primary transition-colors">
-                              {event.title}
-                            </h3>
-                            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4">
-                              <div className="flex items-center gap-2">
-                                <Calendar className="h-4 w-4 text-primary" />
-                                <span>{event.date}</span>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <Clock className="h-4 w-4 text-primary" />
-                                <span>{event.time}</span>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <Users className="h-4 w-4 text-primary" />
-                                <span>{event.registered}/{event.spots} registered</span>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <Award className="h-4 w-4 text-primary" />
-                                <span>{event.cpeCredits} CPE Credits</span>
-                              </div>
-                            </div>
-                            <div className="flex flex-wrap gap-2 mb-5">
-                              <span className="text-xs bg-primary/10 text-primary px-3 py-1.5 rounded-full font-semibold">
-                                {event.format}
-                              </span>
-                              <span className="text-xs bg-secondary text-foreground px-3 py-1.5 rounded-full font-medium">
-                                {event.duration}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <p className="text-muted-foreground mb-6 leading-relaxed">
-                          {event.description}
-                        </p>
-
-                        <div className="mb-6">
-                          <h4 className="font-semibold text-foreground mb-3">What You'll Learn:</h4>
-                          <ul className="space-y-2">
-                            {event.topics.map((topic, idx) => (
-                              <li key={idx} className="flex items-start gap-3 text-sm text-muted-foreground">
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
-                                <span className="leading-relaxed">{topic}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div className="mb-4 text-sm">
-                          <span className="font-semibold text-foreground">Presenter:</span>{' '}
-                          <span className="text-muted-foreground">{event.presenter}</span>
-                        </div>
-
-                        <div className="mb-8 text-sm">
-                          <span className="font-semibold text-foreground">Target Audience:</span>{' '}
-                          <span className="text-muted-foreground">{event.audience}</span>
-                        </div>
-
-                        <Button 
-                          className="w-full sm:w-auto bg-accent hover:bg-accent/90 hover:shadow-lg hover:scale-105 active:scale-95 transition-all"
-                          onClick={() => setRegisteringEvent(event.id)}
-                        >
-                          Register Free
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Past Events */}
-      {selectedCategory === 'past' && (
-        <section className="py-20 bg-background">
-          <div className="container">
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
-              {pastEvents.map((event) => (
-                <Card 
-                  key={event.id} 
-                  className="hover:shadow-2xl transition-all duration-300 border-border hover:border-primary/20 group"
-                >
-                  <CardContent className="p-6 md:p-8">
-                    <div className="flex items-start gap-4 mb-5">
-                      <div className="p-2.5 bg-primary/5 rounded-lg group-hover:bg-primary/10 transition-colors">
-                        <Video className="h-6 w-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg md:text-xl font-bold mb-3 leading-tight group-hover:text-primary transition-colors">
-                          {event.title}
-                        </h3>
-                        <div className="flex flex-wrap gap-2 text-xs text-muted-foreground mb-3">
-                          <span>{event.date}</span>
-                          <span className="text-primary">•</span>
-                          <span>{event.duration}</span>
-                          <span className="text-primary">•</span>
-                          <span>{event.views.toLocaleString()} views</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-                      {event.description}
-                    </p>
-
-                    <div className="text-sm mb-6">
-                      <span className="font-semibold text-foreground">Presenter:</span>{' '}
-                      <span className="text-muted-foreground">{event.presenter}</span>
-                    </div>
-
-                    <div className="flex gap-3">
-                      {event.recording && (
-                        <Button 
-                          variant="outline" 
-                          size="sm" 
-                          className="flex-1 hover:bg-primary/5 hover:border-primary/30 transition-all"
-                        >
-                          <Play className="mr-2 h-4 w-4" />
-                          Watch Recording
-                        </Button>
-                      )}
-                      {event.slides && (
-                        <Button 
-                          variant="outline" 
-                          size="sm" 
-                          className="flex-1 hover:bg-primary/5 hover:border-primary/30 transition-all"
-                        >
-                          <Download className="mr-2 h-4 w-4" />
-                          Download Slides
-                        </Button>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Registration Modal */}
-      {registeringEvent && selectedEvent && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <Card className="max-w-lg w-full shadow-2xl">
-            <CardContent className="p-8 md:p-10">
-              <div className="text-center mb-8">
-                <div className="inline-flex p-4 bg-primary/10 rounded-full mb-5">
-                  <Calendar className="h-10 w-10 text-primary" />
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Register for Event</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {selectedEvent.title}
-                </p>
-                <p className="text-sm text-primary font-semibold mt-3">
-                  {selectedEvent.date} • {selectedEvent.time}
-                </p>
-              </div>
-              
-              <form onSubmit={handleRegister} className="space-y-5">
-                <div>
-                  <label className="text-sm font-semibold mb-2 block text-foreground">Full Name</label>
-                  <Input
-                    type="text"
-                    placeholder="John Smith"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
-                  <label className="text-sm font-semibold mb-2 block text-foreground">Email Address</label>
-                  <Input
-                    type="email"
-                    placeholder="john.smith@agency.gov"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="w-full"
-                  />
-                </div>
-                
-                <div className="flex gap-3 pt-2">
-                  <Button 
-                    type="submit" 
-                    className="flex-1 bg-accent hover:bg-accent/90 hover:shadow-lg hover:scale-105 active:scale-95 transition-all"
-                  >
-                    <Mail className="mr-2 h-4 w-4" />
-                    Complete Registration
-                  </Button>
-                  <Button 
-                    type="button" 
-                    variant="outline"
-                    onClick={() => {
-                      setRegisteringEvent(null);
-                      setEmail('');
-                      setName('');
-                    }}
-                    className="hover:bg-secondary transition-all"
-                  >
-                    Cancel
-                  </Button>
-                </div>
-                
-                <p className="text-xs text-muted-foreground text-center leading-relaxed pt-2">
-                  You'll receive a confirmation email with webinar access link and calendar invite.
-                </p>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-      )}
-
-      {/* Newsletter CTA */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <Card className="max-w-4xl mx-auto border-border shadow-lg">
-            <CardContent className="p-10 md:p-12 text-center">
-              <div className="inline-flex p-4 bg-primary/10 rounded-full mb-6">
-                <Mail className="h-12 w-12 text-primary" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Never Miss an Event</h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-                Subscribe to our monthly newsletter for event announcements, government technology insights, and exclusive automation resources for federal, state, and local agencies.
+      <main>
+        {/* Hero Section */}
+        <section className="relative bg-cover bg-center py-24 md:py-32 text-white"
+          style={{ backgroundImage: "url('/images/patterns/pattern-1.png')" }}>
+          <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85" />
+          <div className="container relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Learn from the Experts</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+                Webinars & Events
+              </h1>
+              <p className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+                Expert-led training, workshops, and thought leadership sessions on automation, cybersecurity, and digital transformation for federal, state, and local government agencies.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <Input
-                  type="email"
-                  placeholder="your.email@agency.gov"
-                  className="flex-1"
-                />
-                <Button className="bg-accent hover:bg-accent/90 hover:shadow-lg hover:scale-105 active:scale-95 transition-all">
-                  Subscribe
-                  <ArrowRight className="ml-2 h-4 w-4" />
+              <div className="flex justify-center">
+                <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-slate-100">
+                  <a href="#upcoming-events">View Upcoming Events <ArrowRight className="w-4 h-4 ml-2" /></a>
                 </Button>
               </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+            </div>
+          </div>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Need Custom Training for Your Agency?
-          </h2>
-          <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed">
-            We offer private workshops and customized training programs tailored to your federal, state, or local government agency's specific automation, cybersecurity, and digital transformation needs.
-          </p>
-          <Button asChild size="lg" className="bg-orange-gradient hover:opacity-90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
-            <Link href="/contact">
-              Request Custom Training
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+        {/* Events Section */}
+        <section id="upcoming-events" className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+          <div className="container">
+            <div className="flex justify-center mb-12">
+              <div className="bg-white p-1.5 rounded-full shadow-md">
+                <Button
+                  onClick={() => setSelectedCategory('upcoming')}
+                  variant={selectedCategory === 'upcoming' ? 'default' : 'ghost'}
+                  className={`rounded-full px-6 md:px-8 ${selectedCategory === 'upcoming' ? 'bg-[oklch(0.22_0.06_250)] text-white' : 'text-slate-600'}`}>
+                  Upcoming Events
+                </Button>
+                <Button
+                  onClick={() => setSelectedCategory('past')}
+                  variant={selectedCategory === 'past' ? 'default' : 'ghost'}
+                  className={`rounded-full px-6 md:px-8 ${selectedCategory === 'past' ? 'bg-[oklch(0.22_0.06_250)] text-white' : 'text-slate-600'}`}>
+                  On-Demand Library
+                </Button>
+              </div>
+            </div>
+
+            {selectedCategory === 'upcoming' && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {upcomingEvents.map((event) => (
+                  <Card key={event.id} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden rounded-2xl">
+                    <CardContent className="p-8 flex flex-col flex-grow">
+                      <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-2 uppercase tracking-wider text-sm">{event.format}</p>
+                      <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4 leading-snug">{event.title}</h3>
+                      <div className="flex items-center text-slate-600 text-sm mb-4 space-x-4">
+                        <span>{event.date}</span>
+                        <span>&bull;</span>
+                        <span>{event.time}</span>
+                      </div>
+                      <p className="text-slate-600 mb-6 flex-grow">{event.description}</p>
+                      <div className="space-y-3 mb-8">
+                        {event.topics.slice(0, 3).map((topic, i) => (
+                          <div key={i} className="flex items-start gap-3">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                            <span className="text-slate-600">{topic}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="mt-auto pt-6 border-t border-slate-200">
+                        <Button onClick={() => setRegisteringEvent(event.id)} className="w-full bg-[oklch(0.22_0.06_250)] text-white hover:bg-[oklch(0.28_0.07_250)]">
+                          Register Now <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </motion.div>
+            )}
+
+            {selectedCategory === 'past' && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {pastEvents.map((event) => (
+                  <Card key={event.id} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden rounded-2xl">
+                    <CardContent className="p-8 flex flex-col flex-grow">
+                      <p className="text-slate-500 text-sm mb-2">{event.date}</p>
+                      <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4 flex-grow">{event.title}</h3>
+                      <div className="mt-auto pt-6 border-t border-slate-200 flex justify-between items-center">
+                        <p className="text-sm text-slate-600">{event.views.toLocaleString()} views</p>
+                        <Button asChild variant="outline" size="sm" className="border-[oklch(0.70_0.18_55)] text-[oklch(0.70_0.18_55)] hover:bg-[oklch(0.70_0.18_55)] hover:text-white">
+                          <Link href="#">Watch Now <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </motion.div>
+            )}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-[oklch(0.22_0.06_250)] text-white py-20 md:py-28">
+          <div className="container text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Stay Ahead of the Curve</h2>
+            <p className="text-lg md:text-xl text-white/80 mb-10">
+              Can't make a live event? Subscribe to our newsletter for on-demand recordings, presentation slides, and exclusive content delivered straight to your inbox.
+            </p>
+            <form className="max-w-lg mx-auto flex gap-4">
+              <Input type="email" placeholder="Enter your email" className="flex-grow bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:ring-[oklch(0.75_0.15_55)]" />
+              <Button type="submit" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-slate-100">Subscribe</Button>
+            </form>
+          </div>
+        </section>
+      </main>
 
       <Footer />
+
+      {registeringEvent && selectedEvent && (
+        <motion.div 
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
+          onClick={() => setRegisteringEvent(null)}
+        >
+          <motion.div 
+            initial={{ y: -50, opacity: 0 }} 
+            animate={{ y: 0, opacity: 1 }} 
+            exit={{ y: 50, opacity: 0 }}
+            className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl text-[oklch(0.20_0.05_250)]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-8">
+              <h2 className="text-2xl font-bold mb-2">Register for Event</h2>
+              <p className="text-slate-600 mb-6">You are registering for: <span className="font-semibold">{selectedEvent.title}</span></p>
+              
+              <form onSubmit={handleRegister} className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                  <Input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required className="w-full" />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                  <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full" />
+                </div>
+                <div className="flex justify-end pt-4 space-x-4">
+                  <Button type="button" variant="ghost" onClick={() => setRegisteringEvent(null)} className="text-slate-600">Cancel</Button>
+                  <Button type="submit" className="bg-[oklch(0.22_0.06_250)] text-white hover:bg-[oklch(0.28_0.07_250)]">Confirm Registration</Button>
+                </div>
+              </form>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 }

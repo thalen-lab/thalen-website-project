@@ -1,37 +1,34 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, Shield, FileSearch, Lock, Eye, Network, Users, Award, Target } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { motion } from 'framer-motion';
 
 export default function Cybersecurity() {
   // Primary service offerings (4 core capabilities)
   const primaryServices = [
     {
-      icon: FileSearch,
       title: 'CMMC & FedRAMP Compliance Implementation',
       description: 'Strengthen your existing security controls and close compliance gaps through assessments and remediation—with FedRAMP-authorized tools recommended only when CMMC Level 2/3 or ATO requirements demand certified platforms.',
       benefits: ['CMMC gap assessment', 'Security controls implementation', 'ATO package preparation'],
       link: '/services/security-assessment'
     },
     {
-      icon: Network,
       title: 'Zero Trust Architecture Implementation',
       description: 'Implement Zero Trust principles with your existing network infrastructure and security tools—or deploy FedRAMP Zero Trust platforms when micro-segmentation and continuous verification require enterprise-scale orchestration.',
       benefits: ['NIST 800-207 implementation', 'Micro-segmentation design', 'Identity-centric security'],
       link: '/services/zero-trust-architecture'
     },
     {
-      icon: Eye,
       title: 'Security Operations Center (SOC) Setup',
       description: 'Build security monitoring capabilities with your existing log aggregation and detection tools—or implement FedRAMP SIEM/SOAR platforms (Splunk Gov, LogRhythm) when compliance or threat volume requires enterprise-grade correlation.',
       benefits: ['24/7 threat monitoring', 'SIEM/SOAR deployment', 'Automated incident response'],
       link: '/services/security-operations-center'
     },
     {
-      icon: Lock,
       title: 'Identity & Access Management (IAM)',
       description: 'Modernize your existing identity and access controls with PIV/CAC integration and privilege management—or deploy FedRAMP IAM platforms (Okta Gov, Ping Identity Gov) when identity governance at scale is required.',
       benefits: ['PIV/CAC integration', 'Privileged access management', 'Identity governance frameworks'],
@@ -49,17 +46,14 @@ export default function Cybersecurity() {
 
   const keyDifferentiators = [
     {
-      icon: Shield,
       title: 'FedRAMP Security Platform Expertise',
       description: 'Deep implementation experience with 40+ FedRAMP-authorized security tools including SIEM, EDR, IAM, and vulnerability management platforms.'
     },
     {
-      icon: Users,
       title: 'Cleared Security Professionals',
       description: 'Team holds Secret and TS/SCI clearances with CISSP, CISM, and CEH certifications for sensitive government environments.'
     },
     {
-      icon: Award,
       title: 'CMMC & ATO Success Record',
       description: 'Experience achieving CMMC Level 2/3 certifications and FedRAMP ATOs with 100% success rate across 25+ agencies.'
     }
@@ -97,13 +91,37 @@ export default function Cybersecurity() {
     { agency: 'Intelligence Community', project: 'Zero Trust Implementation', outcome: 'TS/SCI environments secured' }
   ];
 
+  const complianceCards = [
+    {
+      title: 'FedRAMP & StateRAMP Implementation',
+      description: 'Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.'
+    },
+    {
+      title: 'ISO 27001 Implementation Services',
+      description: 'Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.',
+      hasImage: true
+    },
+    {
+      title: 'CMMC Consulting Services',
+      description: 'Comprehensive CMMC readiness assessments and implementation support for defense contractors seeking Level 2 and Level 3 certification to protect Controlled Unclassified Information (CUI).'
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/cybersecurity-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
           {/* Breadcrumb */}
           <div className="mb-8">
             <Breadcrumb 
@@ -114,408 +132,463 @@ export default function Cybersecurity() {
               variant="light" 
             />
           </div>
-          <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Implementation Services
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Implementation Services</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Cybersecurity & Compliance
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
               NexDyne Technology delivers security through a dual approach: first, we strengthen your existing security posture with gap assessments, control implementation, and compliance frameworks—then deploy FedRAMP security platforms (Splunk Gov, CrowdStrike Gov) when compliance mandates it or threat models require certified tools. Vendor-neutral consulting with cleared security professionals and proven ATO success.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
                   Request Security Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/resources">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/resources">
                   Download CMMC Checklist
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Compliance Services Cards */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Compliance</h2>
-            <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance Expertise</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Compliance</h2>
+            <p className="text-lg text-slate-600 max-w-4xl mx-auto">
               Built for the most demanding security and compliance requirements across government agencies and enterprise organizations.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* FedRAMP & StateRAMP Card */}
-            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="mb-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
-                    <Shield className="h-8 w-8 text-white" />
+            {complianceCards.map((card, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  {card.hasImage && (
+                    <div className="w-full h-48 overflow-hidden">
+                      <img 
+                        src="/iso27001-service.jpg" 
+                        alt="ISO 27001 Implementation Services" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="p-8 text-center">
+                    <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{card.title}</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      {card.description}
+                    </p>
                   </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white">FedRAMP & StateRAMP Implementation</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* ISO 27001 Card */}
-            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="w-full h-48 overflow-hidden">
-                  <img 
-                    src="/iso27001-service.jpg" 
-                    alt="ISO 27001 Implementation Services" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-8 text-center">
-                  <h3 className="text-xl font-bold mb-4 text-white">ISO 27001 Implementation Services</h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    Proven methodologies for implementing ISO 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* CMMC Card */}
-            <Card className="bg-slate-900/50 border-slate-700/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="mb-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
-                    <Shield className="h-8 w-8 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white">CMMC Consulting Services</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis, controls implementation, and audit preparation.
-                </p>
-              </CardContent>
-            </Card>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Key Differentiators */}
-      <section className="py-16 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             {keyDifferentiators.map((item, index) => (
-              <div key={index} className="text-center">
-                <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{item.title}</h3>
+                <p className="text-slate-600">{item.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Primary Security Services */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Cybersecurity Implementation Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Capabilities</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Core Cybersecurity Implementation Services</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               End-to-end security capabilities from compliance assessment to Zero Trust deployment, designed for government agencies (federal, state, local) and defense contractors.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {primaryServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all border-2 hover:border-accent">
-                <CardContent className="p-8">
-                  <service.icon className="h-16 w-16 text-primary mb-6" />
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 group">
+                  <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{service.title}</h3>
+                  <p className="text-slate-600 leading-relaxed mb-6">{service.description}</p>
                   
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-2 mb-8">
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start text-sm">
-                        <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                        <span>{benefit}</span>
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                        <span className="text-sm text-slate-700">{benefit}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <Link href={service.link}>
-                    <Button variant="outline" className="w-full border-2 border-dashed border-primary/30 hover:border-accent hover:bg-accent/5">
+                  <Button asChild variant="outline" className="w-full border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:bg-[oklch(0.97_0.01_250)]">
+                    <Link href={service.link}>
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                    </Link>
+                  </Button>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
           {/* Additional Capabilities - Compact Format */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Additional Security Capabilities</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16"
+          >
+            <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-8 text-center">Additional Security Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-start p-6 bg-background rounded-lg border-2 border-border hover:border-accent/50 transition-colors">
-                  <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold mb-1">{capability.name}</h4>
-                    <p className="text-sm text-muted-foreground">{capability.description}</p>
-                  </div>
-                </div>
+                <Card key={index} className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <h4 className="font-semibold text-[oklch(0.20_0.05_250)] mb-2">{capability.name}</h4>
+                  <p className="text-sm text-slate-600">{capability.description}</p>
+                </Card>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Compliance Framework Expertise */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Government Compliance Framework Expertise</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Framework Expertise</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Government Compliance Framework Expertise</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Deep expertise implementing security controls across all major government compliance frameworks including FedRAMP (federal), StateRAMP (state/local), CMMC (defense), and CJIS (law enforcement) with proven ATO success.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {complianceFrameworks.map((framework, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-6 text-center">
-                  <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-lg font-bold mb-2">{framework.framework}</h3>
-                  <p className="text-sm text-muted-foreground mb-1">{framework.controls}</p>
-                  <p className="text-xs text-primary font-semibold">{framework.timeline}</p>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300 text-center">
+                  <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{framework.framework}</h3>
+                  <p className="text-sm text-slate-500 mb-1">{framework.controls}</p>
+                  <p className="text-xs text-[oklch(0.65_0.18_55)] font-semibold">{framework.timeline}</p>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Government Security Experience */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Government Security Implementation Success</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Results</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Government Security Implementation Success</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Experience implementing security platforms and achieving compliance certifications across government agencies and defense contractors.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {governmentExperience.map((exp, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-8">
-                  <Target className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{exp.agency}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{exp.project}</p>
-                  <p className="text-lg font-bold text-primary">{exp.outcome}</p>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{exp.agency}</h3>
+                  <p className="text-sm text-slate-500 mb-3">{exp.project}</p>
+                  <p className="text-lg font-bold text-[oklch(0.65_0.18_55)]">{exp.outcome}</p>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/case-studies">
-              <Button variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)]">
+              <Link href="/case-studies">
                 View Security Case Studies
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* FedRAMP Security Platform Expertise */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized Security Platform Expertise</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Expertise</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">FedRAMP-Authorized Security Platform Expertise</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We implement and integrate FedRAMP-authorized security platforms from leading vendors, helping you build defense-in-depth architectures.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {fedrampSecurityPlatforms.map((category, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">{category.category}</h3>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{category.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.platforms.map((platform, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
+                      <span key={idx} className="text-xs bg-[oklch(0.97_0.01_250)] text-slate-700 px-3 py-1 rounded-full font-semibold">
                         {platform}
                       </span>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
+            <p className="text-slate-600 mb-6">
               Plus 30+ additional FedRAMP-authorized security platforms including firewalls, DLP, CASB, and threat intelligence tools.
             </p>
-            <Link href="/partners">
-              <Button variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)]">
+              <Link href="/partners">
                 View All Security Platforms
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* FAR Compliance for Cybersecurity Services */}
-      <section className="py-16 bg-slate-50">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-3">Government Contracting Compliance</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Cybersecurity implementations comply with Federal Acquisition Regulation requirements and Defense Federal Acquisition Regulation Supplement (DFARS) for DoD contracts.
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+        <div className="container max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Government Contracting Compliance</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Cybersecurity implementations comply with Federal Acquisition Regulation requirements and Defense Federal Acquisition Regulation Supplement (DFARS) for DoD contracts.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <Card className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-all duration-300">
+              <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-4">
+                IT Security Requirements (FAR)
+              </h3>
+              <p className="text-sm text-slate-600 mb-4">
+                Cybersecurity services comply with FAR 52.239-1 (Privacy or Security Safeguards) and FAR 52.204-21 (Basic Safeguarding), implementing NIST controls for federal information protection.
               </p>
-            </div>
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                  <span>NIST 800-53 control implementation and documentation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                  <span>Security assessment and continuous monitoring</span>
+                </li>
+              </ul>
+            </Card>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <Card className="border-2">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-bold mb-3 flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                    IT Security Requirements (FAR)
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Cybersecurity services comply with FAR 52.239-1 (Privacy or Security Safeguards) and FAR 52.204-21 (Basic Safeguarding), implementing NIST controls for federal information protection.
-                  </p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>NIST 800-53 control implementation and documentation</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Security assessment and continuous monitoring</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-bold mb-3 flex items-center">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-2" />
-                    DoD Contracts (DFARS)
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    For Department of Defense contracts, we maintain compliance with DFARS 252.204-7012 (Safeguarding Covered Defense Information) and CMMC requirements for CUI protection.
-                  </p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>NIST SP 800-171 controls for CUI safeguarding</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>CMMC Level 2 certification support and implementation</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-
-            <Card className="border-2 bg-gradient-to-br from-primary/5 to-accent/5">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-4">Procurement Benefits</h3>
-                <div className="grid md:grid-cols-3 gap-6 text-sm">
-                  <div>
-                    <p className="font-semibold mb-2">Faster Contract Execution</p>
-                    <p className="text-muted-foreground">Pre-established compliance frameworks reduce contract negotiation time for security services.</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-2">Reduced Agency Risk</p>
-                    <p className="text-muted-foreground">Documented FAR and DFARS compliance minimizes contractor performance risk and oversight burden.</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-2">Audit-Ready Documentation</p>
-                    <p className="text-muted-foreground">Maintained compliance records support agency audits and CPARS evaluations.</p>
-                  </div>
-                </div>
-              </CardContent>
+            <Card className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-all duration-300">
+              <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-4">
+                DoD Contracts (DFARS)
+              </h3>
+              <p className="text-sm text-slate-600 mb-4">
+                For Department of Defense contracts, we maintain compliance with DFARS 252.204-7012 (Safeguarding Covered Defense Information) and CMMC requirements for CUI protection.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                  <span>NIST SP 800-171 controls for CUI safeguarding</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                  <span>CMMC Level 2 certification support and implementation</span>
+                </li>
+              </ul>
             </Card>
           </div>
+
+          <Card className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-all duration-300">
+            <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-4">Procurement Benefits</h3>
+            <div className="grid md:grid-cols-3 gap-6 text-sm">
+              <div>
+                <p className="font-semibold text-[oklch(0.20_0.05_250)] mb-2">Faster Contract Execution</p>
+                <p className="text-slate-600">Pre-established compliance frameworks reduce contract negotiation time for security services.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-[oklch(0.20_0.05_250)] mb-2">Reduced Agency Risk</p>
+                <p className="text-slate-600">Documented FAR and DFARS compliance minimizes contractor performance risk and oversight burden.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-[oklch(0.20_0.05_250)] mb-2">Audit-Ready Documentation</p>
+                <p className="text-slate-600">Maintained compliance records support agency audits and CPARS evaluations.</p>
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Achieve CMMC or FedRAMP Compliance?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a security assessment to discuss your compliance requirements, evaluate FedRAMP security platforms, and develop a roadmap for certification success.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Security Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Achieve CMMC or FedRAMP Compliance?</h2>
+            <p className="text-xl text-white/90 mb-8">
+              Schedule a security assessment to discuss your compliance requirements, evaluate FedRAMP security platforms, and develop a roadmap for certification success.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Request Security Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-            </Link>
-            <Link href="/resources">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Download CMMC Checklist
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/resources">
+                  Download CMMC Checklist
+                </Link>
               </Button>
-            </Link>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Case Study CTA */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Success Story
-            </div>
-            <h2 className="text-4xl font-bold mb-4">See Government Cybersecurity in Action</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">See Government Cybersecurity in Action</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Learn how a DoD manufacturing facility achieved 99.2% uptime with FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics.
             </p>
-          </div>
-          <Card className="max-w-4xl mx-auto overflow-hidden">
+          </motion.div>
+          <Card className="max-w-4xl mx-auto overflow-hidden border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
             <div className="grid md:grid-cols-2">
-              <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-12 flex flex-col justify-center">
-                <div className="inline-block bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">
+              <div className="bg-[oklch(0.97_0.01_250)] p-12 flex flex-col justify-center">
+                <span className="inline-block px-3 py-1 bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.55_0.18_55)] rounded-full text-xs font-semibold mb-4 w-fit">
                   Department of Defense
-                </div>
-                <h3 className="text-3xl font-bold mb-4">DoD Manufacturing Facility Achieves 99.2% Uptime</h3>
-                <p className="text-muted-foreground mb-6">
+                </span>
+                <h3 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-4">DoD Manufacturing Facility Achieves 99.2% Uptime</h3>
+                <p className="text-slate-600 mb-6">
                   Deployed FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics for defense manufacturing operations, eliminating 75% of unplanned downtime across 50+ production lines.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div>
-                    <div className="text-3xl font-bold text-primary">99.2%</div>
-                    <div className="text-sm text-muted-foreground">System Uptime</div>
+                    <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)]">99.2%</div>
+                    <div className="text-sm text-slate-500">System Uptime</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary">75%</div>
-                    <div className="text-sm text-muted-foreground">Downtime Reduction</div>
+                    <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)]">75%</div>
+                    <div className="text-sm text-slate-500">Downtime Reduction</div>
                   </div>
                 </div>
-                <Link href="/case-studies/dod-manufacturing">
-                  <Button size="lg" className="bg-orange-gradient hover:opacity-90 w-full">
+                <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg w-full">
+                  <Link href="/case-studies/dod-manufacturing">
                     View Full Case Study
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
               <div className="relative h-64 md:h-auto">
                 <img 

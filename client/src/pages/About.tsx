@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Target, Award, Users, Globe, Shield, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 
@@ -26,41 +26,23 @@ export default function About() {
     }
   ];
 
-  const approaches = [
-    {
-      title: 'Strategic Assessment',
-      description: 'We begin every engagement with comprehensive process analysis to identify the automation opportunities that will deliver maximum business impact.',
-      icon: Target
-    },
-    {
-      number: '02',
-      title: 'Embedded Implementation',
-      description: 'Our teams work directly within your operations to ensure solutions integrate seamlessly with existing workflows and security requirements.',
-      icon: Users
-    }
-  ];
-
   const values = [
     {
-      icon: Target,
       title: 'Commitment',
       letter: 'C',
       description: 'Unwavering dedication to mission success. We treat every project as mission-critical and deliver results that directly support our clients\' strategic objectives with zero compromise on quality or security.'
     },
     {
-      icon: Globe,
       title: 'Balance',
       letter: 'B',
       description: 'Harmonizing innovation with stability. We balance modern AI capabilities with established methodologies, delivering results without operational disruption or unnecessary risk.'
     },
     {
-      icon: Award,
       title: 'Accountability',
       letter: 'A',
       description: 'Measurable results, transparent reporting. We hold ourselves accountable to ROI projections, delivery timelines, and security standards — with real-time dashboards tracking every metric that matters.'
     },
     {
-      icon: Users,
       title: 'Mastery',
       letter: 'M',
       description: 'Deep expertise across the full automation stack. Our team maintains implementation expertise in FedRAMP (federal agencies), StateRAMP/GovRAMP (state, local, tribal), and CMMC frameworks, along with cloud platform certifications (AWS, Azure), backed by 15+ years of specialized experience in government transformation.'
@@ -80,48 +62,50 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-[oklch(0.20_0.05_250)]">
       <Navigation />
 
       {/* Hero - Founding Story */}
-      <section className="relative py-12 sm:py-16 md:py-20 bg-navy-gradient text-primary-foreground">
-        {/* Breadcrumb */}
-        <div className="container mb-6 md:mb-8">
-          <Breadcrumb 
-            items={[{ label: 'About Us' }]} 
-            variant="light" 
-          />
-        </div>
-        <div className="container">
-          <motion.div 
-            className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 text-center leading-tight">
-              With the right strategy and proven automation frameworks, government and enterprise organizations can still solve complex problems and transform operations for measurable impact.
-            </h1>
-            
-            <div className="space-y-4 md:space-y-6 text-base md:text-lg opacity-90">
-              <p>
-                For 25 years, NexDyne Technology has been the trusted technology partner for federal, state, and local government agencies. We've witnessed the evolution of government technology—from legacy mainframes to cloud-native solutions—and we've been there every step of the way, helping our agency partners navigate complex transformations.
-              </p>
+      <section className="relative py-12 sm:py-16 md:py-20 text-white">
+        <div className="absolute inset-0 bg-[url('/img/patterns/hero-pattern.svg')] bg-center [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="relative container">
+          <div className="max-w-4xl mx-auto">
+            <Breadcrumb 
+              items={[{ label: 'About Us' }]} 
+              variant="light" 
+              className="mb-6 md:mb-8"
+            />
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 text-center leading-tight text-white">
+                With the right strategy and proven automation frameworks, government and enterprise organizations can still solve complex problems and transform operations for measurable impact.
+              </h1>
               
-              <p>
-                We founded NexDyne with a simple mission: to deliver mission-enabling technology that puts government objectives first. We saw too many technology providers focused on selling products rather than solving problems. We knew there had to be a better way—one that combined deep government expertise with battle-tested methodologies.
-              </p>
-              
-              <p>
-                Today, we continue that mission with the same commitment to excellence that has made us a trusted partner to hundreds of government agencies. Our team brings decades of combined experience in federal service, and we're proud to say that every solution we deliver is designed with your mission in mind.
-              </p>
-            </div>
-          </motion.div>
+              <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/90">
+                <p>
+                  For 25 years, NexDyne Technology has been the trusted technology partner for federal, state, and local government agencies. We've witnessed the evolution of government technology—from legacy mainframes to cloud-native solutions—and we've been there every step of the way, helping our agency partners navigate complex transformations.
+                </p>
+                
+                <p>
+                  We founded NexDyne with a simple mission: to deliver mission-enabling technology that puts government objectives first. We saw too many technology providers focused on selling products rather than solving problems. We knew there had to be a better way—one that combined deep government expertise with battle-tested methodologies.
+                </p>
+                
+                <p>
+                  Today, we continue that mission with the same commitment to excellence that has made us a trusted partner to hundreds of government agencies. Our team brings decades of combined experience in federal service, and we're proud to say that every solution we deliver is designed with your mission in mind.
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Mission Statement */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
@@ -130,8 +114,8 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wide">Our Mission</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Mission</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">
               To deliver strategic automation that amplifies organizational capability while maintaining mission-critical security.
             </h2>
           </motion.div>
@@ -139,7 +123,7 @@ export default function About() {
       </section>
 
       {/* Our Principles */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div 
             className="text-center mb-16"
@@ -148,7 +132,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Principles</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Our Principles</h2>
           </motion.div>
 
           <div className="max-w-5xl mx-auto space-y-12">
@@ -161,12 +145,12 @@ export default function About() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="text-7xl md:text-8xl font-bold text-accent/20">
+                <div className="text-7xl md:text-8xl font-bold text-[oklch(0.65_0.18_55)]/20">
                   {principle.number}
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{principle.title}</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{principle.title}</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
                     {principle.description}
                   </p>
                 </div>
@@ -177,7 +161,7 @@ export default function About() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
@@ -186,11 +170,11 @@ export default function About() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Approach</h2>
-              <p className="text-2xl md:text-3xl text-muted-foreground mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Our Approach</h2>
+              <p className="text-2xl md:text-3xl text-slate-600 mb-8">
                 We transform complex operational challenges into strategic competitive advantages through intelligent automation.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-slate-600 leading-relaxed">
                 Our specialty lies in architecting automation solutions for the most demanding environments—where security clearances are required, where compliance is non-negotiable, and where operational failure has serious consequences. We deliver measurable ROI while maintaining the highest standards of security and operational excellence.
               </p>
             </motion.div>
@@ -201,7 +185,7 @@ export default function About() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Every engagement begins with deep process analysis to identify the highest-impact automation opportunities. We then deploy proven frameworks that integrate seamlessly with existing operations, ensuring zero disruption while delivering significant results that scale with organizational growth.
               </p>
               
@@ -222,30 +206,30 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">How we operate</h3>
-            <p className="text-2xl md:text-3xl text-muted-foreground mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">How we operate</h3>
+            <p className="text-2xl md:text-3xl text-slate-600 mb-12">
               We deploy automation strategists directly to your most critical operations.
             </p>
 
             <div className="grid lg:grid-cols-2 gap-12 mb-12">
               <div>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-slate-600 leading-relaxed">
                   Our consultants embed with your teams to understand the nuances of your processes, identify optimization opportunities, and implement solutions that deliver immediate and lasting impact. We don't build from the outside looking in—we work from within your operations to architect transformation that works.
                 </p>
               </div>
               
               <div>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                <p className="text-lg text-slate-600 leading-relaxed mb-8">
                   This approach allows us to deliver automation strategies that integrate seamlessly with existing workflows, maintain operational security, and scale with your organization's evolving needs. Every solution is battle-tested in real-world environments before full deployment.
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {operationalStats.map((stat, index) => (
                     <div key={index} className="text-center">
-                      <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                      <div className="text-4xl md:text-5xl font-bold text-[oklch(0.65_0.18_55)] mb-2">
                         {stat.value}
                       </div>
-                      <div className="text-sm text-muted-foreground">
+                      <div className="text-sm text-slate-600">
                         {stat.label}
                       </div>
                     </div>
@@ -255,10 +239,10 @@ export default function About() {
             </div>
 
             {/* Where We're Needed Most */}
-            <div className="bg-muted rounded-lg p-8 md:p-12">
-              <h4 className="text-2xl md:text-3xl font-bold mb-6">Where we're needed most</h4>
+            <div className="bg-[oklch(0.97_0.01_250)] rounded-lg p-8 md:p-12">
+              <h4 className="text-2xl md:text-3xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Where we're needed most</h4>
               
-              <div className="space-y-6 text-lg text-muted-foreground mb-8">
+              <div className="space-y-6 text-lg text-slate-600 mb-8">
                 <p>
                   We identify the most critical operational challenges that pose the greatest risk not only to organizational efficiency, but to mission success itself. Whether it's a federal agency struggling with manual processes that compromise national security timelines, or a healthcare system where outdated workflows impact patient outcomes, we focus our efforts where automation can deliver the most strategic value.
                 </p>
@@ -269,19 +253,19 @@ export default function About() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="border-2 border-accent/20">
+                <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-6">
-                    <h5 className="text-xl font-bold mb-3">Strategic Assessment</h5>
-                    <p className="text-muted-foreground">
+                    <h5 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">Strategic Assessment</h5>
+                    <p className="text-slate-600">
                       We begin every engagement with comprehensive process analysis to identify the automation opportunities that will deliver maximum business impact.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-accent/20">
+                <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-6">
-                    <h5 className="text-xl font-bold mb-3">Embedded Implementation</h5>
-                    <p className="text-muted-foreground">
+                    <h5 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">Embedded Implementation</h5>
+                    <p className="text-slate-600">
                       Our teams work directly within your operations to ensure solutions integrate seamlessly with existing workflows and security requirements.
                     </p>
                   </CardContent>
@@ -293,7 +277,7 @@ export default function About() {
       </section>
 
       {/* Core Values - CBAM */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div 
             className="text-center mb-16"
@@ -302,8 +286,8 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Core Values</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Our Core Values</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               The CBAM framework guides every engagement and drives our commitment to client success.
             </p>
           </motion.div>
@@ -317,14 +301,11 @@ export default function About() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="text-center hover:shadow-xl transition-shadow h-full">
+                <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
                   <CardContent className="p-8">
-                    <div className="w-20 h-20 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
-                      <value.icon className="h-10 w-10 text-accent" />
-                    </div>
-                    <div className="text-5xl font-bold text-accent/20 mb-2">{value.letter}</div>
-                    <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                    <p className="text-muted-foreground">{value.description}</p>
+                    <div className="text-5xl font-bold text-[oklch(0.65_0.18_55)]/20 mb-2">{value.letter}</div>
+                    <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{value.title}</h3>
+                    <p className="text-slate-600">{value.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -334,7 +315,7 @@ export default function About() {
       </section>
 
       {/* Our People */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -343,9 +324,9 @@ export default function About() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Our people</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Our people</h2>
               
-              <div className="space-y-6 text-lg text-muted-foreground">
+              <div className="space-y-6 text-lg text-slate-600">
                 <p>
                   At our foundation around the world, we've assembled a team that combines practical expertise in automation technologies, deep understanding of government and enterprise operations, and an uncompromising engineering mindset focused on delivering measurable results in service of organizational missions.
                 </p>
@@ -371,12 +352,12 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               {teamStats.map((stat, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow border-none" style={{ background: 'linear-gradient(135deg, #C9A961 0%, #B8935A 50%, #9D7A3C 100%)' }}>
+                <Card key={index} className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-8">
-                    <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                    <div className="text-4xl md:text-5xl font-bold text-[oklch(0.65_0.18_55)] mb-2">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-white/90">
+                    <div className="text-sm text-slate-600">
                       {stat.label}
                     </div>
                   </CardContent>
@@ -388,7 +369,7 @@ export default function About() {
       </section>
 
       {/* Certifications & Compliance */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div 
             className="text-center mb-16"
@@ -397,9 +378,9 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-accent mb-2">Certifications & Compliance</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Government-Grade Security & Compliance</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Certifications & Compliance</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Government-Grade Security & Compliance</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Certified expertise across federal, state, and local government compliance frameworks with experience in high-security environments.
             </p>
           </motion.div>
@@ -411,13 +392,10 @@ export default function About() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="text-center hover:shadow-xl transition-shadow h-full">
+              <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8">
-                  <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-10 w-10 text-blue-500" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-3">FedRAMP Expert</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">FedRAMP Expert</h3>
+                  <p className="text-sm text-slate-600">
                     Deep expertise implementing FedRAMP-authorized platforms for federal agencies at Moderate and High impact levels with proven ATO support.
                   </p>
                 </CardContent>
@@ -430,16 +408,13 @@ export default function About() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <Card className="text-center hover:shadow-xl transition-shadow h-full border-2 border-accent/30">
+              <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8">
-                  <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-10 w-10 text-accent" />
-                  </div>
-                  <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                  <div className="inline-block bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-3 py-1 rounded-full text-xs font-semibold mb-3">
                     STATE & LOCAL
                   </div>
-                  <h3 className="text-lg font-bold mb-3">StateRAMP/GovRAMP Authorized</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">StateRAMP/GovRAMP Authorized</h3>
+                  <p className="text-sm text-slate-600">
                     Certified expertise implementing StateRAMP/GovRAMP-authorized platforms for state, local, and tribal governments with full authorization support.
                   </p>
                 </CardContent>
@@ -452,13 +427,10 @@ export default function About() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Card className="text-center hover:shadow-xl transition-shadow h-full">
+              <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8">
-                  <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-10 w-10 text-blue-500" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-3">CMMC Consulting Services</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">CMMC Consulting Services</h3>
+                  <p className="text-sm text-slate-600">
                     Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis and controls implementation.
                   </p>
                 </CardContent>
@@ -471,13 +443,10 @@ export default function About() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Card className="text-center hover:shadow-xl transition-shadow h-full">
+              <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8">
-                  <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-10 w-10 text-blue-500" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-3">CJIS Compliant</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">CJIS Compliant</h3>
+                  <p className="text-sm text-slate-600">
                     CJIS-compliant implementations for state and local law enforcement agencies with full FBI security policy adherence.
                   </p>
                 </CardContent>
@@ -492,27 +461,27 @@ export default function About() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <p className="text-muted-foreground mb-4">
+            <p className="text-slate-600 mb-4">
               Additional expertise: ISO 27001:2022 implementation services, NIST Cybersecurity Framework v2.0, GSA Schedule application in progress, Top Secret/SCI cleared personnel available upon contract award
             </p>
-            <Card className="border-2 bg-gradient-to-br from-primary/5 to-accent/5 max-w-4xl mx-auto">
+            <Card className="border-2 border-slate-200 bg-white max-w-4xl mx-auto">
               <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-3">Federal Acquisition Regulation (FAR) Compliance</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">Federal Acquisition Regulation (FAR) Compliance</h3>
+                <p className="text-sm text-slate-600 mb-4">
                   NexDyne Technology maintains compliance with Federal Acquisition Regulation requirements for government IT services, including FAR Part 39 (Acquisition of Information Technology) and associated security clauses.
                 </p>
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
                   <div>
-                    <p className="font-semibold mb-1">FAR 52.204-21</p>
-                    <p className="text-muted-foreground text-xs">Basic Safeguarding of Covered Contractor Information Systems</p>
+                    <p className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">FAR 52.204-21</p>
+                    <p className="text-slate-600 text-xs">Basic Safeguarding of Covered Contractor Information Systems</p>
                   </div>
                   <div>
-                    <p className="font-semibold mb-1">FAR 52.239-1</p>
-                    <p className="text-muted-foreground text-xs">Privacy or Security Safeguards for IT systems and services</p>
+                    <p className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">FAR 52.239-1</p>
+                    <p className="text-slate-600 text-xs">Privacy or Security Safeguards for IT systems and services</p>
                   </div>
                   <div>
-                    <p className="font-semibold mb-1">DFARS 252.204-7012</p>
-                    <p className="text-muted-foreground text-xs">Safeguarding Covered Defense Information (DoD contracts)</p>
+                    <p className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">DFARS 252.204-7012</p>
+                    <p className="text-slate-600 text-xs">Safeguarding Covered Defense Information (DoD contracts)</p>
                   </div>
                 </div>
               </CardContent>
@@ -522,7 +491,7 @@ export default function About() {
       </section>
 
       {/* Vision for the Future */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
@@ -531,12 +500,12 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wide">Our Vision for the Future</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Our Vision for the Future</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
               Organizations around the world are using NexDyne Technology to transform their most important operations.
             </h2>
             
-            <div className="space-y-6 text-lg opacity-90">
+            <div className="space-y-6 text-lg text-white/90">
               <p>
                 With NexDyne Technology's automation strategies, government agencies are achieving new levels of operational efficiency while maintaining the highest security standards. Federal departments are reducing processing times from weeks to hours, healthcare systems are improving patient outcomes through streamlined workflows, and critical infrastructure operators are enhancing reliability through predictive automation.
               </p>

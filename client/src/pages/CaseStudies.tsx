@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
@@ -7,7 +8,7 @@ import { ImageWithLoader } from '@/components/ImageWithLoader';
 import { useLQIP } from '@/hooks/useLQIP';
 import { usePrefetch } from '@/hooks/usePrefetch';
 import Footer from '@/components/Footer';
-import { ArrowRight, Search, X, Bookmark } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import SaveSearchDialog from '@/components/SaveSearchDialog';
 import SavedSearchesDropdown from '@/components/SavedSearchesDropdown';
@@ -22,9 +23,7 @@ export default function CaseStudies() {
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [lastRefreshed, setLastRefreshed] = useState<Date>(new Date());
 
-  // Pull-to-refresh handler
   const handleRefresh = useCallback(async () => {
-    // Simulate fetching fresh data
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastRefreshed(new Date());
     toast.success('Content refreshed', {
@@ -200,14 +199,12 @@ export default function CaseStudies() {
   const industries = ['All', 'Federal Government', 'State Government', 'County Government', 'Defense', 'Healthcare', 'Manufacturing', 'Energy', 'Financial Services'];
   const services = ['All', 'Automation', 'RPA', 'Integration', 'Analytics', 'AI', 'Cloud', 'Cybersecurity', 'IoT', 'Predictive Analytics', 'TS/SCI'];
 
-  // Filter case studies based on search query, industry, and service
   const filteredCaseStudies = caseStudies.filter(study => {
     const matchesIndustry = selectedIndustry === 'All' || study.category === selectedIndustry;
     const matchesService = selectedService === 'All' || study.tags.some(tag => 
       tag.toLowerCase() === selectedService.toLowerCase()
     );
     
-    // Search across title, description, category, and tags
     const searchLower = searchQuery.toLowerCase();
     const matchesSearch = searchQuery === '' || 
       study.title.toLowerCase().includes(searchLower) ||
@@ -220,32 +217,28 @@ export default function CaseStudies() {
 
   return (
     <PullToRefresh onRefresh={handleRefresh}>
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-[oklch(0.20_0.05_250)]">
       <Navigation />
 
-      {/* Hero */}
-      <section className="relative py-12 sm:py-16 md:py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          {/* Breadcrumb */}
+      <section className="relative py-12 sm:py-16 md:py-20 text-white">
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="relative container">
           <div className="mb-6 md:mb-8">
-            <Breadcrumb 
-              items={[{ label: 'Case Studies' }]} 
-              variant="light" 
-            />
+            <Breadcrumb items={[{ label: 'Case Studies' }]} variant="light" />
           </div>
           <div className="max-w-4xl mx-auto text-center">
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Our Work</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               Case Studies
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl opacity-90">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90">
               Real-world government case studies demonstrating platform implementation expertise. FedRAMP serves federal agencies; StateRAMP/GovRAMP serves state, local, and tribal governments.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-10 md:py-16 bg-secondary">
+      <section className="py-10 md:py-16 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {[
@@ -255,59 +248,30 @@ export default function CaseStudies() {
               { value: '100%', label: 'Authorization Success Rate' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-1 md:mb-2">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-1 md:mb-2">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-slate-600">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Filters */}
-      <section className="py-8 bg-background border-b">
+      <section className="py-8 bg-white border-b border-slate-200">
         <div className="container">
-          {/* Search Bar */}
           <div className="mb-8">
-            <div className="flex gap-3 items-start">
-              <div className="relative flex-1 max-w-2xl">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+            <div className="relative flex-1 max-w-2xl">
               <input
                 type="text"
-                placeholder="Search case studies by keyword, industry, or service..."
+                placeholder="Search case studies..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-12 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+                className="w-full pl-4 pr-4 py-3 rounded-lg border border-slate-300 bg-white text-[oklch(0.20_0.05_250)] placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[oklch(0.70_0.18_55)] focus:border-[oklch(0.70_0.18_55)]"
               />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="Clear search"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              )}
-              </div>
-              
-              {/* Save/Load Search Buttons */}
-              <div className="flex gap-2">
-                {user && <SavedSearchesDropdown onLoadSearch={handleLoadSearch} />}
-                {user && hasActiveFilters && (
-                  <Button
-                    variant="outline"
-                    onClick={() => setSaveDialogOpen(true)}
-                  >
-                    <Bookmark className="h-4 w-4 mr-2" />
-                    Save Search
-                  </Button>
-                )}
-              </div>
             </div>
           </div>
 
-          {/* Industry Filters */}
           <div className="mb-6">
-            <h3 className="text-sm font-semibold text-muted-foreground mb-3">Filter by Industry</h3>
+            <h3 className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-sm">Filter by Industry</h3>
             <div className="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap scrollbar-hide">
               {industries.map(industry => (
                 <Button
@@ -315,7 +279,7 @@ export default function CaseStudies() {
                   variant={selectedIndustry === industry ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => setSelectedIndustry(industry)}
-                  className={`shrink-0 ${selectedIndustry === industry ? 'bg-orange-gradient' : ''}`}
+                  className={`shrink-0`}
                 >
                   {industry}
                 </Button>
@@ -323,9 +287,8 @@ export default function CaseStudies() {
             </div>
           </div>
 
-          {/* Service Filters */}
-          <div className="mb-4">
-            <h3 className="text-sm font-semibold text-muted-foreground mb-3">Filter by Service</h3>
+          <div>
+            <h3 className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-sm">Filter by Service</h3>
             <div className="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap scrollbar-hide">
               {services.map(service => (
                 <Button
@@ -333,16 +296,19 @@ export default function CaseStudies() {
                   variant={selectedService === service ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => setSelectedService(service)}
-                  className={`shrink-0 ${selectedService === service ? 'bg-orange-gradient' : ''}`}
+                  className={`shrink-0`}
                 >
                   {service}
                 </Button>
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Results Count */}
-          <div className="text-sm text-muted-foreground">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
+        <div className="container">
+          <div className="mb-8 text-sm text-slate-600">
             {filteredCaseStudies.length === 0 ? (
               'No case studies found'
             ) : (
@@ -354,17 +320,11 @@ export default function CaseStudies() {
               </>
             )}
           </div>
-        </div>
-      </section>
 
-      {/* Case Studies Grid */}
-      <section className="py-20">
-        <div className="container">
           {filteredCaseStudies.length === 0 ? (
             <div className="text-center py-16">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold mb-2">No Case Studies Found</h3>
-              <p className="text-muted-foreground mb-6">
+              <h3 className="text-2xl font-bold mb-2 text-[oklch(0.20_0.05_250)]">No Case Studies Found</h3>
+              <p className="text-slate-600 mb-6">
                 Try adjusting your filters to see more results.
               </p>
               <Button
@@ -386,36 +346,34 @@ export default function CaseStudies() {
                   
                   return (
                     <Link key={index} href={study.href} {...prefetchHandlers}>
-                      <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
-                    {/* Image */}
-                    <div className="relative h-64 overflow-hidden">
-                      <ImageWithLoader
-                        src={study.image}
-                        alt={study.title}
-                        lqip={useLQIP(study.image)}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        skeletonClassName="h-64"
-                      />
-                      {/* Category badge overlay */}
-                      <div className="absolute top-4 left-4">
-                        <span className="text-xs font-semibold bg-accent text-accent-foreground px-3 py-1.5 rounded-full shadow-lg">
-                          {study.category}
-                        </span>
-                      </div>
-                    </div>
+                      <Card className="group bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all flex flex-col h-full cursor-pointer overflow-hidden p-0">
+                        <div className="relative h-64 overflow-hidden">
+                          <ImageWithLoader
+                            src={study.image}
+                            alt={study.title}
+                            lqip={useLQIP(study.image)}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            skeletonClassName="h-64"
+                          />
+                          <div className="absolute top-4 left-4">
+                            <span className="text-xs font-semibold bg-[oklch(0.75_0.15_55)] text-white px-3 py-1.5 rounded-full shadow-lg">
+                              {study.category}
+                            </span>
+                          </div>
+                        </div>
 
-                    <CardContent className="p-6 flex flex-col flex-1">
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">{study.title}</h3>
-                      <p className="text-muted-foreground mb-6 flex-1">{study.description}</p>
+                        <CardContent className="p-6 flex flex-col flex-1">
+                          <h3 className="text-xl font-bold mb-2 text-[oklch(0.20_0.05_250)]">{study.title}</h3>
+                          <p className="text-slate-600 mb-6 flex-1">{study.description}</p>
 
-                      <div className="flex flex-wrap gap-2">
-                        {study.tags.map((tag, idx) => (
-                          <span key={idx} className="text-xs bg-secondary px-3 py-1 rounded-full">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </CardContent>
+                          <div className="flex flex-wrap gap-2">
+                            {study.tags.map((tag, idx) => (
+                              <span key={idx} className="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </CardContent>
                       </Card>
                     </Link>
                   );
@@ -428,14 +386,13 @@ export default function CaseStudies() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Request an assessment to discuss your agency's technology requirements.
           </p>
-          <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+          <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-slate-200">
             Request Assessment
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -444,7 +401,6 @@ export default function CaseStudies() {
 
       <Footer />
       
-      {/* Save Search Dialog */}
       <SaveSearchDialog
         open={saveDialogOpen}
         onOpenChange={setSaveDialogOpen}

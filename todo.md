@@ -3902,3 +3902,89 @@
 - [x] Remove orange lines from top of cards - add orange border on hover instead
 - [x] Replace all checkmarks with bullet points
 - [x] Remove all icons from the page
+
+## Phase: Apply NexDyne Design System to Government Solutions Pages
+- [ ] Apply design to Core Capabilities page (hero with image overlay, card hover states, bullet points)
+- [ ] Apply design to Federal Government page (hero, cards, sections)
+- [ ] Apply design to State & Local Government page
+- [ ] Apply design to Defense & Intelligence page
+- [ ] Apply design to FedRAMP Compliance page
+- [ ] Apply design to StateRAMP/GovRAMP page
+- [ ] Apply design to CMMC Compliance page
+- [ ] Apply design to ATO Support & Authorization page
+- [ ] Apply design to Government Cloud Migration page
+- [ ] Apply design to Past Performance page
+- [ ] Apply design to Contract Vehicles page
+
+
+## Phase: Site-Wide Design System Application (January 2026)
+
+### Government Solutions (Completing)
+- [ ] Contract Vehicles page design update
+
+### Services Pages Design Updates
+- [ ] Intelligent Automation & Process Optimization (services/Automation.tsx)
+- [ ] Data Analytics & Intelligence (services/DataAnalytics.tsx)
+- [ ] Cloud Infrastructure & Modernization (services/Cloud.tsx)
+- [ ] Cybersecurity & Compliance (services/Cybersecurity.tsx)
+- [ ] Security & Compliance Consulting (services/SecurityAssessment.tsx)
+- [ ] Application Development & Integration (services/ApplicationDevelopment.tsx)
+- [ ] Custom Software Solutions (services/CustomSoftware.tsx)
+- [ ] Digital Transformation Enablement (services/DigitalTransformation.tsx)
+- [ ] All nested subpages under each service
+
+### Core Capabilities & All Nested Subpages Design Updates
+- [x] Core Capabilities landing page
+- [ ] All capability subpages and their nested pages
+
+### Insights Design Updates
+- [ ] Insights main page
+- [ ] All individual insight articles
+
+### Case Studies Design Updates
+- [ ] Case Studies main page
+- [ ] All individual case study pages
+
+### Other Main Pages Design Updates
+- [ ] Resources page
+- [ ] Events page
+- [ ] About page
+- [ ] Contact page
+
+### Final Steps
+- [ ] Audit all pages for errors
+- [ ] Verify design consistency across site
+- [ ] Save checkpoint
+
+
+## Phase: Site-Wide Design System Application (Completed)
+- [x] Apply NexDyne design system to Core Capabilities page
+- [x] Apply design to Federal Government page
+- [x] Apply design to State & Local Government page
+- [x] Apply design to Defense & Intelligence pages
+- [x] Apply design to FedRAMP Compliance page
+- [x] Apply design to StateRAMP/GovRAMP Compliance page
+- [x] Apply design to CMMC Compliance page
+- [x] Apply design to ATO Support & Authorization page
+- [x] Apply design to Government Cloud Migration page
+- [x] Apply design to Past Performance page
+- [x] Apply design to Contract Vehicles page
+- [x] Apply design to all Services pages (38 pages total)
+- [x] Apply design to Insights page and all insight articles
+- [x] Apply design to Case Studies page and all case studies
+- [x] Apply design to Resources page
+- [x] Apply design to Events page
+- [x] Apply design to About page
+- [x] Apply design to Contact page
+- [x] Fix all TypeScript errors from parallel processing
+- [x] Verify design consistency across all pages
+- [x] Audit and test all pages for errors
+
+### Design System Applied:
+- Hero sections with dark background and image overlay
+- White/light gray backgrounds for content sections (matching Our Approach)
+- Cards with border, orange border on hover
+- Simple bullet points instead of icons in lists
+- No accent bars on cards
+- Orange accent color for labels and highlights
+- Consistent typography and spacing

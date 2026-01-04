@@ -1,32 +1,29 @@
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Database, Shield, Zap, GitBranch, Server, Cloud, FileCode, Lock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function LegacyIntegration() {
   const modernizationCapabilities = [
     {
-      icon: Database,
       title: 'Mainframe & Legacy Database Integration',
       description: 'We help agencies connect mainframe systems (IBM z/OS, AS/400), COBOL applications, and legacy databases (DB2, Oracle, SQL Server) to modern FedRAMP and StateRAMP platforms.',
       benefits: ['COBOL/RPG application integration', 'Mainframe data extraction', 'Legacy database connectors', 'Zero downtime migration']
     },
     {
-      icon: GitBranch,
       title: 'API Wrapper Development',
       description: 'We build secure API wrappers around legacy systems that expose modern REST/GraphQL interfaces while maintaining existing business logic and data validation rules.',
       benefits: ['RESTful API design', 'GraphQL endpoints', 'Legacy logic preservation', 'Versioned API contracts']
     },
     {
-      icon: Shield,
       title: 'Secure Data Synchronization',
       description: 'We implement bi-directional data synchronization between legacy systems and modern platforms with encryption, validation, and comprehensive audit trails.',
       benefits: ['Real-time & batch sync', 'Data validation rules', 'Conflict resolution', 'Audit logging']
     },
     {
-      icon: Zap,
       title: 'Middleware & Adapter Development',
       description: 'We develop custom middleware and adapters that translate between legacy protocols (CICS, MQ Series, SOAP) and modern integration standards (REST, gRPC, Kafka).',
       benefits: ['Protocol translation', 'Message transformation', 'Error handling', 'Performance optimization']
@@ -90,36 +87,37 @@ export default function LegacyIntegration() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
+      <section className="relative py-20 text-white overflow-hidden bg-[oklch(0.18_0.06_250)]/85">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="container relative">
           <div className="max-w-4xl">
             <Link href="/services/system-integration">
-              <Button variant="ghost" className="mb-6 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button variant="ghost" className="mb-6 text-white hover:bg-white/10">
                 ← Back to Systems Integration
               </Button>
             </Link>
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-6">
               Legacy Modernization
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Legacy System Modernization & Integration
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               We help agencies integrate mainframe, COBOL, and legacy databases with modern FedRAMP and StateRAMP platforms using secure adapters, APIs, and middleware—without disrupting existing operations.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Start Modernization Project
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/capability-generator">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                   Generate Capability Statement
                 </Button>
               </Link>
@@ -129,73 +127,65 @@ export default function LegacyIntegration() {
       </section>
 
       {/* Modernization Capabilities */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Legacy System Integration Capabilities</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Legacy System Integration Capabilities</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Connect decades-old systems to modern cloud platforms without business disruption
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {modernizationCapabilities.map((capability, index) => {
-              const Icon = capability.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-accent transition-colors">
+            {modernizationCapabilities.map((capability, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl h-full">
                   <CardContent className="pt-8">
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-7 w-7 text-muted-foreground" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-3">{capability.title}</h3>
-                        <p className="text-muted-foreground mb-4">{capability.description}</p>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
+                    <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{capability.title}</h3>
+                    <p className="text-slate-600 mb-4">{capability.description}</p>
+                    <div className="space-y-2 pt-4 border-t border-slate-100">
                       {capability.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-start gap-3">
-                          <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                          <span className="text-sm">{benefit}</span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-600">{benefit}</span>
                         </div>
                       ))}
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Legacy System Types */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Legacy Systems We Integrate</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Supported Systems</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Legacy Systems We Integrate</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We have deep expertise integrating mainframes, legacy databases, and custom applications
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {legacySystemTypes.map((category, index) => (
-              <Card key={index} className="border-2">
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
                 <CardContent className="pt-8">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Server className="h-6 w-6 text-muted-foreground" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-4">{category.category}</h3>
-                      <div className="space-y-4">
-                        {category.systems.map((system, idx) => (
-                          <div key={idx} className="border-l-2 border-border pl-4">
-                            <div className="font-semibold mb-1">{system.name}</div>
-                            <div className="text-sm text-muted-foreground">{system.description}</div>
-                          </div>
-                        ))}
+                  <h3 className="text-xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{category.category}</h3>
+                  <div className="space-y-4">
+                    {category.systems.map((system, idx) => (
+                      <div key={idx} className="border-l-2 border-slate-200 pl-4">
+                        <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{system.name}</div>
+                        <div className="text-sm text-slate-600">{system.description}</div>
                       </div>
-                    </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -205,21 +195,22 @@ export default function LegacyIntegration() {
       </section>
 
       {/* Integration Approaches */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Integration & Modernization Approaches</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Integration & Modernization Approaches</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We use proven patterns to modernize legacy systems without risky "big bang" migrations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {integrationApproaches.map((approach, index) => (
-              <div key={index} className="flex gap-3 p-6 bg-secondary rounded-lg border-2 border-border">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
+              <div key={index} className="flex items-start gap-3 p-6 bg-[oklch(0.97_0.01_250)] rounded-lg border-2 border-slate-200">
+                <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                 <div>
-                  <div className="font-semibold mb-1">{approach.name}</div>
-                  <div className="text-sm text-muted-foreground">{approach.description}</div>
+                  <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{approach.name}</div>
+                  <div className="text-sm text-slate-600">{approach.description}</div>
                 </div>
               </div>
             ))}
@@ -228,23 +219,24 @@ export default function LegacyIntegration() {
       </section>
 
       {/* Risk Mitigation */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Risk Mitigation & Quality Assurance</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Quality Assurance</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Risk Mitigation & Quality Assurance</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We eliminate the risks typically associated with legacy system integration projects
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {riskMitigation.map((risk, index) => (
-              <Card key={index} className="border-2">
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                     <div>
-                      <div className="font-semibold mb-2">{risk.name}</div>
-                      <div className="text-sm text-muted-foreground">{risk.description}</div>
+                      <div className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">{risk.name}</div>
+                      <div className="text-sm text-slate-600">{risk.description}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -255,23 +247,24 @@ export default function LegacyIntegration() {
       </section>
 
       {/* Compliance Features */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Security & Compliance</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Security First</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Security & Compliance</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               All legacy integrations meet FedRAMP, StateRAMP, and FISMA security requirements
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {complianceFeatures.map((feature, index) => (
-              <Card key={index} className="border-2">
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                     <div>
-                      <div className="font-semibold mb-2">{feature.name}</div>
-                      <div className="text-sm text-muted-foreground">{feature.description}</div>
+                      <div className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">{feature.name}</div>
+                      <div className="text-sm text-slate-600">{feature.description}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -282,22 +275,22 @@ export default function LegacyIntegration() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your Legacy Systems?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Our legacy integration specialists can help you connect mainframe and legacy systems to modern cloud platforms without disrupting operations.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule Modernization Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/services/system-integration">
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                   View All Integration Services
                 </Button>
               </Link>

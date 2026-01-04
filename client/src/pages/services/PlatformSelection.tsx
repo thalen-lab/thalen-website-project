@@ -1,34 +1,31 @@
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Target, TrendingDown, Shield, Users, CheckSquare, FileText, BarChart, Award } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function PlatformSelection() {
   const selectionCapabilities = [
     {
-      icon: Target,
       title: 'Requirements Analysis & Discovery',
       description: 'We help agencies define functional and technical requirements through stakeholder interviews, process mapping, and gap analysis to identify the right platform capabilities.',
       benefits: ['Stakeholder workshops', 'Process documentation', 'Requirements traceability matrix', 'Gap analysis reports']
     },
     {
-      icon: BarChart,
       title: 'Platform Evaluation & Scoring',
       description: 'We evaluate 50+ FedRAMP and StateRAMP platforms using weighted scoring criteria including functionality, security, cost, vendor stability, and integration capabilities.',
       benefits: ['Platform comparison matrix', 'Weighted scoring model', 'Demo coordination', 'Reference checks']
     },
     {
-      icon: TrendingDown,
       title: 'Total Cost of Ownership (TCO) Analysis',
       description: 'We calculate 5-year TCO including licensing, implementation, training, support, and hidden costs to ensure accurate budget planning and ROI projections.',
       benefits: ['5-year TCO modeling', 'ROI projections', 'Cost comparison analysis', 'Budget planning support']
     },
     {
-      icon: Shield,
       title: 'Security & Compliance Assessment',
-      description: 'We verify FedRAMP/StateRAMP authorization levels, assess security controls, and ensure platforms meet your agency\'s specific compliance requirements.',
+      description: "We verify FedRAMP/StateRAMP authorization levels, assess security controls, and ensure platforms meet your agency's specific compliance requirements.",
       benefits: ['FedRAMP/StateRAMP verification', 'Security controls review', 'Compliance gap analysis', 'ATO readiness assessment']
     }
   ];
@@ -78,7 +75,7 @@ export default function PlatformSelection() {
   ];
 
   const decisionCriteria = [
-    { name: 'Functional Fit', description: 'How well does the platform meet your agency\'s specific functional requirements?' },
+    { name: 'Functional Fit', description: "How well does the platform meet your agency's specific functional requirements?" },
     { name: 'Security & Compliance', description: 'FedRAMP/StateRAMP authorization level, security controls, compliance certifications' },
     { name: 'Total Cost of Ownership', description: '5-year TCO including licensing, implementation, training, support, and hidden costs' },
     { name: 'Integration Capabilities', description: 'APIs, connectors, and integration patterns for existing systems' },
@@ -87,36 +84,32 @@ export default function PlatformSelection() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-[oklch(0.20_0.05_250)]">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
+      <section className="relative bg-cover bg-center" style={{ backgroundImage: "url('/img/patterns/hero-pattern.svg')" }}>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85" />
+        <div className="relative container py-20 text-white">
           <div className="max-w-4xl">
-            <Link href="/services/digital-transformation">
-              <Button variant="ghost" className="mb-6 text-primary-foreground hover:bg-primary-foreground/10">
-                ← Back to IT Modernization
-              </Button>
-            </Link>
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               Platform Selection
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               FedRAMP & StateRAMP Platform Selection
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               We help agencies select optimal FedRAMP and StateRAMP platforms through vendor-neutral assessment, weighted scoring, TCO analysis, and security compliance verification—ensuring you choose the right solution for your mission.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Start Platform Selection
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/capability-generator">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                   Generate Capability Statement
                 </Button>
               </Link>
@@ -126,69 +119,68 @@ export default function PlatformSelection() {
       </section>
 
       {/* Selection Capabilities */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Platform Selection Capabilities</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Vendor-neutral platform evaluation and selection services for government agencies
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Platform Selection Expertise</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Vendor-neutral platform evaluation and selection services for government agencies.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {selectionCapabilities.map((capability, index) => {
-              const Icon = capability.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-accent transition-colors">
+            {selectionCapabilities.map((capability, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
                   <CardContent className="pt-8">
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-7 w-7 text-muted-foreground" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-3">{capability.title}</h3>
-                        <p className="text-muted-foreground mb-4">{capability.description}</p>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
+                    <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{capability.title}</h3>
+                    <p className="text-slate-600 mb-4">{capability.description}</p>
+                    <div className="space-y-2 pt-4 border-t border-slate-100">
                       {capability.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-start gap-3">
-                          <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                          <span className="text-sm">{benefit}</span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-600">{benefit}</span>
                         </div>
                       ))}
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Platform Categories */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP & StateRAMP Platform Landscape</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We evaluate 50+ authorized platforms across every government technology category
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Landscape</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">FedRAMP & StateRAMP Authorized Platforms</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              We evaluate 50+ authorized platforms across every government technology category.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {platformCategories.map((category, index) => (
-              <Card key={index} className="border-2">
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                 <CardContent className="pt-8">
-                  <h3 className="text-xl font-bold mb-6">{category.category}</h3>
+                  <h3 className="text-xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">{category.category}</h3>
                   <div className="space-y-4">
                     {category.platforms.map((platform, idx) => (
-                      <div key={idx} className="border-l-2 border-border pl-4">
+                      <div key={idx}>
                         <div className="flex items-start justify-between gap-4 mb-1">
-                          <div className="font-semibold">{platform.name}</div>
-                          <div className="text-xs bg-muted px-2 py-1 rounded whitespace-nowrap">
+                          <div className="font-semibold text-[oklch(0.20_0.05_250)]">{platform.name}</div>
+                          <div className="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded whitespace-nowrap">
                             FedRAMP {platform.fedramp}
                           </div>
                         </div>
-                        <div className="text-sm text-muted-foreground">{platform.strengths}</div>
+                        <div className="text-sm text-slate-600">{platform.strengths}</div>
                       </div>
                     ))}
                   </div>
@@ -200,21 +192,22 @@ export default function PlatformSelection() {
       </section>
 
       {/* Selection Process */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Platform Selection Process</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Structured 6-step process ensures you select the right platform for your mission
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Our Platform Selection Process</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              A structured 6-step process ensures you select the right platform for your mission.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {selectionProcess.map((item, index) => (
-              <div key={index} className="flex gap-3 p-6 bg-secondary rounded-lg border-2 border-border">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
+              <div key={index} className="flex items-start gap-4 p-6 bg-[oklch(0.97_0.01_250)] rounded-lg">
+                <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                 <div>
-                  <div className="font-semibold mb-1">{item.step}</div>
-                  <div className="text-sm text-muted-foreground">{item.description}</div>
+                  <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{item.step}</div>
+                  <div className="text-sm text-slate-600">{item.description}</div>
                 </div>
               </div>
             ))}
@@ -223,49 +216,46 @@ export default function PlatformSelection() {
       </section>
 
       {/* Decision Criteria */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Platform Evaluation Criteria</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We evaluate platforms using weighted scoring across 6 critical dimensions
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Evaluation Criteria</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Key Decision Factors</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              We evaluate platforms using weighted scoring across 6 critical dimensions.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {decisionCriteria.map((criterion, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold mb-2">{criterion.name}</div>
-                      <div className="text-sm text-muted-foreground">{criterion.description}</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div key={index} className="flex items-start gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                <div>
+                  <div className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">{criterion.name}</div>
+                  <div className="text-sm text-slate-600">{criterion.description}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Select Your Platform?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <h2 className="text-4xl font-bold mb-6 text-white">Ready to Select Your Platform?</h2>
+            <p className="text-xl text-white/90 mb-8">
               Our platform selection specialists can help you evaluate FedRAMP and StateRAMP platforms and choose the right solution for your mission.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule Platform Selection Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/services/digital-transformation">
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                   View All Modernization Services
                 </Button>
               </Link>

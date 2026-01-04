@@ -1,80 +1,91 @@
-import { ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 export default function DODDataPipelines() {
-  // Utility component for the statistics grid to ensure clean, icon-less display
+  // Utility component for the statistics grid
   const StatItem = ({ value, label }: { value: string; label: string }) => (
-    <div className="text-center p-6 border rounded-lg bg-background/50">
-      <div className="text-4xl font-bold mb-1 text-primary font-sans">{value}</div>
-      <div className="text-sm text-muted-foreground font-sans">{label}</div>
+    <div className="text-center p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+      <div className="text-4xl font-bold mb-1 text-[oklch(0.20_0.05_250)] font-sans">{value}</div>
+      <div className="text-sm text-slate-600 font-sans">{label}</div>
     </div>
   );
 
   // Utility component for the main body text style
   const EditorialParagraph = ({ children }: { children: React.ReactNode }) => (
-    <p className="text-lg text-muted-foreground leading-relaxed mb-6 font-sans">
+    <p className="text-lg text-slate-600 leading-relaxed mb-6 font-sans">
       {children}
     </p>
   );
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          <div className="max-w-4xl">
+      <section className="relative pt-32 pb-20 text-white">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/hero-pattern.svg')" }}
+        ></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl"
+          >
             <div className="flex flex-wrap gap-3 mb-4">
-              <span className="text-sm font-semibold text-orange-400">CASE STUDY • DATA ENGINEERING</span>
-              <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+              <span className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider text-sm">CASE STUDY • DATA ENGINEERING</span>
+              <span className="inline-block bg-white/10 text-white/90 px-3 py-1 rounded-full text-xs font-semibold">
                 IDIQ Contract
               </span>
-              <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+              <span className="inline-block bg-white/10 text-white/90 px-3 py-1 rounded-full text-xs font-semibold">
                 Secret Clearance
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 text-white">
               Modernizing Defense Logistics: Automated Data Pipelines Deliver Real-Time Visibility and $12 Million in Annual Savings
             </h1>
-            <p className="text-xl opacity-90 mb-8 font-sans">
+            <p className="text-xl text-white/90 mb-8 font-sans">
               How the Department of Defense eliminated manual data integration work and achieved real-time supply chain visibility across 47 systems.
             </p>
-            <div className="flex flex-wrap gap-6 text-sm font-sans">
+            <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm font-sans text-white/90">
               <div>
-                <div className="font-semibold text-orange-400">Client</div>
-                <div>Department of Defense</div>
+                <div className="font-semibold text-[oklch(0.75_0.15_55)] uppercase tracking-wider">Client</div>
+                <div className="text-white">Department of Defense</div>
               </div>
               <div>
-                <div className="font-semibold text-orange-400">Industry</div>
-                <div>Federal Government</div>
+                <div className="font-semibold text-[oklch(0.75_0.15_55)] uppercase tracking-wider">Industry</div>
+                <div className="text-white">Federal Government</div>
               </div>
               <div>
-                <div className="font-semibold text-orange-400">Timeline</div>
-                <div>24 months</div>
+                <div className="font-semibold text-[oklch(0.75_0.15_55)] uppercase tracking-wider">Timeline</div>
+                <div className="text-white">24 months</div>
               </div>
               <div>
-                <div className="font-semibold text-orange-400">Contract Value</div>
-                <div>$18.5M</div>
+                <div className="font-semibold text-[oklch(0.75_0.15_55)] uppercase tracking-wider">Contract Value</div>
+                <div className="text-white">$18.5M</div>
               </div>
               <div>
-                <div className="font-semibold text-orange-400">Services</div>
-                <div>Data Engineering, Cloud Infrastructure, Integration</div>
+                <div className="font-semibold text-[oklch(0.75_0.15_55)] uppercase tracking-wider">Services</div>
+                <div className="text-white">Data Engineering, Cloud Infrastructure, Integration</div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* The Opportunity Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container max-w-4xl">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent mb-2 font-sans">The Opportunity</h2>
-          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8">The Imperative for Real-Time Logistics in a $180 Billion Supply Chain</h3>
+          <h2 className="text-sm text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Opportunity</h2>
+          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">The Imperative for Real-Time Logistics in a $180 Billion Supply Chain</h3>
           
           <EditorialParagraph>
             The Department of Defense (DOD) logistics command oversees a vast, complex supply chain valued at over $180 billion. This critical operation was managed across 47 disparate, siloed systems, including legacy mainframes, various ERP platforms, and specialized warehouse management tools. The inherent heterogeneity of these systems—each with unique data formats, update frequencies, and access protocols—created a significant data integration challenge.
@@ -90,11 +101,11 @@ export default function DODDataPipelines() {
         </div>
       </section>
 
-      {/* The Solution Section (Dark Background) */}
-      <section className="py-20 bg-muted/30">
+      {/* The Solution Section */}
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent mb-2 font-sans">The Solution</h2>
-          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8">Architecting a Secure, Cloud-Native Data Ecosystem for Mission-Critical Data</h3>
+          <h2 className="text-sm text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Solution</h2>
+          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">Architecting a Secure, Cloud-Native Data Ecosystem for Mission-Critical Data</h3>
           
           <EditorialParagraph>
             The solution began with the design and deployment of a FedRAMP-authorized, cloud-native data lake within AWS GovCloud. This architecture established a secure, central repository for all supply chain data, utilizing services like S3 for scalable raw data storage, AWS Glue for robust ETL orchestration, and Athena for efficient, cost-effective SQL querying. This foundation provided the necessary security, scalability, and compliance framework for defense-level data workloads.
@@ -111,10 +122,10 @@ export default function DODDataPipelines() {
       </section>
 
       {/* The Impact Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container max-w-4xl">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent mb-2 font-sans">The Impact</h2>
-          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8">Transformative Results in Operational Efficiency and Cost Reduction</h3>
+          <h2 className="text-sm text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Impact</h2>
+          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">Transformative Results in Operational Efficiency and Cost Reduction</h3>
           
           {/* Statistics Grid */}
           <div className="grid md:grid-cols-4 gap-6 mb-12">
@@ -139,19 +150,23 @@ export default function DODDataPipelines() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Ready to Automate Your Data Pipelines?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto font-sans">
             Schedule a free pipeline assessment. We will evaluate your current data processes, identify automation opportunities, and show you how to achieve real-time data visibility.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request Free Pipeline Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 transition-colors">
+              <Link to="/contact/sales">
+                Request Free Pipeline Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              View All Case Studies
+            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)] transition-colors">
+              <Link to="/case-studies">
+                View All Case Studies
+              </Link>
             </Button>
           </div>
         </div>

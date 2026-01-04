@@ -1,9 +1,10 @@
-import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
+import { Button } from "@/components/ui/button";
 import Footer from '@/components/Footer';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 
 // Define the statistics data structure for the clean grid
 const statistics = [
@@ -15,12 +16,13 @@ const statistics = [
 
 export default function BankFraud() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
+      <section className="relative py-20 text-white bg-cover bg-center" style={{ backgroundImage: "url('/img/pattern-dark.svg')" }}>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="container relative">
           {/* Breadcrumb */}
           <div className="mb-8">
             <Breadcrumb 
@@ -32,33 +34,35 @@ export default function BankFraud() {
             />
           </div>
           <div className="max-w-4xl">
-            <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 font-sans">
+            <div className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               Financial Services Case Study
             </div>
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 leading-tight text-white">
               Implementing AI-Powered Fraud Detection to Protect a Major Financial Institution from $45 Million in Annual Losses
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 font-sans">
+            <p className="text-xl md:text-2xl text-white/90 mb-8">
               A strategic deployment of real-time machine learning fraud detection reduced false positives by 80% while preventing $45 million in fraudulent transactions annually.
             </p>
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90 font-sans">
-              <Download className="mr-2 h-5 w-5" />
-              Download Full Case Study (PDF)
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
+                Request a Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* The Opportunity */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-4 font-sans">
+          <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
             The Opportunity
           </p>
-          <h2 className="text-4xl font-serif font-bold mb-8">
+          <h2 className="text-4xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">
             Addressing Escalating Fraud and Customer Friction in Legacy Systems
           </h2>
-          <div className="space-y-6 text-lg leading-relaxed font-sans">
+          <div className="space-y-6 text-lg leading-relaxed text-slate-600">
             <p>
               A top-10 U.S. bank, managing over 500 million transactions annually, faced a critical challenge with escalating fraud losses, which had surpassed $60 million per year. The sophistication of modern financial crime, including synthetic identity fraud and account takeover schemes, was overwhelming their legacy systems, posing a significant threat to the institution's financial stability and reputation.
             </p>
@@ -73,15 +77,15 @@ export default function BankFraud() {
       </section>
 
       {/* The Solution */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-4 font-sans">
+          <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
             The Solution
           </p>
-          <h2 className="text-4xl font-serif font-bold mb-8">
+          <h2 className="text-4xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">
             Deploying a Multi-Model, Real-Time Machine Learning Architecture
           </h2>
-          <div className="space-y-6 text-lg leading-relaxed font-sans">
+          <div className="space-y-6 text-lg leading-relaxed text-slate-600">
             <p>
               The engagement began with the design and deployment of a multi-model machine learning architecture. This advanced system utilized an ensemble of specialized models, including gradient boosting, neural networks, and graph analytics, each optimized for distinct fraud typologies. A model stacking approach was implemented to synthesize the outputs for a final, highly accurate decision, moving beyond the limitations of single-model systems.
             </p>
@@ -96,30 +100,36 @@ export default function BankFraud() {
       </section>
 
       {/* The Impact */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-4 font-sans">
+          <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
             The Impact
           </p>
-          <h2 className="text-4xl font-serif font-bold mb-12">
+          <h2 className="text-4xl font-serif font-bold mb-12 text-[oklch(0.20_0.05_250)]">
             Measurable Financial Protection and Enhanced Customer Experience
           </h2>
 
           {/* Statistics Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {statistics.map((metric, index) => (
-              <div key={index} className="text-center p-4 border border-gray-200 rounded-lg">
-                <div className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-2">
+              <motion.div 
+                key={index} 
+                className="bg-white border-2 border-slate-200 rounded-lg p-6 text-center transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="text-4xl md:text-5xl font-serif font-bold text-[oklch(0.20_0.05_250)] mb-2">
                   {metric.value}
                 </div>
-                <div className="text-sm uppercase tracking-wider text-gray-600 font-sans">
+                <div className="text-sm uppercase tracking-wider text-slate-600">
                   {metric.label}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          <div className="space-y-6 text-lg leading-relaxed font-sans">
+          <div className="space-y-6 text-lg leading-relaxed text-slate-600">
             <p>
               The implementation resulted in a substantial 75% reduction in annual fraud losses, preventing an estimated $45 million in fraudulent transactions within the first year of deployment. This immediate financial impact was complemented by a dramatic improvement in operational efficiency and, crucially, in the overall customer experience.
             </p>
@@ -134,23 +144,23 @@ export default function BankFraud() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
             Protect Your Institution from Evolving Financial Threats
           </h2>
-          <p className="text-xl opacity-90 mb-8 font-sans">
+          <p className="text-xl opacity-90 mb-8">
             Discover how NexDyne's AI fraud detection solutions can reduce losses while dramatically improving customer experience and operational efficiency.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90 font-sans">
+              <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Schedule a Fraud Risk Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link href="/case-studies">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-sans">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                 View More Case Studies
               </Button>
             </Link>

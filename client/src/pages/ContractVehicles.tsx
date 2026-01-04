@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { ChevronDown, FileText, Mail, Building2, CheckCircle2 } from "lucide-react";
+import { ChevronDown, FileText, Mail, Building2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import SEO from "@/components/SEO";
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
+import { motion } from "framer-motion";
 
 interface ContractVehicle {
   name: string;
@@ -202,7 +204,7 @@ const contractCategories: VehicleCategory[] = [
         description: "National Association of State Procurement Officials cooperative purchasing program. NASPO ValuePoint provides state and local governments with access to competitively solicited contracts for IT products and services.",
         scope: "IT hardware, software, cloud services, cybersecurity, and professional services available to all 50 states, territories, and participating local governments through cooperative purchasing agreements.",
         capabilities: [
-          "IT hardware and software solutions",
+          "IT hardware and software procurement",
           "Cloud services and infrastructure",
           "Cybersecurity products and services",
           "Professional services and consulting",
@@ -249,9 +251,9 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
 
   const getRoleBadge = (role: 'prime' | 'subcontractor' | 'pursuing') => {
     const styles = {
-      prime: "bg-green-100 text-green-800 border-green-200",
-      subcontractor: "bg-blue-100 text-blue-800 border-blue-200",
-      pursuing: "bg-amber-100 text-amber-800 border-amber-200"
+      prime: "bg-[oklch(0.55_0.18_140)]/10 text-[oklch(0.45_0.18_140)] border-[oklch(0.55_0.18_140)]/30",
+      subcontractor: "bg-[oklch(0.55_0.18_250)]/10 text-[oklch(0.45_0.18_250)] border-[oklch(0.55_0.18_250)]/30",
+      pursuing: "bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.55_0.18_55)] border-[oklch(0.65_0.18_55)]/30"
     };
     
     const labels = {
@@ -261,16 +263,22 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
     };
 
     return (
-      <span className={`inline-flex items-center px-3 py-1 text-xs font-semibold border ${styles[role]}`}>
+      <span className={`inline-flex items-center px-3 py-1 text-xs font-semibold border rounded ${styles[role]}`}>
         {labels[role]}
       </span>
     );
   };
 
   return (
-    <div className="mb-16">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="mb-16"
+    >
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-slate-900 mb-3">{category.title}</h2>
+        <h2 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{category.title}</h2>
         <p className="text-lg text-slate-600">{category.description}</p>
       </div>
 
@@ -278,9 +286,9 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
         {category.vehicles.map((vehicle) => {
           const isOpen = openVehicles.has(vehicle.name);
           return (
-            <div
+            <Card
               key={vehicle.name}
-              className="border border-slate-200 bg-white transition-shadow hover:shadow-md"
+              className="border-2 border-slate-200 bg-white transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg overflow-hidden"
             >
               <button
                 onClick={() => toggleVehicle(vehicle.name)}
@@ -288,7 +296,7 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-xl font-semibold text-slate-900">
+                    <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)]">
                       {vehicle.name}
                     </h3>
                     {getRoleBadge(vehicle.role)}
@@ -305,22 +313,21 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
               {isOpen && (
                 <div className="px-6 pb-6 pt-2 border-t border-slate-100">
                   {vehicle.scope && (
-                    <div className="mb-6 p-4 bg-slate-50 border-l-4 border-slate-300">
-                      <h4 className="font-semibold text-slate-900 mb-2">Contract Scope</h4>
+                    <div className="mb-6 p-4 bg-[oklch(0.97_0.01_250)] border-l-4 border-[oklch(0.65_0.18_55)]">
+                      <h4 className="font-semibold text-[oklch(0.20_0.05_250)] mb-2">Contract Scope</h4>
                       <p className="text-slate-700 leading-relaxed">{vehicle.scope}</p>
                     </div>
                   )}
 
                   {vehicle.capabilities && (
                     <div className="mb-6">
-                      <h4 className="font-semibold text-slate-900 mb-3 flex items-center">
-                        <CheckCircle2 className="h-5 w-5 mr-2 text-slate-600" />
+                      <h4 className="font-semibold text-[oklch(0.20_0.05_250)] mb-3">
                         Key Capabilities
                       </h4>
                       <div className="grid md:grid-cols-2 gap-3">
                         {vehicle.capabilities.map((capability, idx) => (
                           <div key={idx} className="flex items-start">
-                            <div className="flex-shrink-0 w-1.5 h-1.5 bg-slate-400 mt-2 mr-3" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span>
                             <p className="text-slate-600 text-sm leading-relaxed">{capability}</p>
                           </div>
                         ))}
@@ -331,8 +338,8 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
                   <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
                     {vehicle.contractNumber && (
                       <div>
-                        <p className="text-sm font-semibold text-slate-700 mb-1 flex items-center">
-                          <FileText className="h-4 w-4 mr-2" />
+                        <p className="text-sm font-semibold text-[oklch(0.20_0.05_250)] mb-1 flex items-center">
+                          <FileText className="h-4 w-4 mr-2 text-[oklch(0.65_0.18_55)]" />
                           Contract Status
                         </p>
                         <p className="text-sm text-slate-600 pl-6">{vehicle.contractNumber}</p>
@@ -340,8 +347,8 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
                     )}
                     {vehicle.periodOfPerformance && (
                       <div>
-                        <p className="text-sm font-semibold text-slate-700 mb-1 flex items-center">
-                          <Building2 className="h-4 w-4 mr-2" />
+                        <p className="text-sm font-semibold text-[oklch(0.20_0.05_250)] mb-1 flex items-center">
+                          <Building2 className="h-4 w-4 mr-2 text-[oklch(0.65_0.18_55)]" />
                           Period of Performance
                         </p>
                         <p className="text-sm text-slate-600 pl-6">{vehicle.periodOfPerformance}</p>
@@ -353,7 +360,7 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
                     <div className="mt-4 pt-4 border-t border-slate-100">
                       <a
                         href={`mailto:${vehicle.contact}`}
-                        className="inline-flex items-center text-sm text-slate-700 hover:text-slate-900 font-medium"
+                        className="inline-flex items-center text-sm text-[oklch(0.65_0.18_55)] hover:text-[oklch(0.55_0.18_55)] font-medium"
                       >
                         <Mail className="h-4 w-4 mr-2" />
                         Contact for more information
@@ -362,11 +369,11 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
                   )}
                 </div>
               )}
-            </div>
+            </Card>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -380,110 +387,153 @@ export default function ContractVehicles() {
       />
       <Navigation />
 
-      <div className="min-h-screen bg-slate-50">
-        {/* Hero Section */}
-        <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2000')] bg-cover bg-center opacity-10" />
-          <div className="relative container mx-auto px-4 py-24">
-            <div className="max-w-4xl">
-              <div className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-                <span className="text-sm font-medium">Federal Procurement</span>
-              </div>
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+      <div className="min-h-screen flex flex-col">
+        {/* Hero Section with Background Image */}
+        <section className="relative py-24 md:py-32 text-white overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2000')" }}
+          ></div>
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/90"></div>
+          
+          <div className="container relative z-10">
+            {/* Breadcrumb */}
+            <div className="mb-8">
+              <Breadcrumb 
+                items={[
+                  { label: 'Government Solutions', href: '/federal-solutions' },
+                  { label: 'Contract Vehicles' }
+                ]} 
+                variant="light" 
+              />
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl"
+            >
+              <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Federal Procurement</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Contract Vehicles & Teaming Opportunities
               </h1>
-              <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
                 NexDyne Technology holds multiple federal contract vehicles and is actively seeking subcontracting and teaming opportunities with prime contractors. We bring specialized IT capabilities, small business credentials, and proven past performance to support your agency's technology initiatives through strategic partnerships.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/contact">
-                  <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100">
+                <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                  <Link href="/contact">
                     <Mail className="mr-2 h-5 w-5" />
                     Contact Our Team
-                  </Button>
-                </Link>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                   <a href="/nexdyne-capabilities-statement.pdf" download>
                     <FileText className="mr-2 h-5 w-5" />
                     Download Capabilities Statement
                   </a>
                 </Button>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
 
         {/* Introduction */}
-        <div className="bg-white border-b border-slate-200">
-          <div className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+        <section className="py-16 bg-white border-b border-slate-200">
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Strategic Partnerships</p>
+              <h2 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
                 Strategic Partnerships for Government IT Services
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
                 NexDyne Technology holds access to key federal contract vehicles including GSA IT Schedule 70, FBI ITSSS-2, PBGC ITIOSS, and FEC ITSS. We are actively seeking subcontracting and teaming partnerships with prime contractors to deliver specialized IT services across federal agencies. Our approach emphasizes collaboration, bringing deep technical expertise and agile delivery capabilities to support your contract performance and agency mission success.
               </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
 
         {/* Contract Categories */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-5xl mx-auto">
-            {contractCategories.map((category) => (
-              <VehicleAccordion key={category.title} category={category} />
-            ))}
+        <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              {contractCategories.map((category) => (
+                <VehicleAccordion key={category.title} category={category} />
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
 
         {/* Getting Started Section */}
-        <div className="bg-slate-900 text-white">
-          <div className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-4">Seeking Teaming Partnerships</h2>
-              <p className="text-lg text-slate-300 mb-8">
+        <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+          <div className="container text-center max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Seeking Teaming Partnerships</h2>
+              <p className="text-xl text-white/90 mb-8">
                 NexDyne Technology is actively seeking teaming opportunities with prime contractors to support agency contracts.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact">
-                  <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100">
+                <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                  <Link href="/contact">
                     <Mail className="mr-2 h-5 w-5" />
                     Schedule a Consultation
-                  </Button>
-                </Link>
-                <Link href="/services/automation">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                  <Link href="/services/automation">
                     Explore Our Services
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
 
         {/* SAM.gov Registration Notice */}
-        <div className="bg-blue-50 border-t border-blue-100">
-          <div className="container mx-auto px-4 py-12">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <FileText className="h-6 w-6 text-blue-600" />
+        <section className="py-12 bg-[oklch(0.97_0.01_250)] border-t border-slate-200">
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+              <Card className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <FileText className="h-6 w-6 text-[oklch(0.65_0.18_55)]" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[oklch(0.20_0.05_250)] mb-2">SAM.gov Registration</h3>
+                    <p className="text-slate-600 mb-4">
+                      NexDyne Technology maintains active registration in the System for Award Management (SAM.gov), the official U.S. government system for federal contractors. Our CAGE Code and UEI are available upon request for proposal submissions and contract awards.
+                    </p>
+                    <p className="text-sm text-slate-500">
+                      <strong>NAICS Codes:</strong> 541512 (Computer Systems Design Services), 541519 (Other Computer Related Services), 541611 (Administrative Management and General Management Consulting Services), 541690 (Other Scientific and Technical Consulting Services)
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 mb-2">SAM.gov Registration</h3>
-                  <p className="text-slate-600 mb-4">
-                    NexDyne Technology maintains active registration in the System for Award Management (SAM.gov), the official U.S. government system for federal contractors. Our CAGE Code and UEI are available upon request for proposal submissions and contract awards.
-                  </p>
-                  <p className="text-sm text-slate-500">
-                    <strong>NAICS Codes:</strong> 541512 (Computer Systems Design Services), 541519 (Other Computer Related Services), 541611 (Administrative Management and General Management Consulting Services), 541690 (Other Scientific and Technical Consulting Services)
-                  </p>
-                </div>
-              </div>
-            </div>
+              </Card>
+            </motion.div>
           </div>
-        </div>
+        </section>
+
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

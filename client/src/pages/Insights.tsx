@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
@@ -8,7 +9,7 @@ import { useLQIP } from '@/hooks/useLQIP';
 import { usePrefetch } from '@/hooks/usePrefetch';
 import { prefetchImage } from '@/lib/prefetch';
 import Footer from '@/components/Footer';
-import { ArrowRight, Clock, Search, ChevronLeft, ChevronRight, Hand } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import PullToRefresh from '@/components/PullToRefresh';
 import { toast } from 'sonner';
@@ -21,7 +22,6 @@ export default function Insights() {
   const [lastRefreshed, setLastRefreshed] = useState<Date>(new Date());
   const itemsPerPage = 9;
 
-  // Swipe gesture state for mobile navigation
   const gridRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
@@ -29,9 +29,7 @@ export default function Insights() {
   const [isSwiping, setIsSwiping] = useState(false);
   const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null);
 
-  // Pull-to-refresh handler
   const handleRefresh = useCallback(async () => {
-    // Simulate fetching fresh data
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastRefreshed(new Date());
     toast.success('Content refreshed', {
@@ -116,7 +114,6 @@ export default function Insights() {
 
   const categories = ['All', 'Automation Strategy', 'Cybersecurity', 'AI & Machine Learning', 'Cloud Modernization', 'Digital Transformation', 'Data Analytics'];
 
-  // Filter insights based on search query and selected category
   const filteredInsights = insights.filter(insight => {
     const matchesCategory = selectedCategory === 'All' || insight.category === selectedCategory;
     const matchesSearch = searchQuery === '' || 
@@ -128,18 +125,15 @@ export default function Insights() {
     return matchesCategory && matchesSearch;
   });
 
-  // Calculate pagination
   const totalPages = Math.ceil(filteredInsights.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedInsights = filteredInsights.slice(startIndex, endIndex);
 
-  // Reset to page 1 when filters change
   useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery, selectedCategory]);
 
-  // Swipe gesture handlers for mobile pagination
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
@@ -154,7 +148,6 @@ export default function Insights() {
     const diffX = currentX - touchStartX.current;
     const diffY = currentY - touchStartY.current;
     
-    // Only track horizontal swipes (ignore vertical scrolling)
     if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
       setSwipeDeltaX(diffX);
       setSwipeDirection(diffX > 0 ? 'right' : 'left');
@@ -162,11 +155,10 @@ export default function Insights() {
   }, []);
 
   const handleTouchEnd = useCallback(() => {
-    const threshold = 80; // Minimum swipe distance to trigger page change
+    const threshold = 80;
     
     if (Math.abs(swipeDeltaX) >= threshold) {
       if (swipeDeltaX < 0 && currentPage < totalPages) {
-        // Swipe left - go to next page
         setCurrentPage(prev => prev + 1);
         triggerHaptic('selection');
         toast.success(`Page ${currentPage + 1} of ${totalPages}`, {
@@ -174,7 +166,6 @@ export default function Insights() {
           position: 'bottom-center',
         });
       } else if (swipeDeltaX > 0 && currentPage > 1) {
-        // Swipe right - go to previous page
         setCurrentPage(prev => prev - 1);
         triggerHaptic('selection');
         toast.success(`Page ${currentPage - 1} of ${totalPages}`, {
@@ -182,12 +173,10 @@ export default function Insights() {
           position: 'bottom-center',
         });
       } else {
-        // At boundary - provide feedback
         triggerHaptic('warning');
       }
     }
     
-    // Reset swipe state
     touchStartX.current = null;
     touchStartY.current = null;
     setSwipeDeltaX(0);
@@ -195,7 +184,6 @@ export default function Insights() {
     setSwipeDirection(null);
   }, [swipeDeltaX, currentPage, totalPages]);
 
-  // Generate page numbers to display
   const getPageNumbers = () => {
     const pages = [];
     const maxPagesToShow = 5;
@@ -233,13 +221,17 @@ export default function Insights() {
 
   return (
     <PullToRefresh onRefresh={handleRefresh}>
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-[oklch(0.20_0.05_250)]">
       <Navigation />
 
       {/* Hero */}
-      <section className="relative py-12 sm:py-16 md:py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container">
-          {/* Breadcrumb */}
+      <section className="relative py-12 sm:py-16 md:py-20 text-white">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero-pattern.svg')" }}
+        ></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="container relative">
           <div className="mb-6 md:mb-8">
             <Breadcrumb 
               items={[{ label: 'Insights' }]} 
@@ -247,10 +239,11 @@ export default function Insights() {
             />
           </div>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-              Insights & Thought Leadership
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Thought Leadership</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-white">
+              Insights & Analysis
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl opacity-90">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90">
               Expert perspectives on automation strategy, cybersecurity, digital transformation, and emerging technologies.
             </p>
           </div>
@@ -258,33 +251,30 @@ export default function Insights() {
       </section>
 
       {/* Featured Insight */}
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container">
-          <Card className="overflow-hidden max-w-5xl mx-auto hover:shadow-xl transition-shadow p-0 rounded-none border-2">
+          <Card className="overflow-hidden max-w-5xl mx-auto bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 p-0 rounded-lg">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2">
                 <div className="relative overflow-hidden aspect-video md:aspect-auto">
                   <ImageWithLoader
                     src="/kearney-rpa-security.png" 
                     alt="Three Practical Recommendations to Secure RPA in Federal IT"
-                    lqip={useLQIP('/kearney-rpa-security.png')}
                     className="w-full h-full object-cover"
-                    skeletonClassName="h-full"
                   />
                 </div>
-                <div className="p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
-                  <div className="text-sm font-semibold text-accent mb-2">Featured Article</div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4">Three Practical Recommendations to Secure RPA in Federal IT</h3>
-                  <p className="text-muted-foreground mb-4 md:mb-6 text-sm md:text-base">
-                    This article provides three overarching recommendations for RPA Program Teams to support the successful implementation and operation of the program.
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Featured Insight</p>
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">
+                    Three Practical Recommendations to Secure RPA in Federal IT
+                  </h2>
+                  <p className="text-slate-600 mb-6">
+                    A.T. Kearney provides actionable guidance for federal agencies to mitigate risks associated with Robotic Process Automation.
                   </p>
-                  <p className="text-sm text-muted-foreground mb-4 md:mb-6">
-                    Written by Kearney Principal Mark Munster
-                  </p>
-                  <Button className="bg-orange-gradient hover:opacity-90 w-full sm:w-fit min-h-[44px]">
-                    Download Report
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link href="/insights/secure-rpa-federal" className="group font-semibold text-[oklch(0.20_0.05_250)] inline-flex items-center">
+                    Read Article
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </div>
               </div>
             </CardContent>
@@ -292,255 +282,164 @@ export default function Insights() {
         </div>
       </section>
 
-      {/* Insights Grid with Filtering */}
-      <section className="py-20 bg-secondary">
+      {/* Insights Grid */}
+      <section className="py-12 md:py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest Insights</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Stay informed with expert analysis and practical guidance from NexDyne Technology's thought leaders.
-            </p>
-          </div>
-
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-8">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+          {/* Search and Filter */}
+          <div className="flex flex-col md:flex-row gap-6 md:items-center mb-8 md:mb-12">
+            <div className="relative flex-1">
               <input
                 type="text"
-                placeholder="Search insights by title, topic, or author..."
+                placeholder="Search insights..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+                className="w-full pl-4 pr-4 py-3 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-[oklch(0.70_0.18_55)] focus:border-[oklch(0.70_0.18_55)] outline-none transition"
               />
+            </div>
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 -mb-2">
+              {categories.map(category => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors flex-shrink-0 ${selectedCategory === category ? 'bg-[oklch(0.22_0.06_250)] text-white' : 'bg-white text-slate-600 hover:bg-slate-100 border-2 border-slate-200'}`}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
 
-          {/* Category Filters */}
-          <div className="flex gap-3 overflow-x-auto pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center mb-12 scrollbar-hide">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all shrink-0 min-h-[44px] ${
-                  selectedCategory === category
-                    ? 'bg-accent text-accent-foreground shadow-md'
-                    : 'bg-background border border-border hover:border-accent hover:text-accent'
-                }`}
+          {/* Grid */}
+          <div 
+            ref={gridRef}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            {paginatedInsights.map((insight, index) => (
+              <motion.div
+                key={insight.href}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {category}
-              </button>
+                <Card className="h-full flex flex-col bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 rounded-lg overflow-hidden">
+                  <CardContent className="p-0 flex-1 flex flex-col">
+                    <Link href={insight.href}>
+                      <div className="relative overflow-hidden aspect-[16/9]">
+                        <ImageWithLoader src={insight.image} alt={insight.title} className="w-full h-full object-cover" />
+                      </div>
+                    </Link>
+                    <div className="p-6 flex-1 flex flex-col">
+                      <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-2 uppercase tracking-wider text-xs">{insight.category}</p>
+                      <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)] flex-1">
+                        <Link href={insight.href} className="hover:underline">{insight.title}</Link>
+                      </h3>
+                      <p className="text-slate-600 text-sm mb-4">{insight.excerpt}</p>
+                      <div className="text-xs text-slate-500 mt-auto pt-4 border-t border-slate-100 flex justify-between items-center">
+                        <span>{insight.author}</span>
+                        <span>{insight.readTime}</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
 
-          {/* Results Count */}
-          <div className="text-center mb-8">
-            <p className="text-muted-foreground">
-              {filteredInsights.length > 0 ? (
-                <>
-                  Showing {startIndex + 1}-{Math.min(endIndex, filteredInsights.length)} of {filteredInsights.length} {filteredInsights.length === 1 ? 'article' : 'articles'}
-                  {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-                  {searchQuery && ` matching "${searchQuery}"`}
-                </>
-              ) : (
-                <>
-                  Showing 0 articles
-                  {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-                  {searchQuery && ` matching "${searchQuery}"`}
-                </>
-              )}
-            </p>
-          </div>
-
-          {/* Swipe hint for mobile */}
+          {/* Pagination */}
           {totalPages > 1 && (
-            <div className="md:hidden text-center mb-6">
-              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50">
-                <ChevronLeft className="h-4 w-4" />
-                <Hand className="h-4 w-4" />
-                <span>Swipe to navigate pages</span>
-                <ChevronRight className="h-4 w-4" />
-              </div>
+            <div className="flex justify-center items-center mt-12 md:mt-16 space-x-2">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                onClick={() => setCurrentPage(p => Math.max(1, p - 1))} 
+                disabled={currentPage === 1}
+                className="border-slate-300"
+              >
+                <span className="sr-only">Previous Page</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              </Button>
+              
+              {getPageNumbers().map((page, index) => (
+                page === '...' ? (
+                  <span key={`ellipsis-${index}`} className="px-4 py-2 text-slate-500">...</span>
+                ) : (
+                  <Button 
+                    key={page} 
+                    variant={currentPage === page ? 'default' : 'outline'} 
+                    onClick={() => setCurrentPage(page as number)}
+                    className={`w-10 h-10 ${currentPage === page ? 'bg-[oklch(0.22_0.06_250)] text-white' : 'border-slate-300'}`}
+                  >
+                    {page}
+                  </Button>
+                )
+              ))}
+
+              <Button 
+                variant="outline" 
+                size="icon" 
+                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} 
+                disabled={currentPage === totalPages}
+                className="border-slate-300"
+              >
+                <span className="sr-only">Next Page</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              </Button>
             </div>
           )}
 
-          {/* Insights Grid */}
-          {paginatedInsights.length > 0 ? (
-            <>
-              <div 
-                ref={gridRef}
-                className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 touch-pan-y transition-transform duration-200 ${isSwiping ? 'transition-none' : ''}`}
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-                style={{
-                  transform: isSwiping ? `translateX(${swipeDeltaX * 0.15}px)` : 'translateX(0)',
-                  opacity: isSwiping ? 0.9 : 1,
-                }}>
-                {paginatedInsights.map((insight, index) => {
-                  const InsightCard = () => {
-                    const prefetchHandlers = usePrefetch(insight.href);
-                    
-                    return (
-                      <Link 
-                        key={index} 
-                        href={insight.href} 
-                        {...prefetchHandlers}
-                        onMouseEnter={() => prefetchImage(insight.image)}
-                      >
-                        <Card className="group hover:shadow-xl hover:border-accent transition-all flex flex-col h-full cursor-pointer overflow-hidden rounded-none border-2 p-0">
-                      {/* Image */}
-                      <div className="relative h-64 overflow-hidden">
-                        <ImageWithLoader
-                          src={insight.image}
-                          alt={insight.title}
-                          lqip={useLQIP(insight.image)}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          skeletonClassName="h-64"
-                        />
-                      </div>
-
-                      <CardContent className="p-6 flex flex-col flex-1">
-                        <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
-                          {insight.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground mb-4">By {insight.author}</p>
-                        <p className="text-muted-foreground mb-6 flex-1">{insight.excerpt}</p>
-
-                        <div className="flex items-center text-sm text-muted-foreground">
-                          <Clock className="h-4 w-4 mr-2" />
-                          <span className="mr-4">{insight.readTime}</span>
-                          <span>•</span>
-                          <span className="ml-4">{insight.date}</span>
-                        </div>
-                      </CardContent>
-                        </Card>
-                      </Link>
-                    );
-                  };
-                  
-                  return <InsightCard key={index} />;
-                })}
-                
-                {/* Swipe direction indicator */}
-                {isSwiping && Math.abs(swipeDeltaX) > 30 && (
-                  <div className="fixed inset-x-0 top-1/2 -translate-y-1/2 pointer-events-none z-50 flex justify-between px-4 md:hidden">
-                    <div className={`p-3 rounded-full bg-accent/90 text-accent-foreground shadow-lg transition-opacity ${swipeDirection === 'right' && currentPage > 1 ? 'opacity-100' : 'opacity-0'}`}>
-                      <ChevronLeft className="h-6 w-6" />
-                    </div>
-                    <div className={`p-3 rounded-full bg-accent/90 text-accent-foreground shadow-lg transition-opacity ${swipeDirection === 'left' && currentPage < totalPages ? 'opacity-100' : 'opacity-0'}`}>
-                      <ChevronRight className="h-6 w-6" />
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Pagination Controls */}
-              {totalPages > 1 && (
-                <div className="flex items-center justify-center gap-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-                    disabled={currentPage === 1}
-                    className="disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    <ChevronLeft className="h-4 w-4 mr-1" />
-                    Previous
-                  </Button>
-
-                  <div className="flex gap-1">
-                    {getPageNumbers().map((page, index) => (
-                      page === '...' ? (
-                        <span key={`ellipsis-${index}`} className="px-3 py-2 text-muted-foreground">
-                          ...
-                        </span>
-                      ) : (
-                        <button
-                          key={page}
-                          onClick={() => setCurrentPage(page as number)}
-                          className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                            currentPage === page
-                              ? 'bg-accent text-accent-foreground shadow-md'
-                              : 'bg-background border border-border hover:border-accent hover:text-accent'
-                          }`}
-                        >
-                          {page}
-                        </button>
-                      )
-                    ))}
-                  </div>
-
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-                    disabled={currentPage === totalPages}
-                    className="disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    Next
-                    <ChevronRight className="h-4 w-4 ml-1" />
-                  </Button>
-                </div>
-              )}
-            </>
-          ) : (
-            <div className="text-center py-16">
-              <div className="max-w-md mx-auto">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold mb-2">No articles found</h3>
-                <p className="text-muted-foreground mb-6">
-                  Try adjusting your search or filter to find what you're looking for.
-                </p>
-                <Button
-                  onClick={() => {
-                    setSearchQuery('');
-                    setSelectedCategory('All');
-                  }}
-                  variant="outline"
-                >
-                  Clear Filters
-                </Button>
-              </div>
+          {filteredInsights.length === 0 && (
+            <div className="text-center py-12">
+              <h3 className="text-2xl font-semibold mb-2 text-[oklch(0.20_0.05_250)]">No Results Found</h3>
+              <p className="text-slate-600 mb-6">Try adjusting your search or filter criteria.</p>
+              <Button 
+                variant="outline"
+                onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
+                className="border-slate-300"
+              >
+                Clear Filters
+              </Button>
             </div>
           )}
         </div>
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
-          <Card className="max-w-4xl mx-auto bg-muted border-accent/20">
-            <CardContent className="p-12 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Get the latest insights on automation strategy, cybersecurity, and digital transformation delivered to your inbox.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg border border-border bg-background"
-                />
-                <Button className="bg-orange-gradient hover:opacity-90">
-                  Subscribe
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p className="text-lg text-white/90 mb-8">
+              Get the latest insights on automation strategy, cybersecurity, and digital transformation delivered to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg border border-slate-500 bg-transparent focus:ring-2 focus:ring-white/50 focus:border-white outline-none placeholder:text-slate-400"
+              />
+              <Button className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-slate-200">
+                Subscribe
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
+      <section className="py-20 bg-white">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Contact Us</h2>
+          <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
             Request an assessment to discuss your agency's requirements.
           </p>
-          <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-            Request Assessment
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button size="lg" asChild>
+            <Link href="/contact" className="bg-[oklch(0.22_0.06_250)] text-white hover:bg-opacity-90">
+              Request Assessment
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
         </div>
       </section>

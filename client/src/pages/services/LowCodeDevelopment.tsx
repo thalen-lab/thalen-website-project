@@ -1,5 +1,6 @@
-import { CheckCircle2, Zap, Clock, DollarSign, Wrench, Code2, Shield, Rocket } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -9,22 +10,18 @@ import Navigation from '@/components/Navigation';
 export default function LowCodeDevelopment() {
   const benefits = [
     {
-      icon: Zap,
       title: "10x Faster Development",
       description: "Visual development platforms enable rapid application delivery. Deploy working applications in weeks instead of months or years."
     },
     {
-      icon: DollarSign,
       title: "Cost-Effective Delivery",
       description: "Reduce development costs by 40-60% compared to traditional coding. Lower total cost of ownership with easier maintenance and updates."
     },
     {
-      icon: Wrench,
       title: "Easy Maintenance & Updates",
       description: "Visual interfaces make updates simple and fast. Non-developers can make configuration changes, reducing dependency on IT teams."
     },
     {
-      icon: Rocket,
       title: "Rapid Innovation",
       description: "Test new ideas quickly without massive investment. Iterate based on user feedback and evolve applications as needs change."
     }
@@ -34,22 +31,18 @@ export default function LowCodeDevelopment() {
     {
       title: "Form-Based Applications",
       description: "Permit applications, benefit requests, compliance forms, data collection tools",
-      icon: Code2
     },
     {
       title: "Approval Workflows",
       description: "Multi-step approval processes, routing logic, notifications, audit trails",
-      icon: CheckCircle2
     },
     {
       title: "Dashboards & Reporting",
       description: "Real-time dashboards, KPI tracking, custom reports, data visualization",
-      icon: Clock
     },
     {
       title: "Case Management",
       description: "Simple case tracking, task assignment, status updates, document attachment",
-      icon: Shield
     }
   ];
 
@@ -81,237 +74,215 @@ export default function LowCodeDevelopment() {
       title: "Custom Application Development",
       description: "For complex requirements that need full custom coding and advanced architecture.",
       href: "/services/custom-application-development",
-      icon: Code2
     },
     {
       title: "System Integration",
       description: "Connect your low-code applications with legacy systems and external services.",
       href: "/services/system-integration",
-      icon: Zap
     },
     {
       title: "Enterprise Portals",
       description: "Build citizen-facing portals and self-service platforms with low-code speed.",
       href: "/services/enterprise-portals",
-      icon: Shield
     }
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-[oklch(0.20_0.05_250)]">
       <Navigation />
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3djFoLTd6TTI1IDEzNGg3djFoLTd6TTE2IDEzNGg3djFoLTd6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
-        
-        <div className="container relative z-10">
-          <Breadcrumb 
-            items={[
-              { label: "Application Development & Integration", href: "/services/application-development" },
-              { label: "Low-Code Development" }
-            ]}
-          />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="relative bg-cover bg-center text-white py-24">
+          <div className="absolute inset-0 bg-[url('/img/pattern-hero.svg')] bg-repeat"></div>
+          <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
           
-          <div className="max-w-4xl mt-8">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Rapid Deployment • Agile & Flexible
-            </div>
+          <div className="container relative z-10">
+            <Breadcrumb 
+              items={[
+                { label: "Application Development & Integration", href: "/services/application-development" },
+                { label: "Low-Code Development" }
+              ]}
+            />
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Low-Code/Rapid Application Development
-            </h1>
-            
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Accelerate digital transformation with visual development platforms. Deploy FedRAMP-compliant applications in weeks, not years. Perfect for forms, workflows, dashboards, and simple case management systems.
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
-                <Link href="/contact">Start Your Project</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                <Link href="/compare-services">Compare Approaches</Link>
-              </Button>
+            <div className="max-w-4xl mt-8">
+              <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
+                Rapid Deployment • Agile & Flexible
+              </p>
+              
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                Low-Code/Rapid Application Development
+              </h1>
+              
+              <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                Accelerate digital transformation with visual development platforms. Deploy FedRAMP-compliant applications in weeks, not years. Perfect for forms, workflows, dashboards, and simple case management systems.
+              </p>
+              
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
+                  <Link href="/contact">Start Your Project <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                  <Link href="/compare-services">Compare Approaches</Link>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Key Benefits */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Low-Code Development?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Low-code platforms dramatically reduce development time and costs while maintaining security and compliance standards.
-            </p>
-          </div>
+        {/* Key Benefits */}
+        <section className="py-20 bg-white">
+          <div className="container">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Advantages</p>
+              <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Why Choose Low-Code Development?</h2>
+              <p className="text-xl text-slate-600">
+                Low-code platforms dramatically reduce development time and costs while maintaining security and compliance standards.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <div key={index} className="flex gap-6">
-                  <div className="w-14 h-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-7 h-7 text-accent" />
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {benefits.map((benefit, index) => (
+                <motion.div 
+                  key={index} 
+                  className="flex gap-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-14 h-14 bg-[oklch(0.97_0.01_250)] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="w-7 h-7 text-[oklch(0.75_0.15_55)]">→</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                    <p className="text-muted-foreground">{benefit.description}</p>
+                    <h3 className="text-xl font-bold mb-2 text-[oklch(0.20_0.05_250)]">{benefit.title}</h3>
+                    <p className="text-slate-600">{benefit.description}</p>
                   </div>
-                </div>
-              );
-            })}
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Use Cases */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Ideal Use Cases for Low-Code</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Low-code excels at form-based applications, workflows, dashboards, and simple case management—perfect for many federal use cases.
-            </p>
+        {/* Use Cases */}
+        <section className="py-20 bg-[oklch(0.97_0.01_250)]">
+          <div className="container">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Common Applications</p>
+              <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Ideal Use Cases for Low-Code</h2>
+              <p className="text-xl text-slate-600">
+                Low-code excels at form-based applications, workflows, dashboards, and simple case management—perfect for many federal use cases.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {useCases.map((useCase, index) => (
+                <motion.div 
+                  key={index} 
+                  className="bg-white border-2 border-slate-200 rounded-lg p-6 text-center transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="font-bold mb-2 text-lg text-[oklch(0.20_0.05_250)]">{useCase.title}</h3>
+                  <p className="text-sm text-slate-600">{useCase.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => {
-              const Icon = useCase.icon;
-              return (
-                <div key={index} className="bg-white rounded-lg p-6">
-                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-accent" />
+        {/* Low-Code Platforms */}
+        <section className="py-20 bg-white">
+          <div className="container">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Technology Partners</p>
+              <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Enterprise Low-Code Platforms</h2>
+              <p className="text-xl text-slate-600">
+                We work with leading low-code platforms to deliver FedRAMP-compliant applications tailored to your needs.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {platforms.map((platform, index) => (
+                <motion.div 
+                  key={index} 
+                  className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{platform.name}</h3>
+                  <p className="text-slate-600 mb-6">{platform.description}</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {platform.capabilities.map((capability, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                        <span className="text-sm text-slate-600">{capability}</span>
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="font-bold mb-2">{useCase.title}</h3>
-                  <p className="text-sm text-muted-foreground">{useCase.description}</p>
-                </div>
-              );
-            })}
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Low-Code Platforms */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Enterprise Low-Code Platforms</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We work with leading low-code platforms to deliver FedRAMP-compliant applications tailored to your needs.
-            </p>
-          </div>
+        {/* When to Choose Low-Code vs Custom */}
+        <section className="py-20 bg-[oklch(0.97_0.01_250)]">
+          <div className="container">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Decision Guide</p>
+              <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Low-Code vs. Custom Development</h2>
+              <p className="text-xl text-slate-600">
+                Understanding when to use low-code versus custom development ensures you choose the right approach for your needs.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {platforms.map((platform, index) => (
-              <div key={index} className="border-2 border-border rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-3">{platform.name}</h3>
-                <p className="text-muted-foreground mb-6">{platform.description}</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {platform.capabilities.map((capability, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-foreground flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{capability}</span>
-                    </div>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white border-2 border-slate-200 rounded-lg p-8">
+                <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Choose Low-Code When:</h3>
+                <ul className="space-y-3">
+                  {[ "Speed to market is critical (weeks vs. months)", "Requirements are straightforward (forms, workflows, dashboards)", "Budget is limited or cost savings are important", "Non-technical users need to make updates", "Platform integration is a priority (Microsoft 365, Salesforce)" ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                      <span className="text-slate-600">{item}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
-            ))}
+              <div className="bg-white border-2 border-slate-200 rounded-lg p-8">
+                <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Choose Custom Dev When:</h3>
+                <ul className="space-y-3">
+                  {[ "Unique, complex business logic is required", "High performance and scalability are critical", "Specific UI/UX or branding is non-negotiable", "Full control over the technology stack is needed", "Complex third-party integrations are involved" ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                      <span className="text-slate-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* When to Choose Low-Code vs Custom */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Low-Code vs. Custom Development</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Understanding when to use low-code versus custom development ensures you choose the right approach for your needs.
+        <RelatedServices services={relatedServices} />
+
+        {/* CTA Section */}
+        <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
+          <div className="container text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4">Ready to Accelerate Your Mission?</h2>
+            <p className="text-xl text-white/90 mb-8">
+              Let's discuss how low-code development can help you achieve your goals faster and more efficiently. Contact us for a free consultation and see if rapid application development is the right fit for your agency.
             </p>
+            <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
+              <Link href="/contact">Get a Free Consultation <ArrowRight className="w-4 h-4 ml-2" /></Link>
+            </Button>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg p-8">
-              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-green-600" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-green-600">Choose Low-Code When:</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Speed to market is critical (weeks vs. months)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Requirements are straightforward (forms, workflows, dashboards)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Budget is limited or cost savings are important</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Non-technical users need to make updates</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Platform integration is a priority (Microsoft 365, Salesforce)</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-lg p-8">
-              <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
-                <Code2 className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-600">Choose Custom Development When:</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span>Complex business logic or algorithms are required</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span>High performance and scalability are critical</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span>Unique user experience or advanced UI is needed</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span>Legacy system integration requires custom connectors</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span>Platform limitations would compromise requirements</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
-        <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Accelerate Your Digital Transformation?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Schedule a consultation to explore how low-code development can help you deploy applications faster and more cost-effectively.
-          </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
-            <Link href="/contact">Schedule Free Consultation</Link>
-          </Button>
-        </div>
-      </section>
-
-      {/* Related Services */}
-      <RelatedServices
-        title="Complement Your Low-Code Applications"
-        services={relatedServices}
-      />
+        </section>
+      </main>
 
       <Footer />
     </div>

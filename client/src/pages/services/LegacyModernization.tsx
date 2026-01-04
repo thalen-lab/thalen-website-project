@@ -1,5 +1,6 @@
-import { CheckCircle2, Rocket, Cloud, Shield, TrendingUp, Code2, Database, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -9,22 +10,18 @@ import Navigation from '@/components/Navigation';
 export default function LegacyModernization() {
   const benefits = [
     {
-      icon: Rocket,
       title: "Zero-Downtime Migration",
       description: "Phased migration strategies ensure continuous mission operations. We modernize incrementally, minimizing risk and maintaining service availability."
     },
     {
-      icon: Cloud,
       title: "Cloud-Native Architecture",
       description: "Transform monolithic applications into microservices deployed on FedRAMP-authorized cloud platforms for improved scalability and resilience."
     },
     {
-      icon: TrendingUp,
       title: "Reduced Technical Debt",
       description: "Eliminate costly maintenance of aging COBOL, mainframe, and legacy systems. Reduce operational costs by 40-60% while improving performance."
     },
     {
-      icon: Shield,
       title: "Enhanced Security & Compliance",
       description: "Modern applications built with security-first principles, meeting current NIST 800-53 and FedRAMP requirements that legacy systems can't achieve."
     }
@@ -89,28 +86,26 @@ export default function LegacyModernization() {
       title: "Cloud Infrastructure",
       description: "Migrate modernized applications to FedRAMP-authorized cloud platforms.",
       href: "/services/cloud",
-      icon: Cloud
     },
     {
       title: "Custom Application Development",
       description: "Rebuild legacy systems as modern, mission-critical applications.",
       href: "/services/custom-application-development",
-      icon: Code2
     },
     {
       title: "System Integration",
       description: "Connect modernized applications with remaining legacy systems during transition.",
       href: "/services/system-integration",
-      icon: Database
     }
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3djFoLTd6TTI1IDEzNGg3djFoLTd6TTE2IDEzNGg3djFoLTd6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
+      <section className="relative text-white py-24">
+        <div className="absolute inset-0 bg-[url('/img/pattern-dark.svg')] bg-repeat"></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         
         <div className="container relative z-10">
           <Breadcrumb 
@@ -121,23 +116,23 @@ export default function LegacyModernization() {
           />
           
           <div className="max-w-4xl mt-8">
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Zero-Downtime Migration • Cloud-Native
-            </div>
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
+              Zero-Downtime Migration
+            </p>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Legacy System Modernization
             </h1>
             
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Transform aging COBOL, mainframe, and legacy applications into modern, cloud-native systems. Reduce technical debt by 60%, improve performance, and maintain mission continuity throughout the transition.
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
-                <Link href="/contact">Start Modernization</Link>
+              <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
+                <Link href="/contact">Start Modernization <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" asChild variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                 <Link href="/package-builder">Build Service Package</Link>
               </Button>
             </div>
@@ -148,62 +143,73 @@ export default function LegacyModernization() {
       {/* Key Benefits */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Modernize Legacy Systems?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Key Benefits</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Why Modernize Legacy Systems?</h2>
+            <p className="text-lg text-slate-600">
               Legacy systems create operational risk, limit innovation, and drain budgets. Modernization enables agility and reduces costs.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <div key={index} className="flex gap-6">
-                  <div className="w-14 h-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-7 h-7 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                    <p className="text-muted-foreground">{benefit.description}</p>
-                  </div>
+            {benefits.map((benefit, index) => (
+              <motion.div 
+                key={index} 
+                className="flex gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-[oklch(0.20_0.05_250)]">{benefit.title}</h3>
+                  <p className="text-slate-600">{benefit.description}</p>
                 </div>
-              );
-            })}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Modernization Approaches */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Modernization Approaches</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Modernization Strategies</h2>
+            <p className="text-lg text-slate-600">
               We tailor our approach based on your timeline, budget, and requirements—from quick cloud migration to complete rebuilds.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {modernizationApproaches.map((approach, index) => (
-              <div key={index} className="bg-white rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-3">{approach.title}</h3>
-                <p className="text-muted-foreground mb-4">{approach.description}</p>
-                <div className="space-y-2 mb-4">
+              <motion.div 
+                key={index} 
+                className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{approach.title}</h3>
+                <p className="text-slate-600 mb-4">{approach.description}</p>
+                <div className="space-y-2 border-t border-slate-200 pt-4 mt-4">
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Best For:</span>
-                    <span className="font-semibold">{approach.bestFor}</span>
+                    <span className="text-slate-500">Best For:</span>
+                    <span className="font-semibold text-right text-[oklch(0.20_0.05_250)]">{approach.bestFor}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Timeline:</span>
-                    <span className="font-semibold">{approach.timeline}</span>
+                    <span className="text-slate-500">Timeline:</span>
+                    <span className="font-semibold text-[oklch(0.20_0.05_250)]">{approach.timeline}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Effort Level:</span>
-                    <span className="font-semibold">{approach.effort}</span>
+                    <span className="text-slate-500">Effort Level:</span>
+                    <span className="font-semibold text-[oklch(0.20_0.05_250)]">{approach.effort}</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -212,49 +218,57 @@ export default function LegacyModernization() {
       {/* Legacy Systems We Modernize */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Legacy Systems We Modernize</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Expertise</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Legacy Systems We Modernize</h2>
+            <p className="text-lg text-slate-600">
               From COBOL mainframes to client-server applications, we have deep experience modernizing every type of legacy system.
             </p>
           </div>
 
           <div className="space-y-8">
             {legacySystems.map((system, index) => (
-              <div key={index} className="bg-secondary rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-4">{system.name}</h3>
+              <motion.div 
+                key={index} 
+                className="bg-[oklch(0.97_0.01_250)] rounded-lg p-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{system.name}</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="font-bold mb-3 text-red-600">Common Challenges:</h4>
+                    <h4 className="font-semibold mb-3 text-[oklch(0.20_0.05_250)]">Common Challenges:</h4>
                     <ul className="space-y-2">
                       {system.challenges.map((challenge, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm">
-                          <span className="text-red-600">✗</span>
+                        <li key={idx} className="flex items-start gap-3 text-slate-600">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                           <span>{challenge}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-bold mb-3 text-green-600">NexDyne Technology Solution:</h4>
-                    <p className="text-sm text-muted-foreground">{system.solution}</p>
+                    <h4 className="font-semibold mb-3 text-[oklch(0.20_0.05_250)]">NexDyne Technology Solution:</h4>
+                    <p className="text-slate-600">{system.solution}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
-        <div className="container text-center">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your Legacy Systems?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-8">
             Schedule a free assessment to explore modernization strategies tailored to your systems, timeline, and budget.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
-            <Link href="/contact">Schedule Free Assessment</Link>
+          <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
+            <Link href="/contact">Schedule Free Assessment <ArrowRight className="w-4 h-4 ml-2" /></Link>
           </Button>
         </div>
       </section>
