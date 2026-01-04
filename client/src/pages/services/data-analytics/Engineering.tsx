@@ -3,48 +3,142 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, Database, GitBranch, Shield, Zap, TrendingUp, AlertCircle, Search, BarChart3, Cloud } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Engineering() {
-  const engineeringBenefits = [
+  const implementationPhases = [
     {
-      icon: GitBranch,
-      title: 'Automated Data Pipelines',
-      description: 'Stop manually extracting, transforming, and loading data. We build automated pipelines that move data from source systems to analytics platforms with zero manual intervention—running 24/7 with error handling and retry logic.'
+      phase: 'Phase 1',
+      title: 'Data Architecture Assessment',
+      duration: '2-3 weeks',
+      activities: [
+        'Inventory existing data sources, pipelines, and storage systems',
+        'Document data flows, dependencies, and transformation logic',
+        'Assess data quality issues and governance gaps',
+        'Evaluate FedRAMP ETL platform options (Informatica Gov, Talend, AWS Glue)'
+      ]
     },
     {
-      icon: Shield,
-      title: 'Data Quality & Governance',
-      description: 'Bad data produces bad analytics. Our pipelines include built-in data quality checks, validation rules, and governance controls to ensure only trusted, accurate data reaches your analytics platforms.'
+      phase: 'Phase 2',
+      title: 'Pipeline Design & Architecture',
+      duration: '3-4 weeks',
+      activities: [
+        'Design target-state data architecture and pipeline topology',
+        'Define data models, schemas, and transformation specifications',
+        'Establish data quality rules and validation frameworks',
+        'Plan migration strategy for legacy pipelines'
+      ]
     },
     {
-      icon: Zap,
-      title: 'Real-Time & Batch Processing',
-      description: 'Some analytics need real-time data, others can wait for overnight batch jobs. We build hybrid architectures that optimize for both—streaming data for operational dashboards, batch processing for historical analysis.'
+      phase: 'Phase 3',
+      title: 'Pipeline Development & Testing',
+      duration: '6-10 weeks',
+      activities: [
+        'Build automated ETL/ELT pipelines with error handling',
+        'Implement data quality monitoring and alerting',
+        'Develop data lineage tracking and audit capabilities',
+        'Conduct integration testing with source and target systems'
+      ]
+    },
+    {
+      phase: 'Phase 4',
+      title: 'Deployment & Operations',
+      duration: '2-3 weeks',
+      activities: [
+        'Deploy pipelines to FedRAMP-authorized infrastructure',
+        'Configure monitoring dashboards and alerting',
+        'Train operations team on pipeline management',
+        'Establish runbooks for incident response and maintenance'
+      ]
     }
   ];
 
-  const engineeringCapabilities = [
+  const pipelineCapabilities = [
     {
-      title: 'ETL/ELT Pipeline Development',
-      description: 'We build data pipelines that extract data from legacy systems, transform it into analytics-ready formats, and load it into modern data platforms. Whether you need batch ETL or real-time ELT, we design pipelines optimized for your use case.',
-      technologies: ['Apache Airflow', 'AWS Glue', 'dbt', 'Fivetran']
+      capability: 'Batch ETL Pipelines',
+      description: 'Scheduled data extraction, transformation, and loading for periodic data processing',
+      ideal: 'Nightly data warehouse loads, monthly reporting, historical analysis'
     },
     {
-      title: 'Real-Time Streaming Pipelines',
-      description: 'For operational analytics and real-time monitoring, we build streaming data pipelines using Kafka, Flink, and Spark Streaming. Ingest sensor data, transaction logs, and event streams with sub-second latency.',
-      technologies: ['Apache Kafka', 'Apache Flink', 'Spark Streaming', 'Kinesis']
+      capability: 'Real-Time Streaming',
+      description: 'Sub-second data processing for operational dashboards and event-driven architectures',
+      ideal: 'Fraud detection, operational monitoring, IoT sensor data'
     },
     {
-      title: 'Data Quality & Validation',
-      description: 'Every pipeline includes automated data quality checks—schema validation, null checks, referential integrity, business rule validation. Bad data is quarantined for review instead of polluting your analytics.',
-      technologies: ['Great Expectations', 'dbt tests', 'Custom validation']
+      capability: 'Data Lake Architecture',
+      description: 'Scalable storage for structured and unstructured data with schema-on-read flexibility',
+      ideal: 'Big data analytics, data science workloads, archival storage'
     },
     {
-      title: 'Data Catalog & Lineage',
-      description: 'Know where your data comes from, how it is transformed, and who uses it. We implement data catalogs and lineage tracking so analysts can trust the data and auditors can verify compliance.',
-      technologies: ['Apache Atlas', 'DataHub', 'AWS Glue Catalog']
+      capability: 'Data Warehouse Modernization',
+      description: 'Migration from legacy warehouses to cloud-native platforms (Snowflake Gov, Redshift)',
+      ideal: 'Performance optimization, cost reduction, scalability'
+    },
+    {
+      capability: 'Data Quality Frameworks',
+      description: 'Automated validation, profiling, and anomaly detection for data integrity',
+      ideal: 'Regulatory compliance, mission-critical reporting, analytics accuracy'
+    },
+    {
+      capability: 'Master Data Management',
+      description: 'Single source of truth for critical entities across agency systems',
+      ideal: 'Customer/citizen data, vendor management, asset tracking'
+    }
+  ];
+
+  const deliverables = [
+    {
+      title: 'Data Architecture Blueprint',
+      description: 'Comprehensive documentation of target-state architecture including data flows, schemas, and integration specifications.',
+      pages: '40-60 pages'
+    },
+    {
+      title: 'Pipeline Documentation',
+      description: 'Technical documentation for all pipelines including transformation logic, scheduling, error handling, and dependencies.',
+      pages: '50-75 pages'
+    },
+    {
+      title: 'Production Pipeline System',
+      description: 'Deployed, monitored data pipelines with automated scheduling, error handling, and data quality validation.',
+      pages: 'Full system'
+    },
+    {
+      title: 'Operations & Runbook',
+      description: 'Operational procedures for pipeline monitoring, incident response, maintenance, and capacity planning.',
+      pages: '30-40 pages'
+    }
+  ];
+
+  const caseStudy = {
+    agency: 'Department of Defense',
+    challenge: 'DOD was spending 85,000 hours annually on manual data processing across 14 legacy systems. Data latency of 48+ hours prevented real-time decision-making.',
+    solution: 'Built automated ETL pipelines using Informatica Gov to consolidate data from all legacy systems with real-time streaming for critical operational data.',
+    results: [
+      { metric: '$12M', label: 'Annual cost savings' },
+      { metric: '48hrs → 15min', label: 'Data latency reduction' },
+      { metric: '99.7%', label: 'Data accuracy achieved' },
+      { metric: '85,000', label: 'Manual hours eliminated' }
+    ]
+  };
+
+  const platformExpertise = [
+    {
+      category: 'ETL/ELT Platforms',
+      platforms: ['Informatica Government', 'Talend Government', 'AWS Glue', 'Azure Data Factory Gov']
+    },
+    {
+      category: 'Streaming Platforms',
+      platforms: ['Apache Kafka', 'Amazon Kinesis', 'Azure Event Hubs', 'Apache Flink']
+    },
+    {
+      category: 'Data Warehouses',
+      platforms: ['Snowflake Government', 'Amazon Redshift', 'Azure Synapse Gov', 'Google BigQuery']
+    },
+    {
+      category: 'Data Lakes',
+      platforms: ['AWS S3 (GovCloud)', 'Azure Data Lake Gov', 'Databricks Government', 'Delta Lake']
     }
   ];
 
@@ -52,393 +146,325 @@ export default function Engineering() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/data-analytics" className="hover:text-accent">Data Analytics & Intelligence</Link>
-            <span className="mx-2">/</span>
-            <span>Data Engineering & Pipelines</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
-              Data Infrastructure
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Data Analytics', href: '/services/data-analytics' },
+                { label: 'Data Engineering & Pipelines' }
+              ]} 
+              variant="light" 
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Enterprise Data Infrastructure</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Data Engineering & Pipeline Development
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Analytics platforms are only as good as the data that feeds them. If your data is stuck in legacy systems, updated manually, or riddled with quality issues, your analytics will fail. NexDyne Technology builds enterprise-grade data pipelines that automate data movement, enforce quality standards, and deliver trusted data to your analytics platforms—24/7, with zero manual intervention. From batch ETL to real-time streaming, we engineer the data infrastructure that powers mission-critical analytics.
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+              Modernize your existing data pipelines with custom ETL scripts and integrations—or implement FedRAMP ETL platforms (Informatica Gov, Talend, AWS Glue) when enterprise-scale data orchestration and governance are needed. Reliable, scalable data infrastructure that powers analytics and AI initiatives.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Pipeline Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Request Pipeline Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Architecture Examples
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/case-studies">
+                  View Case Studies
+                </Link>
               </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Engineering Benefits */}
-      <section className="py-20">
+      {/* Implementation Phases */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Data Engineering Is Critical for Analytics Success</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Without reliable data pipelines, your analytics team spends 80% of their time finding and cleaning data instead of analyzing it.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Methodology</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              4-Phase Pipeline Development Methodology
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Typically completed in 14-20 weeks depending on pipeline complexity and system integrations
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {engineeringBenefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
-                <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                </CardContent>
-              </Card>
+          <div className="grid md:grid-cols-2 gap-6">
+            {implementationPhases.map((phase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        {index + 1}
+                      </div>
+                      <div>
+                        <div className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{phase.phase}</div>
+                        <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
+                        <div className="text-sm text-slate-500">Duration: {phase.duration}</div>
+                      </div>
+                    </div>
+                    <ul className="space-y-2">
+                      {phase.activities.map((activity, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-700">{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* The Engineering Problem */}
-      <section className="py-20 bg-secondary">
+      {/* Pipeline Capabilities */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Manual Data Processes Are Killing Your Analytics ROI</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Most government agencies have analysts who spend their days manually extracting data from legacy systems, cleaning it in Excel, and copying it into dashboards. This is not analytics work—this is data janitorial work. When data pipelines break, dashboards go stale. When data quality is poor, leadership loses trust in analytics. When data lineage is unknown, audits fail.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Pipeline Capabilities</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Enterprise Data Engineering Services
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              End-to-end data pipeline capabilities from batch processing to real-time streaming
             </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              NexDyne Technology builds automated data pipelines that eliminate manual data work. We extract data from your legacy systems (mainframes, Oracle, SQL Server, flat files), transform it into analytics-ready formats, validate quality, and load it into modern data platforms—all automatically, with monitoring and alerting. Your analysts can finally focus on analysis instead of data plumbing.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Zero Manual Intervention</div>
-                  <div className="text-sm text-muted-foreground">Pipelines run automatically on schedule with error handling and retry logic</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Built-In Data Quality Checks</div>
-                  <div className="text-sm text-muted-foreground">Automated validation ensures only trusted data reaches analytics platforms</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Full Lineage & Audit Trails</div>
-                  <div className="text-sm text-muted-foreground">Track data from source to dashboard for compliance and troubleshooting</div>
-                </div>
-              </div>
-            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {pipelineCapabilities.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.capability}</h3>
+                    <p className="text-sm text-slate-600 mb-3">{item.description}</p>
+                    <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-3 py-2">
+                      <div className="text-xs text-[oklch(0.65_0.18_55)] font-semibold">Best For:</div>
+                      <div className="text-xs text-slate-700">{item.ideal}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Engineering Capabilities */}
-      <section className="py-20">
+      {/* Platform Expertise */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Comprehensive Data Engineering Capabilities</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From batch ETL to real-time streaming, we build data pipelines for every use case.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Technology Stack</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              FedRAMP-Authorized Data Platforms
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Deep expertise across government-approved data engineering platforms
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {engineeringCapabilities.map((capability, index) => (
-              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">{capability.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{capability.description}</p>
-                  <div className="bg-secondary rounded-lg p-4">
-                    <div className="text-sm font-semibold mb-2">Technologies:</div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {platformExpertise.map((category, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-4">{category.category}</h3>
                     <div className="flex flex-wrap gap-2">
-                      {capability.technologies.map((tech, idx) => (
-                        <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
-                          {tech}
+                      {category.platforms.map((platform, idx) => (
+                        <span key={idx} className="text-xs bg-[oklch(0.97_0.01_250)] text-slate-700 px-3 py-1.5 rounded-full font-medium">
+                          {platform}
                         </span>
                       ))}
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* The NexDyne Technology Approach */}
-      <section className="py-20 bg-secondary">
+      {/* Case Study */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne Technology Data Engineering Approach</h2>
-              <p className="text-xl text-muted-foreground">
-                We follow a proven methodology for building production-grade data pipelines.
-              </p>
-            </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Real-World Pipeline Implementation Results
+            </h2>
+          </motion.div>
 
-            <div className="space-y-6">
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Data Source Analysis</h3>
-                      <p className="text-muted-foreground mb-3">We inventory your data sources, understand schemas, assess data quality, and identify integration challenges. You receive a comprehensive data landscape report with recommendations for pipeline architecture.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Data Source Inventory & Integration Assessment</div>
-                    </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{caseStudy.agency}</h3>
+                <div className="grid md:grid-cols-2 gap-8 mb-6">
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">Challenge</h4>
+                    <p className="text-sm text-slate-600">{caseStudy.challenge}</p>
                   </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Pipeline Architecture Design</h3>
-                      <p className="text-muted-foreground mb-3">We design the optimal pipeline architecture for your use case—batch vs. streaming, ETL vs. ELT, orchestration tools, data quality frameworks. The architecture balances performance, cost, and maintainability.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Pipeline Architecture Document & Technology Selection</div>
-                    </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.65_0.18_55)] mb-2">Solution</h4>
+                    <p className="text-sm text-slate-600">{caseStudy.solution}</p>
                   </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Pipeline Development & Testing</h3>
-                      <p className="text-muted-foreground mb-3">We build the pipelines with automated testing, error handling, and monitoring. Every pipeline includes data quality checks, retry logic, and alerting. We test with production data volumes to ensure performance.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Production-Ready Data Pipelines with Test Results</div>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-200">
+                  {caseStudy.results.map((result, idx) => (
+                    <div key={idx} className="text-center">
+                      <div className="text-2xl font-bold text-[oklch(0.65_0.18_55)]">{result.metric}</div>
+                      <div className="text-xs text-slate-600">{result.label}</div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Deployment & Knowledge Transfer</h3>
-                      <p className="text-muted-foreground mb-3">We deploy pipelines to production with monitoring dashboards, runbooks, and documentation. Your team receives training on pipeline operations, troubleshooting, and extending pipelines for new data sources.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Production Deployment with Operations Documentation</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </section>
 
-      {/* Technology Stack */}
-      <section className="py-20">
+      {/* Deliverables */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Data Engineering Technology Stack</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We use proven, government-approved tools for enterprise data pipelines.
-            </p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">What You Receive</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Pipeline Implementation Deliverables
+            </h2>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Orchestration & Workflow</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Apache Airflow</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>AWS Step Functions</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Prefect</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Azure Data Factory</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Data Processing</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Apache Spark</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>dbt (data build tool)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>AWS Glue</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Python/Pandas</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Data Quality & Governance</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Great Expectations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Apache Atlas</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>DataHub</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>dbt tests</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all active:scale-95">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold mb-2">99.9%</div>
-                  <div className="text-sm opacity-80">Pipeline uptime SLA</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">10TB+</div>
-                  <div className="text-sm opacity-80">Data processed daily</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">100%</div>
-                  <div className="text-sm opacity-80">Automated quality checks</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">&lt;15min</div>
-                  <div className="text-sm opacity-80">Average incident response</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Related Services Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Build a complete data infrastructure with these related NexDyne Technology offerings
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Cloud Infrastructure & Modernization</h3>
-                <p className="text-muted-foreground mb-4">
-                  Host your data pipelines on FedRAMP-authorized cloud platforms. We architect scalable, secure cloud infrastructure optimized for data workloads with auto-scaling and disaster recovery.
-                </p>
-                <Link href="/services/cloud">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Application Development & Integration</h3>
-                <p className="text-muted-foreground mb-4">
-                  Connect your data pipelines to mission applications. We build APIs, microservices, and integration layers that make your engineered data accessible to downstream systems.
-                </p>
-                <Link href="/services/app-development">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {deliverables.map((deliverable, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{deliverable.title}</h3>
+                      <span className="text-xs bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-2 py-1 rounded font-semibold">{deliverable.pages}</span>
+                    </div>
+                    <p className="text-sm text-slate-600">{deliverable.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Automate Your Data Pipelines?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a free pipeline assessment. We will evaluate your current data processes, identify automation opportunities, and provide a roadmap for implementation.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request Pipeline Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Download Engineering Guide
-            </Button>
-          </div>
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Modernize Your Data Infrastructure?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Schedule a complimentary consultation to discuss your data engineering needs and learn how we can help you build reliable, scalable data pipelines.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Schedule Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/data-analytics">
+                  Back to Data Analytics
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
-
-      <RelatedServices 
-        services={[
-          {
-            title: 'Data Assessment & Architecture Review',
-            description: 'Evaluate current data infrastructure and design optimal architecture for your pipelines.',
-            href: '/services/data-analytics/assessment',
-            icon: Search
-          },
-          {
-            title: 'Data Visualization & BI',
-            description: 'Turn engineered data into actionable insights with interactive dashboards and analytics.',
-            href: '/services/data-analytics/visualization',
-            icon: BarChart3
-          },
-          {
-            title: 'Cloud Infrastructure & Modernization',
-            description: 'Deploy data pipelines on scalable cloud infrastructure with automated provisioning.',
-            href: '/services/cloud',
-            icon: Cloud
-          }
-        ]}
-        title="Complete Data Infrastructure"
-        description="Enhance your data engineering capabilities with assessment, visualization, and cloud services."
-      />
 
       <Footer />
     </div>

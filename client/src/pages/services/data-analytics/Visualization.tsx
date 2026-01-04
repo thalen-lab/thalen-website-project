@@ -3,371 +3,403 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, LineChart, Activity, Gauge, Eye, Zap, Shield, Database, Brain, TrendingUp } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Visualization() {
-  const visualizationBenefits = [
+  const implementationPhases = [
     {
-      icon: Activity,
-      title: 'Real-Time Operational Dashboards',
-      description: 'Monitor mission-critical operations as they happen with sub-second data refresh rates. Track threats, operations, logistics, and resource status in real-time—not with yesterday\'s batch reports.'
+      phase: 'Phase 1',
+      title: 'Assessment & Platform Selection',
+      duration: '2-3 weeks',
+      activities: [
+        'Evaluate current analytics tools and data infrastructure',
+        'Document reporting requirements and user needs',
+        'Assess FedRAMP compliance requirements',
+        'Score and recommend optimal platform (Tableau Gov, Power BI Gov, Qlik)'
+      ]
     },
     {
-      icon: Gauge,
-      title: 'Executive Command Centers',
-      description: 'Give leadership the intelligence they need to make decisions with confidence. Purpose-built dashboards that surface critical KPIs, anomalies, and trends without overwhelming users with irrelevant data.'
+      phase: 'Phase 2',
+      title: 'Architecture & Data Integration',
+      duration: '3-4 weeks',
+      activities: [
+        'Design data architecture and connection strategy',
+        'Build secure data pipelines from source systems',
+        'Implement data governance and access controls',
+        'Configure FedRAMP-compliant cloud infrastructure'
+      ]
     },
     {
-      icon: Eye,
-      title: 'Predictive Insights, Not Just Historical Reports',
-      description: 'Move beyond backward-looking reports. Our analytics platforms combine real-time data with ML models to forecast trends, predict failures, and identify emerging threats before they escalate.'
+      phase: 'Phase 3',
+      title: 'Dashboard Development',
+      duration: '4-6 weeks',
+      activities: [
+        'Develop executive dashboards with KPI visualizations',
+        'Build operational dashboards for day-to-day monitoring',
+        'Create self-service analytics capabilities',
+        'Implement drill-down and interactive features'
+      ]
+    },
+    {
+      phase: 'Phase 4',
+      title: 'Training & Enablement',
+      duration: '2-3 weeks',
+      activities: [
+        'Train power users on dashboard creation',
+        'Enable analysts with self-service capabilities',
+        'Document best practices and governance policies',
+        'Establish ongoing support and enhancement processes'
+      ]
     }
   ];
 
-  const useCases = [
+  const platformCapabilities = [
     {
-      title: 'Intelligence Analysis Workbenches',
-      description: 'Analysts need to correlate data from dozens of sources, identify patterns, and brief leadership—all under time pressure. NexDyne Technology builds custom intelligence workbenches that integrate SIGINT, HUMINT, OSINT, and other data streams into unified visual analysis environments.',
-      metrics: ['50+ data sources integrated', '3-second query response', 'Classified data handling']
+      platform: 'Tableau Government',
+      description: 'Industry-leading visualization with drag-and-drop interface and powerful analytics',
+      ideal: 'Complex visualizations, data exploration, executive dashboards'
     },
     {
-      title: 'Operational Command & Control',
-      description: 'Military and emergency response operations require real-time situational awareness. We build command center dashboards that display asset locations, mission status, weather, threats, and logistics on unified displays with map-based visualization.',
-      metrics: ['Real-time GPS tracking', 'Multi-source data fusion', 'Mobile field access']
+      platform: 'Microsoft Power BI Gov',
+      description: 'Deep Microsoft 365 integration with enterprise-scale analytics and AI features',
+      ideal: 'Microsoft-centric environments, embedded analytics, natural language queries'
     },
     {
-      title: 'Fraud Detection & Monitoring',
-      description: 'Benefits programs lose billions to fraud annually. Our fraud detection dashboards combine transaction monitoring, behavioral analytics, and ML-based anomaly detection to flag suspicious activity in real-time for investigator review.',
-      metrics: ['$500M+ fraud prevented', '95% detection accuracy', 'Automated case routing']
+      platform: 'Qlik Government',
+      description: 'Associative analytics engine with powerful data discovery capabilities',
+      ideal: 'Ad-hoc analysis, data discovery, associative exploration'
     },
     {
-      title: 'Performance Management Dashboards',
-      description: 'Agency leaders need visibility into program performance, budget execution, and mission outcomes. We build executive dashboards that track KPIs, highlight variances, and enable drill-down analysis without requiring SQL or BI tool training.',
-      metrics: ['50+ KPIs tracked', 'Automated reporting', 'Mobile executive access']
+      platform: 'AWS QuickSight',
+      description: 'Serverless BI service with ML-powered insights and pay-per-session pricing',
+      ideal: 'AWS environments, cost-sensitive deployments, embedded analytics'
+    },
+    {
+      platform: 'Domo Government',
+      description: 'Cloud-native platform with 1,000+ pre-built connectors and real-time data',
+      ideal: 'Real-time dashboards, data integration, mobile-first analytics'
+    },
+    {
+      platform: 'Looker (Google Cloud)',
+      description: 'Modern BI platform with semantic modeling and embedded analytics',
+      ideal: 'Data modeling, embedded analytics, Google Cloud environments'
     }
   ];
+
+  const deliverables = [
+    {
+      title: 'Platform Assessment Report',
+      description: 'Comprehensive evaluation of your analytics needs with platform recommendations, cost analysis, and implementation roadmap.',
+      pages: '25-35 pages'
+    },
+    {
+      title: 'Data Architecture Design',
+      description: 'Detailed data architecture documentation including data flows, security controls, and integration specifications.',
+      pages: '30-40 pages'
+    },
+    {
+      title: 'Dashboard Portfolio',
+      description: 'Suite of production-ready dashboards including executive views, operational monitors, and self-service templates.',
+      pages: '10-20 dashboards'
+    },
+    {
+      title: 'Training & Documentation',
+      description: 'User guides, training materials, and governance documentation for sustainable analytics operations.',
+      pages: '50+ pages'
+    }
+  ];
+
+  const caseStudy = {
+    agency: 'Department of Health & Human Services',
+    challenge: 'HHS needed real-time visibility into public health data across 50 state health departments, but legacy reporting systems delivered data 7+ days late.',
+    solution: 'Implemented Tableau Government with real-time data feeds, automated ETL pipelines, and 12 interactive dashboards for epidemiological analysis.',
+    results: [
+      { metric: '7 days → 4 hours', label: 'Outbreak detection time' },
+      { metric: '300+', label: 'Public health analysts supported' },
+      { metric: '50', label: 'State data sources integrated' },
+      { metric: '99.9%', label: 'Platform uptime achieved' }
+    ]
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/data-analytics" className="hover:text-accent">Data Analytics & Intelligence</Link>
-            <span className="mx-2">/</span>
-            <span>Real-Time Analytics & Visualization</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
-              Mission-Critical Intelligence
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Real-Time Analytics & Visualization
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Data Analytics', href: '/services/data-analytics' },
+                { label: 'Analytics Platform Implementation' }
+              ]} 
+              variant="light" 
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">FedRAMP-Authorized Platforms</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Analytics Platform Implementation
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Federal operations do not run on last night's batch reports. When threats emerge, operations unfold, or crises develop, decision-makers need real-time intelligence—not data that is hours or days old. NexDyne Technology builds mission-critical analytics platforms that deliver actionable insights in real-time with government-grade security. From intelligence analysis to operational command centers, our dashboards turn massive data streams into clear, actionable intelligence.
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+              Optimize your existing analytics tools and dashboards first—or implement FedRAMP-authorized platforms (Tableau Government, Power BI Gov, Qlik Government) when compliance mandates it or your current tools lack needed capabilities. Vendor-neutral guidance with proven expertise across 30+ BI platforms.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Dashboard Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Request Platform Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Visualization Examples
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/case-studies">
+                  View Case Studies
+                </Link>
               </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Visualization Benefits */}
-      <section className="py-20">
+      {/* Implementation Phases */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Real-Time Analytics Matter for Federal Missions</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              When decisions have national security implications, you cannot afford to wait for overnight ETL jobs to complete.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Methodology</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              4-Phase Implementation Methodology
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Typically completed in 12-16 weeks with minimal disruption to agency operations
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {visualizationBenefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
-                <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                </CardContent>
-              </Card>
+          <div className="grid md:grid-cols-2 gap-6">
+            {implementationPhases.map((phase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        {index + 1}
+                      </div>
+                      <div>
+                        <div className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{phase.phase}</div>
+                        <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
+                        <div className="text-sm text-slate-500">Duration: {phase.duration}</div>
+                      </div>
+                    </div>
+                    <ul className="space-y-2">
+                      {phase.activities.map((activity, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-700">{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* The Visualization Problem */}
-      <section className="py-20 bg-secondary">
+      {/* Platform Capabilities */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Commercial BI Tools Are Not Built for Federal Missions</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Tableau and Power BI are excellent for sales dashboards and marketing reports. They are not designed for intelligence analysis, threat monitoring, or operational command and control. Commercial tools cannot handle classified data, lack real-time streaming capabilities, and provide no audit trails for congressional oversight.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Expertise</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              FedRAMP-Authorized BI Platforms
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              We help you select the right platform for your mission requirements and compliance needs
             </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              NexDyne Technology builds custom analytics platforms purpose-designed for federal missions. Our dashboards handle real-time sensor feeds, integrate classified and unclassified data, provide full audit trails, and meet FedRAMP High security requirements. You get intelligence platforms, not generic business intelligence tools.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Sub-Second Data Refresh</div>
-                  <div className="text-sm text-muted-foreground">Real-time streaming analytics with Apache Kafka, Flink, and Spark Streaming</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Classified Data Handling</div>
-                  <div className="text-sm text-muted-foreground">Air-gapped deployments for TS/SCI environments with full security controls</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Custom Visualizations</div>
-                  <div className="text-sm text-muted-foreground">Purpose-built dashboards for your mission—not generic templates</div>
-                </div>
-              </div>
-            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {platformCapabilities.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.platform}</h3>
+                    <p className="text-sm text-slate-600 mb-3">{item.description}</p>
+                    <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-3 py-2">
+                      <div className="text-xs text-[oklch(0.65_0.18_55)] font-semibold">Best For:</div>
+                      <div className="text-xs text-slate-700">{item.ideal}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="py-20">
+      {/* Case Study */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Mission-Critical Analytics Use Cases</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              NexDyne Technology has built real-time analytics platforms for intelligence, operations, fraud detection, and executive decision support.
-            </p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Real-World Implementation Results
+            </h2>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {useCase.metrics.map((metric, idx) => (
-                      <span key={idx} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full font-semibold">
-                        {metric}
-                      </span>
-                    ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{caseStudy.agency}</h3>
+                <div className="grid md:grid-cols-2 gap-8 mb-6">
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">Challenge</h4>
+                    <p className="text-sm text-slate-600">{caseStudy.challenge}</p>
                   </div>
-                </CardContent>
-              </Card>
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.65_0.18_55)] mb-2">Solution</h4>
+                    <p className="text-sm text-slate-600">{caseStudy.solution}</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-200">
+                  {caseStudy.results.map((result, idx) => (
+                    <div key={idx} className="text-center">
+                      <div className="text-2xl font-bold text-[oklch(0.65_0.18_55)]">{result.metric}</div>
+                      <div className="text-xs text-slate-600">{result.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Deliverables */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">What You Receive</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Implementation Deliverables
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {deliverables.map((deliverable, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{deliverable.title}</h3>
+                      <span className="text-xs bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-2 py-1 rounded font-semibold">{deliverable.pages}</span>
+                    </div>
+                    <p className="text-sm text-slate-600">{deliverable.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Stack */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Real-Time Analytics Technology Stack</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We use proven, government-approved technologies for mission-critical analytics.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Streaming Data Processing</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Apache Kafka for event streaming</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Apache Flink for real-time processing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Spark Streaming for batch + streaming</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Redis for sub-second caching</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Visualization & Dashboards</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>React + D3.js for custom viz</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Grafana for operational monitoring</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Mapbox for geospatial analysis</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>WebSockets for live updates</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Data Storage & Query</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>ClickHouse for OLAP queries</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Elasticsearch for full-text search</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>TimescaleDB for time-series data</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>PostgreSQL for relational data</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all active:scale-95">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold mb-2">&lt;50ms</div>
-                  <div className="text-sm opacity-80">Query response time</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">1M+</div>
-                  <div className="text-sm opacity-80">Events per second processed</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">99.99%</div>
-                  <div className="text-sm opacity-80">Platform uptime SLA</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">100%</div>
-                  <div className="text-sm opacity-80">FedRAMP High compliant</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Related Services Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Enhance your analytics capabilities with these related NexDyne Technology offerings
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Intelligent Automation & Process Optimization</h3>
-                <p className="text-muted-foreground mb-4">
-                  Turn your analytics insights into automated action. Our RPA and process orchestration solutions trigger workflows based on real-time data thresholds and alerts.
-                </p>
-                <Link href="/services/automation">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Custom Software Solutions</h3>
-                <p className="text-muted-foreground mb-4">
-                  Build custom mission applications powered by your analytics platform. We develop bespoke dashboards, mobile apps, and citizen portals that leverage your data infrastructure.
-                </p>
-                <Link href="/services/custom-software">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Real-Time Analytics for Your Mission?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a demo. We will show you live examples of real-time analytics platforms we have built for government agencies and discuss your specific requirements.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request Live Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Download Architecture Guide
-            </Button>
-          </div>
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Analytics Capabilities?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Schedule a complimentary consultation to discuss your analytics needs and learn how we can help you select and implement the right platform for your mission.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Schedule Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/data-analytics">
+                  Back to Data Analytics
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
-
-      <RelatedServices 
-        services={[
-          {
-            title: 'Data Engineering & Pipelines',
-            description: 'Build reliable data pipelines that feed your visualization and BI platforms.',
-            href: '/services/data-analytics/engineering',
-            icon: Database
-          },
-          {
-            title: 'Machine Learning & AI',
-            description: 'Enhance visualizations with predictive analytics and AI-powered insights.',
-            href: '/services/data-analytics/ml-ai',
-            icon: Brain
-          },
-          {
-            title: 'Business Intelligence Strategy',
-            description: 'Develop comprehensive BI strategy that aligns analytics with organizational goals.',
-            href: '/services/business-intelligence',
-            icon: TrendingUp
-          }
-        ]}
-        title="Enhance Your Analytics"
-        description="Combine visualization with data engineering, ML/AI, and BI strategy for complete analytics solutions."
-      />
 
       <Footer />
     </div>

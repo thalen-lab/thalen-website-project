@@ -3,56 +3,142 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, Brain, AlertTriangle, TrendingUp, Shield, Eye, Zap, Database, Bot } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function MLAI() {
-  const mlBenefits = [
+  const implementationPhases = [
     {
-      icon: AlertTriangle,
-      title: 'Fraud Detection & Prevention',
-      description: 'Identify fraudulent benefits claims, procurement fraud, and financial anomalies before payments are issued. ML models analyze patterns across millions of transactions to flag suspicious activity for investigator review.'
+      phase: 'Phase 1',
+      title: 'Use Case Discovery & Data Assessment',
+      duration: '2-3 weeks',
+      activities: [
+        'Identify high-value ML/AI use cases aligned with mission objectives',
+        'Assess data availability, quality, and governance requirements',
+        'Evaluate existing infrastructure and platform options',
+        'Define success metrics and model performance requirements'
+      ]
     },
     {
-      icon: TrendingUp,
-      title: 'Predictive Maintenance',
-      description: 'Prevent equipment failures before they happen. ML models analyze sensor data from aircraft, vehicles, and critical infrastructure to predict failures weeks in advance—reducing downtime and saving millions in emergency repairs.'
+      phase: 'Phase 2',
+      title: 'Model Development & Training',
+      duration: '4-8 weeks',
+      activities: [
+        'Prepare and engineer features from source data',
+        'Develop and train ML models using appropriate algorithms',
+        'Implement explainability (SHAP, LIME) for transparent reasoning',
+        'Conduct bias detection and fairness testing'
+      ]
     },
     {
-      icon: Eye,
-      title: 'Threat Intelligence & Cyber Defense',
-      description: 'Detect cyber threats and insider risks in real-time. ML-powered anomaly detection identifies unusual network behavior, unauthorized access attempts, and data exfiltration before damage occurs.'
+      phase: 'Phase 3',
+      title: 'Validation & Governance',
+      duration: '2-4 weeks',
+      activities: [
+        'Validate model performance against holdout data',
+        'Establish model governance framework and documentation',
+        'Create audit trails and lineage tracking',
+        'Conduct security review and compliance assessment'
+      ]
+    },
+    {
+      phase: 'Phase 4',
+      title: 'Deployment & Monitoring',
+      duration: '2-3 weeks',
+      activities: [
+        'Deploy models to FedRAMP-authorized infrastructure',
+        'Implement real-time monitoring and alerting',
+        'Establish model retraining and drift detection processes',
+        'Train operations team on model management'
+      ]
     }
   ];
 
-  const mlUseCases = [
+  const mlCapabilities = [
     {
-      title: 'Benefits Fraud Detection',
-      description: 'Federal benefits programs lose billions to fraudulent claims annually. NexDyne Technology built an ML-powered fraud detection system for a major benefits agency that analyzes claim patterns, applicant behavior, and third-party data to flag suspicious claims before payment. The system reduced fraud losses by 40% while maintaining a 95% accuracy rate to avoid false positives that delay legitimate claims.',
-      impact: '$500M fraud prevented annually',
-      accuracy: '95% detection accuracy',
-      falsePositives: '<2% false positive rate'
+      capability: 'Fraud Detection & Prevention',
+      description: 'Identify fraudulent claims, transactions, and anomalies before payments are issued',
+      ideal: 'Benefits programs, procurement, financial operations'
     },
     {
-      title: 'Predictive Maintenance for Defense Systems',
-      description: 'Aircraft downtime costs the military millions per day. We deployed ML models that analyze sensor data from engines, avionics, and structural components to predict failures 30-60 days in advance. Maintenance crews can now schedule repairs during planned downtime instead of responding to emergency failures.',
-      impact: '35% reduction in unplanned downtime',
-      accuracy: '92% prediction accuracy',
-      savings: '$120M annual maintenance savings'
+      capability: 'Predictive Maintenance',
+      description: 'Predict equipment failures weeks in advance to prevent downtime and emergency repairs',
+      ideal: 'Defense systems, fleet management, critical infrastructure'
     },
     {
-      title: 'Insider Threat Detection',
-      description: 'Insider threats are the hardest security risks to detect. NexDyne Technology built an ML system for a defense agency that analyzes user behavior patterns—file access, email activity, network connections, physical access—to identify anomalies that indicate potential insider threats. The system flags high-risk users for security review without overwhelming analysts with false alarms.',
-      impact: '12 insider threats detected',
-      accuracy: '88% detection accuracy',
-      response: '90% faster investigation time'
+      capability: 'Threat Intelligence',
+      description: 'Detect cyber threats, insider risks, and anomalous behavior in real-time',
+      ideal: 'Cybersecurity operations, insider threat programs'
     },
     {
-      title: 'Budget Forecasting & Resource Optimization',
-      description: 'Government agencies struggle with budget forecasting due to complex variables and political uncertainty. We built ML models that analyze historical spending patterns, program performance, economic indicators, and policy changes to forecast budget needs with 95% accuracy. Leadership can now make data-driven resource allocation decisions instead of relying on gut instinct.',
-      impact: '$50M budget optimization',
-      accuracy: '95% forecast accuracy',
-      planning: '18-month forecast horizon'
+      capability: 'Natural Language Processing',
+      description: 'Extract insights from documents, automate classification, and enable intelligent search',
+      ideal: 'Document processing, case management, FOIA requests'
+    },
+    {
+      capability: 'Computer Vision',
+      description: 'Analyze images and video for object detection, classification, and anomaly detection',
+      ideal: 'Security monitoring, quality inspection, geospatial analysis'
+    },
+    {
+      capability: 'Forecasting & Optimization',
+      description: 'Predict demand, optimize resource allocation, and forecast budget requirements',
+      ideal: 'Budget planning, workforce management, supply chain'
+    }
+  ];
+
+  const deliverables = [
+    {
+      title: 'ML Use Case Assessment',
+      description: 'Comprehensive evaluation of ML opportunities with ROI projections, data requirements, and implementation roadmap.',
+      pages: '30-40 pages'
+    },
+    {
+      title: 'Model Documentation Package',
+      description: 'Complete model documentation including architecture, training data, performance metrics, and governance policies.',
+      pages: '50-75 pages'
+    },
+    {
+      title: 'Production ML System',
+      description: 'Deployed, monitored ML models with APIs, dashboards, and integration with existing systems.',
+      pages: 'Full system'
+    },
+    {
+      title: 'Operations Runbook',
+      description: 'Operational procedures for model monitoring, retraining, incident response, and performance management.',
+      pages: '25-35 pages'
+    }
+  ];
+
+  const caseStudy = {
+    agency: 'Federal Benefits Agency',
+    challenge: 'The agency was losing $1.2B annually to fraudulent benefits claims. Manual review processes could only catch obvious fraud, missing sophisticated schemes.',
+    solution: 'Deployed ML-powered fraud detection analyzing claim patterns, applicant behavior, and third-party data with explainable AI for investigator review.',
+    results: [
+      { metric: '$500M', label: 'Fraud prevented annually' },
+      { metric: '95%', label: 'Detection accuracy' },
+      { metric: '<2%', label: 'False positive rate' },
+      { metric: '40%', label: 'Reduction in fraud losses' }
+    ]
+  };
+
+  const governanceFeatures = [
+    {
+      feature: 'Explainable AI (XAI)',
+      description: 'SHAP, LIME, and attention mechanisms provide transparent reasoning for every prediction—essential for congressional oversight and IG audits.'
+    },
+    {
+      feature: 'Bias Detection & Fairness',
+      description: 'Continuous monitoring for demographic bias, disparate impact, and fairness metrics to ensure equitable treatment across populations.'
+    },
+    {
+      feature: 'Model Governance Framework',
+      description: 'Full lineage tracking, version control, approval workflows, and audit logs for regulatory compliance and accountability.'
+    },
+    {
+      feature: 'Drift Detection & Monitoring',
+      description: 'Real-time monitoring of model performance with automated alerts when predictions degrade or data distributions shift.'
     }
   ];
 
@@ -60,329 +146,319 @@ export default function MLAI() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/data-analytics" className="hover:text-accent">Data Analytics & Intelligence</Link>
-            <span className="mx-2">/</span>
-            <span>Predictive Analytics & ML/AI</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
-              AI-Powered Intelligence
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Predictive Analytics & ML/AI
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Data Analytics', href: '/services/data-analytics' },
+                { label: 'AI/ML Model Development' }
+              ]} 
+              variant="light" 
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Explainable AI for Government</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              AI/ML Model Development & Deployment
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Stop reacting to problems after they happen. NexDyne Technology deploys machine learning models and AI-powered analytics that predict fraud, forecast failures, detect threats, and optimize operations before issues escalate. Our ML implementations are not black boxes—every prediction includes transparent reasoning, bias detection, and model governance to meet federal accountability standards. From fraud detection to predictive maintenance, we turn your data into actionable foresight.
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+              Build custom ML models on your existing infrastructure—or deploy FedRAMP AI/ML platforms (AWS SageMaker GovCloud, Azure ML Gov) when enterprise-scale model governance and compliance are required. Every prediction includes transparent reasoning, bias detection, and full audit trails for federal accountability.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request ML Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Request ML Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View ML Case Studies
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/case-studies">
+                  View ML Case Studies
+                </Link>
               </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* ML Benefits */}
-      <section className="py-20">
+      {/* Implementation Phases */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Need Predictive Analytics</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Reactive analytics tell you what happened. Predictive analytics tell you what will happen—giving you time to prevent problems before they occur.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Methodology</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              4-Phase ML Development Methodology
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Typically completed in 10-18 weeks depending on model complexity and data readiness
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {mlBenefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
-                <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                </CardContent>
-              </Card>
+          <div className="grid md:grid-cols-2 gap-6">
+            {implementationPhases.map((phase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        {index + 1}
+                      </div>
+                      <div>
+                        <div className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{phase.phase}</div>
+                        <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
+                        <div className="text-sm text-slate-500">Duration: {phase.duration}</div>
+                      </div>
+                    </div>
+                    <ul className="space-y-2">
+                      {phase.activities.map((activity, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-700">{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* The ML Problem */}
-      <section className="py-20 bg-secondary">
+      {/* ML Capabilities */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Black-Box AI Is Not Acceptable for Government</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Commercial ML platforms are optimized for marketing and sales predictions where mistakes are tolerable. Federal applications—fraud detection, threat assessment, benefits eligibility—require explainability, bias detection, and accountability. You cannot tell Congress "the algorithm decided" when a decision is challenged.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">ML Capabilities</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Proven ML/AI Use Cases for Government
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Production ML systems for fraud detection, predictive maintenance, threat intelligence, and operational optimization
             </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              NexDyne Technology builds explainable AI systems where every prediction includes transparent reasoning. Our ML implementations include bias detection, fairness metrics, model governance, and full audit trails. You will understand not just what the model predicts, but why—and you will have documentation to defend decisions under congressional oversight and IG audits.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Explainable AI (XAI)</div>
-                  <div className="text-sm text-muted-foreground">SHAP, LIME, and attention mechanisms provide transparent reasoning for every prediction</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Bias Detection & Fairness</div>
-                  <div className="text-sm text-muted-foreground">Continuous monitoring for demographic bias, disparate impact, and fairness metrics</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Model Governance & Audit Trails</div>
-                  <div className="text-sm text-muted-foreground">Full lineage tracking, version control, and audit logs for regulatory compliance</div>
-                </div>
-              </div>
-            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mlCapabilities.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.capability}</h3>
+                    <p className="text-sm text-slate-600 mb-3">{item.description}</p>
+                    <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-3 py-2">
+                      <div className="text-xs text-[oklch(0.65_0.18_55)] font-semibold">Best For:</div>
+                      <div className="text-xs text-slate-700">{item.ideal}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ML Use Cases */}
-      <section className="py-20">
+      {/* Model Governance */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Proven ML/AI Use Cases for Government Agencies</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              NexDyne Technology has deployed production ML systems for fraud detection, predictive maintenance, threat intelligence, and operational optimization.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Responsible AI</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Federal-Grade Model Governance
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Black-box AI is not acceptable for government. Every prediction includes transparent reasoning and full audit trails.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {mlUseCases.map((useCase, index) => (
-              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
-                  <div className="grid grid-cols-3 gap-4 bg-secondary rounded-lg p-4">
-                    <div>
-                      <div className="text-2xl font-bold text-primary">{useCase.impact}</div>
-                      <div className="text-xs text-muted-foreground">Business Impact</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary">{useCase.accuracy}</div>
-                      <div className="text-xs text-muted-foreground">Model Accuracy</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary">{useCase.falsePositives || useCase.savings || useCase.response || useCase.planning}</div>
-                      <div className="text-xs text-muted-foreground">Additional Metric</div>
-                    </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {governanceFeatures.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.feature}</h3>
+                    <p className="text-sm text-slate-600">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Real-World ML Implementation Results
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{caseStudy.agency}</h3>
+                <div className="grid md:grid-cols-2 gap-8 mb-6">
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">Challenge</h4>
+                    <p className="text-sm text-slate-600">{caseStudy.challenge}</p>
                   </div>
-                </CardContent>
-              </Card>
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.65_0.18_55)] mb-2">Solution</h4>
+                    <p className="text-sm text-slate-600">{caseStudy.solution}</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-200">
+                  {caseStudy.results.map((result, idx) => (
+                    <div key={idx} className="text-center">
+                      <div className="text-2xl font-bold text-[oklch(0.65_0.18_55)]">{result.metric}</div>
+                      <div className="text-xs text-slate-600">{result.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Deliverables */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">What You Receive</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              ML Implementation Deliverables
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {deliverables.map((deliverable, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{deliverable.title}</h3>
+                      <span className="text-xs bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-2 py-1 rounded font-semibold">{deliverable.pages}</span>
+                    </div>
+                    <p className="text-sm text-slate-600">{deliverable.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ML Technology Stack */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">ML/AI Technology Stack</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We use proven, government-approved ML frameworks and tools.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">ML Frameworks</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>TensorFlow & PyTorch</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Scikit-learn for classical ML</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>XGBoost & LightGBM</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Hugging Face Transformers</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Explainability & Governance</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>SHAP for feature importance</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>LIME for local explanations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>MLflow for model tracking</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Fairlearn for bias detection</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Deployment & Monitoring</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Kubernetes for model serving</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>TensorFlow Serving & TorchServe</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Prometheus for model monitoring</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                    <span>Evidently AI for drift detection</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all active:scale-95">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold mb-2">95%+</div>
-                  <div className="text-sm opacity-80">Model accuracy</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">&lt;2%</div>
-                  <div className="text-sm opacity-80">False positive rate</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">100%</div>
-                  <div className="text-sm opacity-80">Explainable predictions</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">24/7</div>
-                  <div className="text-sm opacity-80">Model monitoring</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Related Services Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Maximize your ML/AI impact with these related NexDyne Technology offerings
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Intelligent Automation & Process Optimization</h3>
-                <p className="text-muted-foreground mb-4">
-                  Embed ML predictions into automated workflows. Our RPA solutions can trigger actions based on model outputs, creating closed-loop intelligent automation systems.
-                </p>
-                <Link href="/services/automation">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Application Development & Integration</h3>
-                <p className="text-muted-foreground mb-4">
-                  Build ML-powered applications that serve predictions to end users. We develop APIs, web apps, and mobile interfaces that make your models accessible and actionable.
-                </p>
-                <Link href="/services/app-development">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Deploy Predictive Analytics for Your Mission?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a free ML assessment. We will evaluate your data, identify high-impact ML use cases, and provide a roadmap for implementation.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request ML Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Download ML Guide
-            </Button>
-          </div>
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Deploy Explainable AI for Your Mission?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Schedule a complimentary consultation to discuss your ML/AI use cases and learn how we can help you build accountable, transparent AI systems.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Schedule Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/data-analytics">
+                  Back to Data Analytics
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
-
-      <RelatedServices 
-        services={[
-          {
-            title: 'Data Engineering & Infrastructure',
-            description: 'Build scalable data pipelines that power your machine learning models.',
-            href: '/services/data-analytics/engineering',
-            icon: Database
-          },
-          {
-            title: 'Predictive Analytics & Forecasting',
-            description: 'Apply ML models to predict outcomes, forecast trends, and optimize operations.',
-            href: '/services/predictive-analytics',
-            icon: TrendingUp
-          },
-          {
-            title: 'Intelligent Automation',
-            description: 'Integrate AI models into automated workflows for intelligent decision-making.',
-            href: '/services/automation',
-            icon: Bot
-          }
-        ]}
-        title="Complete AI/ML Solutions"
-        description="Combine machine learning with data engineering, analytics, and automation for end-to-end AI capabilities."
-      />
 
       <Footer />
     </div>

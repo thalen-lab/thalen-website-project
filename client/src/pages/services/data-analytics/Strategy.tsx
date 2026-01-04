@@ -3,48 +3,146 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import RelatedServices from '@/components/RelatedServices';
-import { ArrowRight, Target, TrendingUp, Users, FileText, Lightbulb, BarChart3, Search, Database, Bot } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-export default function DataStrategy() {
-  const strategyBenefits = [
+export default function Strategy() {
+  const implementationPhases = [
     {
-      icon: Target,
-      title: 'Mission-Aligned Roadmap',
-      description: 'Connect data initiatives directly to agency mission objectives with a 3-year roadmap that prioritizes projects by impact, feasibility, and strategic value.'
+      phase: 'Phase 1',
+      title: 'Current State Assessment',
+      duration: '2-3 weeks',
+      activities: [
+        'Inventory existing data assets, systems, and stakeholders',
+        'Assess data quality, governance maturity, and compliance gaps',
+        'Document pain points, quick wins, and strategic opportunities',
+        'Benchmark against industry standards and best practices'
+      ]
     },
     {
-      icon: TrendingUp,
-      title: 'Data Maturity Assessment',
-      description: 'Understand where your agency stands today across data governance, infrastructure, analytics capabilities, and organizational culture using our Federal Data Maturity Model.'
+      phase: 'Phase 2',
+      title: 'Strategy Development',
+      duration: '3-4 weeks',
+      activities: [
+        'Define data vision, principles, and strategic objectives',
+        'Develop data governance framework and operating model',
+        'Create 3-year implementation roadmap with milestones',
+        'Identify quick wins for immediate value demonstration'
+      ]
     },
     {
-      icon: Users,
-      title: 'Stakeholder Alignment',
-      description: 'Build consensus across IT, mission teams, and leadership through collaborative workshops that ensure your data strategy has buy-in from day one.'
+      phase: 'Phase 3',
+      title: 'Governance Framework Implementation',
+      duration: '4-6 weeks',
+      activities: [
+        'Establish data governance council and stewardship roles',
+        'Implement data quality rules and monitoring processes',
+        'Deploy data catalog and metadata management tools',
+        'Create policies for data access, security, and retention'
+      ]
+    },
+    {
+      phase: 'Phase 4',
+      title: 'Operationalization & Adoption',
+      duration: '2-4 weeks',
+      activities: [
+        'Train data stewards and governance council members',
+        'Launch governance processes and monitoring dashboards',
+        'Establish continuous improvement mechanisms',
+        'Document lessons learned and success metrics'
+      ]
     }
   ];
 
   const strategyComponents = [
     {
-      title: 'Current State Assessment',
-      description: 'We evaluate your existing data landscape including systems, governance, quality, security posture, and organizational capabilities.',
-      deliverables: ['Data inventory & lineage', 'Maturity score across 5 dimensions', 'Gap analysis report']
+      component: 'Data Vision & Principles',
+      description: 'Clear articulation of how data will drive mission outcomes and decision-making',
+      ideal: 'Executive alignment, cultural transformation, strategic planning'
     },
     {
-      title: 'Future State Vision',
-      description: 'Define what success looks like for your agency with clear metrics, target capabilities, and alignment to mission objectives.',
-      deliverables: ['Target architecture', 'Success metrics & KPIs', 'Business case development']
+      component: 'Governance Operating Model',
+      description: 'Roles, responsibilities, and processes for managing data as a strategic asset',
+      ideal: 'Accountability, compliance, data quality improvement'
     },
     {
-      title: 'Strategic Roadmap',
-      description: 'Prioritized implementation plan with quick wins, foundational projects, and significant initiatives over a 3-year horizon.',
-      deliverables: ['Phased project roadmap', 'Resource & budget estimates', 'Risk mitigation plan']
+      component: 'Data Quality Framework',
+      description: 'Standards, metrics, and processes for measuring and improving data quality',
+      ideal: 'Analytics accuracy, regulatory compliance, operational efficiency'
+    },
+    {
+      component: 'Metadata Management',
+      description: 'Data catalog, business glossary, and lineage tracking for data discovery',
+      ideal: 'Self-service analytics, impact analysis, compliance reporting'
+    },
+    {
+      component: 'Data Security & Privacy',
+      description: 'Policies and controls for data classification, access, and protection',
+      ideal: 'FISMA compliance, PII protection, insider threat prevention'
+    },
+    {
+      component: 'Implementation Roadmap',
+      description: '3-year phased plan with milestones, dependencies, and resource requirements',
+      ideal: 'Budget planning, stakeholder alignment, progress tracking'
+    }
+  ];
+
+  const deliverables = [
+    {
+      title: 'Data Strategy Document',
+      description: 'Comprehensive strategy including vision, principles, objectives, and 3-year roadmap aligned with mission priorities.',
+      pages: '40-60 pages'
     },
     {
       title: 'Governance Framework',
-      description: 'Establish data governance structures, policies, roles, and decision-making processes to sustain your data-driven transformation.',
-      deliverables: ['Governance operating model', 'Data policies & standards', 'RACI matrix']
+      description: 'Operating model, roles and responsibilities, policies, standards, and procedures for enterprise data governance.',
+      pages: '50-75 pages'
+    },
+    {
+      title: 'Data Quality Playbook',
+      description: 'Data quality dimensions, metrics, monitoring processes, and remediation procedures.',
+      pages: '30-40 pages'
+    },
+    {
+      title: 'Implementation Roadmap',
+      description: 'Detailed 3-year roadmap with quarterly milestones, resource requirements, and success metrics.',
+      pages: '25-35 pages'
+    }
+  ];
+
+  const caseStudy = {
+    agency: 'Federal Civilian Agency',
+    challenge: 'The agency had no enterprise data strategy—each bureau managed data independently with inconsistent quality, no governance, and duplicate systems costing $15M annually.',
+    solution: 'Developed comprehensive data strategy with governance framework, established data governance council, and implemented data catalog across all bureaus.',
+    results: [
+      { metric: '$8M', label: 'Annual cost savings' },
+      { metric: '40%', label: 'Data quality improvement' },
+      { metric: '6 months', label: 'Strategy to implementation' },
+      { metric: '12', label: 'Bureaus unified' }
+    ]
+  };
+
+  const governanceMaturity = [
+    {
+      level: 'Level 1: Initial',
+      description: 'Ad-hoc data management, no formal governance, inconsistent quality',
+      characteristics: ['No data ownership', 'Reactive quality fixes', 'Siloed data']
+    },
+    {
+      level: 'Level 2: Managed',
+      description: 'Basic governance in place, some data stewards, quality metrics defined',
+      characteristics: ['Defined ownership', 'Quality monitoring', 'Basic catalog']
+    },
+    {
+      level: 'Level 3: Defined',
+      description: 'Enterprise governance framework, active stewardship, proactive quality',
+      characteristics: ['Governance council', 'Quality standards', 'Metadata management']
+    },
+    {
+      level: 'Level 4: Optimized',
+      description: 'Data-driven culture, continuous improvement, strategic data asset management',
+      characteristics: ['Data as asset', 'Predictive quality', 'Self-service analytics']
     }
   ];
 
@@ -52,313 +150,331 @@ export default function DataStrategy() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/data-analytics" className="hover:text-accent">Data Analytics & Intelligence</Link>
-            <span className="mx-2">/</span>
-            <span>Data Strategy & Roadmap</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
-              Strategic Planning
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Data Strategy & Roadmap
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Data Analytics', href: '/services/data-analytics' },
+                { label: 'Data Strategy & Governance' }
+              ]} 
+              variant="light" 
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Strategic Data Management</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Data Strategy & Governance
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Your agency collects massive amounts of data, but are you using it to drive mission outcomes? Most federal organizations lack a coherent data strategy—analytics projects happen in silos, data quality is inconsistent, and nobody owns data governance. NexDyne Technology builds comprehensive data strategies that align analytics investments with mission priorities, establish sustainable governance, and deliver measurable results within 12 months.
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+              Develop comprehensive data strategies that maximize your existing data assets and infrastructure—with FedRAMP platform recommendations only when new capabilities align with mission objectives and compliance requirements. Transform data from a cost center into a strategic asset.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Strategy Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Request Strategy Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Download Strategy Framework
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/case-studies">
+                  View Case Studies
+                </Link>
               </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Strategy Benefits */}
-      <section className="py-20">
+      {/* Implementation Phases */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Government Agencies Need a Data Strategy</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Without a clear strategy, data initiatives fail to deliver ROI, duplicate efforts waste resources, and agencies miss opportunities to improve mission outcomes.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Methodology</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              6-Week Strategy Assessment
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Comprehensive data strategy development with 3-year implementation roadmap
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {strategyBenefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
-                <CardContent className="p-8">
-                  <benefit.icon className="h-14 w-14 text-primary mb-4" />
-                  <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                </CardContent>
-              </Card>
+          <div className="grid md:grid-cols-2 gap-6">
+            {implementationPhases.map((phase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        {index + 1}
+                      </div>
+                      <div>
+                        <div className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{phase.phase}</div>
+                        <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
+                        <div className="text-sm text-slate-500">Duration: {phase.duration}</div>
+                      </div>
+                    </div>
+                    <ul className="space-y-2">
+                      {phase.activities.map((activity, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-700">{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* The Strategy Problem */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">The Cost of No Strategy</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Government agencies spend millions on analytics tools, data platforms, and dashboards—but without a coherent strategy, these investments fail to deliver value. Projects get funded based on who asks loudest, not what drives mission impact. Data quality problems persist because nobody owns governance. Analytics teams build solutions that leadership does not use because requirements were never aligned.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              NexDyne Technology's Data Strategy Basecamp is a 6-week engagement that gives you clarity. We assess your current state, define your target vision, and build a prioritized roadmap with quick wins and long-term significant projects. You will know exactly what to build, in what order, and why it matters to your mission.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">6-Week Basecamp Engagement</div>
-                  <div className="text-sm text-muted-foreground">Rapid assessment and roadmap development—not a year-long consulting engagement</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Federal Data Maturity Model</div>
-                  <div className="text-sm text-muted-foreground">Benchmark your capabilities against peer agencies and identify improvement priorities</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold mb-1">Quick Wins Identified</div>
-                  <div className="text-sm text-muted-foreground">Every roadmap includes 3-6 month quick wins that demonstrate value immediately</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Strategy Components */}
-      <section className="py-20">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">What is Included in a NexDyne Technology Data Strategy</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our Data Strategy Basecamp delivers four key components over 6 weeks.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Strategy Components</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Comprehensive Data Strategy Framework
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              End-to-end strategy covering vision, governance, quality, and implementation
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {strategyComponents.map((component, index) => (
-              <Card key={index} className="group hover:shadow-xl hover:border-accent transition-all duration-300 border-2">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                      {index + 1}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {strategyComponents.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.component}</h3>
+                    <p className="text-sm text-slate-600 mb-3">{item.description}</p>
+                    <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-3 py-2">
+                      <div className="text-xs text-[oklch(0.65_0.18_55)] font-semibold">Best For:</div>
+                      <div className="text-xs text-slate-700">{item.ideal}</div>
                     </div>
-                    <h3 className="text-2xl font-bold">{component.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{component.description}</p>
-                  <div className="bg-secondary rounded-lg p-4">
-                    <div className="text-sm font-semibold mb-2">Key Deliverables:</div>
-                    <ul className="space-y-1">
-                      {component.deliverables.map((deliverable, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start gap-2">
-                          <div className="h-1.5 w-1.5 rounded-full bg-foreground mr-3 mt-2 flex-shrink-0" />
-                          {deliverable}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
-
-            <Card className="bg-navy-gradient text-primary-foreground border-0 hover:shadow-2xl transition-all active:scale-95">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold mb-2">6 Weeks</div>
-                  <div className="text-sm opacity-80">Strategy development timeline</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">5 Dimensions</div>
-                  <div className="text-sm opacity-80">Maturity assessment areas</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">3 Years</div>
-                  <div className="text-sm opacity-80">Strategic roadmap horizon</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold mb-2">12 Months</div>
-                  <div className="text-sm opacity-80">Time to measurable results</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
-      {/* The NexDyne Technology Approach */}
-      <section className="py-20 bg-secondary">
+      {/* Governance Maturity */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The NexDyne Technology Data Strategy Framework</h2>
-              <p className="text-xl text-muted-foreground">
-                Our proven approach balances strategic vision with tactical execution.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Discovery & Assessment (Week 1-2)</h3>
-                      <p className="text-muted-foreground mb-3">We interview stakeholders across your agency, inventory data systems, review existing analytics initiatives, and assess data governance maturity. You receive a comprehensive current state report with maturity scoring across data strategy, architecture, governance, quality, and culture.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Current State Assessment & Maturity Scorecard</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Vision & Prioritization (Week 3-4)</h3>
-                      <p className="text-muted-foreground mb-3">Through collaborative workshops, we define your target data capabilities, identify high-impact use cases, and prioritize initiatives based on mission value, feasibility, and dependencies. Leadership reviews and approves the strategic direction before roadmap development.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Target Vision & Prioritized Use Case Portfolio</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Roadmap Development (Week 5)</h3>
-                      <p className="text-muted-foreground mb-3">We build a phased 3-year roadmap with quick wins (3-6 months), foundational projects (6-18 months), and significant initiatives (18-36 months). Each project includes scope, resource estimates, dependencies, and success metrics.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: 3-Year Strategic Roadmap with Project Charters</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-l-4 border-l-accent hover:shadow-lg transition-all active:scale-95">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">Governance & Presentation (Week 6)</h3>
-                      <p className="text-muted-foreground mb-3">We design your data governance operating model including roles, decision rights, policies, and oversight structures. The final week includes executive presentation of the strategy, roadmap, and governance framework with Q&A and refinement.</p>
-                      <div className="text-sm font-semibold text-primary">Deliverable: Governance Framework & Executive Presentation</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Services Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complementary Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Maximize your data strategy impact with these related NexDyne Technology offerings
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Maturity Model</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Data Governance Maturity Levels
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Assess your current state and chart a path to data-driven excellence
             </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {governanceMaturity.map((level, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        {index + 1}
+                      </div>
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{level.level}</h3>
+                    </div>
+                    <p className="text-sm text-slate-600 mb-3">{level.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {level.characteristics.map((char, idx) => (
+                        <span key={idx} className="text-xs bg-[oklch(0.97_0.01_250)] text-slate-700 px-2 py-1 rounded font-medium">
+                          {char}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Digital Transformation Enablement</h3>
-                <p className="text-muted-foreground mb-4">
-                  Turn your data strategy into organizational change. Our change management experts help you build data literacy, establish new workflows, and drive adoption across your agency.
-                </p>
-                <Link href="/services/digital-transformation">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+        </div>
+      </section>
+
+      {/* Case Study */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Real-World Strategy Implementation Results
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{caseStudy.agency}</h3>
+                <div className="grid md:grid-cols-2 gap-8 mb-6">
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">Challenge</h4>
+                    <p className="text-sm text-slate-600">{caseStudy.challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.65_0.18_55)] mb-2">Solution</h4>
+                    <p className="text-sm text-slate-600">{caseStudy.solution}</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-200">
+                  {caseStudy.results.map((result, idx) => (
+                    <div key={idx} className="text-center">
+                      <div className="text-2xl font-bold text-[oklch(0.65_0.18_55)]">{result.metric}</div>
+                      <div className="text-xs text-slate-600">{result.label}</div>
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Cybersecurity & Compliance</h3>
-                <p className="text-muted-foreground mb-4">
-                  Protect your data assets with FedRAMP-authorized security controls. We implement data classification, access governance, and compliance frameworks aligned to your strategy.
-                </p>
-                <Link href="/services/cybersecurity">
-                  <Button variant="outline" className="w-full">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Deliverables */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">What You Receive</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Strategy Engagement Deliverables
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {deliverables.map((deliverable, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{deliverable.title}</h3>
+                      <span className="text-xs bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-2 py-1 rounded font-semibold">{deliverable.pages}</span>
+                    </div>
+                    <p className="text-sm text-slate-600">{deliverable.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Your Data Strategy?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a free consultation. We will review your current data landscape and provide a proposal for a 6-week Data Strategy Basecamp engagement.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Request Strategy Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Download Maturity Model
-            </Button>
-          </div>
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Data Into a Strategic Asset?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Schedule a complimentary consultation to discuss your data strategy needs and learn how we can help you build a data-driven organization.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Schedule Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/data-analytics">
+                  Back to Data Analytics
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
-
-      <RelatedServices 
-        services={[
-          {
-            title: 'Data Assessment & Readiness',
-            description: 'Evaluate your current data landscape and identify gaps before implementing your strategy.',
-            href: '/services/data-analytics/assessment',
-            icon: Search
-          },
-          {
-            title: 'Data Engineering & Infrastructure',
-            description: 'Build the technical foundation to execute your data strategy with modern data pipelines.',
-            href: '/services/data-analytics/engineering',
-            icon: Database
-          },
-          {
-            title: 'Intelligent Automation',
-            description: 'Leverage data insights to drive automated decision-making and process optimization.',
-            href: '/services/automation',
-            icon: Bot
-          }
-        ]}
-        title="Execute Your Data Strategy"
-        description="Transform strategy into reality with these complementary data and automation services."
-      />
 
       <Footer />
     </div>
