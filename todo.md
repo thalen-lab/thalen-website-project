@@ -3993,3 +3993,10 @@
 - [x] Apply enhanced design to Government RPA Implementation subpage (/services/automation/rpa)
 - [x] Apply enhanced design to Enterprise Integration Platform subpage (/services/automation/integration)
 - [x] Apply enhanced design to Process Orchestration subpage (/services/automation/orchestration)
+
+
+## Phase 141: Apply Enhanced Design to RPA Subpages
+- [x] Update ProcessAssessment.tsx subpage with enhanced design (dark hero with image overlay, orange accents, white CTA buttons)
+- [x] Update PlatformImplementation.tsx subpage with enhanced design
+- [x] Update ATOCompliance.tsx subpage with enhanced design
+- [x] Update CoESetup.tsx subpage with enhanced design

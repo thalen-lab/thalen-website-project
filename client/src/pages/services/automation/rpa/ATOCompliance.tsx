@@ -3,7 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Shield, FileCheck, Lock, AlertTriangle, CheckCircle2, FileText, Users, Clock } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function ATOCompliance() {
   const complianceFrameworks = [
@@ -11,29 +13,25 @@ export default function ATOCompliance() {
       framework: 'FedRAMP',
       description: 'Federal Risk and Authorization Management Program for cloud services',
       levels: ['Low', 'Moderate', 'High'],
-      controls: '300+ security controls',
-      icon: Shield
+      controls: '300+ security controls'
     },
     {
       framework: 'FISMA',
       description: 'Federal Information Security Management Act requirements',
       levels: ['Low', 'Moderate', 'High'],
-      controls: 'NIST 800-53 controls',
-      icon: Lock
+      controls: 'NIST 800-53 controls'
     },
     {
       framework: 'NIST 800-53',
       description: 'Security and Privacy Controls for Information Systems',
       levels: ['Rev 4', 'Rev 5'],
-      controls: '1,000+ control enhancements',
-      icon: FileCheck
+      controls: '1,000+ control enhancements'
     },
     {
       framework: 'CMMC',
       description: 'Cybersecurity Maturity Model Certification for DoD contractors',
       levels: ['Level 1', 'Level 2', 'Level 3'],
-      controls: '171 practices (Level 3)',
-      icon: AlertTriangle
+      controls: '171 practices (Level 3)'
     }
   ];
 
@@ -88,38 +86,32 @@ export default function ATOCompliance() {
     {
       document: 'System Security Plan (SSP)',
       description: 'Comprehensive documentation of security controls, system architecture, and implementation details.',
-      pages: '150-300 pages',
-      icon: FileText
+      pages: '150-300 pages'
     },
     {
       document: 'Security Assessment Report (SAR)',
       description: 'Independent assessment of security controls with findings, risks, and remediation recommendations.',
-      pages: '50-100 pages',
-      icon: FileCheck
+      pages: '50-100 pages'
     },
     {
       document: 'Plan of Action & Milestones (POA&M)',
       description: 'Tracking document for identified vulnerabilities with remediation timelines and responsible parties.',
-      pages: '10-30 pages',
-      icon: Clock
+      pages: '10-30 pages'
     },
     {
       document: 'Continuous Monitoring Plan',
       description: 'Ongoing security monitoring strategy including scanning schedules, metrics, and reporting procedures.',
-      pages: '20-40 pages',
-      icon: Shield
+      pages: '20-40 pages'
     },
     {
       document: 'Incident Response Plan',
       description: 'Procedures for detecting, responding to, and recovering from security incidents.',
-      pages: '30-50 pages',
-      icon: AlertTriangle
+      pages: '30-50 pages'
     },
     {
       document: 'Contingency Plan',
       description: 'Business continuity and disaster recovery procedures for RPA systems.',
-      pages: '40-60 pages',
-      icon: Users
+      pages: '40-60 pages'
     }
   ];
 
@@ -176,248 +168,347 @@ export default function ATOCompliance() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/automation" className="hover:text-accent">Intelligent Automation</Link>
-            <span className="mx-2">/</span>
-            <Link href="/services/automation/rpa" className="hover:text-accent">RPA Implementation</Link>
-            <span className="mx-2">/</span>
-            <span>ATO & Compliance</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
-              Security First, Mission Always
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/rpa-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Intelligent Automation', href: '/services/automation' },
+                { label: 'Government RPA', href: '/services/automation/rpa' },
+                { label: 'ATO & Compliance' }
+              ]} 
+              variant="light" 
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Security First, Mission Always</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               RPA ATO & Compliance Documentation
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
               Government RPA deployments (federal, state, and local) require rigorous security documentation and compliance validation. We provide complete ATO packages for FedRAMP, StateRAMP, and CMMC compliance, security control implementation, and ongoing compliance support—so your bots meet agency security requirements without delays.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
                   Request ATO Support
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/case-studies/federal-automation">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/case-studies">
                   View Compliance Case Study
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Compliance Frameworks */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Government Compliance Frameworks We Support</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance Expertise</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Government Compliance Frameworks We Support
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Comprehensive documentation and control implementation for all major government security frameworks
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-6">
-            {complianceFrameworks.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-accent transition-all duration-300">
-                  <CardContent className="pt-8">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-1">{item.framework}</h3>
-                        <p className="text-sm text-muted-foreground">{item.description}</p>
-                      </div>
-                    </div>
+            {complianceFrameworks.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.framework}</h3>
+                    <p className="text-sm text-slate-600 mb-4">{item.description}</p>
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="bg-muted rounded-lg px-3 py-2">
-                        <div className="text-xs font-semibold mb-1">Authorization Levels</div>
-                        <div className="text-xs">{item.levels.join(', ')}</div>
+                      <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-3 py-2">
+                        <div className="text-xs font-semibold text-[oklch(0.65_0.18_55)] mb-1">Authorization Levels</div>
+                        <div className="text-xs text-slate-700">{item.levels.join(', ')}</div>
                       </div>
-                      <div className="bg-muted rounded-lg px-3 py-2">
-                        <div className="text-xs font-semibold mb-1">Security Controls</div>
-                        <div className="text-xs">{item.controls}</div>
+                      <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-3 py-2">
+                        <div className="text-xs font-semibold text-[oklch(0.65_0.18_55)] mb-1">Security Controls</div>
+                        <div className="text-xs text-slate-700">{item.controls}</div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ATO Process */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our ATO Process</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Our ATO Process
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Typical timeline: 10-16 weeks from kickoff to ATO authorization
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-6">
             {atoPhases.map((phase, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <div className="text-sm text-primary font-semibold">{phase.phase}</div>
-                      <h3 className="text-xl font-bold">{phase.title}</h3>
-                      <div className="text-sm text-muted-foreground">Duration: {phase.duration}</div>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    {phase.activities.map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-1" />
-                        <span className="text-sm">{activity}</span>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        {index + 1}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                      <div>
+                        <div className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{phase.phase}</div>
+                        <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
+                        <div className="text-sm text-slate-500">Duration: {phase.duration}</div>
+                      </div>
+                    </div>
+                    <ul className="space-y-2">
+                      {phase.activities.map((activity, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-700">{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* ATO Documents */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Complete ATO Documentation Package</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We deliver all required artifacts for agency Authorizing Official (AO) review and approval
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Deliverables</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              ATO Documentation Package
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Complete security documentation required for government authorization
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {atoDocuments.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <Card key={index} className="border-2">
-                  <CardContent className="pt-8">
-                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-primary" />
+            {atoDocuments.map((doc, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{doc.document}</h3>
+                      <span className="text-xs bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-2 py-1 rounded font-semibold">{doc.pages}</span>
                     </div>
-                    <h3 className="text-lg font-bold mb-2">{item.document}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
-                    <div className="inline-block bg-card border border-border text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                      {item.pages}
-                    </div>
+                    <p className="text-sm text-slate-600">{doc.description}</p>
                   </CardContent>
                 </Card>
-              );
-            })}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Security Controls */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">NIST 800-53 Security Controls for RPA</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We document and implement security controls specific to RPA deployments
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Technical Depth</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Key Security Control Families for RPA
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              NIST 800-53 control families most relevant to RPA implementations
             </p>
-          </div>
+          </motion.div>
+
           <div className="space-y-4 max-w-5xl mx-auto">
-            {securityControls.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-2">{item.family}</h3>
-                      <div className="mb-3">
-                        <div className="text-sm font-semibold mb-1">Example Controls:</div>
-                        <div className="flex flex-wrap gap-2">
-                          {item.examples.map((example, idx) => (
-                            <span key={idx} className="inline-block bg-muted text-foreground px-3 py-1 rounded-full text-xs">
-                              {example}
-                            </span>
+            {securityControls.map((control, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-3">{control.family}</h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <div className="text-xs font-semibold text-slate-500 uppercase mb-2">Example Controls</div>
+                        <ul className="space-y-1">
+                          {control.examples.map((example, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                              <span className="text-sm text-slate-700">{example}</span>
+                            </li>
                           ))}
-                        </div>
+                        </ul>
                       </div>
-                      <div className="bg-muted rounded-lg px-4 py-3">
-                        <div className="text-xs font-semibold mb-1">RPA Context:</div>
-                        <div className="text-sm">{item.rpaContext}</div>
+                      <div>
+                        <div className="text-xs font-semibold text-slate-500 uppercase mb-2">RPA Context</div>
+                        <p className="text-sm text-slate-600">{control.rpaContext}</p>
                       </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Government Experience */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Government ATO Success Stories</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We've secured ATOs for RPA deployments across federal, defense, and intelligence agencies
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Experience</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Our Team's ATO Experience
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Our team members have successfully guided RPA systems through ATO at leading government agencies. These projects were completed during their tenure at previous organizations.
             </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {governmentExperience.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                    <Shield className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.agency}</h3>
-                  <div className="mb-3">
-                    <div className="inline-block bg-card border border-border text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                      {item.framework}
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {governmentExperience.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <span className="inline-block px-3 py-1 bg-[oklch(0.65_0.18_55)] text-white text-xs font-semibold rounded-full mb-2">
+                        {exp.agency}
+                      </span>
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{exp.framework}</h3>
                     </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">{item.timeline}</p>
-                  <p className="text-sm font-semibold text-primary">{item.outcome}</p>
-                </CardContent>
-              </Card>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-xs font-semibold text-slate-500 uppercase">Timeline</div>
+                        <p className="text-sm text-slate-700">{exp.timeline}</p>
+                      </div>
+                      <div>
+                        <div className="text-xs font-semibold text-slate-500 uppercase">Outcome</div>
+                        <p className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{exp.outcome}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Need ATO Support for Your RPA Deployment?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Let our compliance experts handle the documentation while you focus on automation outcomes. We'll get your bots authorized faster.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request ATO Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Achieve RPA Authorization?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Schedule a consultation to discuss your agency's compliance requirements and learn how our ATO expertise can accelerate your RPA authorization.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Schedule ATO Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-            </Link>
-            <Link href="/services/automation/rpa/platform-implementation">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                View Platform Implementation
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/automation/rpa">
+                  Back to RPA Services
+                </Link>
               </Button>
-            </Link>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

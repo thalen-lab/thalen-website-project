@@ -3,7 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Bot, Shield, Zap, Cloud, CheckCircle2, Code, GitBranch, Users, Award } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function PlatformImplementation() {
   const platforms = [
@@ -11,29 +13,25 @@ export default function PlatformImplementation() {
       name: 'UiPath Government Cloud',
       authorization: 'FedRAMP Moderate',
       strengths: ['Enterprise-grade scalability', 'AI/ML capabilities', 'Strong document processing', 'Extensive marketplace'],
-      bestFor: 'Large-scale enterprise automation with complex workflows',
-      icon: Bot
+      bestFor: 'Large-scale enterprise automation with complex workflows'
     },
     {
       name: 'Automation Anywhere Gov',
       authorization: 'FedRAMP Moderate',
       strengths: ['Cloud-native architecture', 'IQ Bot for intelligent automation', 'Strong analytics', 'Easy to use'],
-      bestFor: 'Agencies prioritizing cloud-first and ease of use',
-      icon: Cloud
+      bestFor: 'Agencies prioritizing cloud-first and ease of use'
     },
     {
       name: 'Blue Prism Government',
       authorization: 'FedRAMP Moderate',
       strengths: ['Enterprise security focus', 'Digital workforce management', 'Strong governance', 'Audit trails'],
-      bestFor: 'High-security environments requiring strict governance',
-      icon: Shield
+      bestFor: 'High-security environments requiring strict governance'
     },
     {
       name: 'Microsoft Power Automate Gov',
       authorization: 'FedRAMP High',
       strengths: ['Native Microsoft 365 integration', 'Low-code platform', 'Citizen developer friendly', 'Included in licenses'],
-      bestFor: 'Microsoft-centric agencies with existing M365 investments',
-      icon: Zap
+      bestFor: 'Microsoft-centric agencies with existing M365 investments'
     }
   ];
 
@@ -160,238 +158,341 @@ export default function PlatformImplementation() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/automation" className="hover:text-accent">Intelligent Automation</Link>
-            <span className="mx-2">/</span>
-            <Link href="/services/automation/rpa" className="hover:text-accent">RPA Implementation</Link>
-            <span className="mx-2">/</span>
-            <span>Platform Implementation</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
-              Vendor-Neutral RPA Consulting
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/rpa-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Intelligent Automation', href: '/services/automation' },
+                { label: 'Government RPA', href: '/services/automation/rpa' },
+                { label: 'Platform Implementation' }
+              ]} 
+              variant="light" 
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Vendor-Neutral RPA Consulting</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               RPA Platform Selection & Implementation
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
               We help government agencies (federal, state, and local) select and implement the RIGHT FedRAMP and StateRAMP-authorized RPA platform for their mission requirements. Vendor-neutral consulting ensures you get the best fit—not just the platform we happen to sell.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
                   Request Platform Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/case-studies/federal-automation">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/case-studies">
                   View Implementation Case Study
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* FedRAMP RPA Platforms */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">FedRAMP-Authorized RPA Platforms</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Options</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              FedRAMP-Authorized RPA Platforms
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We implement all major FedRAMP-authorized RPA platforms—our recommendation is based on YOUR requirements, not vendor relationships
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-6">
-            {platforms.map((platform, index) => {
-              const Icon = platform.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-accent transition-all duration-300">
-                  <CardContent className="pt-8">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-1">{platform.name}</h3>
-                        <div className="inline-block bg-card border border-border text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                          {platform.authorization}
-                        </div>
-                      </div>
+            {platforms.map((platform, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{platform.name}</h3>
+                      <span className="inline-block bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-3 py-1 rounded-full text-xs font-semibold">
+                        {platform.authorization}
+                      </span>
                     </div>
                     <div className="mb-4">
-                      <div className="text-sm font-semibold mb-2">Key Strengths:</div>
-                    <div className="space-y-1">
-                      {platform.strengths.map((strength, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-1" />
-                          <span className="text-sm">{strength}</span>
-                        </div>
-                      ))}
+                      <div className="text-sm font-semibold text-[oklch(0.20_0.05_250)] mb-2">Key Strengths:</div>
+                      <ul className="space-y-2">
+                        {platform.strengths.map((strength, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                            <span className="text-sm text-slate-700">{strength}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    </div>
-                    <div className="bg-muted rounded-lg px-4 py-3">
-                      <div className="text-xs font-semibold mb-1">Best For:</div>
-                      <div className="text-sm">{platform.bestFor}</div>
+                    <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-4 py-3">
+                      <div className="text-xs font-semibold text-[oklch(0.65_0.18_55)] mb-1">Best For:</div>
+                      <div className="text-sm text-slate-700">{platform.bestFor}</div>
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Selection Criteria */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Platform Selection Methodology</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Selection Methodology</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Our Platform Selection Methodology
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We evaluate platforms using a weighted scoring model aligned with your agency's priorities
             </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
               <CardContent className="p-8">
                 <div className="space-y-4">
                   {selectionCriteria.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4 pb-4 border-b last:border-b-0">
-                      <div className="bg-card border-2 border-border text-foreground rounded-lg w-16 h-16 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    <div key={index} className="flex items-start gap-4 pb-4 border-b border-slate-200 last:border-b-0 last:pb-0">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-16 h-16 flex items-center justify-center font-bold text-lg flex-shrink-0">
                         {item.weight}
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-bold mb-1">{item.criterion}</h3>
-                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <div>
+                        <h4 className="font-bold text-[oklch(0.20_0.05_250)] mb-1">{item.criterion}</h4>
+                        <p className="text-sm text-slate-600">{item.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Implementation Phases */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Implementation Process</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Typical timeline: 13-23 weeks from platform selection to production deployment
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Implementation Process</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Our 4-Phase Implementation Approach
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              A proven methodology that ensures successful RPA platform deployment in government environments
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-6">
             {implementationPhases.map((phase, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <div className="text-sm text-primary font-semibold">{phase.phase}</div>
-                      <h3 className="text-xl font-bold">{phase.title}</h3>
-                      <div className="text-sm text-muted-foreground">Duration: {phase.duration}</div>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    {phase.activities.map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-1" />
-                        <span className="text-sm">{activity}</span>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        {index + 1}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                      <div>
+                        <div className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{phase.phase}</div>
+                        <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
+                        <div className="text-sm text-slate-500">Duration: {phase.duration}</div>
+                      </div>
+                    </div>
+                    <ul className="space-y-2">
+                      {phase.activities.map((activity, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-700">{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Deliverables */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">What You Receive</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive documentation and artifacts for ongoing operations and compliance
-            </p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">What You Receive</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Implementation Deliverables
+            </h2>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {deliverables.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                    <Code className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </CardContent>
-              </Card>
+            {deliverables.map((deliverable, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-3">{deliverable.title}</h3>
+                    <p className="text-sm text-slate-600">{deliverable.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Government Experience */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Government RPA Implementation Success</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We've implemented FedRAMP RPA platforms across federal, state, and local government agencies
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Experience</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Our Team's Government Experience
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Our team members have delivered RPA implementations at leading government agencies. These projects were completed during their tenure at previous organizations.
             </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {governmentExperience.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                    <Award className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.agency}</h3>
-                  <div className="mb-3">
-                    <div className="inline-block bg-card border border-border text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                      {item.platform}
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {governmentExperience.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <span className="inline-block px-3 py-1 bg-[oklch(0.65_0.18_55)] text-white text-xs font-semibold rounded-full mb-2">
+                        {exp.agency}
+                      </span>
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{exp.platform}</h3>
                     </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">{item.scope}</p>
-                  <p className="text-sm font-semibold text-primary">{item.outcome}</p>
-                </CardContent>
-              </Card>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-xs font-semibold text-slate-500 uppercase">Scope</div>
+                        <p className="text-sm text-slate-700">{exp.scope}</p>
+                      </div>
+                      <div>
+                        <div className="text-xs font-semibold text-slate-500 uppercase">Outcome</div>
+                        <p className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{exp.outcome}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Select Your RPA Platform?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Schedule a consultation to discuss your automation requirements and receive a vendor-neutral platform recommendation.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Select the Right RPA Platform?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Schedule a consultation to discuss your agency's requirements and learn how our vendor-neutral approach ensures you get the best-fit platform for your mission.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Schedule Platform Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-            </Link>
-            <Link href="/services/automation/rpa/process-assessment">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Start with Process Assessment
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/automation/rpa">
+                  Back to RPA Services
+                </Link>
               </Button>
-            </Link>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

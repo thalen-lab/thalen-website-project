@@ -3,33 +3,31 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Users, GraduationCap, BookOpen, Shield, TrendingUp, CheckCircle2, Target, Zap, Award } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function CoESetup() {
   const coeComponents = [
     {
       component: 'Governance Framework',
       description: 'Policies, standards, and decision-making processes for enterprise RPA programs',
-      elements: ['RPA governance charter', 'Project intake and prioritization', 'Change management procedures', 'Risk management framework'],
-      icon: Shield
+      elements: ['RPA governance charter', 'Project intake and prioritization', 'Change management procedures', 'Risk management framework']
     },
     {
       component: 'Development Standards',
       description: 'Technical standards and best practices for bot development and deployment',
-      elements: ['Coding standards and conventions', 'Reusable component library', 'Testing and QA procedures', 'Deployment and release management'],
-      icon: BookOpen
+      elements: ['Coding standards and conventions', 'Reusable component library', 'Testing and QA procedures', 'Deployment and release management']
     },
     {
       component: 'Training Program',
       description: 'Comprehensive training curriculum for citizen developers and RPA professionals',
-      elements: ['Platform-specific training', 'Process analysis workshops', 'Bot development bootcamps', 'Certification pathways'],
-      icon: GraduationCap
+      elements: ['Platform-specific training', 'Process analysis workshops', 'Bot development bootcamps', 'Certification pathways']
     },
     {
       component: 'Operating Model',
       description: 'Organizational structure, roles, and responsibilities for sustainable RPA operations',
-      elements: ['CoE team structure', 'Roles and responsibilities', 'Service delivery model', 'Support and escalation procedures'],
-      icon: Users
+      elements: ['CoE team structure', 'Roles and responsibilities', 'Service delivery model', 'Support and escalation procedures']
     }
   ];
 
@@ -192,286 +190,401 @@ export default function CoESetup() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/automation" className="hover:text-accent">Intelligent Automation</Link>
-            <span className="mx-2">/</span>
-            <Link href="/services/automation/rpa" className="hover:text-accent">RPA Implementation</Link>
-            <span className="mx-2">/</span>
-            <span>CoE Setup</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold mb-4">
-              Scale RPA Across Your Agency
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/rpa-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Intelligent Automation', href: '/services/automation' },
+                { label: 'Government RPA', href: '/services/automation/rpa' },
+                { label: 'CoE Setup' }
+              ]} 
+              variant="light" 
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Scale RPA Across Your Agency</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               RPA Center of Excellence (CoE) Setup
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
               One-off bot projects deliver limited value. A properly structured RPA Center of Excellence helps government agencies (federal, state, and local) scale automation enterprise-wide with governance, standards, training, and sustainable operations—turning RPA into a strategic capability, not just a tactical tool.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
                   Request CoE Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/case-studies/federal-automation">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/case-studies">
                   View CoE Case Study
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CoE Components */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Four Pillars of a Successful RPA CoE</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Components</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Four Pillars of a Successful RPA CoE
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We establish all four components to ensure your CoE delivers sustainable, enterprise-wide automation
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-6">
-            {coeComponents.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-accent transition-all duration-300">
-                  <CardContent className="pt-8">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-2">{item.component}</h3>
-                        <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
-                      </div>
-                    </div>
-                    <div className="space-y-1">
+            {coeComponents.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.component}</h3>
+                    <p className="text-sm text-slate-600 mb-4">{item.description}</p>
+                    <ul className="space-y-2">
                       {item.elements.map((element, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-1" />
-                          <span className="text-sm">{element}</span>
-                        </div>
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-700">{element}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </CardContent>
                 </Card>
-              );
-            })}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Setup Phases */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">CoE Setup Process</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Typical timeline: 9-13 weeks from kickoff to operational CoE
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              CoE Setup Methodology
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Typical timeline: 10-16 weeks from kickoff to operational CoE
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-6">
             {setupPhases.map((phase, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-card border-2 border-border text-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <div className="text-sm text-primary font-semibold">{phase.phase}</div>
-                      <h3 className="text-xl font-bold">{phase.title}</h3>
-                      <div className="text-sm text-muted-foreground">Duration: {phase.duration}</div>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    {phase.activities.map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-1" />
-                        <span className="text-sm">{activity}</span>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        {index + 1}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                      <div>
+                        <div className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{phase.phase}</div>
+                        <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
+                        <div className="text-sm text-slate-500">Duration: {phase.duration}</div>
+                      </div>
+                    </div>
+                    <ul className="space-y-2">
+                      {phase.activities.map((activity, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-700">{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Governance Elements */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Governance Framework Components</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We establish comprehensive governance to ensure RPA program success and sustainability
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Governance Framework</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Key Governance Elements
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Essential governance components for sustainable RPA program management
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {governanceElements.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                    <Target className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.element}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
-                  <div className="space-y-1">
-                    {item.deliverables.map((deliverable, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-0.5" />
-                        <span className="text-xs">{deliverable}</span>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.element}</h3>
+                    <p className="text-sm text-slate-600 mb-4">{item.description}</p>
+                    <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-4 py-3">
+                      <div className="text-xs font-semibold text-[oklch(0.65_0.18_55)] mb-2">Deliverables</div>
+                      <div className="flex flex-wrap gap-2">
+                        {item.deliverables.map((deliverable, idx) => (
+                          <span key={idx} className="text-xs bg-white px-2 py-1 rounded border border-slate-200 text-slate-700">
+                            {deliverable}
+                          </span>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Training Tracks */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Comprehensive Training Program</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Role-based training tracks to build internal RPA capabilities across your agency
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Training Program</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Role-Based Training Tracks
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Comprehensive training curriculum tailored to different roles in your RPA program
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-6">
-            {trainingTracks.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="h-6 w-6 text-primary" />
+            {trainingTracks.map((track, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{track.track}</h3>
+                      <span className="text-xs bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-2 py-1 rounded font-semibold">{track.duration}</span>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-1">{item.track}</h3>
-                      <p className="text-sm text-muted-foreground mb-2">{item.audience}</p>
-                      <div className="inline-block bg-card border border-border text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                        {item.duration}
-                      </div>
+                    <p className="text-sm text-slate-600 mb-4">{track.audience}</p>
+                    <div className="mb-4">
+                      <div className="text-xs font-semibold text-slate-500 uppercase mb-2">Topics Covered</div>
+                      <ul className="space-y-1">
+                        {track.topics.map((topic, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                            <span className="text-sm text-slate-700">{topic}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
-                  <div className="mb-3">
-                    <div className="text-sm font-semibold mb-2">Topics Covered:</div>
-                    <div className="flex flex-wrap gap-2">
-                      {item.topics.map((topic, idx) => (
-                        <span key={idx} className="inline-block bg-muted text-foreground px-2 py-1 rounded text-xs">
-                          {topic}
-                        </span>
-                      ))}
+                    <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-4 py-3">
+                      <div className="text-xs font-semibold text-[oklch(0.65_0.18_55)] mb-1">Outcome</div>
+                      <p className="text-sm text-slate-700">{track.outcome}</p>
                     </div>
-                  </div>
-                  <div className="bg-muted rounded-lg px-4 py-3">
-                    <div className="text-xs font-semibold mb-1">Learning Outcome:</div>
-                    <div className="text-sm">{item.outcome}</div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CoE Roles */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Recommended CoE Team Structure</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Typical enterprise CoE requires 4-6 FTEs with these core roles
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Team Structure</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Recommended CoE Roles
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Key roles and responsibilities for a successful RPA Center of Excellence
             </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
               <CardContent className="p-8">
                 <div className="space-y-4">
-                  {coeRoles.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4 pb-4 border-b last:border-b-0">
-                      <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Users className="h-6 w-6 text-primary" />
-                      </div>
+                  {coeRoles.map((role, index) => (
+                    <div key={index} className="flex items-start gap-4 pb-4 border-b border-slate-200 last:border-b-0 last:pb-0">
                       <div className="flex-1">
-                        <div className="flex items-center justify-between mb-1">
-                          <h3 className="text-lg font-bold">{item.role}</h3>
-                          <span className="inline-block bg-card border border-border text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                            {item.commitment}
-                          </span>
-                        </div>
-                        <p className="text-sm text-muted-foreground">{item.responsibility}</p>
+                        <h4 className="font-bold text-[oklch(0.20_0.05_250)] mb-1">{role.role}</h4>
+                        <p className="text-sm text-slate-600">{role.responsibility}</p>
                       </div>
+                      <span className="text-xs bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-3 py-1 rounded-full font-semibold whitespace-nowrap">
+                        {role.commitment}
+                      </span>
                     </div>
                   ))}
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Government Experience */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Government CoE Success Stories</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We've established RPA Centers of Excellence across federal, state, and local government agencies
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Experience</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Our Team's CoE Experience
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Our team members have established RPA Centers of Excellence at leading government agencies. These projects were completed during their tenure at previous organizations.
             </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {governmentExperience.map((item, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                    <Award className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.agency}</h3>
-                  <p className="text-sm text-muted-foreground mb-2">{item.scope}</p>
-                  <p className="text-sm font-semibold text-primary mb-2">{item.outcome}</p>
-                  <div className="inline-block bg-card border border-border text-primary px-3 py-1 rounded-full text-xs font-semibold">
-                    {item.timeline}
-                  </div>
-                </CardContent>
-              </Card>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {governmentExperience.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <span className="inline-block px-3 py-1 bg-[oklch(0.65_0.18_55)] text-white text-xs font-semibold rounded-full mb-2">
+                        {exp.agency}
+                      </span>
+                      <p className="text-sm text-slate-600">{exp.scope}</p>
+                    </div>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="text-xs font-semibold text-slate-500 uppercase">Timeline</div>
+                        <p className="text-sm text-slate-700">{exp.timeline}</p>
+                      </div>
+                      <div>
+                        <div className="text-xs font-semibold text-slate-500 uppercase">Outcome</div>
+                        <p className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{exp.outcome}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Establish Your RPA CoE?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Let us help you build a sustainable, enterprise-wide RPA program with governance, standards, and trained teams.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule CoE Workshop
-                <ArrowRight className="ml-2 h-5 w-5" />
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Build Your RPA Center of Excellence?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Schedule a consultation to discuss your agency's automation goals and learn how a properly structured CoE can help you scale RPA enterprise-wide.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Schedule CoE Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-            </Link>
-            <Link href="/services/automation/rpa/process-assessment">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Start with Process Assessment
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/automation/rpa">
+                  Back to RPA Services
+                </Link>
               </Button>
-            </Link>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

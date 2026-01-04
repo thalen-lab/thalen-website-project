@@ -3,7 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2, FileSearch, Target, TrendingUp, DollarSign, Clock, BarChart3, Users, AlertCircle } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function ProcessAssessment() {
   const assessmentPhases = [
@@ -57,38 +59,32 @@ export default function ProcessAssessment() {
     {
       criterion: 'Rule-Based & Repeatable',
       description: 'Process follows consistent rules with minimal exceptions',
-      ideal: 'Same steps every time, clear decision logic',
-      icon: CheckCircle2
+      ideal: 'Same steps every time, clear decision logic'
     },
     {
       criterion: 'High Volume & Frequency',
       description: 'Process runs frequently with significant transaction volume',
-      ideal: 'Daily/weekly execution, 100+ transactions/month',
-      icon: TrendingUp
+      ideal: 'Daily/weekly execution, 100+ transactions/month'
     },
     {
       criterion: 'Time-Consuming',
       description: 'Process consumes significant staff time',
-      ideal: '10+ hours/week of manual effort',
-      icon: Clock
+      ideal: '10+ hours/week of manual effort'
     },
     {
       criterion: 'Digital Inputs',
       description: 'Process uses structured digital data (not paper-based)',
-      ideal: 'Data in spreadsheets, databases, or web forms',
-      icon: FileSearch
+      ideal: 'Data in spreadsheets, databases, or web forms'
     },
     {
       criterion: 'Stable Systems',
       description: 'Underlying systems are stable with minimal changes',
-      ideal: 'No major system upgrades planned in next 12 months',
-      icon: Target
+      ideal: 'No major system upgrades planned in next 12 months'
     },
     {
       criterion: 'Error-Prone',
       description: 'Manual process has high error rates or rework',
-      ideal: 'Frequent data entry errors or quality issues',
-      icon: AlertCircle
+      ideal: 'Frequent data entry errors or quality issues'
     }
   ];
 
@@ -112,11 +108,6 @@ export default function ProcessAssessment() {
       title: 'Implementation Roadmap',
       description: '12-18 month phased roadmap with sequenced projects, resource allocation, milestone definitions, and success metrics.',
       pages: '15-20 pages'
-    },
-    {
-      title: 'Executive Presentation',
-      description: 'C-level presentation deck summarizing findings, recommendations, and expected business impact with compelling visualizations.',
-      pages: '20-25 slides'
     }
   ];
 
@@ -128,8 +119,7 @@ export default function ProcessAssessment() {
       totalHours: '125 hours/month',
       laborCost: '$50/hour',
       monthlyCost: '$6,250',
-      errorRate: '8%',
-      reworkCost: '$500/month'
+      errorRate: '8%'
     },
     futureState: {
       automationRate: '85%',
@@ -137,7 +127,6 @@ export default function ProcessAssessment() {
       totalHours: '17 hours/month',
       monthlySavings: '$5,400',
       annualSavings: '$64,800',
-      implementationCost: '$45,000',
       paybackPeriod: '8.3 months'
     }
   };
@@ -146,253 +135,323 @@ export default function ProcessAssessment() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <nav className="text-sm mb-6 opacity-80">
-            <Link href="/services/automation" className="hover:text-accent">Intelligent Automation</Link>
-            <span className="mx-2">/</span>
-            <Link href="/services/automation/rpa" className="hover:text-accent">RPA Implementation</Link>
-            <span className="mx-2">/</span>
-            <span>Process Assessment</span>
-          </nav>
-          
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
-              Foundation for RPA Success
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/rpa-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        
+        <div className="container relative z-10">
+          {/* Breadcrumb */}
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Intelligent Automation', href: '/services/automation' },
+                { label: 'Government RPA', href: '/services/automation/rpa' },
+                { label: 'Process Assessment' }
+              ]} 
+              variant="light" 
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Foundation for RPA Success</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               RPA Process Assessment & Discovery
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
               Not all processes are good automation candidates. Our comprehensive assessment helps government agencies (federal, state, and local) identify highest-value opportunities with detailed ROI projections, implementation roadmaps, and risk analysis—so you invest in bots that deliver measurable results.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
                   Request Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/case-studies/federal-automation">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/case-studies">
                   View Case Study
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Assessment Phases */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our 4-Phase Assessment Methodology</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Methodology</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              4-Phase Assessment Methodology
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Typically completed in 4-6 weeks with minimal disruption to government agency operations (federal, state, and local)
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-6">
             {assessmentPhases.map((phase, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <div className="text-sm text-accent font-semibold">{phase.phase}</div>
-                      <h3 className="text-xl font-bold">{phase.title}</h3>
-                      <div className="text-sm text-muted-foreground">Duration: {phase.duration}</div>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    {phase.activities.map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-foreground flex-shrink-0 mt-1" />
-                        <span className="text-sm">{activity}</span>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                        {index + 1}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                      <div>
+                        <div className="text-sm text-[oklch(0.65_0.18_55)] font-semibold">{phase.phase}</div>
+                        <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
+                        <div className="text-sm text-slate-500">Duration: {phase.duration}</div>
+                      </div>
+                    </div>
+                    <ul className="space-y-2">
+                      {phase.activities.map((activity, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-700">{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Assessment Criteria */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">What Makes a Good RPA Candidate?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Evaluation Framework</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              What Makes a Good RPA Candidate?
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We evaluate every process against these 6 criteria to predict automation success
             </p>
-          </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {assessmentCriteria.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <Card key={index} className="border-2">
-                  <CardContent className="pt-8">
-                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-2">{item.criterion}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
-                    <div className="bg-muted rounded-lg px-3 py-2">
-                      <div className="text-xs text-accent font-semibold">Ideal State:</div>
-                      <div className="text-xs">{item.ideal}</div>
+            {assessmentCriteria.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.criterion}</h3>
+                    <p className="text-sm text-slate-600 mb-3">{item.description}</p>
+                    <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-3 py-2">
+                      <div className="text-xs text-[oklch(0.65_0.18_55)] font-semibold">Ideal State:</div>
+                      <div className="text-xs text-slate-700">{item.ideal}</div>
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ROI Example */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Real-World ROI Example</h2>
-            <p className="text-xl text-muted-foreground">
-              Federal agency vendor invoice processing automation
-            </p>
-          </div>
-          <div className="max-w-5xl mx-auto">
-            <Card className="border-2 hover:border-accent hover:shadow-lg transition-all active:scale-95">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-center">{roiExample.process}</h3>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <div className="bg-secondary rounded-lg p-6">
-                      <h4 className="font-bold text-lg mb-4">Current State (Manual)</h4>
-                      <div className="space-y-3">
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Volume:</span>
-                          <span className="font-semibold">{roiExample.currentState.volume}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Time per invoice:</span>
-                          <span className="font-semibold">{roiExample.currentState.timePerInvoice}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Total hours/month:</span>
-                          <span className="font-semibold">{roiExample.currentState.totalHours}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Labor cost:</span>
-                          <span className="font-semibold">{roiExample.currentState.laborCost}</span>
-                        </div>
-                        <div className="border-t pt-2 flex justify-between">
-                          <span className="font-semibold">Monthly cost:</span>
-                          <span className="font-bold text-lg">{roiExample.currentState.monthlyCost}</span>
-                        </div>
-                        <div className="flex justify-between text-sm">
-                          <span className="text-muted-foreground">Error rate:</span>
-                          <span className="text-red-500 font-semibold">{roiExample.currentState.errorRate}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="bg-muted rounded-lg p-6">
-                      <h4 className="font-bold text-lg mb-4">Future State (Automated)</h4>
-                      <div className="space-y-3">
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Automation rate:</span>
-                          <span className="font-semibold text-accent">{roiExample.futureState.automationRate}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Time per invoice:</span>
-                          <span className="font-semibold">{roiExample.futureState.timePerInvoice}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Total hours/month:</span>
-                          <span className="font-semibold">{roiExample.futureState.totalHours}</span>
-                        </div>
-                        <div className="border-t pt-2 flex justify-between">
-                          <span className="font-semibold">Monthly savings:</span>
-                          <span className="font-bold text-lg text-accent">{roiExample.futureState.monthlySavings}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="font-semibold">Annual savings:</span>
-                          <span className="font-bold text-xl text-accent">{roiExample.futureState.annualSavings}</span>
-                        </div>
-                        <div className="border-t pt-2 space-y-2 text-sm">
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">Implementation cost:</span>
-                            <span>{roiExample.futureState.implementationCost}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="font-semibold">Payback period:</span>
-                            <span className="font-bold text-accent">{roiExample.futureState.paybackPeriod}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Deliverables */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Assessment Deliverables</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive documentation package to support your RPA investment decisions
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {deliverables.map((deliverable, index) => (
-              <Card key={index} className="border-2">
-                <CardContent className="pt-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-accent text-accent-foreground rounded-lg w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-2">{deliverable.title}</h3>
-                      <p className="text-sm text-muted-foreground mb-3">{deliverable.description}</p>
-                      <div className="text-xs text-accent font-semibold">{deliverable.pages}</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Identify Your Top RPA Opportunities?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Our assessment typically identifies 5-10 high-value automation opportunities with 6-12 month payback periods.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Request Free Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/services/automation/rpa">
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Back to RPA Services
-              </Button>
-            </Link>
+      {/* ROI Example */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">ROI Analysis</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Real-World ROI Example
+            </h2>
+            <p className="text-lg text-slate-600">
+              Federal agency vendor invoice processing automation
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6 text-center">{roiExample.process}</h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-4 pb-2 border-b-2 border-slate-200">Current State</h4>
+                    <ul className="space-y-3">
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Volume:</span>
+                        <span className="font-semibold text-[oklch(0.20_0.05_250)]">{roiExample.currentState.volume}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Time per Invoice:</span>
+                        <span className="font-semibold text-[oklch(0.20_0.05_250)]">{roiExample.currentState.timePerInvoice}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Total Hours/Month:</span>
+                        <span className="font-semibold text-[oklch(0.20_0.05_250)]">{roiExample.currentState.totalHours}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Labor Cost:</span>
+                        <span className="font-semibold text-[oklch(0.20_0.05_250)]">{roiExample.currentState.laborCost}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Monthly Cost:</span>
+                        <span className="font-semibold text-[oklch(0.20_0.05_250)]">{roiExample.currentState.monthlyCost}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Error Rate:</span>
+                        <span className="font-semibold text-red-600">{roiExample.currentState.errorRate}</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-[oklch(0.65_0.18_55)] mb-4 pb-2 border-b-2 border-[oklch(0.65_0.18_55)]">Future State (Automated)</h4>
+                    <ul className="space-y-3">
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Automation Rate:</span>
+                        <span className="font-semibold text-[oklch(0.65_0.18_55)]">{roiExample.futureState.automationRate}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Time per Invoice:</span>
+                        <span className="font-semibold text-[oklch(0.65_0.18_55)]">{roiExample.futureState.timePerInvoice}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Total Hours/Month:</span>
+                        <span className="font-semibold text-[oklch(0.65_0.18_55)]">{roiExample.futureState.totalHours}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Monthly Savings:</span>
+                        <span className="font-semibold text-green-600">{roiExample.futureState.monthlySavings}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Annual Savings:</span>
+                        <span className="font-semibold text-green-600">{roiExample.futureState.annualSavings}</span>
+                      </li>
+                      <li className="flex justify-between text-sm">
+                        <span className="text-slate-600">Payback Period:</span>
+                        <span className="font-semibold text-[oklch(0.65_0.18_55)]">{roiExample.futureState.paybackPeriod}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Deliverables */}
+      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">What You Receive</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+              Assessment Deliverables
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {deliverables.map((deliverable, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{deliverable.title}</h3>
+                      <span className="text-xs bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-2 py-1 rounded font-semibold">{deliverable.pages}</span>
+                    </div>
+                    <p className="text-sm text-slate-600">{deliverable.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container text-center max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Discover Your Automation Opportunities?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Schedule a complimentary consultation to discuss your agency's processes and learn how our assessment methodology can identify high-value automation candidates.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
+                <Link href="/contact">
+                  Schedule Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                <Link href="/services/automation/rpa">
+                  Back to RPA Services
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
