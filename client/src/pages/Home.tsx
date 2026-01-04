@@ -124,80 +124,181 @@ export default function Home() {
       {/* Who We Are Section - Enhanced with Signature Blue */}
       <WhoWeAreSection />
 
-      {/* Comprehensive Technology Solutions - Clean White Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-white overflow-hidden">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-            
-            {/* Left: Core Capabilities Image */}
+      {/* Mission-Focused Solutions Section - Dark Navy with Cards */}
+      <section className="relative py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-[#0A2540] overflow-hidden">
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+        
+        <div className="container relative z-10">
+          {/* Header Section */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-12 mb-12 md:mb-16">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7 }}
-              className="relative order-2 lg:order-1"
+              transition={{ duration: 0.6 }}
+              className="max-w-2xl"
             >
-              <div className="relative overflow-hidden shadow-2xl rounded-sm">
-                <div className="aspect-[4/3] w-full">
-                  <ImageWithLoader
-                    src="/comprehensive-technology-solutions.jpg"
-                    alt="Technology professionals collaborating on comprehensive solutions with data analytics display"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* Gradient overlay for depth */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/20 via-transparent to-[#E07020]/10 pointer-events-none"></div>
-                {/* Orange accent bar */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#E07020] to-[#F08030]"></div>
-              </div>
-
-              {/* Decorative accent element */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#E07020]/20 rounded-full blur-3xl"
-              />
-            </motion.div>
-
-            {/* Right: Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative z-10 order-1 lg:order-2"
-            >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#0A2540] mb-4 md:mb-6 leading-tight">
-                Mission-Enabling Technology Solutions
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white mb-4 md:mb-6 leading-[1.1] tracking-tight uppercase">
+                Mission-Focused<br />Solutions
               </h2>
-
-              <p className="text-base md:text-lg text-slate-600 leading-relaxed mb-6 md:mb-8">
-                For 25 years, NexDyne has partnered with federal, state, and local government agencies to deliver mission-critical technology that makes a difference. Our deep government expertise, battle-tested methodologies, and unwavering commitment to compliance ensure your agency partners achieve mission success while maintaining the highest security standards.
+              <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed">
+                We don't just implement technology; we solve mission-critical challenges. Our solutions are purpose-built for the unique constraints and requirements of the public sector.
               </p>
+            </motion.div>
+            
+            {/* View All Capabilities Link */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Link href="/services" className="group inline-flex items-center gap-2 text-[#E07020] hover:text-[#F08030] font-semibold tracking-wider text-sm uppercase transition-colors">
+                View All Capabilities
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          </div>
 
-              {/* CTA Buttons - Consistent sizing */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Button asChild variant="default" size="lg" className="bg-[#E07020] hover:bg-[#C85D15] text-white px-6 min-h-[48px] w-full sm:w-auto">
-                  <Link href="/services">
-                    Explore Our Services
+          {/* Service Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* Card 1: Citizen Services Modernization */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020]/40 transition-all duration-300 overflow-hidden">
+                <CardContent className="p-6 md:p-8 h-full flex flex-col">
+                  {/* Icon and Badge Row */}
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-12 h-12 rounded-lg bg-[#E07020]/10 flex items-center justify-center">
+                      <Layers className="w-6 h-6 text-[#E07020]" />
+                    </div>
+                    {/* Decorative Badge */}
+                    <div className="w-16 h-16 opacity-20">
+                      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="28" stroke="#E07020" strokeWidth="2" strokeDasharray="4 4" />
+                        <circle cx="32" cy="32" r="20" stroke="#E07020" strokeWidth="1.5" />
+                        <path d="M32 16v32M16 32h32" stroke="#E07020" strokeWidth="1" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                    Citizen Services<br />Modernization
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-white/70 text-sm md:text-base leading-relaxed mb-6 flex-grow">
+                    Transforming how agencies interact with the public through accessible, secure, and efficient digital platforms.
+                  </p>
+                  
+                  {/* Explore Link */}
+                  <Link href="/services/digital-transformation" className="group/link inline-flex items-center gap-2 text-[#E07020] hover:text-[#F08030] font-semibold text-sm uppercase tracking-wider transition-colors">
+                    Explore
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white px-6 min-h-[48px] w-full sm:w-auto">
-                  <Link href="/contact">
-                    Get in Touch
-                  </Link>
-                </Button>
-              </div>
+                </CardContent>
+              </Card>
             </motion.div>
 
+            {/* Card 2: Mission-Critical Security */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020]/40 transition-all duration-300 overflow-hidden">
+                <CardContent className="p-6 md:p-8 h-full flex flex-col">
+                  {/* Icon and Badge Row */}
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-12 h-12 rounded-lg bg-[#E07020]/10 flex items-center justify-center">
+                      <Shield className="w-6 h-6 text-[#E07020]" />
+                    </div>
+                    {/* Decorative Badge */}
+                    <div className="w-16 h-16 opacity-20">
+                      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 8L52 18v16c0 12-8.5 22-20 26-11.5-4-20-14-20-26V18L32 8z" stroke="#E07020" strokeWidth="2" />
+                        <path d="M32 16L44 22v10c0 8-5.5 14.5-12 17-6.5-2.5-12-9-12-17V22L32 16z" stroke="#E07020" strokeWidth="1.5" strokeDasharray="3 3" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                    Mission-Critical<br />Security
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-white/70 text-sm md:text-base leading-relaxed mb-6 flex-grow">
+                    Protecting sensitive government data and operations with Zero Trust architectures and advanced threat detection.
+                  </p>
+                  
+                  {/* Explore Link */}
+                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-2 text-[#E07020] hover:text-[#F08030] font-semibold text-sm uppercase tracking-wider transition-colors">
+                    Explore
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Card 3: Regulatory Compliance */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020]/40 transition-all duration-300 overflow-hidden">
+                <CardContent className="p-6 md:p-8 h-full flex flex-col">
+                  {/* Icon and Badge Row */}
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-12 h-12 rounded-lg bg-[#E07020]/10 flex items-center justify-center">
+                      <Lock className="w-6 h-6 text-[#E07020]" />
+                    </div>
+                    {/* Decorative Badge */}
+                    <div className="w-16 h-16 opacity-20">
+                      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="12" y="24" width="40" height="32" rx="4" stroke="#E07020" strokeWidth="2" />
+                        <path d="M22 24V16a10 10 0 0 1 20 0v8" stroke="#E07020" strokeWidth="2" />
+                        <circle cx="32" cy="40" r="4" stroke="#E07020" strokeWidth="1.5" />
+                        <path d="M32 44v6" stroke="#E07020" strokeWidth="1.5" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                    Regulatory<br />Compliance
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-white/70 text-sm md:text-base leading-relaxed mb-6 flex-grow">
+                    Navigating complex frameworks like FedRAMP, CMMC, and FISMA to ensure continuous authorization to operate.
+                  </p>
+                  
+                  {/* Explore Link */}
+                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-2 text-[#E07020] hover:text-[#F08030] font-semibold text-sm uppercase tracking-wider transition-colors">
+                    Explore
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
 
         {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#E07020]/5 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A2540]/5 rounded-full blur-3xl -z-10" />
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#E07020]/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-[#E07020]/3 rounded-full blur-3xl" />
       </section>
 
       {/* Compliance-First Approach Section - Signature Blue */}
