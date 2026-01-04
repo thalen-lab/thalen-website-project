@@ -82,10 +82,9 @@
   --sidebar-accent-foreground: oklch(0.25 0.05 250);
   --sidebar-border: oklch(0.90 0.01 250);
   --sidebar-ring: oklch(0.25 0.05 250);
-  /* Custom Thalen colors */
-  --navy-dark: oklch(0.20 0.05 250);
-  --navy: oklch(0.25 0.05 250);
-  --navy-light: oklch(0.35 0.05 250);
+  /* Standardized Navy Colors - Two Primary Blues */
+  --navy-primary: #0A2540;
+  --navy-secondary: #12344D;
   --orange: oklch(0.65 0.20 40);
   --orange-dark: oklch(0.55 0.22 40);
 }
@@ -181,7 +180,7 @@
 
   /* Navy gradient background */
   .bg-navy-gradient {
-    background: linear-gradient(135deg, oklch(0.20 0.05 250) 0%, oklch(0.25 0.05 250) 100%);
+    background: linear-gradient(135deg, #0A2540 0%, #12344D 100%);
   }
 
   /* Orange gradient for CTAs */
@@ -191,20 +190,20 @@
 
   /* Navy solid backgrounds - for sections with white text */
   .bg-navy {
-    background-color: oklch(0.22 0.06 250);
+    background-color: #0A2540;
   }
 
   .bg-navy-dark {
-    background-color: oklch(0.18 0.06 250);
+    background-color: #0A2540;
   }
 
   .bg-navy-light {
-    background-color: oklch(0.28 0.05 250);
+    background-color: #12344D;
   }
 
   /* Navy gradient overlay for depth */
   .bg-navy-depth {
-    background: linear-gradient(135deg, oklch(0.18 0.06 250) 0%, oklch(0.22 0.06 250) 50%, oklch(0.28 0.05 250) 100%);
+    background: linear-gradient(135deg, #0A2540 0%, #0A2540 50%, #12344D 100%);
   }
 
   /* Light gray background */

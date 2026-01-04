@@ -3893,3 +3893,5 @@
 - [x] Remove colored category badges from news cards
 - [x] Remove orange top borders from news cards
 - [x] Add orange border on hover for news cards
+- [x] Add overview section between hero and NexDyne overview with three clickable links: Capabilities, Our Approach, Contract Vehicles (REVERTED per user request)
+- [x] Standardize blue color palette to two primary blues (deep navy + lighter accent)

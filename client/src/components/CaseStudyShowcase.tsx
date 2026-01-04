@@ -132,7 +132,7 @@ export default function CaseStudyShowcase() {
   return (
     <section className="relative py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
       {/* Subtle gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0A2540] to-[#12344D]"></div>
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
       

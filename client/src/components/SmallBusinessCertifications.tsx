@@ -4,7 +4,7 @@ import { Award, Building2, Handshake, Shield, Clock, CheckCircle } from "lucide-
 
 export default function SmallBusinessCertifications() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-[#0A2540] to-[#1e3a4c]">
+    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-[#0A2540] to-[#12344D]">
       <div className="container">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -60,7 +60,7 @@ export default function SmallBusinessCertifications() {
           {/* Compliance Credentials */}
           <div className="bg-slate-800/50 p-8 border border-slate-700 hover:border-[#FF6B35] transition-all duration-300 hover:shadow-xl group">
             <div className="mb-6">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#0A2540] to-[#1e3a4c] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#0A2540] to-[#12344D] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Shield className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">
@@ -109,7 +109,7 @@ export default function SmallBusinessCertifications() {
           {/* Small Business Status */}
           <div className="bg-slate-800/50 p-8 border border-slate-700 hover:border-[#FF6B35] transition-all duration-300 hover:shadow-xl group">
             <div className="mb-6">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#0A2540] to-[#1e3a4c] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#0A2540] to-[#12344D] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">
