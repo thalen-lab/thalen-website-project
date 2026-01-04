@@ -4,6 +4,7 @@ interface CarouselSlide {
   id: number;
   image: string;
   title: string;
+  subtitle: string;
 }
 
 const slides: CarouselSlide[] = [
@@ -11,31 +12,37 @@ const slides: CarouselSlide[] = [
     id: 1,
     image: "/hero-operations-center.jpg",
     title: "Powering Government Mission Success",
+    subtitle: "For 25 years, we have partnered with federal, state, and local agencies to modernize critical systems, secure sensitive data, and deliver superior citizen services.",
   },
   {
     id: 2,
     image: "/hero-fedramp.jpg",
     title: "Mission-First, Compliance-Assured",
+    subtitle: "Accelerate your path to FedRAMP authorization with our battle-tested methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months.",
   },
   {
     id: 3,
     image: "/hero-cybersecurity-new.jpg",
     title: "Defending the Nation's Digital Infrastructure",
+    subtitle: "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements.",
   },
   {
     id: 4,
     image: "/hero-datacenter-new.jpg",
     title: "Secure Cloud Migration for Government",
+    subtitle: "Modernize your infrastructure with secure migration to AWS GovCloud, Azure Government, or Google Cloud for Government with 99.99% uptime.",
   },
   {
     id: 5,
     image: "/hero-financial.jpg",
     title: "Government-Grade Solutions for Regulated Industries",
+    subtitle: "We apply the same rigorous standards of security and compliance demanded by our government partners to solve challenges for regulated industries.",
   },
   {
     id: 6,
     image: "/hero-infrastructure.jpg",
     title: "Protecting Critical Infrastructure",
+    subtitle: "Safeguarding and modernizing the nation's critical infrastructure with enterprise-grade security, resilience, and compliance frameworks.",
   },
 ];
 
@@ -71,22 +78,27 @@ export default function HeroCarousel() {
         </div>
       ))}
 
-      {/* Bottom Title Banner - Tygart Style */}
+      {/* Bottom Title Banner - Tygart Style with Subtitle */}
       <div className="absolute bottom-0 left-0 right-0 z-20">
         <div className="bg-[#5C4033]/85 backdrop-blur-sm">
-          <div className="container py-4 sm:py-5 md:py-6">
+          <div className="container py-5 sm:py-6 md:py-8">
+            {/* Main Title */}
             <h1 
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white tracking-wide italic"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white tracking-wide italic mb-2 sm:mb-3"
               style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
             >
               {slides[currentSlide].title}
             </h1>
+            {/* Subtitle */}
+            <p className="text-sm sm:text-base md:text-lg text-white/80 font-light max-w-4xl leading-relaxed">
+              {slides[currentSlide].subtitle}
+            </p>
           </div>
         </div>
       </div>
 
       {/* Slide Indicators - Subtle dots at bottom right */}
-      <div className="absolute bottom-20 sm:bottom-24 md:bottom-28 right-4 sm:right-6 md:right-8 z-20 flex gap-2">
+      <div className="absolute bottom-32 sm:bottom-36 md:bottom-40 right-4 sm:right-6 md:right-8 z-20 flex gap-2">
         {slides.map((_, index) => (
           <button
             key={index}

@@ -3822,3 +3822,8 @@
 - [x] Create bottom banner with main title only (overlapping style like Tygart)
 - [x] Keep hero image clean and full without dark overlays
 - [x] Test hero section on desktop and mobile
+
+## Phase 109: Add Subtitles to Hero Banner
+- [x] Add subtitle text under main titles in hero banner
+- [x] Keep clean Tygart-style design with subtitles
+- [x] Test hero section with subtitles
