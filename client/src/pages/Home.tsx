@@ -460,25 +460,25 @@ export default function Home() {
               {
                 title: 'Federal Government',
                 description: 'Supporting federal agencies with FedRAMP-authorized solutions, cleared personnel, and mission-critical technology implementations.',
-                image: '/images/federal-capitol.png',
+                image: '/federal-government.jpg',
                 link: '/industries/federal'
               },
               {
                 title: 'State & Local Government',
                 description: 'Empowering state and municipal agencies with scalable, compliant solutions that modernize public services and citizen engagement.',
-                image: '/images/customers/state-local-government.jpg',
+                image: '/government-contracts.jpg',
                 link: '/industries/state-local'
               },
               {
                 title: 'Regulated Industries',
                 description: 'Serving healthcare, financial services, and energy sectors with solutions that meet stringent regulatory and compliance requirements.',
-                image: '/images/customers/regulated-industries.jpg',
+                image: '/manufacturing.webp',
                 link: '/industries/regulated'
               },
               {
                 title: 'Federal Contractors',
                 description: 'Guiding defense contractors through CMMC certification and compliance, ensuring readiness for DoD contract requirements.',
-                image: '/images/customers/federal-contractors.jpg',
+                image: '/defense.webp',
                 link: '/services/cybersecurity'
               }
             ].map((category, index) => (
@@ -533,115 +533,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Customers Section - Signature Blue */}
-      <section className="relative py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
-        {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#081C30] via-[#0A2540] to-[#12344D]"></div>
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
-        <div className="container relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="text-2xl md:text-3xl font-normal text-white mb-10 md:mb-12"
-          >
-            Our Agency Partners
-          </motion.h2>
-          
-          <motion.div 
-            className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8 lg:gap-10"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.08,
-                  delayChildren: 0.1,
-                },
-              },
-            }}
-          >
-            {[
-              { name: 'Department of Defense', src: '/customers/dod-seal.png' },
-              { name: 'Department of Homeland Security', src: '/customers/dhs-seal.png' },
-              { name: 'U.S. Army', src: '/customers/army-seal.png' },
-              { name: 'State of Michigan', src: '/customers/michigan-seal.png' },
-              { name: 'Department of Veterans Affairs', src: '/customers/va-seal.png' },
-              { name: 'Federal Bureau of Investigation', src: '/customers/fbi-seal.png' },
-              { name: 'General Services Administration', src: '/customers/gsa-seal.png' },
-              { name: 'Department of Health & Human Services', src: '/customers/hhs-seal.png' },
-            ].map((customer) => (
-              <motion.div
-                key={customer.name}
-                className="flex items-center justify-center"
-                variants={{
-                  hidden: { opacity: 0, y: 10 },
-                  visible: { 
-                    opacity: 1, 
-                    y: 0,
-                    transition: {
-                      duration: 0.4,
-                      ease: [0.25, 0.1, 0.25, 1],
-                    },
-                  },
-                }}
-              >
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <div className="cursor-pointer transition-all duration-300 hover:scale-105 brightness-0 invert opacity-70 hover:opacity-100">
-                      <img
-                        src={customer.src}
-                        alt={customer.name}
-                        className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain"
-                      />
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{customer.name}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
-      {/* CTA Section - Clean White */}
-      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-white overflow-hidden">
-        {/* Subtle background decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#E07020]/5 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0A2540]/5 rounded-full blur-3xl -z-10" />
-        
-        <motion.div 
-          className="container text-center relative z-10"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-        >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#0A2540]">Contact Us</h2>
-          <p className="text-base md:text-lg lg:text-xl text-slate-600 mb-8 md:mb-10 max-w-2xl mx-auto">
-            Request an assessment to evaluate how our services can support your agency's technology requirements.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white shadow-lg hover:shadow-xl transition-all px-6 sm:px-8 min-h-[48px] w-full sm:w-auto">
-              <Link href="/contact">
-                Request Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white px-6 sm:px-8 min-h-[48px] w-full sm:w-auto">
-              <Link href="/about">
-                Learn About Our Team
-              </Link>
-            </Button>
-          </div>
-        </motion.div>
-      </section>
 
       <Footer />
     </div>
