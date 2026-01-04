@@ -34,7 +34,7 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 5,
-    image: "/hero-financial.jpg",
+    image: "/hero-buildings.png",
     title: "Government-Grade Solutions for Regulated Industries",
     subtitle: "We apply the same rigorous standards of security and compliance demanded by our government partners to solve challenges for regulated industries.",
   },

@@ -3838,3 +3838,8 @@
 
 ## Phase 58: Update Hero Images
 - [x] Update hero image for "Powering Government Mission Success" slide with US Capitol building image
+
+
+## Phase 52: Update Hero Section Image
+- [x] Update hero section with new architectural glass building image
+- [x] Apply government-grade solutions messaging to hero
