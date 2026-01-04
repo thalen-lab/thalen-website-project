@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
-import { ExternalLink, ChevronLeft, ChevronRight, Newspaper, TrendingUp } from "lucide-react";
+import { useState, useRef, useCallback } from "react";
+import { ExternalLink, ChevronLeft, ChevronRight, TrendingUp, FileText, Shield, Scale, Cpu } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils";
 
 interface UpdateItem {
@@ -9,226 +11,298 @@ interface UpdateItem {
   sourceUrl: string;
   date: string;
   category: "compliance" | "security" | "policy" | "technology";
+  description: string;
 }
 
 const industryUpdates: UpdateItem[] = [
   {
     id: "1",
-    title: "OMB M-24-18: AI Governance Requirements for Federal Agencies",
+    title: "OMB M-24-18: AI Governance Requirements",
     source: "Office of Management and Budget",
     sourceUrl: "https://www.whitehouse.gov/omb/management/ofcio/",
     date: "Dec 2024",
     category: "policy",
+    description: "New federal requirements for AI governance, risk management, and responsible deployment across all executive branch agencies.",
   },
   {
     id: "2",
-    title: "FedRAMP Rev 5 Transition Deadline Extended to March 2025",
+    title: "FedRAMP Rev 5 Transition Deadline Extended",
     source: "FedRAMP PMO",
     sourceUrl: "https://www.fedramp.gov/",
     date: "Dec 2024",
     category: "compliance",
+    description: "Cloud service providers now have until March 2025 to complete transition to FedRAMP Rev 5 security controls baseline.",
   },
   {
     id: "3",
-    title: "CISA Zero Trust Maturity Model 2.0 Implementation Guide Released",
+    title: "CISA Zero Trust Maturity Model 2.0",
     source: "CISA",
     sourceUrl: "https://www.cisa.gov/zero-trust-maturity-model",
     date: "Nov 2024",
     category: "security",
+    description: "Updated implementation guide for federal agencies advancing their zero trust architecture adoption and maturity assessment.",
   },
   {
     id: "4",
-    title: "Executive Order 14110: Safe AI Development Standards Now Effective",
+    title: "Executive Order 14110: Safe AI Standards",
     source: "White House",
     sourceUrl: "https://www.whitehouse.gov/briefing-room/presidential-actions/",
     date: "Nov 2024",
     category: "policy",
+    description: "Comprehensive AI safety and security standards now effective for federal agencies and government contractors.",
   },
   {
     id: "5",
-    title: "CMMC 2.0 Final Rule Published - Phased Rollout Begins Q1 2025",
+    title: "CMMC 2.0 Final Rule Published",
     source: "DoD CIO",
     sourceUrl: "https://dodcio.defense.gov/CMMC/",
     date: "Oct 2024",
     category: "compliance",
+    description: "Cybersecurity Maturity Model Certification final rule establishes phased rollout beginning Q1 2025 for defense contractors.",
   },
   {
     id: "6",
-    title: "GSA MAS IT Category Refresh: New SINs for AI/ML Services",
+    title: "GSA MAS IT Category Refresh",
     source: "GSA",
     sourceUrl: "https://www.gsa.gov/technology/technology-purchasing-programs/mas-information-technology",
     date: "Oct 2024",
     category: "technology",
-  },
-  {
-    id: "7",
-    title: "HIPAA Security Rule Update: Enhanced Cybersecurity Requirements",
-    source: "HHS OCR",
-    sourceUrl: "https://www.hhs.gov/hipaa/for-professionals/security/index.html",
-    date: "Sep 2024",
-    category: "compliance",
-  },
-  {
-    id: "8",
-    title: "NIST SP 800-53 Rev 5.1: Updated Security Controls Catalog",
-    source: "NIST",
-    sourceUrl: "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
-    date: "Sep 2024",
-    category: "security",
+    description: "New Special Item Numbers (SINs) added for AI/ML services, expanding procurement pathways for emerging technologies.",
   },
 ];
 
+const categoryIcons = {
+  compliance: FileText,
+  security: Shield,
+  policy: Scale,
+  technology: Cpu,
+};
+
+const categoryColors = {
+  compliance: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  security: "bg-red-500/10 text-red-400 border-red-500/20",
+  policy: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+  technology: "bg-green-500/10 text-green-400 border-green-500/20",
+};
+
+const categoryLabels = {
+  compliance: "Compliance",
+  security: "Security",
+  policy: "Policy",
+  technology: "Technology",
+};
+
 export default function IndustryUpdates() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
-  // Auto-rotate through updates
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setActiveIndex((prev) => (prev + 1) % industryUpdates.length);
-        setIsAnimating(false);
-      }, 150);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [isPaused]);
+  const minSwipeDistance = 50;
 
-  const activeUpdate = industryUpdates[activeIndex];
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchEndX.current = null;
+  }, []);
 
-  const goToPrevious = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setActiveIndex((prev) => (prev - 1 + industryUpdates.length) % industryUpdates.length);
-      setIsAnimating(false);
-    }, 150);
-  };
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  }, []);
 
-  const goToNext = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setActiveIndex((prev) => (prev + 1) % industryUpdates.length);
-      setIsAnimating(false);
-    }, 150);
+  const handleTouchEnd = useCallback(() => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe && currentIndex < industryUpdates.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+    }
+    if (isRightSwipe && currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  }, [currentIndex]);
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
   };
 
   return (
-    <section 
-      className="relative bg-slate-950 border-y border-slate-800/50"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950" />
+    <section className="relative py-16 md:py-20 lg:py-24 bg-slate-950 overflow-hidden">
+      {/* Subtle gradient overlay for depth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
       
-      <div className="container relative">
-        <div className="flex items-center">
-          {/* Bold Label Section */}
-          <div className="hidden lg:flex items-center gap-3 py-8 pr-8 border-r border-slate-800/70">
-            <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-orange-500/10 border border-orange-500/20">
-              <TrendingUp className="w-6 h-6 text-orange-400" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold text-orange-400 uppercase tracking-widest">Latest</span>
-              <span className="text-base font-bold text-white">Industry Updates</span>
-            </div>
-          </div>
-
-          {/* Mobile Label */}
-          <div className="lg:hidden flex items-center gap-2 py-6 pr-4 border-r border-slate-800/70">
-            <TrendingUp className="w-5 h-5 text-orange-400" />
-            <span className="text-sm font-bold text-white uppercase tracking-wider">Updates</span>
-          </div>
-
-          {/* Main Content Area */}
-          <div className="flex-1 flex items-center gap-4 py-8 px-6 lg:px-8">
-            {/* Navigation Arrows */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={goToPrevious}
-                className="flex items-center justify-center w-10 h-10 rounded-md bg-slate-800/50 hover:bg-slate-700/70 border border-slate-700/50 hover:border-slate-600 transition-all duration-200"
-                aria-label="Previous update"
-              >
-                <ChevronLeft className="w-5 h-5 text-slate-400" />
-              </button>
-              <button
-                onClick={goToNext}
-                className="flex items-center justify-center w-10 h-10 rounded-md bg-slate-800/50 hover:bg-slate-700/70 border border-slate-700/50 hover:border-slate-600 transition-all duration-200"
-                aria-label="Next update"
-              >
-                <ChevronRight className="w-5 h-5 text-slate-400" />
-              </button>
-            </div>
-
-            {/* Ticker Content */}
-            <div className="flex-1 min-w-0 overflow-hidden">
-              <a
-                href={activeUpdate.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  "group flex items-center gap-4 transition-all duration-150",
-                  isAnimating ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0"
-                )}
-              >
-                {/* Title */}
-                <span className="flex-1 text-base md:text-lg lg:text-xl text-slate-200 font-medium leading-tight group-hover:text-white transition-colors truncate md:whitespace-normal md:line-clamp-1">
-                  {activeUpdate.title}
-                </span>
-
-                {/* External Link Icon */}
-                <ExternalLink className="w-5 h-5 text-slate-500 group-hover:text-orange-400 transition-colors shrink-0" />
-              </a>
-            </div>
-
-            {/* Source & Date */}
-            <div className="hidden xl:flex items-center gap-4 pl-4 border-l border-slate-800/70">
-              <div className="flex flex-col items-end">
-                <span className="text-xs text-slate-500 uppercase tracking-wider">Source</span>
-                <span className="text-base text-slate-300 font-medium whitespace-nowrap">{activeUpdate.source}</span>
+      <div className="container relative z-10">
+        {/* Header */}
+        <motion.div 
+          className="grid lg:grid-cols-2 gap-8 mb-10 md:mb-12 lg:mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <div>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/20">
+                <TrendingUp className="w-5 h-5 text-orange-400" />
               </div>
-              <div className="flex flex-col items-end">
-                <span className="text-xs text-slate-500 uppercase tracking-wider">Date</span>
-                <span className="text-base text-slate-300 font-medium">{activeUpdate.date}</span>
-              </div>
+              <p className="text-[#E07020] font-semibold uppercase tracking-wider text-sm">Industry Updates</p>
             </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              Latest Government Tech News
+            </h2>
           </div>
+          <div className="flex flex-col justify-end">
+            <p className="text-lg text-white/80">
+              Stay informed on the latest compliance requirements, security updates, and policy changes affecting federal technology programs.
+            </p>
+          </div>
+        </motion.div>
 
-          {/* Progress Indicator */}
-          <div className="hidden md:flex items-center gap-3 py-8 pl-6 border-l border-slate-800/70">
-            <div className="flex items-center gap-1.5">
-              {industryUpdates.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setIsAnimating(true);
-                    setTimeout(() => {
-                      setActiveIndex(index);
-                      setIsAnimating(false);
-                    }, 150);
-                  }}
-                  className={cn(
-                    "w-2.5 h-2.5 rounded-full transition-all duration-300",
-                    index === activeIndex 
-                      ? "bg-orange-400 w-8" 
-                      : "bg-slate-700 hover:bg-slate-600"
-                  )}
-                  aria-label={`Go to update ${index + 1}`}
-                />
+        {/* Mobile Swipeable Carousel */}
+        <div className="md:hidden mb-10">
+          <div
+            ref={containerRef}
+            className="relative overflow-hidden touch-pan-y"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div
+              className="flex transition-transform duration-300 ease-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {industryUpdates.map((update) => (
+                <div key={update.id} className="w-full flex-shrink-0 px-2">
+                  <UpdateCard update={update} />
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Counter - Mobile */}
-          <div className="md:hidden flex items-center gap-1 py-6 pl-4 border-l border-slate-800/70 text-base text-slate-500 tabular-nums">
-            <span className="text-white font-bold">{activeIndex + 1}</span>
-            <span>/</span>
-            <span>{industryUpdates.length}</span>
+          {/* Mobile Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {industryUpdates.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={cn(
+                  "w-2 h-2 rounded-full transition-all duration-300",
+                  index === currentIndex 
+                    ? "bg-[#E07020] w-6" 
+                    : "bg-white/30 hover:bg-white/50"
+                )}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
+
+          {/* Swipe hint */}
+          <p className="text-center text-white/50 text-sm mt-4 flex items-center justify-center gap-2">
+            <ChevronLeft className="h-4 w-4" />
+            Swipe to explore
+            <ChevronRight className="h-4 w-4" />
+          </p>
         </div>
+
+        {/* Desktop Grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+          className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {industryUpdates.map((update) => (
+            <motion.div
+              key={update.id}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.25, 0.1, 0.25, 1],
+                  },
+                },
+              }}
+            >
+              <UpdateCard update={update} />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
+  );
+}
+
+// Update Card Component
+function UpdateCard({ update }: { update: UpdateItem }) {
+  const CategoryIcon = categoryIcons[update.category];
+  
+  return (
+    <a
+      href={update.sourceUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block h-full"
+    >
+      <Card 
+        className="h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020]/40 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col p-0 hover:-translate-y-1"
+      >
+        {/* Orange accent bar at top */}
+        <div className="h-1 bg-gradient-to-r from-[#E07020] to-[#F08030]"></div>
+
+        {/* Content */}
+        <div className="p-6 flex flex-col flex-grow">
+          {/* Category Badge and Date */}
+          <div className="flex items-center justify-between mb-4">
+            <span className={cn(
+              "inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full border",
+              categoryColors[update.category]
+            )}>
+              <CategoryIcon className="w-3.5 h-3.5" />
+              {categoryLabels[update.category]}
+            </span>
+            <span className="text-xs text-white/50 font-medium">{update.date}</span>
+          </div>
+
+          {/* Title */}
+          <h3 className="text-lg font-bold text-white mb-3 line-clamp-2 group-hover:text-[#E07020] transition-colors">
+            {update.title}
+          </h3>
+
+          {/* Description */}
+          <p className="text-white/70 text-sm mb-4 line-clamp-3 flex-grow">
+            {update.description}
+          </p>
+
+          {/* Source and Link */}
+          <div className="flex items-center justify-between pt-4 border-t border-white/10">
+            <span className="text-xs text-white/50">
+              Source: <span className="text-white/70">{update.source}</span>
+            </span>
+            <span className="inline-flex items-center gap-1 text-[#E07020] text-sm font-medium group-hover:gap-2 transition-all">
+              Read More
+              <ExternalLink className="w-3.5 h-3.5" />
+            </span>
+          </div>
+        </div>
+      </Card>
+    </a>
   );
 }
