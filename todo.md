@@ -3789,3 +3789,7 @@
 - [x] Search and download appropriate images for each category
 - [x] Keep white background for section
 
+
+## Phase 103: Update Federal Government Section Image
+- [x] Update Federal Government section image with Capitol building photo
+

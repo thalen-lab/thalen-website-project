@@ -460,7 +460,7 @@ export default function Home() {
               {
                 title: 'Federal Government',
                 description: 'Supporting federal agencies with FedRAMP-authorized solutions, cleared personnel, and mission-critical technology implementations.',
-                image: '/images/customers/federal-government.jpg',
+                image: '/images/federal-capitol.png',
                 link: '/industries/federal'
               },
               {
