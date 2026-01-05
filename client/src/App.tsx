@@ -131,6 +131,12 @@ import MLAIService from "./pages/services/data-analytics/MLAI";
 import DataEngineeringService from "./pages/services/data-analytics/Engineering";
 import DataAssessment from "./pages/services/data-analytics/Assessment";
 
+// Sector Pages
+import FederalGovernmentSector from "./pages/sectors/FederalGovernment";
+import StateLocalGovernmentSector from "./pages/sectors/StateLocalGovernment";
+import RegulatedIndustriesSector from "./pages/sectors/RegulatedIndustries";
+import FederalContractorsSector from "./pages/sectors/FederalContractors";
+
 // Industry Pages
 import FederalIndustry from "./pages/industries/FederalGovernment";
 import HealthcareIndustry from "./pages/industries/Healthcare";
@@ -290,6 +296,12 @@ function Router() {
       <Route path={"/services/digital-transformation/change-management"} component={ChangeManagement} />
       <Route path={"/services/digital-transformation/training-enablement"} component={TrainingEnablement} />
       <Route path={"/services/digital-transformation/success-metrics"} component={SuccessMetrics} />
+      
+      {/* Sector Routes */}
+      <Route path="/sectors/federal-government" component={FederalGovernmentSector} />
+      <Route path="/sectors/state-local-government" component={StateLocalGovernmentSector} />
+      <Route path="/sectors/regulated-industries" component={RegulatedIndustriesSector} />
+      <Route path="/sectors/federal-contractors" component={FederalContractorsSector} />
       
       {/* Industry Routes */}
       <Route path={"/industries/federal-government"} component={FederalIndustry} />

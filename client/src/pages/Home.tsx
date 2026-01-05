@@ -531,28 +531,28 @@ export default function Home() {
                 title: 'Federal Government',
                 description: 'Supporting federal agencies with FedRAMP-authorized solutions, cleared personnel, and mission-critical technology implementations.',
                 image: '/federal-handshake.png',
-                link: '/industries/federal',
+                link: '/sectors/federal-government',
                 number: '01'
               },
               {
                 title: 'State & Local Government',
                 description: 'Empowering state and municipal agencies with scalable, compliant solutions that modernize public services and citizen engagement.',
                 image: '/government-contracts.jpg',
-                link: '/industries/state-local',
+                link: '/sectors/state-local-government',
                 number: '02'
               },
               {
                 title: 'Regulated Industries',
                 description: 'Serving healthcare, financial services, and energy sectors with solutions that meet stringent regulatory and compliance requirements.',
                 image: '/manufacturing.webp',
-                link: '/industries/regulated',
+                link: '/sectors/regulated-industries',
                 number: '03'
               },
               {
                 title: 'Federal Contractors',
                 description: 'Guiding defense contractors through CMMC certification and compliance, ensuring readiness for DoD contract requirements.',
                 image: '/defense.webp',
-                link: '/services/cybersecurity',
+                link: '/sectors/federal-contractors',
                 number: '04'
               }
             ].map((category, index) => (

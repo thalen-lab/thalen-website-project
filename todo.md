@@ -4147,3 +4147,21 @@
 - [x] Create three featured article cards with thumbnails, titles, categories, and read-more links
 - [x] Match navy/orange design language of the site
 - [x] Link cards to existing insight article pages
+
+## Phase 60: Create Dedicated Sector Pages
+- [ ] Create Federal Government sector page (/sectors/federal-government)
+- [ ] Create State & Local Government sector page (/sectors/state-local-government)
+- [ ] Create Regulated Industries sector page (/sectors/regulated-industries)
+- [ ] Create Federal Contractors sector page (/sectors/federal-contractors)
+- [ ] Add routes for all sector pages in App.tsx
+- [ ] Update "Learn More" CTAs on homepage sector cards to link to new pages
+- [ ] Test all sector pages and navigation
+
+## Phase 60: Create Dedicated Sector Pages
+- [x] Create Federal Government sector page with editorial content and client showcase
+- [x] Create State & Local Government sector page with editorial content and client showcase
+- [x] Create Regulated Industries sector page with editorial content and client showcase
+- [x] Create Federal Contractors sector page with editorial content and client showcase
+- [x] Add routes for all sector pages in App.tsx
+- [x] Update sector card links on homepage to point to new pages
+- [x] Test all sector pages and navigation
