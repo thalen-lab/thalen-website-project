@@ -9,6 +9,7 @@ import SmallBusinessCertifications from '@/components/SmallBusinessCertification
 import { ImageWithLoader } from '@/components/ImageWithLoader';
 import HeroCarousel from '@/components/HeroCarousel';
 import IndustryUpdates from '@/components/IndustryUpdates';
+import InsightsSection from '@/components/InsightsSection';
 import WhoWeAreSection from '@/components/WhoWeAreSection';
 import { 
   ArrowRight, 
@@ -609,6 +610,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Insights Section */}
+      <InsightsSection />
 
       {/* Industry Updates Section */}
       <IndustryUpdates />

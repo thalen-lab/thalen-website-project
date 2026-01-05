@@ -4140,3 +4140,10 @@
 - [x] Optimize hero images to WebP format for faster load times
 - [x] Implement floating back-to-top button for longer pages
 - [x] Test all improvements across pages
+
+
+## Phase 150: Add Insights Section to Homepage
+- [x] Add Insights section between "Who We Serve" and "Industry Updates" sections
+- [x] Create three featured article cards with thumbnails, titles, categories, and read-more links
+- [x] Match navy/orange design language of the site
+- [x] Link cards to existing insight article pages
