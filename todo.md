@@ -4024,3 +4024,7 @@
 ## Phase 92: Add Hero Images to Service Subpages
 - [x] Add hero image to Cybersecurity & Compliance landing page
 - [x] Add hero images to other service subpages missing them
+
+## Phase 144: Add Professional Hero Images to Cybersecurity Pages
+- [x] Add hero image to Cybersecurity & Compliance card on Core Capabilities page
+- [x] Add hero image to Cybersecurity service page hero section- [x] Add hero images to CMMC & FedRAMP Compliance subpage- [x] Add hero images to Zero Trust Architecture subpage- [x] Add hero images to SOC Setup subpage- [x] Add hero images to IAM subpage

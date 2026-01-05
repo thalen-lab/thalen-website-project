@@ -69,7 +69,13 @@ export default function SecurityOperationsCenter() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 text-white overflow-hidden bg-[url('/images/patterns/pattern-1.png')] bg-no-repeat bg-cover bg-center">
+      <section className="relative py-20 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/cybersecurity/soc-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container relative">
           <div className="max-w-4xl">

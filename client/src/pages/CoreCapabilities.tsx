@@ -31,7 +31,8 @@ export default function CoreCapabilities() {
       title: 'Cybersecurity & Compliance',
       description: 'Strengthen your existing security posture or implement FedRAMP security platforms when compliance mandates it. Includes gap analysis, CMMC/FISMA compliance, zero-trust architecture, and ATO documentation.',
       href: '/services/cybersecurity',
-      features: ['Zero-Trust Architecture', 'CMMC Compliance', 'Gap Analysis', 'Security Assessments']
+      features: ['Zero-Trust Architecture', 'CMMC Compliance', 'Gap Analysis', 'Security Assessments'],
+      image: '/images/cybersecurity/cybersecurity-hero.jpg'
     },
     {
       title: 'Application Development & Integration',
@@ -179,7 +180,16 @@ export default function CoreCapabilities() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link href={service.href} className="block h-full group">
-                  <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                  <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    {service.image && (
+                      <div className="h-48 overflow-hidden">
+                        <img 
+                          src={service.image} 
+                          alt={service.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    )}
                     <CardContent className="p-8">
                       <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3 group-hover:text-[oklch(0.65_0.18_55)] transition-colors">
                         {service.title}

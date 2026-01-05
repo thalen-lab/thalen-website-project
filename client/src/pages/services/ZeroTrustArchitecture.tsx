@@ -78,7 +78,12 @@ export default function ZeroTrustArchitecture() {
 
       {/* Hero Section */}
       <section className="relative py-20 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url(/img/pattern-dark.svg)] bg-center [mask-image:linear-gradient(to_bottom,white_20%,transparent_100%)]"></div>
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/cybersecurity/zero-trust-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container relative">
           <div className="max-w-4xl">

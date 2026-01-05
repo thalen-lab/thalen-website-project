@@ -1,0 +1,27 @@
+# Hero Images Implementation Findings
+
+## Core Capabilities Page
+- The Cybersecurity & Compliance card does NOT show an image in the current view
+- Looking at the screenshot, the cards appear to be text-only without images
+- Need to investigate why the image is not displaying
+
+## Possible Issues
+1. The image path may be incorrect
+2. The conditional rendering may not be working
+3. The TypeScript type may not include the optional image property
+
+## Files Modified
+- /home/ubuntu/nexdyne-website/client/src/pages/CoreCapabilities.tsx - Added image property to Cybersecurity card and conditional image rendering
+- /home/ubuntu/nexdyne-website/client/src/pages/services/Cybersecurity.tsx - Updated hero image path
+- /home/ubuntu/nexdyne-website/client/src/pages/services/SecurityAssessment.tsx - Added hero image
+- /home/ubuntu/nexdyne-website/client/src/pages/services/ZeroTrustArchitecture.tsx - Added hero image
+- /home/ubuntu/nexdyne-website/client/src/pages/services/SecurityOperationsCenter.tsx - Added hero image
+- /home/ubuntu/nexdyne-website/client/src/pages/services/IdentityAccessManagement.tsx - Updated hero image path
+
+## Images Copied
+- /images/cybersecurity/cybersecurity-hero.jpg
+- /images/cybersecurity/soc-hero.jpg
+- /images/cybersecurity/soc-monitoring.jpg
+- /images/cybersecurity/iam-hero.jpg
+- /images/cybersecurity/zero-trust-hero.jpg
+- /images/cybersecurity/cmmc-hero.jpg
