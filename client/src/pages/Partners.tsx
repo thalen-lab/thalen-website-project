@@ -12,7 +12,7 @@ export default function Partners() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-[oklch(0.18_0.06_250)] py-24 text-white">
+      <section className="relative bg-[#0A2540] py-24 text-white">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{ backgroundImage: "url('/assets/patterns/pattern-1.svg')" }}

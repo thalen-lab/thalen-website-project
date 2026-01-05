@@ -46,7 +46,7 @@ export function CaseStudyCardSkeleton({ className }: { className?: string }) {
       {/* Image with overlay */}
       <div className="relative aspect-[4/3]">
         <Skeleton className="absolute inset-0" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-[#0A2540]/60 to-transparent" />
       </div>
       
       {/* Content overlay */}

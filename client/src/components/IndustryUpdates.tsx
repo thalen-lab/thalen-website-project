@@ -119,9 +119,9 @@ export default function IndustryUpdates() {
   };
 
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-slate-950 overflow-hidden">
+    <section className="relative py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
       {/* Subtle gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0A2540] to-[#0A2540]"></div>
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
       

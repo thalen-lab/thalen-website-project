@@ -1,0 +1,30 @@
+CSS Audit Findings - NexDyne Website
+=====================================
+
+Issues Identified from User Screenshots:
+
+1. Industry Updates Section (Home.tsx)
+   - Component: IndustryUpdates.tsx
+   - Current: bg-slate-950 (dark gray, almost black)
+   - Expected: Should have navy blue (#0A2540) background to match site theme
+   - Status: NEEDS FIX
+
+2. Data Analytics Page Hero Section
+   - File: services/DataAnalytics.tsx
+   - Issue: Hero section appears to have lost background image/gradient
+   - Current screenshot shows it's actually working now
+   - Status: VERIFIED WORKING
+
+3. Core Capabilities Page
+   - File: CoreCapabilities.tsx
+   - Status: VERIFIED WORKING (from screenshot)
+
+Pages to Audit and Fix:
+- All service pages and subpages (147 total TSX files)
+- Focus on hero sections with missing backgrounds
+- Focus on sections using wrong background colors
+
+Key CSS Patterns to Fix:
+1. bg-slate-950 -> bg-[#0A2540] for navy sections
+2. Ensure all hero sections have proper gradient overlays
+3. Verify background images are loading correctly
