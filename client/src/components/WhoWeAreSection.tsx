@@ -1,20 +1,20 @@
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
-import { ArrowRight, Target, Shield, Cpu, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function WhoWeAreSection() {
   const highlights = [
-    { icon: Target, text: 'Mission-Focused Solutions' },
-    { icon: Shield, text: 'Security-First Architecture' },
-    { icon: Cpu, text: 'Advanced AI & Analytics' },
-    { icon: Users, text: 'Cleared Personnel' }
+    'Mission-Focused Solutions',
+    'Security-First Architecture',
+    'Advanced AI & Analytics',
+    'Cleared Personnel'
   ];
 
   return (
     <section className="relative bg-white overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] lg:min-h-[700px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[550px] lg:min-h-[600px]">
         {/* Left Column - Text Content */}
-        <div className="flex items-center py-16 md:py-20 lg:py-24 px-6 md:px-12 lg:px-16 xl:px-24 order-2 lg:order-1">
+        <div className="flex items-center py-12 md:py-16 lg:py-20 px-6 md:px-10 lg:px-14 xl:px-20 order-2 lg:order-1">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -23,24 +23,23 @@ export default function WhoWeAreSection() {
             className="max-w-xl"
           >
             {/* Section Label */}
-            <div className="inline-flex items-center gap-2 mb-6">
-              <div className="w-12 h-[2px] bg-[#E07020]"></div>
-              <span className="text-[#E07020] font-semibold text-sm uppercase tracking-[0.2em]">Who We Are</span>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <div className="w-10 h-[2px] bg-[#E07020]"></div>
+              <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Who We Are</span>
             </div>
 
-            {/* Section Title */}
-            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#0A2540] mb-4 leading-[1.1] tracking-tight">
-              NexDyne<br />
-              <span className="text-[#E07020]">Overview</span>
+            {/* Section Title - No orange on main title */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2540] mb-3 leading-[1.1] tracking-tight">
+              NexDyne Overview
             </h2>
 
             {/* Tagline */}
-            <p className="text-[#0A2540] text-xl md:text-2xl font-semibold mb-6 border-l-4 border-[#E07020] pl-4">
+            <p className="text-[#0A2540] text-lg md:text-xl font-semibold mb-4 border-l-4 border-[#E07020] pl-3">
               Intelligence, Delivered
             </p>
 
-            {/* Description */}
-            <div className="space-y-4 text-slate-600 text-base md:text-lg leading-relaxed mb-8">
+            {/* Description - Reduced spacing */}
+            <div className="space-y-3 text-slate-600 text-sm md:text-base leading-relaxed mb-5">
               <p>
                 <strong className="text-[#0A2540]">NexDyne Technology, Inc.</strong> provides a broad spectrum of information technology services and cloud-based artificial intelligence and advanced analytics solutions to the <strong className="text-[#0A2540]">U.S. Federal Government</strong>.
               </p>
@@ -49,30 +48,29 @@ export default function WhoWeAreSection() {
               </p>
             </div>
 
-            {/* Highlight Pills */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              {highlights.map((item, index) => (
+            {/* Highlight Pills - No icons */}
+            <div className="flex flex-wrap gap-2 mb-5">
+              {highlights.map((text, index) => (
                 <motion.div
-                  key={item.text}
+                  key={text}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 * index }}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0A2540]/5 border border-[#0A2540]/10 text-sm font-medium text-[#0A2540]"
+                  className="inline-flex items-center px-3 py-1.5 rounded-full bg-[#0A2540]/5 border border-[#0A2540]/10 text-xs font-medium text-[#0A2540]"
                 >
-                  <item.icon className="w-4 h-4 text-[#E07020]" />
-                  {item.text}
+                  {text}
                 </motion.div>
               ))}
             </div>
 
-            {/* Read More Link */}
+            {/* Read More Link - Not orange CTA button, just link */}
             <Link 
               href="/about" 
-              className="group inline-flex items-center gap-3 text-[#E07020] hover:text-[#C05010] font-bold text-base uppercase tracking-wider transition-colors"
+              className="group inline-flex items-center gap-2 text-[#0A2540] hover:text-[#E07020] font-semibold text-sm uppercase tracking-wider transition-colors"
             >
               <span>Read More about NexDyne</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
         </div>
@@ -83,7 +81,7 @@ export default function WhoWeAreSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative h-[400px] sm:h-[450px] lg:h-full order-1 lg:order-2"
+          className="relative h-[350px] sm:h-[400px] lg:h-full order-1 lg:order-2"
         >
           <img
             src="/about-handshake.jpg"
@@ -99,25 +97,25 @@ export default function WhoWeAreSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="absolute bottom-6 left-6 right-6 lg:left-auto lg:right-6 lg:bottom-8 lg:w-72"
+            className="absolute bottom-4 left-4 right-4 lg:left-auto lg:right-4 lg:bottom-6 lg:w-64"
           >
-            <div className="bg-[#0A2540]/95 backdrop-blur-sm rounded-xl p-5 border border-white/10">
-              <div className="grid grid-cols-2 gap-4">
+            <div className="bg-[#0A2540]/95 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+              <div className="grid grid-cols-2 gap-3">
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white">15+</div>
-                  <div className="text-xs text-white/70 uppercase tracking-wider">Years Experience</div>
+                  <div className="text-xl md:text-2xl font-bold text-white">15+</div>
+                  <div className="text-[10px] text-white/70 uppercase tracking-wider">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-[#E07020]">TS/SCI</div>
-                  <div className="text-xs text-white/70 uppercase tracking-wider">Cleared Staff</div>
+                  <div className="text-xl md:text-2xl font-bold text-white">TS/SCI</div>
+                  <div className="text-[10px] text-white/70 uppercase tracking-wider">Cleared Staff</div>
                 </div>
               </div>
             </div>
           </motion.div>
 
           {/* Decorative corner accent */}
-          <div className="absolute top-0 right-0 w-32 h-32 overflow-hidden">
-            <div className="absolute top-4 right-4 w-20 h-20 border-t-4 border-r-4 border-[#E07020]/40"></div>
+          <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden">
+            <div className="absolute top-3 right-3 w-16 h-16 border-t-3 border-r-3 border-[#E07020]/40"></div>
           </div>
         </motion.div>
       </div>

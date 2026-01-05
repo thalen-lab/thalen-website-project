@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from "react";
-import { ExternalLink, ChevronLeft, ChevronRight, TrendingUp, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils";
@@ -126,40 +126,33 @@ export default function IndustryUpdates() {
   };
 
   return (
-    <section className="relative py-16 md:py-20 lg:py-28 bg-[#0A2540] overflow-hidden">
+    <section className="relative py-12 sm:py-14 md:py-16 lg:py-20 bg-[#0A2540] overflow-hidden">
       {/* Subtle gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0A2540] to-[#12344D]"></div>
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
-      
-      {/* Decorative corner elements */}
-      <div className="absolute top-0 left-0 w-40 h-40 border-l-4 border-t-4 border-[#E07020]/20"></div>
-      <div className="absolute bottom-0 right-0 w-40 h-40 border-r-4 border-b-4 border-[#E07020]/20"></div>
       
       <div className="container relative z-10">
-        {/* Header */}
+        {/* Header - Reduced spacing */}
         <motion.div 
-          className="mb-10 md:mb-12 lg:mb-16"
+          className="mb-6 md:mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
             <div>
               {/* Section Label */}
-              <div className="inline-flex items-center gap-3 mb-6">
-                <div className="w-12 h-[2px] bg-[#E07020]"></div>
-                <span className="text-[#E07020] font-semibold text-sm uppercase tracking-[0.2em]">Industry Updates</span>
+              <div className="inline-flex items-center gap-2 mb-3">
+                <div className="w-10 h-[2px] bg-[#E07020]"></div>
+                <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Industry Updates</span>
               </div>
               
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1]">
-                Latest Government<br />
-                <span className="text-[#E07020]">Tech News</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1]">
+                Latest Government Tech News
               </h2>
             </div>
-            <div className="max-w-xl">
-              <p className="text-lg md:text-xl text-white/80 leading-relaxed border-l-4 border-[#E07020]/50 pl-4">
+            <div className="max-w-lg">
+              <p className="text-sm md:text-base text-white/80 leading-relaxed border-l-3 border-[#E07020]/50 pl-3">
                 Stay informed on the latest <strong className="text-white">compliance requirements</strong>, security updates, and policy changes affecting federal technology programs.
               </p>
             </div>
@@ -167,7 +160,7 @@ export default function IndustryUpdates() {
         </motion.div>
 
         {/* Mobile Swipeable Carousel */}
-        <div className="md:hidden mb-10">
+        <div className="md:hidden mb-6">
           <div
             ref={containerRef}
             className="relative overflow-hidden touch-pan-y"
@@ -180,7 +173,7 @@ export default function IndustryUpdates() {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {industryUpdates.map((update) => (
-                <div key={update.id} className="w-full flex-shrink-0 px-2">
+                <div key={update.id} className="w-full flex-shrink-0 px-1">
                   <UpdateCard update={update} />
                 </div>
               ))}
@@ -188,7 +181,7 @@ export default function IndustryUpdates() {
           </div>
 
           {/* Mobile Navigation Dots */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-4">
             {industryUpdates.map((_, index) => (
               <button
                 key={index}
@@ -196,7 +189,7 @@ export default function IndustryUpdates() {
                 className={cn(
                   "w-2 h-2 rounded-full transition-all duration-300",
                   index === currentIndex 
-                    ? "bg-[#E07020] w-6" 
+                    ? "bg-[#E07020] w-5" 
                     : "bg-white/30 hover:bg-white/50"
                 )}
                 aria-label={`Go to slide ${index + 1}`}
@@ -205,14 +198,14 @@ export default function IndustryUpdates() {
           </div>
 
           {/* Swipe hint */}
-          <p className="text-center text-white/50 text-sm mt-4 flex items-center justify-center gap-2">
-            <ChevronLeft className="h-4 w-4" />
+          <p className="text-center text-white/50 text-xs mt-3 flex items-center justify-center gap-1">
+            <ChevronLeft className="h-3 w-3" />
             Swipe to explore
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-3 w-3" />
           </p>
         </div>
 
-        {/* Desktop Grid */}
+        {/* Desktop Grid - Reduced gap */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -225,7 +218,7 @@ export default function IndustryUpdates() {
               },
             },
           }}
-          className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           {industryUpdates.map((update, index) => (
             <motion.div
@@ -251,7 +244,7 @@ export default function IndustryUpdates() {
   );
 }
 
-// Update Card Component
+// Update Card Component - Refined design
 function UpdateCard({ update, index = 0 }: { update: UpdateItem; index?: number }) {
   return (
     <a
@@ -261,42 +254,39 @@ function UpdateCard({ update, index = 0 }: { update: UpdateItem; index?: number 
       className="block h-full"
     >
       <Card 
-        className="h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border-2 border-white/10 hover:border-[#E07020] rounded-xl shadow-xl hover:shadow-[0_0_40px_rgba(224,112,32,0.2)] transition-all duration-300 overflow-hidden group flex flex-col p-0 hover:-translate-y-1"
+        className="h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] rounded-lg transition-all duration-300 overflow-hidden group flex flex-col p-0"
       >
-        {/* Top accent bar */}
-        <div className="h-1 bg-gradient-to-r from-[#E07020] to-[#F08030]"></div>
-        
-        {/* Content */}
-        <div className="p-6 flex flex-col flex-grow">
+        {/* Content - Reduced padding */}
+        <div className="p-4 flex flex-col flex-grow">
           {/* Category Label and Date */}
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
-              <div className={cn("w-2 h-2 rounded-full", categoryColors[update.category])}></div>
+              <div className={cn("w-1.5 h-1.5 rounded-full", categoryColors[update.category])}></div>
               <span className="text-xs text-white font-semibold uppercase tracking-wider">
                 {categoryLabels[update.category]}
               </span>
             </div>
-            <span className="text-xs text-[#E07020] font-bold">{update.date}</span>
+            <span className="text-xs text-white/60 font-medium">{update.date}</span>
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-[#E07020] transition-colors">
+          <h3 className="text-base font-bold text-white mb-2 line-clamp-2 group-hover:text-[#E07020] transition-colors">
             {update.title}
           </h3>
 
           {/* Description */}
-          <p className="text-white/70 text-base mb-4 line-clamp-3 flex-grow leading-relaxed">
+          <p className="text-white/70 text-xs mb-3 line-clamp-3 flex-grow leading-relaxed">
             {update.description}
           </p>
 
           {/* Source and Link */}
-          <div className="flex items-center justify-between pt-4 border-t border-white/10">
+          <div className="flex items-center justify-between pt-3 border-t border-white/10">
             <span className="text-xs text-white/50">
-              Source: <span className="text-white/80 font-medium">{update.source}</span>
+              <span className="text-white/70 font-medium">{update.source}</span>
             </span>
-            <span className="inline-flex items-center gap-2 text-[#E07020] text-sm font-bold uppercase tracking-wider group-hover:gap-3 transition-all">
+            <span className="inline-flex items-center gap-1 text-white/70 text-xs font-semibold uppercase tracking-wider group-hover:text-[#E07020] transition-colors">
               Read
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3 h-3" />
             </span>
           </div>
         </div>

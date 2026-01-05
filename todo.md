@@ -4119,3 +4119,11 @@
 - [x] Enhance Homepage Partners/Clients section with bold styling
 - [x] Enhance Homepage CTA/Contact section with bold styling
 - [ ] Ensure visual cohesion across all homepage sections
+
+## Phase 107: Homepage Design Refinements
+- [ ] Fix Overview section - remove icons from pills, no orange on title, reduce spacing
+- [ ] Fix Mission-Focused Solutions - no orange CTA, remove card icons, orange border only on hover
+- [ ] Fix Our Approach section - no orange CTA, remove card icons, orange border only on hover
+- [ ] Fix Compliance section - remove icons, orange border only on hover
+- [ ] Fix Who We Serve section - orange border only on hover
+- [ ] Fix Industry Updates section - reduce spacing, orange border only on hover
