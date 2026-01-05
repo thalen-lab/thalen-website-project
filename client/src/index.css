@@ -992,3 +992,51 @@ html {
     /* Browser supports native lazy loading */
   }
 }
+
+/* ===== SKELETON SHIMMER ANIMATION ===== */
+
+/* Shimmer effect for skeleton loaders */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Enhanced skeleton pulse with gradient */
+.skeleton-pulse {
+  background: linear-gradient(
+    90deg,
+    oklch(0.90 0.01 250) 0%,
+    oklch(0.95 0.005 250) 50%,
+    oklch(0.90 0.01 250) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes skeletonPulse {
+  0%, 100% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: -200% 0;
+  }
+}
+
+/* Dark mode skeleton */
+.dark .skeleton-pulse {
+  background: linear-gradient(
+    90deg,
+    oklch(0.25 0.01 250) 0%,
+    oklch(0.30 0.005 250) 50%,
+    oklch(0.25 0.01 250) 100%
+  );
+  background-size: 200% 100%;
+}

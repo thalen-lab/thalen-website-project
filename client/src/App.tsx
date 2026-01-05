@@ -8,6 +8,7 @@ import GovernmentChat from "./components/GovernmentChat";
 import LiveChat from "./components/LiveChat";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
 import { OfflineIndicator } from "./components/OfflineIndicator";
+import BackToTop from "./components/BackToTop";
 import { NotificationBanner } from "./components/NotificationBanner";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -443,6 +444,7 @@ function App() {
           <GovernmentChat />
           <NotificationBanner />
           <OfflineIndicator position="bottom" />
+          <BackToTop threshold={400} />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

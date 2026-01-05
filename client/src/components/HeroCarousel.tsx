@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface CarouselSlide {
   id: number;
   image: string;
+  imageWebp: string;
   title: string;
   subtitle: string;
 }
@@ -11,44 +13,84 @@ const slides: CarouselSlide[] = [
   {
     id: 1,
     image: "/capitol-building.png",
+    imageWebp: "/capitol-building.webp",
     title: "Powering Government Mission Success",
     subtitle: "For 25 years, we have partnered with federal, state, and local agencies to modernize critical systems, secure sensitive data, and deliver superior citizen services.",
   },
   {
     id: 2,
     image: "/hero-fedramp-balance.png",
+    imageWebp: "/hero-fedramp-balance.webp",
     title: "Mission-First, Compliance-Assured",
     subtitle: "Accelerate your path to FedRAMP authorization with our battle-tested methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months.",
   },
   {
     id: 3,
     image: "/hero-defense-cyber.png",
+    imageWebp: "/hero-defense-cyber.webp",
     title: "Defending the Nation's Digital Infrastructure",
     subtitle: "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements.",
   },
   {
     id: 4,
     image: "/images/hero-cloud-migration.png",
+    imageWebp: "/images/hero-cloud-migration.webp",
     title: "Secure Cloud Migration for Government",
     subtitle: "Modernize your infrastructure with secure migration to AWS GovCloud, Azure Government, or Google Cloud for Government with 99.99% uptime.",
   },
   {
     id: 5,
     image: "/hero-buildings.png",
+    imageWebp: "/hero-buildings.webp",
     title: "Government-Grade Solutions for Regulated Industries",
     subtitle: "We apply the same rigorous standards of security and compliance demanded by our government partners to solve challenges for regulated industries.",
   },
   {
     id: 6,
     image: "/hero-infrastructure.png",
+    imageWebp: "/hero-infrastructure.webp",
     title: "Protecting Critical Infrastructure",
     subtitle: "Safeguarding and modernizing the nation's critical infrastructure with enterprise-grade security, resilience, and compliance frameworks.",
   },
 ];
 
+// Check WebP support
+function supportsWebP(): boolean {
+  if (typeof window === 'undefined') return false;
+  const canvas = document.createElement('canvas');
+  if (canvas.getContext && canvas.getContext('2d')) {
+    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  }
+  return false;
+}
+
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
+  const [webpSupported, setWebpSupported] = useState(true);
 
+  // Detect WebP support on mount
+  useEffect(() => {
+    setWebpSupported(supportsWebP());
+  }, []);
+
+  // Handle image load
+  const handleImageLoad = useCallback((slideId: number) => {
+    setLoadedImages(prev => new Set(prev).add(slideId));
+  }, []);
+
+  // Preload next slide image
+  useEffect(() => {
+    const nextSlideIndex = (currentSlide + 1) % slides.length;
+    const nextSlide = slides[nextSlideIndex];
+    const imgSrc = webpSupported ? nextSlide.imageWebp : nextSlide.image;
+    
+    const img = new Image();
+    img.src = imgSrc;
+    img.onload = () => handleImageLoad(nextSlide.id);
+  }, [currentSlide, webpSupported, handleImageLoad]);
+
+  // Auto-advance carousel
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -56,6 +98,11 @@ export default function HeroCarousel() {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Get image source based on WebP support
+  const getImageSrc = (slide: CarouselSlide) => {
+    return webpSupported ? slide.imageWebp : slide.image;
+  };
 
   return (
     <div className="relative w-full h-[500px] sm:h-[560px] md:h-[650px] lg:h-[750px] xl:h-[85vh] min-h-[700px] overflow-hidden shrink-0">
@@ -67,16 +114,35 @@ export default function HeroCarousel() {
             index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
-          {/* Background Image - Clean, no opacity overlay */}
+          {/* Background Image with Skeleton */}
           <div className="absolute inset-0">
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className={`w-full h-full object-cover ${
-                slide.id === 1 ? 'object-[center_0%]' : 
-                slide.id === 3 || slide.id === 4 ? 'object-[center_15%]' : 'object-center'
-              }`}
-            />
+            {/* Skeleton loader - shows until image is loaded */}
+            {!loadedImages.has(slide.id) && (
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900">
+                <Skeleton className="w-full h-full rounded-none" />
+                {/* Shimmer effect overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
+              </div>
+            )}
+            
+            {/* Actual image with picture element for format fallback */}
+            <picture>
+              <source srcSet={slide.imageWebp} type="image/webp" />
+              <source srcSet={slide.image} type="image/png" />
+              <img
+                src={getImageSrc(slide)}
+                alt={slide.title}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding={index === 0 ? "sync" : "async"}
+                onLoad={() => handleImageLoad(slide.id)}
+                className={`w-full h-full object-cover transition-opacity duration-500 ${
+                  loadedImages.has(slide.id) ? 'opacity-100' : 'opacity-0'
+                } ${
+                  slide.id === 1 ? 'object-[center_0%]' : 
+                  slide.id === 3 || slide.id === 4 ? 'object-[center_15%]' : 'object-center'
+                }`}
+              />
+            </picture>
           </div>
         </div>
       ))}
