@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from "react";
-import { ExternalLink, ChevronLeft, ChevronRight, TrendingUp } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight, TrendingUp, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils";
@@ -72,6 +72,13 @@ const industryUpdates: UpdateItem[] = [
   },
 ];
 
+const categoryColors = {
+  compliance: "bg-blue-500",
+  security: "bg-red-500",
+  policy: "bg-purple-500",
+  technology: "bg-green-500",
+};
+
 const categoryLabels = {
   compliance: "Compliance",
   security: "Security",
@@ -119,36 +126,43 @@ export default function IndustryUpdates() {
   };
 
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
+    <section className="relative py-16 md:py-20 lg:py-28 bg-[#0A2540] overflow-hidden">
       {/* Subtle gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0A2540] to-[#0A2540]"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0A2540] to-[#12344D]"></div>
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+      
+      {/* Decorative corner elements */}
+      <div className="absolute top-0 left-0 w-40 h-40 border-l-4 border-t-4 border-[#E07020]/20"></div>
+      <div className="absolute bottom-0 right-0 w-40 h-40 border-r-4 border-b-4 border-[#E07020]/20"></div>
       
       <div className="container relative z-10">
         {/* Header */}
         <motion.div 
-          className="grid lg:grid-cols-2 gap-8 mb-10 md:mb-12 lg:mb-16"
+          className="mb-10 md:mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/20">
-                <TrendingUp className="w-5 h-5 text-orange-400" />
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div>
+              {/* Section Label */}
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="w-12 h-[2px] bg-[#E07020]"></div>
+                <span className="text-[#E07020] font-semibold text-sm uppercase tracking-[0.2em]">Industry Updates</span>
               </div>
-              <p className="text-[#E07020] font-semibold uppercase tracking-wider text-sm">Industry Updates</p>
+              
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1]">
+                Latest Government<br />
+                <span className="text-[#E07020]">Tech News</span>
+              </h2>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              Latest Government Tech News
-            </h2>
-          </div>
-          <div className="flex flex-col justify-end">
-            <p className="text-lg text-white/80">
-              Stay informed on the latest compliance requirements, security updates, and policy changes affecting federal technology programs.
-            </p>
+            <div className="max-w-xl">
+              <p className="text-lg md:text-xl text-white/80 leading-relaxed border-l-4 border-[#E07020]/50 pl-4">
+                Stay informed on the latest <strong className="text-white">compliance requirements</strong>, security updates, and policy changes affecting federal technology programs.
+              </p>
+            </div>
           </div>
         </motion.div>
 
@@ -213,7 +227,7 @@ export default function IndustryUpdates() {
           }}
           className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {industryUpdates.map((update) => (
+          {industryUpdates.map((update, index) => (
             <motion.div
               key={update.id}
               variants={{
@@ -228,7 +242,7 @@ export default function IndustryUpdates() {
                 },
               }}
             >
-              <UpdateCard update={update} />
+              <UpdateCard update={update} index={index} />
             </motion.div>
           ))}
         </motion.div>
@@ -238,7 +252,7 @@ export default function IndustryUpdates() {
 }
 
 // Update Card Component
-function UpdateCard({ update }: { update: UpdateItem }) {
+function UpdateCard({ update, index = 0 }: { update: UpdateItem; index?: number }) {
   return (
     <a
       href={update.sourceUrl}
@@ -247,36 +261,42 @@ function UpdateCard({ update }: { update: UpdateItem }) {
       className="block h-full"
     >
       <Card 
-        className="h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col p-0 hover:-translate-y-1"
+        className="h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border-2 border-white/10 hover:border-[#E07020] rounded-xl shadow-xl hover:shadow-[0_0_40px_rgba(224,112,32,0.2)] transition-all duration-300 overflow-hidden group flex flex-col p-0 hover:-translate-y-1"
       >
+        {/* Top accent bar */}
+        <div className="h-1 bg-gradient-to-r from-[#E07020] to-[#F08030]"></div>
+        
         {/* Content */}
         <div className="p-6 flex flex-col flex-grow">
           {/* Category Label and Date */}
           <div className="flex items-center justify-between mb-4">
-            <span className="text-xs text-white/60 font-medium uppercase tracking-wider">
-              {categoryLabels[update.category]}
-            </span>
-            <span className="text-xs text-white/50 font-medium">{update.date}</span>
+            <div className="flex items-center gap-2">
+              <div className={cn("w-2 h-2 rounded-full", categoryColors[update.category])}></div>
+              <span className="text-xs text-white font-semibold uppercase tracking-wider">
+                {categoryLabels[update.category]}
+              </span>
+            </div>
+            <span className="text-xs text-[#E07020] font-bold">{update.date}</span>
           </div>
 
           {/* Title */}
-          <h3 className="text-lg font-bold text-white mb-3 line-clamp-2 group-hover:text-[#E07020] transition-colors">
+          <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-[#E07020] transition-colors">
             {update.title}
           </h3>
 
           {/* Description */}
-          <p className="text-white/70 text-sm mb-4 line-clamp-3 flex-grow">
+          <p className="text-white/70 text-base mb-4 line-clamp-3 flex-grow leading-relaxed">
             {update.description}
           </p>
 
           {/* Source and Link */}
           <div className="flex items-center justify-between pt-4 border-t border-white/10">
             <span className="text-xs text-white/50">
-              Source: <span className="text-white/70">{update.source}</span>
+              Source: <span className="text-white/80 font-medium">{update.source}</span>
             </span>
-            <span className="inline-flex items-center gap-1 text-[#E07020] text-sm font-medium group-hover:gap-2 transition-all">
-              Read More
-              <ExternalLink className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-2 text-[#E07020] text-sm font-bold uppercase tracking-wider group-hover:gap-3 transition-all">
+              Read
+              <ArrowRight className="w-4 h-4" />
             </span>
           </div>
         </div>
