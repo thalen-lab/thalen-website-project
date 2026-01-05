@@ -14,7 +14,7 @@ export default function DoDManufacturing() {
 
       {/* Hero */}
       <motion.section 
-        className="relative py-24 text-white bg-[oklch(0.18_0.06_250)]/85"
+        className="relative py-24 text-white bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"
         style={{
           backgroundImage: `url('/img/patterns/pattern-hero.svg')`,
           backgroundSize: 'cover',

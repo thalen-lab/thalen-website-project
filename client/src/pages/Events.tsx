@@ -193,7 +193,7 @@ export default function Events() {
         {/* Hero Section */}
         <section className="relative bg-cover bg-center py-24 md:py-32 text-white"
           style={{ backgroundImage: "url('/images/patterns/pattern-1.png')" }}>
-          <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85" />
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Learn from the Experts</p>

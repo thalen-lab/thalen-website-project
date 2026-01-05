@@ -17,7 +17,7 @@ export default function Methodology() {
 
       {/* Hero Section */}
       <section className="relative pt-40 pb-24 px-4 bg-cover bg-center" style={{ backgroundImage: "url('/images/methodology-hero-bg.jpg')" }}>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container max-w-4xl relative z-10">
           <div className="mb-6">
             <Breadcrumb items={[{ label: 'Methodology' }]} />

@@ -94,7 +94,7 @@ export default function LegacyIntegration() {
       {/* Hero Section */}
       <section className="relative py-20 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/img/services/system-integration/hero-legacy-modernization.png')] bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/90 via-[#0A2540]/85 to-[#12344D]/80"></div>
         <div className="container relative">
           <div className="mb-8">
               <Breadcrumb 

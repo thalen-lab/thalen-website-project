@@ -96,7 +96,7 @@ export default function PlatformSelection() {
           style={{ backgroundImage: "url('/platform-selection-hero.jpg')" }}
         ></div>
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/75"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 via-[#0A2540]/80 to-[#12344D]/75"></div>
         <div className="container relative">
           <div className="mb-8">
               <Breadcrumb 

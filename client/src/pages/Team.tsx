@@ -86,7 +86,7 @@ export default function Team() {
       {/* Hero Section */}
       <section className="relative text-white py-24">
         <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?fit=crop&w=1920&q=80')"}}></div>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative z-10">
           <div className="mb-8">
             <Breadcrumb 

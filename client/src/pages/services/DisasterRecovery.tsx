@@ -104,7 +104,7 @@ export default function DisasterRecovery() {
       <section className="relative pt-24 pb-20 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="/images/pattern-dark.svg" alt="background pattern" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         </div>
         <div className="container relative z-10">
           <nav className="text-sm mb-6 text-white/80">

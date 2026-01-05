@@ -250,7 +250,7 @@ export default function Resources() {
       <Navigation />
       <main>
         <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('/img/patterns/hero-pattern.svg')" }}>
-          <div className="bg-[oklch(0.18_0.06_250)]/85 text-white">
+          <div className="bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85 text-white">
             <div className="container mx-auto px-4 py-20 text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

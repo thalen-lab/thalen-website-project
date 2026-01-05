@@ -43,7 +43,7 @@ export default function Security() {
 
       {/* Hero */}
       <section className="relative bg-[url('/img/pattern.svg')] bg-cover bg-center py-24 text-white">
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85" />
         <div className="relative container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

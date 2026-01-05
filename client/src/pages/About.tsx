@@ -68,7 +68,7 @@ export default function About() {
       {/* Hero - Founding Story */}
       <section className="relative py-12 sm:py-16 md:py-20 text-white">
         <div className="absolute inset-0 bg-[url('/img/patterns/hero-pattern.svg')] bg-center [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         
         <div className="relative container">
           <div className="max-w-4xl mx-auto">

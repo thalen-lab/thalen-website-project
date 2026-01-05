@@ -63,7 +63,7 @@ export default function Analytics() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 text-white bg-[oklch(0.18_0.06_250)]/85">
+      <section className="relative py-20 text-white bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85">
         {/* Add background image pattern here */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="container relative">

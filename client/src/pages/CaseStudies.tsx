@@ -221,7 +221,7 @@ export default function CaseStudies() {
       <Navigation />
 
       <section className="relative py-12 sm:py-16 md:py-20 text-white">
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="relative container">
           <div className="mb-6 md:mb-8">
             <Breadcrumb items={[{ label: 'Case Studies' }]} variant="light" />

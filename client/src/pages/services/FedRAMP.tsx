@@ -13,7 +13,7 @@ export default function FedRAMP() {
 
       {/* Hero Section */}
       <section className="relative bg-[url('/img/backgrounds/circuit-board-pattern.svg')] bg-cover bg-center py-20 lg:py-28">
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

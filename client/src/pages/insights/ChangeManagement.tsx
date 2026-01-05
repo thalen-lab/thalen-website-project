@@ -11,12 +11,12 @@ export default function ChangeManagement() {
   return (
     <div className="bg-white text-slate-800">
       {/* Hero Section */}
-      <div className="relative bg-[oklch(0.18_0.06_250)] text-white py-24 sm:py-32">
+      <div className="relative bg-[#0A2540] text-white py-24 sm:py-32">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/insights/hero-pattern.svg')" }}
         ></div>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
               <Breadcrumb 

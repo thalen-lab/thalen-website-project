@@ -97,7 +97,7 @@ export default function CloudOptimization() {
 
       {/* Hero Section */}
       <section className="relative py-28 bg-[url('/patterns/hero-pattern.svg')] bg-cover bg-center text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85 z-0"></div>
         <div className="container relative z-10">
           <nav className="text-sm mb-6 text-white/80">
             <Link href="/services/cloud" className="hover:text-[oklch(0.75_0.15_55)]">Cloud Infrastructure & Modernization</Link>

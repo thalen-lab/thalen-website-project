@@ -135,7 +135,7 @@ export default function Privacy() {
       <main>
         {/* Hero */}
         <section className="relative bg-pattern-dark py-24 text-white">
-          <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
           <div className="container relative">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">

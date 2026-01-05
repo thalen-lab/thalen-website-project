@@ -70,14 +70,14 @@ export default function Automation() {
       <Navigation />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-24 md:py-32 text-white overflow-hidden bg-[#0A2540]">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/automation-hero.jpg')" }}
         ></div>
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        {/* Navy gradient overlay for proper blue background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         
         <div className="container relative z-10">
           {/* Breadcrumb */}

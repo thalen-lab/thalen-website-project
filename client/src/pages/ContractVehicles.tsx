@@ -396,7 +396,7 @@ export default function ContractVehicles() {
             style={{ backgroundImage: "url('https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2000')" }}
           ></div>
           {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/92 to-[#12344D]/88"></div>
           
           <div className="container relative z-10">
             {/* Breadcrumb */}

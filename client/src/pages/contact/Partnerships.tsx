@@ -55,7 +55,7 @@ export default function Partnerships() {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative py-20 bg-[oklch(0.18_0.06_250)]/85 text-white">
+      <section className="relative py-20 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85 text-white">
         <div className="absolute inset-0 bg-[url('/img/patterns/hero-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
         <div className="container relative">
           <div className="mb-8">

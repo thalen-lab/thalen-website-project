@@ -59,7 +59,7 @@ export default function Financial() {
       <Navigation />
 
       <main className="flex-grow">
-        <section className="relative py-24 text-white bg-[oklch(0.18_0.06_250)]/85">
+        <section className="relative py-24 text-white bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85">
           <div className="absolute inset-0 bg-[url('/img/pattern.svg')] bg-center opacity-10"></div>
           <div className="container relative">
             <div className="mb-8">

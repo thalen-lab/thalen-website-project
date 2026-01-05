@@ -125,12 +125,12 @@ export default function MultiCloudStrategy() {
   return (
     <div className="bg-white">
       {/* Hero Section: Handled by InsightArticleLayout */}
-      <div className="relative bg-[oklch(0.18_0.06_250)] text-white/90 py-20 sm:py-28">
+      <div className="relative bg-[#0A2540] text-white/90 py-20 sm:py-28">
         <div
           className="absolute inset-0 bg-cover"
           style={{ backgroundImage: "url('/images/patterns/pattern-1.svg')" }}
         ></div>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
               <Breadcrumb 

@@ -6,7 +6,7 @@ export default function ResponsibleAI() {
   return (
     <div className="bg-white text-slate-600">
       {/* Hero Section */}
-      <div className="relative bg-[oklch(0.18_0.06_250)]/85 text-white">
+      <div className="relative bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85 text-white">
         <div className="container mx-auto px-4 py-20 text-center">
           <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider">AI & Machine Learning</p>
           <h1 className="text-4xl md:text-6xl font-bold mt-4">Responsible AI Implementation in Government: A Framework for Ethical Deployment</h1>

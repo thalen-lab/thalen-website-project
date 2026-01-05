@@ -51,7 +51,7 @@ export default function Healthcare() {
 
       <main>
         <section className="relative py-20 sm:py-24 md:py-32 text-white">
-          <div aria-hidden="true" className="absolute inset-0 bg-[oklch(0.18_0.06_250)]"></div>
+          <div aria-hidden="true" className="absolute inset-0 bg-[#0A2540]"></div>
           <div className="absolute inset-0 bg-[url(/img/patterns/hero-pattern.svg)] bg-center bg-repeat opacity-5"></div>
           <div className="relative container z-10">
             <div className="max-w-4xl">

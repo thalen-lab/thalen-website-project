@@ -21,7 +21,7 @@ export default function VAPredictiveAnalytics() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85" />
         <div className="relative z-10 container max-w-5xl">
           <div className="max-w-4xl">
             <div className="flex flex-wrap items-center gap-4 mb-4">
