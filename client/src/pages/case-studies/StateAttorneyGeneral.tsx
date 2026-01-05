@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function StateAttorneyGeneral() {
   return (

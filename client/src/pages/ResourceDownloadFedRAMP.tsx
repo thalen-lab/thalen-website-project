@@ -9,6 +9,7 @@ import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function ResourceDownloadFedRAMP() {
   const [formData, setFormData] = useState({
@@ -65,6 +66,15 @@ export default function ResourceDownloadFedRAMP() {
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Navigation />
         <div className="container py-20">
+          <div className="mb-8">
+              <Breadcrumb 
+                items={[
+                  { label: 'Resources', href: '/resources' },
+                  { label: 'FedRAMP Resources' }
+                ]} 
+                variant="dark" 
+              />
+            </div>
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-6 flex justify-center">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">

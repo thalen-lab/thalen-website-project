@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
+import Breadcrumb from '@/components/Breadcrumb';
 
 // Custom components for editorial style
 const EditorialSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
@@ -62,6 +63,15 @@ export default function EnergyGrid() {
       >
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container max-w-4xl mx-auto px-4 relative">
+          <div className="mb-8">
+              <Breadcrumb 
+                items={[
+                  { label: 'Case Studies', href: '/case-studies' },
+                  { label: 'Energy Grid Optimization' }
+                ]} 
+                variant="light" 
+              />
+            </div>
           <div className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-6">
             Energy & Utilities Case Study
           </div>

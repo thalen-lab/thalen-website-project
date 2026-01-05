@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Link } from 'wouter';
+import Breadcrumb from '@/components/Breadcrumb';
 
 // Helper component for the statistics grid
 const StatGrid = ({ metrics }: { metrics: Array<{ value: string; label: string }> }) => (
@@ -37,6 +38,15 @@ export default function AerospaceDigitalTwin() {
       {/* Hero */}
       <section className="relative py-24 bg-navy-gradient text-primary-foreground">
         <div className="container max-w-4xl">
+          <div className="mb-8">
+              <Breadcrumb 
+                items={[
+                  { label: 'Case Studies', href: '/case-studies' },
+                  { label: 'Aerospace Digital Twin' }
+                ]} 
+                variant="light" 
+              />
+            </div>
           <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
             Aerospace & Defense Case Study
           </div>

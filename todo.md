@@ -4043,3 +4043,13 @@
 - [x] Add professional stock image to Success Metrics hero section
 - [x] Verify all hero sections display correctly with background images
 - [x] Add professional hero background images to Digital Transformation subpages (Platform Selection, Legacy Modernization, Change Management, TMF Support)
+
+## Phase 146: Add Breadcrumb Navigation to Subpages
+- [x] Create reusable Breadcrumb component with SEO-friendly structured data
+- [x] Implement breadcrumbs on service subpages (automation, data-analytics, custom-software, digital-transformation)
+- [x] Implement breadcrumbs on case study detail pages
+- [x] Implement breadcrumbs on insight/blog post pages
+- [x] Implement breadcrumbs on industry pages
+- [x] Implement breadcrumbs on contact subpages
+- [x] Implement breadcrumbs on compliance pages
+- [x] Test breadcrumb navigation across all subpages
