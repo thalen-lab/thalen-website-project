@@ -141,9 +141,15 @@ export default function CustomSoftware() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center text-white" style={{ backgroundImage: "url(/img/patterns/hero-pattern.svg)" }}>
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/custom-software-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
-        <div className="relative container py-20">
+        <div className="container relative z-10">
           <div className="mb-8">
             <Breadcrumb 
               items={[

@@ -106,13 +106,18 @@ export default function ApplicationDevelopment() {
       <main>
         {/* Hero Section */}
         <motion.section 
-          className="relative py-20 text-white overflow-hidden bg-cover bg-center" 
-          style={{ backgroundImage: "url('/img/solutions/hero-pattern.svg')" }}
+          className="relative py-24 md:py-32 text-white overflow-hidden" 
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85 z-0"></div>
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/application-development-hero.jpg')" }}
+          ></div>
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
           <div className="container relative z-10">
             <div className="max-w-4xl">
               <motion.div 
