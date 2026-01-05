@@ -4094,3 +4094,14 @@
 
 - [x] Apply enhanced "Our Approach" design to ATO Support & Authorization page
 - [x] Apply enhanced "Our Approach" design to Government Cloud Migration Services page
+
+## Phase 149: Add Hero Images to Government Solutions Pages
+- [x] Add hero image to State & Local Government page (state-local-hero.jpg)
+- [x] Add hero image to Defense & Intelligence page (already had federal-solutions-hero.jpg)
+- [x] Add hero image to FedRAMP Compliance page (federal-building.jpg)
+- [x] Add hero image to StateRAMP/GovRAMP page (state-capitol.jpg)
+- [x] Add hero image to CMMC Compliance page (already had cmmc-hero.jpg)
+- [x] Add hero image to ATO Support & Authorization page (federal-building.jpg)
+- [x] Add hero image to Government Cloud Migration page (already had cloud-hero.jpg)
+- [x] Add hero image to Past Performance page (already had past-performance-hero.jpg)
+- [x] Add hero image to Contract Vehicles page (already had Unsplash URL)
