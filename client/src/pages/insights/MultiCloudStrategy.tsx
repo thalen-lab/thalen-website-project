@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Breadcrumb from '@/components/Breadcrumb';
 
 // NOTE: The InsightArticleLayout component handles the hero section, breadcrumbs, and overall page structure.
 // This component defines the article content passed into the layout.
@@ -131,6 +132,15 @@ export default function MultiCloudStrategy() {
         ></div>
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+              <Breadcrumb 
+                items={[
+                  { label: 'Insights', href: '/insights' },
+                  { label: 'Multi-Cloud Strategy' }
+                ]} 
+                variant="light" 
+              />
+            </div>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               Cloud Modernization

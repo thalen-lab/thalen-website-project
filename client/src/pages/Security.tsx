@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 import { APP_TITLE } from '@/const';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Security() {
   const securityPractices = [

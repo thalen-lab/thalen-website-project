@@ -6,6 +6,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight, Cloud, Server, Lock } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function CloudOptimization() {
   const benefits = [
