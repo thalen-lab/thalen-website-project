@@ -112,20 +112,15 @@ export default function InfrastructureAsCode() {
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container relative">
           <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Services', href: '/consulting-services' },
-                  { label: 'Cloud Infrastructure', href: '/services/cloud' },
-                  { label: 'Infrastructure as Code' }
-                ]} 
-                variant="light" 
-              />
-            </div>
-          <nav className="text-sm mb-6 text-white/90">
-            <Link href="/services/cloud" className="hover:text-[oklch(0.75_0.15_55)]">Cloud Infrastructure & Modernization</Link>
-            <span className="mx-2">/</span>
-            <span>Infrastructure as Code (IaC)</span>
-          </nav>
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Cloud Infrastructure', href: '/services/cloud' },
+                { label: 'Infrastructure as Code (IaC)' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           
           <div className="max-w-4xl">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">

@@ -92,7 +92,7 @@ export default function Cloud() {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/cloud-hero.jpg')" }}
+          style={{ backgroundImage: "url('/images/cloud-infrastructure-hero.jpg')" }}
         ></div>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>

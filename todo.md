@@ -4053,3 +4053,7 @@
 - [x] Implement breadcrumbs on contact subpages
 - [x] Implement breadcrumbs on compliance pages
 - [x] Test breadcrumb navigation across all subpages
+- [x] Add professional hero image to Cloud Infrastructure & Modernization page
+
+## Phase 95: Fix Cloud Infrastructure Subpage Breadcrumbs
+- [x] Fix breadcrumb display for Cloud Infrastructure & Modernization subpages

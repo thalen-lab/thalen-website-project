@@ -95,8 +95,9 @@ export default function CloudMigration() {
           <div className="mb-8">
             <Breadcrumb 
               items={[
-                { label: 'Government Solutions', href: '/federal-solutions' },
-                { label: 'Cloud Migration & Transition' }
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Cloud Infrastructure', href: '/services/cloud' },
+                { label: 'Cloud Migration & Modernization' }
               ]} 
               variant="light" 
             />

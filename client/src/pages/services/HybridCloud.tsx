@@ -100,7 +100,7 @@ export default function HybridCloud() {
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
-                  { label: 'System Integration', href: '/services/system-integration' },
+                  { label: 'Cloud Infrastructure', href: '/services/cloud' },
                   { label: 'Hybrid Cloud Integration' }
                 ]} 
                 variant="light" 
@@ -112,9 +112,9 @@ export default function HybridCloud() {
             transition={{ duration: 0.5 }}
             className="max-w-4xl"
           >
-            <Link href="/services/system-integration">
+            <Link href="/services/cloud">
               <Button variant="ghost" className="mb-6 text-white hover:bg-white/10">
-                ← Back to Systems Integration
+                ← Back to Cloud Infrastructure
               </Button>
             </Link>
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
