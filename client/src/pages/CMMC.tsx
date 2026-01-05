@@ -118,44 +118,36 @@ export default function CMMC() {
         </div>
       </section>
 
-      {/* What is CMMC Section */}
+      {/* What is CMMC Section - Full width without image */}
       <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
-        <div className="container max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Overview</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Understanding CMMC</h2>
-              <div className="space-y-4 text-slate-600 leading-relaxed">
-                <p>
-                  The Cybersecurity Maturity Model Certification (CMMC) is a unified standard for implementing cybersecurity across the Defense Industrial Base (DIB). The Department of Defense developed CMMC to protect Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) within the defense supply chain.
-                </p>
-                <p>
-                  CMMC certification is required for Department of Defense contractors and subcontractors. The framework incorporates cybersecurity standards and best practices, including NIST SP 800-171, mapped to processes and practices across maturity levels.
-                </p>
-                <p>
-                  Unlike self-attestation approaches, CMMC requires third-party assessment by certified CMMC Third Party Assessment Organizations (C3PAOs), providing objective verification of cybersecurity practices.
-                </p>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
-              <img 
-                src="/cmmc-security.png" 
-                alt="CMMC Cybersecurity Framework" 
-                className="rounded-lg shadow-xl w-full h-auto"
-              />
-            </motion.div>
-          </div>
+        <div className="container max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Overview</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-8">Understanding CMMC</h2>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="space-y-6 text-slate-600 leading-relaxed text-lg"
+          >
+            <p>
+              The Cybersecurity Maturity Model Certification (CMMC) is a unified standard for implementing cybersecurity across the Defense Industrial Base (DIB). The Department of Defense developed CMMC to protect Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) within the defense supply chain.
+            </p>
+            <p>
+              CMMC certification is required for Department of Defense contractors and subcontractors. The framework incorporates cybersecurity standards and best practices, including NIST SP 800-171, mapped to processes and practices across maturity levels.
+            </p>
+            <p>
+              Unlike self-attestation approaches, CMMC requires third-party assessment by certified CMMC Third Party Assessment Organizations (C3PAOs), providing objective verification of cybersecurity practices.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -186,7 +178,7 @@ export default function CMMC() {
                 note: 'Contractors must maintain CMMC certification throughout the contract performance period and provide certification evidence to the Contracting Officer upon request.'
               },
               {
-                title: 'Annual Attestation Requirement',
+                title: 'Annual Attestation Requirements',
                 content: 'After achieving CMMC Level 2 certification, organizations must submit annual attestations confirming continued compliance with all 110 security practices. Failure to maintain compliance can result in certificate suspension or revocation.',
                 note: 'Note: Organizations can pass a CMMC assessment but remain non-compliant if contractual CUI requirements were not properly validated during scoping. Contract analysis before assessment scope definition helps ensure alignment between certification and contractual obligations.'
               }
@@ -209,62 +201,56 @@ export default function CMMC() {
         </div>
       </section>
 
-      {/* Methodology Section */}
+      {/* Methodology Section - Full width without image */}
       <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
-        <div className="container max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative order-2 lg:order-1"
-            >
-              <img 
-                src="/cmmc-team-meeting.jpg" 
-                alt="CMMC Consulting Team" 
-                className="rounded-lg shadow-xl w-full h-auto"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="order-1 lg:order-2"
-            >
-              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Contract-First CMMC Methodology</h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Our methodology begins with contractual requirements analysis—not technical assessments. We identify DoD Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) handling obligations before defining assessment scope. This contract-first approach prevents a critical failure mode: achieving CMMC certification while remaining non-compliant with actual contractual obligations.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Organizations can pass C3PAO assessments and achieve perfect NIST 800-171 scores, yet still violate contract terms if CUI requirements were improperly scoped. Our upfront contract analysis ensures certification aligns with your actual compliance obligations.
-              </p>
-              
-              <Card className="p-6 bg-white border-2 border-slate-200 mt-8">
-                <h3 className="font-bold text-[oklch(0.20_0.05_250)] mb-4">This approach allows us to tailor services to provide:</h3>
-                <ul className="space-y-3">
-                  {['NIST 800-171 assessment services', 'CMMC Level 1 self-assessment support', 'CMMC Level 2 readiness', 'Self-assessment support', 'Accurate CMMC documentation'].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                      <span className="text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+        <div className="container max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8"
+          >
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Contract-First CMMC Methodology</h2>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="space-y-6"
+          >
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Our methodology begins with contractual requirements analysis—not technical assessments. We identify DoD Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) handling obligations before defining assessment scope. This contract-first approach prevents a critical failure mode: achieving CMMC certification while remaining non-compliant with actual contractual obligations.
+            </p>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Organizations can pass C3PAO assessments and achieve perfect NIST 800-171 scores, yet still violate contract terms if CUI requirements were improperly scoped. Our upfront contract analysis ensures certification aligns with your actual compliance obligations.
+            </p>
+            
+            <Card className="p-6 bg-white border-2 border-slate-200 mt-8">
+              <h3 className="font-bold text-[oklch(0.20_0.05_250)] mb-4">This approach allows us to tailor services to provide:</h3>
+              <ul className="space-y-3">
+                {['NIST 800-171 assessment services', 'CMMC Level 1 self-assessment support', 'CMMC Level 2 readiness', 'Self-assessment support', 'Accurate CMMC documentation'].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                    <span className="text-slate-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
 
-              <Card className="p-6 bg-white border-2 border-[oklch(0.70_0.18_55)] mt-6">
-                <p className="text-slate-600 leading-relaxed">
-                  Upon successful awarding of a CMMC certification, we also provide ongoing support for the required annual attestation and subsequent contracting arrangements.
-                </p>
-              </Card>
-            </motion.div>
-          </div>
+            <Card className="p-6 bg-white border-2 border-[oklch(0.70_0.18_55)]">
+              <p className="text-slate-600 leading-relaxed">
+                Upon successful awarding of a CMMC certification, we also provide ongoing support for the required annual attestation and subsequent contracting arrangements.
+              </p>
+            </Card>
+          </motion.div>
         </div>
       </section>
 
-      {/* Expertise Section */}
+      {/* Expertise Section - Without bottom image */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container max-w-6xl">
           <motion.div
@@ -278,7 +264,7 @@ export default function CMMC() {
             <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Experience & Credentials</h2>
           </motion.div>
           
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid lg:grid-cols-2 gap-8">
             {[
               {
                 title: 'Cyber AB Registered Practitioner Organization',
@@ -316,20 +302,6 @@ export default function CMMC() {
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <img 
-              src="/cmmc-professionals.jpg" 
-              alt="CMMC Professional Team" 
-              className="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover"
-            />
-          </motion.div>
         </div>
       </section>
 
@@ -500,9 +472,9 @@ export default function CMMC() {
         </div>
       </section>
 
-      {/* Case Study Section */}
+      {/* Case Study Section - Full width without image */}
       <section className="py-20 md:py-28 bg-white">
-        <div className="container max-w-6xl">
+        <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -514,49 +486,33 @@ export default function CMMC() {
             <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Client Success Story</h2>
           </motion.div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Card className="p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">{caseStudy.title}</h3>
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="font-bold text-[oklch(0.20_0.05_250)] mb-3 text-lg">Challenge</h4>
-                    <p className="text-slate-600 leading-relaxed">{caseStudy.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[oklch(0.20_0.05_250)] mb-4 text-lg">Results</h4>
-                    <ul className="space-y-3">
-                      {caseStudy.results.map((result, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                          <span className="text-slate-600 leading-relaxed">{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Card className="p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">{caseStudy.title}</h3>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-bold text-[oklch(0.20_0.05_250)] mb-3 text-lg">Challenge</h4>
+                  <p className="text-slate-600 leading-relaxed">{caseStudy.challenge}</p>
                 </div>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
-              <img 
-                src="/cmmc-compliance.jpg" 
-                alt="CMMC Compliance Success" 
-                className="rounded-lg shadow-xl w-full h-auto"
-              />
-            </motion.div>
-          </div>
+                <div>
+                  <h4 className="font-bold text-[oklch(0.20_0.05_250)] mb-4 text-lg">Results</h4>
+                  <ul className="space-y-3">
+                    {caseStudy.results.map((result, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                        <span className="text-slate-600 leading-relaxed">{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
         </div>
       </section>
 
