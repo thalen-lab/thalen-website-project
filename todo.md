@@ -4016,3 +4016,7 @@
 - [x] Apply enhanced design system to Data Strategy & Governance subpage (Strategy.tsx)
 
 - [x] Add hero background images to Cloud Infrastructure subpages
+## Phase 143: Cybersecurity Hero Images and IAM Page Design Update
+- [x] Add hero image to Cybersecurity & Compliance landing page
+- [x] Update IAM subpage to match design system (like Our Approach page)
+- [x] Add hero image to IAM subpage
