@@ -4091,3 +4091,6 @@
 - [x] Verified API & Microservices subpage hero section
 - [x] Verified Change Management subpage hero section
 - [x] All hero sections displaying with proper navy blue gradients and background images
+
+- [x] Apply enhanced "Our Approach" design to ATO Support & Authorization page
+- [x] Apply enhanced "Our Approach" design to Government Cloud Migration Services page
