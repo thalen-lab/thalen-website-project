@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function CountyHealth() {
   return (
@@ -19,6 +20,15 @@ export default function CountyHealth() {
         ></div>
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container relative">
+          <div className="mb-8">
+              <Breadcrumb 
+                items={[
+                  { label: 'Case Studies', href: '/case-studies' },
+                  { label: 'County Health Department' }
+                ]} 
+                variant="light" 
+              />
+            </div>
           <div className="max-w-4xl">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               County Government Case Study

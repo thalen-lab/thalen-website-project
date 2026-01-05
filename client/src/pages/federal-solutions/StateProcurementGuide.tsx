@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Download, CheckCircle2, FileText, Shield, DollarSign, Clock } from 'lucide-react';
 import ProcurementTimeline from '@/components/ProcurementTimeline';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function StateProcurementGuide() {
   const procurementPaths = [
@@ -110,6 +111,15 @@ export default function StateProcurementGuide() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
+          <div className="mb-8">
+              <Breadcrumb 
+                items={[
+                  { label: 'Federal Solutions', href: '/federal-solutions' },
+                  { label: 'State Procurement Guide' }
+                ]} 
+                variant="light" 
+              />
+            </div>
           <div className="max-w-4xl">
             <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               State & Local Government Resource

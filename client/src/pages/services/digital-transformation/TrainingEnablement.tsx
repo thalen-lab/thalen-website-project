@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function TrainingEnablement() {
   const trainingApproaches = [
@@ -95,6 +96,16 @@ export default function TrainingEnablement() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/90 to-[#0a1628]/70" />
         </div>
         <div className="container relative z-10">
+          <div className="mb-8">
+              <Breadcrumb 
+                items={[
+                  { label: 'Services', href: '/consulting-services' },
+                  { label: 'Digital Transformation', href: '/services/digital-transformation' },
+                  { label: 'Training & Enablement' }
+                ]} 
+                variant="light" 
+              />
+            </div>
           <div className="max-w-3xl">
             <div className="inline-block px-4 py-1 bg-muted rounded-full text-sm font-semibold mb-6">
               User Training • Knowledge Transfer • Adoption Support

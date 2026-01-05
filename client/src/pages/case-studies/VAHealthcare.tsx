@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function VAHealthcare() {
   return (

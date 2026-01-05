@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function ISO27001() {
   return (
@@ -32,6 +33,16 @@ export default function ISO27001() {
       {/* Hero Section - Dark navy background */}
       <section className="bg-[#0a1628] py-20 lg:py-28">
         <div className="container">
+          <div className="mb-8">
+              <Breadcrumb 
+                items={[
+                  { label: 'Services', href: '/consulting-services' },
+                  { label: 'Cybersecurity', href: '/services/cybersecurity' },
+                  { label: 'ISO 27001 Certification' }
+                ]} 
+                variant="dark" 
+              />
+            </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide text-white uppercase mb-6">
             ISO/IEC 27001 Implementation Services
           </h1>

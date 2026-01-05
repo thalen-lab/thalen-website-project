@@ -6,6 +6,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function MultiCloud() {
   const benefits = [
@@ -77,11 +78,16 @@ export default function MultiCloud() {
         ></div>
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container relative">
-          <nav className="text-sm mb-6 text-white/80">
-            <Link href="/services/cloud" className="hover:text-[oklch(0.75_0.15_55)]">Cloud Infrastructure & Modernization</Link>
-            <span className="mx-2">/</span>
-            <span>Multi-Cloud & Hybrid Solutions</span>
-          </nav>
+          <div className="mb-8">
+            <Breadcrumb 
+              items={[
+                { label: 'Services', href: '/consulting-services' },
+                { label: 'Cloud Infrastructure', href: '/services/cloud' },
+                { label: 'Multi-Cloud Integration & Orchestration' }
+              ]} 
+              variant="light" 
+            />
+          </div>
           
           <div className="max-w-4xl">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
