@@ -96,8 +96,12 @@ export default function CloudSecurity() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center py-24 text-white" style={{ backgroundImage: "url('/patterns/pattern-dark.svg')" }}>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85" />
+      <section className="relative py-24 text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/cloud-security-hero.jpg')" }}
+        ></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container relative">
           <div className="max-w-4xl">
             <Breadcrumb 

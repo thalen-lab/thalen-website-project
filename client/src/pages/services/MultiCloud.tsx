@@ -70,8 +70,11 @@ export default function MultiCloud() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 text-white">
-        <div className="absolute inset-0 bg-[url('/src/assets/patterns/pattern-chaos.svg')] bg-repeat"></div>
+      <section className="relative pt-24 pb-20 text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/multi-cloud-hero.jpg')" }}
+        ></div>
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container relative">
           <nav className="text-sm mb-6 text-white/80">

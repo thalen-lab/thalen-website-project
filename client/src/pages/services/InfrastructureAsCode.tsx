@@ -103,7 +103,11 @@ export default function InfrastructureAsCode() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 text-white overflow-hidden bg-[url('/img/patterns/hero-pattern.svg')] bg-cover bg-center">
+      <section className="relative py-20 text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/infrastructure-as-code-hero.jpg')" }}
+        ></div>
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container relative">
           <nav className="text-sm mb-6 text-white/90">

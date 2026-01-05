@@ -87,7 +87,7 @@ export default function CloudMigration() {
       <section className="relative py-24 md:py-32 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/cloud-infrastructure.jpg')" }}
+          style={{ backgroundImage: "url('/cloud-migration-hero.jpg')" }}
         ></div>
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         

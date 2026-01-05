@@ -4014,3 +4014,5 @@
 - [x] Apply enhanced design system to AI/ML Model Development subpage (MLAI.tsx)
 - [x] Apply enhanced design system to Data Engineering & Pipeline subpage (Engineering.tsx)
 - [x] Apply enhanced design system to Data Strategy & Governance subpage (Strategy.tsx)
+
+- [x] Add hero background images to Cloud Infrastructure subpages
