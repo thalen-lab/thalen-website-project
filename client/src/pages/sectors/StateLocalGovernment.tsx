@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import SectorClientLogos from '@/components/SectorClientLogos';
 import { motion } from 'framer-motion';
 
 export default function StateLocalGovernmentSector() {
@@ -451,6 +452,14 @@ export default function StateLocalGovernmentSector() {
           </motion.div>
         </div>
       </section>
+
+      {/* Client Logos Section */}
+      <SectorClientLogos 
+        sector="state-local" 
+        title="Trusted by State & Local Governments"
+        subtitle="Partnering with states, counties, and municipalities to modernize public services and improve citizen outcomes."
+        variant="light"
+      />
 
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-[oklch(0.22_0.06_250)] text-white">

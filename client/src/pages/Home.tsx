@@ -11,6 +11,7 @@ import HeroCarousel from '@/components/HeroCarousel';
 import IndustryUpdates from '@/components/IndustryUpdates';
 import InsightsSection from '@/components/InsightsSection';
 import WhoWeAreSection from '@/components/WhoWeAreSection';
+import TrustedByClients from '@/components/TrustedByClients';
 import { 
   ArrowRight, 
   TrendingUp, 
@@ -124,6 +125,9 @@ export default function Home() {
 
       {/* Who We Are Section - Enhanced with Signature Blue */}
       <WhoWeAreSection />
+
+      {/* Trusted By Clients Section */}
+      <TrustedByClients />
 
       {/* Mission-Focused Solutions Section - Dark Navy with Cards */}
       <section className="relative py-14 sm:py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
