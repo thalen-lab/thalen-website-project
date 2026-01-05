@@ -4107,3 +4107,6 @@
 - [x] Add hero image to Contract Vehicles page (already had Unsplash URL)
 - [x] CMMC page: Remove images and adjust section layouts for consistency with other pages
 - [x] Add professional stock image to State & Local Government Solutions hero section
+
+## Phase 69: ISO 27001 Page Redesign
+- [x] Redesign ISO 27001 Implementation Services page to match Core Capabilities design pattern
