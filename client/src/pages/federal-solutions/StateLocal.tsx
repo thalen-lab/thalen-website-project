@@ -126,7 +126,7 @@ export default function StateLocal() {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/state-local-hero.jpg')" }}
+          style={{ backgroundImage: "url('/images/state-local-hero.a1b2c3d4.jpg')" }}
         ></div>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>

@@ -4106,3 +4106,4 @@
 - [x] Add hero image to Past Performance page (already had past-performance-hero.jpg)
 - [x] Add hero image to Contract Vehicles page (already had Unsplash URL)
 - [x] CMMC page: Remove images and adjust section layouts for consistency with other pages
+- [x] Add professional stock image to State & Local Government Solutions hero section
