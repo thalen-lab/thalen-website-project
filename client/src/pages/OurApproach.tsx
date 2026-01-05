@@ -5,7 +5,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function OurApproach() {
   const pillars = [
@@ -110,15 +109,6 @@ export default function OurApproach() {
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         
         <div className="container relative z-10">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'About', href: '/about' },
-                  { label: 'Our Approach' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <motion.div 
             className="max-w-4xl mx-auto text-center"
             initial={{ opacity: 0, y: 20 }}

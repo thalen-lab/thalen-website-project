@@ -7,7 +7,6 @@ import {
   CheckCircle2, Shield, Zap, Database, Settings, BarChart3
 } from 'lucide-react';
 import { Link } from 'wouter';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function EnterpriseSaaS() {
   const features = [
@@ -69,17 +68,12 @@ export default function EnterpriseSaaS() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Services', href: '/consulting-services' },
-                  { label: 'Custom Software Solutions', href: '/services/custom-software' },
-                  { label: 'Enterprise SaaS Platforms' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <div className="max-w-4xl">
+            <div className="text-sm mb-4">
+              <Link href="/services/custom-software" className="hover:underline opacity-80">Custom Software Solutions</Link>
+              <span className="mx-2">/</span>
+              <span>Enterprise SaaS Platforms</span>
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Enterprise SaaS Platform Development
             </h1>

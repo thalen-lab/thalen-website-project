@@ -12,7 +12,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function GovernmentResources() {
   // ROI Calculator State

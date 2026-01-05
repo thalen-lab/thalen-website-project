@@ -9,7 +9,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { FileText, Download, Mail, CheckCircle2, Building2, Shield, Award } from 'lucide-react';
 import { toast } from 'sonner';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function CapabilityGenerator() {
   const [agencyType, setAgencyType] = useState<'federal' | 'state-local'>('federal');
@@ -140,15 +139,6 @@ export default function CapabilityGenerator() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Resources', href: '/resources' },
-                  { label: 'Capability Generator' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <div className="max-w-4xl">
             <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Interactive Tool
