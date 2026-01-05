@@ -250,7 +250,7 @@ export default function LegacyModernization() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-3 text-[oklch(0.20_0.05_250)]">NexDyne Technology Solution:</h4>
+                    <h4 className="font-semibold mb-3 text-[oklch(0.20_0.05_250)]">Thalen Technologies Solution:</h4>
                     <p className="text-slate-600">{system.solution}</p>
                   </div>
                 </div>

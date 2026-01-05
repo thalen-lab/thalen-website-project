@@ -175,7 +175,7 @@ export default function InsightArticleLayout({
               Ready to Transform Your Organization?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how NexDyne can help you achieve similar results.
+              Let's discuss how Thalen Technologies can help you achieve similar results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">

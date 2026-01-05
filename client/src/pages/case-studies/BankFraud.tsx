@@ -150,7 +150,7 @@ export default function BankFraud() {
             Protect Your Institution from Evolving Financial Threats
           </h2>
           <p className="text-xl opacity-90 mb-8">
-            Discover how NexDyne's AI fraud detection solutions can reduce losses while dramatically improving customer experience and operational efficiency.
+            Discover how Thalen's AI fraud detection solutions can reduce losses while dramatically improving customer experience and operational efficiency.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

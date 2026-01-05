@@ -87,7 +87,7 @@ export default function CountyHealth() {
               A county health department serving 1.2 million residents relied on manual, paper-based disease surveillance processes that took 14+ days to identify potential outbreaks. Healthcare providers faxed or mailed disease reports to the health department, where staff manually entered data into spreadsheets. This delay created significant public health risks, particularly during seasonal flu outbreaks and emerging infectious diseases.
             </p>
             <p className="mb-6">
-              NexDyne Technology was selected through a competitive procurement process to design and implement a real-time public health surveillance platform that would integrate with 120+ healthcare providers, labs, and pharmacies while maintaining strict HIPAA compliance and meeting CJIS requirements for law enforcement integration.
+              Thalen Technologies was selected through a competitive procurement process to design and implement a real-time public health surveillance platform that would integrate with 120+ healthcare providers, labs, and pharmacies while maintaining strict HIPAA compliance and meeting CJIS requirements for law enforcement integration.
             </p>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function CountyHealth() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Real-Time Public Health Surveillance Platform</h3>
                 <p className="text-lg text-slate-600 mb-6">
-                  NexDyne Technology designed and implemented a HIPAA-compliant real-time surveillance platform that automatically ingests disease reports from 120+ healthcare providers, labs, and pharmacies, enabling outbreak detection within 3 days instead of 14.
+                  Thalen Technologies designed and implemented a HIPAA-compliant real-time surveillance platform that automatically ingests disease reports from 120+ healthcare providers, labs, and pharmacies, enabling outbreak detection within 3 days instead of 14.
                 </p>
                 <ul className="space-y-3 text-slate-600">
                   {[
@@ -230,7 +230,7 @@ export default function CountyHealth() {
         <div className="container text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">Modernize Your Public Health Infrastructure</h2>
           <p className="text-xl text-white/90 mb-8">
-            NexDyne provides secure, scalable, and compliant technology solutions for government agencies. See how we can help you protect your community and improve public health outcomes.
+            Thalen Technologies provides secure, scalable, and compliant technology solutions for government agencies. See how we can help you protect your community and improve public health outcomes.
           </p>
           <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
             <Link to="/contact/sales">

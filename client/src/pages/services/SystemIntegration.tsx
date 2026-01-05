@@ -141,7 +141,7 @@ export default function SystemIntegration() {
         <div className="container">
           <div className="text-center mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</p>
-            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Why Agencies Choose NexDyne for Integration</h2>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Why Agencies Choose Thalen Technologies for Integration</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We're not a platform vendor—we're integration specialists who make your chosen FedRAMP platforms work together seamlessly.
             </p>

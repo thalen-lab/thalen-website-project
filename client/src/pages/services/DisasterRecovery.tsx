@@ -121,7 +121,7 @@ export default function DisasterRecovery() {
               Disaster Recovery & Business Continuity
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8">
-              Enterprise-grade DR solutions with automated failover, geo-redundant backups, and guaranteed RTOs meeting government continuity requirements. NexDyne Technology delivers disaster recovery architecture ensuring mission continuity with &lt; 15 minute recovery times and FedRAMP/StateRAMP compliance.
+              Enterprise-grade DR solutions with automated failover, geo-redundant backups, and guaranteed RTOs meeting government continuity requirements. Thalen Technologies delivers disaster recovery architecture ensuring mission continuity with &lt; 15 minute recovery times and FedRAMP/StateRAMP compliance.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
@@ -264,7 +264,7 @@ export default function DisasterRecovery() {
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Ensure Mission Continuity?</h2>
           <p className="text-xl text-white/90 mb-8">
-            Start with a comprehensive disaster recovery assessment and discover how NexDyne Technology can deliver &lt; 15 minute RTOs with FedRAMP-compliant architecture.
+            Start with a comprehensive disaster recovery assessment and discover how Thalen Technologies can deliver &lt; 15 minute RTOs with FedRAMP-compliant architecture.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

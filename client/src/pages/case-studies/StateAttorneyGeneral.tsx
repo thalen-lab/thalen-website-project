@@ -79,7 +79,7 @@ export default function StateAttorneyGeneral() {
 
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                The attorney general's office needed a platform that could analyze massive volumes of complaint data while meeting the strict security requirements for law enforcement systems. Working with NexDyne, the office deployed a CJIS-compliant fraud detection platform that applied machine learning and network analysis to identify fraud schemes operating across the state. The platform integrated with the office's existing case management system, enriching complaint data with external information sources while maintaining the security controls required for handling criminal justice information.
+                The attorney general's office needed a platform that could analyze massive volumes of complaint data while meeting the strict security requirements for law enforcement systems. Working with Thalen Technologies, the office deployed a CJIS-compliant fraud detection platform that applied machine learning and network analysis to identify fraud schemes operating across the state. The platform integrated with the office's existing case management system, enriching complaint data with external information sources while maintaining the security controls required for handling criminal justice information.
               </p>
 
               <p className="text-slate-600 text-lg leading-relaxed mb-6">

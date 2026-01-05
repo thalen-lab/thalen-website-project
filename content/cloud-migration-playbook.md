@@ -2,7 +2,7 @@
 ## A Strategic Guide to Secure, Compliant Cloud Transformation
 
 **Published by Thalen Technologies**  
-*Intelligence, Delivered*
+*Govern Smart*
 
 ---
 

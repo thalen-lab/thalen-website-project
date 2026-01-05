@@ -145,7 +145,7 @@ export default function ApplicationDevelopment() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
-                NexDyne Technology delivers application solutions through a dual approach: first, we integrate and modernize your existing systems with custom APIs and workflows—then connect FedRAMP platforms (Salesforce Gov, ServiceNow Gov, Workday) when vendor-neutral architecture ensures no lock-in. Our TS/SCI cleared teams ensure compliance and mission continuity.
+                Thalen Technologies delivers application solutions through a dual approach: first, we integrate and modernize your existing systems with custom APIs and workflows—then connect FedRAMP platforms (Salesforce Gov, ServiceNow Gov, Workday) when vendor-neutral architecture ensures no lock-in. Our TS/SCI cleared teams ensure compliance and mission continuity.
               </motion.p>
               
               <motion.div 
@@ -250,7 +250,7 @@ export default function ApplicationDevelopment() {
           <div className="container text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Modernize Your Applications?</h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Let's discuss how NexDyne can help you build, integrate, and secure your mission-critical systems. Schedule a free consultation with our experts today.
+              Let's discuss how Thalen Technologies can help you build, integrate, and secure your mission-critical systems. Schedule a free consultation with our experts today.
             </p>
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 active:scale-95 transition-all font-semibold">
               <Link href="/contact">

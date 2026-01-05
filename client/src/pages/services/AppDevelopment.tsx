@@ -24,7 +24,7 @@ export default function AppDevelopment() {
               Application Development & Integration for Mission-Critical Systems
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Your agency needs applications that meet strict security requirements while delivering modern user experiences. NexDyne Technology builds FedRAMP-authorized, CMMC-compliant applications using proven methodologies that balance innovation with the stability your mission demands.
+              Your agency needs applications that meet strict security requirements while delivering modern user experiences. Thalen Technologies builds FedRAMP-authorized, CMMC-compliant applications using proven methodologies that balance innovation with the stability your mission demands.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -43,12 +43,12 @@ export default function AppDevelopment() {
         </div>
       </section>
 
-      {/* Why Federal Agencies Choose NexDyne Technology */}
+      {/* Why Federal Agencies Choose Thalen Technologies */}
       <section className="py-20 bg-white text-[oklch(0.20_0.05_250)]">
         <div className="container">
           <div className="text-center mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</p>
-            <h2 className="text-4xl font-bold mb-4">Why Federal Agencies Choose NexDyne Technology</h2>
+            <h2 className="text-4xl font-bold mb-4">Why Federal Agencies Choose Thalen Technologies</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Unlike commercial development shops, we understand the unique challenges of building applications for government—from ATO requirements to legacy system integration.
             </p>
@@ -185,7 +185,7 @@ export default function AppDevelopment() {
         <div className="container text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Build Your Next Mission-Critical Application?</h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-                Let's discuss your requirements and see how NexDyne Technology can help you deliver secure, compliant, and modern applications that meet your agency's unique needs.
+                Let's discuss your requirements and see how Thalen Technologies can help you deliver secure, compliant, and modern applications that meet your agency's unique needs.
             </p>
             <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

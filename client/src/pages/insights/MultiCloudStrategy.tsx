@@ -315,7 +315,7 @@ export default function MultiCloudStrategy() {
             Ready to Build Your Multi-Cloud Strategy?
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-300">
-            NexDyne's cloud practice has helped numerous government agencies develop and implement multi-cloud strategies that balance flexibility with operational excellence. Contact our team to discuss how we can support your cloud modernization journey.
+            Thalen's cloud practice has helped numerous government agencies develop and implement multi-cloud strategies that balance flexibility with operational excellence. Contact our team to discuss how we can support your cloud modernization journey.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a

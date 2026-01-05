@@ -202,7 +202,7 @@ export default function RealTimeAnalytics() {
             Invest in observability from the beginning. Real-time systems are complex, and problems can cascade quickly. Comprehensive monitoring, logging, and alerting enable rapid problem identification and resolution. Operational maturity often determines real-time system success more than technology selection.
           </p>
           <p className="mx-auto mt-4 max-w-3xl text-white/90">
-            NexDyne's data engineering practice has implemented real-time analytics solutions processing billions of events daily for government clients. From architecture design through implementation and operations, we help agencies build streaming capabilities that transform decision-making. Contact our team to discuss your real-time analytics requirements.
+            Thalen's data engineering practice has implemented real-time analytics solutions processing billions of events daily for government clients. From architecture design through implementation and operations, we help agencies build streaming capabilities that transform decision-making. Contact our team to discuss your real-time analytics requirements.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <motion.button

@@ -178,7 +178,7 @@ export default function SecurityAssessment() {
         <div className="container">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
-              Why Choose NexDyne
+              Why Choose Thalen Technologies
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Expertise in Government & Defense Compliance
@@ -315,7 +315,7 @@ export default function SecurityAssessment() {
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Start with a comprehensive readiness assessment and discover how
-            NexDyne Technology can accelerate your path to FedRAMP, StateRAMP,
+            Thalen Technologies can accelerate your path to FedRAMP, StateRAMP,
             CMMC, or NIST compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

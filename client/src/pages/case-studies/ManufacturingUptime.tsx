@@ -150,7 +150,7 @@ export default function ManufacturingUptime() {
               <p>
                 The manufacturer needed a comprehensive solution that addressed
                 both the technical and cultural dimensions of the reliability
-                challenge. Working with NexDyne, the organization deployed an
+                challenge. Working with Thalen Technologies, the organization deployed an
                 integrated platform combining industrial cybersecurity, IoT sensor
                 networks, and artificial intelligence-powered predictive
                 maintenance. The implementation began with a detailed assessment
@@ -212,7 +212,7 @@ export default function ManufacturingUptime() {
             Ready to Enhance Your Operations?
           </h2>
           <p className="text-lg text-white/80 mb-8">
-            Learn how NexDyne's industrial solutions can drive efficiency and
+            Learn how Thalen's industrial solutions can drive efficiency and
             reliability in your manufacturing environment.
           </p>
           <div className="flex justify-center gap-4">

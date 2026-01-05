@@ -143,7 +143,7 @@ export default function Cybersecurity() {
               Cybersecurity & Compliance
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              NexDyne Technology delivers security through a dual approach: first, we strengthen your existing security posture with gap assessments, control implementation, and compliance frameworks—then deploy FedRAMP security platforms (Splunk Gov, CrowdStrike Gov) when compliance mandates it or threat models require certified tools. Vendor-neutral consulting with cleared security professionals and proven ATO success.
+              Thalen Technologies delivers security through a dual approach: first, we strengthen your existing security posture with gap assessments, control implementation, and compliance frameworks—then deploy FedRAMP security platforms (Splunk Gov, CrowdStrike Gov) when compliance mandates it or threat models require certified tools. Vendor-neutral consulting with cleared security professionals and proven ATO success.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">

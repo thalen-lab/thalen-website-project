@@ -16,7 +16,7 @@ export default function SmallBusinessCertifications() {
             Trusted Government Partner
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto">
-            NexDyne Technology brings deep expertise, proven credentials, and unwavering commitment to government mission success.
+            Thalen Technologies brings deep expertise, proven credentials, and unwavering commitment to government mission success.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function SmallBusinessCertifications() {
               <div className="w-16 h-1 bg-[#FF6B35] rounded-full"></div>
             </div>
             <p className="text-slate-300 mb-6 leading-relaxed">
-              For over two decades, NexDyne has been the trusted technology partner for federal, state, and local government agencies. Our deep institutional knowledge and battle-tested methodologies ensure mission success every time.
+              For over two decades, Thalen Technologies has been the trusted technology partner for federal, state, and local government agencies. Our deep institutional knowledge and battle-tested methodologies ensure mission success every time.
             </p>
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2 text-slate-300 text-sm">

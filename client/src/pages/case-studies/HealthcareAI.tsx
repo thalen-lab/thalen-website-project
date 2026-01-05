@@ -80,7 +80,7 @@ export default function HealthcareAI() {
             
             <div className="prose prose-lg max-w-none text-slate-600">
               <p className="leading-relaxed mb-6">
-                The healthcare system needed more than a technical integration project. It required a fundamental transformation in how clinical data flowed through the organization and how that data informed patient care. Working with NexDyne, the organization designed and deployed an AI-powered analytics platform that created a unified view of patient information while respecting the autonomy of individual facilities and their existing systems.
+                The healthcare system needed more than a technical integration project. It required a fundamental transformation in how clinical data flowed through the organization and how that data informed patient care. Working with Thalen Technologies, the organization designed and deployed an AI-powered analytics platform that created a unified view of patient information while respecting the autonomy of individual facilities and their existing systems.
               </p>
               
               <p className="leading-relaxed mb-6">

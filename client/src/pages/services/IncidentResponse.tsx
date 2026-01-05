@@ -87,7 +87,7 @@ export default function IncidentResponse() {
               Incident Response & Forensics
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8">
-              Rapid incident response and digital forensics services to contain breaches, investigate root causes, and restore operations with minimal impact. NexDyne Technology's TS/SCI cleared team delivers court-admissible forensic analysis and expert breach response for government agencies (federal, state, local).
+              Rapid incident response and digital forensics services to contain breaches, investigate root causes, and restore operations with minimal impact. Thalen Technologies's TS/SCI cleared team delivers court-admissible forensic analysis and expert breach response for government agencies (federal, state, local).
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
@@ -229,7 +229,7 @@ export default function IncidentResponse() {
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Prepare for Security Incidents</h2>
           <p className="text-xl text-white/90 mb-8">
-            Establish incident response capabilities before a breach occurs. Contact NexDyne Technology to develop your IR plan or activate emergency response services.
+            Establish incident response capabilities before a breach occurs. Contact Thalen Technologies to develop your IR plan or activate emergency response services.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

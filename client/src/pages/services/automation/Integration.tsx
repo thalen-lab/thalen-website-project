@@ -113,7 +113,7 @@ export default function Integration() {
               Enterprise Integration Platform
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              Your agency runs on dozens of disconnected systems. Financial data lives in one place, HR records in another, and mission-critical information is scattered across legacy mainframes and modern cloud apps. NexDyne Technology's integration platform connects everything—securely, automatically, and without expensive system replacements.
+              Your agency runs on dozens of disconnected systems. Financial data lives in one place, HR records in another, and mission-critical information is scattered across legacy mainframes and modern cloud apps. Thalen Technologies's integration platform connects everything—securely, automatically, and without expensive system replacements.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
@@ -194,7 +194,7 @@ export default function Integration() {
                 Commercial integration platforms assume you're working with modern, API-enabled systems in a single cloud environment. That's not reality for government agencies. You're running mission-critical applications on mainframes from the 1980s alongside current AI tools.
               </p>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                NexDyne Technology's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs.
+                Thalen Technologies's integration platform was purpose-built for this complexity. We connect AS/400 mainframes to Salesforce. We synchronize data across classified and unclassified networks. We integrate COTS products that don't have APIs.
               </p>
               <div className="space-y-4">
                 {[
@@ -249,7 +249,7 @@ export default function Integration() {
               Common Integration Challenges We Solve
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              From defense contractors to civilian agencies, organizations trust NexDyne Technology to connect their most complex systems.
+              From defense contractors to civilian agencies, organizations trust Thalen Technologies to connect their most complex systems.
             </p>
           </motion.div>
 
@@ -294,7 +294,7 @@ export default function Integration() {
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
-              The NexDyne Technology Integration Methodology
+              The Thalen Technologies Integration Methodology
             </h2>
             <p className="text-lg text-slate-600">
               We don't just connect systems—we architect sustainable integration ecosystems.

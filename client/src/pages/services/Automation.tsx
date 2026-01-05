@@ -101,7 +101,7 @@ export default function Automation() {
               Intelligent Automation & Process Optimization
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              NexDyne Technology delivers automation through a dual approach: first, we modernize and optimize your existing workflows, systems, and processes—then implement FedRAMP/StateRAMP-authorized platforms (UiPath Gov, Automation Anywhere Gov) only when new capabilities are needed or compliance requires it.
+              Thalen Technologies delivers automation through a dual approach: first, we modernize and optimize your existing workflows, systems, and processes—then implement FedRAMP/StateRAMP-authorized platforms (UiPath Gov, Automation Anywhere Gov) only when new capabilities are needed or compliance requires it.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">

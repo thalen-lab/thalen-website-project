@@ -88,11 +88,11 @@ export default function About() {
               
               <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/90">
                 <p>
-                  For 25 years, NexDyne Technology has been the trusted technology partner for federal, state, and local government agencies. We've witnessed the evolution of government technology—from legacy mainframes to cloud-native solutions—and we've been there every step of the way, helping our agency partners navigate complex transformations.
+                  For 25 years, Thalen Technologies has been the trusted technology partner for federal, state, and local government agencies. We've witnessed the evolution of government technology—from legacy mainframes to cloud-native solutions—and we've been there every step of the way, helping our agency partners navigate complex transformations.
                 </p>
                 
                 <p>
-                  We founded NexDyne with a simple mission: to deliver mission-enabling technology that puts government objectives first. We saw too many technology providers focused on selling products rather than solving problems. We knew there had to be a better way—one that combined deep government expertise with battle-tested methodologies.
+                  We founded Thalen Technologies with a simple mission: to deliver mission-enabling technology that puts government objectives first. We saw too many technology providers focused on selling products rather than solving problems. We knew there had to be a better way—one that combined deep government expertise with battle-tested methodologies.
                 </p>
                 
                 <p>
@@ -468,7 +468,7 @@ export default function About() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">Federal Acquisition Regulation (FAR) Compliance</h3>
                 <p className="text-sm text-slate-600 mb-4">
-                  NexDyne Technology maintains compliance with Federal Acquisition Regulation requirements for government IT services, including FAR Part 39 (Acquisition of Information Technology) and associated security clauses.
+                  Thalen Technologies maintains compliance with Federal Acquisition Regulation requirements for government IT services, including FAR Part 39 (Acquisition of Information Technology) and associated security clauses.
                 </p>
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
                   <div>
@@ -502,12 +502,12 @@ export default function About() {
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Our Vision for the Future</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-              Organizations around the world are using NexDyne Technology to transform their most important operations.
+              Organizations around the world are using Thalen Technologies to transform their most important operations.
             </h2>
             
             <div className="space-y-6 text-lg text-white/90">
               <p>
-                With NexDyne Technology's automation strategies, government agencies are achieving new levels of operational efficiency while maintaining the highest security standards. Federal departments are reducing processing times from weeks to hours, healthcare systems are improving patient outcomes through streamlined workflows, and critical infrastructure operators are enhancing reliability through predictive automation.
+                With Thalen Technologies's automation strategies, government agencies are achieving new levels of operational efficiency while maintaining the highest security standards. Federal departments are reducing processing times from weeks to hours, healthcare systems are improving patient outcomes through streamlined workflows, and critical infrastructure operators are enhancing reliability through predictive automation.
               </p>
               
               <p>

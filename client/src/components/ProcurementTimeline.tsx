@@ -69,7 +69,7 @@ function getRecommendation(answers: Record<string, string>): Recommendation {
       description: 'Fastest procurement path using pre-negotiated contracts with no RFP required. Perfect for your urgent timeline and cooperative purchasing experience.',
       nextSteps: [
         'Verify your agency is eligible for NASPO ValuePoint, Sourcewell, or OMNIA Partners contracts',
-        'Review NexDyne Technology contract numbers and scope of services',
+        'Review Thalen Technologies contract numbers and scope of services',
         'Issue purchase order or task order directly',
         'Schedule kickoff meeting within 1-2 weeks'
       ]
@@ -83,7 +83,7 @@ function getRecommendation(answers: Record<string, string>): Recommendation {
       timeline: '1-4 weeks',
       description: 'Streamlined procurement through your state-specific IT services master agreement with pre-approved vendor status.',
       nextSteps: [
-        'Contact us to confirm your state has a master agreement with NexDyne Technology',
+        'Contact us to confirm your state has a master agreement with Thalen Technologies',
         'Review state-specific contract terms and pricing',
         'Issue task order against state contract',
         'Begin project within 1-4 weeks depending on state requirements'
@@ -99,9 +99,9 @@ function getRecommendation(answers: Record<string, string>): Recommendation {
       description: 'Leverage federal or state grant funding (ARPA, BEAD, state technology grants) with comprehensive compliance tracking and audit-ready documentation.',
       nextSteps: [
         'Confirm grant eligibility and funding availability',
-        'Review grant compliance requirements with NexDyne Technology team',
+        'Review grant compliance requirements with Thalen Technologies team',
         'Develop project scope aligned with grant objectives',
-        'Submit grant application or amendment with NexDyne Technology as implementation partner',
+        'Submit grant application or amendment with Thalen Technologies as implementation partner',
         'Begin project upon grant approval'
       ]
     };
@@ -115,7 +115,7 @@ function getRecommendation(answers: Record<string, string>): Recommendation {
       description: 'Comprehensive RFP response with local references, transparent pricing, and full compliance documentation tailored to your requirements.',
       nextSteps: [
         'Issue RFP with detailed requirements and evaluation criteria',
-        'NexDyne Technology will submit comprehensive response within 2-3 weeks',
+        'Thalen Technologies will submit comprehensive response within 2-3 weeks',
         'Participate in oral presentations or demonstrations as required',
         'Award contract and begin project planning',
         'Typical total timeline: 8-12 weeks from RFP to project start'
@@ -130,7 +130,7 @@ function getRecommendation(answers: Record<string, string>): Recommendation {
     description: 'Streamlined procurement using cooperative purchasing contracts with pre-negotiated pricing and simplified compliance.',
     nextSteps: [
       'Verify your agency eligibility for cooperative contracts',
-      'Review contract options and pricing with NexDyne Technology team',
+      'Review contract options and pricing with Thalen Technologies team',
       'Issue purchase order against selected cooperative contract',
       'Schedule project kickoff within 2-4 weeks'
     ]

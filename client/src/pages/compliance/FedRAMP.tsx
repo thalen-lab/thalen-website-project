@@ -92,7 +92,7 @@ export default function FedRAMP() {
               <span className="block text-white/80 mt-2">For Federal Agencies</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              Navigate the Federal Risk and Authorization Management Program (FedRAMP) with confidence. NexDyne delivers secure, compliant cloud solutions that meet the rigorous requirements of federal government agencies.
+              Navigate the Federal Risk and Authorization Management Program (FedRAMP) with confidence. Thalen Technologies delivers secure, compliant cloud solutions that meet the rigorous requirements of federal government agencies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
@@ -202,7 +202,7 @@ export default function FedRAMP() {
         </div>
       </section>
 
-      {/* NexDyne's FedRAMP Services */}
+      {/* Thalen's FedRAMP Services */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container max-w-5xl">
           <motion.div
@@ -213,7 +213,7 @@ export default function FedRAMP() {
             className="text-center mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">NexDyne's FedRAMP Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Thalen's FedRAMP Services</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We guide federal agencies and cloud service providers through every phase of the FedRAMP authorization process
             </p>

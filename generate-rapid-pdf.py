@@ -109,11 +109,11 @@ def generate_rapid_framework_pdf():
     pdf.ln(40)
     pdf.set_font('Arial', 'B', 18)
     pdf.set_text_color(30, 58, 138)
-    pdf.cell(0, 10, 'Thalen Technology', 0, 1, 'C')
+    pdf.cell(0, 10, 'Thalen Technologies, Inc', 0, 1, 'C')
     
     pdf.set_font('Arial', '', 11)
     pdf.set_text_color(100, 100, 100)
-    pdf.cell(0, 6, 'Intelligence, Delivered', 0, 1, 'C')
+    pdf.cell(0, 6, 'Govern Smart', 0, 1, 'C')
     
     # ============ EXECUTIVE SUMMARY ============
     pdf.add_page()

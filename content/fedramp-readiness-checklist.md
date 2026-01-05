@@ -2,7 +2,7 @@
 ## A Comprehensive Guide to Federal Risk and Authorization Management Program Compliance
 
 **Published by Thalen Technologies**  
-*Intelligence, Delivered*
+*Govern Smart*
 
 ---
 

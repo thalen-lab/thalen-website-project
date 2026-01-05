@@ -188,7 +188,7 @@ export default function FederalSolutions() {
               Government Solutions & Contract Vehicles
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              NexDyne Technology is a trusted government IT implementation partner with GSA Schedule contracts, StateRAMP expertise, proven past performance, and cleared personnel ready to support federal, state, and local government agencies.
+              Thalen Technologies is a trusted government IT implementation partner with GSA Schedule contracts, StateRAMP expertise, proven past performance, and cleared personnel ready to support federal, state, and local government agencies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
@@ -272,7 +272,7 @@ export default function FederalSolutions() {
             className="text-center mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Why Procure Through NexDyne Technology?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Why Procure Through Thalen Technologies?</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Streamlined acquisition, competitive pricing, and proven delivery reduce risk and accelerate mission outcomes.
             </p>
@@ -411,7 +411,7 @@ export default function FederalSolutions() {
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Regulatory Compliance</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal Acquisition Regulation (FAR) Compliance</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              NexDyne Technology maintains compliance with Federal Acquisition Regulation requirements for government IT services, ensuring streamlined contract execution and reduced agency risk.
+              Thalen Technologies maintains compliance with Federal Acquisition Regulation requirements for government IT services, ensuring streamlined contract execution and reduced agency risk.
             </p>
           </motion.div>
 
@@ -597,7 +597,7 @@ export default function FederalSolutions() {
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Partnerships</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Teaming & Subcontracting Partnerships</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              NexDyne Technology partners with certified small businesses to strengthen proposals for set-aside contracts and deliver comprehensive solutions.
+              Thalen Technologies partners with certified small businesses to strengthen proposals for set-aside contracts and deliver comprehensive solutions.
             </p>
           </motion.div>
 
@@ -637,7 +637,7 @@ export default function FederalSolutions() {
                 <div className="grid md:grid-cols-2 gap-6">
                   {[
                     { title: 'Set-Aside Contract Eligibility', description: 'Our small business partnerships enable participation in 8(a), SDVOSB, WOSB, and HUBZone set-aside contracts, expanding opportunities for both prime and subcontractor roles.' },
-                    { title: 'Complementary Expertise', description: 'Partners bring specialized capabilities in niche technologies, regional presence, and industry-specific domain knowledge that complement NexDyne Technology\'s core competencies.' },
+                    { title: 'Complementary Expertise', description: 'Partners bring specialized capabilities in niche technologies, regional presence, and industry-specific domain knowledge that complement Thalen Technologies\'s core competencies.' },
                     { title: 'Proven Teaming Success', description: '15+ successful teaming arrangements resulting in $45M+ in contract awards, with documented past performance demonstrating effective collaboration and delivery.' },
                     { title: 'Mentor-Protégé Programs', description: 'Active participation in SBA Mentor-Protégé and agency-specific programs, providing technical assistance and business development support to small business partners.' }
                   ].map((item, index) => (
@@ -658,7 +658,7 @@ export default function FederalSolutions() {
 
           <div className="text-center mt-12">
             <p className="text-slate-600 mb-6">
-              Interested in teaming with NexDyne Technology on an upcoming opportunity? Contact our partnerships team.
+              Interested in teaming with Thalen Technologies on an upcoming opportunity? Contact our partnerships team.
             </p>
             <Button asChild variant="outline" size="lg" className="border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)]">
               <Link href="/contact/partnerships">
@@ -813,7 +813,7 @@ export default function FederalSolutions() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work with NexDyne Technology?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work with Thalen Technologies?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Generate a customized capability statement, schedule a consultation, or learn more about our government contract vehicles and past performance.
             </p>

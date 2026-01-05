@@ -77,7 +77,7 @@ export default function StateEnergyCommission() {
               A state Energy Commission serving 8.5 million residents faced increasing grid outages due to aging infrastructure and reactive maintenance practices. The commission manually monitored 500+ substations across the state with no early warning system for equipment failures. Outages disrupted businesses, affected critical services, and cost the state economy over $45 million annually. Emergency repairs were expensive and time-consuming, while residents experienced extended power disruptions.
             </p>
             <p className="mb-6">
-              NexDyne Technologies was selected through a competitive state procurement process to design and implement a StateRAMP-authorized IoT platform for real-time grid monitoring and predictive maintenance. The solution would deploy 15,000+ sensors across 500+ substations, integrate with legacy SCADA systems, and use machine learning to predict equipment failures weeks in advance.
+              Thalen Technologies Technologies was selected through a competitive state procurement process to design and implement a StateRAMP-authorized IoT platform for real-time grid monitoring and predictive maintenance. The solution would deploy 15,000+ sensors across 500+ substations, integrate with legacy SCADA systems, and use machine learning to predict equipment failures weeks in advance.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-[oklch(0.97_0.01_250)] rounded-lg">
               <div>
@@ -141,7 +141,7 @@ export default function StateEnergyCommission() {
             {[
               {
                 title: "StateRAMP-Authorized IoT Platform",
-                description: "NexDyne deployed a StateRAMP-authorized cloud platform on Azure Government with 15,000+ IoT sensors across 500+ substations, collecting real-time data on temperature, vibration, load, and equipment health.",
+                description: "Thalen Technologies deployed a StateRAMP-authorized cloud platform on Azure Government with 15,000+ IoT sensors across 500+ substations, collecting real-time data on temperature, vibration, load, and equipment health.",
                 points: [
                   'Deployed 15,000+ IoT sensors across 500+ substations statewide',
                   'Implemented StateRAMP-authorized Azure Government cloud infrastructure',
@@ -241,7 +241,7 @@ export default function StateEnergyCommission() {
       {/* CTA */}
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl">
-          <h2 className="text-4xl font-bold mb-6">Modernize Your Infrastructure with NexDyne</h2>
+          <h2 className="text-4xl font-bold mb-6">Modernize Your Infrastructure with Thalen Technologies</h2>
           <p className="text-xl text-white/80 mb-8">
             Secure, compliant, and powerful solutions for the public sector. Let's discuss how our IoT and analytics platforms can transform your operations, reduce costs, and improve services for your constituents.
           </p>

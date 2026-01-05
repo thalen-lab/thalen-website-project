@@ -75,7 +75,7 @@ export default function VAHealthcare() {
             
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                The medical center needed an integration platform that could connect diverse healthcare systems while meeting the strict security and compliance requirements that govern VA operations. Working with NexDyne, the medical center deployed a FedRAMP-authorized integration platform as a service that established secure, real-time connections between all twelve legacy systems. The platform translated data between the different formats and standards that each system used, enabling seamless information flow while preserving the specialized functionality that made each system valuable to its users.
+                The medical center needed an integration platform that could connect diverse healthcare systems while meeting the strict security and compliance requirements that govern VA operations. Working with Thalen Technologies, the medical center deployed a FedRAMP-authorized integration platform as a service that established secure, real-time connections between all twelve legacy systems. The platform translated data between the different formats and standards that each system used, enabling seamless information flow while preserving the specialized functionality that made each system valuable to its users.
               </p>
               
               <p className="text-slate-600 text-lg leading-relaxed mb-6">

@@ -92,7 +92,7 @@ export default function StateRAMP() {
               <span className="block text-white/80 mt-2">For State, Local & Tribal Governments</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              Navigate state and local government cloud security requirements with confidence. NexDyne delivers secure, compliant cloud solutions tailored to the unique needs of state agencies, municipalities, and tribal governments.
+              Navigate state and local government cloud security requirements with confidence. Thalen Technologies delivers secure, compliant cloud solutions tailored to the unique needs of state agencies, municipalities, and tribal governments.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
@@ -234,7 +234,7 @@ export default function StateRAMP() {
         </div>
       </section>
 
-      {/* NexDyne's StateRAMP Services */}
+      {/* Thalen's StateRAMP Services */}
       <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-5xl">
           <motion.div
@@ -245,7 +245,7 @@ export default function StateRAMP() {
             className="text-center mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">NexDyne's StateRAMP & GovRAMP Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Thalen's StateRAMP & GovRAMP Services</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We guide state, local, and tribal governments through cloud security compliance with tailored solutions for your jurisdiction
             </p>

@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Company Info - Full width on mobile */}
           <div className="col-span-2 lg:col-span-2">
             <div className="mb-4">
-              <span className="text-2xl md:text-3xl font-bold">NexDyne Technology</span>
+              <span className="text-2xl md:text-3xl font-bold">Thalen Technologies, Inc</span>
             </div>
             <p className="text-sm opacity-90 mb-2 max-w-sm font-semibold text-[#FF6B35]">
               Powering Government Mission Success
@@ -177,7 +177,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-75 gap-4">
-          <p className="text-center md:text-left">© 2024 NexDyne Technology. All rights reserved.</p>
+          <p className="text-center md:text-left">© 2024 Thalen Technologies, Inc. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             <Link href="/privacy" className="hover:text-orange-signature transition-colors py-1">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-orange-signature transition-colors py-1">Terms of Service</Link>

@@ -272,7 +272,7 @@ export default function ChangeManagement() {
               href="#contact"
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-white text-[oklch(0.22_0.06_250)] hover:bg-gray-100 transition-colors duration-300 shadow-lg"
             >
-              Partner with NexDyne <ArrowRight className="ml-2 h-5 w-5" />
+              Partner with Thalen Technologies <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </motion.div>
         </div>

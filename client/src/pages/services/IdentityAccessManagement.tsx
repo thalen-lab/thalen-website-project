@@ -49,7 +49,7 @@ export default function IdentityAccessManagement() {
       category: 'Federal Government',
       title: 'Federal Agency Implements Zero Trust IAM',
       description: 'Deployed enterprise-wide Zero Trust identity solution with PIV/CAC authentication for 25,000+ users. Achieved NIST 800-63 AAL3 compliance with 99.9% authentication uptime.',
-      attribution: 'Led by NexDyne Technology IAM Practice',
+      attribution: 'Led by Thalen Technologies IAM Practice',
       tags: ['Zero Trust', 'PIV/CAC', 'FedRAMP'],
       link: '/case-studies/federal-agency-automation'
     },
@@ -57,7 +57,7 @@ export default function IdentityAccessManagement() {
       category: 'Defense',
       title: 'DoD Contractor PAM Implementation',
       description: 'Implemented privileged access management across classified and unclassified networks. Reduced credential exposure risk by 95% with automated rotation.',
-      attribution: 'Led by NexDyne Technology Security Team',
+      attribution: 'Led by Thalen Technologies Security Team',
       tags: ['PAM', 'CMMC', 'Defense'],
       link: '/case-studies/dod-manufacturing-uptime'
     },
@@ -65,7 +65,7 @@ export default function IdentityAccessManagement() {
       category: 'Healthcare',
       title: 'VA Medical Center SSO Deployment',
       description: 'Deployed federated SSO across 12 healthcare applications. Reduced login time by 80% while maintaining HIPAA compliance.',
-      attribution: 'Led by NexDyne Technology Healthcare Practice',
+      attribution: 'Led by Thalen Technologies Healthcare Practice',
       tags: ['SSO', 'HIPAA', 'Healthcare'],
       link: '/case-studies/va-medical-integration'
     }
@@ -142,7 +142,7 @@ export default function IdentityAccessManagement() {
               Identity & Access Management (IAM)
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              Implement Zero Trust identity solutions with PIV/CAC authentication, privileged access management, and automated governance. NexDyne Technology delivers government-grade IAM that meets NIST 800-63 identity assurance requirements (federal, state, local) while improving user experience.
+              Implement Zero Trust identity solutions with PIV/CAC authentication, privileged access management, and automated governance. Thalen Technologies delivers government-grade IAM that meets NIST 800-63 identity assurance requirements (federal, state, local) while improving user experience.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
@@ -461,7 +461,7 @@ export default function IdentityAccessManagement() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Implement Zero Trust Identity</h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Schedule an IAM assessment and discover how NexDyne Technology can deliver secure, compliant identity and access management for your government environment.
+              Schedule an IAM assessment and discover how Thalen Technologies can deliver secure, compliant identity and access management for your government environment.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">

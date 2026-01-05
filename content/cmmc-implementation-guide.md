@@ -2,7 +2,7 @@
 ## Cybersecurity Maturity Model Certification for Defense Industrial Base
 
 **Published by Thalen Technologies**  
-*Intelligence, Delivered*
+*Govern Smart*
 
 ---
 

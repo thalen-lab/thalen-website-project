@@ -94,7 +94,7 @@ export default function FedRAMP() {
   const caseStudy = {
     title: "SaaS Provider Achieves FedRAMP Moderate Authorization in 9 Months",
     challenge: "A leading SaaS platform needed FedRAMP Moderate authorization to expand into the federal market but lacked internal expertise and resources.",
-    solution: "NexDyne led the complete FedRAMP authorization process, from readiness assessment through successful authorization, implementing 325+ security controls and managing the 3PAO assessment.",
+    solution: "Thalen Technologies led the complete FedRAMP authorization process, from readiness assessment through successful authorization, implementing 325+ security controls and managing the 3PAO assessment.",
     results: [
       "Achieved FedRAMP Moderate authorization in 9 months",
       "Implemented 325+ security controls across AWS infrastructure",

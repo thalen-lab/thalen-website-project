@@ -1,4 +1,4 @@
-// Service Worker for NexDyne PWA
+// Service Worker for Thalen Technologies PWA
 // Enhanced offline capability with advanced caching strategies
 
 const CACHE_VERSION = 'v2';
@@ -365,7 +365,7 @@ self.addEventListener('push', (event) => {
   console.log('[Service Worker] Push received:', event);
   
   let notificationData = {
-    title: 'NexDyne',
+    title: 'Thalen Technologies',
     body: 'You have a new notification',
     icon: '/pwa-icon-192.png',
     badge: '/badge.png',

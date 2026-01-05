@@ -269,7 +269,7 @@ export default function CloudSecurity() {
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Secure Your Cloud Infrastructure?</h2>
           <p className="text-xl text-white/90 mb-8">
-            Start with a comprehensive security assessment and discover how NexDyne can deliver FedRAMP-authorized platforms and CMMC compliance consulting for your cloud security needs.
+            Start with a comprehensive security assessment and discover how Thalen Technologies can deliver FedRAMP-authorized platforms and CMMC compliance consulting for your cloud security needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

@@ -107,7 +107,7 @@ export default function DefenseCloud() {
             
             <div className="space-y-8">
               <p className="text-lg text-white/90 leading-relaxed">
-                The contractor needed more than a lift-and-shift migration. The organization required a transformation that would modernize application architectures, strengthen security posture, and establish a foundation for continuous innovation. Working with NexDyne, the contractor designed and executed an eighteen-month migration strategy that moved more than 150 applications and 500 terabytes of classified data to AWS GovCloud and Azure Government environments.
+                The contractor needed more than a lift-and-shift migration. The organization required a transformation that would modernize application architectures, strengthen security posture, and establish a foundation for continuous innovation. Working with Thalen Technologies, the contractor designed and executed an eighteen-month migration strategy that moved more than 150 applications and 500 terabytes of classified data to AWS GovCloud and Azure Government environments.
               </p>
               
               <p className="text-lg text-white/90 leading-relaxed">

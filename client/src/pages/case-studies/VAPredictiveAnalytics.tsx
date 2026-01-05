@@ -93,7 +93,7 @@ export default function VAPredictiveAnalytics() {
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8 text-[oklch(0.20_0.05_250)]">Implementing an Intelligent Claims Prioritization Engine</h2>
           <div className="prose prose-lg max-w-none text-slate-600">
             <p>
-              NexDyne partnered with the VA to design and deploy a comprehensive Predictive Analytics solution centered on a machine learning-driven claims prioritization engine. The initial phase involved building sophisticated models trained on over 12 million historical claims. These models analyze incoming submissions against 47 key variables—including claimed conditions, completeness of medical evidence, service history patterns, and past adjudication outcomes—to assign a real-time complexity score (1-10) to each claim within seconds of its arrival.
+              Thalen Technologies partnered with the VA to design and deploy a comprehensive Predictive Analytics solution centered on a machine learning-driven claims prioritization engine. The initial phase involved building sophisticated models trained on over 12 million historical claims. These models analyze incoming submissions against 47 key variables—including claimed conditions, completeness of medical evidence, service history patterns, and past adjudication outcomes—to assign a real-time complexity score (1-10) to each claim within seconds of its arrival.
             </p>
             <p>
               The core innovation was the development of an intelligent claim routing system. This system leverages the predictive complexity score to automatically match claims with the most suitable adjudicators based on their specific expertise, current workload, and historical performance metrics. Simple, low-complexity claims (scores 1-3) are fast-tracked to specialized teams for rapid resolution, often within days. Conversely, highly complex cases (scores 8-10) are routed to senior adjudicators with relevant medical and legal expertise, ensuring they receive the necessary attention without delaying simpler cases.
@@ -148,7 +148,7 @@ export default function VAPredictiveAnalytics() {
         <div className="container max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">Ready to Transform Your Mission-Critical Operations?</h2>
           <p className="text-xl text-white/90 mb-8">
-            Discover how NexDyne's predictive analytics and AI solutions can help your agency reduce backlogs, optimize resource allocation, and deliver superior service.
+            Discover how Thalen's predictive analytics and AI solutions can help your agency reduce backlogs, optimize resource allocation, and deliver superior service.
           </p>
           <Link href="/contact">
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 text-lg font-semibold px-8 py-6 rounded-full">

@@ -73,7 +73,7 @@ export default function DoDManufacturing() {
               A Department of Defense manufacturing facility producing critical defense components across 50 production lines experienced 150+ unplanned downtime incidents annually. The facility's aging industrial control systems, some over 15 years old, lacked predictive maintenance capabilities and had significant cybersecurity vulnerabilities. Unplanned downtime disrupted mission-critical production schedules, threatened delivery commitments, and cost over $18 million annually in lost production and emergency repairs.
             </p>
             <p>
-              NexDyne Technologies was awarded a contract through DoD's IDIQ vehicle to modernize the facility's cybersecurity posture, implement predictive maintenance analytics, and achieve CMMC Level 3 certification. The solution would eliminate unplanned downtime, provide real-time operational visibility, and ensure compliance with stringent defense cybersecurity requirements.
+              Thalen Technologies Technologies was awarded a contract through DoD's IDIQ vehicle to modernize the facility's cybersecurity posture, implement predictive maintenance analytics, and achieve CMMC Level 3 certification. The solution would eliminate unplanned downtime, provide real-time operational visibility, and ensure compliance with stringent defense cybersecurity requirements.
             </p>
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function DoDManufacturing() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">FedRAMP-Authorized Cybersecurity Platform</h3>
                 <p className="text-lg text-slate-600 mb-6">
-                  NexDyne deployed FedRAMP-authorized cybersecurity platforms with zero-trust network architecture and continuous monitoring specifically designed for ICS/SCADA environments.
+                  Thalen Technologies deployed FedRAMP-authorized cybersecurity platforms with zero-trust network architecture and continuous monitoring specifically designed for ICS/SCADA environments.
                 </p>
                 <ul className="space-y-3 text-slate-600">
                   {[
@@ -140,7 +140,7 @@ export default function DoDManufacturing() {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Client Testimonial</h3>
               <blockquote className="text-lg italic text-slate-600 mb-4 border-l-4 border-[oklch(0.65_0.18_55)] pl-6">
-                "NexDyne's predictive maintenance platform transformed our manufacturing operations. We went from 150+ unplanned downtime incidents per year to just 38, achieving 99.2% uptime. The 72-hour advance warning for equipment failures allows us to schedule maintenance during planned downtime, eliminating emergency repairs that disrupted production."
+                "Thalen's predictive maintenance platform transformed our manufacturing operations. We went from 150+ unplanned downtime incidents per year to just 38, achieving 99.2% uptime. The 72-hour advance warning for equipment failures allows us to schedule maintenance during planned downtime, eliminating emergency repairs that disrupted production."
               </blockquote>
               <p className="font-semibold text-[oklch(0.20_0.05_250)]">— Facility Director, DoD Manufacturing Facility</p>
             </CardContent>
@@ -153,7 +153,7 @@ export default function DoDManufacturing() {
         <div className="container max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">Modernize Your Manufacturing Operations</h2>
           <p className="text-xl mb-8 text-white/90">
-            Learn how NexDyne can help your facility achieve operational excellence, implement predictive maintenance, and achieve CMMC compliance.
+            Learn how Thalen Technologies can help your facility achieve operational excellence, implement predictive maintenance, and achieve CMMC compliance.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact">

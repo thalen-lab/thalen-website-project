@@ -73,8 +73,8 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity shrink-0">
             <span className="text-lg sm:text-xl lg:text-2xl font-bold">
-              <span className="hidden md:inline">NexDyne Technology</span>
-              <span className="md:hidden">NexDyne</span>
+              <span className="hidden md:inline">Thalen Technologies, Inc</span>
+              <span className="md:hidden">Thalen</span>
             </span>
           </Link>
 

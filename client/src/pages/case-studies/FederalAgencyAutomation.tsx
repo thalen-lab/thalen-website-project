@@ -83,7 +83,7 @@ export default function FederalAgencyAutomation() {
               </p>
 
               <p className="leading-relaxed mb-6">
-                Working with NexDyne, the agency implemented a phased automation strategy using UiPath's FedRAMP-authorized robotic process automation platform. The approach prioritized high-volume, rules-based processes that could deliver immediate impact while building toward comprehensive workflow automation. The implementation began with establishing secure infrastructure and comprehensive audit logging, then expanded systematically across twelve additional workflows including data validation, document processing, and inter-system transfers.
+                Working with Thalen Technologies, the agency implemented a phased automation strategy using UiPath's FedRAMP-authorized robotic process automation platform. The approach prioritized high-volume, rules-based processes that could deliver immediate impact while building toward comprehensive workflow automation. The implementation began with establishing secure infrastructure and comprehensive audit logging, then expanded systematically across twelve additional workflows including data validation, document processing, and inter-system transfers.
               </p>
 
               <p className="leading-relaxed">

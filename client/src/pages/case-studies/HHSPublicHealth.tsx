@@ -79,7 +79,7 @@ export default function HHSPublicHealth() {
             
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                The department needed a platform that could integrate data from thousands of disparate sources while maintaining the flexibility to accommodate varying local capabilities and requirements. Working with NexDyne, HHS deployed a cloud-based real-time analytics platform that established secure connections to surveillance systems across all jurisdictions. The platform accepted data in multiple formats, automatically standardizing and de-duplicating records while preserving the detailed information that epidemiologists needed for investigation.
+                The department needed a platform that could integrate data from thousands of disparate sources while maintaining the flexibility to accommodate varying local capabilities and requirements. Working with Thalen Technologies, HHS deployed a cloud-based real-time analytics platform that established secure connections to surveillance systems across all jurisdictions. The platform accepted data in multiple formats, automatically standardizing and de-duplicating records while preserving the detailed information that epidemiologists needed for investigation.
               </p>
               
               <p className="text-slate-600 text-lg leading-relaxed mb-6">

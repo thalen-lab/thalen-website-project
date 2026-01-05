@@ -142,7 +142,7 @@ export default function CloudMigration() {
             className="text-center mb-12 max-w-3xl mx-auto"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Government Agencies Choose NexDyne</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Government Agencies Choose Thalen Technologies</h2>
             <p className="text-lg text-slate-600">
               Unlike commercial migration services, we understand government compliance requirements (FedRAMP, StateRAMP, CJIS), security clearances, and mission continuity imperatives.
             </p>

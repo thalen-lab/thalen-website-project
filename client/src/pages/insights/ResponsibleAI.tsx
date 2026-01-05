@@ -160,7 +160,7 @@ export default function ResponsibleAI() {
             The path forward requires sustained commitment from agency leadership, investment in governance capabilities, and genuine engagement with affected communities. Technical excellence must be paired with ethical rigor. The result is AI that serves the public interest while upholding the values that define democratic governance.
           </p>
           <p>
-            NexDyne's responsible AI practice combines technical expertise with deep understanding of government requirements and ethical considerations. Contact our team to discuss how we can support your agency's responsible AI journey.
+            Thalen's responsible AI practice combines technical expertise with deep understanding of government requirements and ethical considerations. Contact our team to discuss how we can support your agency's responsible AI journey.
           </p>
         </div>
       </div>
@@ -169,7 +169,7 @@ export default function ResponsibleAI() {
       <div className="bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container mx-auto px-4 py-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold">Ready to Implement Responsible AI?</h2>
-          <p className="mt-4 max-w-2xl mx-auto">Let NexDyne guide your agency toward ethical, transparent, and accountable AI solutions that build public trust.</p>
+          <p className="mt-4 max-w-2xl mx-auto">Let Thalen Technologies guide your agency toward ethical, transparent, and accountable AI solutions that build public trust.</p>
           <div className="mt-8">
             <button className="bg-white text-[oklch(0.22_0.06_250)] px-6 py-3 rounded-md font-semibold flex items-center gap-2 mx-auto">
               Contact Us <ArrowRight className="w-5 h-5" />

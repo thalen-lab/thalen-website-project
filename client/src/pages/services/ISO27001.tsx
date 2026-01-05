@@ -395,7 +395,7 @@ export default function ISO27001() {
               Implementation Methodology
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              NexDyne Technology's ISO 27001 implementation methodology is designed to minimize disruption while ensuring comprehensive coverage of all standard requirements. Our phased approach typically achieves certification readiness within 6-12 months.
+              Thalen Technologies's ISO 27001 implementation methodology is designed to minimize disruption while ensuring comprehensive coverage of all standard requirements. Our phased approach typically achieves certification readiness within 6-12 months.
             </p>
           </motion.div>
 
@@ -490,7 +490,7 @@ export default function ISO27001() {
         </div>
       </section>
 
-      {/* Why Choose NexDyne Technology Section */}
+      {/* Why Choose Thalen Technologies Section */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -503,11 +503,11 @@ export default function ISO27001() {
             >
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
-                Why Choose NexDyne Technology
+                Why Choose Thalen Technologies
               </h2>
               <div className="space-y-6 text-slate-600 leading-relaxed">
                 <p>
-                  NexDyne Technology brings deep expertise in information security management systems, with consultants who have led ISO 27001 implementations across government agencies, defense contractors, and Fortune 500 enterprises. Our team includes certified Lead Auditors and Lead Implementers who understand both the technical requirements and business implications of certification.
+                  Thalen Technologies brings deep expertise in information security management systems, with consultants who have led ISO 27001 implementations across government agencies, defense contractors, and Fortune 500 enterprises. Our team includes certified Lead Auditors and Lead Implementers who understand both the technical requirements and business implications of certification.
                 </p>
                 <p>
                   We take a pragmatic approach to ISO 27001 implementation, focusing on controls that deliver genuine security value rather than checkbox compliance. Our methodology integrates with your existing security investments and management systems, minimizing redundancy while maximizing protection.
@@ -551,7 +551,7 @@ export default function ISO27001() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Begin Your ISO 27001 Journey?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Contact our team to schedule a complimentary consultation and learn how NexDyne Technology can guide your organization to ISO 27001 certification.
+              Contact our team to schedule a complimentary consultation and learn how Thalen Technologies can guide your organization to ISO 27001 certification.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">

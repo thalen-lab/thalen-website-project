@@ -81,7 +81,7 @@ export default function HospitalWaitTimes() {
 
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                The hospital needed a platform that could provide complete visibility into emergency department operations while automating the coordination tasks that consumed valuable staff time. Working with NexDyne, the hospital deployed a patient flow optimization platform that integrated with the existing electronic medical records system to track every patient's journey from arrival through discharge. The platform provided real-time dashboards that showed patient locations, wait times, and treatment status, enabling staff to identify and address bottlenecks immediately.
+                The hospital needed a platform that could provide complete visibility into emergency department operations while automating the coordination tasks that consumed valuable staff time. Working with Thalen Technologies, the hospital deployed a patient flow optimization platform that integrated with the existing electronic medical records system to track every patient's journey from arrival through discharge. The platform provided real-time dashboards that showed patient locations, wait times, and treatment status, enabling staff to identify and address bottlenecks immediately.
               </p>
 
               <p className="text-slate-600 text-lg leading-relaxed mb-6">

@@ -135,7 +135,7 @@ export default function InfrastructureAsCode() {
               Infrastructure as Code (IaC)
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8">
-              Automate infrastructure provisioning with Terraform, CloudFormation, and Ansible for consistent, repeatable deployments across all environments. NexDyne Technology's IaC framework reduces provisioning time from days to minutes while ensuring FedRAMP compliance and audit-ready documentation.
+              Automate infrastructure provisioning with Terraform, CloudFormation, and Ansible for consistent, repeatable deployments across all environments. Thalen Technologies's IaC framework reduces provisioning time from days to minutes while ensuring FedRAMP compliance and audit-ready documentation.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
@@ -267,7 +267,7 @@ export default function InfrastructureAsCode() {
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Automate Your Infrastructure?</h2>
           <p className="text-xl text-white/90 mb-8">
-            Start with an IaC readiness assessment and discover how NexDyne Technology can deliver automated, version-controlled infrastructure with FedRAMP compliance.
+            Start with an IaC readiness assessment and discover how Thalen Technologies can deliver automated, version-controlled infrastructure with FedRAMP compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

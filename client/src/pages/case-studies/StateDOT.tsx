@@ -83,7 +83,7 @@ export default function StateDOT() {
               A state Department of Transportation managing 12,000+ miles of highway, 2,400 bridges, and $800M in annual infrastructure spending relied on a 40-year-old COBOL mainframe system for asset management. The legacy system lacked mobile access, real-time reporting, and integration with modern GIS platforms, creating operational inefficiencies and limiting the agency's ability to respond to infrastructure emergencies.
             </p>
             <p>
-              NexDyne Technology was selected through a competitive RFP process to migrate the DOT's asset management system to Salesforce Government Cloud, a StateRAMP-authorized platform. The project required zero downtime during migration, integration with existing GIS and financial systems, and comprehensive training for 850+ field and office personnel.
+              Thalen Technologies was selected through a competitive RFP process to migrate the DOT's asset management system to Salesforce Government Cloud, a StateRAMP-authorized platform. The project required zero downtime during migration, integration with existing GIS and financial systems, and comprehensive training for 850+ field and office personnel.
             </p>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function StateDOT() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Salesforce Government Cloud Migration</h3>
                 <p className="text-lg text-slate-600 mb-6">
-                  NexDyne Technology designed and implemented a comprehensive asset management solution on Salesforce Government Cloud (StateRAMP Authorized), replacing the 40-year-old mainframe with a modern, mobile-first platform.
+                  Thalen Technologies designed and implemented a comprehensive asset management solution on Salesforce Government Cloud (StateRAMP Authorized), replacing the 40-year-old mainframe with a modern, mobile-first platform.
                 </p>
                 <ul className="space-y-3 text-slate-600">
                   {[
@@ -281,7 +281,7 @@ export default function StateDOT() {
         <div className="container text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">Modernize Your Infrastructure</h2>
           <p className="text-xl text-white/80 mb-8">
-            NexDyne Technology helps government agencies replace legacy systems with secure, compliant, and efficient cloud platforms. Contact us to learn how we can help you achieve similar results.
+            Thalen Technologies helps government agencies replace legacy systems with secure, compliant, and efficient cloud platforms. Contact us to learn how we can help you achieve similar results.
           </p>
           <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
             <Link href="/contact">

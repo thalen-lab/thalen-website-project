@@ -268,7 +268,7 @@ export default function CMMC() {
             {[
               {
                 title: 'Cyber AB Registered Practitioner Organization',
-                content: 'NexDyne Technology is a Cyber AB Registered Practitioner Organization (RPO) with credentialed CMMC consultants authorized to provide advisory services to organizations pursuing CMMC certification.',
+                content: 'Thalen Technologies is a Cyber AB Registered Practitioner Organization (RPO) with credentialed CMMC consultants authorized to provide advisory services to organizations pursuing CMMC certification.',
                 note: 'Our consultants have completed training and maintain current knowledge of CMMC requirements, assessment processes, and implementation practices as validated by the Cyber Accreditation Body.'
               },
               {

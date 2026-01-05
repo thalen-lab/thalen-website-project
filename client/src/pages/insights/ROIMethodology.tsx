@@ -222,7 +222,7 @@ export default function ROIMethodology() {
           Start with clear objectives and measurable success criteria before launching automation projects. Invest in baseline measurement even when it delays project start. Build ROI tracking into automation operations from the beginning rather than attempting retrospective measurement.
         </p>
         <p className="text-slate-600">
-          NexDyne's automation practice incorporates ROI methodology into every engagement. From initial business case development through post-implementation measurement, we help clients demonstrate and maximize automation value. Contact our team to discuss how we can support your automation ROI objectives.
+          Thalen's automation practice incorporates ROI methodology into every engagement. From initial business case development through post-implementation measurement, we help clients demonstrate and maximize automation value. Contact our team to discuss how we can support your automation ROI objectives.
         </p>
       </div>
     </InsightArticleLayout>

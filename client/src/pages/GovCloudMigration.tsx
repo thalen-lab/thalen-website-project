@@ -475,12 +475,12 @@ export default function GovCloudMigration() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why NexDyne Technology</p>
+              <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Thalen Technologies</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
                 Proven Cloud Migration Expertise
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                NexDyne Technology has successfully migrated thousands of applications to government cloud platforms. Our team includes cleared personnel with deep expertise in FedRAMP, FISMA, and DoD compliance requirements.
+                Thalen Technologies has successfully migrated thousands of applications to government cloud platforms. Our team includes cleared personnel with deep expertise in FedRAMP, FISMA, and DoD compliance requirements.
               </p>
               
               {/* Bullet points */}

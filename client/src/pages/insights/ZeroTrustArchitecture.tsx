@@ -19,7 +19,7 @@ export default function ZeroTrustArchitecture() {
     >
       {/* Introduction */}
       <p className="text-xl leading-relaxed">
-        The federal government's cybersecurity landscape has fundamentally shifted. With Executive Order 14028 mandating zero-trust architecture adoption across all government agencies, organizations face the complex challenge of transforming legacy security models while maintaining operational continuity. This comprehensive guide provides a proven roadmap for government agencies implementing zero-trust architecture, drawing from NexDyne's experience deploying zero-trust solutions across 15+ government agencies.
+        The federal government's cybersecurity landscape has fundamentally shifted. With Executive Order 14028 mandating zero-trust architecture adoption across all government agencies, organizations face the complex challenge of transforming legacy security models while maintaining operational continuity. This comprehensive guide provides a proven roadmap for government agencies implementing zero-trust architecture, drawing from Thalen's experience deploying zero-trust solutions across 15+ government agencies.
       </p>
 
       {/* Key Takeaways */}
@@ -193,7 +193,7 @@ export default function ZeroTrustArchitecture() {
         Federal agencies that embrace zero-trust principles position themselves to address evolving threats while enabling modern workforce requirements including remote work and cloud adoption. The investment in zero-trust architecture pays dividends not only in improved security posture but also in operational agility and resilience.
       </p>
       <p>
-        NexDyne's experience across 15+ government zero-trust implementations demonstrates that success is achievable with proper planning, stakeholder engagement, and technical expertise. Contact our federal security team to discuss how we can support your agency's zero-trust journey.
+        Thalen's experience across 15+ government zero-trust implementations demonstrates that success is achievable with proper planning, stakeholder engagement, and technical expertise. Contact our federal security team to discuss how we can support your agency's zero-trust journey.
       </p>
     </InsightArticleLayout>
   );
