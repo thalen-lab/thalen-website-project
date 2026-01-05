@@ -78,8 +78,17 @@ export default function ChangeManagement() {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-navy-gradient text-primary-foreground py-20">
-        <div className="container">
+      <section className="relative bg-navy-gradient text-primary-foreground py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/services/change-management-hero.jpg" 
+            alt="Change management leadership" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/90 to-[#0a1628]/70" />
+        </div>
+        <div className="container relative z-10">
           <div className="max-w-3xl">
             <div className="inline-block px-4 py-1 bg-muted rounded-full text-sm font-semibold mb-6">
               Organizational Change • Adoption Strategy
