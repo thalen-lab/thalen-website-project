@@ -4110,3 +4110,4 @@
 
 ## Phase 69: ISO 27001 Page Redesign
 - [x] Redesign ISO 27001 Implementation Services page to match Core Capabilities design pattern
+- [x] Remove icons from ISO 27001 page to match Our Approach page design rules

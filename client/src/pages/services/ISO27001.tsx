@@ -1,22 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
-import {
-  Shield,
-  FileCheck,
-  Users,
-  Building2,
-  Globe,
-  Lock,
-  Target,
-  ArrowRight,
-  Award,
-  Briefcase,
-  BarChart3,
-  FileText,
-  AlertTriangle,
-  Server,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -25,32 +10,26 @@ import Breadcrumb from '@/components/Breadcrumb';
 export default function ISO27001() {
   const whoNeedsData = [
     {
-      icon: Building2,
       title: "Government Contractors",
       description: "Federal, state, and local government contractors handling sensitive but unclassified information who need to demonstrate security compliance."
     },
     {
-      icon: Server,
       title: "Technology & SaaS Providers",
       description: "Cloud service providers, software companies, and managed service providers seeking to assure clients of their security practices."
     },
     {
-      icon: Briefcase,
       title: "Financial Services",
       description: "Banks, insurance companies, and fintech organizations managing financial data and meeting regulatory requirements."
     },
     {
-      icon: Users,
       title: "Healthcare Organizations",
       description: "Healthcare providers and business associates seeking to complement HIPAA compliance with international security standards."
     },
     {
-      icon: Globe,
       title: "Global Enterprises",
       description: "Multinational organizations requiring a unified security framework across diverse regulatory environments."
     },
     {
-      icon: Lock,
       title: "Critical Infrastructure",
       description: "Energy, utilities, and transportation organizations protecting operational technology and critical systems."
     }
@@ -142,32 +121,26 @@ export default function ISO27001() {
 
   const benefits = [
     {
-      icon: Award,
       title: "Competitive Advantage",
       description: "Differentiate your organization in competitive procurements. Many government and enterprise RFPs now require or prefer ISO 27001 certification as evidence of security maturity."
     },
     {
-      icon: Shield,
       title: "Risk Reduction",
       description: "Systematically identify and mitigate information security risks. Organizations with ISO 27001 certification report significantly fewer security incidents and faster recovery times."
     },
     {
-      icon: FileCheck,
       title: "Regulatory Alignment",
       description: "Satisfy multiple compliance requirements with a single framework. ISO 27001 maps to NIST, HIPAA, SOC 2, GDPR, and other regulatory standards, reducing audit fatigue."
     },
     {
-      icon: BarChart3,
       title: "Operational Efficiency",
       description: "Streamline security operations with documented processes and clear responsibilities. The ISMS framework reduces duplication and improves incident response capabilities."
     },
     {
-      icon: Users,
       title: "Stakeholder Confidence",
       description: "Build trust with clients, partners, and regulators through independent verification of your security practices. Certification demonstrates commitment to protecting sensitive information."
     },
     {
-      icon: Target,
       title: "Continuous Improvement",
       description: "Establish a culture of ongoing security enhancement through regular audits, management reviews, and corrective actions. The PDCA cycle ensures your ISMS evolves with emerging threats."
     }
@@ -184,19 +157,16 @@ export default function ISO27001() {
 
   const relatedServices = [
     {
-      icon: Shield,
       title: "Cybersecurity & Compliance",
       description: "Comprehensive security services including vulnerability assessments, penetration testing, and compliance program development.",
       link: "/services/cybersecurity"
     },
     {
-      icon: FileText,
       title: "FedRAMP Authorization",
       description: "End-to-end support for cloud service providers seeking FedRAMP authorization at any impact level.",
       link: "/services/fedramp"
     },
     {
-      icon: AlertTriangle,
       title: "CMMC Compliance",
       description: "Preparation and implementation services for Cybersecurity Maturity Model Certification requirements.",
       link: "/consulting-services"
@@ -242,7 +212,7 @@ export default function ISO27001() {
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
               Proven methodologies for implementing ISO/IEC 27001:2022-compliant information security management systems for government and enterprise clients seeking certification.
             </p>
-            {/* Sector badges */}
+            {/* Sector badges - text only, no icons */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               {['Government Contractors', 'Enterprise', 'Healthcare', 'Financial Services'].map((sector) => (
                 <div 
@@ -353,8 +323,7 @@ export default function ISO27001() {
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-6">
-                    <item.icon className="w-10 h-10 text-[oklch(0.65_0.18_55)] mb-4" />
-                    <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">{item.title}</h3>
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-3">{item.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -447,27 +416,25 @@ export default function ISO27001() {
                 >
                   {/* Content */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                    <div className="bg-[oklch(0.97_0.01_250)] rounded-xl p-6 shadow-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
-                      <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
-                        <span className="text-4xl font-bold text-[oklch(0.35_0.10_250)]/20">{phase.number}</span>
-                        <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
-                      </div>
-                      <p className="text-slate-600 mb-4">{phase.description}</p>
-                      <span className="inline-block text-sm font-semibold text-[oklch(0.35_0.10_250)] bg-[oklch(0.35_0.10_250)]/10 px-3 py-1 rounded-full mb-4">
-                        {phase.duration}
-                      </span>
-                      {/* Deliverables */}
-                      <div className={`pt-4 border-t border-slate-200 ${index % 2 === 0 ? 'md:text-left' : ''}`}>
-                        <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Key Deliverables</p>
-                        <ul className="space-y-1">
-                          {phase.deliverables.map((deliverable, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <span className="w-1 h-1 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                              <span className="text-xs text-slate-600">{deliverable}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
+                      <span className="text-4xl font-bold text-[oklch(0.35_0.10_250)]/20">{phase.number}</span>
+                      <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
+                    </div>
+                    <p className="text-slate-600 mb-4">{phase.description}</p>
+                    <span className="inline-block text-sm font-semibold text-[oklch(0.35_0.10_250)] bg-[oklch(0.35_0.10_250)]/10 px-3 py-1 rounded-full mb-4">
+                      {phase.duration}
+                    </span>
+                    {/* Deliverables */}
+                    <div className={`pt-4 border-t border-slate-200 ${index % 2 === 0 ? 'md:text-left' : ''}`}>
+                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Key Deliverables</p>
+                      <ul className="space-y-1">
+                        {phase.deliverables.map((deliverable, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <span className="w-1 h-1 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                            <span className="text-xs text-slate-600">{deliverable}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                   
@@ -513,10 +480,7 @@ export default function ISO27001() {
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-6">
-                    <div className="bg-[oklch(0.65_0.18_55)]/10 p-3 rounded-lg w-fit mb-4">
-                      <benefit.icon className="w-6 h-6 text-[oklch(0.65_0.18_55)]" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">{benefit.title}</h3>
+                    <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-3">{benefit.title}</h3>
                     <p className="text-slate-600 text-sm leading-relaxed">{benefit.description}</p>
                   </CardContent>
                 </Card>
@@ -634,8 +598,7 @@ export default function ISO27001() {
                 <Link href={service.link}>
                   <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 cursor-pointer group">
                     <CardContent className="p-6">
-                      <service.icon className="w-10 h-10 text-[oklch(0.65_0.18_55)] mb-4" />
-                      <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2 group-hover:text-[oklch(0.65_0.18_55)] transition-colors">
+                      <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-3 group-hover:text-[oklch(0.65_0.18_55)] transition-colors">
                         {service.title}
                       </h3>
                       <p className="text-slate-600 text-sm leading-relaxed mb-4">{service.description}</p>
