@@ -6,7 +6,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function TMFSupport() {
   const tmfCapabilities = [
@@ -87,16 +86,6 @@ export default function TMFSupport() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/75"></div>
         <div className="container relative text-white">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Services', href: '/consulting-services' },
-                  { label: 'Digital Transformation', href: '/services/digital-transformation' },
-                  { label: 'TMF Support' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <div className="max-w-4xl">
             <div className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               TMF Support

@@ -5,7 +5,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function SystemIntegration() {
   const primaryServices = [
@@ -95,15 +94,6 @@ export default function SystemIntegration() {
         <div className="absolute inset-0 bg-[url('/img/services/system-integration/hero-system-integration.jpg')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/80"></div>
         <div className="container relative">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Services', href: '/consulting-services' },
-                  { label: 'System Integration' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

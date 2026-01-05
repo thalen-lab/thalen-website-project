@@ -106,11 +106,10 @@ export default function CloudSecurity() {
           <div className="max-w-4xl">
             <Breadcrumb 
               items={[
-                { label: 'Services', href: '/consulting-services' },
-                { label: 'Cloud Infrastructure', href: '/services/cloud' },
+                { label: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
                 { label: 'Cloud Security & Compliance' }
               ]}
-              variant="light"
+              className="text-white/80 hover:text-white mb-4"
             />
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               FedRAMP High • CMMC Level 3 • NIST 800-53

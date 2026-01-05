@@ -6,7 +6,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight, Cloud, Server, Lock } from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function CloudOptimization() {
   const benefits = [
@@ -99,16 +98,11 @@ export default function CloudOptimization() {
       <section className="relative py-28 bg-[url('/patterns/hero-pattern.svg')] bg-cover bg-center text-white overflow-hidden">
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85 z-0"></div>
         <div className="container relative z-10">
-          <div className="mb-8">
-            <Breadcrumb 
-              items={[
-                { label: 'Services', href: '/consulting-services' },
-                { label: 'Cloud Infrastructure', href: '/services/cloud' },
-                { label: 'Cloud Optimization & Cost Management' }
-              ]} 
-              variant="light" 
-            />
-          </div>
+          <nav className="text-sm mb-6 text-white/80">
+            <Link href="/services/cloud" className="hover:text-[oklch(0.75_0.15_55)]">Cloud Infrastructure & Modernization</Link>
+            <span className="mx-2">/</span>
+            <span>Cloud Optimization & Cost Management</span>
+          </nav>
           
           <motion.div 
             className="max-w-4xl"

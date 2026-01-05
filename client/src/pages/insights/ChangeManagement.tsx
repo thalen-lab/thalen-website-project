@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function ChangeManagement() {
   const fadeIn = {
@@ -18,15 +17,6 @@ export default function ChangeManagement() {
         ></div>
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Insights', href: '/insights' },
-                  { label: 'Change Management' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <motion.div variants={fadeIn} initial="hidden" animate="visible">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               Digital Transformation

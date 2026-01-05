@@ -4,7 +4,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Server, Cloud, Shield, Zap, Database, TrendingDown, Award, CheckSquare } from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function LegacyModernizationDT() {
   const modernizationCapabilities = [
@@ -106,16 +105,6 @@ export default function LegacyModernizationDT() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/75"></div>
         <div className="container relative">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Services', href: '/consulting-services' },
-                  { label: 'Digital Transformation', href: '/services/digital-transformation' },
-                  { label: 'Legacy Modernization' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <div className="max-w-4xl">
             <Link href="/services/digital-transformation">
               <Button variant="ghost" className="mb-6 text-white hover:bg-white/10">

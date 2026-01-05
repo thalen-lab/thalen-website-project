@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import AssessmentForm from "@/components/AssessmentForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function ApplicationDevelopment() {
   const services = [

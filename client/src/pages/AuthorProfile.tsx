@@ -4,7 +4,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Clock, User, Linkedin, Twitter, Mail, Award, BookOpen } from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
 
 // Author data structure
 const authors = {
@@ -215,15 +214,6 @@ export default function AuthorProfile() {
       {/* Author Hero */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Insights', href: '/insights' },
-                  { label: 'Author Profile' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 items-start">
               {/* Author Image */}

@@ -5,7 +5,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function ChangeManagement() {
   const changeCapabilities = [
@@ -86,16 +85,6 @@ export default function ChangeManagement() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/75"></div>
         <div className="container relative">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Services', href: '/consulting-services' },
-                  { label: 'Digital Transformation', href: '/services/digital-transformation' },
-                  { label: 'Change Management' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

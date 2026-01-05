@@ -6,7 +6,6 @@ import { Checkbox } from '@/components/ui/checkbox';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { CheckCircle2, ArrowRight, Cloud, Shield, Bot, BarChart3, Package, Calendar, DollarSign, FileText, Download } from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
 
 interface Service {
   id: string;
@@ -273,15 +272,6 @@ export default function PackageBuilder() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Services', href: '/consulting-services' },
-                  { label: 'Package Builder' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block px-4 py-2 bg-muted rounded-full text-sm font-semibold mb-4">
               Custom Service Packages

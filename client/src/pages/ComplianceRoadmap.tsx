@@ -12,7 +12,6 @@ import {
   Shield, FileText, Download, AlertTriangle, Zap
 } from 'lucide-react';
 import { toast } from 'sonner';
-import Breadcrumb from '@/components/Breadcrumb';
 
 interface Milestone {
   id: string;
@@ -743,15 +742,6 @@ export default function ComplianceRoadmap() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Resources', href: '/resources' },
-                  { label: 'Compliance Roadmap' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <div className="max-w-4xl">
             <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Interactive Tool

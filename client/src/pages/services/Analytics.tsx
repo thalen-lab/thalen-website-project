@@ -5,7 +5,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function Analytics() {
   const capabilities = [
@@ -67,15 +66,6 @@ export default function Analytics() {
         {/* Add background image pattern here */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="container relative">
-          <div className="mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Services', href: '/consulting-services' },
-                  { label: 'Analytics' }
-                ]} 
-                variant="light" 
-              />
-            </div>
           <div className="max-w-4xl">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Data & Analytics</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">

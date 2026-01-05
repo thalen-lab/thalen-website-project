@@ -6,7 +6,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight } from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export default function InfrastructureAsCode() {
   const benefits = [
@@ -111,16 +110,11 @@ export default function InfrastructureAsCode() {
         ></div>
         <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
         <div className="container relative">
-          <div className="mb-8">
-            <Breadcrumb 
-              items={[
-                { label: 'Services', href: '/consulting-services' },
-                { label: 'Cloud Infrastructure', href: '/services/cloud' },
-                { label: 'Infrastructure as Code (IaC)' }
-              ]} 
-              variant="light" 
-            />
-          </div>
+          <nav className="text-sm mb-6 text-white/90">
+            <Link href="/services/cloud" className="hover:text-[oklch(0.75_0.15_55)]">Cloud Infrastructure & Modernization</Link>
+            <span className="mx-2">/</span>
+            <span>Infrastructure as Code (IaC)</span>
+          </nav>
           
           <div className="max-w-4xl">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
