@@ -1,32 +1,29 @@
 import { Link } from 'wouter';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, GitBranch, Cloud, Shield, Zap, Database, Users, Award, FileCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function FedRAMPIntegration() {
   const integrationCapabilities = [
     {
-      icon: GitBranch,
       title: 'Multi-Platform API Integration',
       description: 'We help agencies connect 50+ FedRAMP and StateRAMP platforms through standardized REST APIs, webhooks, and event-driven architectures with real-time data synchronization.',
       benefits: ['Bi-directional data sync', 'Event-driven workflows', 'Real-time updates', 'Error handling & retry logic']
     },
     {
-      icon: Shield,
       title: 'Secure Integration Patterns',
       description: 'We implement OAuth 2.0, SAML, API keys, and certificate-based authentication with encryption in transit and at rest for all data flows between platforms.',
       benefits: ['OAuth 2.0 / SAML authentication', 'TLS 1.2+ encryption', 'API key rotation', 'Audit logging']
     },
     {
-      icon: Database,
       title: 'Data Transformation & Mapping',
       description: 'We design data mapping logic that transforms data formats between platforms while maintaining data integrity, validation rules, and compliance requirements.',
       benefits: ['Schema mapping', 'Data validation', 'Format transformation', 'Duplicate detection']
     },
     {
-      icon: Zap,
       title: 'Integration Monitoring & Management',
       description: 'We implement comprehensive monitoring dashboards with alerting, performance metrics, error tracking, and automated recovery for all integration workflows.',
       benefits: ['Real-time monitoring', 'Error alerting', 'Performance metrics', 'Automated recovery']
@@ -83,112 +80,111 @@ export default function FedRAMPIntegration() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
-        <div className="container">
-          <div className="max-w-4xl">
+      <section className="relative py-20 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/img/services/system-integration/hero-fedramp-integration.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/80"></div>
+        <div className="container relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl"
+          >
             <Link href="/services/system-integration">
-              <Button variant="ghost" className="mb-6 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button variant="ghost" className="mb-6 text-white hover:bg-white/10">
                 ← Back to Systems Integration
               </Button>
             </Link>
-            <div className="inline-block bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-6">
               Integration Services
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               FedRAMP & StateRAMP Platform Integration
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               We help agencies connect multiple FedRAMP and StateRAMP-authorized platforms with secure APIs, unified data flows, and compliant integration patterns. Break down data silos while maintaining security controls.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Start Integration Project
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/capability-generator">
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                   Generate Capability Statement
                 </Button>
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Integration Capabilities */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Platform Integration Capabilities</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Platform Integration Capabilities</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Comprehensive integration services for connecting FedRAMP and StateRAMP platforms
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {integrationCapabilities.map((capability, index) => {
-              const Icon = capability.icon;
-              return (
-                <Card key={index} className="border-2 hover:border-accent transition-colors">
+            {integrationCapabilities.map((capability, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
                   <CardContent className="pt-8">
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-7 w-7 text-muted-foreground" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-3">{capability.title}</h3>
-                        <p className="text-muted-foreground mb-4">{capability.description}</p>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
+                    <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{capability.title}</h3>
+                    <p className="text-slate-600 mb-4">{capability.description}</p>
+                    <div className="space-y-2 pt-4 border-t border-slate-100">
                       {capability.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-start gap-3">
-                          <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                          <span className="text-sm">{benefit}</span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                          <span className="text-sm text-slate-600">{benefit}</span>
                         </div>
                       ))}
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Platform Categories */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Supported FedRAMP & StateRAMP Platforms</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Expertise</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Supported FedRAMP & StateRAMP Platforms</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We integrate 50+ authorized platforms across every government technology category
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {platformCategories.map((category, index) => (
-              <Card key={index} className="border-2">
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                 <CardContent className="pt-8">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Cloud className="h-6 w-6 text-muted-foreground" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-4">{category.category}</h3>
-                      <div className="space-y-4">
-                        {category.platforms.map((platform, idx) => (
-                          <div key={idx} className="border-l-2 border-border pl-4">
-                            <div className="font-semibold mb-1">{platform.name}</div>
-                            <div className="text-sm text-muted-foreground">{platform.description}</div>
-                          </div>
-                        ))}
+                  <h3 className="text-xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{category.category}</h3>
+                  <div className="space-y-4">
+                    {category.platforms.map((platform, idx) => (
+                      <div key={idx} className="border-l-2 border-slate-200 pl-4">
+                        <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{platform.name}</div>
+                        <div className="text-sm text-slate-600">{platform.description}</div>
                       </div>
-                    </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -198,21 +194,22 @@ export default function FedRAMPIntegration() {
       </section>
 
       {/* Integration Patterns */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Integration Architecture Patterns</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Architecture</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Integration Architecture Patterns</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We design integration architectures tailored to your agency's specific requirements
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {integrationPatterns.map((pattern, index) => (
-              <div key={index} className="flex gap-3 p-6 bg-secondary rounded-lg border-2 border-border">
-                <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
+              <div key={index} className="flex gap-3 p-6 bg-[oklch(0.97_0.01_250)] rounded-lg border-2 border-slate-200">
+                <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                 <div>
-                  <div className="font-semibold mb-1">{pattern.name}</div>
-                  <div className="text-sm text-muted-foreground">{pattern.description}</div>
+                  <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{pattern.name}</div>
+                  <div className="text-sm text-slate-600">{pattern.description}</div>
                 </div>
               </div>
             ))}
@@ -221,23 +218,24 @@ export default function FedRAMPIntegration() {
       </section>
 
       {/* Compliance Features */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Compliance & Security Features</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Security First</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Compliance & Security Features</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               All integration implementations include comprehensive security controls and compliance documentation
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {complianceFeatures.map((feature, index) => (
-              <Card key={index} className="border-2">
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                     <div>
-                      <div className="font-semibold mb-2">{feature.name}</div>
-                      <div className="text-sm text-muted-foreground">{feature.description}</div>
+                      <div className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">{feature.name}</div>
+                      <div className="text-sm text-slate-600">{feature.description}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -247,79 +245,23 @@ export default function FedRAMPIntegration() {
         </div>
       </section>
 
-      {/* Compliance Program CTAs */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Explore Our Compliance Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Learn more about our specialized FedRAMP and StateRAMP implementation services
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 hover:border-accent transition-colors">
-              <CardContent className="pt-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-7 w-7 text-muted-foreground" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3">FedRAMP Implementation</h3>
-                    <p className="text-muted-foreground mb-6">
-                      Comprehensive FedRAMP authorization services for federal agencies. From readiness assessments to ATO support, we guide you through every step of the federal authorization process.
-                    </p>
-                    <Link href="/compliance/fedramp">
-                      <Button className="bg-orange-gradient hover:opacity-90">
-                        Learn About FedRAMP Services
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="border-2 hover:border-accent transition-colors">
-              <CardContent className="pt-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="h-14 w-14 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Award className="h-7 w-7 text-muted-foreground" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3">StateRAMP Implementation</h3>
-                    <p className="text-muted-foreground mb-6">
-                      Specialized StateRAMP/GovRAMP authorization services for state, local, and tribal governments. We help you achieve authorization for government cloud services at the state level.
-                    </p>
-                    <Link href="/compliance/stateramp">
-                      <Button className="bg-orange-gradient hover:opacity-90">
-                        Learn About StateRAMP Services
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Connect Your Platforms?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Our integration specialists can help you design and implement secure, compliant integrations between your FedRAMP and StateRAMP platforms.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-gradient hover:opacity-90">
+                <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule Integration Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/services/system-integration">
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
                   View All Integration Services
                 </Button>
               </Link>

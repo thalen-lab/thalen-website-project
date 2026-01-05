@@ -90,8 +90,9 @@ export default function SystemIntegration() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 text-white overflow-hidden bg-[url('/img/patterns/hero-pattern.svg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+      <section className="relative py-20 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/img/services/system-integration/hero-system-integration.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/80"></div>
         <div className="container relative">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

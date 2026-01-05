@@ -91,8 +91,9 @@ export default function LegacyIntegration() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 text-white overflow-hidden bg-[oklch(0.18_0.06_250)]/85">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      <section className="relative py-20 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/img/services/system-integration/hero-legacy-modernization.png')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/80"></div>
         <div className="container relative">
           <div className="max-w-4xl">
             <Link href="/services/system-integration">

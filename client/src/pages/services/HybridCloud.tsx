@@ -91,10 +91,16 @@ export default function HybridCloud() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center py-28 sm:py-32 lg:py-40" style={{ backgroundImage: 'url(/images/patterns/pattern-1.png)' }}>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85" />
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-4xl text-white">
+      <section className="relative py-20 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/img/services/system-integration/hero-hybrid-cloud.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/80"></div>
+        <div className="container relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl"
+          >
             <Link href="/services/system-integration">
               <Button variant="ghost" className="mb-6 text-white hover:bg-white/10">
                 ← Back to Systems Integration
@@ -103,7 +109,7 @@ export default function HybridCloud() {
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               Hybrid Cloud Architecture
             </p>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Hybrid Cloud Integration
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
@@ -122,32 +128,33 @@ export default function HybridCloud() {
                 </Button>
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Hybrid Capabilities */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-white">
+        <div className="container">
           <div className="text-center mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
-            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Hybrid Cloud Integration Capabilities</h2>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Hybrid Cloud Capabilities</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Connect on-premise infrastructure with cloud platforms while maintaining security and compliance
+              Comprehensive hybrid cloud services for connecting on-premise and cloud infrastructure
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {hybridCapabilities.map((capability, index) => (
-              <motion.div key={index} whileHover={{ y: -5 }}>
-                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
                   <CardContent className="pt-8">
-                    <div className="flex items-start gap-6 mb-6">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{capability.title}</h3>
-                        <p className="text-slate-600 mb-4">{capability.description}</p>
-                      </div>
-                    </div>
-                    <div className="space-y-3">
+                    <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{capability.title}</h3>
+                    <p className="text-slate-600 mb-4">{capability.description}</p>
+                    <div className="space-y-2 pt-4 border-t border-slate-100">
                       {capability.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-start gap-3">
                           <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
@@ -164,54 +171,48 @@ export default function HybridCloud() {
       </section>
 
       {/* Cloud Platforms */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-[oklch(0.97_0.01_250)]">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
+        <div className="container">
           <div className="text-center mb-16">
-            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Support</p>
-            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Hybrid Cloud Platform Support</h2>
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Expertise</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Government Cloud Platforms</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We integrate on-premise infrastructure with AWS GovCloud, Azure Government, and Google Cloud
+              We have deep expertise with all major FedRAMP-authorized cloud platforms
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {cloudPlatforms.map((platform, index) => (
-              <motion.div key={index} whileHover={{ y: -5 }}>
-                <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="pt-8">
-                    <div className="flex items-start gap-6 mb-6">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{platform.category}</h3>
-                        <div className="space-y-4">
-                          {platform.features.map((feature, idx) => (
-                            <div key={idx}>
-                              <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{feature.name}</div>
-                              <div className="text-sm text-slate-600">{feature.description}</div>
-                            </div>
-                          ))}
-                        </div>
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <CardContent className="pt-8">
+                  <h3 className="text-xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{platform.category}</h3>
+                  <div className="space-y-4">
+                    {platform.features.map((feature, idx) => (
+                      <div key={idx} className="border-l-2 border-slate-200 pl-4">
+                        <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{feature.name}</div>
+                        <div className="text-sm text-slate-600">{feature.description}</div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Architecture Patterns */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-white">
+        <div className="container">
           <div className="text-center mb-16">
-            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Architecture</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Hybrid Architecture Patterns</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We design hybrid architectures tailored to your agency's specific workload requirements
+              We design hybrid architectures tailored to your agency's specific requirements
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {architecturePatterns.map((pattern, index) => (
-              <div key={index} className="flex items-start gap-4 p-6 bg-[oklch(0.97_0.01_250)] rounded-lg">
+              <div key={index} className="flex gap-3 p-6 bg-[oklch(0.97_0.01_250)] rounded-lg border-2 border-slate-200">
                 <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                 <div>
                   <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{pattern.name}</div>
@@ -224,75 +225,82 @@ export default function HybridCloud() {
       </section>
 
       {/* Networking & Security */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-[oklch(0.97_0.01_250)]">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
+        <div className="container">
           <div className="text-center mb-16">
-            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Secure & Compliant</p>
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Network Security</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Networking & Security</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We build secure, compliant hybrid environments that meet government standards
+              Secure connectivity between on-premise and cloud environments
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <motion.div whileHover={{ y: -5 }}>
-              <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="pt-8">
-                  <h3 className="text-xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Networking</h3>
-                  <div className="space-y-4">
-                    {networkingSecurity.map((item, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                        <div>
-                          <div className="font-semibold text-sm text-[oklch(0.20_0.05_250)]">{item.name}</div>
-                          <div className="text-sm text-slate-600">{item.description}</div>
-                        </div>
-                      </div>
-                    ))}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {networkingSecurity.map((item, index) => (
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                    <div>
+                      <div className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">{item.name}</div>
+                      <div className="text-sm text-slate-600">{item.description}</div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
-            <motion.div whileHover={{ y: -5 }}>
-              <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="pt-8">
-                  <h3 className="text-xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Compliance</h3>
-                  <div className="space-y-4">
-                    {complianceFeatures.map((item, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                        <div>
-                          <div className="font-semibold text-sm text-[oklch(0.20_0.05_250)]">{item.name}</div>
-                          <div className="text-sm text-slate-600">{item.description}</div>
-                        </div>
-                      </div>
-                    ))}
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Features */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="text-center mb-16">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Security First</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Compliance & Security</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              All hybrid architectures meet FedRAMP, StateRAMP, and FISMA requirements
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {complianceFeatures.map((feature, index) => (
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                    <div>
+                      <div className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">{feature.name}</div>
+                      <div className="text-sm text-slate-600">{feature.description}</div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-24 lg:py-28 bg-[oklch(0.22_0.06_250)] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Build Your Hybrid Cloud?</h2>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-white/80">
-            Let our experts design and implement a secure, scalable, and compliant hybrid cloud architecture that bridges your on-premise and cloud environments. We help you unlock workload portability, optimize costs, and accelerate innovation.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
-                Request a Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/services">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
-                Explore Other Services
-              </Button>
-            </Link>
+      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Build Your Hybrid Cloud?</h2>
+            <p className="text-xl text-white/90 mb-8">
+              Our hybrid cloud specialists can help you design and implement secure connections between your on-premise infrastructure and government cloud platforms.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
+                  Schedule Hybrid Cloud Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/services/system-integration">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                  View All Integration Services
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

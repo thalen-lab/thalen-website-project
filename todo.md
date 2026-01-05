@@ -4028,3 +4028,10 @@
 ## Phase 144: Add Professional Hero Images to Cybersecurity Pages
 - [x] Add hero image to Cybersecurity & Compliance card on Core Capabilities page
 - [x] Add hero image to Cybersecurity service page hero section- [x] Add hero images to CMMC & FedRAMP Compliance subpage- [x] Add hero images to Zero Trust Architecture subpage- [x] Add hero images to SOC Setup subpage- [x] Add hero images to IAM subpage
+
+## Phase 145: Apply Enhanced Design System to System Integration Pages
+- [x] Add hero image to System Integration landing page
+- [x] Create/update FedRAMP & StateRAMP Platform Integration subpage with enhanced design
+- [x] Create/update Legacy System Modernization subpage with enhanced design
+- [x] Create/update Hybrid Cloud Integration subpage with enhanced design
+- [x] Create/update API Security & Management subpage with enhanced design

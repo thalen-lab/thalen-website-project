@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from 'lucide-react';
 
 export default function APISecurity() {
@@ -88,12 +87,13 @@ export default function APISecurity() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[oklch(0.20_0.05_250)]">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 text-white bg-[url('/img/pattern.svg')] bg-no-repeat bg-cover bg-center">
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+      <section className="relative py-20 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/img/services/system-integration/hero-api-security.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/80"></div>
         <div className="container relative">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -101,13 +101,11 @@ export default function APISecurity() {
             transition={{ duration: 0.5 }}
             className="max-w-4xl"
           >
-            <Breadcrumb 
-              items={[
-                { label: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
-                { label: 'API Security & Management' }
-              ]}
-              className="text-white/80 hover:text-white mb-4"
-            />
+            <Link href="/services/system-integration">
+              <Button variant="ghost" className="mb-6 text-white hover:bg-white/10">
+                ← Back to Systems Integration
+              </Button>
+            </Link>
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               API Security
             </p>
@@ -135,13 +133,13 @@ export default function APISecurity() {
       </section>
 
       {/* Security Capabilities */}
-      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
-            <h2 className="text-4xl font-bold mb-4">API Security Capabilities</h2>
-            <p className="text-xl text-slate-600">
-              Comprehensive API security services for government systems and integrations
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">API Security Capabilities</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Comprehensive API security services for government workloads
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -149,13 +147,12 @@ export default function APISecurity() {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
               >
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
                   <CardContent className="pt-8">
-                    <h3 className="text-xl font-bold mb-3">{capability.title}</h3>
+                    <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{capability.title}</h3>
                     <p className="text-slate-600 mb-4">{capability.description}</p>
                     <div className="space-y-2 pt-4 border-t border-slate-100">
                       {capability.benefits.map((benefit, idx) => (
@@ -174,60 +171,80 @@ export default function APISecurity() {
       </section>
 
       {/* Authentication Methods */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Authentication</p>
-            <h2 className="text-4xl font-bold mb-4">API Authentication Methods</h2>
-            <p className="text-xl text-slate-600">
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Authentication Methods</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We implement industry-standard authentication protocols for government APIs
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {authenticationMethods.map((category, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                  <CardContent className="pt-8">
-                    <h3 className="text-xl font-bold mb-4">{category.category}</h3>
-                    <div className="space-y-4">
-                      {category.methods.map((method, idx) => (
-                        <div key={idx}>
-                          <div className="font-semibold mb-1">{method.name}</div>
-                          <div className="text-sm text-slate-600">{method.description}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <CardContent className="pt-8">
+                  <h3 className="text-xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{category.category}</h3>
+                  <div className="space-y-4">
+                    {category.methods.map((method, idx) => (
+                      <div key={idx} className="border-l-2 border-slate-200 pl-4">
+                        <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{method.name}</div>
+                        <div className="text-sm text-slate-600">{method.description}</div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Threat Protection */}
-      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Threat Mitigation</p>
-            <h2 className="text-4xl font-bold mb-4">API Threat Protection</h2>
-            <p className="text-xl text-slate-600">
-              We implement comprehensive protection against API security threats and vulnerabilities
+          <div className="text-center mb-16">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Protection</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">API Threat Protection</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Comprehensive protection against API vulnerabilities and attacks
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {threatProtection.map((threat, index) => (
-              <div key={index} className="flex items-start gap-3">
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                    <div>
+                      <div className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">{threat.name}</div>
+                      <div className="text-sm text-slate-600">{threat.description}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Monitoring Features */}
+      <section className="py-20 bg-[oklch(0.97_0.01_250)]">
+        <div className="container">
+          <div className="text-center mb-16">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Monitoring</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Monitoring & Analytics</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Real-time visibility into API performance and security
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {monitoringFeatures.map((feature, index) => (
+              <div key={index} className="flex gap-3 p-6 bg-white rounded-lg border-2 border-slate-200">
                 <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                 <div>
-                  <div className="font-semibold mb-1">{threat.name}</div>
-                  <div className="text-slate-600">{threat.description}</div>
+                  <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{feature.name}</div>
+                  <div className="text-sm text-slate-600">{feature.description}</div>
                 </div>
               </div>
             ))}
@@ -235,33 +252,54 @@ export default function APISecurity() {
         </div>
       </section>
 
-      {/* Monitoring & Compliance CTA */}
+      {/* Compliance Features */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="text-center mb-16">
+            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Security First</p>
+            <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Compliance & Security</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              All API security implementations meet government compliance requirements
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {complianceFeatures.map((feature, index) => (
+              <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
+                    <div>
+                      <div className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">{feature.name}</div>
+                      <div className="text-sm text-slate-600">{feature.description}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Monitoring & Compliance</p>
-              <h2 className="text-4xl font-bold mb-6 text-white">Real-Time Monitoring and Continuous Compliance</h2>
-              <p className="text-lg text-white/80 mb-8">
-                We provide continuous monitoring, security analytics, and automated compliance to ensure your APIs meet federal and state security requirements at all times.
-              </p>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Secure Your APIs?</h2>
+            <p className="text-xl text-white/90 mb-8">
+              Our API security specialists can help you design and implement secure, compliant API gateways for your government workloads.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
-                  Discuss Your Compliance Needs
+                  Schedule API Security Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-            </div>
-            <div className="space-y-6">
-              {[...monitoringFeatures, ...complianceFeatures].slice(0,4).map((feature, index) => (
-                <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-lg">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.75_0.15_55)] flex-shrink-0 mt-2"></span>
-                  <div>
-                    <h4 className="font-semibold text-white mb-1">{feature.name}</h4>
-                    <p className="text-white/70 text-sm">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
+              <Link href="/services/system-integration">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
+                  View All Integration Services
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
