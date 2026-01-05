@@ -4042,3 +4042,4 @@
 - [x] Add professional stock image to Training & Enablement hero section
 - [x] Add professional stock image to Success Metrics hero section
 - [x] Verify all hero sections display correctly with background images
+- [x] Add professional hero background images to Digital Transformation subpages (Platform Selection, Legacy Modernization, Change Management, TMF Support)

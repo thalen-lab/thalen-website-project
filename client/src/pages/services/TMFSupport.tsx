@@ -77,8 +77,14 @@ export default function TMFSupport() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-cover bg-center" style={{ backgroundImage: "url('/img/pattern-dark.svg')" }}>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/tmf-support-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/75"></div>
         <div className="container relative text-white">
           <div className="max-w-4xl">
             <div className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">

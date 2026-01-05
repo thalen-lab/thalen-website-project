@@ -88,9 +88,15 @@ export default function PlatformSelection() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center" style={{ backgroundImage: "url('/img/patterns/hero-pattern.svg')" }}>
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85" />
-        <div className="relative container py-20 text-white">
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/platform-selection-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/75"></div>
+        <div className="container relative">
           <div className="max-w-4xl">
             <div className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               Platform Selection

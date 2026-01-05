@@ -76,8 +76,14 @@ export default function ChangeManagement() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-[url(/img/pattern-d.png)] bg-cover bg-center">
-        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/85"></div>
+      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/change-management-hero.jpg')" }}
+        ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[oklch(0.18_0.06_250)]/75"></div>
         <div className="container relative">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
