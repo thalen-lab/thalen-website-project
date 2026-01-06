@@ -192,6 +192,7 @@ import Security from "./pages/Security";
 import SocialResponsibility from "./pages/SocialResponsibility";
 import SecurityCompliance from "./pages/SecurityCompliance";
 import NewsUpdates from "./pages/NewsUpdates";
+import FederalPracticeExpansion from "./pages/news/FederalPracticeExpansion";
 import CompanyLatest from "./pages/CompanyLatest";
 import Careers from "./pages/Careers";
 import JobDetail from "./pages/JobDetail";
@@ -207,6 +208,7 @@ function Router() {
       <Route path={"/about/social-responsibility"} component={SocialResponsibility} />
       <Route path={"/about/security-compliance"} component={SecurityCompliance} />
       <Route path={"/about/news-updates"} component={NewsUpdates} />
+      <Route path={"/news/federal-practice-expansion"} component={FederalPracticeExpansion} />
       <Route path={"/about/company-latest"} component={CompanyLatest} />
       <Route path={"/careers"} component={Careers} />
       <Route path={"/careers/:slug"} component={JobDetail} />

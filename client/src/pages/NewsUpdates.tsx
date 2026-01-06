@@ -25,7 +25,7 @@ const companyNews: NewsItem[] = [
     id: 'c1',
     title: 'Thalen Technologies Expands Federal Practice with New Leadership',
     source: 'Thalen Technologies',
-    sourceUrl: '/about',
+    sourceUrl: '/news/federal-practice-expansion',
     date: 'Jan 2026',
     category: 'company',
     description: 'New executive hires and expanded capabilities position Thalen Technologies for continued growth in federal automation and AI services.',
