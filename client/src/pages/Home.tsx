@@ -10,6 +10,7 @@ import SmallBusinessCertifications from '@/components/SmallBusinessCertification
 import { ImageWithLoader } from '@/components/ImageWithLoader';
 import HeroCarousel from '@/components/HeroCarousel';
 import IndustryUpdates from '@/components/IndustryUpdates';
+import AnnouncementTicker from '@/components/AnnouncementTicker';
 import InsightsSection from '@/components/InsightsSection';
 import WhoWeAreSection from '@/components/WhoWeAreSection';
 import TrustedByClients from '@/components/TrustedByClients';
@@ -123,6 +124,9 @@ export default function Home() {
       
       {/* Hero Carousel Section */}
       <HeroCarousel />
+
+      {/* Announcement Ticker Section */}
+      <AnnouncementTicker />
 
       {/* Who We Are Section - Enhanced with Signature Blue */}
       <WhoWeAreSection />

@@ -30,7 +30,7 @@ export default function About() {
     {
       title: 'Commitment',
       letter: 'C',
-      description: 'Unwavering dedication to mission success. We treat every project as mission-critical and deliver results that directly support our clients\' strategic objectives with zero compromise on quality or security.'
+      description: 'Unwavering dedication to government mission success. We treat every agency engagement as mission-critical and deliver results that directly support public sector objectives with zero compromise on quality or security.'
     },
     {
       title: 'Balance',
@@ -83,20 +83,20 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 text-center leading-tight text-white">
-                With the right strategy and proven automation frameworks, government and enterprise organizations can still solve complex problems and transform operations for measurable impact.
+                Powering Government Mission Success Through Technology
               </h1>
               
               <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/90">
                 <p>
-                  For 25 years, Thalen Technologies has been the trusted technology partner for federal, state, and local government agencies. We've witnessed the evolution of government technology—from legacy mainframes to cloud-native solutions—and we've been there every step of the way, helping our agency partners navigate complex transformations.
+                  For 25 years, Thalen Technologies has been the trusted technology partner for federal, state, and local government agencies. We've witnessed the evolution of government technology—from legacy mainframes to cloud-native solutions—and we've been there every step of the way, helping our agency partners modernize critical systems, secure sensitive data, and deliver superior citizen services.
                 </p>
                 
                 <p>
-                  We founded Thalen Technologies with a simple mission: to deliver mission-enabling technology that puts government objectives first. We saw too many technology providers focused on selling products rather than solving problems. We knew there had to be a better way—one that combined deep government expertise with battle-tested methodologies.
+                  We founded Thalen Technologies with a clear mission: to be the government's most trusted technology partner. We saw too many providers treating public sector work as just another contract. We knew there had to be a better way—one that combined deep government expertise with battle-tested methodologies specifically designed for the unique challenges of federal, state, and local agencies.
                 </p>
                 
                 <p>
-                  Today, we continue that mission with the same commitment to excellence that has made us a trusted partner to hundreds of government agencies. Our team brings decades of combined experience in federal service, and we're proud to say that every solution we deliver is designed with your mission in mind.
+                  Today, we continue that mission with the same commitment to excellence that has made us a trusted partner to hundreds of government agencies across all levels. Our deep government expertise also enables us to bring government-grade security and compliance standards to regulated industries—applying the same rigorous frameworks demanded by our agency partners to solve challenges in healthcare, finance, and critical infrastructure.
                 </p>
               </div>
             </motion.div>
@@ -172,10 +172,10 @@ export default function About() {
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Our Approach</h2>
               <p className="text-2xl md:text-3xl text-slate-600 mb-8">
-                We transform complex operational challenges into strategic competitive advantages through intelligent automation.
+                We transform complex government challenges into mission-enabling capabilities through intelligent automation.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
-                Our specialty lies in architecting automation solutions for the most demanding environments—where security clearances are required, where compliance is non-negotiable, and where operational failure has serious consequences. We deliver measurable ROI while maintaining the highest standards of security and operational excellence.
+                Our specialty lies in architecting automation solutions for government environments—where security clearances are required, where compliance is non-negotiable, and where operational failure impacts citizens and national security. We deliver measurable mission impact while maintaining the highest standards of security and operational excellence that government demands.
               </p>
             </motion.div>
 
@@ -186,7 +186,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Every engagement begins with deep process analysis to identify the highest-impact automation opportunities. We then deploy proven frameworks that integrate seamlessly with existing operations, ensuring zero disruption while delivering significant results that scale with organizational growth.
+                Every engagement begins with deep process analysis to identify the highest-impact automation opportunities for your agency. We then deploy proven frameworks that integrate seamlessly with existing government operations, ensuring zero disruption while delivering significant results that scale with your mission requirements.
               </p>
               
               <Link href="/services/automation">
@@ -208,19 +208,19 @@ export default function About() {
           >
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">How we operate</h3>
             <p className="text-2xl md:text-3xl text-slate-600 mb-12">
-              We deploy automation strategists directly to your most critical operations.
+              We deploy automation strategists directly to your agency's most critical operations.
             </p>
 
             <div className="grid lg:grid-cols-2 gap-12 mb-12">
               <div>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  Our consultants embed with your teams to understand the nuances of your processes, identify optimization opportunities, and implement solutions that deliver immediate and lasting impact. We don't build from the outside looking in—we work from within your operations to architect transformation that works.
+                  Our consultants embed with your agency teams to understand the nuances of government processes, identify optimization opportunities, and implement solutions that deliver immediate and lasting mission impact. We don't build from the outside looking in—we work from within your operations to architect transformation that serves your mission and the citizens who depend on it.
                 </p>
               </div>
               
               <div>
                 <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                  This approach allows us to deliver automation strategies that integrate seamlessly with existing workflows, maintain operational security, and scale with your organization's evolving needs. Every solution is battle-tested in real-world environments before full deployment.
+                  This approach allows us to deliver automation strategies that integrate seamlessly with existing government workflows, maintain operational security at the highest levels, and scale with your agency's evolving mission needs. Every solution is battle-tested in real-world government environments before full deployment.
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -244,11 +244,11 @@ export default function About() {
               
               <div className="space-y-6 text-lg text-slate-600 mb-8">
                 <p>
-                  We identify the most critical operational challenges that pose the greatest risk not only to organizational efficiency, but to mission success itself. Whether it's a federal agency struggling with manual processes that compromise national security timelines, or a healthcare system where outdated workflows impact patient outcomes, we focus our efforts where automation can deliver the most strategic value.
+                  We identify the most critical operational challenges that pose the greatest risk not only to agency efficiency, but to mission success itself. Whether it's a federal agency struggling with manual processes that compromise national security timelines, a state government modernizing citizen services, or a local municipality streamlining operations, we focus our efforts where automation can deliver the most strategic value for government and the citizens they serve.
                 </p>
                 
                 <p>
-                  Some organizations have the resources to optimize every process. Many don't. Our approach with all our clients is the same: identify the highest-impact opportunities and establish a partnership that transforms not just individual processes, but organizational capability.
+                  Government agencies face unique constraints—limited budgets, complex procurement requirements, and the critical need to maintain public trust. Our approach with all our agency partners is the same: identify the highest-impact opportunities and establish a partnership that transforms not just individual processes, but mission capability. We also extend this government-grade approach to regulated industries that demand the same level of security and compliance rigor.
                 </p>
               </div>
 
@@ -328,11 +328,11 @@ export default function About() {
               
               <div className="space-y-6 text-lg text-slate-600">
                 <p>
-                  At our foundation around the world, we've assembled a team that combines practical expertise in automation technologies, deep understanding of government and enterprise operations, and an uncompromising engineering mindset focused on delivering measurable results in service of organizational missions.
+                  At our foundation, we've assembled a team that combines practical expertise in automation technologies, deep understanding of government operations at every level, and an uncompromising engineering mindset focused on delivering measurable results in service of agency missions. Many of our team members have served in federal, state, and local government roles, bringing firsthand knowledge of the challenges our agency partners face.
                 </p>
                 
                 <p>
-                  What brings us together is an unwavering commitment to operational excellence and the belief that intelligent automation should amplify human capability, not replace it.
+                  What brings us together is an unwavering commitment to government mission success and the belief that intelligent automation should amplify public servant capability, enabling them to better serve citizens and accomplish their critical objectives.
                 </p>
               </div>
 
