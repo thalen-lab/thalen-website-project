@@ -148,28 +148,28 @@ export default function HeroCarousel() {
         </div>
       ))}
 
-      {/* Bottom Title Banner - Responsive text sizing and padding */}
-      <div className="absolute bottom-0 left-0 right-0 z-20">
-        <div className="container py-3 sm:py-4 md:py-6 lg:py-8">
-          {/* Text content with localized semi-transparent backdrop */}
-          <div className="inline-block max-w-full">
-            <div className="bg-[#2A2A2A]/50 sm:bg-[#2A2A2A]/40 backdrop-blur-[4px] sm:backdrop-blur-[6px] px-3 sm:px-5 md:px-6 lg:px-8 py-3 sm:py-4 md:py-5 lg:py-6 rounded-sm">
-              {/* Main Title - Responsive sizing */}
-              <h1 
-                className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white tracking-wide mb-1.5 sm:mb-2 md:mb-3 leading-tight"
-              >
-                {slides[currentSlide].title}
-              </h1>
-              {/* Subtitle - Responsive sizing with line clamping on mobile */}
-              <p className="text-xs xs:text-sm sm:text-base md:text-lg text-white/90 font-light max-w-3xl leading-relaxed line-clamp-3 sm:line-clamp-none">
-                {slides[currentSlide].subtitle}
-              </p>
-            </div>
+      {/* Bottom Title Banner - Tygart Style: Extends exactly to left and bottom edges with NO gap */}
+      <div 
+        className="absolute bottom-0 left-0 z-20"
+        style={{ width: 'auto', maxWidth: '75%' }}
+      >
+        {/* Semi-transparent backdrop - NO left margin/padding on the container, only internal padding for text */}
+        <div className="bg-[#1a1a1a]/75 backdrop-blur-[8px]">
+          {/* Inner padding for text content only - left padding pushes text away from edge */}
+          <div className="pl-4 sm:pl-6 md:pl-10 lg:pl-14 xl:pl-20 pr-8 sm:pr-10 md:pr-14 lg:pr-20 xl:pr-28 py-5 sm:py-6 md:py-8 lg:py-10 xl:py-12">
+            {/* Main Title - Larger, more prominent sizing */}
+            <h1 
+              className="text-xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem] 2xl:text-5xl font-semibold text-white tracking-wide mb-2 sm:mb-3 md:mb-4 leading-tight"
+            >
+              {slides[currentSlide].title}
+            </h1>
+            {/* Subtitle - Larger, more readable sizing */}
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-[1.35rem] xl:text-2xl text-white/90 font-light max-w-4xl leading-relaxed line-clamp-3 sm:line-clamp-none">
+              {slides[currentSlide].subtitle}
+            </p>
           </div>
         </div>
       </div>
-
-
     </div>
   );
 }

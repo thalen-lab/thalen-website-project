@@ -4482,3 +4482,8 @@
 ## Phase 127: Restore Hero Tagline
 - [x] Update first hero slide title from "Intelligence, Delivered." to "Powering Government Mission Success"
 - [x] Update first hero slide subtitle to original text about 25 years of partnership
+
+## Phase 128: Hero Carousel Text Overlay Styling (Tygart Style)
+- [x] Adjust hero carousel text overlay to extend from left edge with no space
+- [x] Adjust hero carousel text overlay to extend from bottom edge with no space
+- [x] Increase hero carousel text size for better visibility
