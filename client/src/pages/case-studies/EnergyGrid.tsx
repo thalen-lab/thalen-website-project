@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 // Custom components for editorial style
 const EditorialSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
@@ -150,6 +151,7 @@ export default function EnergyGrid() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

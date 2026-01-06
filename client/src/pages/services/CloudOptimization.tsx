@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight, Cloud, Server, Lock } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function CloudOptimization() {
   const benefits = [
@@ -285,6 +286,7 @@ export default function CloudOptimization() {
         description="Combine optimization with these services for comprehensive cloud cost and performance management."
       />
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

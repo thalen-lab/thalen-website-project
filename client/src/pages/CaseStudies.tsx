@@ -15,6 +15,7 @@ import SavedSearchesDropdown from '@/components/SavedSearchesDropdown';
 import { trpc } from '@/lib/trpc';
 import PullToRefresh from '@/components/PullToRefresh';
 import { toast } from 'sonner';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
@@ -399,6 +400,7 @@ export default function CaseStudies() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
       
       <SaveSearchDialog

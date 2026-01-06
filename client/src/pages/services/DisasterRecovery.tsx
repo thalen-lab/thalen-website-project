@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function DisasterRecovery() {
   const benefits = [
@@ -300,6 +301,7 @@ export default function DisasterRecovery() {
         description="Integrate disaster recovery with migration, security, and multi-cloud strategies for mission-critical resilience."
       />
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

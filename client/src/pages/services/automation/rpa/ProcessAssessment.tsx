@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function ProcessAssessment() {
   const assessmentPhases = [
@@ -455,6 +456,7 @@ export default function ProcessAssessment() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

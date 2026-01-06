@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Cloud() {
   // Primary service offerings (reduced to 4 core capabilities)
@@ -473,6 +474,7 @@ export default function Cloud() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

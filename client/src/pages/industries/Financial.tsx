@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Financial() {
   const challenges = [
@@ -195,6 +196,7 @@ export default function Financial() {
         </section>
       </main>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

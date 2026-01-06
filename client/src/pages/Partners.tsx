@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Partners() {
   return (
@@ -401,6 +402,7 @@ export default function Partners() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

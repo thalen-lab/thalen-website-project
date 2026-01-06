@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function ZeroTrustArchitecture() {
   const ztPillars = [
@@ -259,6 +260,7 @@ export default function ZeroTrustArchitecture() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

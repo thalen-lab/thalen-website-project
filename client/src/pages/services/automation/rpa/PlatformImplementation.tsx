@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function PlatformImplementation() {
   const platforms = [
@@ -496,6 +497,7 @@ export default function PlatformImplementation() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

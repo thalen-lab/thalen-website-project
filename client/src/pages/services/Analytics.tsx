@@ -6,6 +6,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Analytics() {
   const capabilities = [
@@ -223,6 +224,7 @@ export default function Analytics() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

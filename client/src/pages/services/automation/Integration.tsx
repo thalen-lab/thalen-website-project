@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight, Bot, Workflow, Database } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Integration() {
   const capabilities = [
@@ -399,6 +400,7 @@ export default function Integration() {
         description="Leverage your integrated systems with these complementary automation and analytics services."
       />
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

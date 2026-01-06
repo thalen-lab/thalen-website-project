@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import { motion } from "framer-motion";
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function HealthcareAI() {
   return (
@@ -171,6 +172,7 @@ export default function HealthcareAI() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

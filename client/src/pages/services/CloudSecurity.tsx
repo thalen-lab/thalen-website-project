@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight } from 'lucide-react';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function CloudSecurity() {
   const benefits = [
@@ -305,6 +306,7 @@ export default function CloudSecurity() {
         description="Integrate security across migration, multi-cloud management, and disaster recovery for comprehensive protection."
       />
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

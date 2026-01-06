@@ -8,6 +8,7 @@ import { Link } from 'wouter';
 import { toast } from 'sonner';
 import { trpc } from '@/lib/trpc';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -318,6 +319,7 @@ export default function Contact() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

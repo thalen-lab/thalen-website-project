@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function ResponsibleAI() {
   return (

@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function MultiCloud() {
   const benefits = [
@@ -264,6 +265,7 @@ export default function MultiCloud() {
         description="Enhance multi-cloud capabilities with cost optimization, security, and resilience services."
       />
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function InfrastructureAsCode() {
   const benefits = [
@@ -303,6 +304,7 @@ export default function InfrastructureAsCode() {
         description="Combine IaC with migration, optimization, and disaster recovery for fully automated cloud operations."
       />
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

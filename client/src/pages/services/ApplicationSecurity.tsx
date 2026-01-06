@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function ApplicationSecurity() {
   const benefits = [
@@ -163,6 +164,7 @@ export default function ApplicationSecurity() {
       </section>
 
       <RelatedServices title="Enhance Your Security Posture" services={relatedServices} />
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

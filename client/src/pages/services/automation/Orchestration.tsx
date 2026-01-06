@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight, Bot, Network, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Orchestration() {
   const orchestrationBenefits = [
@@ -361,6 +362,7 @@ export default function Orchestration() {
         description="Enhance orchestration capabilities with RPA, integration, and process optimization services."
       />
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 // Define the statistics data structure for the clean grid
 const statistics = [
@@ -168,6 +169,7 @@ export default function BankFraud() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

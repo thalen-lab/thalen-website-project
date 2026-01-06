@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function HospitalWaitTimes() {
   return (
@@ -172,6 +173,7 @@ export default function HospitalWaitTimes() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

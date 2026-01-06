@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { ArrowRight, Key, Shield, Users, Fingerprint, UserCheck, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function IdentityAccessManagement() {
   // Primary service offerings (4 core capabilities)
@@ -480,6 +481,7 @@ export default function IdentityAccessManagement() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

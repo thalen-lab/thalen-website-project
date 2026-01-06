@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { ArrowRight, Download } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import { motion } from "framer-motion";
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function DefenseCloud() {
   const impactMetrics = [
@@ -209,6 +210,7 @@ export default function DefenseCloud() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

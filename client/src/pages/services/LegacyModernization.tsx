@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/components/Breadcrumb";
 import RelatedServices from "@/components/RelatedServices";
 import Navigation from '@/components/Navigation';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function LegacyModernization() {
   const benefits = [
@@ -279,6 +280,7 @@ export default function LegacyModernization() {
         services={relatedServices}
       />
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

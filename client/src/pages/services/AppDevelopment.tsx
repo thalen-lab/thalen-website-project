@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function AppDevelopment() {
   return (
@@ -196,6 +197,7 @@ export default function AppDevelopment() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

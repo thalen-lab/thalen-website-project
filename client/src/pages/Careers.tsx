@@ -10,6 +10,7 @@ import { trpc } from '@/lib/trpc';
 import { useState, useMemo } from 'react';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Careers() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -349,6 +350,7 @@ export default function Careers() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

@@ -6,6 +6,7 @@ import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function VAHealthcare() {
   return (
@@ -166,6 +167,7 @@ export default function VAHealthcare() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

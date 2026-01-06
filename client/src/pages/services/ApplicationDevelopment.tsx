@@ -7,6 +7,7 @@ import AssessmentForm from "@/components/AssessmentForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function ApplicationDevelopment() {
   const services = [
@@ -260,6 +261,7 @@ export default function ApplicationDevelopment() {
           </div>
         </section>
       </main>
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

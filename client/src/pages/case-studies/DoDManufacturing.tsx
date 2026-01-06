@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function DoDManufacturing() {
   return (
@@ -170,6 +171,7 @@ export default function DoDManufacturing() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

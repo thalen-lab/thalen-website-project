@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import RelatedServices from '@/components/RelatedServices';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function CloudMigration() {
   const benefits = [
@@ -317,6 +318,7 @@ export default function CloudMigration() {
           { title: 'Hybrid Cloud Architecture', description: 'Connect on-premise systems with cloud platforms through secure hybrid architecture.', href: '/services/hybrid-cloud' }
         ]}
       />
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

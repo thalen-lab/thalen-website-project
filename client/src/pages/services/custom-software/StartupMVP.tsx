@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'wouter';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function StartupMVP() {
   const benefits = [
@@ -338,6 +339,7 @@ export default function StartupMVP() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

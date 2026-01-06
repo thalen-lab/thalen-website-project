@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function DODDataPipelines() {
   // Utility component for the statistics grid
@@ -173,6 +174,7 @@ export default function DODDataPipelines() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

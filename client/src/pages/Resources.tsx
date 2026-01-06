@@ -8,6 +8,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Mail, Download } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Resources() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -349,6 +350,7 @@ export default function Resources() {
           </div>
         </section>
       </main>
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

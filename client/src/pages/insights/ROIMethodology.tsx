@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import InsightArticleLayout from "@/components/InsightArticleLayout";
 import { Card, CardContent } from "@/components/ui/card";
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function ROIMethodology() {
   return (

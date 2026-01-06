@@ -4260,3 +4260,8 @@
 - [x] Add "Capability Statement" to navbar between Case Studies and Contact
 - [x] Build Capability Statement page with flowing narrative design (no cards/bullets)
 - [x] Add download CTA for Capability Statement document
+
+## Phase 69: Print-Friendly Version
+- [x] Create printer-optimized CSS stylesheet
+- [x] Add print button component for easy access
+- [x] Test print functionality across pages

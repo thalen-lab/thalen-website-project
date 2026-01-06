@@ -5,6 +5,7 @@ import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'wouter';
 import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function IntelligenceSecurity() {
   const impactMetrics = [
@@ -196,6 +197,7 @@ export default function IntelligenceSecurity() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

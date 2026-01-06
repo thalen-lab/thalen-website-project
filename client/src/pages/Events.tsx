@@ -8,6 +8,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Events() {
   const [selectedCategory, setSelectedCategory] = useState('upcoming');
@@ -300,6 +301,7 @@ export default function Events() {
         </section>
       </main>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
 
       {registeringEvent && selectedEvent && (

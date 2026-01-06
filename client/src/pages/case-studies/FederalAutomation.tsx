@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import Breadcrumb from "@/components/Breadcrumb";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function FederalAutomation() {
   return (
@@ -162,6 +163,7 @@ export default function FederalAutomation() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Link } from 'wouter';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 // Helper component for the statistics grid
 const StatGrid = ({ metrics }: { metrics: Array<{ value: string; label: string }> }) => (
@@ -144,6 +145,7 @@ export default function AerospaceDigitalTwin() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

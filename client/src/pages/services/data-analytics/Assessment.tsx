@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 import { Link } from "wouter";
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 interface Question {
   id: number;
@@ -348,7 +349,8 @@ export default function DataMaturityAssessment() {
         description="Transform assessment findings into actionable improvements with these data services."
       />
 
-        <Footer />
+        <FloatingPrintButton position="bottom-right" />
+      <Footer />
       </div>
     );
   }
@@ -459,6 +461,7 @@ export default function DataMaturityAssessment() {
         description="Transform assessment findings into actionable improvements with these data services."
       />
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

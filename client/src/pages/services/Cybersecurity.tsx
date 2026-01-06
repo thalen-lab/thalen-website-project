@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Cybersecurity() {
   // Primary service offerings (4 core capabilities)
@@ -602,6 +603,7 @@ export default function Cybersecurity() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

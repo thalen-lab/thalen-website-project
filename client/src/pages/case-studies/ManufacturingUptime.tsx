@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/components/Breadcrumb";
 import { motion } from "framer-motion";
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function ManufacturingUptime() {
   return (
@@ -234,6 +235,7 @@ export default function ManufacturingUptime() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function ChangeManagement() {
   const changeCapabilities = [
@@ -270,6 +271,7 @@ export default function ChangeManagement() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

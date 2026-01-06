@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight, Server, Cloud, Shield, Zap, Database, TrendingDown, Award, CheckSquare } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function LegacyModernizationDT() {
   const modernizationCapabilities = [
@@ -321,6 +322,7 @@ export default function LegacyModernizationDT() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );

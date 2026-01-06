@@ -14,6 +14,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import PullToRefresh from '@/components/PullToRefresh';
 import { toast } from 'sonner';
 import { triggerHaptic } from '@/lib/haptics';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function Insights() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -444,6 +445,7 @@ export default function Insights() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
     </PullToRefresh>

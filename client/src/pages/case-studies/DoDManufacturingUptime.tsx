@@ -6,6 +6,7 @@ import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Breadcrumb from '@/components/Breadcrumb';
+import { FloatingPrintButton } from '@/components/PrintButton';
 
 export default function DoDManufacturingUptime() {
   return (
@@ -214,6 +215,7 @@ export default function DoDManufacturingUptime() {
         </div>
       </section>
 
+      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );
