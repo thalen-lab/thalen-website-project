@@ -4506,3 +4506,8 @@
 - [x] Ensure card design consistency between homepage and News & Updates page
 - [x] Add routing and navigation for News & Updates page
 
+
+
+## Phase 52: Update Company Name to Thalen Technologies, Inc.
+- [x] Update company name from NexDyne to Thalen Technologies, Inc. on News & Updates page
+- [x] Refresh News & Updates page content with Thalen Technologies branding

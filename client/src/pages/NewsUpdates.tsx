@@ -23,12 +23,12 @@ interface NewsItem {
 const companyNews: NewsItem[] = [
   {
     id: 'c1',
-    title: 'NexDyne Expands Federal Practice with New Leadership',
-    source: 'NexDyne Technologies',
+    title: 'Thalen Technologies Expands Federal Practice with New Leadership',
+    source: 'Thalen Technologies',
     sourceUrl: '/about',
     date: 'Jan 2026',
     category: 'company',
-    description: 'New executive hires and expanded capabilities position NexDyne for continued growth in federal automation and AI services.',
+    description: 'New executive hires and expanded capabilities position Thalen Technologies for continued growth in federal automation and AI services.',
   },
   {
     id: 'c2',
@@ -42,7 +42,7 @@ const companyNews: NewsItem[] = [
   {
     id: 'c3',
     title: 'Strategic Partnership with Leading Cloud Provider',
-    source: 'NexDyne Technologies',
+    source: 'Thalen Technologies',
     sourceUrl: '/partners',
     date: 'Nov 2025',
     category: 'partnership',
@@ -50,7 +50,7 @@ const companyNews: NewsItem[] = [
   },
   {
     id: 'c4',
-    title: 'NexDyne Achieves FedRAMP High Authorization',
+    title: 'Thalen Technologies Achieves FedRAMP High Authorization',
     source: 'FedRAMP PMO',
     sourceUrl: '/compliance/fedramp',
     date: 'Oct 2025',
@@ -64,12 +64,12 @@ const companyNews: NewsItem[] = [
     sourceUrl: '/federal-solutions/cmmc',
     date: 'Sep 2025',
     category: 'security',
-    description: 'NexDyne achieves CMMC Level 2 certification, strengthening our position as a trusted defense contractor partner.',
+    description: 'Thalen Technologies achieves CMMC Level 2 certification, strengthening our position as a trusted defense contractor partner.',
   },
   {
     id: 'c6',
     title: 'Awarded $15M Federal Automation Contract',
-    source: 'NexDyne Technologies',
+    source: 'Thalen Technologies',
     sourceUrl: '/case-studies',
     date: 'Aug 2025',
     category: 'company',
@@ -366,7 +366,7 @@ export default function NewsUpdates() {
               </h1>
               
               <p className="text-base md:text-lg text-white/90 text-center max-w-3xl mx-auto">
-                Stay informed about the latest developments at NexDyne Technologies, including company announcements, industry recognition, partnership news, and regulatory updates affecting government technology.
+                Stay informed about the latest developments at Thalen Technologies, including company announcements, industry recognition, partnership news, and regulatory updates affecting government technology.
               </p>
             </motion.div>
           </div>
@@ -391,7 +391,7 @@ export default function NewsUpdates() {
                 </div>
                 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                  NexDyne Announcements
+                  Thalen Announcements
                 </h2>
               </div>
               <div className="max-w-lg">
