@@ -1,71 +1,62 @@
 import { motion } from 'framer-motion';
 
-// Client logos - using SVG representations for government agencies and enterprise clients
-const clients = [
+// Case study clients with actual logos and results
+const caseStudyClients = [
   {
-    name: 'Department of Defense',
-    abbreviation: 'DoD',
-    color: '#0A2540'
+    id: 'snhd',
+    headline: 'Reduce time-to-hire by more than 50%',
+    caseStudy: 'Case Study: 130 days → 61 days',
+    agency: 'Southern Nevada Health District',
+    logo: '/logos/snhd-logo.png',
+    logoAlt: 'Southern Nevada Health District Logo'
   },
   {
-    name: 'Department of Homeland Security',
-    abbreviation: 'DHS',
-    color: '#003366'
+    id: 'manatee',
+    headline: 'Reduce manual HR work by 2100+ hours',
+    caseStudy: 'Case Study:',
+    agency: "Manatee County Sheriff's Office",
+    logo: '/logos/manatee-county-sheriff-logo.png',
+    logoAlt: "Manatee County Sheriff's Office Logo"
   },
   {
-    name: 'Department of Veterans Affairs',
-    abbreviation: 'VA',
-    color: '#112E51'
+    id: 'shra',
+    headline: 'Cut payroll processing time from 48-72 hrs to 30 mins',
+    caseStudy: 'Case Study:',
+    agency: 'Sacramento Housing and Redevelopment Agency',
+    logo: '/logos/shra-logo.png',
+    logoAlt: 'SHRA Logo'
   },
   {
-    name: 'Department of Health & Human Services',
-    abbreviation: 'HHS',
-    color: '#205493'
-  },
-  {
-    name: 'Department of Energy',
-    abbreviation: 'DOE',
-    color: '#046B99'
-  },
-  {
-    name: 'General Services Administration',
-    abbreviation: 'GSA',
-    color: '#0071BC'
-  },
-  {
-    name: 'Department of Treasury',
-    abbreviation: 'Treasury',
-    color: '#112E51'
-  },
-  {
-    name: 'Department of Justice',
-    abbreviation: 'DOJ',
-    color: '#003366'
-  },
-  {
-    name: 'National Institutes of Health',
-    abbreviation: 'NIH',
-    color: '#205493'
-  },
-  {
-    name: 'Centers for Medicare & Medicaid',
-    abbreviation: 'CMS',
-    color: '#0071BC'
-  },
-  {
-    name: 'Social Security Administration',
-    abbreviation: 'SSA',
-    color: '#046B99'
-  },
-  {
-    name: 'Federal Aviation Administration',
-    abbreviation: 'FAA',
-    color: '#003366'
+    id: 'eastlampeter',
+    headline: 'Reduce time spent on scheduling by 25%',
+    caseStudy: 'Case Study: 10+ hours per week',
+    agency: 'East Lampeter Police',
+    logo: '/logos/east-lampeter-police-logo.png',
+    logoAlt: 'East Lampeter Police Logo'
   }
 ];
 
 // Duplicate for seamless infinite scroll
-const duplicatedClients = [...clients, ...clients];
+const duplicatedCaseStudyClients = [...caseStudyClients, ...caseStudyClients];
+
+// Federal agency clients for the scrolling carousel
+const federalClients = [
+  { name: 'Department of Defense', abbreviation: 'DoD', color: '#0A2540' },
+  { name: 'Department of Homeland Security', abbreviation: 'DHS', color: '#003366' },
+  { name: 'Department of Veterans Affairs', abbreviation: 'VA', color: '#112E51' },
+  { name: 'Department of Health & Human Services', abbreviation: 'HHS', color: '#205493' },
+  { name: 'Department of Energy', abbreviation: 'DOE', color: '#046B99' },
+  { name: 'General Services Administration', abbreviation: 'GSA', color: '#0071BC' },
+  { name: 'Department of Treasury', abbreviation: 'Treasury', color: '#112E51' },
+  { name: 'Department of Justice', abbreviation: 'DOJ', color: '#003366' },
+  { name: 'National Institutes of Health', abbreviation: 'NIH', color: '#205493' },
+  { name: 'Centers for Medicare & Medicaid', abbreviation: 'CMS', color: '#0071BC' },
+  { name: 'Social Security Administration', abbreviation: 'SSA', color: '#046B99' },
+  { name: 'Federal Aviation Administration', abbreviation: 'FAA', color: '#003366' }
+];
+
+// Duplicate for seamless infinite scroll
+const duplicatedFederalClients = [...federalClients, ...federalClients];
 
 export default function TrustedByClients() {
   return (
@@ -95,7 +86,64 @@ export default function TrustedByClients() {
           </p>
         </motion.div>
 
-        {/* Infinite Scrolling Logo Carousel */}
+        {/* Scrolling Case Study Results Carousel */}
+        <div className="relative mb-12">
+          {/* Gradient fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+          
+          {/* Scrolling container */}
+          <div className="overflow-hidden">
+            <motion.div
+              className="flex gap-6 md:gap-8"
+              animate={{
+                x: ['0%', '-50%']
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: 'loop',
+                  duration: 25,
+                  ease: 'linear'
+                }
+              }}
+            >
+              {duplicatedCaseStudyClients.map((client, index) => (
+                <div
+                  key={`${client.id}-${index}`}
+                  className="flex-shrink-0 group"
+                >
+                  <div className="relative w-72 md:w-80 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-[#E07020]/30 transition-all duration-300 p-5 md:p-6 cursor-default">
+                    {/* Headline */}
+                    <h3 className="text-[#0A2540] font-semibold text-sm md:text-base leading-snug mb-4 min-h-[48px] flex items-center">
+                      {client.headline}
+                    </h3>
+                    
+                    {/* Logo */}
+                    <div className="relative w-full h-20 md:h-24 flex items-center justify-center mb-4 bg-slate-50/50 rounded-lg">
+                      <img
+                        src={client.logo}
+                        alt={client.logoAlt}
+                        className="max-h-full max-w-[160px] object-contain transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    
+                    {/* Case Study Info */}
+                    <div className="text-slate-600 text-xs md:text-sm text-center">
+                      <span>{client.caseStudy}</span>
+                      <br />
+                      <span className="text-[#E07020] hover:text-[#c45f1a] transition-colors cursor-pointer font-medium">
+                        {client.agency}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Infinite Scrolling Logo Carousel for Federal Agencies */}
         <div className="relative">
           {/* Gradient fade edges */}
           <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
@@ -117,7 +165,7 @@ export default function TrustedByClients() {
                 }
               }}
             >
-              {duplicatedClients.map((client, index) => (
+              {duplicatedFederalClients.map((client, index) => (
                 <div
                   key={`${client.abbreviation}-${index}`}
                   className="flex-shrink-0 group"

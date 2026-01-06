@@ -1679,6 +1679,9 @@
 - [x] Save checkpoint
 
 
+## Phase 55: Scrolling Client Logos Carousel
+- [x] Make client logos section scrolling like federal agencies carousel
+
 ## RUXI Compliance Audit: FedRAMP Cloud Migration & Integration Section
 
 ### Phase 1: Identify Pages & Current Status
