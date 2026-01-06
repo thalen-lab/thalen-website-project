@@ -38,18 +38,18 @@ const caseStudyClients = [
 
 // Federal agency clients for the scrolling carousel
 const federalClients = [
-  { name: 'Department of Defense', abbreviation: 'DoD', color: '#0A2540' },
-  { name: 'Department of Homeland Security', abbreviation: 'DHS', color: '#003366' },
-  { name: 'Department of Veterans Affairs', abbreviation: 'VA', color: '#112E51' },
-  { name: 'Department of Health & Human Services', abbreviation: 'HHS', color: '#205493' },
-  { name: 'Department of Energy', abbreviation: 'DOE', color: '#046B99' },
-  { name: 'General Services Administration', abbreviation: 'GSA', color: '#0071BC' },
-  { name: 'Department of Treasury', abbreviation: 'Treasury', color: '#112E51' },
-  { name: 'Department of Justice', abbreviation: 'DOJ', color: '#003366' },
-  { name: 'National Institutes of Health', abbreviation: 'NIH', color: '#205493' },
-  { name: 'Centers for Medicare & Medicaid', abbreviation: 'CMS', color: '#0071BC' },
-  { name: 'Social Security Administration', abbreviation: 'SSA', color: '#046B99' },
-  { name: 'Federal Aviation Administration', abbreviation: 'FAA', color: '#003366' }
+  { name: 'Department of Defense', abbreviation: 'DoD', color: '#0A2540', logo: '/images/federal-logos/dod-logo.png' },
+  { name: 'Department of Homeland Security', abbreviation: 'DHS', color: '#003366', logo: '/images/federal-logos/dhs-logo.png' },
+  { name: 'Department of Veterans Affairs', abbreviation: 'VA', color: '#112E51', logo: '/images/federal-logos/va-logo.png' },
+  { name: 'Department of Health & Human Services', abbreviation: 'HHS', color: '#205493', logo: '/images/federal-logos/hhs-logo.png' },
+  { name: 'Department of Energy', abbreviation: 'DOE', color: '#046B99', logo: '/images/federal-logos/doe-logo.png' },
+  { name: 'General Services Administration', abbreviation: 'GSA', color: '#0071BC', logo: '/images/federal-logos/gsa-logo.png' },
+  { name: 'Department of Treasury', abbreviation: 'Treasury', color: '#112E51', logo: '/images/federal-logos/treasury-logo.png' },
+  { name: 'Department of Justice', abbreviation: 'DOJ', color: '#003366', logo: '/images/federal-logos/doj-logo.png' },
+  { name: 'National Institutes of Health', abbreviation: 'NIH', color: '#205493', logo: '/images/federal-logos/nih-logo.png' },
+  { name: 'Centers for Medicare & Medicaid', abbreviation: 'CMS', color: '#0071BC', logo: null },
+  { name: 'Social Security Administration', abbreviation: 'SSA', color: '#046B99', logo: null },
+  { name: 'Federal Aviation Administration', abbreviation: 'FAA', color: '#003366', logo: null }
 ];
 
 // Duplicate for seamless infinite scroll
@@ -153,19 +153,32 @@ export default function TrustedByClients() {
                   key={`${client.abbreviation}-${index}`}
                   className="flex-shrink-0 group"
                 >
-                  <div className="relative w-32 h-20 md:w-40 md:h-24 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md hover:border-[#E07020]/30 transition-all duration-300 flex items-center justify-center p-4 cursor-default">
-                    {/* Logo placeholder with abbreviation */}
-                    <div className="flex flex-col items-center gap-1">
-                      <div 
-                        className="w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center text-white font-bold text-xs md:text-sm transition-all duration-300 group-hover:scale-110"
-                        style={{ backgroundColor: client.color }}
-                      >
-                        {client.abbreviation.slice(0, 3)}
+                  <div className="relative w-32 h-20 md:w-40 md:h-24 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md hover:border-[#E07020]/30 transition-all duration-300 flex items-center justify-center p-3 cursor-default">
+                    {/* Show actual logo if available, otherwise show abbreviation */}
+                    {client.logo ? (
+                      <div className="flex flex-col items-center gap-1">
+                        <img
+                          src={client.logo}
+                          alt={`${client.name} Logo`}
+                          className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform duration-300 group-hover:scale-110"
+                        />
+                        <span className="text-[10px] md:text-xs text-slate-500 font-medium text-center leading-tight group-hover:text-[#0A2540] transition-colors">
+                          {client.abbreviation}
+                        </span>
                       </div>
-                      <span className="text-[10px] md:text-xs text-slate-500 font-medium text-center leading-tight group-hover:text-[#0A2540] transition-colors">
-                        {client.abbreviation}
-                      </span>
-                    </div>
+                    ) : (
+                      <div className="flex flex-col items-center gap-1">
+                        <div 
+                          className="w-12 h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center text-white font-bold text-xs md:text-sm transition-all duration-300 group-hover:scale-110"
+                          style={{ backgroundColor: client.color }}
+                        >
+                          {client.abbreviation.slice(0, 3)}
+                        </div>
+                        <span className="text-[10px] md:text-xs text-slate-500 font-medium text-center leading-tight group-hover:text-[#0A2540] transition-colors">
+                          {client.abbreviation}
+                        </span>
+                      </div>
+                    )}
                     
                     {/* Tooltip on hover */}
                     <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
