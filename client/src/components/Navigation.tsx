@@ -6,9 +6,9 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [industriesOpen, setIndustriesOpen] = useState(false);
-  const [governmentSolutionsOpen, setGovernmentSolutionsOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [learnOpen, setLearnOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
@@ -33,37 +33,64 @@ export default function Navigation() {
     };
   }, [mobileMenuOpen]);
 
-  const services = [
-    { name: 'Intelligent Automation & Process Optimization', href: '/services/automation' },
-    { name: 'Data Analytics & Intelligence', href: '/services/data-analytics' },
-    { name: 'Cloud Infrastructure & Modernization', href: '/services/cloud' },
-    { name: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
-    { name: 'Security & Compliance Consulting', href: '/consulting-services' },
-    { name: 'ATO Support & Authorization', href: '/services/ato-support' },
-    { name: 'Application Development & Integration', href: '/services/application-development' },
-    { name: 'Custom Software Solutions', href: '/services/custom-software' },
-    { name: 'Digital Transformation Enablement', href: '/services/digital-transformation' },
+  // Solutions dropdown - nests Government Solutions, Services, Industries
+  const solutionsItems = {
+    governmentSolutions: {
+      title: 'Government Solutions',
+      items: [
+        { name: 'Core Capabilities', href: '/core-capabilities' },
+        { name: 'Federal Government', href: '/federal-solutions' },
+        { name: 'State & Local Government', href: '/federal-solutions/state-local' },
+        { name: 'Defense & Intelligence', href: '/industries/federal-government' },
+        { name: 'FedRAMP Compliance', href: '/compliance/fedramp' },
+        { name: 'StateRAMP/GovRAMP', href: '/compliance/stateramp' },
+        { name: 'CMMC Compliance', href: '/federal-solutions/cmmc' },
+        { name: 'ATO Support & Authorization', href: '/services/ato-support' },
+        { name: 'Government Cloud Migration', href: '/federal-solutions/cloud-migration' },
+        { name: 'Past Performance', href: '/federal-solutions/past-performance' },
+        { name: 'Contract Vehicles', href: '/contract-vehicles' },
+      ]
+    },
+    services: {
+      title: 'Services',
+      items: [
+        { name: 'Intelligent Automation & Process Optimization', href: '/services/automation' },
+        { name: 'Data Analytics & Intelligence', href: '/services/data-analytics' },
+        { name: 'Cloud Infrastructure & Modernization', href: '/services/cloud' },
+        { name: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
+        { name: 'Security & Compliance Consulting', href: '/consulting-services' },
+        { name: 'ATO Support & Authorization', href: '/services/ato-support' },
+        { name: 'Application Development & Integration', href: '/services/application-development' },
+        { name: 'Custom Software Solutions', href: '/services/custom-software' },
+        { name: 'Digital Transformation Enablement', href: '/services/digital-transformation' },
+      ]
+    },
+    industries: {
+      title: 'Industries',
+      items: [
+        { name: 'Federal Government', href: '/industries/federal-government' },
+        { name: 'Healthcare & Life Sciences', href: '/industries/healthcare' },
+        { name: 'Manufacturing & Energy', href: '/industries/manufacturing' },
+        { name: 'Financial Services', href: '/industries/financial' },
+      ]
+    }
+  };
+
+  // Learn dropdown - nests Insights, Resources, Events
+  const learnItems = [
+    { name: 'Insights', href: '/insights', description: 'Industry trends and thought leadership' },
+    { name: 'Resources', href: '/government-resources', description: 'Guides, whitepapers, and tools' },
+    { name: 'Events', href: '/events', description: 'Webinars, conferences, and meetups' },
   ];
 
-  const industries = [
-    { name: 'Federal Government', href: '/industries/federal-government' },
-    { name: 'Healthcare & Life Sciences', href: '/industries/healthcare' },
-    { name: 'Manufacturing & Energy', href: '/industries/manufacturing' },
-    { name: 'Financial Services', href: '/industries/financial' },
-  ];
-
-  const governmentSolutions = [
-    { name: 'Core Capabilities', href: '/core-capabilities' },
-    { name: 'Federal Government', href: '/federal-solutions' },
-    { name: 'State & Local Government', href: '/federal-solutions/state-local' },
-    { name: 'Defense & Intelligence', href: '/industries/federal-government' },
-    { name: 'FedRAMP Compliance', href: '/compliance/fedramp' },
-    { name: 'StateRAMP/GovRAMP', href: '/compliance/stateramp' },
-    { name: 'CMMC Compliance', href: '/federal-solutions/cmmc' },
-    { name: 'ATO Support & Authorization', href: '/services/ato-support' },
-    { name: 'Government Cloud Migration', href: '/federal-solutions/cloud-migration' },
-    { name: 'Past Performance', href: '/federal-solutions/past-performance' },
-    { name: 'Contract Vehicles', href: '/contract-vehicles' },
+  // About dropdown - nests About Thalen, Social Responsibility, Security & Compliance, News & Updates, Company's Latest, Careers
+  const aboutItems = [
+    { name: 'About Thalen', href: '/about', description: 'Get to know us better' },
+    { name: 'Social Responsibility', href: '/social-responsibility', description: 'How we give back' },
+    { name: 'Security & Compliance', href: '/security-compliance', description: 'ISO 27001, CMMC & more' },
+    { name: 'News & Updates', href: '/news', description: 'Industry news and trends' },
+    { name: "Company's Latest", href: '/company-news', description: 'Updates from Thalen' },
+    { name: 'Careers', href: '/careers', description: 'Join our team' },
   ];
 
   return (
@@ -80,95 +107,130 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden xl:flex items-center space-x-5 2xl:space-x-6">
-            {/* Government Solutions Dropdown - First for GovTech focus */}
+            {/* Solutions Mega Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setGovernmentSolutionsOpen(true)}
-              onMouseLeave={() => setGovernmentSolutionsOpen(false)}
+              onMouseEnter={() => setSolutionsOpen(true)}
+              onMouseLeave={() => setSolutionsOpen(false)}
             >
               <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
-                <span>Government Solutions</span>
+                <span>Solutions</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
-              {governmentSolutionsOpen && (
+              {solutionsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-card text-card-foreground rounded-lg shadow-xl border border-border p-6">
+                  <div className="grid grid-cols-3 gap-6">
+                    {/* Government Solutions Column */}
+                    <div>
+                      <h3 className="font-semibold text-orange-signature mb-3 text-sm uppercase tracking-wide">
+                        {solutionsItems.governmentSolutions.title}
+                      </h3>
+                      <div className="space-y-1">
+                        {solutionsItems.governmentSolutions.items.map((item) => (
+                          <Link 
+                            key={item.href} 
+                            href={item.href}
+                            className="block px-2 py-2 text-sm hover:bg-orange-signature/10 hover:text-orange-signature transition-colors rounded"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    {/* Services Column */}
+                    <div>
+                      <h3 className="font-semibold text-orange-signature mb-3 text-sm uppercase tracking-wide">
+                        {solutionsItems.services.title}
+                      </h3>
+                      <div className="space-y-1">
+                        {solutionsItems.services.items.map((item) => (
+                          <Link 
+                            key={item.href} 
+                            href={item.href}
+                            className="block px-2 py-2 text-sm hover:bg-orange-signature/10 hover:text-orange-signature transition-colors rounded"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    {/* Industries Column */}
+                    <div>
+                      <h3 className="font-semibold text-orange-signature mb-3 text-sm uppercase tracking-wide">
+                        {solutionsItems.industries.title}
+                      </h3>
+                      <div className="space-y-1">
+                        {solutionsItems.industries.items.map((item) => (
+                          <Link 
+                            key={item.href} 
+                            href={item.href}
+                            className="block px-2 py-2 text-sm hover:bg-orange-signature/10 hover:text-orange-signature transition-colors rounded"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Learn Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setLearnOpen(true)}
+              onMouseLeave={() => setLearnOpen(false)}
+            >
+              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
+                <span>Learn</span>
+                <ChevronDown className="h-4 w-4" />
+              </button>
+              {learnOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
-                  {governmentSolutions.map((solution) => (
+                  {learnItems.map((item) => (
                     <Link 
-                      key={solution.href} 
-                      href={solution.href}
+                      key={item.href} 
+                      href={item.href}
                       className="block px-4 py-3 hover:bg-orange-signature/10 hover:text-orange-signature transition-colors"
                     >
-                      {solution.name}
+                      <div className="font-medium">{item.name}</div>
+                      <div className="text-sm text-muted-foreground">{item.description}</div>
                     </Link>
                   ))}
                 </div>
               )}
             </div>
 
-            {/* Services Dropdown */}
+            {/* About Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
+              onMouseEnter={() => setAboutOpen(true)}
+              onMouseLeave={() => setAboutOpen(false)}
             >
               <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
-                <span>Services</span>
+                <span>About</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
-                  {services.map((service) => (
+              {aboutOpen && (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
+                  {aboutItems.map((item) => (
                     <Link 
-                      key={service.href} 
-                      href={service.href}
+                      key={item.href} 
+                      href={item.href}
                       className="block px-4 py-3 hover:bg-orange-signature/10 hover:text-orange-signature transition-colors"
                     >
-                      {service.name}
+                      <div className="font-medium">{item.name}</div>
+                      <div className="text-sm text-muted-foreground">{item.description}</div>
                     </Link>
                   ))}
                 </div>
               )}
             </div>
 
-            {/* Industries Dropdown */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setIndustriesOpen(true)}
-              onMouseLeave={() => setIndustriesOpen(false)}
-            >
-              <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
-                <span>Industries</span>
-                <ChevronDown className="h-4 w-4" />
-              </button>
-              {industriesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
-                  {industries.map((industry) => (
-                    <Link 
-                      key={industry.href} 
-                      href={industry.href}
-                      className="block px-4 py-3 hover:bg-orange-signature/10 hover:text-orange-signature transition-colors"
-                    >
-                      {industry.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link href="/insights" className="hover:text-orange-signature transition-colors py-2">
-              Insights
-            </Link>
+            {/* Standalone Links */}
             <Link href="/case-studies" className="hover:text-orange-signature transition-colors py-2">
               Case Studies
-            </Link>
-            <Link href="/government-resources" className="hover:text-orange-signature transition-colors py-2">
-              Resources
-            </Link>
-            <Link href="/events" className="hover:text-orange-signature transition-colors py-2">
-              Events
-            </Link>
-            <Link href="/about" className="hover:text-orange-signature transition-colors py-2">
-              About
             </Link>
             <Link href="/contact" className="hover:text-orange-signature transition-colors py-2">
               Contact
@@ -194,116 +256,128 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div className="xl:hidden fixed inset-0 top-16 sm:top-20 bg-primary z-40 overflow-y-auto overscroll-contain">
             <div className="container py-6 pb-24 space-y-2">
-              {/* Government Solutions Accordion - First for GovTech focus */}
+              {/* Solutions Accordion */}
               <div className="border-b border-primary-foreground/20">
                 <button 
                   className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
-                  onClick={() => setGovernmentSolutionsOpen(!governmentSolutionsOpen)}
+                  onClick={() => setSolutionsOpen(!solutionsOpen)}
                 >
-                  <span>Government Solutions</span>
-                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${governmentSolutionsOpen ? 'rotate-180' : ''}`} />
+                  <span>Solutions</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${solutionsOpen ? 'rotate-180' : ''}`} />
                 </button>
-                {governmentSolutionsOpen && (
+                {solutionsOpen && (
+                  <div className="pb-4 space-y-4">
+                    {/* Government Solutions */}
+                    <div>
+                      <div className="px-4 py-2 text-sm font-semibold text-orange-signature uppercase tracking-wide">
+                        {solutionsItems.governmentSolutions.title}
+                      </div>
+                      {solutionsItems.governmentSolutions.items.map((item) => (
+                        <Link 
+                          key={item.href} 
+                          href={item.href}
+                          className="block py-3 px-6 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                    {/* Services */}
+                    <div>
+                      <div className="px-4 py-2 text-sm font-semibold text-orange-signature uppercase tracking-wide">
+                        {solutionsItems.services.title}
+                      </div>
+                      {solutionsItems.services.items.map((item) => (
+                        <Link 
+                          key={item.href} 
+                          href={item.href}
+                          className="block py-3 px-6 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                    {/* Industries */}
+                    <div>
+                      <div className="px-4 py-2 text-sm font-semibold text-orange-signature uppercase tracking-wide">
+                        {solutionsItems.industries.title}
+                      </div>
+                      {solutionsItems.industries.items.map((item) => (
+                        <Link 
+                          key={item.href} 
+                          href={item.href}
+                          className="block py-3 px-6 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Learn Accordion */}
+              <div className="border-b border-primary-foreground/20">
+                <button 
+                  className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
+                  onClick={() => setLearnOpen(!learnOpen)}
+                >
+                  <span>Learn</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${learnOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {learnOpen && (
                   <div className="pb-4 space-y-1">
-                    {governmentSolutions.map((solution) => (
+                    {learnItems.map((item) => (
                       <Link 
-                        key={solution.href} 
-                        href={solution.href}
-                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
+                        key={item.href} 
+                        href={item.href}
+                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg touch-feedback"
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        {solution.name}
+                        <div className="font-medium">{item.name}</div>
+                        <div className="text-sm text-primary-foreground/60">{item.description}</div>
                       </Link>
                     ))}
                   </div>
                 )}
               </div>
 
-              {/* Services Accordion */}
+              {/* About Accordion */}
               <div className="border-b border-primary-foreground/20">
                 <button 
                   className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
-                  onClick={() => setServicesOpen(!servicesOpen)}
+                  onClick={() => setAboutOpen(!aboutOpen)}
                 >
-                  <span>Services</span>
-                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                  <span>About</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${aboutOpen ? 'rotate-180' : ''}`} />
                 </button>
-                {servicesOpen && (
+                {aboutOpen && (
                   <div className="pb-4 space-y-1">
-                    {services.map((service) => (
+                    {aboutItems.map((item) => (
                       <Link 
-                        key={service.href} 
-                        href={service.href}
-                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
+                        key={item.href} 
+                        href={item.href}
+                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg touch-feedback"
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        {service.name}
+                        <div className="font-medium">{item.name}</div>
+                        <div className="text-sm text-primary-foreground/60">{item.description}</div>
                       </Link>
                     ))}
                   </div>
                 )}
               </div>
 
-              {/* Industries Accordion */}
-              <div className="border-b border-primary-foreground/20">
-                <button 
-                  className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
-                  onClick={() => setIndustriesOpen(!industriesOpen)}
-                >
-                  <span>Industries</span>
-                  <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${industriesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {industriesOpen && (
-                  <div className="pb-4 space-y-1">
-                    {industries.map((industry) => (
-                      <Link 
-                        key={industry.href} 
-                        href={industry.href}
-                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {industry.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Direct Links */}
-              <Link 
-                href="/insights" 
-                className="block py-4 min-h-[52px] font-medium text-lg border-b border-primary-foreground/20 flex items-center touch-feedback"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Insights
-              </Link>
+              {/* Standalone Links */}
               <Link 
                 href="/case-studies" 
                 className="block py-4 min-h-[52px] font-medium text-lg border-b border-primary-foreground/20 flex items-center touch-feedback"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Case Studies
-              </Link>
-              <Link 
-                href="/government-resources" 
-                className="block py-4 min-h-[52px] font-medium text-lg border-b border-primary-foreground/20 flex items-center touch-feedback"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Resources
-              </Link>
-              <Link 
-                href="/events" 
-                className="block py-4 min-h-[52px] font-medium text-lg border-b border-primary-foreground/20 flex items-center touch-feedback"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Events
-              </Link>
-              <Link 
-                href="/about" 
-                className="block py-4 min-h-[52px] font-medium text-lg border-b border-primary-foreground/20 flex items-center touch-feedback"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
               </Link>
               <Link 
                 href="/contact" 

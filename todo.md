@@ -4205,3 +4205,11 @@
 
 ## Phase 60: About Us Page Government-First Messaging Update
 - [x] Update About Us page text to focus on government-first messaging (Federal, State, Local agencies as primary focus, government-grade solutions for regulated industries)
+
+
+## Phase 82: Navbar Restructuring
+- [x] Navbar restructure: Nest Government Solutions, Services, and Industries under "Solutions" mega dropdown
+- [x] Navbar restructure: Nest Insights, Resources, and Events under new "Learn" dropdown
+- [x] Navbar restructure: Nest About Thalen, Social Responsibility, Security & Compliance, News & Updates, Company's Latest, and Careers under "About" dropdown
+- [x] Keep Case Studies, Contact, and Schedule Assessment as standalone items
+- [ ] Create placeholder pages: Social Responsibility, Security & Compliance, News & Updates, Company's Latest, Careers
