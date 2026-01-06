@@ -2,12 +2,53 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Briefcase, Users, Heart, Zap, Shield, GraduationCap, MapPin, Clock } from 'lucide-react';
+import { ArrowRight, Briefcase, Users, Heart, Zap, Shield, GraduationCap, MapPin, Clock, Loader2, Search, Filter, Building2 } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
+import { trpc } from '@/lib/trpc';
+import { useState, useMemo } from 'react';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 export default function Careers() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [departmentFilter, setDepartmentFilter] = useState<string>('all');
+  const [locationFilter, setLocationFilter] = useState<string>('all');
+  const [typeFilter, setTypeFilter] = useState<string>('all');
+
+  // Fetch jobs from the database
+  const { data: jobsData, isLoading, error } = trpc.jobs.list.useQuery();
+
+  // Get unique departments, locations, and types for filters
+  const filterOptions = useMemo(() => {
+    if (!jobsData) return { departments: [], locations: [], types: [] };
+    
+    const departments = Array.from(new Set(jobsData.map(job => job.department))).filter(Boolean);
+    const locations = Array.from(new Set(jobsData.map(job => job.location))).filter(Boolean);
+    const types = Array.from(new Set(jobsData.map(job => job.employmentType))).filter(Boolean);
+    
+    return { departments, locations, types };
+  }, [jobsData]);
+
+  // Filter jobs based on search and filters
+  const filteredJobs = useMemo(() => {
+    if (!jobsData) return [];
+    
+    return jobsData.filter(job => {
+      const matchesSearch = searchQuery === '' || 
+        job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        job.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        job.summary?.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      const matchesDepartment = departmentFilter === 'all' || job.department === departmentFilter;
+      const matchesLocation = locationFilter === 'all' || job.location === locationFilter;
+      const matchesType = typeFilter === 'all' || job.employmentType === typeFilter;
+      
+      return matchesSearch && matchesDepartment && matchesLocation && matchesType;
+    });
+  }, [jobsData, searchQuery, departmentFilter, locationFilter, typeFilter]);
+
   const benefits = [
     {
       icon: Heart,
@@ -38,39 +79,6 @@ export default function Careers() {
       icon: Zap,
       title: 'Impactful Work',
       description: 'Contribute to projects that directly improve government services for citizens.'
-    }
-  ];
-
-  const openPositions = [
-    {
-      title: 'Senior Cloud Solutions Architect',
-      department: 'Engineering',
-      location: 'Washington, DC / Remote',
-      type: 'Full-time'
-    },
-    {
-      title: 'Federal Program Manager',
-      department: 'Delivery',
-      location: 'Washington, DC',
-      type: 'Full-time'
-    },
-    {
-      title: 'Cybersecurity Engineer',
-      department: 'Security',
-      location: 'Remote',
-      type: 'Full-time'
-    },
-    {
-      title: 'Data Analytics Consultant',
-      department: 'Analytics',
-      location: 'Washington, DC / Remote',
-      type: 'Full-time'
-    },
-    {
-      title: 'RPA Developer',
-      department: 'Automation',
-      location: 'Remote',
-      type: 'Full-time'
     }
   ];
 
@@ -166,41 +174,148 @@ export default function Careers() {
             </p>
           </motion.div>
 
+          {/* Search and Filters */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Input
+                  type="text"
+                  placeholder="Search positions..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <Select value={departmentFilter} onValueChange={setDepartmentFilter}>
+                  <SelectTrigger className="w-[160px]">
+                    <Building2 className="w-4 h-4 mr-2 text-gray-400" />
+                    <SelectValue placeholder="Department" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Departments</SelectItem>
+                    {filterOptions.departments.map(dept => (
+                      <SelectItem key={dept} value={dept}>{dept}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Select value={locationFilter} onValueChange={setLocationFilter}>
+                  <SelectTrigger className="w-[160px]">
+                    <MapPin className="w-4 h-4 mr-2 text-gray-400" />
+                    <SelectValue placeholder="Location" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Locations</SelectItem>
+                    {filterOptions.locations.map(loc => (
+                      <SelectItem key={loc} value={loc}>{loc}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Select value={typeFilter} onValueChange={setTypeFilter}>
+                  <SelectTrigger className="w-[140px]">
+                    <Clock className="w-4 h-4 mr-2 text-gray-400" />
+                    <SelectValue placeholder="Type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Types</SelectItem>
+                    {filterOptions.types.map(type => (
+                      <SelectItem key={type} value={type}>{type}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </div>
+
+          {/* Job Listings */}
           <div className="max-w-4xl mx-auto space-y-4">
-            {openPositions.map((position, index) => (
-              <motion.div
-                key={position.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className="hover:shadow-lg transition-all duration-300 border-0 shadow-md">
-                  <CardContent className="p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                      <h3 className="text-lg font-bold mb-2">{position.title}</h3>
-                      <div className="flex flex-wrap gap-3 text-sm text-gray-600">
-                        <span className="inline-flex items-center gap-1">
-                          <Briefcase className="w-4 h-4" />
-                          {position.department}
-                        </span>
-                        <span className="inline-flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
-                          {position.location}
-                        </span>
-                        <span className="inline-flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {position.type}
-                        </span>
-                      </div>
-                    </div>
-                    <Button variant="outline" className="shrink-0 border-orange-500 text-orange-600 hover:bg-orange-50">
-                      View Details <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+            {isLoading ? (
+              <div className="flex items-center justify-center py-12">
+                <Loader2 className="w-8 h-8 animate-spin text-orange-500" />
+                <span className="ml-3 text-gray-600">Loading positions...</span>
+              </div>
+            ) : error ? (
+              <div className="text-center py-12">
+                <p className="text-gray-600">Unable to load positions. Please try again later.</p>
+              </div>
+            ) : filteredJobs.length === 0 ? (
+              <div className="text-center py-12">
+                <Briefcase className="w-12 h-12 text-gray-300 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                  {jobsData && jobsData.length > 0 ? 'No matching positions' : 'No open positions'}
+                </h3>
+                <p className="text-gray-500">
+                  {jobsData && jobsData.length > 0 
+                    ? 'Try adjusting your search or filters.' 
+                    : 'Check back soon for new opportunities.'}
+                </p>
+              </div>
+            ) : (
+              <>
+                <p className="text-sm text-gray-500 mb-4">
+                  Showing {filteredJobs.length} {filteredJobs.length === 1 ? 'position' : 'positions'}
+                </p>
+                {filteredJobs.map((job, index) => (
+                  <motion.div
+                    key={job.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card className="hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+                      <CardContent className="p-6">
+                        <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold mb-2">{job.title}</h3>
+                            <div className="flex flex-wrap gap-3 text-sm text-gray-600 mb-3">
+                              <span className="inline-flex items-center gap-1">
+                                <Briefcase className="w-4 h-4" />
+                                {job.department}
+                              </span>
+                              <span className="inline-flex items-center gap-1">
+                                <MapPin className="w-4 h-4" />
+                                {job.location}
+                              </span>
+                              <span className="inline-flex items-center gap-1">
+                                <Clock className="w-4 h-4" />
+                                {job.employmentType}
+                              </span>
+                              {job.remoteAllowed && (
+                                <span className="inline-flex items-center gap-1 text-green-600">
+                                  <Zap className="w-4 h-4" />
+                                  Remote Eligible
+                                </span>
+                              )}
+                            </div>
+                            {job.summary && (
+                              <p className="text-gray-600 text-sm line-clamp-2">{job.summary}</p>
+                            )}
+                            {job.salaryRange && (
+                              <p className="text-sm text-gray-500 mt-2">
+                                <span className="font-medium">Salary:</span> {job.salaryRange}
+                              </p>
+                            )}
+                            {job.clearanceRequired && job.clearanceRequired !== 'None' && (
+                              <p className="text-sm text-orange-600 mt-1">
+                                <Shield className="w-3 h-3 inline mr-1" />
+                                {job.clearanceRequired} clearance required
+                              </p>
+                            )}
+                          </div>
+                          <Link href={`/careers/${job.slug}`}>
+                            <Button variant="outline" className="shrink-0 border-orange-500 text-orange-600 hover:bg-orange-50">
+                              View Details <ArrowRight className="ml-2 w-4 h-4" />
+                            </Button>
+                          </Link>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </>
+            )}
           </div>
         </div>
       </section>

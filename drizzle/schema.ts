@@ -343,3 +343,103 @@ export const leads = mysqlTable("leads", {
 
 export type Lead = typeof leads.$inferSelect;
 export type InsertLead = typeof leads.$inferInsert;
+
+
+/**
+ * Job listings table for careers page.
+ * Stores all job postings with details and requirements.
+ */
+export const jobs = mysqlTable("jobs", {
+  id: int("id").autoincrement().primaryKey(),
+  /** URL-friendly slug for the job posting */
+  slug: varchar("slug", { length: 255 }).notNull().unique(),
+  /** Job title */
+  title: varchar("title", { length: 255 }).notNull(),
+  /** Department (e.g., "Engineering", "Security", "Analytics") */
+  department: varchar("department", { length: 100 }).notNull(),
+  /** Job location (e.g., "Washington, DC", "Remote", "Washington, DC / Remote") */
+  location: varchar("location", { length: 255 }).notNull(),
+  /** Employment type (e.g., "Full-time", "Part-time", "Contract") */
+  employmentType: varchar("employmentType", { length: 50 }).notNull(),
+  /** Experience level (e.g., "Entry", "Mid", "Senior", "Lead", "Executive") */
+  experienceLevel: varchar("experienceLevel", { length: 50 }).notNull(),
+  /** Salary range (optional, e.g., "$120,000 - $160,000") */
+  salaryRange: varchar("salaryRange", { length: 100 }),
+  /** Short summary/excerpt */
+  summary: text("summary").notNull(),
+  /** Full job description (HTML from WYSIWYG editor) */
+  description: text("description").notNull(),
+  /** Requirements/qualifications (HTML from WYSIWYG editor) */
+  requirements: text("requirements").notNull(),
+  /** Nice-to-have qualifications (HTML from WYSIWYG editor) */
+  niceToHave: text("niceToHave"),
+  /** Benefits overview (HTML from WYSIWYG editor) */
+  benefits: text("benefits"),
+  /** Security clearance requirement (e.g., "None", "Secret", "Top Secret", "TS/SCI") */
+  clearanceRequired: varchar("clearanceRequired", { length: 50 }).default("None"),
+  /** Whether remote work is allowed */
+  remoteAllowed: boolean("remoteAllowed").default(false),
+  /** Application deadline (optional) */
+  applicationDeadline: timestamp("applicationDeadline"),
+  /** Publication status */
+  status: mysqlEnum("status", ["draft", "published", "closed", "archived"]).default("draft").notNull(),
+  /** User ID of the creator */
+  createdBy: int("createdBy"),
+  publishedAt: timestamp("publishedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Job = typeof jobs.$inferSelect;
+export type InsertJob = typeof jobs.$inferInsert;
+
+/**
+ * Job applications table.
+ * Stores all job applications submitted through the careers page.
+ */
+export const jobApplications = mysqlTable("job_applications", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Reference to the job being applied for */
+  jobId: int("jobId").notNull(),
+  /** Applicant's first name */
+  firstName: varchar("firstName", { length: 100 }).notNull(),
+  /** Applicant's last name */
+  lastName: varchar("lastName", { length: 100 }).notNull(),
+  /** Applicant's email address */
+  email: varchar("email", { length: 320 }).notNull(),
+  /** Applicant's phone number */
+  phone: varchar("phone", { length: 50 }),
+  /** LinkedIn profile URL */
+  linkedinUrl: varchar("linkedinUrl", { length: 500 }),
+  /** Portfolio/personal website URL */
+  portfolioUrl: varchar("portfolioUrl", { length: 500 }),
+  /** Resume file S3 key */
+  resumeS3Key: varchar("resumeS3Key", { length: 500 }).notNull(),
+  /** Resume file URL */
+  resumeUrl: varchar("resumeUrl", { length: 1000 }).notNull(),
+  /** Cover letter text (optional) */
+  coverLetter: text("coverLetter"),
+  /** How did you hear about us? */
+  referralSource: varchar("referralSource", { length: 255 }),
+  /** Current work authorization status */
+  workAuthorization: varchar("workAuthorization", { length: 100 }),
+  /** Willing to relocate? */
+  willingToRelocate: boolean("willingToRelocate").default(false),
+  /** Expected salary */
+  expectedSalary: varchar("expectedSalary", { length: 100 }),
+  /** Available start date */
+  availableStartDate: varchar("availableStartDate", { length: 100 }),
+  /** Additional notes/comments */
+  additionalNotes: text("additionalNotes"),
+  /** Application status */
+  status: mysqlEnum("status", ["new", "reviewing", "phone_screen", "interview", "offer", "hired", "rejected", "withdrawn"]).default("new").notNull(),
+  /** Internal notes from recruiters (not visible to applicant) */
+  internalNotes: text("internalNotes"),
+  /** User ID if applicant is logged in (optional) */
+  userId: int("userId"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type JobApplication = typeof jobApplications.$inferSelect;
+export type InsertJobApplication = typeof jobApplications.$inferInsert;

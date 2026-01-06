@@ -4213,3 +4213,18 @@
 - [x] Navbar restructure: Nest About Thalen, Social Responsibility, Security & Compliance, News & Updates, Company's Latest, and Careers under "About" dropdown
 - [x] Keep Case Studies, Contact, and Schedule Assessment as standalone items
 - [x] Create placeholder pages: Social Responsibility, Security & Compliance, News & Updates, Company's Latest, Careers
+
+## Phase 62: Dynamic Job Listings with Database Integration
+- [x] Create database schema for jobs table (title, department, location, type, description, requirements, etc.)
+- [x] Create database schema for job applications table (applicant info, resume, cover letter, status)
+- [x] Build API endpoints for fetching job listings (public)
+- [x] Build API endpoint for submitting job applications
+- [x] Build admin API endpoints for managing jobs (create, update, delete)
+- [x] Update Careers page to fetch and display dynamic job listings
+- [x] Create job detail page with full description and application form
+- [x] Add application form with file upload for resume
+- [x] Add admin interface for managing job postings
+- [x] Test job listing and application flow
+
+## Phase 63: Bug Fixes
+- [x] Fix Who We Are section layout - certification cards overlapping with company name text

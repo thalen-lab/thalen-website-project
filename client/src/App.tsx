@@ -182,6 +182,8 @@ import AdminEvents from "./pages/admin/Events";
 import EventForm from "./pages/admin/EventForm";
 import AdminMediaLibrary from "./pages/admin/MediaLibrary";
 import AdminScheduledContent from "./pages/admin/ScheduledContent";
+import AdminJobs from "./pages/admin/Jobs";
+import AdminJobForm from "./pages/admin/JobForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -191,6 +193,7 @@ import SecurityCompliance from "./pages/SecurityCompliance";
 import NewsUpdates from "./pages/NewsUpdates";
 import CompanyLatest from "./pages/CompanyLatest";
 import Careers from "./pages/Careers";
+import JobDetail from "./pages/JobDetail";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -203,6 +206,7 @@ function Router() {
       <Route path={"/about/news-updates"} component={NewsUpdates} />
       <Route path={"/about/company-latest"} component={CompanyLatest} />
       <Route path={"/careers"} component={Careers} />
+      <Route path={"/careers/:slug"} component={JobDetail} />
       <Route path={"/consulting-services"} component={ConsultingServices} />
       <Route path={"/team"} component={Team} />
       <Route path={"/contact"} component={Contact} />
@@ -425,6 +429,27 @@ function Router() {
         {() => (
           <ProtectedRoute requireAdmin>
             <AdminMediaLibrary />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/jobs"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <AdminJobs />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/jobs/new"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <AdminJobForm />
+          </ProtectedRoute>
+        )}
+      </Route>
+      <Route path={"/admin/jobs/:id"}>
+        {() => (
+          <ProtectedRoute requireAdmin>
+            <AdminJobForm />
           </ProtectedRoute>
         )}
       </Route>
