@@ -4228,3 +4228,11 @@
 
 ## Phase 63: Bug Fixes
 - [x] Fix Who We Are section layout - certification cards overlapping with company name text
+
+## Phase 52: Fix Sitewide CSS and Layout Issues
+- [ ] Fix navbar dropdown menu layout (overlapping text issue)
+- [ ] Fix Who We Are section layout (broken text wrapping)
+- [ ] Fix Solutions cards layout
+
+## Phase 65: Fix Navigation Dropdown Overlap Issue
+- [x] Fix navigation dropdown menu overlap issue - GOVERNMENT and SOLUTIONS columns showing overlapping text
