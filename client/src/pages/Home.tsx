@@ -157,7 +157,7 @@ export default function Home() {
                 <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Our Solutions</span>
               </div>
               
-              <h2 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-[1.1] tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 leading-[1.1] tracking-tight">
                 Mission-Focused Solutions
               </h2>
               <p className="text-sm md:text-base lg:text-lg text-white/80 leading-relaxed border-l-3 border-[#E07020]/50 pl-3">
@@ -322,7 +322,7 @@ export default function Home() {
                 <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">How We Work</span>
               </div>
               
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A2540] mb-4 leading-[1.1]">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0A2540] mb-4 leading-[1.1]">
                 Our Approach
               </h2>
               
@@ -418,7 +418,7 @@ export default function Home() {
               <div className="w-10 h-[2px] bg-[#E07020]"></div>
             </div>
             
-            <h2 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-[1.1]">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 leading-[1.1]">
               Mission-First, Compliance-Assured
             </h2>
             <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
@@ -526,7 +526,7 @@ export default function Home() {
               <div className="w-10 h-[2px] bg-[#E07020]"></div>
             </div>
             
-            <h2 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-[#0A2540] leading-[1.1]">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-[#0A2540] leading-[1.1]">
               Trusted Partners Across Sectors
             </h2>
             <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">

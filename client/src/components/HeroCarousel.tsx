@@ -28,7 +28,7 @@ const slides: CarouselSlide[] = [
     id: 3,
     image: "/hero-defense-cyber.png",
     imageWebp: "/hero-defense-cyber.webp",
-    title: "Defending the Nation's Digital Infrastructure",
+    title: "Defending Digital Infrastructure",
     subtitle: "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements.",
   },
   {

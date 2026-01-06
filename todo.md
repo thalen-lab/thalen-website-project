@@ -4487,3 +4487,4 @@
 - [x] Adjust hero carousel text overlay to extend from left edge with no space
 - [x] Adjust hero carousel text overlay to extend from bottom edge with no space
 - [x] Increase hero carousel text size for better visibility
+- [x] Reduce carousel title sizes - they are too large
