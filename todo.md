@@ -4473,3 +4473,6 @@
 - [x] Verify all grids collapse properly on smaller screens
 - [x] Verify touch targets meet 44px minimum
 - [x] Verify text remains readable at all breakpoints
+
+## Phase 59: Fix Mobile Carousel Indicator Dots
+- [x] Hide carousel indicator dots on mobile/tablet views (only show on desktop)

@@ -87,8 +87,8 @@ export default function AnnouncementTicker() {
             </Link>
           </div>
 
-          {/* Dots indicator */}
-          <div className="flex items-center gap-2.5 shrink-0">
+          {/* Dots indicator - hidden on mobile/tablet, visible on desktop */}
+          <div className="hidden lg:flex items-center gap-2.5 shrink-0">
             {announcements.map((_, index) => (
               <button
                 key={index}
