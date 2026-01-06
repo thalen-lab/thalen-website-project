@@ -184,10 +184,18 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
-                <CardContent className="p-5 md:p-6 h-full flex flex-col">
-                  {/* Number */}
-                  <span className="text-4xl font-bold text-white/10 mb-3">01</span>
-                  
+                {/* Image on top - taller like insights cards */}
+                <div className="relative h-44 sm:h-52 overflow-hidden">
+                  <img 
+                    src="/images/citizen-services.jpg" 
+                    alt="Citizen Services Modernization" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {/* Gradient overlay for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/60 to-transparent"></div>
+                </div>
+                {/* Content Section */}
+                <CardContent className="p-5 md:p-6 flex flex-col">
                   {/* Title */}
                   <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">
                     Citizen Services Modernization
@@ -215,10 +223,18 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
-                <CardContent className="p-5 md:p-6 h-full flex flex-col">
-                  {/* Number */}
-                  <span className="text-4xl font-bold text-white/10 mb-3">02</span>
-                  
+                {/* Image on top - taller like insights cards */}
+                <div className="relative h-44 sm:h-52 overflow-hidden">
+                  <img 
+                    src="/images/mission-critical-security.png" 
+                    alt="Mission-Critical Security" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {/* Gradient overlay for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/60 to-transparent"></div>
+                </div>
+                {/* Content Section */}
+                <CardContent className="p-5 md:p-6 flex flex-col">
                   {/* Title */}
                   <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">
                     Mission-Critical Security
@@ -246,10 +262,18 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
-                <CardContent className="p-5 md:p-6 h-full flex flex-col">
-                  {/* Number */}
-                  <span className="text-4xl font-bold text-white/10 mb-3">03</span>
-                  
+                {/* Image on top - matching other cards */}
+                <div className="relative h-44 sm:h-52 overflow-hidden">
+                  <img 
+                    src="/images/compliance-ai-dashboard.webp" 
+                    alt="AI-Powered Regulatory Compliance Dashboard" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {/* Gradient overlay for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/60 to-transparent"></div>
+                </div>
+                {/* Content Section */}
+                <CardContent className="p-5 md:p-6 flex flex-col">
                   {/* Title */}
                   <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">
                     Regulatory Compliance
