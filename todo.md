@@ -4189,3 +4189,5 @@
 - [x] Find and download official federal agency logos (HHS, DOE, GSA, Treasury, DOJ, NIH, DoD, DHS, VA)
 - [x] Resize all logos to uniform dimensions (120x120 pixels)
 - [x] Update FederalAgencies component to use actual logo images instead of placeholders
+- [x] Edit "How We Work" section: remove numbers from cards, make cards slightly larger with more description space
+- [x] Redesign Who We Are section to match Aqua Nautilus layout - left side has title and description, right side has two linked cards with images

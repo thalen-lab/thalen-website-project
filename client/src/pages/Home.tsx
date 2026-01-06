@@ -343,57 +343,45 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               {/* Capability 1: Security-First Architecture */}
-              <div className="group relative bg-white rounded-lg p-4 border border-slate-200 hover:border-[#E07020] transition-all duration-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl font-bold text-slate-200">01</span>
-                </div>
-                <h3 className="text-base font-bold text-[#0A2540] mb-1">
+              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#E07020] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-lg font-bold text-[#0A2540] mb-2">
                   Security-First Architecture
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  <strong className="text-[#0A2540]">Zero-trust frameworks</strong> designed for classified and sensitive environments
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  <strong className="text-[#0A2540]">Zero-trust frameworks</strong> designed for classified and sensitive environments, ensuring data protection at every layer.
                 </p>
               </div>
 
               {/* Capability 2: Compliance Expertise */}
-              <div className="group relative bg-white rounded-lg p-4 border border-slate-200 hover:border-[#E07020] transition-all duration-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl font-bold text-slate-200">02</span>
-                </div>
-                <h3 className="text-base font-bold text-[#0A2540] mb-1">
+              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#E07020] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-lg font-bold text-[#0A2540] mb-2">
                   Compliance Expertise
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Deep experience with <strong className="text-[#0A2540]">FedRAMP, CMMC, FISMA</strong>, and agency-specific requirements
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Deep experience with <strong className="text-[#0A2540]">FedRAMP, CMMC, FISMA</strong>, and agency-specific requirements for seamless authorization.
                 </p>
               </div>
 
               {/* Capability 3: Mission Assurance */}
-              <div className="group relative bg-white rounded-lg p-4 border border-slate-200 hover:border-[#E07020] transition-all duration-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl font-bold text-slate-200">03</span>
-                </div>
-                <h3 className="text-base font-bold text-[#0A2540] mb-1">
+              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#E07020] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-lg font-bold text-[#0A2540] mb-2">
                   Mission Assurance
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Proven delivery across <strong className="text-[#0A2540]">defense, civilian, and intelligence</strong> community programs
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Proven delivery across <strong className="text-[#0A2540]">defense, civilian, and intelligence</strong> community programs with measurable outcomes.
                 </p>
               </div>
 
               {/* Capability 4: Acquisition Alignment */}
-              <div className="group relative bg-white rounded-lg p-4 border border-slate-200 hover:border-[#E07020] transition-all duration-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl font-bold text-slate-200">04</span>
-                </div>
-                <h3 className="text-base font-bold text-[#0A2540] mb-1">
+              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#E07020] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-lg font-bold text-[#0A2540] mb-2">
                   Acquisition Alignment
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Solutions structured for <strong className="text-[#0A2540]">federal procurement</strong> and contract requirements
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Solutions structured for <strong className="text-[#0A2540]">federal procurement</strong> and contract requirements, streamlining the acquisition process.
                 </p>
               </div>
             </motion.div>

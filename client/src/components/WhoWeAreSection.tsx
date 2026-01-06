@@ -1,13 +1,22 @@
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
-import { ArrowRight, Target, ShieldCheck, Brain, UserCheck } from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react';
 
 export default function WhoWeAreSection() {
-  const highlights = [
-    { text: 'Mission-Focused Solutions', icon: Target },
-    { text: 'Security-First Architecture', icon: ShieldCheck },
-    { text: 'Advanced AI & Analytics', icon: Brain },
-    { text: 'Cleared Personnel', icon: UserCheck }
+  // Card data for the two linked cards on the right
+  const featuredCards = [
+    {
+      image: '/images/state-local-hero.a1b2c3d4.jpg',
+      title: 'StateRAMP & GovRAMP Compliance',
+      subtitle: 'For State, Local & Tribal Governments',
+      href: '/compliance/stateramp'
+    },
+    {
+      image: '/images/federal-capitol.png',
+      title: 'FedRAMP Authorization Support',
+      subtitle: 'Federal Cloud Security Compliance',
+      href: '/compliance/fedramp'
+    }
   ];
 
   return (
@@ -29,58 +38,22 @@ export default function WhoWeAreSection() {
           <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Who We Are</span>
         </motion.div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-          {/* Left Column - Title and Tagline */}
+        {/* Main Content Grid - Aqua Nautilus Style */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          {/* Left Column - Title and Full Description */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5"
+            className="lg:col-span-6"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A2540] mb-3 leading-[1.1] tracking-tight">
-              Thalen Technologies Overview
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A2540] mb-6 leading-[1.1] tracking-tight">
+              Thalen Technologies, Inc.
             </h2>
             
-            {/* Tagline with accent border */}
-            <p className="text-[#0A2540] text-lg md:text-xl font-semibold mb-5 border-l-4 border-[#E07020] pl-3">
-              Govern Smart
-            </p>
-
-            {/* Stats Row */}
-            <div className="flex gap-8 mb-5">
-              <div>
-                <div className="text-3xl md:text-4xl font-bold text-[#0A2540]">15+</div>
-                <div className="text-xs text-slate-500 uppercase tracking-wider mt-1">Years Experience</div>
-              </div>
-              <div className="w-px bg-slate-200"></div>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold text-[#0A2540]">TS/SCI</div>
-                <div className="text-xs text-slate-500 uppercase tracking-wider mt-1">Cleared Staff</div>
-              </div>
-            </div>
-
-            {/* Read More Link */}
-            <Link 
-              href="/about" 
-              className="group inline-flex items-center gap-2 text-[#0A2540] hover:text-[#E07020] font-semibold text-sm uppercase tracking-wider transition-colors"
-            >
-              <span>Read More about Thalen Technologies</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
-
-          {/* Right Column - Description and Highlights */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-7"
-          >
-            {/* Description */}
-            <div className="space-y-3 text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+            {/* Full Description */}
+            <div className="space-y-4 text-slate-600 text-base md:text-lg leading-relaxed">
               <p>
                 <strong className="text-[#0A2540]">Thalen Technologies, Inc.</strong> provides a broad spectrum of information technology services and cloud-based artificial intelligence and advanced analytics solutions to the <strong className="text-[#0A2540]">U.S. Federal Government</strong>.
               </p>
@@ -89,31 +62,63 @@ export default function WhoWeAreSection() {
               </p>
             </div>
 
-            {/* Highlight Cards Grid */}
-            <div className="grid grid-cols-2 gap-3">
-              {highlights.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <motion.div
-                    key={item.text}
-                    initial={{ opacity: 0, y: 15 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.1 * index }}
-                    className="group relative bg-gradient-to-br from-[#0A2540]/[0.03] to-transparent border border-[#0A2540]/10 rounded-lg p-3 hover:border-[#E07020]/30 hover:shadow-sm transition-all duration-300"
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <div className="flex-shrink-0 w-7 h-7 rounded-md bg-[#0A2540]/5 flex items-center justify-center group-hover:bg-[#E07020]/10 transition-colors">
-                        <Icon className="w-3.5 h-3.5 text-[#0A2540] group-hover:text-[#E07020] transition-colors" />
-                      </div>
-                      <span className="text-xs font-medium text-[#0A2540] leading-tight">
-                        {item.text}
-                      </span>
+            {/* Read More Link */}
+            <Link 
+              href="/about" 
+              className="group inline-flex items-center gap-2 text-[#E07020] hover:text-[#0A2540] font-semibold text-sm uppercase tracking-wider transition-colors mt-6"
+            >
+              <span>Read More about Thalen Technologies</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
+
+          {/* Right Column - Two Linked Cards (Aqua Nautilus Style) */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-6 flex flex-col gap-4"
+          >
+            {featuredCards.map((card, index) => (
+              <motion.div
+                key={card.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+              >
+                <Link href={card.href}>
+                  <div className="group relative flex items-center gap-4 bg-gradient-to-br from-[#0A2540]/[0.04] to-[#0A2540]/[0.02] border border-[#0A2540]/10 rounded-xl p-4 hover:border-[#E07020]/40 hover:shadow-lg hover:shadow-[#E07020]/5 transition-all duration-300 cursor-pointer">
+                    {/* Card Image */}
+                    <div className="relative flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-lg overflow-hidden">
+                      <img 
+                        src={card.image} 
+                        alt={card.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      {/* Subtle overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent"></div>
                     </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+                    
+                    {/* Card Content */}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base sm:text-lg font-bold text-[#0A2540] mb-1 leading-tight group-hover:text-[#E07020] transition-colors">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm text-slate-500 leading-snug">
+                        {card.subtitle}
+                      </p>
+                    </div>
+                    
+                    {/* Arrow Icon */}
+                    <div className="flex-shrink-0">
+                      <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-[#E07020] group-hover:translate-x-1 transition-all duration-300" />
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>
