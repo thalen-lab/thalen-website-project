@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -9,6 +9,53 @@ export default function Navigation() {
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [learnOpen, setLearnOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  
+  // Refs for timeout delays to prevent menu from closing too quickly
+  const solutionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const learnTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const aboutTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  
+  // Cleanup timeouts on unmount
+  useEffect(() => {
+    return () => {
+      if (solutionsTimeoutRef.current) clearTimeout(solutionsTimeoutRef.current);
+      if (learnTimeoutRef.current) clearTimeout(learnTimeoutRef.current);
+      if (aboutTimeoutRef.current) clearTimeout(aboutTimeoutRef.current);
+    };
+  }, []);
+  
+  const handleSolutionsEnter = () => {
+    if (solutionsTimeoutRef.current) clearTimeout(solutionsTimeoutRef.current);
+    setSolutionsOpen(true);
+  };
+  
+  const handleSolutionsLeave = () => {
+    solutionsTimeoutRef.current = setTimeout(() => {
+      setSolutionsOpen(false);
+    }, 150);
+  };
+  
+  const handleLearnEnter = () => {
+    if (learnTimeoutRef.current) clearTimeout(learnTimeoutRef.current);
+    setLearnOpen(true);
+  };
+  
+  const handleLearnLeave = () => {
+    learnTimeoutRef.current = setTimeout(() => {
+      setLearnOpen(false);
+    }, 150);
+  };
+  
+  const handleAboutEnter = () => {
+    if (aboutTimeoutRef.current) clearTimeout(aboutTimeoutRef.current);
+    setAboutOpen(true);
+  };
+  
+  const handleAboutLeave = () => {
+    aboutTimeoutRef.current = setTimeout(() => {
+      setAboutOpen(false);
+    }, 150);
+  };
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
@@ -110,15 +157,19 @@ export default function Navigation() {
             {/* Solutions Mega Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setSolutionsOpen(true)}
-              onMouseLeave={() => setSolutionsOpen(false)}
+              onMouseEnter={handleSolutionsEnter}
+              onMouseLeave={handleSolutionsLeave}
             >
               <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
                 <span>Solutions</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
               {solutionsOpen && (
-                <div className="fixed left-1/2 -translate-x-1/2 top-16 sm:top-20 lg:top-24 pt-4 z-50 w-[95vw] max-w-5xl">
+                <div 
+                  className="fixed left-1/2 -translate-x-1/2 top-16 sm:top-20 lg:top-24 pt-2 z-50 w-[95vw] max-w-5xl"
+                  onMouseEnter={handleSolutionsEnter}
+                  onMouseLeave={handleSolutionsLeave}
+                >
                 <div className="bg-card text-card-foreground rounded-lg shadow-xl border border-border p-6">
                   <div className="grid grid-cols-3 gap-6">
                     {/* Government Solutions Column */}
@@ -181,15 +232,19 @@ export default function Navigation() {
             {/* Learn Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setLearnOpen(true)}
-              onMouseLeave={() => setLearnOpen(false)}
+              onMouseEnter={handleLearnEnter}
+              onMouseLeave={handleLearnLeave}
             >
               <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
                 <span>Learn</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
               {learnOpen && (
-                <div className="absolute top-full left-0 pt-2 w-72 z-50">
+                <div 
+                  className="absolute top-full left-0 pt-2 w-72 z-50"
+                  onMouseEnter={handleLearnEnter}
+                  onMouseLeave={handleLearnLeave}
+                >
                 <div className="bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
                   {learnItems.map((item) => (
                     <Link 
@@ -209,15 +264,19 @@ export default function Navigation() {
             {/* About Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setAboutOpen(true)}
-              onMouseLeave={() => setAboutOpen(false)}
+              onMouseEnter={handleAboutEnter}
+              onMouseLeave={handleAboutLeave}
             >
               <button className="flex items-center space-x-1 hover:text-orange-signature transition-colors py-2">
                 <span>About</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
               {aboutOpen && (
-                <div className="absolute top-full left-0 pt-2 w-72 z-50">
+                <div 
+                  className="absolute top-full left-0 pt-2 w-72 z-50"
+                  onMouseEnter={handleAboutEnter}
+                  onMouseLeave={handleAboutLeave}
+                >
                 <div className="bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
                   {aboutItems.map((item) => (
                     <Link 
