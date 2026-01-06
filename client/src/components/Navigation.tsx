@@ -118,7 +118,8 @@ export default function Navigation() {
                 <ChevronDown className="h-4 w-4" />
               </button>
               {solutionsOpen && (
-                <div className="fixed left-1/2 -translate-x-1/2 top-16 sm:top-20 lg:top-24 mt-2 bg-card text-card-foreground rounded-lg shadow-xl border border-border p-6 z-50 w-[95vw] max-w-5xl">
+                <div className="fixed left-1/2 -translate-x-1/2 top-16 sm:top-20 lg:top-24 pt-4 z-50 w-[95vw] max-w-5xl">
+                <div className="bg-card text-card-foreground rounded-lg shadow-xl border border-border p-6">
                   <div className="grid grid-cols-3 gap-6">
                     {/* Government Solutions Column */}
                     <div>
@@ -173,6 +174,7 @@ export default function Navigation() {
                     </div>
                   </div>
                 </div>
+                </div>
               )}
             </div>
 
@@ -187,7 +189,8 @@ export default function Navigation() {
                 <ChevronDown className="h-4 w-4" />
               </button>
               {learnOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
+                <div className="absolute top-full left-0 pt-2 w-72 z-50">
+                <div className="bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
                   {learnItems.map((item) => (
                     <Link 
                       key={item.href} 
@@ -198,6 +201,7 @@ export default function Navigation() {
                       <div className="text-sm text-muted-foreground">{item.description}</div>
                     </Link>
                   ))}
+                </div>
                 </div>
               )}
             </div>
@@ -213,7 +217,8 @@ export default function Navigation() {
                 <ChevronDown className="h-4 w-4" />
               </button>
               {aboutOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
+                <div className="absolute top-full left-0 pt-2 w-72 z-50">
+                <div className="bg-card text-card-foreground rounded-lg shadow-xl border border-border py-2">
                   {aboutItems.map((item) => (
                     <Link 
                       key={item.href} 
@@ -224,6 +229,7 @@ export default function Navigation() {
                       <div className="text-sm text-muted-foreground">{item.description}</div>
                     </Link>
                   ))}
+                </div>
                 </div>
               )}
             </div>
