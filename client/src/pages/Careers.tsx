@@ -88,7 +88,7 @@ export default function Careers() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 text-white">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-20 text-white">
         <div className="absolute inset-0 bg-[url('/img/patterns/hero-pattern.svg')] bg-center [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         
@@ -100,14 +100,14 @@ export default function Careers() {
                 { label: 'Careers' }
               ]} 
               variant="light" 
-              className="mb-6 md:mb-8"
+              className="mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
             />
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 text-center leading-tight text-white">
+              <h1 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-center leading-tight text-white">
                 Join Our Team
               </h1>
               
@@ -120,22 +120,22 @@ export default function Careers() {
       </section>
 
       {/* Why Join Us */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-24 bg-gray-50">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Why Join Thalen?</h2>
+            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Why Join Thalen?</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We offer more than just a job—we offer a career with purpose, growth, and exceptional benefits.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 md:gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -145,7 +145,7 @@ export default function Careers() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md">
-                  <CardContent className="p-6 md:p-8">
+                  <CardContent className="p-3 sm:p-4 md:p-6 md:p-8">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center mb-4">
                       <benefit.icon className="w-6 h-6 text-white" />
                     </div>
@@ -160,23 +160,23 @@ export default function Careers() {
       </section>
 
       {/* Open Positions */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-24 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Open Positions</h2>
+            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Open Positions</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Explore current opportunities to join our growing team.
             </p>
           </motion.div>
 
           {/* Search and Filters */}
-          <div className="max-w-4xl mx-auto mb-8">
+          <div className="max-w-4xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -266,7 +266,7 @@ export default function Careers() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     <Card className="hover:shadow-lg transition-all duration-300 border-0 shadow-md">
-                      <CardContent className="p-6">
+                      <CardContent className="p-3 sm:p-4 md:p-6">
                         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                           <div className="flex-1">
                             <h3 className="text-lg font-bold mb-2">{job.title}</h3>
@@ -322,7 +322,7 @@ export default function Careers() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0A2540] to-[#12344D] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-br from-[#0A2540] to-[#12344D] text-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -335,10 +335,10 @@ export default function Careers() {
               <Users className="w-4 h-4" />
               We're Hiring
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold mb-4">
               Don't See the Right Fit?
             </h2>
-            <p className="text-white/80 mb-8">
+            <p className="text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               We're always looking for talented individuals who share our passion for government technology modernization. Send us your resume and let's start a conversation.
             </p>
             <Link href="/contact">

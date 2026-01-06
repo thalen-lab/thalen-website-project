@@ -36,10 +36,10 @@ export default function VAPredictiveAnalytics() {
                 Public Trust Clearance
               </span>
             </div>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            <h1 className="font-serif text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Accelerating Veteran Services: How Predictive Analytics Cut Claims Processing Time by 60%
             </h1>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               A deep dive into the Department of Veterans Affairs' successful deployment of machine learning to prioritize disability claims, drastically reduce the backlog, and deliver faster, more accurate decisions to those who served.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-4 text-sm">
@@ -72,7 +72,7 @@ export default function VAPredictiveAnalytics() {
       <section className="py-20 bg-white">
         <div className="container max-w-5xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Challenge</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8 text-[oklch(0.20_0.05_250)]">The Critical Need for Claims Modernization</h2>
+          <h2 className="font-serif text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">The Critical Need for Claims Modernization</h2>
           <div className="prose prose-lg max-w-none text-slate-600">
             <p>
               The Department of Veterans Affairs (VA) faced a significant and growing challenge in managing the volume of disability compensation claims. With a backlog exceeding 400,000 cases, the average processing time had ballooned to over 180 days. This delay created substantial hardship for veterans awaiting crucial benefits they had earned through their service, leading to widespread frustration and a decline in trust in the VA's ability to deliver timely support. The core issue was a manual, first-in, first-out workflow that could not adapt to the complexity of modern claims.
@@ -91,7 +91,7 @@ export default function VAPredictiveAnalytics() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-5xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Solution</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8 text-[oklch(0.20_0.05_250)]">Implementing an Intelligent Claims Prioritization Engine</h2>
+          <h2 className="font-serif text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">Implementing an Intelligent Claims Prioritization Engine</h2>
           <div className="prose prose-lg max-w-none text-slate-600">
             <p>
               Thalen Technologies partnered with the VA to design and deploy a comprehensive Predictive Analytics solution centered on a machine learning-driven claims prioritization engine. The initial phase involved building sophisticated models trained on over 12 million historical claims. These models analyze incoming submissions against 47 key variables—including claimed conditions, completeness of medical evidence, service history patterns, and past adjudication outcomes—to assign a real-time complexity score (1-10) to each claim within seconds of its arrival.
@@ -110,21 +110,21 @@ export default function VAPredictiveAnalytics() {
       <section className="py-20 bg-white">
         <div className="container max-w-5xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Impact</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-[oklch(0.20_0.05_250)]">Transforming Service Delivery for Veterans</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="text-center p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+          <h2 className="font-serif text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 text-[oklch(0.20_0.05_250)]">Transforming Service Delivery for Veterans</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
+            <div className="text-center p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
               <div className="text-5xl font-bold font-serif text-[oklch(0.65_0.18_55)] mb-2">60%</div>
               <div className="text-lg font-medium text-slate-600">Reduction in Average Processing Time</div>
             </div>
-            <div className="text-center p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+            <div className="text-center p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
               <div className="text-5xl font-bold font-serif text-[oklch(0.65_0.18_55)] mb-2">125K</div>
               <div className="text-lg font-medium text-slate-600">Additional Claims Processed Annually</div>
             </div>
-            <div className="text-center p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+            <div className="text-center p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
               <div className="text-5xl font-bold font-serif text-[oklch(0.65_0.18_55)] mb-2">$8.2M</div>
               <div className="text-lg font-medium text-slate-600">Annual Operational Cost Savings</div>
             </div>
-            <div className="text-center p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+            <div className="text-center p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
               <div className="text-5xl font-bold font-serif text-[oklch(0.65_0.18_55)] mb-2">94%</div>
               <div className="text-lg font-medium text-slate-600">Veteran Satisfaction Score</div>
             </div>
@@ -147,8 +147,8 @@ export default function VAPredictiveAnalytics() {
       {/* 5. CTA Section */}
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">Ready to Transform Your Mission-Critical Operations?</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-serif">Ready to Transform Your Mission-Critical Operations?</h2>
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Discover how Thalen's predictive analytics and AI solutions can help your agency reduce backlogs, optimize resource allocation, and deliver superior service.
           </p>
           <Link href="/contact">

@@ -95,7 +95,7 @@ Phone: ${formData.phone}`;
           <h1 className="text-2xl font-bold text-white mb-3">
             Assessment Scheduled!
           </h1>
-          <p className="text-slate-300 mb-8">
+          <p className="text-slate-300 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Our team will contact you within 24 hours to confirm your free government IT assessment.
           </p>
           <div className="space-y-3">
@@ -153,11 +153,11 @@ Phone: ${formData.phone}`;
       <div className="container max-w-2xl py-8 px-4">
         {/* Hero Section */}
         {step === 1 && (
-          <div className="text-center mb-8">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Calendar className="w-8 h-8 text-orange-500" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+            <h1 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">
               Free IT Assessment
             </h1>
             <p className="text-lg text-slate-300">
@@ -168,7 +168,7 @@ Phone: ${formData.phone}`;
 
         {/* Value Propositions */}
         {step === 1 && (
-          <div className="grid grid-cols-3 gap-3 mb-8">
+          <div className="grid grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700">
               <div className="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-2">
                 <DollarSign className="w-5 h-5 text-orange-500" />

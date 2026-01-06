@@ -19,20 +19,20 @@ export default function FederalAgencyAutomation() {
 
         <div className="container relative z-10">
           <Link href="/case-studies">
-            <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)] mb-8 -ml-4">
+            <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 -ml-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Case Studies
             </Button>
           </Link>
 
           <div className="max-w-5xl mx-auto text-center">
-            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-8">Case Study</p>
+            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Case Study</p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-tight">
               Federal Agency Achieves 85% Process Automation
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed">
               How a large federal agency transformed benefit processing through intelligent automation while maintaining the highest security standards
             </p>
           </div>
@@ -43,7 +43,7 @@ export default function FederalAgencyAutomation() {
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Opportunity</p>
               <h2 className="text-4xl md:text-5xl font-serif font-normal text-[oklch(0.20_0.05_250)] leading-tight">
                 A federal agency saw a chance to modernize operations without compromising security
@@ -71,7 +71,7 @@ export default function FederalAgencyAutomation() {
       <section className="py-24 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Solution</p>
               <h2 className="text-4xl md:text-5xl font-serif font-normal text-[oklch(0.20_0.05_250)] leading-tight">
                 The agency deployed intelligent automation to transform workflows while strengthening security
@@ -149,13 +149,13 @@ export default function FederalAgencyAutomation() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-normal text-white mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-white mb-6">
               Ready to transform your operations?
             </h2>
-            <p className="text-lg text-white/90 mb-8">
+            <p className="text-lg text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Discover how intelligent automation can help your agency deliver better outcomes while maintaining the highest security standards.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule a Consultation

@@ -146,7 +146,7 @@ export default function SecurityAssessment() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Security Assessment & Compliance
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               We help government agencies (federal, state, local) and defense
               contractors achieve FedRAMP, StateRAMP, CMMC, and NIST compliance
               through expert gap assessments, security controls implementation,
@@ -154,7 +154,7 @@ export default function SecurityAssessment() {
               12-18 month timelines to 6-9 months while ensuring first-time
               assessment success.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button
                 size="lg"
                 className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90"
@@ -177,7 +177,7 @@ export default function SecurityAssessment() {
       {/* Key Benefits */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
               Why Choose Thalen Technologies
             </p>
@@ -200,7 +200,7 @@ export default function SecurityAssessment() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="bg-white border-2 border-slate-200 h-full hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">
                       {capability.title}
                     </h3>
@@ -226,7 +226,7 @@ export default function SecurityAssessment() {
       {/* Assessment Process */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
               Our Methodology
             </p>
@@ -245,7 +245,7 @@ export default function SecurityAssessment() {
                 key={index}
                 className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300"
               >
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="flex items-center mb-4">
                     <div className="h-12 w-12 bg-[oklch(0.22_0.06_250)] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
                       {index + 1}
@@ -278,7 +278,7 @@ export default function SecurityAssessment() {
       {/* Supported Frameworks */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
               Compliance Frameworks
             </p>
@@ -297,7 +297,7 @@ export default function SecurityAssessment() {
                 key={index}
                 className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300"
               >
-                <CardContent className="p-6 text-center flex flex-col items-center justify-center h-full">
+                <CardContent className="p-3 sm:p-4 md:p-6 text-center flex flex-col items-center justify-center h-full">
                   <div className="text-sm font-semibold text-[oklch(0.20_0.05_250)]">
                     {framework}
                   </div>
@@ -314,7 +314,7 @@ export default function SecurityAssessment() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Achieve Compliance?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Start with a comprehensive readiness assessment and discover how
             Thalen Technologies can accelerate your path to FedRAMP, StateRAMP,
             CMMC, or NIST compliance.

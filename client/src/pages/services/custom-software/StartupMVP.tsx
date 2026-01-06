@@ -129,7 +129,7 @@ export default function StartupMVP() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -148,10 +148,10 @@ export default function StartupMVP() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Startup MVP Development
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Validate your product idea fast. We build investor-ready MVPs in 8-12 weeks that help startups secure funding and achieve product-market fit.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>
                 <Link href="/contact">
                   Start Your MVP
@@ -169,7 +169,7 @@ export default function StartupMVP() {
       {/* Benefits */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Build an MVP?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Test your idea, validate demand, and attract investors without breaking the bank.
@@ -179,7 +179,7 @@ export default function StartupMVP() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <benefit.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground">{benefit.description}</p>
@@ -193,7 +193,7 @@ export default function StartupMVP() {
       {/* Process */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Our MVP Development Process</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A proven 12-week sprint to launch your product.
@@ -203,7 +203,7 @@ export default function StartupMVP() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((item, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="text-sm text-accent font-semibold mb-2">{item.week}</div>
                   <h3 className="text-xl font-bold mb-4">{item.phase}</h3>
                   <ul className="space-y-2">
@@ -224,7 +224,7 @@ export default function StartupMVP() {
       {/* Case Study */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Success Story</h2>
           </div>
 
@@ -233,7 +233,7 @@ export default function StartupMVP() {
               <div className="text-sm text-accent font-semibold mb-2">{caseStudy.startup}</div>
               <h3 className="text-3xl font-bold mb-6">Telemedicine MVP Secures $2M Seed Funding</h3>
               
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div>
                   <h4 className="font-bold mb-2">Challenge</h4>
                   <p className="text-muted-foreground">{caseStudy.challenge}</p>
@@ -260,7 +260,7 @@ export default function StartupMVP() {
       {/* Pricing */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">MVP Pricing Packages</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Transparent, fixed-price packages to fit your budget and timeline.
@@ -270,7 +270,7 @@ export default function StartupMVP() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
               <Card key={index} className={`hover:shadow-xl transition-all ${tier.popular ? 'border-accent border-2' : ''}`}>
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   {tier.popular && (
                     <div className="text-xs font-semibold text-accent mb-4 uppercase">Most Popular</div>
                   )}
@@ -298,7 +298,7 @@ export default function StartupMVP() {
       {/* What's Included */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">What's Included in Every MVP</h2>
           </div>
 
@@ -327,7 +327,7 @@ export default function StartupMVP() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Validate Your Idea?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Let's build an MVP that proves your concept and attracts investors.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>

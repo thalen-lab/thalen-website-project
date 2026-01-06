@@ -63,7 +63,7 @@ export default function Financial() {
         <section className="relative py-24 text-white bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85">
           <div className="absolute inset-0 bg-[url('/img/pattern.svg')] bg-center opacity-10"></div>
           <div className="container relative">
-            <div className="mb-8">
+            <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Industries' },
@@ -77,7 +77,7 @@ export default function Financial() {
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                 Financial Services
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8">
+              <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Real-time fraud detection, regulatory compliance automation, and AI-powered risk analytics for banks, insurance, and fintech companies. Secure financial innovation that balances customer experience with regulatory requirements and operational efficiency.
               </p>
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
@@ -113,7 +113,7 @@ export default function Financial() {
 
         <section className="py-24 bg-white">
           <div className="container">
-            <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Outcomes</p>
               <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Financial Services Transformation</h2>
               <p className="text-xl text-slate-600">
@@ -124,7 +124,7 @@ export default function Financial() {
               {benefits.map((item, index) => (
                 <motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}>
                   <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                    <CardContent className="p-8">
+                    <CardContent className="p-4 sm:p-6 md:p-8">
                       <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{item.title}</h3>
                       <p className="text-slate-600">{item.desc}</p>
                     </CardContent>
@@ -137,7 +137,7 @@ export default function Financial() {
 
         <section className="py-24 bg-[oklch(0.97_0.01_250)]">
           <div className="container">
-            <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Challenges</p>
               <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Industry Hurdles We Overcome</h2>
               <p className="text-xl text-slate-600">
@@ -160,7 +160,7 @@ export default function Financial() {
 
         <section className="py-24 bg-white">
           <div className="container">
-            <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Solutions</p>
               <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Our Financial Services Offerings</h2>
               <p className="text-xl text-slate-600">
@@ -171,7 +171,7 @@ export default function Financial() {
               {solutions.map((solution, index) => (
                 <motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}>
                   <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                    <CardContent className="p-8">
+                    <CardContent className="p-4 sm:p-6 md:p-8">
                       <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{solution.title}</h3>
                       <p className="text-slate-600 leading-relaxed">{solution.description}</p>
                     </CardContent>
@@ -184,8 +184,8 @@ export default function Financial() {
 
         <section className="bg-[oklch(0.22_0.06_250)] text-white py-20">
           <div className="container text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Modernize Your Financial Systems?</h2>
-            <p className="text-lg text-white/80 mb-8">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to Modernize Your Financial Systems?</h2>
+            <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Let's discuss how Nexdyne can help you navigate the complexities of digital transformation in the financial sector. Schedule a complimentary assessment with our experts today.
             </p>
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

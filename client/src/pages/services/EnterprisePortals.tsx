@@ -39,8 +39,8 @@ export default function EnterprisePortals() {
           <div className="max-w-4xl mt-8">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Section 508 Compliant • Mobile-Responsive</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">Enterprise Portal Development</h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">Citizen-facing portals and internal case management systems with 24/7 self-service capabilities. Build secure, accessible portals that improve constituent experience and reduce operational costs.</p>
-            <div className="flex flex-wrap gap-4">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">Citizen-facing portals and internal case management systems with 24/7 self-service capabilities. Build secure, accessible portals that improve constituent experience and reduce operational costs.</p>
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90"><Link href="/contact">Start Your Portal</Link></Button>
               <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]"><Link href="/package-builder">Build Service Package</Link></Button>
             </div>
@@ -50,7 +50,7 @@ export default function EnterprisePortals() {
 
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Build Enterprise Portals?</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Improve Service Delivery and Reduce Costs</h2>
             <p className="text-xl text-slate-600">Portals improve citizen experience, reduce operational costs, and provide 24/7 access to services.</p>
@@ -71,14 +71,14 @@ export default function EnterprisePortals() {
 
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Portal Types We Build</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Solutions for Every Mission</h2>
             <p className="text-xl text-slate-600">From citizen services to internal case management, we build portals tailored to your mission.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {portalTypes.map((type, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+              <div key={index} className="bg-white rounded-lg p-4 sm:p-6 md:p-8 border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                 <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{type.title}</h3>
                 <p className="text-slate-600">{type.description}</p>
               </div>
@@ -90,7 +90,7 @@ export default function EnterprisePortals() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Build Your Enterprise Portal?</h2>
-          <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">Schedule a consultation to explore how portals can improve your citizen and employee experience.</p>
+          <p className="text-xl text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto">Schedule a consultation to explore how portals can improve your citizen and employee experience.</p>
           <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90"><Link href="/contact">Schedule Free Consultation</Link></Button>
         </div>
       </section>

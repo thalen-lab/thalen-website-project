@@ -133,7 +133,7 @@ export default function MultiCloudStrategy() {
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Insights', href: '/insights' },
@@ -200,7 +200,7 @@ export default function MultiCloudStrategy() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="p-8">
+            <div className="p-4 sm:p-6 md:p-8">
               <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
                 Key Takeaways
               </h3>
@@ -257,7 +257,7 @@ export default function MultiCloudStrategy() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="p-8">
+            <div className="p-4 sm:p-6 md:p-8">
               <h4 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Multi-Cloud Architecture Patterns</h4>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>

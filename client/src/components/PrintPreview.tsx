@@ -126,7 +126,7 @@ export function PrintPreview({
     <div
       className={cn(
         'fixed inset-0 z-50 bg-gray-600/90 overflow-auto',
-        isFullscreen ? 'p-0' : 'p-8',
+        isFullscreen ? 'p-0' : 'p-4 sm:p-6 md:p-8',
         className
       )}
     >

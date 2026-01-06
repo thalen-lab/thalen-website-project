@@ -140,7 +140,7 @@ export default function CapabilityGenerator() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Resources', href: '/resources' },
@@ -156,7 +156,7 @@ export default function CapabilityGenerator() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Capability Statement Generator
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Generate a customized capability statement tailored to your agency's specific needs, compliance requirements, and service areas. Get relevant past performance and contract vehicles instantly.
             </p>
           </div>
@@ -324,7 +324,7 @@ export default function CapabilityGenerator() {
       {generatedStatement && (
         <section id="preview" className="py-20 bg-secondary">
           <div className="container max-w-5xl">
-            <div className="flex justify-between items-center mb-8">
+            <div className="flex justify-between items-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <h2 className="text-3xl font-bold">Your Capability Statement</h2>
               <div className="flex gap-3">
                 <Button onClick={downloadPDF} variant="outline">

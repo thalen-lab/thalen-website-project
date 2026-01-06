@@ -100,7 +100,7 @@ export default function OurApproach() {
       <Navigation />
       
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -110,7 +110,7 @@ export default function OurApproach() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         
         <div className="container relative z-10">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'About', href: '/about' },
@@ -126,10 +126,10 @@ export default function OurApproach() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               How We Deliver Mission-Critical Results
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Four strategic pillars that ensure compliant, secure, and vendor-neutral technology implementations for government at every level and regulated industries.
             </p>
             {/* Sector badges - text only, no icons */}
@@ -148,16 +148,16 @@ export default function OurApproach() {
       </section>
 
       {/* Four Pillars Section - Clean Professional Design */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-7xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               The Four Pillars of Excellence
             </h2>
             <p className="text-lg text-slate-600">
@@ -166,7 +166,7 @@ export default function OurApproach() {
           </motion.div>
 
           {/* Pillars Grid - Orange border on hover, no top accent bar */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {pillars.map((pillar, index) => (
               <motion.div
                 key={pillar.title}
@@ -177,7 +177,7 @@ export default function OurApproach() {
                 className="group"
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  <CardContent className="p-8 lg:p-10">
+                  <CardContent className="p-4 sm:p-6 md:p-8 lg:p-10">
                     {/* Title */}
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-2">
@@ -226,17 +226,17 @@ export default function OurApproach() {
       </section>
 
       {/* Compliance Frameworks Section - No icons */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
         <div className="container max-w-6xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance Expertise</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Frameworks We Navigate
             </h2>
             <p className="text-lg text-slate-600">
@@ -276,17 +276,17 @@ export default function OurApproach() {
       </section>
 
       {/* Process Timeline Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-6xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               From Discovery to Delivery
             </h2>
             <p className="text-lg text-slate-600">
@@ -307,11 +307,11 @@ export default function OurApproach() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:mb-16`}
+                  className={`relative md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16`}
                 >
                   {/* Content */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                    <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
+                    <div className="bg-white rounded-xl p-3 sm:p-4 md:p-6 shadow-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
                       <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                         <span className="text-4xl font-bold text-[oklch(0.35_0.10_250)]/20">{step.number}</span>
                         <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{step.title}</h3>
@@ -336,7 +336,7 @@ export default function OurApproach() {
       </section>
 
       {/* Why Our Approach Works Section - No icons, bullet points */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
@@ -347,10 +347,10 @@ export default function OurApproach() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why It Works</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
+              <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
                 Built for Public Sector & Regulated Industry Success
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              <p className="text-lg text-slate-600 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Our approach was developed specifically for the unique challenges of government and regulated industry technology implementation. We understand the regulatory landscape, procurement processes, and security requirements that define success across federal, state, local, and enterprise environments.
               </p>
               
@@ -380,7 +380,7 @@ export default function OurApproach() {
             >
               {stats.map((stat, index) => (
                 <Card key={index} className="bg-[oklch(0.97_0.01_250)] border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-3 sm:p-4 md:p-6 text-center">
                     <div className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-1">{stat.value}</div>
                     <div className="text-sm text-slate-600">{stat.label}</div>
                   </CardContent>
@@ -392,7 +392,7 @@ export default function OurApproach() {
       </section>
 
       {/* CTA Section - Signature Blue */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -400,10 +400,10 @@ export default function OurApproach() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
               Contact us to discuss your organization's requirements and learn how our approach can deliver mission-critical results—whether you're federal, state, local, or a regulated enterprise.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

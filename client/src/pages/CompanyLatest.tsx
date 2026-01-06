@@ -52,7 +52,7 @@ export default function CompanyLatest() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 text-white">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-20 text-white">
         <div className="absolute inset-0 bg-[url('/img/patterns/hero-pattern.svg')] bg-center [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         
@@ -64,14 +64,14 @@ export default function CompanyLatest() {
                 { label: "Company's Latest" }
               ]} 
               variant="light" 
-              className="mb-6 md:mb-8"
+              className="mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
             />
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 text-center leading-tight text-white">
+              <h1 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-center leading-tight text-white">
                 Company's Latest
               </h1>
               
@@ -84,22 +84,22 @@ export default function CompanyLatest() {
       </section>
 
       {/* Current Highlights */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-24 bg-gray-50">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Current Highlights</h2>
+            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Current Highlights</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               The latest developments and achievements from our team.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 md:gap-8 max-w-5xl mx-auto">
             {highlights.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -109,7 +109,7 @@ export default function CompanyLatest() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md">
-                  <CardContent className="p-6 md:p-8">
+                  <CardContent className="p-3 sm:p-4 md:p-6 md:p-8">
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
                         <item.icon className="w-6 h-6 text-white" />
@@ -130,16 +130,16 @@ export default function CompanyLatest() {
       </section>
 
       {/* Upcoming Milestones */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-24 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Coming Soon</h2>
+            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Coming Soon</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               A preview of what we're working on for our clients and partners.
             </p>
@@ -172,7 +172,7 @@ export default function CompanyLatest() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0A2540] to-[#12344D] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-br from-[#0A2540] to-[#12344D] text-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -185,10 +185,10 @@ export default function CompanyLatest() {
               <Sparkles className="w-4 h-4" />
               Stay Ahead
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold mb-4">
               Want to Learn More?
             </h2>
-            <p className="text-white/80 mb-8">
+            <p className="text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Connect with our team to discuss how our latest capabilities can support your agency's mission.
             </p>
             <Link href="/schedule-assessment">

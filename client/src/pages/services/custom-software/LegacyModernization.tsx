@@ -78,7 +78,7 @@ export default function LegacyModernization() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -97,10 +97,10 @@ export default function LegacyModernization() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Legacy System Modernization
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Transform outdated monolithic applications into modern, cloud-native microservices. Reduce technical debt, improve performance, and enable innovation.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>
                 <Link href="/contact">
                   Start Modernization Assessment
@@ -118,7 +118,7 @@ export default function LegacyModernization() {
       {/* Modernization Approaches */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Modernization Strategies</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Choose the right approach based on your goals, timeline, and risk tolerance.
@@ -128,7 +128,7 @@ export default function LegacyModernization() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {approaches.map((approach, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <approach.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{approach.title}</h3>
                   <p className="text-muted-foreground mb-4">{approach.description}</p>
@@ -143,7 +143,7 @@ export default function LegacyModernization() {
       {/* Benefits */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Modernize?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The business case for legacy system modernization.
@@ -165,7 +165,7 @@ export default function LegacyModernization() {
       {/* Process */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Modernization Process</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A phased, risk-managed approach to legacy transformation.
@@ -211,7 +211,7 @@ export default function LegacyModernization() {
       {/* Case Study */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Success Story</h2>
           </div>
 
@@ -220,7 +220,7 @@ export default function LegacyModernization() {
               <div className="text-sm text-accent font-semibold mb-2">{caseStudy.client}</div>
               <h3 className="text-3xl font-bold mb-6">Mainframe Modernization with Zero Downtime</h3>
               
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div>
                   <h4 className="font-bold mb-2">Challenge</h4>
                   <p className="text-muted-foreground">{caseStudy.challenge}</p>
@@ -247,7 +247,7 @@ export default function LegacyModernization() {
       {/* Common Scenarios */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Common Modernization Scenarios</h2>
           </div>
 
@@ -261,7 +261,7 @@ export default function LegacyModernization() {
               { title: "API-First Architecture", desc: "Add API layer to legacy systems for modern integrations" }
             ].map((scenario, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-xl font-bold mb-3">{scenario.title}</h3>
                   <p className="text-muted-foreground">{scenario.desc}</p>
                 </CardContent>
@@ -274,7 +274,7 @@ export default function LegacyModernization() {
       {/* Risk Mitigation */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">How We Mitigate Risk</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Proven strategies to ensure successful modernization.
@@ -307,7 +307,7 @@ export default function LegacyModernization() {
       {/* Pricing */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Investment Range</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Pricing varies widely based on system complexity and modernization approach.
@@ -321,7 +321,7 @@ export default function LegacyModernization() {
               { tier: "Rearchitecting", price: "$500K+", desc: "Full microservices transformation" }
             ].map((tier, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8 text-center">
+                <CardContent className="p-4 sm:p-6 md:p-8 text-center">
                   <h3 className="text-2xl font-bold mb-2">{tier.tier}</h3>
                   <div className="text-3xl font-bold text-accent mb-4">{tier.price}</div>
                   <p className="text-muted-foreground">{tier.desc}</p>
@@ -336,7 +336,7 @@ export default function LegacyModernization() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Legacy Systems?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Let's assess your current systems and create a modernization roadmap.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>

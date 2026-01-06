@@ -389,7 +389,7 @@ export default function ComponentsShowcase() {
             <h3 className="text-2xl font-semibold">Buttons</h3>
             <Card>
               <CardContent className="pt-6">
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                   <Button>Default</Button>
                   <Button variant="secondary">Secondary</Button>
                   <Button variant="destructive">Destructive</Button>
@@ -1022,7 +1022,7 @@ export default function ComponentsShowcase() {
             <h3 className="text-2xl font-semibold">Overlays</h3>
             <Card>
               <CardContent className="pt-6">
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                   <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                     <DialogTrigger asChild>
                       <Button variant="outline">Open Dialog</Button>
@@ -1126,7 +1126,7 @@ export default function ComponentsShowcase() {
             <h3 className="text-2xl font-semibold">Menus</h3>
             <Card>
               <CardContent className="pt-6">
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="outline">Dropdown Menu</Button>
@@ -1198,7 +1198,7 @@ export default function ComponentsShowcase() {
                       <CarouselItem key={index}>
                         <div className="p-1">
                           <Card>
-                            <CardContent className="flex aspect-square items-center justify-center p-6">
+                            <CardContent className="flex aspect-square items-center justify-center p-3 sm:p-4 md:p-6">
                               <span className="text-4xl font-semibold">
                                 {index + 1}
                               </span>
@@ -1298,13 +1298,13 @@ export default function ComponentsShowcase() {
                   className="min-h-[200px] rounded-lg border"
                 >
                   <ResizablePanel defaultSize={50}>
-                    <div className="flex h-full items-center justify-center p-6">
+                    <div className="flex h-full items-center justify-center p-3 sm:p-4 md:p-6">
                       <span className="font-semibold">Panel One</span>
                     </div>
                   </ResizablePanel>
                   <ResizableHandle />
                   <ResizablePanel defaultSize={50}>
-                    <div className="flex h-full items-center justify-center p-6">
+                    <div className="flex h-full items-center justify-center p-3 sm:p-4 md:p-6">
                       <span className="font-semibold">Panel Two</span>
                     </div>
                   </ResizablePanel>

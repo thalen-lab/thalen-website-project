@@ -107,13 +107,14 @@ export function SwipeableCardCarousel<T>({
     return () => clearInterval(interval);
   }, [autoPlay, autoPlayInterval, isPaused, maxIndex, loop, items.length, currentVisibleItems]);
 
-  // Calculate item width
+  // Calculate item width with responsive gap
+  const responsiveGap = typeof window !== 'undefined' && window.innerWidth < 640 ? 12 : gap;
   const itemWidth = containerWidth > 0 
-    ? (containerWidth - (gap * (currentVisibleItems - 1))) / currentVisibleItems 
+    ? (containerWidth - (responsiveGap * (currentVisibleItems - 1))) / currentVisibleItems 
     : 0;
 
   // Calculate transform with swipe delta
-  const baseTransform = -(currentIndex * (itemWidth + gap));
+  const baseTransform = -(currentIndex * (itemWidth + responsiveGap));
   const swipeTransform = isSwiping ? deltaX : 0;
   const transform = baseTransform + swipeTransform;
 
@@ -161,14 +162,14 @@ export function SwipeableCardCarousel<T>({
           )}
           style={{
             transform: `translateX(${transform}px)`,
-            gap: `${gap}px`
+            gap: `${responsiveGap}px`
           }}
         >
           {items.map((item, index) => (
             <div
               key={index}
               className={cn("flex-shrink-0", itemClassName)}
-              style={{ width: itemWidth > 0 ? `${itemWidth}px` : `calc(${100 / currentVisibleItems}% - ${gap * (currentVisibleItems - 1) / currentVisibleItems}px)` }}
+              style={{ width: itemWidth > 0 ? `${itemWidth}px` : `calc(${100 / currentVisibleItems}% - ${responsiveGap * (currentVisibleItems - 1) / currentVisibleItems}px)` }}
             >
               {renderItem(item, index)}
             </div>
@@ -176,7 +177,7 @@ export function SwipeableCardCarousel<T>({
         </div>
       </div>
 
-      {/* Navigation arrows */}
+      {/* Navigation arrows - hidden on mobile, visible on tablet+ */}
       {showNavigation && items.length > currentVisibleItems && (
         <>
           <Button
@@ -186,14 +187,14 @@ export function SwipeableCardCarousel<T>({
               "absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10",
               "bg-background/90 backdrop-blur-sm border-border shadow-lg",
               "hover:bg-background hover:scale-105 transition-all",
-              "hidden md:flex",
+              "hidden md:flex h-10 w-10 lg:h-12 lg:w-12",
               !canGoPrevious && "opacity-50 cursor-not-allowed"
             )}
             onClick={goToPrevious}
             disabled={!canGoPrevious}
             aria-label="Previous"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-5 w-5 lg:h-6 lg:w-6" />
           </Button>
           <Button
             variant="outline"
@@ -202,43 +203,48 @@ export function SwipeableCardCarousel<T>({
               "absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10",
               "bg-background/90 backdrop-blur-sm border-border shadow-lg",
               "hover:bg-background hover:scale-105 transition-all",
-              "hidden md:flex",
+              "hidden md:flex h-10 w-10 lg:h-12 lg:w-12",
               !canGoNext && "opacity-50 cursor-not-allowed"
             )}
             onClick={goToNext}
             disabled={!canGoNext}
             aria-label="Next"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-5 w-5 lg:h-6 lg:w-6" />
           </Button>
         </>
       )}
 
-      {/* Dot indicators */}
+      {/* Dot indicators - larger touch targets on mobile */}
       {showDots && items.length > currentVisibleItems && (
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="flex justify-center gap-1.5 sm:gap-2 mt-4 sm:mt-6">
           {Array.from({ length: maxIndex + 1 }).map((_, index) => (
             <button
               key={index}
               className={cn(
-                "w-2 h-2 rounded-full transition-all duration-300",
-                index === currentIndex 
-                  ? "bg-primary w-6" 
-                  : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                "min-w-[24px] min-h-[24px] sm:min-w-[20px] sm:min-h-[20px] flex items-center justify-center",
+                "transition-all duration-300"
               )}
               onClick={() => handleIndexChange(index)}
               aria-label={`Go to slide ${index + 1}`}
-            />
+            >
+              <span className={cn(
+                "block rounded-full transition-all duration-300",
+                index === currentIndex 
+                  ? "bg-primary w-5 sm:w-6 h-2" 
+                  : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2 h-2"
+              )} />
+            </button>
           ))}
         </div>
       )}
 
-      {/* Swipe hint for mobile */}
-      <div className="md:hidden text-center mt-4 text-sm text-muted-foreground">
+      {/* Swipe hint for mobile - improved styling */}
+      <div className="md:hidden text-center mt-3 sm:mt-4 text-xs sm:text-sm text-muted-foreground">
         <span className="inline-flex items-center gap-1">
-          <ChevronLeft className="h-4 w-4" />
+          <ChevronLeft className="h-3 w-3 sm:h-4 sm:w-4" />
           Swipe to navigate
-          <ChevronRight className="h-4 w-4" />
+          <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4" />
         </span>
       </div>
     </div>

@@ -157,7 +157,7 @@ export default function Privacy() {
         </section>
 
         {/* Content */}
-        <section className="py-20 md:py-28">
+        <section className="py-10 sm:py-14 md:py-20 lg:py-28">
           <div className="container">
             <div className="max-w-4xl mx-auto space-y-12">
               {sections.map((section, index) => (
@@ -215,7 +215,7 @@ export default function Privacy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true, amount: 0.3 }}
-                className="bg-[oklch(0.22_0.06_250)] text-white p-8 rounded-lg mt-16"
+                className="bg-[oklch(0.22_0.06_250)] text-white p-4 sm:p-6 md:p-8 rounded-lg mt-16"
               >
                 <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
                 <p className="text-white/80 leading-relaxed mb-6">

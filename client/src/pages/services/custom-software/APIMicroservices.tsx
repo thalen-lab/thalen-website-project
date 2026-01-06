@@ -76,7 +76,7 @@ export default function APIMicroservices() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -95,10 +95,10 @@ export default function APIMicroservices() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               API & Microservices Development
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Build scalable, resilient APIs and microservices architecture. Connect systems, enable integrations, and future-proof your technology stack.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>
                 <Link href="/contact">
                   Discuss Your API Needs
@@ -116,7 +116,7 @@ export default function APIMicroservices() {
       {/* Services */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">API & Microservices Solutions</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From RESTful APIs to event-driven microservices, we build the backbone of modern applications.
@@ -126,7 +126,7 @@ export default function APIMicroservices() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <service.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                   <p className="text-muted-foreground mb-6">{service.description}</p>
@@ -148,7 +148,7 @@ export default function APIMicroservices() {
       {/* Technology Stack */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">API Technology Stack</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Established tools for building robust, scalable APIs.
@@ -176,7 +176,7 @@ export default function APIMicroservices() {
       {/* Use Cases */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Common Use Cases</h2>
           </div>
 
@@ -204,7 +204,7 @@ export default function APIMicroservices() {
       {/* Case Study */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Success Story</h2>
           </div>
 
@@ -213,7 +213,7 @@ export default function APIMicroservices() {
               <div className="text-sm text-accent font-semibold mb-2">{caseStudy.client}</div>
               <h3 className="text-3xl font-bold mb-6">Microservices Architecture Handles 10M+ Daily API Calls</h3>
               
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div>
                   <h4 className="font-bold mb-2">Challenge</h4>
                   <p className="text-muted-foreground">{caseStudy.challenge}</p>
@@ -240,7 +240,7 @@ export default function APIMicroservices() {
       {/* Best Practices */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Our API Development Best Practices</h2>
           </div>
 
@@ -254,7 +254,7 @@ export default function APIMicroservices() {
               { title: "Testing & QA", desc: "Unit tests, integration tests, and load testing" }
             ].map((practice, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-xl font-bold mb-3">{practice.title}</h3>
                   <p className="text-muted-foreground">{practice.desc}</p>
                 </CardContent>
@@ -267,7 +267,7 @@ export default function APIMicroservices() {
       {/* Pricing */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Investment Range</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Pricing based on API complexity, integrations, and traffic volume.
@@ -281,7 +281,7 @@ export default function APIMicroservices() {
               { tier: "Microservices", price: "$120K+", desc: "Full microservices architecture with event-driven design" }
             ].map((tier, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8 text-center">
+                <CardContent className="p-4 sm:p-6 md:p-8 text-center">
                   <h3 className="text-2xl font-bold mb-2">{tier.tier}</h3>
                   <div className="text-3xl font-bold text-accent mb-4">{tier.price}</div>
                   <p className="text-muted-foreground">{tier.desc}</p>
@@ -296,7 +296,7 @@ export default function APIMicroservices() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Scalable APIs?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Let's design an API strategy that connects your systems and enables growth.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>

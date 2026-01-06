@@ -69,7 +69,7 @@ export default function MobileContact() {
           <h1 className="text-2xl font-bold text-white mb-3">
             Message Sent!
           </h1>
-          <p className="text-slate-300 mb-8">
+          <p className="text-slate-300 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Thank you for contacting us. Our team will get back to you within 24 hours.
           </p>
           <div className="space-y-3">
@@ -111,8 +111,8 @@ export default function MobileContact() {
       {/* Main Content */}
       <div className="container max-w-2xl py-8 px-4">
         {/* Hero Section */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+        <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
+          <h1 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">
             Get in Touch
           </h1>
           <p className="text-lg text-slate-300">
@@ -121,7 +121,7 @@ export default function MobileContact() {
         </div>
 
         {/* Quick Contact Options */}
-        <div className="grid grid-cols-2 gap-3 mb-8">
+        <div className="grid grid-cols-2 gap-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
           <a
             href="tel:+18005551234"
             className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-800 hover:border-orange-500/50 transition-all active:scale-95"
@@ -145,7 +145,7 @@ export default function MobileContact() {
         </div>
 
         {/* Divider */}
-        <div className="relative mb-8">
+        <div className="relative mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-slate-700"></div>
           </div>

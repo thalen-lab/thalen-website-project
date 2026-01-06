@@ -95,7 +95,7 @@ export default function SectorClientLogos({
     : 'bg-white border-slate-200 hover:border-[oklch(0.70_0.18_55)]';
 
   return (
-    <section className={`py-16 md:py-20 ${bgClass} overflow-hidden`}>
+    <section className={`py-10 sm:py-12 md:py-16 lg:py-20 ${bgClass} overflow-hidden`}>
       <div className="container">
         {/* Section Header */}
         <motion.div
@@ -103,10 +103,10 @@ export default function SectorClientLogos({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
         >
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Clients</p>
-          <h2 className={`text-3xl md:text-4xl font-bold ${textClass} mb-4`}>
+          <h2 className={`text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold ${textClass} mb-4`}>
             {title}
           </h2>
           <p className={`text-lg ${subtextClass} max-w-2xl mx-auto`}>
@@ -159,19 +159,19 @@ export default function SectorClientLogos({
           className="mt-12 flex flex-wrap justify-center gap-8 md:gap-12"
         >
           <div className="text-center">
-            <div className={`text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>100%</div>
+            <div className={`text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>100%</div>
             <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Client Satisfaction</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>500+</div>
+            <div className={`text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>500+</div>
             <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Projects Delivered</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>25+</div>
+            <div className={`text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>25+</div>
             <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Years Experience</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>$2.3B+</div>
+            <div className={`text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>$2.3B+</div>
             <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Client ROI</div>
           </div>
         </motion.div>

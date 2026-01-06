@@ -229,7 +229,7 @@ export default function DataMaturityAssessment() {
         <section className="py-12 bg-muted/30">
           <div className="container max-w-4xl">
             <Card className="hover:shadow-lg transition-all active:scale-95">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <div className="text-center mb-6">
                   <div className="text-6xl font-bold mb-2">{totalScore}/40</div>
                   <div className={`text-2xl font-semibold ${maturityResult.color}`}>
@@ -248,14 +248,14 @@ export default function DataMaturityAssessment() {
         {/* Recommended Services */}
         <section className="py-16">
           <div className="container max-w-4xl">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Target className="h-8 w-8 text-primary" />
               <h2 className="text-3xl font-bold">Recommended Next Steps</h2>
             </div>
-            <div className="grid gap-4 mb-12">
+            <div className="grid gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               {maturityResult.services.map((service, index) => (
                 <Card key={index} className="hover:border-accent hover:shadow-lg transition-all border-2">
-                  <CardContent className="p-6 flex items-center justify-between">
+                  <CardContent className="p-3 sm:p-4 md:p-6 flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-card border-2 border-border text-foreground font-bold">
                         {index + 1}
@@ -273,9 +273,9 @@ export default function DataMaturityAssessment() {
             </div>
 
             {/* ROI & Timeline */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <DollarSign className="h-6 w-6 text-green-600" />
                     <h3 className="text-xl font-bold">Estimated ROI</h3>
@@ -288,7 +288,7 @@ export default function DataMaturityAssessment() {
               </Card>
 
               <Card className="hover:shadow-lg hover:border-accent transition-all border-2">
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <TrendingUp className="h-6 w-6 text-blue-600" />
                     <h3 className="text-xl font-bold">Implementation Timeline</h3>
@@ -303,12 +303,12 @@ export default function DataMaturityAssessment() {
 
             {/* CTA */}
             <Card className="bg-navy-gradient text-primary-foreground hover:shadow-2xl transition-all active:scale-95">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-4 sm:p-6 md:p-8 text-center">
                 <h3 className="text-2xl font-bold mb-4">Ready to Accelerate Your Data Maturity?</h3>
                 <p className="mb-6 opacity-90">
                   Schedule a free consultation with our data analytics experts to discuss your personalized roadmap
                 </p>
-                <div className="flex flex-wrap gap-4 justify-center">
+                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
                   <Link href="/contact">
                     <Button size="lg" className="bg-orange-gradient hover:opacity-90">
                       Schedule Consultation
@@ -366,7 +366,7 @@ export default function DataMaturityAssessment() {
       <section className="pt-32 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-primary-foreground">
         <div className="container text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Data Maturity Assessment</h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto mb-8">
+          <p className="text-xl opacity-90 max-w-2xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Evaluate your organization's current data capabilities and receive a personalized roadmap for improvement
           </p>
           <div className="max-w-md mx-auto">
@@ -383,11 +383,11 @@ export default function DataMaturityAssessment() {
       <section className="py-16 flex-1">
         <div className="container max-w-3xl">
           <Card className="hover:shadow-lg transition-all active:scale-95">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 md:p-8">
               <div className="text-sm font-semibold text-muted-foreground mb-4">{question.category}</div>
-              <h2 className="text-2xl font-bold mb-8">{question.question}</h2>
+              <h2 className="text-2xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">{question.question}</h2>
               
-              <div className="space-y-3 mb-8">
+              <div className="space-y-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 {question.options.map((option, index) => (
                   <button
                     key={index}

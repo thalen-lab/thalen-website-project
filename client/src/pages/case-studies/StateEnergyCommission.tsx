@@ -21,7 +21,7 @@ export default function StateEnergyCommission() {
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Case Studies', href: '/case-studies' },
@@ -37,7 +37,7 @@ export default function StateEnergyCommission() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               State Energy Commission Reduces Grid Outages 65% with Predictive Analytics
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Implementing StateRAMP-authorized IoT platform monitoring 500+ substations with 15,000+ sensors, enabling predictive maintenance that reduced outages by 65% for 8.5 million residents.
             </p>
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
@@ -60,7 +60,7 @@ export default function StateEnergyCommission() {
             ].map((metric, index) => (
               <div key={index} className="text-center">
                 <metric.icon className="h-8 w-8 text-[oklch(0.65_0.18_55)] mx-auto mb-3" />
-                <div className="text-3xl md:text-4xl font-bold text-[oklch(0.65_0.18_55)] mb-2">{metric.value}</div>
+                <div className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.65_0.18_55)] mb-2">{metric.value}</div>
                 <div className="text-sm text-slate-600">{metric.label}</div>
               </div>
             ))}
@@ -80,7 +80,7 @@ export default function StateEnergyCommission() {
             <p className="mb-6">
               Thalen Technologies Technologies was selected through a competitive state procurement process to design and implement a StateRAMP-authorized IoT platform for real-time grid monitoring and predictive maintenance. The solution would deploy 15,000+ sensors across 500+ substations, integrate with legacy SCADA systems, and use machine learning to predict equipment failures weeks in advance.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-[oklch(0.97_0.01_250)] rounded-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mt-8 p-3 sm:p-4 md:p-6 bg-[oklch(0.97_0.01_250)] rounded-lg">
               <div>
                 <h3 className="text-sm font-semibold text-slate-600 mb-2">Contract Type</h3>
                 <p className="text-lg font-bold text-[oklch(0.20_0.05_250)]">State Cooperative Purchase</p>
@@ -102,7 +102,7 @@ export default function StateEnergyCommission() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl text-[oklch(0.20_0.05_250)]">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Challenge</p>
-          <h2 className="text-4xl font-bold mb-8">Navigating a Complex Energy Landscape</h2>
+          <h2 className="text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Navigating a Complex Energy Landscape</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
@@ -123,7 +123,7 @@ export default function StateEnergyCommission() {
               }
             ].map((challenge, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{challenge.title}</h3>
                   <p className="text-slate-600">{challenge.description}</p>
                 </CardContent>
@@ -137,7 +137,7 @@ export default function StateEnergyCommission() {
       <section className="py-20">
         <div className="container max-w-4xl text-[oklch(0.20_0.05_250)]">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Solution</p>
-          <h2 className="text-4xl font-bold mb-8">A Future-Ready IoT & Analytics Platform</h2>
+          <h2 className="text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">A Future-Ready IoT & Analytics Platform</h2>
           <div className="space-y-8">
             {[
               {
@@ -186,7 +186,7 @@ export default function StateEnergyCommission() {
               }
             ].map((solution, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{solution.title}</h3>
                   <p className="text-lg text-slate-600 mb-6">{solution.description}</p>
                   <ul className="space-y-3 text-slate-600">
@@ -208,7 +208,7 @@ export default function StateEnergyCommission() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl text-[oklch(0.20_0.05_250)]">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Results</p>
-          <h2 className="text-4xl font-bold mb-8">A More Resilient and Efficient State Grid</h2>
+          <h2 className="text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">A More Resilient and Efficient State Grid</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
@@ -229,7 +229,7 @@ export default function StateEnergyCommission() {
               }
             ].map((result, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{result.title}</h3>
                   <p className="text-slate-600">{result.description}</p>
                 </CardContent>
@@ -243,7 +243,7 @@ export default function StateEnergyCommission() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">Modernize Your Infrastructure with Thalen Technologies</h2>
-          <p className="text-xl text-white/80 mb-8">
+          <p className="text-xl text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Secure, compliant, and powerful solutions for the public sector. Let's discuss how our IoT and analytics platforms can transform your operations, reduce costs, and improve services for your constituents.
           </p>
           <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

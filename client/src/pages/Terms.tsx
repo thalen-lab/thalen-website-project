@@ -41,7 +41,7 @@ export default function Terms() {
       </section>
 
       {/* Content */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto text-[oklch(0.20_0.05_250)]">
             <div className="space-y-10">
@@ -171,7 +171,7 @@ export default function Terms() {
                 </p>
               </div>
 
-              <div className="bg-[oklch(0.22_0.06_250)] text-white p-8 rounded-lg">
+              <div className="bg-[oklch(0.22_0.06_250)] text-white p-4 sm:p-6 md:p-8 rounded-lg">
                 <h2 className="text-2xl font-semibold mb-4 text-white">Contact Us</h2>
                 <p className="text-white/80 mb-6">
                   If you have any questions about these Terms of Service, please contact us:

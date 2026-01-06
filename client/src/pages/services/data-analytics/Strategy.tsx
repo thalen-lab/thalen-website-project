@@ -152,7 +152,7 @@ export default function Strategy() {
       <Navigation />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -163,7 +163,7 @@ export default function Strategy() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Services', href: '/consulting-services' },
@@ -180,13 +180,13 @@ export default function Strategy() {
             className="max-w-4xl"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Strategic Data Management</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Data Strategy & Governance
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Develop comprehensive data strategies that maximize your existing data assets and infrastructure—with FedRAMP platform recommendations only when new capabilities align with mission objectives and compliance requirements. Transform data from a cost center into a strategic asset.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Request Strategy Assessment
@@ -204,17 +204,17 @@ export default function Strategy() {
       </section>
 
       {/* Implementation Phases */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Methodology</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               6-Week Strategy Assessment
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -232,7 +232,7 @@ export default function Strategy() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
                         {index + 1}
@@ -260,17 +260,17 @@ export default function Strategy() {
       </section>
 
       {/* Strategy Components */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Strategy Components</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Comprehensive Data Strategy Framework
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -278,7 +278,7 @@ export default function Strategy() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {strategyComponents.map((item, index) => (
               <motion.div
                 key={index}
@@ -288,7 +288,7 @@ export default function Strategy() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{item.component}</h3>
                     <p className="text-sm text-slate-600 mb-3">{item.description}</p>
                     <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-3 py-2">
@@ -304,17 +304,17 @@ export default function Strategy() {
       </section>
 
       {/* Governance Maturity */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Maturity Model</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Data Governance Maturity Levels
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -332,7 +332,7 @@ export default function Strategy() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                         {index + 1}
@@ -356,17 +356,17 @@ export default function Strategy() {
       </section>
 
       {/* Case Study */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Real-World Strategy Implementation Results
             </h2>
           </motion.div>
@@ -379,7 +379,7 @@ export default function Strategy() {
             className="max-w-5xl mx-auto"
           >
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{caseStudy.agency}</h3>
                 <div className="grid md:grid-cols-2 gap-8 mb-6">
                   <div>
@@ -406,17 +406,17 @@ export default function Strategy() {
       </section>
 
       {/* Deliverables */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">What You Receive</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Strategy Engagement Deliverables
             </h2>
           </motion.div>
@@ -431,7 +431,7 @@ export default function Strategy() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <div className="flex justify-between items-start mb-3">
                       <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)]">{deliverable.title}</h3>
                       <span className="text-xs bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-2 py-1 rounded font-semibold">{deliverable.pages}</span>
@@ -446,7 +446,7 @@ export default function Strategy() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -454,13 +454,13 @@ export default function Strategy() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Data Into a Strategic Asset?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Schedule a complimentary consultation to discuss your data strategy needs and learn how we can help you build a data-driven organization.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Schedule Free Consultation

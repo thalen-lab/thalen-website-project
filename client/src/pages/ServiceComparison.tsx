@@ -335,7 +335,7 @@ export default function ServiceComparison() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -351,7 +351,7 @@ export default function ServiceComparison() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Compare Our Services
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Not sure which service is right for your agency? Compare features, timelines, and use cases side-by-side to find the perfect fit for your mission.
             </p>
           </div>
@@ -411,7 +411,7 @@ export default function ServiceComparison() {
                     <p className="text-muted-foreground">{service.tagline}</p>
                   </CardHeader>
                   
-                  <CardContent className="p-6 space-y-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6 space-y-6">
                     {/* Best For */}
                     <div>
                       <h4 className="font-semibold mb-3 flex items-center gap-2">
@@ -473,10 +473,10 @@ export default function ServiceComparison() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Still Not Sure Which Service You Need?
             </h2>
-            <p className="text-xl opacity-90 mb-8">
+            <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Schedule a free consultation with our federal technology experts. We'll assess your requirements and recommend the optimal service mix for your agency.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90">
                 Schedule Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />

@@ -372,7 +372,7 @@ export default function ContractVehicleComparison() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Federal Solutions', href: '/federal-solutions' },
@@ -388,7 +388,7 @@ export default function ContractVehicleComparison() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Contract Vehicle Comparison Tool
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Find the optimal contract vehicle for your agency's needs. Get personalized recommendations based on your agency type, contract size, and procurement timeline.
             </p>
           </div>
@@ -474,7 +474,7 @@ export default function ContractVehicleComparison() {
       {showResults && recommendations.length > 0 && (
         <section id="results" className="py-20 bg-secondary">
           <div className="container max-w-6xl">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               <h2 className="text-4xl font-bold mb-4">Recommended Contract Vehicles</h2>
               <p className="text-xl text-muted-foreground mb-6">
                 Based on your inputs, here are the best contract vehicles ranked by fit
@@ -620,7 +620,7 @@ export default function ContractVehicleComparison() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Need Expert Guidance?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Our government contracting specialists can help you develop a winning strategy for any contract vehicle.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

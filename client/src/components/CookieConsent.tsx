@@ -226,7 +226,7 @@ export default function CookieConsent() {
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
+            <div className="p-3 sm:p-4 md:p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
               <p className="text-gray-600 text-sm mb-6">
                 Please choose whether this site may use cookies or related technologies as described below. 
                 You can learn more about how this site uses cookies and related technologies by reading our{' '}
@@ -236,7 +236,7 @@ export default function CookieConsent() {
               </p>
 
               {/* Cookie Categories */}
-              <div className="space-y-4">
+              <div className="space-y-2 sm:space-y-3 md:space-y-4">
                 {cookieCategories.map((category) => (
                   <div 
                     key={category.id}

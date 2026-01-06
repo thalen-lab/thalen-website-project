@@ -17,7 +17,7 @@ const EditorialSection = ({ children, className = "" }: { children: React.ReactN
 );
 
 const EditorialHeadline = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">
+  <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">
     {children}
   </h2>
 );
@@ -37,7 +37,7 @@ const EditorialBody = ({ children }: { children: React.ReactNode }) => (
 const StatGrid = ({ metrics }: { metrics: { value: string, label: string }[] }) => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 my-16">
     {metrics.map((metric, index) => (
-      <div key={index} className="text-center p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+      <div key={index} className="text-center p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
         <div className="text-4xl md:text-5xl font-bold text-[oklch(0.22_0.06_250)] mb-1">{metric.value}</div>
         <div className="text-sm uppercase tracking-wider text-slate-600">{metric.label}</div>
       </div>
@@ -64,7 +64,7 @@ export default function EnergyGrid() {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container max-w-4xl mx-auto px-4 relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Case Studies', href: '/case-studies' },
@@ -79,7 +79,7 @@ export default function EnergyGrid() {
           <h1 className="text-5xl md:text-7xl font-serif font-extrabold mb-6 leading-tight">
             AI-Powered Grid Modernization Delivers Unprecedented Reliability and Sustainability for a Major Utility.
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8">
+          <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             AI-powered grid optimization reduced outages by 60% while improving renewable energy integration for 3M+ customers.
           </p>
           <Link href="/contact">
@@ -132,7 +132,7 @@ export default function EnergyGrid() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-4xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Modernize Your Critical Infrastructure</h2>
-          <p className="text-xl leading-relaxed opacity-90 mb-8">
+          <p className="text-xl leading-relaxed opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Discover how our intelligent infrastructure solutions can improve reliability, enable sustainability, and drive operational savings for your organization.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

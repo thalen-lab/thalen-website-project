@@ -103,7 +103,7 @@ export function InsightCardSkeleton({ className }: { className?: string }) {
         
         {/* Author & Read time */}
         <div className="flex items-center gap-3 pt-2">
-          <Skeleton className="h-8 w-8 rounded-full" />
+          <Skeleton className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 rounded-full" />
           <div className="space-y-1">
             <Skeleton className="h-3 w-24" />
             <Skeleton className="h-3 w-16" />
@@ -156,7 +156,7 @@ export function HeroSkeleton({ className }: { className?: string }) {
       
       {/* Content */}
       <div className="container relative z-10 py-20">
-        <div className="max-w-3xl space-y-6">
+        <div className="max-w-3xl space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 md:space-y-6">
           {/* Eyebrow */}
           <Skeleton className="h-5 w-32 rounded-full" />
           
@@ -201,11 +201,11 @@ export function StatsSkeleton({ count = 4, className }: { count?: number; classN
 export function ServiceCardSkeleton({ className }: { className?: string }) {
   return (
     <div className={cn(
-      "p-6 rounded-xl bg-card border border-border space-y-4",
+      "p-3 sm:p-4 md:p-6 rounded-xl bg-card border border-border space-y-2 sm:space-y-3 md:space-y-4",
       className
     )}>
       {/* Icon */}
-      <Skeleton className="h-12 w-12 rounded-lg" />
+      <Skeleton className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-lg" />
       
       {/* Title */}
       <Skeleton className="h-6 w-3/4" />
@@ -233,7 +233,7 @@ export function PartnerLogoSkeleton({ className }: { className?: string }) {
 // Testimonial Skeleton
 export function TestimonialSkeleton({ className }: { className?: string }) {
   return (
-    <div className={cn("p-6 rounded-xl bg-card border border-border space-y-4", className)}>
+    <div className={cn("p-3 sm:p-4 md:p-6 rounded-xl bg-card border border-border space-y-2 sm:space-y-3 md:space-y-4", className)}>
       {/* Quote */}
       <div className="space-y-2">
         <Skeleton className="h-4 w-full" />
@@ -243,7 +243,7 @@ export function TestimonialSkeleton({ className }: { className?: string }) {
       
       {/* Author */}
       <div className="flex items-center gap-3 pt-2">
-        <Skeleton className="h-10 w-10 rounded-full" />
+        <Skeleton className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-full" />
         <div className="space-y-1">
           <Skeleton className="h-4 w-28" />
           <Skeleton className="h-3 w-36" />
@@ -268,7 +268,7 @@ export function TableRowSkeleton({ columns = 5, className }: { columns?: number;
 export function ListItemSkeleton({ className }: { className?: string }) {
   return (
     <div className={cn("flex items-center gap-4 p-4", className)}>
-      <Skeleton className="h-10 w-10 rounded-lg flex-shrink-0" />
+      <Skeleton className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-lg flex-shrink-0" />
       <div className="flex-1 space-y-2">
         <Skeleton className="h-4 w-3/4" />
         <Skeleton className="h-3 w-1/2" />
@@ -281,7 +281,7 @@ export function ListItemSkeleton({ className }: { className?: string }) {
 // Content Section Skeleton - for article/page content
 export function ContentSkeleton({ className }: { className?: string }) {
   return (
-    <div className={cn("space-y-6", className)}>
+    <div className={cn("space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 md:space-y-6", className)}>
       {/* Heading */}
       <Skeleton className="h-8 w-2/3" />
       
@@ -342,7 +342,7 @@ export function CarouselSkeleton({
 // Form Skeleton
 export function FormSkeleton({ fields = 4, className }: { fields?: number; className?: string }) {
   return (
-    <div className={cn("space-y-6", className)}>
+    <div className={cn("space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 md:space-y-6", className)}>
       {Array.from({ length: fields }).map((_, i) => (
         <div key={i} className="space-y-2">
           <Skeleton className="h-4 w-24" />

@@ -138,7 +138,7 @@ export function NotificationPreferences() {
             Manage your push notification settings and preferences.
           </DialogDescription>
         </DialogHeader>
-        <div className="space-y-4 py-4">
+        <div className="space-y-2 sm:space-y-3 md:space-y-4 py-4">
           {/* Master toggle */}
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
@@ -157,7 +157,7 @@ export function NotificationPreferences() {
           {/* Preference toggles */}
           {subscribed && (
             <>
-              <div className="border-t pt-4 space-y-4">
+              <div className="border-t pt-4 space-y-2 sm:space-y-3 md:space-y-4">
                 <p className="text-sm font-medium">Notification Categories</p>
                 
                 <div className="flex items-center justify-between">

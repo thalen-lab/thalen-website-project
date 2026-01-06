@@ -108,7 +108,7 @@ export default function ApplicationDevelopment() {
       <main>
         {/* Hero Section */}
         <motion.section 
-          className="relative py-24 md:py-32 text-white overflow-hidden" 
+          className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden" 
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
           transition={{ duration: 0.5 }}
@@ -141,7 +141,7 @@ export default function ApplicationDevelopment() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl md:text-2xl text-white/90 mb-8"
+                className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
@@ -150,7 +150,7 @@ export default function ApplicationDevelopment() {
               </motion.p>
               
               <motion.div 
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap gap-2 sm:gap-3 md:gap-4"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
@@ -169,7 +169,7 @@ export default function ApplicationDevelopment() {
         {/* Services Grid */}
         <section className="py-20 bg-white">
           <div className="container">
-            <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Comprehensive Application Services</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">End-to-End Application Expertise</h2>
               <p className="text-xl text-slate-600">
@@ -187,11 +187,11 @@ export default function ApplicationDevelopment() {
                   viewport={{ once: true }}
                 >
                   <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 flex flex-col">
-                    <CardContent className="p-8 flex flex-col flex-grow">
+                    <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col flex-grow">
                       <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{service.title}</h3>
                       <p className="text-slate-600 mb-6 flex-grow">{service.description}</p>
                       
-                      <ul className="space-y-3 mb-8">
+                      <ul className="space-y-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                         {service.benefits.map((benefit, idx) => (
                           <li key={idx} className="flex items-start text-slate-600">
                             <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span>
@@ -219,7 +219,7 @@ export default function ApplicationDevelopment() {
         {/* Delivery Process */}
         <section className="py-20 bg-[oklch(0.97_0.01_250)]">
           <div className="container">
-            <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Delivery Process</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">A Proven Methodology for Success</h2>
               <p className="text-xl text-slate-600">
@@ -231,7 +231,7 @@ export default function ApplicationDevelopment() {
               {deliveryProcess.map((step, index) => (
                 <motion.div 
                   key={index} 
-                  className="bg-white rounded-lg p-8 relative border-2 border-transparent"
+                  className="bg-white rounded-lg p-4 sm:p-6 md:p-8 relative border-2 border-transparent"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -250,7 +250,7 @@ export default function ApplicationDevelopment() {
         <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
           <div className="container text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Modernize Your Applications?</h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Let's discuss how Thalen Technologies can help you build, integrate, and secure your mission-critical systems. Schedule a free consultation with our experts today.
             </p>
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 active:scale-95 transition-all font-semibold">

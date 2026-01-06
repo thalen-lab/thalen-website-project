@@ -61,7 +61,7 @@ export default function ApplicationSecurity() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-xl md:text-2xl text-white/90 mb-8"
+              className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
             >
               We help agencies implement secure software development lifecycle (SDLC) practices with DevSecOps pipelines, automated security testing, and compliance validation tools. Ensure your applications meet FedRAMP, StateRAMP, NIST 800-53, and government security requirements (federal, state, local) through our proven implementation framework.
             </motion.p>
@@ -69,7 +69,7 @@ export default function ApplicationSecurity() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-2 sm:gap-3 md:gap-4"
             >
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
@@ -89,7 +89,7 @@ export default function ApplicationSecurity() {
 
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <h2 className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why It Matters</h2>
             <h3 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Build Security In, Not Bolted On</h3>
             <p className="text-xl text-slate-600">Security breaches cost agencies millions and compromise mission success. Proactive application security is non-negotiable.</p>
@@ -117,7 +117,7 @@ export default function ApplicationSecurity() {
 
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <h2 className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</h2>
             <h3 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Security Practices We Implement</h3>
             <p className="text-xl text-slate-600">Comprehensive security practices integrated throughout the development lifecycle.</p>
@@ -126,7 +126,7 @@ export default function ApplicationSecurity() {
             {securityPractices.map((practice, index) => (
               <motion.div 
                 key={index} 
-                className="bg-white border-2 border-slate-200 rounded-lg p-8 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300"
+                className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -144,7 +144,7 @@ export default function ApplicationSecurity() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Secure Your Applications?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Schedule a consultation to explore how we can help you build security into your development process.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -29,7 +29,7 @@ export default function ManufacturingUptime() {
                 { label: "Manufacturing Uptime" },
               ]}
               variant="dark"
-              className="mb-8"
+              className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
             />
           </motion.div>
 
@@ -45,7 +45,7 @@ export default function ManufacturingUptime() {
             <h1 className="text-5xl md:text-6xl font-bold tracking-tighter mb-6">
               Manufacturing Giant Achieves 99.2% Uptime
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed">
               How a Fortune 500 manufacturer transformed operations through
               predictive maintenance and industrial cybersecurity across fifty
               facilities.
@@ -59,7 +59,7 @@ export default function ManufacturingUptime() {
         <div className="container grid md:grid-cols-3 gap-12">
           {/* Key Metrics Sidebar */}
           <aside className="md:col-span-1 md:sticky md:top-24 self-start">
-            <div className="bg-[oklch(0.97_0.01_250)] p-8 rounded-lg">
+            <div className="bg-[oklch(0.97_0.01_250)] p-4 sm:p-6 md:p-8 rounded-lg">
               <h3 className="text-[oklch(0.20_0.05_250)] text-xl font-bold mb-6">
                 Key Metrics
               </h3>
@@ -212,7 +212,7 @@ export default function ManufacturingUptime() {
           <h2 className="text-4xl font-bold tracking-tight mb-4">
             Ready to Enhance Your Operations?
           </h2>
-          <p className="text-lg text-white/80 mb-8">
+          <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Learn how Thalen's industrial solutions can drive efficiency and
             reliability in your manufacturing environment.
           </p>

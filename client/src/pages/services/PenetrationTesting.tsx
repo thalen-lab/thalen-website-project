@@ -86,10 +86,10 @@ export default function PenetrationTesting() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Penetration Testing & Vulnerability Management
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Uncover security weaknesses before adversaries exploit them with comprehensive penetration testing and continuous vulnerability management for government agencies (federal, state, local) and defense contractors. Thalen Technologies's offensive security experts simulate real-world attacks to validate your defenses and prioritize remediation efforts.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Schedule Penetration Test
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -105,7 +105,7 @@ export default function PenetrationTesting() {
       {/* Testing Services */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Comprehensive Penetration Testing Services</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -117,7 +117,7 @@ export default function PenetrationTesting() {
             {testingServices.map((service, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{service.title}</h3>
                     <p className="text-slate-600 mb-6">{service.description}</p>
                     <ul className="space-y-3">
@@ -139,7 +139,7 @@ export default function PenetrationTesting() {
       {/* Vulnerability Management Process */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Continuous Vulnerability Management</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -151,7 +151,7 @@ export default function PenetrationTesting() {
             {vulnerabilityManagement.map((step, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <div className="flex items-center mb-4">
                       <div className="h-12 w-12 bg-[oklch(0.22_0.06_250)] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
                         {index + 1}
@@ -178,7 +178,7 @@ export default function PenetrationTesting() {
       {/* Testing Methodologies */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Frameworks</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Industry-Standard Testing Methodologies</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -190,7 +190,7 @@ export default function PenetrationTesting() {
             {testingMethodologies.map((methodology, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl h-full">
-                  <CardContent className="p-6 text-center flex flex-col justify-center items-center h-full">
+                  <CardContent className="p-3 sm:p-4 md:p-6 text-center flex flex-col justify-center items-center h-full">
                     <div className="font-semibold text-[oklch(0.20_0.05_250)]">{methodology}</div>
                   </CardContent>
                 </Card>
@@ -203,7 +203,7 @@ export default function PenetrationTesting() {
       {/* Metrics */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Results</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Proven Testing Results</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -218,7 +218,7 @@ export default function PenetrationTesting() {
               { metric: '100%', label: 'Remediation Guidance' },
               { metric: '24/7', label: 'Emergency Support' }
             ].map((item, index) => (
-              <div key={index} className="text-center bg-white p-6 rounded-lg border-2 border-slate-200">
+              <div key={index} className="text-center bg-white p-3 sm:p-4 md:p-6 rounded-lg border-2 border-slate-200">
                 <div className="text-5xl font-bold text-[oklch(0.65_0.18_55)] mb-2">{item.metric}</div>
                 <div className="text-sm text-slate-600 uppercase tracking-wider font-semibold">{item.label}</div>
               </div>
@@ -231,7 +231,7 @@ export default function PenetrationTesting() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Find Vulnerabilities Before Attackers Do</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Schedule a comprehensive penetration test and discover how Thalen Technologies can identify and help remediate security weaknesses in your government environment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

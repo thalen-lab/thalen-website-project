@@ -66,10 +66,41 @@ nexdyne-website/
 │   │   └── index.css      # Global styles and theme
 │   ├── index.html         # HTML template
 │   └── vite.config.ts     # Vite configuration
-├── package.json           # Project dependencies
-├── tailwind.config.ts     # Tailwind CSS configuration
-└── tsconfig.json          # TypeScript configuration
+├── server/                # Backend Express + tRPC server
+│   ├── _core/            # Core server utilities
+│   ├── routers/          # API routers
+│   └── db.ts             # Database connection
+├── shared/               # Shared types and constants
+├── drizzle/              # Database schema and migrations
+├── package.json          # Project dependencies
+└── tsconfig.json         # TypeScript configuration
 ```
+
+## Database Setup (Optional)
+
+If you want to use the full-stack features with the database:
+
+### 1. Create MySQL Database
+
+```sql
+CREATE DATABASE nexdyne;
+```
+
+### 2. Configure DATABASE_URL
+
+Update your `.env` file with your MySQL connection string:
+
+```env
+DATABASE_URL=mysql://root:yourpassword@localhost:3306/nexdyne
+```
+
+### 3. Run Migrations
+
+```bash
+pnpm db:push
+```
+
+---
 
 ## Key Features
 
@@ -87,7 +118,11 @@ nexdyne-website/
 - **React 19** - Latest React with modern features
 - **Tailwind CSS 4** - Utility-first CSS framework
 - **TypeScript** - Type-safe development
-- **Vite** - Fast build tool and dev server
+- **Vite 7** - Fast build tool and dev server
+- **Express** - Backend server
+- **tRPC** - Type-safe API layer
+- **Drizzle ORM** - Database ORM for MySQL
+- **TanStack Query** - Data fetching and caching
 - **Wouter** - Lightweight routing
 - **Shadcn/ui** - High-quality UI components
 - **Lucide React** - Beautiful icon library
@@ -101,19 +136,44 @@ pnpm dev
 # Build for production
 pnpm build
 
-# Preview production build
-pnpm preview
+# Run production build
+pnpm start
 
 # Type check
-pnpm type-check
+pnpm check
 
-# Lint code
-pnpm lint
+# Format code
+pnpm format
+
+# Run tests
+pnpm test
+
+# Database migrations (requires DATABASE_URL)
+pnpm db:push
 ```
 
 ## Environment Variables
 
-This project runs entirely on the frontend and doesn't require environment variables for local development. All configurations are handled through the build process.
+For full-stack development with database features, create a `.env` file in the project root:
+
+```env
+# Required for database features
+DATABASE_URL=mysql://username:password@localhost:3306/nexdyne
+
+# JWT Secret for authentication (generate a random string)
+JWT_SECRET=your-random-secret-key-here-minimum-32-characters
+
+# App Configuration
+VITE_APP_TITLE=NexDyne Technology
+VITE_APP_LOGO=/nexdyne-logo.svg
+
+# Optional: Leave empty to disable analytics
+VITE_ANALYTICS_ENDPOINT=
+VITE_ANALYTICS_WEBSITE_ID=
+VITE_APP_ID=
+```
+
+**Note:** For frontend-only development, you can skip the `.env` file entirely.
 
 ## Customization
 

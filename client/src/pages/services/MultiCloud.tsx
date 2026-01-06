@@ -92,10 +92,10 @@ export default function MultiCloud() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Multi-Cloud & Hybrid Solutions
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Vendor-agnostic architecture across AWS, Azure, and Google Cloud with unified management, disaster recovery, and seamless workload portability. Thalen Technologies delivers multi-cloud strategies that maximize flexibility, minimize lock-in, and ensure 99.99% availability for mission-critical government operations.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Request Multi-Cloud Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -111,7 +111,7 @@ export default function MultiCloud() {
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Key Benefits</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Why Government Agencies Choose Multi-Cloud</h2>
             <p className="text-xl text-slate-600">
@@ -128,7 +128,7 @@ export default function MultiCloud() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{benefit.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
                   </CardContent>
@@ -142,7 +142,7 @@ export default function MultiCloud() {
       {/* Architecture Approaches */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Architecture Models</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Multi-Cloud Architecture Approaches</h2>
             <p className="text-xl text-slate-600">
@@ -159,7 +159,7 @@ export default function MultiCloud() {
                 transition={{ delay: 0.3 + index * 0.1 }}
               >
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{arch.title}</h3>
                     <p className="text-slate-600 mb-6 leading-relaxed">{arch.description}</p>
                     <div className="space-y-3">
@@ -182,7 +182,7 @@ export default function MultiCloud() {
       {/* Key Capabilities */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Capabilities</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Multi-Cloud Capabilities</h2>
             <p className="text-xl text-slate-600">
@@ -193,7 +193,7 @@ export default function MultiCloud() {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {capabilities.map((capability, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{capability.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{capability.description}</p>
                 </CardContent>
@@ -206,7 +206,7 @@ export default function MultiCloud() {
       {/* Tools & Technologies */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-12 max-w-3xl mx-auto">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Tools & Platforms</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Multi-Cloud Tools & Platforms</h2>
             <p className="text-xl text-slate-600">
@@ -228,7 +228,7 @@ export default function MultiCloud() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Embrace a Multi-Cloud Strategy?</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Start with a comprehensive multi-cloud assessment and discover how Thalen Technologies can deliver vendor independence with 99.99% availability.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

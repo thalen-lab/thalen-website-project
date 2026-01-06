@@ -197,7 +197,7 @@ export default function AuthorProfile() {
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Author Not Found</h1>
-            <p className="text-muted-foreground mb-8">The author profile you're looking for doesn't exist.</p>
+            <p className="text-muted-foreground mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">The author profile you're looking for doesn't exist.</p>
             <Link href="/insights">
               <Button>Back to Insights</Button>
             </Link>
@@ -215,7 +215,7 @@ export default function AuthorProfile() {
       {/* Author Hero */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Insights', href: '/insights' },
@@ -273,7 +273,7 @@ export default function AuthorProfile() {
             <div className="grid md:grid-cols-3 gap-8">
               {/* Stats */}
               <Card>
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <BookOpen className="h-6 w-6 text-accent" />
                     <h3 className="text-lg font-semibold">Published Articles</h3>
@@ -285,7 +285,7 @@ export default function AuthorProfile() {
 
               {/* Expertise */}
               <Card className="md:col-span-2">
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Award className="h-6 w-6 text-accent" />
                     <h3 className="text-lg font-semibold">Areas of Expertise</h3>
@@ -318,14 +318,14 @@ export default function AuthorProfile() {
       <section className="py-20">
         <div className="container">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Articles by {author.name}</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Articles by {author.name}</h2>
 
             {authorArticles.length > 0 ? (
               <div className="grid md:grid-cols-2 gap-8">
                 {authorArticles.map((insight, index) => (
                   <Link key={index} href={insight.href}>
                     <Card className="group hover:shadow-xl transition-all flex flex-col h-full cursor-pointer">
-                      <CardContent className="p-8 flex flex-col flex-1">
+                      <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col flex-1">
                         <div className="text-sm font-semibold text-accent mb-3">{insight.category}</div>
                         <h3 className="text-xl font-bold mb-3 group-hover:text-[#FF6B35] transition-colors">
                           {insight.title}
@@ -372,7 +372,7 @@ export default function AuthorProfile() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Request an assessment to discuss your agency's technology requirements.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90">

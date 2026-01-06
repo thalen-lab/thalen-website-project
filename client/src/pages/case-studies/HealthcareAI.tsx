@@ -20,11 +20,11 @@ export default function HealthcareAI() {
           <div className="max-w-5xl mx-auto text-center">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Case Study</p>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-tight">
               Healthcare System Saves $12M Through AI Analytics
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed">
               How a regional healthcare network unified fragmented data systems to deliver real-time clinical insights and measurable improvements in patient outcomes
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function HealthcareAI() {
       {/* The Opportunity Section */}
       <section className="py-24 bg-white">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Case Studies', href: '/case-studies' },
@@ -44,7 +44,7 @@ export default function HealthcareAI() {
             />
           </div>
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Opportunity</p>
               <h2 className="text-4xl md:text-5xl font-serif font-normal text-[oklch(0.20_0.05_250)] leading-tight">
                 A healthcare system recognized that fragmented data was preventing optimal patient care
@@ -72,7 +72,7 @@ export default function HealthcareAI() {
       <section className="py-24 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Solution</p>
               <h2 className="text-4xl md:text-5xl font-serif font-normal text-[oklch(0.20_0.05_250)] leading-tight">
                 An AI-powered platform unified data and delivered insights that transformed clinical decision-making
@@ -150,13 +150,13 @@ export default function HealthcareAI() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-normal text-white mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-white mb-6">
               Transform your healthcare data into better patient outcomes
             </h2>
-            <p className="text-lg text-white/90 mb-8">
+            <p className="text-lg text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Discover how AI-powered analytics can help your organization deliver higher quality care while reducing costs and maintaining compliance.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule a Consultation

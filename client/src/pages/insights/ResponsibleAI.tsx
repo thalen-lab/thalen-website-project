@@ -27,7 +27,7 @@ export default function ResponsibleAI() {
           </p>
 
           {/* Key Takeaways */}
-          <div className="my-10 bg-white border-2 border-slate-200 rounded-lg hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all p-8">
+          <div className="my-10 bg-white border-2 border-slate-200 rounded-lg hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all p-4 sm:p-6 md:p-8">
             <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Key Takeaways</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -108,7 +108,7 @@ export default function ResponsibleAI() {
           </p>
 
           {/* Risk Assessment Framework */}
-          <div className="my-8 bg-white border-2 border-slate-200 rounded-lg hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all p-8">
+          <div className="my-8 bg-white border-2 border-slate-200 rounded-lg hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all p-4 sm:p-6 md:p-8">
             <h4 className="font-bold mb-4 text-[oklch(0.20_0.05_250)]">AI Risk Assessment Framework</h4>
             <div className="space-y-4">
               <div className="p-4 bg-green-50 rounded-r">
@@ -169,7 +169,7 @@ export default function ResponsibleAI() {
       {/* CTA Section */}
       <div className="bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container mx-auto px-4 py-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">Ready to Implement Responsible AI?</h2>
+          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold">Ready to Implement Responsible AI?</h2>
           <p className="mt-4 max-w-2xl mx-auto">Let Thalen Technologies guide your agency toward ethical, transparent, and accountable AI solutions that build public trust.</p>
           <div className="mt-8">
             <button className="bg-white text-[oklch(0.22_0.06_250)] px-6 py-3 rounded-md font-semibold flex items-center gap-2 mx-auto">

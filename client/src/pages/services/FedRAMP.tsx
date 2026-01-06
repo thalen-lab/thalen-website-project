@@ -24,13 +24,13 @@ export default function FedRAMP() {
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               Government Cloud Solutions
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
               FedRAMP & StateRAMP Implementation Services
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-4xl leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-white/90 max-w-4xl leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Expert implementation services for FedRAMP and StateRAMP-authorized platforms across federal, state, and local agencies at Moderate and High impact levels with comprehensive ATO support.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Request Consultation
               </Button>
@@ -49,7 +49,7 @@ export default function FedRAMP() {
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-center">
               Understanding the Framework
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-12">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               What are FedRAMP & StateRAMP?
             </h2>
             
@@ -94,11 +94,11 @@ export default function FedRAMP() {
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-center">
             Market Requirements
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-12">
+          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             Who Needs Authorization?
           </h2>
 
-          <div className="max-w-3xl mx-auto space-y-6 text-slate-600 leading-relaxed mb-12 text-lg">
+          <div className="max-w-3xl mx-auto space-y-6 text-slate-600 leading-relaxed mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 text-lg">
             <p>
               Any cloud service provider seeking to do business with federal, state, or local government agencies must obtain FedRAMP or StateRAMP authorization. The requirement applies to any cloud solution that processes, stores, or transmits government data.
             </p>
@@ -107,7 +107,7 @@ export default function FedRAMP() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {[
               {
                 title: "Cloud Service Providers",
@@ -134,7 +134,7 @@ export default function FedRAMP() {
                 description: "ERP, payroll, and human capital management systems for the public sector."
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white border-2 border-slate-200 rounded-lg p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+              <div key={index} className="bg-white border-2 border-slate-200 rounded-lg p-3 sm:p-4 md:p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
                 <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">{item.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </div>
@@ -146,11 +146,11 @@ export default function FedRAMP() {
       {/* Dedicated Services CTAs */}
       <section className="bg-[oklch(0.97_0.01_250)] py-16 lg:py-20">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
               Our Expertise
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Explore Our Specialized Compliance Services
             </h2>
             <p className="text-slate-600 max-w-3xl mx-auto leading-relaxed text-lg">
@@ -159,7 +159,7 @@ export default function FedRAMP() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl flex flex-col">
+            <div className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl flex flex-col">
               <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">FedRAMP</h3>
               <p className="text-slate-600 mb-4 leading-relaxed flex-grow">
                 Comprehensive FedRAMP compliance services for federal agencies. Navigate the rigorous security requirements with our expert guidance.
@@ -186,7 +186,7 @@ export default function FedRAMP() {
               </Link>
             </div>
 
-            <div className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl flex flex-col">
+            <div className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl flex flex-col">
               <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">StateRAMP/GovRAMP</h3>
               <p className="text-slate-600 mb-4 leading-relaxed flex-grow">
                 Specialized StateRAMP/GovRAMP services for state, local, and tribal governments. Achieve multi-state authorization reciprocity.
@@ -222,16 +222,16 @@ export default function FedRAMP() {
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-center">
             Security Baselines
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-12">
+          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             FedRAMP Impact Levels
           </h2>
 
-          <p className="text-slate-600 leading-relaxed mb-12 max-w-4xl mx-auto text-center text-lg">
+          <p className="text-slate-600 leading-relaxed mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-4xl mx-auto text-center text-lg">
             FedRAMP defines three impact levels based on FIPS 199 categorization, each requiring progressively more rigorous security controls. Understanding the appropriate impact level is critical for scoping your authorization effort.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white border-2 border-slate-200 rounded-lg p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+            <div className="bg-white border-2 border-slate-200 rounded-lg p-3 sm:p-4 md:p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
               <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)] mb-2">Low Impact (LI-SaaS)</h3>
               <p className="text-slate-600 mb-3">
                 For services where loss of data would have limited adverse effect. Requires 125 baseline security controls.
@@ -241,7 +241,7 @@ export default function FedRAMP() {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-slate-200 rounded-lg p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+            <div className="bg-white border-2 border-slate-200 rounded-lg p-3 sm:p-4 md:p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
               <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)] mb-2">Moderate Impact</h3>
               <p className="text-slate-600 mb-3">
                 For services where loss of data would have a serious adverse effect. Requires 325+ baseline security controls.
@@ -251,7 +251,7 @@ export default function FedRAMP() {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-slate-200 rounded-lg p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+            <div className="bg-white border-2 border-slate-200 rounded-lg p-3 sm:p-4 md:p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
               <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)] mb-2">High Impact</h3>
               <p className="text-slate-600 mb-3">
                 For services where loss of data would have a severe or catastrophic adverse effect. Requires 421+ controls.
@@ -270,11 +270,11 @@ export default function FedRAMP() {
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-center">
             Our Process
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-12">
+          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             Our Implementation Methodology
           </h2>
 
-          <p className="text-slate-600 leading-relaxed mb-12 max-w-4xl mx-auto text-center text-lg">
+          <p className="text-slate-600 leading-relaxed mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-4xl mx-auto text-center text-lg">
             Thalen Technologies employs a proven, phased approach to authorization that minimizes time-to-ATO while ensuring comprehensive security control implementation and leveraging deep expertise in federal compliance.
           </p>
 
@@ -347,7 +347,7 @@ export default function FedRAMP() {
                 ]
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+              <div key={index} className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
                 <div className="flex flex-col md:flex-row items-start gap-6">
                   <div className="flex-shrink-0">
                     <div className="bg-[oklch(0.97_0.01_250)] rounded-lg px-4 py-2">
@@ -382,11 +382,11 @@ export default function FedRAMP() {
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-center">
             Business Value
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-12">
+          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             Benefits of Authorization
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {[
               {
                 title: "Market Access",
@@ -413,7 +413,7 @@ export default function FedRAMP() {
                 description: "Third-party assessment provides ongoing assurance to government customers that security controls are effective."
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white border-2 border-slate-200 rounded-lg p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+              <div key={index} className="bg-white border-2 border-slate-200 rounded-lg p-3 sm:p-4 md:p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
                 <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">{item.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </div>
@@ -428,7 +428,7 @@ export default function FedRAMP() {
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-center">
             Your Trusted Partner
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-12">
+          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             Why Choose Thalen Technologies
           </h2>
 
@@ -476,10 +476,10 @@ export default function FedRAMP() {
       {/* CTA Section */}
       <section className="bg-[oklch(0.22_0.06_250)] py-16 lg:py-20">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Achieve Authorization?
           </h2>
-          <p className="text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
+          <p className="text-white/90 max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed text-lg">
             Our team of experts is ready to guide you through every phase of the authorization process. Schedule a consultation to discuss your cloud authorization needs and develop a customized roadmap to ATO.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

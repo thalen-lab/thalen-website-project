@@ -111,7 +111,7 @@ export default function StateProcurementGuide() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Federal Solutions', href: '/federal-solutions' },
@@ -127,7 +127,7 @@ export default function StateProcurementGuide() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               State & Local Procurement Guide
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Step-by-step guide to procuring Thalen Technologies IT implementation services through cooperative purchasing contracts, state master agreements, RFP processes, and grant-funded projects.
             </p>
             <Button size="lg" className="bg-orange-gradient hover:opacity-90">
@@ -141,16 +141,16 @@ export default function StateProcurementGuide() {
       {/* Procurement Paths Overview */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Streamlined Procurement Options</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Multiple procurement paths to simplify contracting and reduce acquisition time for state and local government agencies.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <Card className="border-2">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <Clock className="h-12 w-12 text-accent mb-4" />
                 <h3 className="text-2xl font-bold mb-3">Faster Procurement</h3>
                 <p className="text-muted-foreground">
@@ -159,7 +159,7 @@ export default function StateProcurementGuide() {
               </CardContent>
             </Card>
             <Card className="border-2">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <DollarSign className="h-12 w-12 text-accent mb-4" />
                 <h3 className="text-2xl font-bold mb-3">Competitive Pricing</h3>
                 <p className="text-muted-foreground">
@@ -168,7 +168,7 @@ export default function StateProcurementGuide() {
               </CardContent>
             </Card>
             <Card className="border-2">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <Shield className="h-12 w-12 text-accent mb-4" />
                 <h3 className="text-2xl font-bold mb-3">Pre-Vetted Vendor</h3>
                 <p className="text-muted-foreground">
@@ -177,7 +177,7 @@ export default function StateProcurementGuide() {
               </CardContent>
             </Card>
             <Card className="border-2">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <FileText className="h-12 w-12 text-accent mb-4" />
                 <h3 className="text-2xl font-bold mb-3">Simplified Compliance</h3>
                 <p className="text-muted-foreground">
@@ -192,12 +192,12 @@ export default function StateProcurementGuide() {
       {/* Detailed Procurement Paths */}
       <section className="py-20 bg-secondary">
         <div className="container max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12">Cooperative Purchasing Contracts</h2>
+          <h2 className="text-4xl font-bold mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">Cooperative Purchasing Contracts</h2>
           
           <div className="space-y-8">
             {procurementPaths.map((path, index) => (
               <Card key={index} className="border-2">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="flex items-start mb-6">
                     <path.icon className="h-12 w-12 text-accent mr-4 flex-shrink-0" />
                     <div className="flex-1">
@@ -255,7 +255,7 @@ export default function StateProcurementGuide() {
       {/* RFP Support */}
       <section className="py-20 bg-background">
         <div className="container max-w-5xl">
-          <div className="mb-12">
+          <div className="mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <h2 className="text-4xl font-bold mb-4">Traditional RFP Support</h2>
             <p className="text-xl text-muted-foreground">
               For county and municipal governments requiring competitive RFP processes, Thalen Technologies provides comprehensive response support with local references and transparent pricing.
@@ -265,7 +265,7 @@ export default function StateProcurementGuide() {
           <div className="grid md:grid-cols-2 gap-8">
             {rfpSupport.map((item, index) => (
               <Card key={index} className="border-2">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <CheckCircle2 className="h-10 w-10 text-foreground mb-4" />
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
@@ -275,7 +275,7 @@ export default function StateProcurementGuide() {
           </div>
 
           <Card className="border-2 mt-8">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 md:p-8">
               <h3 className="text-xl font-bold mb-4">RFP Timeline & Process</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -314,7 +314,7 @@ export default function StateProcurementGuide() {
       {/* Grant-Funded Projects */}
       <section className="py-20 bg-secondary">
         <div className="container max-w-5xl">
-          <div className="mb-12">
+          <div className="mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <h2 className="text-4xl font-bold mb-4">Grant-Funded Project Support</h2>
             <p className="text-xl text-muted-foreground">
               Thalen Technologies supports state and local agencies with federally-funded projects including ARPA, BEAD, and state-specific technology grants with compliance tracking and audit-ready documentation.
@@ -324,7 +324,7 @@ export default function StateProcurementGuide() {
           <div className="space-y-6">
             {grantFunding.map((grant, index) => (
               <Card key={index} className="border-2">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold mb-2">{grant.name}</h3>
@@ -340,7 +340,7 @@ export default function StateProcurementGuide() {
           </div>
 
           <Card className="border-2 mt-8">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 md:p-8">
               <h3 className="text-xl font-bold mb-4">Grant Compliance Capabilities</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-start">
@@ -368,7 +368,7 @@ export default function StateProcurementGuide() {
       {/* Interactive Procurement Timeline Tool */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Interactive Tool
             </div>
@@ -385,7 +385,7 @@ export default function StateProcurementGuide() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Download the Complete Procurement Guide</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Get the full state and local procurement guide with contract details, step-by-step processes, and contact information for each procurement path.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

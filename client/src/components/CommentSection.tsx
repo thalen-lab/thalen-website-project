@@ -62,17 +62,17 @@ export default function CommentSection({ articleSlug }: CommentSectionProps) {
   const getReplies = (parentId: number) => comments.filter(c => c.parentId === parentId);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-2 sm:space-y-3 md:space-y-4 sm:space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 md:space-y-6 md:space-y-8">
       {/* Comment Form */}
       <Card>
-        <CardContent className="p-6">
+        <CardContent className="p-3 sm:p-4 md:p-6">
           <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <MessageSquare className="h-6 w-6 text-accent" />
             Join the Discussion
           </h3>
           
           {user ? (
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-3 md:space-y-4">
               <div>
                 <Textarea
                   placeholder="Share your thoughts..."
@@ -121,22 +121,22 @@ export default function CommentSection({ articleSlug }: CommentSectionProps) {
       </Card>
 
       {/* Comments List */}
-      <div className="space-y-6">
+      <div className="space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 md:space-y-6">
         <h3 className="text-2xl font-bold">
           {comments.length === 0 ? 'No comments yet' : `${comments.length} ${comments.length === 1 ? 'Comment' : 'Comments'}`}
         </h3>
         
         {topLevelComments.length === 0 ? (
           <Card>
-            <CardContent className="p-8 text-center">
-              <MessageSquare className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+            <CardContent className="p-4 sm:p-6 md:p-8 text-center">
+              <MessageSquare className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-muted-foreground mx-auto mb-4" />
               <p className="text-muted-foreground">
                 Be the first to share your thoughts on this article!
               </p>
             </CardContent>
           </Card>
         ) : (
-          <div className="space-y-6">
+          <div className="space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 md:space-y-6">
             {topLevelComments.map((comment) => (
               <Comment
                 key={comment.id}

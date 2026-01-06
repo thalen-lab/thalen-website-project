@@ -70,10 +70,10 @@ export default function Manufacturing() {
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                 Manufacturing & Energy
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl">
+              <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-3xl">
                 IoT-enabled predictive maintenance and digital twin solutions that maximize uptime and operational efficiency across industrial facilities. Transform operations with Industry 4.0 technologies that deliver measurable improvements in OEE, quality, and profitability.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule Industrial Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -108,7 +108,7 @@ export default function Manufacturing() {
 
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Key Benefits</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Industrial Transformation Outcomes</h2>
               <p className="text-xl text-slate-600">
@@ -119,7 +119,7 @@ export default function Manufacturing() {
               {benefits.map((item, index) => (
                 <motion.div key={index} whileHover={{ y: -5 }}>
                   <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-8 text-center">
+                    <CardContent className="p-4 sm:p-6 md:p-8 text-center">
                       <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{item.title}</h3>
                       <p className="text-slate-600">{item.desc}</p>
                     </CardContent>
@@ -132,7 +132,7 @@ export default function Manufacturing() {
 
         <section className="py-20 bg-[oklch(0.97_0.01_250)]">
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Challenges</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Manufacturing Challenges We Solve</h2>
               <p className="text-xl text-slate-600">
@@ -143,7 +143,7 @@ export default function Manufacturing() {
               {challenges.map((challenge, index) => (
                 <motion.div key={index} whileHover={{ y: -5 }}>
                   <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-8">
+                    <CardContent className="p-4 sm:p-6 md:p-8">
                       <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{challenge.title}</h3>
                       <p className="text-slate-600 leading-relaxed">{challenge.description}</p>
                     </CardContent>
@@ -156,7 +156,7 @@ export default function Manufacturing() {
 
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Solutions</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Our Manufacturing Solutions</h2>
               <p className="text-xl text-slate-600">
@@ -167,7 +167,7 @@ export default function Manufacturing() {
               {solutions.map((solution, index) => (
                 <motion.div key={index} whileHover={{ y: -5 }}>
                   <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-8">
+                    <CardContent className="p-4 sm:p-6 md:p-8">
                       <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{solution.title}</h3>
                       <p className="text-slate-600 leading-relaxed">{solution.description}</p>
                     </CardContent>
@@ -180,7 +180,7 @@ export default function Manufacturing() {
 
         <section className="py-20 bg-[oklch(0.97_0.01_250)]">
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Manufacturing Success Story</h2>
               <p className="text-xl text-slate-600">
@@ -224,7 +224,7 @@ export default function Manufacturing() {
         <section className="py-24 bg-[oklch(0.22_0.06_250)] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Optimize Your Operations?</h2>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
+            <p className="text-xl text-white/80 max-w-2xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Schedule a complimentary industrial assessment to identify opportunities for digital transformation and operational excellence in your facilities.
             </p>
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

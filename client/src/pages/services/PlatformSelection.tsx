@@ -90,7 +90,7 @@ export default function PlatformSelection() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -99,7 +99,7 @@ export default function PlatformSelection() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 via-[#0A2540]/80 to-[#12344D]/75"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -116,10 +116,10 @@ export default function PlatformSelection() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               FedRAMP & StateRAMP Platform Selection
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               We help agencies select optimal FedRAMP and StateRAMP platforms through vendor-neutral assessment, weighted scoring, TCO analysis, and security compliance verification—ensuring you choose the right solution for your mission.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Start Platform Selection
@@ -139,7 +139,7 @@ export default function PlatformSelection() {
       {/* Selection Capabilities */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Platform Selection Expertise</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -177,7 +177,7 @@ export default function PlatformSelection() {
       {/* Platform Categories */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Landscape</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">FedRAMP & StateRAMP Authorized Platforms</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -212,16 +212,16 @@ export default function PlatformSelection() {
       {/* Selection Process */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Our Platform Selection Process</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               A structured 6-step process ensures you select the right platform for your mission.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-6xl mx-auto">
             {selectionProcess.map((item, index) => (
-              <div key={index} className="flex items-start gap-4 p-6 bg-[oklch(0.97_0.01_250)] rounded-lg">
+              <div key={index} className="flex items-start gap-4 p-3 sm:p-4 md:p-6 bg-[oklch(0.97_0.01_250)] rounded-lg">
                 <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                 <div>
                   <div className="font-semibold mb-1 text-[oklch(0.20_0.05_250)]">{item.step}</div>
@@ -236,14 +236,14 @@ export default function PlatformSelection() {
       {/* Decision Criteria */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Evaluation Criteria</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Key Decision Factors</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We evaluate platforms using weighted scoring across 6 critical dimensions.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-6xl mx-auto">
             {decisionCriteria.map((criterion, index) => (
               <div key={index} className="flex items-start gap-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
@@ -262,10 +262,10 @@ export default function PlatformSelection() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6 text-white">Ready to Select Your Platform?</h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Our platform selection specialists can help you evaluate FedRAMP and StateRAMP platforms and choose the right solution for your mission.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule Platform Selection Consultation

@@ -273,7 +273,7 @@ export default function PackageBuilder() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -289,7 +289,7 @@ export default function PackageBuilder() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Build Your Service Package
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Select multiple services to create a custom package. Get instant pricing, timeline estimates, and bundle discounts for comprehensive transformation initiatives.
             </p>
           </div>
@@ -314,7 +314,7 @@ export default function PackageBuilder() {
                         {category.label}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="p-6">
+                    <CardContent className="p-3 sm:p-4 md:p-6">
                       <div className="space-y-4">
                         {categoryServices.map(service => {
                           const ServiceIcon = service.icon;
@@ -374,7 +374,7 @@ export default function PackageBuilder() {
                       Package Summary
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="p-6 space-y-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6 space-y-6">
                     {selectedServices.length === 0 ? (
                       <div className="text-center py-8 text-muted-foreground">
                         <Package className="h-12 w-12 mx-auto mb-3 opacity-30" />
@@ -492,7 +492,7 @@ export default function PackageBuilder() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Need Help Choosing Services?
             </h2>
-            <p className="text-xl opacity-90 mb-8">
+            <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Our federal technology experts can assess your requirements and recommend the optimal service package for your agency's transformation goals.
             </p>
             <Link href="/contact">

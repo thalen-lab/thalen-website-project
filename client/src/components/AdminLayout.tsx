@@ -61,7 +61,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         >
           <div className="flex flex-col h-full">
             {/* Logo */}
-            <div className="p-6 border-b border-navy-800">
+            <div className="p-3 sm:p-4 md:p-6 border-b border-navy-800">
               <h1 className="text-2xl font-bold">Thalen Technologies, Inc</h1>
               <p className="text-sm text-gray-400 mt-1">Admin Panel</p>
             </div>
@@ -121,7 +121,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         )}
 
         {/* Main content */}
-        <main className="flex-1 p-6 lg:p-8">
+        <main className="flex-1 p-3 sm:p-4 md:p-6 lg:p-8">
           <div className="max-w-7xl mx-auto">{children}</div>
         </main>
       </div>

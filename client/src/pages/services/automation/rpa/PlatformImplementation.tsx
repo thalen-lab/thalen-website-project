@@ -160,7 +160,7 @@ export default function PlatformImplementation() {
       <Navigation />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -171,7 +171,7 @@ export default function PlatformImplementation() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Services', href: '/consulting-services' },
@@ -189,13 +189,13 @@ export default function PlatformImplementation() {
             className="max-w-4xl"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Vendor-Neutral RPA Consulting</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               RPA Platform Selection & Implementation
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               We help government agencies (federal, state, and local) select and implement the RIGHT FedRAMP and StateRAMP-authorized RPA platform for their mission requirements. Vendor-neutral consulting ensures you get the best fit—not just the platform we happen to sell.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Request Platform Consultation
@@ -213,17 +213,17 @@ export default function PlatformImplementation() {
       </section>
 
       {/* FedRAMP RPA Platforms */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Options</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               FedRAMP-Authorized RPA Platforms
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -241,7 +241,7 @@ export default function PlatformImplementation() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <div className="flex items-start justify-between mb-4">
                       <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{platform.name}</h3>
                       <span className="inline-block bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-3 py-1 rounded-full text-xs font-semibold">
@@ -272,17 +272,17 @@ export default function PlatformImplementation() {
       </section>
 
       {/* Selection Criteria */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Selection Methodology</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Our Platform Selection Methodology
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -298,7 +298,7 @@ export default function PlatformImplementation() {
             className="max-w-4xl mx-auto"
           >
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <div className="space-y-4">
                   {selectionCriteria.map((item, index) => (
                     <div key={index} className="flex items-start gap-4 pb-4 border-b border-slate-200 last:border-b-0 last:pb-0">
@@ -319,17 +319,17 @@ export default function PlatformImplementation() {
       </section>
 
       {/* Implementation Phases */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Implementation Process</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Our 4-Phase Implementation Approach
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -347,7 +347,7 @@ export default function PlatformImplementation() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="bg-[oklch(0.65_0.18_55)] text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">
                         {index + 1}
@@ -375,22 +375,22 @@ export default function PlatformImplementation() {
       </section>
 
       {/* Deliverables */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">What You Receive</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Implementation Deliverables
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-6xl mx-auto">
             {deliverables.map((deliverable, index) => (
               <motion.div
                 key={index}
@@ -400,7 +400,7 @@ export default function PlatformImplementation() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-3">{deliverable.title}</h3>
                     <p className="text-sm text-slate-600">{deliverable.description}</p>
                   </CardContent>
@@ -412,17 +412,17 @@ export default function PlatformImplementation() {
       </section>
 
       {/* Government Experience */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Experience</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Our Team's Government Experience
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -430,7 +430,7 @@ export default function PlatformImplementation() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-6xl mx-auto">
             {governmentExperience.map((exp, index) => (
               <motion.div
                 key={index}
@@ -440,7 +440,7 @@ export default function PlatformImplementation() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <div className="mb-4">
                       <span className="inline-block px-3 py-1 bg-[oklch(0.65_0.18_55)] text-white text-xs font-semibold rounded-full mb-2">
                         {exp.agency}
@@ -466,7 +466,7 @@ export default function PlatformImplementation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -474,13 +474,13 @@ export default function PlatformImplementation() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               Ready to Select the Right RPA Platform?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Schedule a consultation to discuss your agency's requirements and learn how our vendor-neutral approach ensures you get the best-fit platform for your mission.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Schedule Platform Consultation

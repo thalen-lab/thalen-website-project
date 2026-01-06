@@ -96,7 +96,7 @@ export default function SystemIntegration() {
         <div className="absolute inset-0 bg-[url('/img/services/system-integration/hero-system-integration.jpg')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/90 via-[#0A2540]/85 to-[#12344D]/80"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -117,10 +117,10 @@ export default function SystemIntegration() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Government Systems Integration & Interoperability
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               We integrate multiple FedRAMP and StateRAMP-authorized platforms, legacy government systems, and agency-specific applications with secure APIs and compliant data flows. Vendor-neutral consulting that breaks down data silos.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Start Integration Project
@@ -140,7 +140,7 @@ export default function SystemIntegration() {
       {/* Key Differentiators */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Why Agencies Choose Thalen Technologies for Integration</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -170,14 +170,14 @@ export default function SystemIntegration() {
       {/* Primary Services */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Services</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Core Integration Services</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               From FedRAMP platform integration to legacy system modernization
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             {primaryServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -212,7 +212,7 @@ export default function SystemIntegration() {
           </div>
 
           {/* Additional Capabilities */}
-          <div className="bg-[oklch(0.97_0.01_250)] rounded-lg p-8 border-2 border-slate-200">
+          <div className="bg-[oklch(0.97_0.01_250)] rounded-lg p-4 sm:p-6 md:p-8 border-2 border-slate-200">
             <h3 className="text-2xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Additional Integration Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {additionalCapabilities.map((capability, index) => (
@@ -232,7 +232,7 @@ export default function SystemIntegration() {
       {/* Government Experience */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Experience</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Government Integration Experience</h2>
             <p className="text-xl text-slate-600">
@@ -265,7 +265,7 @@ export default function SystemIntegration() {
       {/* FedRAMP Integrations Table */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Expertise</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">FedRAMP & StateRAMP Platform Integrations</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -299,7 +299,7 @@ export default function SystemIntegration() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Integrate Your Government Systems?</h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Let's discuss your integration challenges and build a roadmap for a more connected, efficient, and compliant government infrastructure. Our vendor-neutral experts are ready to help.
           </p>
           <Link href="/contact">

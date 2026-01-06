@@ -24,11 +24,11 @@ export default function VAHealthcare() {
               Case Study
             </p>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-tight">
               VA Medical Center Integrates 12 Legacy Systems
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed">
               How a VA medical center integrated twelve disparate healthcare systems using FedRAMP-authorized iPaaS platform, reducing administrative burden by 60% for 8,500 staff members
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function VAHealthcare() {
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Opportunity</p>
               <h2 className="text-4xl md:text-5xl font-serif font-normal text-[oklch(0.20_0.05_250)] leading-tight">
                 A VA medical center recognized that fragmented systems compromised care coordination
@@ -67,7 +67,7 @@ export default function VAHealthcare() {
       <section className="py-24 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Solution</p>
               <h2 className="text-4xl md:text-5xl font-serif font-normal text-[oklch(0.20_0.05_250)] leading-tight">
                 A FedRAMP-authorized integration platform unified systems while preserving specialized capabilities
@@ -145,13 +145,13 @@ export default function VAHealthcare() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-normal text-white mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-white mb-6">
               Transform your healthcare systems with seamless integration
             </h2>
-            <p className="text-lg text-white/90 mb-8">
+            <p className="text-lg text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Discover how FedRAMP-authorized integration platforms can help your organization unify legacy systems, reduce administrative burden, and improve care coordination while maintaining security and compliance.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule a Consultation

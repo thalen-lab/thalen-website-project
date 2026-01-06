@@ -59,7 +59,7 @@ export default function DashboardLayout({
   if (!user) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="flex flex-col items-center gap-8 p-8 max-w-md w-full">
+        <div className="flex flex-col items-center gap-8 p-4 sm:p-6 md:p-8 max-w-md w-full">
           <div className="flex flex-col items-center gap-6">
             <div className="relative group">
               <div className="relative">
@@ -171,10 +171,10 @@ function DashboardLayoutContent({
           <SidebarHeader className="h-16 justify-center">
             <div className="flex items-center gap-3 pl-2 group-data-[collapsible=icon]:px-0 transition-all w-full">
               {isCollapsed ? (
-                <div className="relative h-8 w-8 shrink-0 group">
+                <div className="relative h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 shrink-0 group">
                   <img
                     src={APP_LOGO}
-                    className="h-8 w-8 rounded-md object-cover ring-1 ring-border"
+                    className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 rounded-md object-cover ring-1 ring-border"
                     alt="Logo"
                   />
                   <button
@@ -189,7 +189,7 @@ function DashboardLayoutContent({
                   <div className="flex items-center gap-3 min-w-0">
                     <img
                       src={APP_LOGO}
-                      className="h-8 w-8 rounded-md object-cover ring-1 ring-border shrink-0"
+                      className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 rounded-md object-cover ring-1 ring-border shrink-0"
                       alt="Logo"
                     />
                     <span className="font-semibold tracking-tight truncate">
@@ -198,7 +198,7 @@ function DashboardLayoutContent({
                   </div>
                   <button
                     onClick={toggleSidebar}
-                    className="ml-auto h-8 w-8 flex items-center justify-center hover:bg-[#FF6B35]/10 hover:text-[#FF6B35] rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring shrink-0"
+                    className="ml-auto h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 flex items-center justify-center hover:bg-[#FF6B35]/10 hover:text-[#FF6B35] rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring shrink-0"
                   >
                     <PanelLeft className="h-4 w-4 text-muted-foreground" />
                   </button>

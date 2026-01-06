@@ -58,7 +58,7 @@ export default function Partnerships() {
       <section className="relative py-20 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85 text-white">
         <div className="absolute inset-0 bg-[url('/img/patterns/hero-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Contact', href: '/contact' },
@@ -77,7 +77,7 @@ export default function Partnerships() {
               Strategic Partnerships
             </motion.h1>
             <motion.p 
-              className="text-xl md:text-2xl text-white/90"
+              className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90"
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -97,7 +97,7 @@ export default function Partnerships() {
               <p className="text-slate-600 mb-6">Connect with our partnership team or fill out the form to begin.</p>
               
               <Card className="mb-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <h3 className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">Direct Contact</h3>
                   <a href="mailto:partnerships@nexdyne.com" className="text-[oklch(0.65_0.18_55)] hover:underline">
                     partnerships@nexdyne.com
@@ -106,7 +106,7 @@ export default function Partnerships() {
               </Card>
 
               <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <h3 className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">What We Cover</h3>
                   <p className="text-slate-600 mb-4">
                     Our strategic partnership services include:
@@ -140,7 +140,7 @@ export default function Partnerships() {
             {/* Quick Contact Form */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
               <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h2 className="text-2xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Quick Contact Form</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">

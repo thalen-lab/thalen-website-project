@@ -162,7 +162,7 @@ export default function GovCloudMigration() {
       <Navigation />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -173,7 +173,7 @@ export default function GovCloudMigration() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Government Solutions', href: '/federal-solutions' },
@@ -189,16 +189,16 @@ export default function GovCloudMigration() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Cloud Modernization</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Government Cloud Migration Services
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Accelerate your agency's digital transformation with secure, compliant migration to AWS GovCloud, 
               Azure Government, or Google Cloud for Government. Our proven methodology ensures minimal risk, 
               zero downtime, and maximum value from your cloud investment.
             </p>
             {/* Sector badges */}
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               {['Federal Government', 'State Government', 'Defense & Intelligence'].map((sector) => (
                 <div 
                   key={sector}
@@ -208,7 +208,7 @@ export default function GovCloudMigration() {
                 </div>
               ))}
             </div>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Schedule Cloud Assessment
@@ -226,17 +226,17 @@ export default function GovCloudMigration() {
       </section>
 
       {/* Four Pillars Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-7xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Migration Methodology</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               The Four Pillars of Cloud Migration Success
             </h2>
             <p className="text-lg text-slate-600">
@@ -245,7 +245,7 @@ export default function GovCloudMigration() {
           </motion.div>
 
           {/* Pillars Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {pillars.map((pillar, index) => (
               <motion.div
                 key={pillar.title}
@@ -256,7 +256,7 @@ export default function GovCloudMigration() {
                 className="group"
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  <CardContent className="p-8 lg:p-10">
+                  <CardContent className="p-4 sm:p-6 md:p-8 lg:p-10">
                     {/* Title */}
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-2">
@@ -305,17 +305,17 @@ export default function GovCloudMigration() {
       </section>
 
       {/* Cloud Platforms Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
         <div className="container max-w-6xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Expertise</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Government Cloud Platforms
             </h2>
             <p className="text-lg text-slate-600">
@@ -342,17 +342,17 @@ export default function GovCloudMigration() {
       </section>
 
       {/* Process Timeline Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-6xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Migration Process</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               From Assessment to Optimization
             </h2>
             <p className="text-lg text-slate-600">
@@ -373,11 +373,11 @@ export default function GovCloudMigration() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:mb-16`}
+                  className={`relative md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16`}
                 >
                   {/* Content */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                    <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
+                    <div className="bg-white rounded-xl p-3 sm:p-4 md:p-6 shadow-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
                       <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                         <span className="text-4xl font-bold text-[oklch(0.35_0.10_250)]/20">{step.number}</span>
                         <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{step.title}</h3>
@@ -414,17 +414,17 @@ export default function GovCloudMigration() {
       </section>
 
       {/* Migration Strategies Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container max-w-6xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Migration Strategies</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Tailored Approach for Every Application
             </h2>
             <p className="text-lg text-slate-600">
@@ -432,7 +432,7 @@ export default function GovCloudMigration() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {migrationStrategies.map((strategy, index) => (
               <motion.div
                 key={strategy.title}
@@ -442,7 +442,7 @@ export default function GovCloudMigration() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <div className="mb-6">
                       <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{strategy.title}</h3>
                       <p className="text-base font-semibold text-[oklch(0.65_0.18_55)]">{strategy.tagline}</p>
@@ -465,7 +465,7 @@ export default function GovCloudMigration() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
@@ -476,10 +476,10 @@ export default function GovCloudMigration() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Thalen Technologies</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
+              <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
                 Proven Cloud Migration Expertise
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              <p className="text-lg text-slate-600 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Thalen Technologies has successfully migrated thousands of applications to government cloud platforms. Our team includes cleared personnel with deep expertise in FedRAMP, FISMA, and DoD compliance requirements.
               </p>
               
@@ -509,7 +509,7 @@ export default function GovCloudMigration() {
             >
               {stats.map((stat, index) => (
                 <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-3 sm:p-4 md:p-6 text-center">
                     <div className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-1">{stat.value}</div>
                     <div className="text-sm text-slate-600">{stat.label}</div>
                   </CardContent>
@@ -521,7 +521,7 @@ export default function GovCloudMigration() {
       </section>
 
       {/* Case Study Section */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)]">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)]">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -531,13 +531,13 @@ export default function GovCloudMigration() {
             className="text-white"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider text-center">Success Story</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">{caseStudy.title}</h2>
-            <p className="text-lg text-white/90 leading-relaxed mb-8 text-center">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center">{caseStudy.title}</h2>
+            <p className="text-lg text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-center">
               {caseStudy.challenge}
             </p>
             
             <Card className="bg-white/10 border-white/20">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-xl font-bold text-white mb-6">Results Achieved</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {caseStudy.results.map((result, index) => (
@@ -554,7 +554,7 @@ export default function GovCloudMigration() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
         <div className="container text-center max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -562,12 +562,12 @@ export default function GovCloudMigration() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Ready to Modernize Your Infrastructure?</h2>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Ready to Modernize Your Infrastructure?</h2>
+            <p className="text-xl text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed">
               Start your cloud migration journey with a comprehensive assessment. Our experts will evaluate 
               your current environment, identify opportunities, and develop a customized migration roadmap.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Button asChild size="lg" className="bg-[oklch(0.65_0.18_55)] text-white hover:bg-[oklch(0.60_0.18_55)] hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Schedule Assessment

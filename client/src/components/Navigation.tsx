@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 
 
 export default function Navigation() {
@@ -9,6 +9,11 @@ export default function Navigation() {
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [learnOpen, setLearnOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  
+  // Mobile submenu states for nested navigation
+  const [mobileGovSolutionsOpen, setMobileGovSolutionsOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   
   // Refs for timeout delays to prevent menu from closing too quickly
   const solutionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -80,6 +85,18 @@ export default function Navigation() {
     };
   }, [mobileMenuOpen]);
 
+  // Reset mobile submenu states when main menu closes
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      setSolutionsOpen(false);
+      setLearnOpen(false);
+      setAboutOpen(false);
+      setMobileGovSolutionsOpen(false);
+      setMobileServicesOpen(false);
+      setMobileIndustriesOpen(false);
+    }
+  }, [mobileMenuOpen]);
+
   // Solutions dropdown - nests Government Solutions, Services, Industries
   const solutionsItems = {
     governmentSolutions: {
@@ -140,15 +157,20 @@ export default function Navigation() {
     { name: 'Careers', href: '/careers', description: 'Join our team' },
   ];
 
+  // Close mobile menu helper
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg safe-area-inset">
       <div className="container">
-        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity shrink-0">
-            <span className="text-lg sm:text-xl lg:text-2xl font-bold">
-              <span className="hidden md:inline">Thalen Technologies, Inc</span>
-              <span className="md:hidden">Thalen</span>
+            <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold">
+              <span className="hidden sm:inline">Thalen Technologies, Inc</span>
+              <span className="sm:hidden">Thalen</span>
             </span>
           </Link>
 
@@ -170,7 +192,7 @@ export default function Navigation() {
                   onMouseEnter={handleSolutionsEnter}
                   onMouseLeave={handleSolutionsLeave}
                 >
-                <div className="bg-card text-card-foreground rounded-lg shadow-xl border border-border p-6">
+                <div className="bg-card text-card-foreground rounded-lg shadow-xl border border-border p-3 sm:p-4 md:p-6">
                   <div className="grid grid-cols-3 gap-6">
                     {/* Government Solutions Column */}
                     <div>
@@ -309,79 +331,105 @@ export default function Navigation() {
             </Button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - Enhanced touch target */}
           <button
-            className="xl:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center -mr-3 touch-feedback"
+            className="xl:hidden p-2 sm:p-3 min-h-[44px] min-w-[44px] flex items-center justify-center -mr-2 sm:-mr-3 touch-feedback active:scale-95 transition-transform"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+            {mobileMenuOpen ? <X className="h-6 w-6 sm:h-7 sm:w-7" /> : <Menu className="h-6 w-6 sm:h-7 sm:w-7" />}
           </button>
         </div>
 
-        {/* Mobile Navigation - Full Screen Overlay */}
+        {/* Mobile Navigation - Full Screen Overlay with improved scrolling */}
         {mobileMenuOpen && (
-          <div className="xl:hidden fixed inset-0 top-16 sm:top-20 bg-primary z-40 overflow-y-auto overscroll-contain">
-            <div className="container py-6 pb-24 space-y-2">
-              {/* Solutions Accordion */}
+          <div className="xl:hidden fixed inset-0 top-14 sm:top-16 md:top-20 bg-primary z-40 overflow-y-auto overscroll-contain -webkit-overflow-scrolling-touch">
+            <div className="container py-4 sm:py-6 pb-24 space-y-1 sm:space-y-2">
+              {/* Solutions Accordion with nested submenus */}
               <div className="border-b border-primary-foreground/20">
                 <button 
-                  className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
+                  className="flex items-center justify-between w-full py-3 sm:py-4 min-h-[48px] sm:min-h-[52px] font-medium text-base sm:text-lg touch-feedback active:bg-primary-foreground/5 rounded-lg transition-colors"
                   onClick={() => setSolutionsOpen(!solutionsOpen)}
                 >
                   <span>Solutions</span>
                   <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${solutionsOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {solutionsOpen && (
-                  <div className="pb-4 space-y-4">
-                    {/* Government Solutions */}
-                    <div>
-                      <div className="px-4 py-2 text-sm font-semibold text-orange-signature uppercase tracking-wide">
-                        {solutionsItems.governmentSolutions.title}
-                      </div>
-                      {solutionsItems.governmentSolutions.items.map((item) => (
-                        <Link 
-                          key={item.href} 
-                          href={item.href}
-                          className="block py-3 px-6 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                  <div className="pb-3 sm:pb-4 space-y-2 sm:space-y-3">
+                    {/* Government Solutions - Collapsible */}
+                    <div className="ml-2 sm:ml-4">
+                      <button 
+                        className="flex items-center justify-between w-full py-2 sm:py-2.5 px-3 sm:px-4 min-h-[44px] text-sm font-semibold text-orange-signature uppercase tracking-wide touch-feedback active:bg-primary-foreground/5 rounded-lg"
+                        onClick={() => setMobileGovSolutionsOpen(!mobileGovSolutionsOpen)}
+                      >
+                        <span>{solutionsItems.governmentSolutions.title}</span>
+                        <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${mobileGovSolutionsOpen ? 'rotate-90' : ''}`} />
+                      </button>
+                      {mobileGovSolutionsOpen && (
+                        <div className="mt-1 space-y-0.5">
+                          {solutionsItems.governmentSolutions.items.map((item) => (
+                            <Link 
+                              key={item.href} 
+                              href={item.href}
+                              className="block py-2.5 sm:py-3 px-4 sm:px-6 min-h-[44px] text-sm sm:text-base text-primary-foreground/90 hover:text-orange-signature active:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback transition-colors"
+                              onClick={closeMobileMenu}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                    {/* Services */}
-                    <div>
-                      <div className="px-4 py-2 text-sm font-semibold text-orange-signature uppercase tracking-wide">
-                        {solutionsItems.services.title}
-                      </div>
-                      {solutionsItems.services.items.map((item) => (
-                        <Link 
-                          key={item.href} 
-                          href={item.href}
-                          className="block py-3 px-6 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                    
+                    {/* Services - Collapsible */}
+                    <div className="ml-2 sm:ml-4">
+                      <button 
+                        className="flex items-center justify-between w-full py-2 sm:py-2.5 px-3 sm:px-4 min-h-[44px] text-sm font-semibold text-orange-signature uppercase tracking-wide touch-feedback active:bg-primary-foreground/5 rounded-lg"
+                        onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                      >
+                        <span>{solutionsItems.services.title}</span>
+                        <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-90' : ''}`} />
+                      </button>
+                      {mobileServicesOpen && (
+                        <div className="mt-1 space-y-0.5">
+                          {solutionsItems.services.items.map((item) => (
+                            <Link 
+                              key={item.href} 
+                              href={item.href}
+                              className="block py-2.5 sm:py-3 px-4 sm:px-6 min-h-[44px] text-sm sm:text-base text-primary-foreground/90 hover:text-orange-signature active:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback transition-colors"
+                              onClick={closeMobileMenu}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                    {/* Industries */}
-                    <div>
-                      <div className="px-4 py-2 text-sm font-semibold text-orange-signature uppercase tracking-wide">
-                        {solutionsItems.industries.title}
-                      </div>
-                      {solutionsItems.industries.items.map((item) => (
-                        <Link 
-                          key={item.href} 
-                          href={item.href}
-                          className="block py-3 px-6 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                    
+                    {/* Industries - Collapsible */}
+                    <div className="ml-2 sm:ml-4">
+                      <button 
+                        className="flex items-center justify-between w-full py-2 sm:py-2.5 px-3 sm:px-4 min-h-[44px] text-sm font-semibold text-orange-signature uppercase tracking-wide touch-feedback active:bg-primary-foreground/5 rounded-lg"
+                        onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
+                      >
+                        <span>{solutionsItems.industries.title}</span>
+                        <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${mobileIndustriesOpen ? 'rotate-90' : ''}`} />
+                      </button>
+                      {mobileIndustriesOpen && (
+                        <div className="mt-1 space-y-0.5">
+                          {solutionsItems.industries.items.map((item) => (
+                            <Link 
+                              key={item.href} 
+                              href={item.href}
+                              className="block py-2.5 sm:py-3 px-4 sm:px-6 min-h-[44px] text-sm sm:text-base text-primary-foreground/90 hover:text-orange-signature active:bg-primary-foreground/5 rounded-lg flex items-center touch-feedback transition-colors"
+                              onClick={closeMobileMenu}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
@@ -390,23 +438,23 @@ export default function Navigation() {
               {/* Learn Accordion */}
               <div className="border-b border-primary-foreground/20">
                 <button 
-                  className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
+                  className="flex items-center justify-between w-full py-3 sm:py-4 min-h-[48px] sm:min-h-[52px] font-medium text-base sm:text-lg touch-feedback active:bg-primary-foreground/5 rounded-lg transition-colors"
                   onClick={() => setLearnOpen(!learnOpen)}
                 >
                   <span>Learn</span>
                   <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${learnOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {learnOpen && (
-                  <div className="pb-4 space-y-1">
+                  <div className="pb-3 sm:pb-4 space-y-0.5 sm:space-y-1">
                     {learnItems.map((item) => (
                       <Link 
                         key={item.href} 
                         href={item.href}
-                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg touch-feedback"
-                        onClick={() => setMobileMenuOpen(false)}
+                        className="block py-2.5 sm:py-3 px-3 sm:px-4 min-h-[44px] text-primary-foreground/90 hover:text-orange-signature active:bg-primary-foreground/5 rounded-lg touch-feedback transition-colors"
+                        onClick={closeMobileMenu}
                       >
-                        <div className="font-medium">{item.name}</div>
-                        <div className="text-sm text-primary-foreground/60">{item.description}</div>
+                        <div className="font-medium text-sm sm:text-base">{item.name}</div>
+                        <div className="text-xs sm:text-sm text-primary-foreground/60">{item.description}</div>
                       </Link>
                     ))}
                   </div>
@@ -416,23 +464,23 @@ export default function Navigation() {
               {/* About Accordion */}
               <div className="border-b border-primary-foreground/20">
                 <button 
-                  className="flex items-center justify-between w-full py-4 min-h-[52px] font-medium text-lg touch-feedback"
+                  className="flex items-center justify-between w-full py-3 sm:py-4 min-h-[48px] sm:min-h-[52px] font-medium text-base sm:text-lg touch-feedback active:bg-primary-foreground/5 rounded-lg transition-colors"
                   onClick={() => setAboutOpen(!aboutOpen)}
                 >
                   <span>About</span>
                   <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${aboutOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {aboutOpen && (
-                  <div className="pb-4 space-y-1">
+                  <div className="pb-3 sm:pb-4 space-y-0.5 sm:space-y-1">
                     {aboutItems.map((item) => (
                       <Link 
                         key={item.href} 
                         href={item.href}
-                        className="block py-3 px-4 min-h-[48px] text-base text-primary-foreground/90 hover:text-orange-signature hover:bg-primary-foreground/5 rounded-lg touch-feedback"
-                        onClick={() => setMobileMenuOpen(false)}
+                        className="block py-2.5 sm:py-3 px-3 sm:px-4 min-h-[44px] text-primary-foreground/90 hover:text-orange-signature active:bg-primary-foreground/5 rounded-lg touch-feedback transition-colors"
+                        onClick={closeMobileMenu}
                       >
-                        <div className="font-medium">{item.name}</div>
-                        <div className="text-sm text-primary-foreground/60">{item.description}</div>
+                        <div className="font-medium text-sm sm:text-base">{item.name}</div>
+                        <div className="text-xs sm:text-sm text-primary-foreground/60">{item.description}</div>
                       </Link>
                     ))}
                   </div>
@@ -442,30 +490,30 @@ export default function Navigation() {
               {/* Standalone Links */}
               <Link 
                 href="/case-studies" 
-                className="block py-4 min-h-[52px] font-medium text-lg border-b border-primary-foreground/20 flex items-center touch-feedback"
-                onClick={() => setMobileMenuOpen(false)}
+                className="block py-3 sm:py-4 min-h-[48px] sm:min-h-[52px] font-medium text-base sm:text-lg border-b border-primary-foreground/20 flex items-center touch-feedback active:bg-primary-foreground/5 rounded-lg transition-colors"
+                onClick={closeMobileMenu}
               >
                 Case Studies
               </Link>
               <Link 
                 href="/capability-statement" 
-                className="block py-4 min-h-[52px] font-medium text-lg border-b border-primary-foreground/20 flex items-center touch-feedback"
-                onClick={() => setMobileMenuOpen(false)}
+                className="block py-3 sm:py-4 min-h-[48px] sm:min-h-[52px] font-medium text-base sm:text-lg border-b border-primary-foreground/20 flex items-center touch-feedback active:bg-primary-foreground/5 rounded-lg transition-colors"
+                onClick={closeMobileMenu}
               >
                 Capability Statement
               </Link>
               <Link 
                 href="/contact" 
-                className="block py-4 min-h-[52px] font-medium text-lg border-b border-primary-foreground/20 flex items-center touch-feedback"
-                onClick={() => setMobileMenuOpen(false)}
+                className="block py-3 sm:py-4 min-h-[48px] sm:min-h-[52px] font-medium text-base sm:text-lg border-b border-primary-foreground/20 flex items-center touch-feedback active:bg-primary-foreground/5 rounded-lg transition-colors"
+                onClick={closeMobileMenu}
               >
                 Contact
               </Link>
 
               {/* CTA Button */}
-              <div className="pt-6">
-                <Button asChild className="w-full bg-orange-gradient hover:opacity-90 transition-opacity min-h-[52px] text-lg">
-                  <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+              <div className="pt-4 sm:pt-6">
+                <Button asChild className="w-full bg-orange-gradient hover:opacity-90 transition-opacity min-h-[48px] sm:min-h-[52px] text-base sm:text-lg">
+                  <Link href="/contact" onClick={closeMobileMenu}>
                     Schedule Assessment
                   </Link>
                 </Button>

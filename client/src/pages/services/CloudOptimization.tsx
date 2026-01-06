@@ -118,10 +118,10 @@ export default function CloudOptimization() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Cloud Optimization & Cost Management
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               We help agencies maximize cloud ROI across AWS GovCloud, Azure Government, and Google Cloud through intelligent resource optimization, automated cost controls, and performance tuning. Our optimization framework reduces cloud spending by 40-60% while improving application performance by 200-300%—delivering immediate financial impact and operational excellence.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 font-semibold">
                 Request Cost Optimization Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -137,7 +137,7 @@ export default function CloudOptimization() {
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Measurable Results</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Data-Driven Optimization Outcomes</h2>
             <p className="text-xl text-slate-600">
@@ -154,7 +154,7 @@ export default function CloudOptimization() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{benefit.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
                   </CardContent>
@@ -168,7 +168,7 @@ export default function CloudOptimization() {
       {/* Optimization Areas */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Services</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Comprehensive Optimization Areas</h2>
             <p className="text-xl text-slate-600">
@@ -179,7 +179,7 @@ export default function CloudOptimization() {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {optimizationAreas.map((area, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">{area.title}</h3>
                   <ul className="space-y-4">
                     {area.items.map((item, idx) => (
@@ -199,7 +199,7 @@ export default function CloudOptimization() {
       {/* Optimization Process */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">A Structured Path to Efficiency</h2>
             <p className="text-xl text-slate-600">
@@ -210,7 +210,7 @@ export default function CloudOptimization() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((phase, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 text-left">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{phase.step}</div>
                   <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{phase.title}</h3>
                   <p className="text-sm text-slate-600">{phase.description}</p>
@@ -224,7 +224,7 @@ export default function CloudOptimization() {
       {/* Tools & Technologies */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Tools & Platforms</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Enterprise-Grade Technology Stack</h2>
             <p className="text-xl text-slate-600">
@@ -246,7 +246,7 @@ export default function CloudOptimization() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Optimize Your Cloud Spend?</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Start with a comprehensive cost optimization assessment and discover how much your agency can save with Thalen's proven optimization framework.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

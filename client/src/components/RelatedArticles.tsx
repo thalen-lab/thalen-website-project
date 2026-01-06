@@ -19,12 +19,12 @@ export default function RelatedArticles({ currentArticleHref, limit = 3 }: Relat
     <section className="py-16 bg-secondary">
       <div className="container">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Related Articles</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8">Related Articles</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {relatedArticles.map((article, index) => (
               <Link key={index} href={article.href}>
                 <Card className="group hover:shadow-xl transition-all h-full cursor-pointer">
-                  <CardContent className="p-6 flex flex-col h-full">
+                  <CardContent className="p-3 sm:p-4 md:p-6 flex flex-col h-full">
                     <div className="text-sm font-semibold text-accent mb-2">{article.category}</div>
                     <h3 className="text-lg font-bold mb-3 group-hover:text-[#FF6B35] transition-colors line-clamp-2">
                       {article.title}

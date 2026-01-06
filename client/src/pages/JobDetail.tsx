@@ -168,7 +168,7 @@ export default function JobDetail() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 text-white">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-20 text-white">
         <div className="absolute inset-0 bg-[url('/img/patterns/hero-pattern.svg')] bg-center [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         
@@ -181,18 +181,18 @@ export default function JobDetail() {
                 { label: job.title }
               ]} 
               variant="light" 
-              className="mb-6 md:mb-8"
+              className="mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
             />
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
                 {job.title}
               </h1>
               
-              <div className="flex flex-wrap gap-4 text-white/90">
+              <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 text-white/90">
                 <span className="inline-flex items-center gap-2">
                   <Building2 className="w-5 h-5" />
                   {job.department}
@@ -297,7 +297,7 @@ export default function JobDetail() {
                   className="sticky top-24"
                 >
                   <Card className="border-0 shadow-lg">
-                    <CardContent className="p-6 space-y-4">
+                    <CardContent className="p-3 sm:p-4 md:p-6 space-y-4">
                       <h3 className="font-bold text-lg">Job Details</h3>
                       
                       <div className="space-y-3 text-sm">
@@ -396,7 +396,7 @@ export default function JobDetail() {
             className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto my-8"
           >
             {applicationSubmitted ? (
-              <div className="p-8 text-center">
+              <div className="p-4 sm:p-6 md:p-8 text-center">
                 <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                 <h2 className="text-2xl font-bold mb-2">Application Submitted!</h2>
                 <p className="text-gray-600 mb-6">
@@ -421,7 +421,7 @@ export default function JobDetail() {
               </div>
             ) : (
               <>
-                <div className="p-6 border-b">
+                <div className="p-3 sm:p-4 md:p-6 border-b">
                   <div className="flex items-center justify-between">
                     <div>
                       <h2 className="text-xl font-bold">Apply for {job.title}</h2>
@@ -437,7 +437,7 @@ export default function JobDetail() {
                   </div>
                 </div>
 
-                <form onSubmit={handleSubmit} className="p-6 space-y-6">
+                <form onSubmit={handleSubmit} className="p-3 sm:p-4 md:p-6 space-y-6">
                   {/* Personal Information */}
                   <div>
                     <h3 className="font-semibold mb-4">Personal Information</h3>
@@ -520,7 +520,7 @@ export default function JobDetail() {
                     <h3 className="font-semibold mb-4">Resume *</h3>
                     <div
                       onClick={() => fileInputRef.current?.click()}
-                      className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer transition-colors ${
+                      className={`border-2 border-dashed rounded-lg p-3 sm:p-4 md:p-6 text-center cursor-pointer transition-colors ${
                         resumeFile ? 'border-green-500 bg-green-50' : 'border-gray-300 hover:border-orange-500'
                       }`}
                     >

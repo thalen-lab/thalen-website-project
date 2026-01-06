@@ -24,7 +24,7 @@ export default function RealTimeAnalytics() {
       </p>
 
       {/* Key Takeaways */}
-      <div className="my-10 rounded-lg bg-[oklch(0.97_0.01_250)] p-8">
+      <div className="my-10 rounded-lg bg-[oklch(0.97_0.01_250)] p-4 sm:p-6 md:p-8">
         <h3 className="mb-4 text-2xl font-bold text-[oklch(0.20_0.05_250)]">
           Key Takeaways
         </h3>
@@ -100,19 +100,19 @@ export default function RealTimeAnalytics() {
         <h4 className="mb-6 text-center text-2xl font-bold text-[oklch(0.20_0.05_250)]">Real-Time Architecture Patterns</h4>
         <div className="grid gap-8 md:grid-cols-3">
           <Card className="transform-gpu border-2 border-slate-200 bg-white transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
-            <CardContent className="p-6">
+            <CardContent className="p-3 sm:p-4 md:p-6">
               <p className="font-semibold text-[oklch(0.20_0.05_250)]">Lambda Architecture</p>
               <p className="mt-1 text-sm text-slate-600">Parallel batch and streaming layers with serving layer merging results. Provides accuracy of batch with speed of streaming, but requires maintaining two codebases.</p>
             </CardContent>
           </Card>
           <Card className="transform-gpu border-2 border-slate-200 bg-white transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
-            <CardContent className="p-6">
+            <CardContent className="p-3 sm:p-4 md:p-6">
               <p className="font-semibold text-[oklch(0.20_0.05_250)]">Kappa Architecture</p>
               <p className="mt-1 text-sm text-slate-600">Single streaming layer handles all processing. Simpler to maintain but requires stream processing engine capable of handling all use cases including reprocessing.</p>
             </CardContent>
           </Card>
           <Card className="transform-gpu border-2 border-slate-200 bg-white transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
-            <CardContent className="p-6">
+            <CardContent className="p-3 sm:p-4 md:p-6">
               <p className="font-semibold text-[oklch(0.20_0.05_250)]">Hybrid Approaches</p>
               <p className="mt-1 text-sm text-slate-600">Pragmatic combinations using streaming for time-sensitive analytics and batch for complex historical analysis. Most real-world systems adopt hybrid approaches.</p>
             </CardContent>

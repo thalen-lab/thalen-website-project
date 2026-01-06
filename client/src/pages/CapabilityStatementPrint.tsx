@@ -60,7 +60,7 @@ export default function CapabilityStatementPrint() {
   }, []);
 
   return (
-    <div className={`min-h-screen ${isPreviewMode ? 'bg-gray-200 p-8' : 'bg-white'}`}>
+    <div className={`min-h-screen ${isPreviewMode ? 'bg-gray-200 p-4 sm:p-6 md:p-8' : 'bg-white'}`}>
       {/* Control Bar - Hidden when printing */}
       <div className="no-print fixed top-0 left-0 right-0 z-50 bg-[#0A2540] text-white shadow-lg">
         <div className="container py-3">

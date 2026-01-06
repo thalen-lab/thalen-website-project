@@ -226,14 +226,14 @@ export default function Insights() {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative py-12 sm:py-16 md:py-20 text-white">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-20 text-white">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-pattern.svg')" }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative">
-          <div className="mb-6 md:mb-8">
+          <div className="mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[{ label: 'Insights' }]} 
               variant="light" 
@@ -241,10 +241,10 @@ export default function Insights() {
           </div>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Thought Leadership</p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-white">
+            <h1 className="text-3xl sm:text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-white">
               Insights & Analysis
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/90">
+            <p className="text-lg sm:text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90">
               Expert perspectives on automation strategy, cybersecurity, digital transformation, and emerging technologies.
             </p>
           </div>
@@ -264,9 +264,9 @@ export default function Insights() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-8 md:p-12 flex flex-col justify-center">
+                <div className="p-4 sm:p-6 md:p-8 md:p-12 flex flex-col justify-center">
                   <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Featured Insight</p>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">
+                  <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">
                     Three Practical Recommendations to Secure RPA in Federal IT
                   </h2>
                   <p className="text-slate-600 mb-6">
@@ -287,7 +287,7 @@ export default function Insights() {
       <section className="py-12 md:py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           {/* Search and Filter */}
-          <div className="flex flex-col md:flex-row gap-6 md:items-center mb-8 md:mb-12">
+          <div className="flex flex-col md:flex-row gap-6 md:items-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <div className="relative flex-1">
               <input
                 type="text"
@@ -332,7 +332,7 @@ export default function Insights() {
                         <ImageWithLoader src={insight.image} alt={insight.title} className="w-full h-full object-cover" />
                       </div>
                     </Link>
-                    <div className="p-6 flex-1 flex flex-col">
+                    <div className="p-3 sm:p-4 md:p-6 flex-1 flex flex-col">
                       <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-2 uppercase tracking-wider text-xs">{insight.category}</p>
                       <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)] flex-1">
                         <Link href={insight.href} className="hover:underline">{insight.title}</Link>
@@ -411,8 +411,8 @@ export default function Insights() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-            <p className="text-lg text-white/90 mb-8">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p className="text-lg text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Get the latest insights on automation strategy, cybersecurity, and digital transformation delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
@@ -433,7 +433,7 @@ export default function Insights() {
       <section className="py-20 bg-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Contact Us</h2>
-          <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Request an assessment to discuss your agency's requirements.
           </p>
           <Button size="lg" asChild>

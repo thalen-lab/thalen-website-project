@@ -70,7 +70,7 @@ export default function FederalGovernment() {
       <Navigation />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -81,7 +81,7 @@ export default function FederalGovernment() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Industries' },
@@ -97,13 +97,13 @@ export default function FederalGovernment() {
             className="max-w-4xl"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Core Competency</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Government Agency Solutions
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Trusted partner for mission-critical automation and modernization across federal, state, and local government agencies. FedRAMP and StateRAMP authorized with Top Secret/SCI cleared teams delivering measurable results for defense, intelligence, civilian, and public sector operations.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Schedule Government Assessment
@@ -121,7 +121,7 @@ export default function FederalGovernment() {
       </section>
 
       {/* Federal Experience Stats */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
@@ -147,22 +147,22 @@ export default function FederalGovernment() {
       </section>
 
       {/* Federal Challenges */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Challenges</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal IT Challenges We Solve</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal IT Challenges We Solve</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Government agencies face unique operational, security, and budgetary challenges that require specialized expertise and proven methodologies. Thalen Technologies delivers solutions that address these complex requirements while maintaining mission continuity.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
             {challenges.map((challenge, index) => (
               <motion.div
                 key={index}
@@ -172,7 +172,7 @@ export default function FederalGovernment() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{challenge.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{challenge.description}</p>
                   </CardContent>
@@ -184,22 +184,22 @@ export default function FederalGovernment() {
       </section>
 
       {/* Solutions */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Solutions</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Our Federal Solutions</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Our Federal Solutions</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Comprehensive automation and modernization services designed specifically for federal requirements, delivered by cleared professionals with deep government experience.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
             {solutions.map((solution, index) => (
               <motion.div
                 key={index}
@@ -209,7 +209,7 @@ export default function FederalGovernment() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{solution.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{solution.description}</p>
                   </CardContent>
@@ -221,7 +221,7 @@ export default function FederalGovernment() {
       </section>
 
       {/* Security & Compliance */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <motion.div
@@ -231,7 +231,7 @@ export default function FederalGovernment() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Security & Compliance</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Government-Grade Security & Compliance</h2>
+              <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Government-Grade Security & Compliance</h2>
               <p className="text-lg text-slate-600 mb-6">
                 Thalen Technologies maintains the highest levels of federal security certifications and clearances, enabling us to support classified and mission-critical operations across the federal government. Our comprehensive compliance framework ensures that every solution meets or exceeds federal security requirements while maintaining operational efficiency.
               </p>
@@ -261,7 +261,7 @@ export default function FederalGovernment() {
                 { title: 'FISMA', desc: 'ATO Approved' }
               ].map((item, index) => (
                 <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 text-center">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <div className="font-bold text-lg text-[oklch(0.20_0.05_250)] mb-1">{item.title}</div>
                     <div className="text-sm text-slate-600">{item.desc}</div>
                   </CardContent>
@@ -273,17 +273,17 @@ export default function FederalGovernment() {
       </section>
 
       {/* Agency Experience */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Experience</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal Agency Experience</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal Agency Experience</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Experience across defense, intelligence, and civilian agencies. Our cleared teams have delivered mission-critical automation and modernization projects for agencies spanning the entire federal landscape, from Cabinet-level departments to independent agencies and state/local governments.
             </p>
@@ -298,7 +298,7 @@ export default function FederalGovernment() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 text-center">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="font-bold text-lg text-[oklch(0.20_0.05_250)] mb-2">{agency.name}</h3>
                     <p className="text-[oklch(0.65_0.18_55)] font-semibold">{agency.projects}</p>
                   </CardContent>
@@ -310,7 +310,7 @@ export default function FederalGovernment() {
       </section>
 
       {/* StateRAMP Explainer */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <motion.div
@@ -318,16 +318,16 @@ export default function FederalGovernment() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-12"
+              className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
             >
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">State & Local Compliance</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Understanding StateRAMP</h2>
+              <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Understanding StateRAMP</h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto">
                 StateRAMP (State Risk and Authorization Management Program) is the state and local government equivalent of FedRAMP, providing a standardized approach to security assessment and authorization for cloud services.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -335,7 +335,7 @@ export default function FederalGovernment() {
                 transition={{ duration: 0.6 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">What is StateRAMP?</h3>
                     <p className="text-slate-600 mb-4">
                       StateRAMP is a nonprofit organization that provides a standardized approach for state and local governments to assess and authorize cloud service providers. It was created to address the unique security and compliance needs of state and local agencies while reducing duplication of effort across jurisdictions.
@@ -364,7 +364,7 @@ export default function FederalGovernment() {
                 transition={{ duration: 0.6 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Why StateRAMP Matters</h3>
                     <p className="text-slate-600 mb-4">
                       State and local governments face similar security challenges as federal agencies but often lack the resources to conduct independent security assessments of cloud providers. StateRAMP authorization signals that a platform has been rigorously vetted for government use.
@@ -394,7 +394,7 @@ export default function FederalGovernment() {
               transition={{ duration: 0.6 }}
             >
               <Card className="bg-white border-2 border-[oklch(0.70_0.18_55)]">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">StateRAMP vs. FedRAMP: Key Differences</h3>
                   <div className="overflow-x-auto">
                     <table className="w-full">
@@ -443,7 +443,7 @@ export default function FederalGovernment() {
               </Card>
             </motion.div>
 
-            <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {[
                 { value: '20+', label: 'States Participating', desc: 'Growing number of states recognizing StateRAMP as acceptable security framework' },
                 { value: '50+', label: 'Authorized Platforms', desc: 'Cloud services that have achieved StateRAMP authorization' },
@@ -457,7 +457,7 @@ export default function FederalGovernment() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-6">
+                    <CardContent className="p-3 sm:p-4 md:p-6">
                       <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)] mb-2">{stat.value}</div>
                       <div className="text-sm text-[oklch(0.20_0.05_250)] font-semibold mb-3">{stat.label}</div>
                       <p className="text-xs text-slate-600">{stat.desc}</p>
@@ -474,7 +474,7 @@ export default function FederalGovernment() {
               transition={{ duration: 0.6 }}
             >
               <Card className="mt-12 bg-[oklch(0.97_0.01_250)] border-2 border-[oklch(0.70_0.18_55)]/30">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Thalen Technologies StateRAMP Expertise</h3>
                   <p className="text-lg text-slate-600 mb-6">
                     We help state and local agencies implement StateRAMP-authorized platforms and navigate the authorization process for custom solutions. Our team has successfully deployed StateRAMP-authorized infrastructure for DOTs, health departments, law enforcement agencies, and municipal governments across multiple states.
@@ -502,17 +502,17 @@ export default function FederalGovernment() {
       </section>
 
       {/* Case Study */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal Success Story</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal Success Story</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Real-world results from our federal automation engagements demonstrate the measurable impact of strategic automation combined with deep compliance expertise.
             </p>
@@ -545,7 +545,7 @@ export default function FederalGovernment() {
                   <div className="bg-[oklch(0.97_0.01_250)] p-12 flex items-center justify-center">
                     <div className="text-center">
                       <div className="text-7xl font-bold text-[oklch(0.65_0.18_55)] mb-2">85%</div>
-                      <div className="text-lg text-slate-600 mb-8">Automation Rate</div>
+                      <div className="text-lg text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Automation Rate</div>
                       <div className="grid grid-cols-2 gap-6 text-left">
                         <div>
                           <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)]">6 weeks</div>
@@ -574,7 +574,7 @@ export default function FederalGovernment() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -582,8 +582,8 @@ export default function FederalGovernment() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Modernize Your Agency?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Ready to Modernize Your Agency?</h2>
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
               Schedule a federal automation assessment with our cleared experts. We'll analyze your current operations, identify high-impact automation opportunities, and provide a detailed ROI projection tailored to your agency's mission objectives.
             </p>
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">

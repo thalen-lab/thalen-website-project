@@ -39,7 +39,7 @@ export default function AerospaceDigitalTwin() {
       {/* Hero */}
       <section className="relative py-24 bg-navy-gradient text-primary-foreground">
         <div className="container max-w-4xl">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Case Studies', href: '/case-studies' },
@@ -54,7 +54,7 @@ export default function AerospaceDigitalTwin() {
           <h1 className="text-5xl md:text-7xl font-bold font-serif mb-6">
             Digital Twin Platform Drives $95M Annual Savings for Major Aerospace Fleet Operations
           </h1>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+          <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
             A comprehensive digital twin platform enabled predictive maintenance, reducing unscheduled maintenance by 70% and improving operational availability.
           </p>
           <Link href="/contact">
@@ -69,7 +69,7 @@ export default function AerospaceDigitalTwin() {
       <section className="py-20">
         <div className="container max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">Section I</p>
-          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-8">The Opportunity</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">The Opportunity</h2>
           <SectionContent>
             <p>
               A leading aerospace and defense organization, managing a vast fleet of commercial aircraft, faced a critical challenge: escalating maintenance expenditures exceeding $240 million annually. The reliance on traditional, time-based maintenance schedules led to unnecessary component replacements, excessive downtime, and a high operational cost base.
@@ -88,7 +88,7 @@ export default function AerospaceDigitalTwin() {
       <section className="py-20 bg-gray-900 text-white">
         <div className="container max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">Section II</p>
-          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-8">The Solution</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">The Solution</h2>
           <SectionContent>
             <p className="text-lg leading-relaxed text-gray-300">
               To address this complex operational need, a comprehensive digital twin platform was engineered and deployed across the entire fleet of over 250 aircraft. This solution created high-fidelity virtual replicas of each asset, integrating vast streams of real-time sensor telemetry with advanced physics-based models to simulate wear and fatigue under actual operating conditions.
@@ -107,7 +107,7 @@ export default function AerospaceDigitalTwin() {
       <section className="py-20 bg-secondary">
         <div className="container max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">Section III</p>
-          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-12">The Impact</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">The Impact</h2>
           
           {/* Statistics Grid */}
           <StatGrid metrics={metrics} />
@@ -132,7 +132,7 @@ export default function AerospaceDigitalTwin() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold font-serif mb-6">Partner with Us for Predictive Maintenance Excellence</h2>
-          <p className="text-xl opacity-90 mb-8 leading-relaxed">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
             Discover how our digital twin solutions can transform your operational efficiency, reduce costs, and enhance the reliability of your most critical assets.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

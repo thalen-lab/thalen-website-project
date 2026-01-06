@@ -93,10 +93,10 @@ export default function SecurityOperationsCenter() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Security Operations Center (SOC)
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               We help government agencies (federal, state, local) implement 24/7 security operations centers using FedRAMP-authorized SIEM/SOAR platforms (Splunk Gov, LogRhythm, Palo Alto Cortex) with automated threat detection and response. Our team delivers government-grade SOC implementation with TS/SCI cleared personnel for classified environments.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Schedule SOC Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -112,7 +112,7 @@ export default function SecurityOperationsCenter() {
       {/* SOC Capabilities */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Comprehensive SOC Capabilities</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -124,7 +124,7 @@ export default function SecurityOperationsCenter() {
             {socCapabilities.map((capability, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{capability.title}</h3>
                     <p className="text-slate-600 mb-6">{capability.description}</p>
                     <ul className="space-y-2">
@@ -146,7 +146,7 @@ export default function SecurityOperationsCenter() {
       {/* SOC Tiers */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Service Structure</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Multi-Tier SOC Structure</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -158,7 +158,7 @@ export default function SecurityOperationsCenter() {
             {socServices.map((service, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <div className="flex items-center mb-4">
                       <div className="h-12 w-12 bg-[oklch(0.22_0.06_250)] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
                         {index + 1}
@@ -188,7 +188,7 @@ export default function SecurityOperationsCenter() {
       {/* SOC Tools */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Tools & Platforms</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Enterprise SOC Tools & Platforms</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -200,7 +200,7 @@ export default function SecurityOperationsCenter() {
             {socTools.map((tool, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6 text-center flex flex-col items-center justify-center">
+                  <CardContent className="p-3 sm:p-4 md:p-6 text-center flex flex-col items-center justify-center">
                     <div className="font-semibold text-sm text-[oklch(0.20_0.05_250)]">{tool}</div>
                   </CardContent>
                 </Card>
@@ -213,7 +213,7 @@ export default function SecurityOperationsCenter() {
       {/* Metrics */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Performance</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">SOC Performance Metrics</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -228,7 +228,7 @@ export default function SecurityOperationsCenter() {
               { metric: '99.9%', label: 'Threat Detection Rate' },
               { metric: '24/7', label: 'Monitoring Coverage' }
             ].map((item, index) => (
-              <div key={index} className="text-center bg-white p-6 rounded-lg border-2 border-slate-200">
+              <div key={index} className="text-center bg-white p-3 sm:p-4 md:p-6 rounded-lg border-2 border-slate-200">
                 <div className="text-5xl font-bold text-[oklch(0.65_0.18_55)] mb-2">{item.metric}</div>
                 <div className="text-sm text-slate-600">{item.label}</div>
               </div>
@@ -241,7 +241,7 @@ export default function SecurityOperationsCenter() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Protect Your Assets 24/7</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Schedule a SOC consultation and discover how Thalen Technologies can deliver continuous security monitoring and threat detection for your mission-critical government environment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -88,7 +88,7 @@ export default function Team() {
         <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?fit=crop&w=1920&q=80')"}}></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative z-10">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'About Us', href: '/about' },
@@ -107,7 +107,7 @@ export default function Team() {
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">
               Our Team
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Meet Our Automation Experts
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
@@ -150,10 +150,10 @@ export default function Team() {
             viewport={{ once: true }}
             variants={fadeInUp}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Leadership & Expertise</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Our Core Team
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -179,7 +179,7 @@ export default function Team() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-3 sm:p-4 md:p-6">
                   <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-1">{member.name}</h3>
                   <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4">{member.title}</p>
                   <p className="text-slate-600 text-sm mb-6 leading-relaxed">{member.bio}</p>
@@ -235,10 +235,10 @@ export default function Team() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               Ready to Work with Our Team?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Schedule a strategic assessment with our automation experts to discuss your transformation objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

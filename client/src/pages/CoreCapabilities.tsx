@@ -81,7 +81,7 @@ export default function CoreCapabilities() {
       <Navigation />
       
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -92,7 +92,7 @@ export default function CoreCapabilities() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Core Capabilities' }
@@ -107,10 +107,10 @@ export default function CoreCapabilities() {
             className="max-w-4xl mx-auto text-center"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Government Technology Services</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Core Capabilities
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto">
               Comprehensive technology solutions for federal, state, and local agencies. From automation to cybersecurity, we deliver mission-critical results with compliance-first architecture.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -131,7 +131,7 @@ export default function CoreCapabilities() {
       </section>
 
       {/* Differentiators Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {differentiators.map((item, index) => (
@@ -152,17 +152,17 @@ export default function CoreCapabilities() {
       </section>
 
       {/* Services Grid Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12 md:mb-16 text-center max-w-3xl mx-auto"
+            className="mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 text-center max-w-3xl mx-auto"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
               End-to-End Technology Services
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed">
@@ -170,7 +170,7 @@ export default function CoreCapabilities() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -190,7 +190,7 @@ export default function CoreCapabilities() {
                         />
                       </div>
                     )}
-                    <CardContent className="p-8">
+                    <CardContent className="p-4 sm:p-6 md:p-8">
                       <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3 group-hover:text-[oklch(0.65_0.18_55)] transition-colors">
                         {service.title}
                       </h3>
@@ -219,17 +219,17 @@ export default function CoreCapabilities() {
       </section>
 
       {/* Compliance Frameworks Section - No icons */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-24 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance Expertise</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
               Built for Government Standards
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -256,7 +256,7 @@ export default function CoreCapabilities() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -265,10 +265,10 @@ export default function CoreCapabilities() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Agency?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Let's discuss how our technology solutions can help you achieve your mission objectives while maintaining full compliance.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

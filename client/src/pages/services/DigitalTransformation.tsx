@@ -103,7 +103,7 @@ export default function DigitalTransformation() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -112,7 +112,7 @@ export default function DigitalTransformation() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Services', href: '/consulting-services' },
@@ -128,10 +128,10 @@ export default function DigitalTransformation() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Digital Transformation & Modernization
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               Thalen Technologies delivers transformation through a dual approach: first, we modernize your existing operations through process redesign, change management, and technology optimization—with FedRAMP platforms implemented only when compliance requires it or new capabilities align with mission objectives. Vendor-neutral consulting with TMF support and proven adoption strategies.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Start Modernization Assessment
@@ -151,7 +151,7 @@ export default function DigitalTransformation() {
       {/* Key Differentiators */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <div className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</div>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Why Agencies Choose Thalen Technologies for Modernization</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -176,14 +176,14 @@ export default function DigitalTransformation() {
       {/* Primary Services */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <div className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Services</div>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Core Modernization Services</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               From platform selection to change management and TMF support
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             {primaryServices.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }}>
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all group h-full flex flex-col">
@@ -211,7 +211,7 @@ export default function DigitalTransformation() {
           </div>
 
           {/* Additional Capabilities */}
-          <div className="bg-white rounded-lg p-8 border-2 border-slate-200">
+          <div className="bg-white rounded-lg p-4 sm:p-6 md:p-8 border-2 border-slate-200">
             <h3 className="text-2xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Additional Modernization Capabilities</h3>
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
               {additionalCapabilities.map((capability, index) => (
@@ -231,14 +231,14 @@ export default function DigitalTransformation() {
       {/* Government Experience */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <div className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Experience</div>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Government Modernization Experience</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Trusted by federal, state, and local agencies for mission-critical transformations
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {governmentExperience.map((exp, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }}>
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
@@ -259,7 +259,7 @@ export default function DigitalTransformation() {
       {/* Modernization Approach */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <div className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</div>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Our Modernization Approach</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -300,14 +300,14 @@ export default function DigitalTransformation() {
       {/* TMF Success Stories */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <div className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">TMF Success</div>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Technology Modernization Fund (TMF) Success</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We've helped agencies secure $45M+ in TMF awards with compelling business cases and proven implementation
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {tmfSuccessStories.map((story, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }}>
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
@@ -344,7 +344,7 @@ export default function DigitalTransformation() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Agency?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Our modernization specialists can help you assess your current state, select optimal platforms, and execute a successful transformation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

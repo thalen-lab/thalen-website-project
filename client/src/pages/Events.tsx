@@ -192,13 +192,13 @@ export default function Events() {
       
       <main>
         {/* Hero Section */}
-        <section className="relative bg-cover bg-center py-24 md:py-32 text-white"
+        <section className="relative bg-cover bg-center py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white"
           style={{ backgroundImage: "url('/images/patterns/pattern-1.png')" }}>
           <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85" />
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Learn from the Experts</p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
                 Webinars & Events
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto">
@@ -214,9 +214,9 @@ export default function Events() {
         </section>
 
         {/* Events Section */}
-        <section id="upcoming-events" className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+        <section id="upcoming-events" className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
           <div className="container">
-            <div className="flex justify-center mb-12">
+            <div className="flex justify-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               <div className="bg-white p-1.5 rounded-full shadow-md">
                 <Button
                   onClick={() => setSelectedCategory('upcoming')}
@@ -237,7 +237,7 @@ export default function Events() {
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {upcomingEvents.map((event) => (
                   <Card key={event.id} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden rounded-2xl">
-                    <CardContent className="p-8 flex flex-col flex-grow">
+                    <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col flex-grow">
                       <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-2 uppercase tracking-wider text-sm">{event.format}</p>
                       <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4 leading-snug">{event.title}</h3>
                       <div className="flex items-center text-slate-600 text-sm mb-4 space-x-4">
@@ -246,7 +246,7 @@ export default function Events() {
                         <span>{event.time}</span>
                       </div>
                       <p className="text-slate-600 mb-6 flex-grow">{event.description}</p>
-                      <div className="space-y-3 mb-8">
+                      <div className="space-y-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                         {event.topics.slice(0, 3).map((topic, i) => (
                           <div key={i} className="flex items-start gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
@@ -269,7 +269,7 @@ export default function Events() {
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {pastEvents.map((event) => (
                   <Card key={event.id} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden rounded-2xl">
-                    <CardContent className="p-8 flex flex-col flex-grow">
+                    <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col flex-grow">
                       <p className="text-slate-500 text-sm mb-2">{event.date}</p>
                       <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4 flex-grow">{event.title}</h3>
                       <div className="mt-auto pt-6 border-t border-slate-200 flex justify-between items-center">
@@ -287,9 +287,9 @@ export default function Events() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-[oklch(0.22_0.06_250)] text-white py-20 md:py-28">
+        <section className="bg-[oklch(0.22_0.06_250)] text-white py-10 sm:py-14 md:py-20 lg:py-28">
           <div className="container text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Stay Ahead of the Curve</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Stay Ahead of the Curve</h2>
             <p className="text-lg md:text-xl text-white/80 mb-10">
               Can't make a live event? Subscribe to our newsletter for on-demand recordings, presentation slides, and exclusive content delivered straight to your inbox.
             </p>
@@ -319,7 +319,7 @@ export default function Events() {
             className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl text-[oklch(0.20_0.05_250)]"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-8">
+            <div className="p-4 sm:p-6 md:p-8">
               <h2 className="text-2xl font-bold mb-2">Register for Event</h2>
               <p className="text-slate-600 mb-6">You are registering for: <span className="font-semibold">{selectedEvent.title}</span></p>
               

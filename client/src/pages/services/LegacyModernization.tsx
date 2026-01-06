@@ -125,11 +125,11 @@ export default function LegacyModernization() {
               Legacy System Modernization
             </h1>
             
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               Transform aging COBOL, mainframe, and legacy applications into modern, cloud-native systems. Reduce technical debt by 60%, improve performance, and maintain mission continuity throughout the transition.
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 <Link href="/contact">Start Modernization <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
@@ -144,7 +144,7 @@ export default function LegacyModernization() {
       {/* Key Benefits */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Key Benefits</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Why Modernize Legacy Systems?</h2>
             <p className="text-lg text-slate-600">
@@ -176,7 +176,7 @@ export default function LegacyModernization() {
       {/* Modernization Approaches */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Modernization Strategies</h2>
             <p className="text-lg text-slate-600">
@@ -188,7 +188,7 @@ export default function LegacyModernization() {
             {modernizationApproaches.map((approach, index) => (
               <motion.div 
                 key={index} 
-                className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -219,7 +219,7 @@ export default function LegacyModernization() {
       {/* Legacy Systems We Modernize */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Expertise</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Legacy Systems We Modernize</h2>
             <p className="text-lg text-slate-600">
@@ -231,7 +231,7 @@ export default function LegacyModernization() {
             {legacySystems.map((system, index) => (
               <motion.div 
                 key={index} 
-                className="bg-[oklch(0.97_0.01_250)] rounded-lg p-8"
+                className="bg-[oklch(0.97_0.01_250)] rounded-lg p-4 sm:p-6 md:p-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -265,7 +265,7 @@ export default function LegacyModernization() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your Legacy Systems?</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Schedule a free assessment to explore modernization strategies tailored to your systems, timeline, and budget.
           </p>
           <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

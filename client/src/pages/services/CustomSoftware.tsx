@@ -142,7 +142,7 @@ export default function CustomSoftware() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -151,7 +151,7 @@ export default function CustomSoftware() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative z-10">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Services', href: '/consulting-services' },
@@ -167,10 +167,10 @@ export default function CustomSoftware() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Custom Software Solutions
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Bespoke software engineered to solve your unique business challenges. From concept to deployment, we deliver SaaS platforms, mobile apps, and enterprise solutions that drive competitive advantage.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90" asChild>
                 <Link href="/contact">
                   Discuss Your Project
@@ -188,7 +188,7 @@ export default function CustomSoftware() {
       {/* Services Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Services</p>
             <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Our Custom Software Services</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -200,7 +200,7 @@ export default function CustomSoftware() {
             {services.map((service, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8 flex flex-col h-full">
+                  <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col h-full">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{service.title}</h3>
                     <p className="text-slate-600 mb-6 flex-grow">{service.description}</p>
                     <ul className="space-y-3 mb-6">
@@ -228,7 +228,7 @@ export default function CustomSoftware() {
       {/* Development Process */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Our Agile Development Process</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -258,7 +258,7 @@ export default function CustomSoftware() {
       {/* Technology Stack */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Technologies</p>
             <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Modern Technology Stack</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -286,7 +286,7 @@ export default function CustomSoftware() {
       {/* Case Studies */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Stories</p>
             <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Real Results, Real Impact</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -298,7 +298,7 @@ export default function CustomSoftware() {
             {caseStudies.map((study, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8 flex flex-col h-full">
+                  <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col h-full">
                     <p className="text-sm text-[oklch(0.65_0.18_55)] font-semibold mb-2">{study.industry}</p>
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4 flex-grow">{study.title}</h3>
                     <p className="text-slate-600 mb-6">{study.description}</p>
@@ -321,7 +321,7 @@ export default function CustomSoftware() {
       {/* Engagement Models */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Collaboration Models</p>
             <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Flexible Engagement Models</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -333,7 +333,7 @@ export default function CustomSoftware() {
             {engagementModels.map((model, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8 text-center flex flex-col h-full">
+                  <CardContent className="p-4 sm:p-6 md:p-8 text-center flex flex-col h-full">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{model.title}</h3>
                     <p className="text-slate-600 mb-6 flex-grow">{model.description}</p>
                     <div className="pt-4 border-t border-slate-200 mt-auto">
@@ -352,10 +352,10 @@ export default function CustomSoftware() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Your Custom Solution?</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Let's discuss your project requirements and create a tailored development plan.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90" asChild>
               <Link href="/contact">
                 Start Your Project

@@ -13,7 +13,7 @@ export default function CapabilityStatement() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 text-white overflow-hidden">
+      <section className="relative py-10 sm:py-12 md:py-16 lg:py-24 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/img/patterns/hero-pattern.svg')] bg-center [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         
@@ -22,7 +22,7 @@ export default function CapabilityStatement() {
             <Breadcrumb 
               items={[{ label: 'Capability Statement' }]} 
               variant="light" 
-              className="mb-6 md:mb-8"
+              className="mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
             />
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -30,10 +30,10 @@ export default function CapabilityStatement() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-3xl sm:text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
                 Capability Statement
               </h1>
-              <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
+              <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Thalen Technologies delivers mission-critical technology solutions for federal, state, and local government agencies, combining deep public sector expertise with proven methodologies that ensure security, compliance, and measurable results.
               </p>
               
@@ -79,11 +79,11 @@ export default function CapabilityStatement() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div className="w-14 h-14 rounded-full bg-[oklch(0.65_0.18_55)]/10 flex items-center justify-center">
                   <Building2 className="w-7 h-7 text-[oklch(0.65_0.18_55)]" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Company Overview</h2>
+                <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Company Overview</h2>
               </div>
               
               <div className="prose prose-lg max-w-none text-[oklch(0.35_0.03_250)]">
@@ -114,15 +114,15 @@ export default function CapabilityStatement() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div className="w-14 h-14 rounded-full bg-[oklch(0.65_0.18_55)]/10 flex items-center justify-center">
                   <Target className="w-7 h-7 text-[oklch(0.65_0.18_55)]" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Core Competencies</h2>
+                <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Core Competencies</h2>
               </div>
               
               <div className="prose prose-lg max-w-none text-[oklch(0.35_0.03_250)]">
-                <p className="text-xl leading-relaxed mb-8">
+                <p className="text-xl leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                   Our technical capabilities span the full spectrum of government technology needs, from legacy system modernization to cutting-edge artificial intelligence implementations. We have developed deep expertise in areas that are critical to government operations and have demonstrated success across hundreds of agency engagements.
                 </p>
                 
@@ -166,15 +166,15 @@ export default function CapabilityStatement() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div className="w-14 h-14 rounded-full bg-[oklch(0.65_0.18_55)]/10 flex items-center justify-center">
                   <Award className="w-7 h-7 text-[oklch(0.65_0.18_55)]" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Differentiators</h2>
+                <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Differentiators</h2>
               </div>
               
               <div className="prose prose-lg max-w-none text-[oklch(0.35_0.03_250)]">
-                <p className="text-xl leading-relaxed mb-8">
+                <p className="text-xl leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                   Several factors distinguish Thalen Technologies from other government technology providers and contribute to our consistent track record of successful engagements.
                 </p>
                 
@@ -213,15 +213,15 @@ export default function CapabilityStatement() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div className="w-14 h-14 rounded-full bg-[oklch(0.65_0.18_55)]/10 flex items-center justify-center">
                   <FileCheck className="w-7 h-7 text-[oklch(0.65_0.18_55)]" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Past Performance Highlights</h2>
+                <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Past Performance Highlights</h2>
               </div>
               
               <div className="prose prose-lg max-w-none text-[oklch(0.35_0.03_250)]">
-                <p className="text-xl leading-relaxed mb-8">
+                <p className="text-xl leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                   Our portfolio of successful engagements demonstrates our ability to deliver complex technology solutions across diverse government environments. The following examples represent the breadth and depth of our capabilities.
                 </p>
                 
@@ -260,15 +260,15 @@ export default function CapabilityStatement() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div className="w-14 h-14 rounded-full bg-[oklch(0.65_0.18_55)]/10 flex items-center justify-center">
                   <Shield className="w-7 h-7 text-[oklch(0.65_0.18_55)]" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Contract Vehicles and Certifications</h2>
+                <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Contract Vehicles and Certifications</h2>
               </div>
               
               <div className="prose prose-lg max-w-none text-[oklch(0.35_0.03_250)]">
-                <p className="text-xl leading-relaxed mb-8">
+                <p className="text-xl leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                   We maintain active contract vehicles and certifications that facilitate streamlined procurement and demonstrate our commitment to quality and security.
                 </p>
                 
@@ -302,11 +302,11 @@ export default function CapabilityStatement() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div className="w-14 h-14 rounded-full bg-[oklch(0.65_0.18_55)]/10 flex items-center justify-center">
                   <Users className="w-7 h-7 text-[oklch(0.65_0.18_55)]" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Company Information</h2>
+                <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Company Information</h2>
               </div>
               
               <div className="prose prose-lg max-w-none text-[oklch(0.35_0.03_250)]">
@@ -364,10 +364,10 @@ export default function CapabilityStatement() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               Download Our Complete Capability Statement
             </h2>
-            <p className="text-lg text-white/80 mb-8">
+            <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Get the full capability statement document in PDF format, including detailed past performance references, complete NAICS codes, and contact information for procurement inquiries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

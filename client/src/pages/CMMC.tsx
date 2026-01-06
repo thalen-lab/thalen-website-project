@@ -68,7 +68,7 @@ export default function CMMC() {
       <Navigation />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -79,7 +79,7 @@ export default function CMMC() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Government Solutions', href: '/federal-solutions' },
@@ -95,13 +95,13 @@ export default function CMMC() {
             className="max-w-4xl"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Defense Industrial Base Cybersecurity</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               CMMC Consulting Services
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Comprehensive CMMC consulting services for defense contractors pursuing Level 1, Level 2, and Level 3 certification. From contractual requirements analysis and technical security evaluations to supply chain management and C3PAO assessment preparation, we deliver end-to-end compliance support aligned with your DoD contract obligations.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact/government">
                   Schedule Assessment
@@ -119,7 +119,7 @@ export default function CMMC() {
       </section>
 
       {/* What is CMMC Section - Full width without image */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +129,7 @@ export default function CMMC() {
             className="text-center"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Overview</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-8">Understanding CMMC</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Understanding CMMC</h2>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -152,17 +152,17 @@ export default function CMMC() {
       </section>
 
       {/* Regulatory Updates */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Regulatory Status</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">CMMC Regulatory Status</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">CMMC Regulatory Status</h2>
           </motion.div>
           
           <div className="grid lg:grid-cols-3 gap-8">
@@ -190,7 +190,7 @@ export default function CMMC() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                <Card className="h-full p-4 sm:p-6 md:p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{item.title}</h3>
                   <p className="text-slate-600 leading-relaxed mb-4">{item.content}</p>
                   <p className="text-slate-600 leading-relaxed">{item.note}</p>
@@ -202,17 +202,17 @@ export default function CMMC() {
       </section>
 
       {/* Methodology Section - Full width without image */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-8"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Contract-First CMMC Methodology</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Contract-First CMMC Methodology</h2>
           </motion.div>
           
           <motion.div
@@ -229,7 +229,7 @@ export default function CMMC() {
               Organizations can pass C3PAO assessments and achieve perfect NIST 800-171 scores, yet still violate contract terms if CUI requirements were improperly scoped. Our upfront contract analysis ensures certification aligns with your actual compliance obligations.
             </p>
             
-            <Card className="p-6 bg-white border-2 border-slate-200 mt-8">
+            <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 mt-8">
               <h3 className="font-bold text-[oklch(0.20_0.05_250)] mb-4">This approach allows us to tailor services to provide:</h3>
               <ul className="space-y-3">
                 {['NIST 800-171 assessment services', 'CMMC Level 1 self-assessment support', 'CMMC Level 2 readiness', 'Self-assessment support', 'Accurate CMMC documentation'].map((item, idx) => (
@@ -241,7 +241,7 @@ export default function CMMC() {
               </ul>
             </Card>
 
-            <Card className="p-6 bg-white border-2 border-[oklch(0.70_0.18_55)]">
+            <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-[oklch(0.70_0.18_55)]">
               <p className="text-slate-600 leading-relaxed">
                 Upon successful awarding of a CMMC certification, we also provide ongoing support for the required annual attestation and subsequent contracting arrangements.
               </p>
@@ -251,17 +251,17 @@ export default function CMMC() {
       </section>
 
       {/* Expertise Section - Without bottom image */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Credentials</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Experience & Credentials</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Experience & Credentials</h2>
           </motion.div>
           
           <div className="grid lg:grid-cols-2 gap-8">
@@ -284,7 +284,7 @@ export default function CMMC() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                <Card className="h-full p-4 sm:p-6 md:p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{item.title}</h3>
                   <p className="text-slate-600 leading-relaxed mb-4">{item.content}</p>
                   {item.note && <p className="text-slate-600 leading-relaxed">{item.note}</p>}
@@ -306,17 +306,17 @@ export default function CMMC() {
       </section>
 
       {/* CMMC Levels Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Certification Levels</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">CMMC Maturity Levels</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">CMMC Maturity Levels</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               CMMC consists of three levels, each building upon the previous to provide progressively advanced cybersecurity protection.
             </p>
@@ -352,10 +352,10 @@ export default function CMMC() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                <Card className="p-4 sm:p-6 md:p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{level.title}</h3>
                   <p className="text-slate-600 mb-6 leading-relaxed">{level.description}</p>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 bg-[oklch(0.97_0.01_250)] p-6 rounded-lg">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 bg-[oklch(0.97_0.01_250)] p-3 sm:p-4 md:p-6 rounded-lg">
                     <div>
                       <p className="text-sm font-semibold text-[oklch(0.20_0.05_250)] mb-2">Assessment Method:</p>
                       <p className="text-sm text-slate-600">{level.assessment}</p>
@@ -379,23 +379,23 @@ export default function CMMC() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Comprehensive CMMC Services</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Comprehensive CMMC Services</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               End-to-end support from contract analysis through certification and ongoing compliance. Our services address the full spectrum of CMMC requirements across all certification levels, including technical evaluations, supply chain management, and strategic compliance planning.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -404,7 +404,7 @@ export default function CMMC() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
               >
-                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                <Card className="h-full p-4 sm:p-6 md:p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{service.title}</h3>
                     <span className="text-xs font-medium text-[oklch(0.65_0.18_55)] bg-[oklch(0.95_0.05_55)] px-3 py-1 rounded-full flex-shrink-0 ml-4">
@@ -420,17 +420,17 @@ export default function CMMC() {
       </section>
 
       {/* Security Domains Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Security Domains</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">CMMC Level 2 Security Domains</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">CMMC Level 2 Security Domains</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               CMMC Level 2 encompasses 110 practices across 17 security domains aligned with NIST SP 800-171.
             </p>
@@ -473,17 +473,17 @@ export default function CMMC() {
       </section>
 
       {/* Case Study Section - Full width without image */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Client Success Story</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)]">Client Success Story</h2>
           </motion.div>
           
           <motion.div
@@ -492,7 +492,7 @@ export default function CMMC() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+            <Card className="p-4 sm:p-6 md:p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">{caseStudy.title}</h3>
               <div className="space-y-6">
                 <div>
@@ -517,7 +517,7 @@ export default function CMMC() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -525,11 +525,11 @@ export default function CMMC() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Begin Your CMMC Certification?</h2>
-            <p className="text-xl text-white/90 mb-8">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Ready to Begin Your CMMC Certification?</h2>
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Contact us to discuss your CMMC requirements and timeline. Our team can assess your current security posture and develop an implementation roadmap aligned with your DoD contracts.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact/government">
                   Schedule Consultation

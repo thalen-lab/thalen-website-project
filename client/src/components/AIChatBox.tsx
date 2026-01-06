@@ -140,7 +140,7 @@ export function AIChatBox({
 
       // Reserve space for:
       // - padding (p-4 = 32px top+bottom)
-      // - user message: 40px (item height) + 16px (margin-top from space-y-4) = 56px
+      // - user message: 40px (item height) + 16px (margin-top from space-y-2 sm:space-y-3 md:space-y-4) = 56px
       // Note: margin-bottom is not counted because it naturally pushes the assistant message down
       const userMessageReservedHeight = 56;
       const calculatedHeight = scrollAreaHeight - 32 - userMessageReservedHeight;
@@ -224,7 +224,7 @@ export function AIChatBox({
           </div>
         ) : (
           <ScrollArea className="h-full">
-            <div className="flex flex-col space-y-4 p-4">
+            <div className="flex flex-col space-y-2 sm:space-y-3 md:space-y-4 p-4">
               {displayMessages.map((message, index) => {
                 // Apply min-height to last message only if NOT loading (when loading, the loading indicator gets it)
                 const isLastMessage = index === displayMessages.length - 1;

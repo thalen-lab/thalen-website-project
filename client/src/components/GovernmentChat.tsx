@@ -138,7 +138,7 @@ export default function GovernmentChat() {
           {/* Header */}
           <div className="bg-navy-gradient text-primary-foreground p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center">
+              <div className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-full bg-muted flex items-center justify-center">
                 <MessageCircle className="h-5 w-5 text-accent" />
               </div>
               <div>
@@ -160,7 +160,7 @@ export default function GovernmentChat() {
           {/* Pre-qualification Form */}
           {step === 'prequalification' && (
             <div className="p-4 max-h-[600px] overflow-y-auto">
-              <div className="space-y-4">
+              <div className="space-y-2 sm:space-y-3 md:space-y-4">
                 <div>
                   <h4 className="font-semibold mb-3 flex items-center">
                     <Shield className="h-4 w-4 text-accent mr-2" />
@@ -271,7 +271,7 @@ export default function GovernmentChat() {
               {/* Specialist Info */}
               <div className="p-3 border-b bg-secondary/50">
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center font-bold text-accent">
+                  <div className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-full bg-muted flex items-center justify-center font-bold text-accent">
                     {assignedSpecialist.avatar}
                   </div>
                   <div className="flex-1">
@@ -295,7 +295,7 @@ export default function GovernmentChat() {
               </div>
 
               {/* Messages */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              <div className="flex-1 overflow-y-auto p-4 space-y-2 sm:space-y-3 md:space-y-4">
                 {messages.map((message) => (
                   <div
                     key={message.id}

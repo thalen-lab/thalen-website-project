@@ -60,7 +60,7 @@ export default function MobileApps() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -79,10 +79,10 @@ export default function MobileApps() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Mobile App Development
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Native iOS, Android, and cross-platform mobile apps that delight users. From consumer apps to enterprise mobility solutions.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>
                 <Link href="/contact">
                   Discuss Your App Idea
@@ -100,7 +100,7 @@ export default function MobileApps() {
       {/* Platform Options */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Platform Options</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Choose the right approach for your app: native for performance or cross-platform for speed.
@@ -110,7 +110,7 @@ export default function MobileApps() {
           <div className="grid md:grid-cols-3 gap-8">
             {platforms.map((platform, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <platform.icon className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">{platform.title}</h3>
                   <p className="text-muted-foreground mb-6">{platform.description}</p>
@@ -132,7 +132,7 @@ export default function MobileApps() {
       {/* Key Features */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Essential Mobile Features</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Modern mobile app capabilities that users expect.
@@ -154,7 +154,7 @@ export default function MobileApps() {
       {/* Development Process */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Mobile Development Process</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From concept to App Store launch in 12-16 weeks.
@@ -200,7 +200,7 @@ export default function MobileApps() {
       {/* Case Study */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Success Story</h2>
           </div>
 
@@ -209,7 +209,7 @@ export default function MobileApps() {
               <div className="text-sm text-accent font-semibold mb-2">{caseStudy.client}</div>
               <h3 className="text-3xl font-bold mb-6">Mobile Banking App Reaches 150K+ Users</h3>
               
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div>
                   <h4 className="font-bold mb-2">Challenge</h4>
                   <p className="text-muted-foreground">{caseStudy.challenge}</p>
@@ -236,7 +236,7 @@ export default function MobileApps() {
       {/* App Types */}
       <section className="py-20">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Types of Mobile Apps We Build</h2>
           </div>
 
@@ -248,7 +248,7 @@ export default function MobileApps() {
               { title: "HealthTech Apps", examples: ["Telemedicine", "Fitness tracking", "Patient portals", "Medication reminders"] }
             ].map((type, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-xl font-bold mb-4">{type.title}</h3>
                   <ul className="space-y-2">
                     {type.examples.map((example, idx) => (
@@ -268,7 +268,7 @@ export default function MobileApps() {
       {/* Pricing */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Mobile App Pricing</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Investment varies based on complexity, features, and platform choice.
@@ -294,7 +294,7 @@ export default function MobileApps() {
               }
             ].map((tier, index) => (
               <Card key={index} className="hover:shadow-xl transition-all active:scale-95">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold mb-2">{tier.tier}</h3>
                   <div className="text-3xl font-bold text-accent mb-6">{tier.price}</div>
                   <ul className="space-y-3">
@@ -316,7 +316,7 @@ export default function MobileApps() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Your Mobile App?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Let's turn your app idea into reality with a user-centric mobile experience.
           </p>
           <Button size="lg" className="bg-orange-gradient hover:opacity-90" asChild>

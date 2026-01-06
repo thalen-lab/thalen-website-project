@@ -79,7 +79,7 @@ export default function StateROICalculator() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Federal Solutions', href: '/federal-solutions' },
@@ -95,7 +95,7 @@ export default function StateROICalculator() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               State Government ROI Calculator
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Calculate the potential return on investment for IT modernization projects at your state or local government agency. Get instant estimates for automation, cloud migration, data analytics, and systems integration.
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function StateROICalculator() {
             {/* Input Form */}
             <div>
               <Card className="border-2">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="flex items-center mb-6">
                     <Calculator className="h-8 w-8 text-accent mr-3" />
                     <h2 className="text-2xl font-bold">Agency Information</h2>
@@ -214,13 +214,13 @@ export default function StateROICalculator() {
               {results ? (
                 <div className="space-y-6">
                   <Card className="border-2 border-accent">
-                    <CardContent className="p-8">
+                    <CardContent className="p-4 sm:p-6 md:p-8">
                       <div className="flex items-center mb-6">
                         <TrendingUp className="h-8 w-8 text-accent mr-3" />
                         <h2 className="text-2xl font-bold">Projected ROI</h2>
                       </div>
 
-                      <div className="text-center mb-8">
+                      <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                         <div className="text-5xl font-bold text-accent mb-2">
                           {results.roi.toFixed(0)}%
                         </div>
@@ -273,7 +273,7 @@ export default function StateROICalculator() {
                   </Card>
 
                   <Card className="border-2">
-                    <CardContent className="p-6">
+                    <CardContent className="p-3 sm:p-4 md:p-6">
                       <h3 className="font-bold mb-3">Next Steps</h3>
                       <ul className="space-y-2 text-sm mb-4">
                         <li className="flex items-start">
@@ -317,7 +317,7 @@ export default function StateROICalculator() {
       {/* State/Local Benchmarks */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <h2 className="text-4xl font-bold mb-4">State & Local Government Benchmarks</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Industry benchmarks for IT modernization ROI across state and local government agencies.
@@ -326,28 +326,28 @@ export default function StateROICalculator() {
 
           <div className="grid md:grid-cols-4 gap-6">
             <Card className="border-2">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-3 sm:p-4 md:p-6 text-center">
                 <div className="text-3xl font-bold text-accent mb-2">40-60%</div>
                 <p className="text-sm font-semibold mb-1">Process Automation</p>
                 <p className="text-xs text-muted-foreground">Reduction in manual processing time</p>
               </CardContent>
             </Card>
             <Card className="border-2">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-3 sm:p-4 md:p-6 text-center">
                 <div className="text-3xl font-bold text-accent mb-2">25-35%</div>
                 <p className="text-sm font-semibold mb-1">Cloud Migration</p>
                 <p className="text-xs text-muted-foreground">Infrastructure cost savings</p>
               </CardContent>
             </Card>
             <Card className="border-2">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-3 sm:p-4 md:p-6 text-center">
                 <div className="text-3xl font-bold text-accent mb-2">15-20%</div>
                 <p className="text-sm font-semibold mb-1">Data Analytics</p>
                 <p className="text-xs text-muted-foreground">Operational efficiency gains</p>
               </CardContent>
             </Card>
             <Card className="border-2">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-3 sm:p-4 md:p-6 text-center">
                 <div className="text-3xl font-bold text-accent mb-2">12-18</div>
                 <p className="text-sm font-semibold mb-1">Payback Period</p>
                 <p className="text-xs text-muted-foreground">Months to full ROI</p>
@@ -361,7 +361,7 @@ export default function StateROICalculator() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Agency?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Schedule a consultation with our state/local government team to discuss your IT modernization roadmap and explore StateRAMP-authorized platforms.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

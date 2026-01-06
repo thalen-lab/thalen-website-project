@@ -103,11 +103,11 @@ export default function Comment({
   return (
     <div className={isReply ? 'ml-8 md:ml-12' : ''}>
       <Card className={isReply ? 'border-l-4 border-l-accent/30' : ''}>
-        <CardContent className="p-6">
+        <CardContent className="p-3 sm:p-4 md:p-6">
           {/* Comment Header */}
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center">
+              <div className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-full bg-muted flex items-center justify-center">
                 <span className="text-accent font-semibold">
                   {comment.userName.charAt(0).toUpperCase()}
                 </span>
@@ -199,7 +199,7 @@ export default function Comment({
 
       {/* Nested Replies */}
       {replies.length > 0 && (
-        <div className="mt-4 space-y-4">
+        <div className="mt-4 space-y-2 sm:space-y-3 md:space-y-4">
           {replies.map((reply) => (
             <Comment
               key={reply.id}

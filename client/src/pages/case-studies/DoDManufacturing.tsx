@@ -30,10 +30,10 @@ export default function DoDManufacturing() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               DoD Manufacturing Facility Achieves 99.2% Uptime with Predictive Maintenance
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Implementing FedRAMP-authorized cybersecurity platforms and IoT-powered predictive maintenance across 50 production lines, eliminating 75% of unplanned downtime while achieving CMMC Level 3 certification.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Schedule Consultation <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -84,10 +84,10 @@ export default function DoDManufacturing() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-center">The Solution</p>
-          <h2 className="text-4xl font-bold mb-12 text-[oklch(0.20_0.05_250)] text-center">Integrated Cybersecurity & Predictive Maintenance</h2>
+          <h2 className="text-4xl font-bold mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 text-[oklch(0.20_0.05_250)] text-center">Integrated Cybersecurity & Predictive Maintenance</h2>
           <div className="space-y-8">
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">FedRAMP-Authorized Cybersecurity Platform</h3>
                 <p className="text-lg text-slate-600 mb-6">
                   Thalen Technologies deployed FedRAMP-authorized cybersecurity platforms with zero-trust network architecture and continuous monitoring specifically designed for ICS/SCADA environments.
@@ -108,7 +108,7 @@ export default function DoDManufacturing() {
             </Card>
 
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">IoT-Powered Predictive Maintenance</h3>
                 <p className="text-lg text-slate-600 mb-6">
                   Deployed IoT sensors across 50 production lines with machine learning-powered predictive maintenance analytics, identifying equipment failures 72 hours before occurrence with 94% accuracy.
@@ -135,10 +135,10 @@ export default function DoDManufacturing() {
       <section className="py-20 bg-white">
         <div className="container max-w-4xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider text-center">Results & Impact</p>
-          <h2 className="text-4xl font-bold mb-12 text-[oklch(0.20_0.05_250)] text-center">Achieving Operational Excellence</h2>
+          <h2 className="text-4xl font-bold mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 text-[oklch(0.20_0.05_250)] text-center">Achieving Operational Excellence</h2>
           
           <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 md:p-8">
               <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Client Testimonial</h3>
               <blockquote className="text-lg italic text-slate-600 mb-4 border-l-4 border-[oklch(0.65_0.18_55)] pl-6">
                 "Thalen's predictive maintenance platform transformed our manufacturing operations. We went from 150+ unplanned downtime incidents per year to just 38, achieving 99.2% uptime. The 72-hour advance warning for equipment failures allows us to schedule maintenance during planned downtime, eliminating emergency repairs that disrupted production."
@@ -153,10 +153,10 @@ export default function DoDManufacturing() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">Modernize Your Manufacturing Operations</h2>
-          <p className="text-xl mb-8 text-white/90">
+          <p className="text-xl mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-white/90">
             Learn how Thalen Technologies can help your facility achieve operational excellence, implement predictive maintenance, and achieve CMMC compliance.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Schedule Consultation

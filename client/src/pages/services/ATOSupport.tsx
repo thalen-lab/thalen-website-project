@@ -120,7 +120,7 @@ export default function ATOSupport() {
       <Navigation />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -131,7 +131,7 @@ export default function ATOSupport() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Government Solutions', href: '/federal-solutions' },
@@ -147,16 +147,16 @@ export default function ATOSupport() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">ATO Support Built Into Every Implementation</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               ATO Support & Authorization
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               When federal agencies choose Thalen Technologies to implement cloud migrations, automation platforms, 
               or data systems, they get more than technical expertise—they get a contractor who navigates 
               the entire ATO process from day one, ensuring your system goes live on schedule.
             </p>
             {/* Sector badges */}
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               {['Federal Government', 'State Government', 'Defense & Intelligence'].map((sector) => (
                 <div 
                   key={sector}
@@ -166,7 +166,7 @@ export default function ATOSupport() {
                 </div>
               ))}
             </div>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Discuss Your Project
@@ -184,17 +184,17 @@ export default function ATOSupport() {
       </section>
 
       {/* Four Pillars Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-7xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our ATO Methodology</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               The Four Pillars of ATO Success
             </h2>
             <p className="text-lg text-slate-600">
@@ -203,7 +203,7 @@ export default function ATOSupport() {
           </motion.div>
 
           {/* Pillars Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {pillars.map((pillar, index) => (
               <motion.div
                 key={pillar.title}
@@ -214,7 +214,7 @@ export default function ATOSupport() {
                 className="group"
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  <CardContent className="p-8 lg:p-10">
+                  <CardContent className="p-4 sm:p-6 md:p-8 lg:p-10">
                     {/* Title */}
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-2">
@@ -263,17 +263,17 @@ export default function ATOSupport() {
       </section>
 
       {/* Compliance Frameworks Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
         <div className="container max-w-6xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Authorization Expertise</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               Frameworks We Navigate
             </h2>
             <p className="text-lg text-slate-600">
@@ -300,17 +300,17 @@ export default function ATOSupport() {
       </section>
 
       {/* Process Timeline Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-6xl">
           <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Implementation Process</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">
               ATO Support Throughout Implementation
             </h2>
             <p className="text-lg text-slate-600">
@@ -331,11 +331,11 @@ export default function ATOSupport() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:mb-16`}
+                  className={`relative md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16`}
                 >
                   {/* Content */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                    <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
+                    <div className="bg-white rounded-xl p-3 sm:p-4 md:p-6 shadow-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
                       <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                         <span className="text-4xl font-bold text-[oklch(0.35_0.10_250)]/20">{step.number}</span>
                         <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)]">{step.title}</h3>
@@ -372,7 +372,7 @@ export default function ATOSupport() {
       </section>
 
       {/* FedRAMP Advantage Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
@@ -383,10 +383,10 @@ export default function ATOSupport() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Strategy</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
+              <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">
                 Leveraging FedRAMP & StateRAMP
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              <p className="text-lg text-slate-600 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Thalen Technologies leverages FedRAMP and StateRAMP authorized platforms to accelerate ATO timelines when appropriate. Using a FedRAMP-authorized platform does not automatically grant your agency ATO—your specific implementation still requires authorization.
               </p>
               
@@ -416,7 +416,7 @@ export default function ATOSupport() {
             >
               {stats.map((stat, index) => (
                 <Card key={index} className="bg-[oklch(0.97_0.01_250)] border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-colors duration-300">
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-3 sm:p-4 md:p-6 text-center">
                     <div className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-1">{stat.value}</div>
                     <div className="text-sm text-slate-600">{stat.label}</div>
                   </CardContent>
@@ -428,7 +428,7 @@ export default function ATOSupport() {
       </section>
 
       {/* Control Inheritance Section */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)]">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)]">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -438,8 +438,8 @@ export default function ATOSupport() {
             className="text-center text-white"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Understanding Control Inheritance</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">What FedRAMP Authorization Really Means</h2>
-            <p className="text-lg text-white/90 leading-relaxed mb-8">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">What FedRAMP Authorization Really Means</h2>
+            <p className="text-lg text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               FedRAMP authorization means the cloud platform infrastructure (AWS GovCloud, Azure Government, Salesforce Government Cloud) has been pre-authorized by the vendor. This provides <strong>inherited controls</strong> that reduce the number of controls your agency must implement and document.
             </p>
             <p className="text-lg text-white/80 leading-relaxed">
@@ -450,23 +450,23 @@ export default function ATOSupport() {
       </section>
 
       {/* FAR Compliance Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Regulatory Compliance</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">FAR Compliance Integrated with ATO Process</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">FAR Compliance Integrated with ATO Process</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Federal Acquisition Regulation requirements are integrated into our ATO methodology, ensuring contract compliance throughout the security authorization lifecycle.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {[
               {
                 title: 'Security Safeguards (FAR 52.239-1)',
@@ -497,7 +497,7 @@ export default function ATOSupport() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <div className="mb-6">
                       <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{card.title}</h3>
                       <p className="text-base font-semibold text-[oklch(0.65_0.18_55)]">{card.tagline}</p>
@@ -526,7 +526,7 @@ export default function ATOSupport() {
             className="mt-12"
           >
             <Card className="bg-white border-2 border-[oklch(0.70_0.18_55)]">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6 text-center">Procurement Advantages</h3>
                 <div className="grid md:grid-cols-3 gap-8">
                   {[
@@ -547,7 +547,7 @@ export default function ATOSupport() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -555,12 +555,12 @@ export default function ATOSupport() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Implementation Expertise with ATO Built-In</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Implementation Expertise with ATO Built-In</h2>
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed">
               Partner with Thalen Technologies for implementation expertise that includes security 
               authorization from day one. Your systems go live on schedule with full ATO in place.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Discuss Your Project

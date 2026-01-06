@@ -144,7 +144,7 @@ export default function ArchitectureDiagram() {
   const [selectedLayer, setSelectedLayer] = useState<ArchitectureLayer | null>(null);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-2 sm:space-y-3 md:space-y-4 sm:space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 md:space-y-6 md:space-y-8">
       {/* Scenario Selector */}
       <div className="flex flex-col md:flex-row gap-4 justify-center">
         {scenarios.map((scenario) => (
@@ -169,14 +169,14 @@ export default function ArchitectureDiagram() {
       </div>
 
       {/* Architecture Layers */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
         {selectedScenario.layers.map((layer, index) => (
           <Card
             key={layer.id}
             className="cursor-pointer hover:shadow-xl transition-all hover:scale-105 relative"
             onClick={() => setSelectedLayer(layer)}
           >
-            <CardContent className="p-6">
+            <CardContent className="p-3 sm:p-4 md:p-6">
               {/* Layer Number */}
               <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-muted flex items-center justify-center text-sm font-bold text-accent">
                 {index + 1}

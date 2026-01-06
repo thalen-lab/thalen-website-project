@@ -165,15 +165,15 @@ export default function ProcurementTimeline() {
     return (
       <Card className="max-w-4xl mx-auto">
         <CardContent className="p-12">
-          <div className="text-center mb-8">
+          <div className="text-center mb-4 sm:mb-6 md:mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
-              <CheckCircle2 className="h-8 w-8 text-foreground" />
+              <CheckCircle2 className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-foreground" />
             </div>
             <h3 className="text-3xl font-bold mb-2">Recommended Procurement Path</h3>
             <p className="text-muted-foreground">Based on your agency profile and requirements</p>
           </div>
 
-          <div className="bg-muted border-2 border-accent rounded-lg p-8 mb-8">
+          <div className="bg-muted border-2 border-accent rounded-lg p-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h4 className="text-2xl font-bold mb-2">{recommendation.path}</h4>
@@ -185,7 +185,7 @@ export default function ProcurementTimeline() {
             <p className="text-lg mb-6">{recommendation.description}</p>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-8">
             <h4 className="text-xl font-bold mb-4">Next Steps:</h4>
             <div className="space-y-3">
               {recommendation.nextSteps.map((step, index) => (
@@ -226,7 +226,7 @@ export default function ProcurementTimeline() {
   return (
     <Card className="max-w-3xl mx-auto">
       <CardContent className="p-12">
-        <div className="mb-8">
+        <div className="mb-4 sm:mb-6 md:mb-8">
           <div className="flex justify-between text-sm text-muted-foreground mb-2">
             <span>Question {currentQuestion + 1} of {questions.length}</span>
             <span>{Math.round(progress)}% Complete</span>
@@ -239,14 +239,14 @@ export default function ProcurementTimeline() {
           </div>
         </div>
 
-        <h3 className="text-2xl font-bold mb-8">{questions[currentQuestion].question}</h3>
+        <h3 className="text-2xl font-bold mb-4 sm:mb-6 md:mb-8">{questions[currentQuestion].question}</h3>
 
         <div className="space-y-3">
           {questions[currentQuestion].options.map((option) => (
             <button
               key={option.value}
               onClick={() => handleAnswer(option.value)}
-              className="w-full text-left p-6 border-2 border-border rounded-lg hover:border-[#FF6B35] hover:bg-[#FF6B35]/5 transition-all duration-200 group"
+              className="w-full text-left p-3 sm:p-4 md:p-6 border-2 border-border rounded-lg hover:border-[#FF6B35] hover:bg-[#FF6B35]/5 transition-all duration-200 group"
             >
               <div className="flex items-center justify-between">
                 <span className="text-lg font-medium group-hover:text-[#FF6B35] transition-colors">

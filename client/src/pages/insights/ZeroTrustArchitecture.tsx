@@ -25,7 +25,7 @@ export default function ZeroTrustArchitecture() {
 
       {/* Key Takeaways */}
       <Card className="bg-amber-50 border-l-4 border-l-lime-400 my-10">
-        <CardContent className="p-8">
+        <CardContent className="p-4 sm:p-6 md:p-8">
           <h3 className="text-2xl font-bold mb-4 flex items-center">
             <CheckCircle2 className="mr-3 h-6 w-6 text-lime-600" />
             Key Takeaways
@@ -158,7 +158,7 @@ export default function ZeroTrustArchitecture() {
       </h2>
       
       <Card className="bg-slate-50 border my-8">
-        <CardContent className="p-8">
+        <CardContent className="p-4 sm:p-6 md:p-8">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h4 className="font-bold mb-2">Security Metrics</h4>

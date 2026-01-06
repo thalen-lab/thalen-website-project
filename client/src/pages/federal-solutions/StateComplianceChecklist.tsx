@@ -108,7 +108,7 @@ export default function StateComplianceChecklist() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground overflow-hidden">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Federal Solutions', href: '/federal-solutions' },
@@ -124,7 +124,7 @@ export default function StateComplianceChecklist() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               State Government Compliance Checklist
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Comprehensive compliance checklist for state and local government IT projects covering StateRAMP, CJIS, state data privacy laws, procurement requirements, and accessibility standards.
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function StateComplianceChecklist() {
       <section className="py-12 bg-secondary">
         <div className="container">
           <Card className="border-2 border-accent">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 md:p-8">
               <div className="grid md:grid-cols-3 gap-8 items-center">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-accent mb-2">{completionPercentage}%</div>
@@ -174,7 +174,7 @@ export default function StateComplianceChecklist() {
 
               return (
                 <Card key={catIndex} className="border-2">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <div className="flex items-start justify-between mb-6">
                       <div className="flex items-center">
                         <category.icon className="h-8 w-8 text-accent mr-3" />
@@ -227,7 +227,7 @@ export default function StateComplianceChecklist() {
       <section className="py-20 bg-secondary">
         <div className="container max-w-5xl">
           <Card className="border-2">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 md:p-8">
               <div className="flex items-center mb-6">
                 <AlertCircle className="h-8 w-8 text-accent mr-3" />
                 <h2 className="text-2xl font-bold">Compliance Recommendations</h2>
@@ -297,7 +297,7 @@ export default function StateComplianceChecklist() {
         <div className="container max-w-5xl">
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-2">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <Download className="h-12 w-12 text-accent mb-4" />
                 <h3 className="text-xl font-bold mb-3">Download Checklist</h3>
                 <p className="text-muted-foreground mb-6">
@@ -311,7 +311,7 @@ export default function StateComplianceChecklist() {
             </Card>
 
             <Card className="border-2">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <Shield className="h-12 w-12 text-accent mb-4" />
                 <h3 className="text-xl font-bold mb-3">Get Expert Help</h3>
                 <p className="text-muted-foreground mb-6">
@@ -333,7 +333,7 @@ export default function StateComplianceChecklist() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Need Help with State Compliance?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Our team has deep expertise with StateRAMP, CJIS, and state-specific compliance requirements. Schedule a consultation to discuss your compliance roadmap.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

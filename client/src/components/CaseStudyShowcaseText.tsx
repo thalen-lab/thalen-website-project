@@ -44,7 +44,7 @@ const caseStudies: CaseStudy[] = [
 
 export default function CaseStudyShowcaseText() {
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
+    <section className="relative py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-[#0A2540] overflow-hidden">
       {/* Subtle gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0A2540] to-[#12344D]"></div>
       {/* Grid pattern overlay */}
@@ -53,28 +53,28 @@ export default function CaseStudyShowcaseText() {
       <div className="container relative z-10">
         {/* Header */}
         <motion.div 
-          className="grid lg:grid-cols-2 gap-8 mb-10 md:mb-12 lg:mb-16"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 lg:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 xl:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
           <div>
-            <div className="inline-flex items-center gap-2 mb-3">
-              <div className="w-10 h-[2px] bg-[#E07020]"></div>
-              <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Case Studies</span>
+            <div className="inline-flex items-center gap-2 mb-2 sm:mb-3">
+              <div className="w-8 sm:w-10 h-[2px] bg-[#E07020]"></div>
+              <span className="text-[#E07020] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Case Studies</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
               Proven Government Results
             </h2>
           </div>
           <div className="flex flex-col justify-end">
-            <p className="text-base lg:text-lg text-white/80 leading-relaxed mb-4">
+            <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed mb-3 sm:mb-4">
               Real-world case studies demonstrating measurable mission impact. FedRAMP serves federal agencies; StateRAMP/GovRAMP serves state, local, and tribal governments.
             </p>
             <Link 
               href="/case-studies"
-              className="inline-flex items-center text-[#E07020] hover:text-[#F08030] font-medium text-sm transition-colors self-start"
+              className="inline-flex items-center text-[#E07020] hover:text-[#F08030] font-medium text-xs sm:text-sm transition-colors self-start min-h-[44px]"
             >
               View All
               <ArrowRight className="w-4 h-4 ml-1.5" />
@@ -95,7 +95,7 @@ export default function CaseStudyShowcaseText() {
               },
             },
           }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 mb-10 md:mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 lg:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
         >
           {caseStudies.map((study) => (
             <motion.div
@@ -126,33 +126,33 @@ export default function CaseStudyShowcaseText() {
 // Simple Card Component - Aqua-inspired design (no icons, clean layout)
 function SimpleCaseStudyCard({ study }: { study: CaseStudy }) {
   return (
-    <div className="h-full bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg p-6 md:p-8 flex flex-col hover:bg-white/15 transition-all duration-300 group">
+    <div className="h-full bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg p-4 sm:p-5 md:p-6 lg:p-8 flex flex-col hover:bg-white/15 transition-all duration-300 group">
       {/* Large Metric */}
-      <div className="mb-3">
-        <span className="text-4xl md:text-5xl font-bold text-white">
+      <div className="mb-2 sm:mb-3">
+        <span className="text-3xl xs:text-4xl sm:text-4xl md:text-5xl font-bold text-white">
           {study.metric}
         </span>
       </div>
       
       {/* Metric Label */}
-      <p className="text-[#E07020] font-semibold text-sm uppercase tracking-wider mb-4">
+      <p className="text-[#E07020] font-semibold text-[10px] xs:text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">
         {study.metricLabel}
       </p>
       
       {/* Title */}
-      <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">
+      <h3 className="text-base xs:text-lg sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 leading-tight line-clamp-2">
         {study.title}
       </h3>
       
       {/* Description */}
-      <p className="text-white/70 text-sm md:text-base mb-6 flex-grow line-clamp-3">
+      <p className="text-white/70 text-xs sm:text-sm md:text-base mb-4 sm:mb-6 flex-grow line-clamp-3 sm:line-clamp-4">
         {study.description}
       </p>
       
       {/* Link */}
       <Link 
         href={study.link}
-        className="inline-flex items-center text-[#E07020] hover:text-[#F08030] font-medium text-sm group/link transition-colors"
+        className="inline-flex items-center text-[#E07020] hover:text-[#F08030] font-medium text-xs sm:text-sm group/link transition-colors min-h-[44px]"
       >
         {study.linkText}
         <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />

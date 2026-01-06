@@ -21,7 +21,7 @@ export default function CountyHealth() {
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Case Studies', href: '/case-studies' },
@@ -37,10 +37,10 @@ export default function CountyHealth() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               County Health Department Achieves 78% Faster Disease Surveillance
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Implementing real-time public health analytics platform serving 1.2M residents, reducing outbreak detection time from 14 days to 3 days with HIPAA-compliant infrastructure.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 View Live Platform
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -98,7 +98,7 @@ export default function CountyHealth() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Challenge</p>
-          <h2 className="text-4xl font-bold mb-8 text-[oklch(0.20_0.05_250)]">Manual Processes & Disconnected Data</h2>
+          <h2 className="text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">Manual Processes & Disconnected Data</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
@@ -119,7 +119,7 @@ export default function CountyHealth() {
               }
             ].map((challenge, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{challenge.title}</h3>
                   <p className="text-slate-600">{challenge.description}</p>
                 </CardContent>
@@ -133,10 +133,10 @@ export default function CountyHealth() {
       <section className="py-20 bg-white">
         <div className="container max-w-4xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Solution</p>
-          <h2 className="text-4xl font-bold mb-8 text-[oklch(0.20_0.05_250)]">Real-Time Public Health Platform</h2>
+          <h2 className="text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">Real-Time Public Health Platform</h2>
           <div className="space-y-8">
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Real-Time Public Health Surveillance Platform</h3>
                 <p className="text-lg text-slate-600 mb-6">
                   Thalen Technologies designed and implemented a HIPAA-compliant real-time surveillance platform that automatically ingests disease reports from 120+ healthcare providers, labs, and pharmacies, enabling outbreak detection within 3 days instead of 14.
@@ -159,7 +159,7 @@ export default function CountyHealth() {
             </Card>
 
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">HIPAA & CJIS Compliance</h3>
                 <p className="text-lg text-slate-600 mb-6">
                   Ensured full compliance with HIPAA for protected health information (PHI) and CJIS for law enforcement integration.
@@ -188,9 +188,9 @@ export default function CountyHealth() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Results</p>
-          <h2 className="text-4xl font-bold mb-8 text-[oklch(0.20_0.05_250)]">78% Faster Detection, 92% Less Manual Work</h2>
+          <h2 className="text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">78% Faster Detection, 92% Less Manual Work</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg border-2 border-slate-200">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-lg border-2 border-slate-200">
               <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Public Health Impact</h3>
               <ul className="space-y-3 text-slate-600">
                 {[
@@ -206,7 +206,7 @@ export default function CountyHealth() {
                 ))}
               </ul>
             </div>
-            <div className="bg-white p-8 rounded-lg border-2 border-slate-200">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-lg border-2 border-slate-200">
               <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Operational Efficiency</h3>
               <ul className="space-y-3 text-slate-600">
                 {[
@@ -230,7 +230,7 @@ export default function CountyHealth() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">Modernize Your Public Health Infrastructure</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Thalen Technologies provides secure, scalable, and compliant technology solutions for government agencies. See how we can help you protect your community and improve public health outcomes.
           </p>
           <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

@@ -370,6 +370,127 @@ html {
 }
 
 
+/* ===== EXTRA SMALL BREAKPOINT (xs: 475px) ===== */
+
+/* Custom xs breakpoint utilities for screens >= 475px */
+@media (min-width: 475px) {
+  /* xs grid utilities */
+  .xs\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .xs\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* xs flex utilities */
+  .xs\:flex-row {
+    flex-direction: row;
+  }
+  
+  .xs\:flex-col {
+    flex-direction: column;
+  }
+  
+  /* xs display utilities */
+  .xs\:inline {
+    display: inline;
+  }
+  
+  .xs\:hidden {
+    display: none;
+  }
+  
+  .xs\:block {
+    display: block;
+  }
+  
+  /* xs spacing utilities */
+  .xs\:gap-4 {
+    gap: 1rem;
+  }
+  
+  .xs\:gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .xs\:p-4 {
+    padding: 1rem;
+  }
+  
+  .xs\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .xs\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  /* xs text utilities */
+  .xs\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .xs\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  .xs\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  .xs\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  
+  /* xs width utilities */
+  .xs\:w-auto {
+    width: auto;
+  }
+  
+  .xs\:w-full {
+    width: 100%;
+  }
+  
+  /* xs height utilities */
+  .xs\:h-auto {
+    height: auto;
+  }
+  
+  /* xs col-span utilities */
+  .xs\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+  
+  .xs\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  
+  /* xs justify/align utilities */
+  .xs\:justify-start {
+    justify-content: flex-start;
+  }
+  
+  .xs\:justify-center {
+    justify-content: center;
+  }
+  
+  .xs\:items-center {
+    align-items: center;
+  }
+  
+  /* xs bottom positioning */
+  .xs\:bottom-28 {
+    bottom: 7rem;
+  }
+}
+
 /* ===== MOBILE & TABLET RESPONSIVE UTILITIES ===== */
 
 /* Horizontal scroll container for filter buttons on mobile */

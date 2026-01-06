@@ -19,7 +19,7 @@ export default function ChangeManagement() {
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Insights', href: '/insights' },
@@ -65,7 +65,7 @@ export default function ChangeManagement() {
 
         {/* Key Takeaways */}
         <motion.div
-          className="my-12 bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+          className="my-12 bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
@@ -151,7 +151,7 @@ export default function ChangeManagement() {
       <div className="bg-[oklch(0.97_0.01_250)] py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+            className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
             variants={fadeIn}
             initial="hidden"
             whileInView="visible"
@@ -266,7 +266,7 @@ export default function ChangeManagement() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
           <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Making Change Stick</h2>
-            <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-white/90 max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Successful digital transformation requires equal attention to technology and people. Organizations that invest in change management alongside technology implementation dramatically improve their odds of success. Contact our team to discuss how we can support your transformation journey.
             </p>
             <a

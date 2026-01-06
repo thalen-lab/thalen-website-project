@@ -24,7 +24,7 @@ export default function FederalAutomation() {
               { label: "Federal Agency Automation" },
             ]}
             variant="dark"
-            className="mb-8"
+            className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
           />
 
           <motion.div
@@ -39,7 +39,7 @@ export default function FederalAutomation() {
             <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">
               Federal Agency Achieves 85% Process Automation
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl">
               How a federal agency implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance.
             </p>
           </motion.div>
@@ -49,7 +49,7 @@ export default function FederalAutomation() {
       {/* The Opportunity Section */}
       <section className="py-24 bg-white">
         <div className="container max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Opportunity</p>
             <h2 className="text-4xl md:text-5xl font-serif text-[oklch(0.20_0.05_250)]">
               A federal agency recognized that manual processes were limiting mission effectiveness
@@ -73,7 +73,7 @@ export default function FederalAutomation() {
       {/* The Solution Section */}
       <section className="py-24 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Solution</p>
             <h2 className="text-4xl md:text-5xl font-serif text-[oklch(0.20_0.05_250)]">
               A FedRAMP-authorized RPA platform automated workflows while maintaining security controls
@@ -97,7 +97,7 @@ export default function FederalAutomation() {
       {/* The Impact Section */}
       <section className="py-24 bg-white">
         <div className="container max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Impact</p>
             <h2 className="text-4xl md:text-5xl font-serif text-[oklch(0.20_0.05_250)]">
               Automation delivered transformative results across efficiency, cost, and mission focus
@@ -144,10 +144,10 @@ export default function FederalAutomation() {
           <h2 className="text-4xl font-serif mb-6">
             Transform your agency with intelligent automation
           </h2>
-          <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Discover how FedRAMP-authorized RPA can help your agency automate workflows, reduce costs, and free staff for higher-value work while maintaining security controls.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
               <Link href="/contact">
                 Schedule a Consultation

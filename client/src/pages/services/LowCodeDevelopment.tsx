@@ -115,11 +115,11 @@ export default function LowCodeDevelopment() {
                 Low-Code/Rapid Application Development
               </h1>
               
-              <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
                 Accelerate digital transformation with visual development platforms. Deploy FedRAMP-compliant applications in weeks, not years. Perfect for forms, workflows, dashboards, and simple case management systems.
               </p>
               
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                 <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   <Link href="/contact">Start Your Project <ArrowRight className="w-4 h-4 ml-2" /></Link>
                 </Button>
@@ -134,7 +134,7 @@ export default function LowCodeDevelopment() {
         {/* Key Benefits */}
         <section className="py-20 bg-white">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Advantages</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Why Choose Low-Code Development?</h2>
               <p className="text-xl text-slate-600">
@@ -168,7 +168,7 @@ export default function LowCodeDevelopment() {
         {/* Use Cases */}
         <section className="py-20 bg-[oklch(0.97_0.01_250)]">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Common Applications</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Ideal Use Cases for Low-Code</h2>
               <p className="text-xl text-slate-600">
@@ -176,11 +176,11 @@ export default function LowCodeDevelopment() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
               {useCases.map((useCase, index) => (
                 <motion.div 
                   key={index} 
-                  className="bg-white border-2 border-slate-200 rounded-lg p-6 text-center transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                  className="bg-white border-2 border-slate-200 rounded-lg p-3 sm:p-4 md:p-6 text-center transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -197,7 +197,7 @@ export default function LowCodeDevelopment() {
         {/* Low-Code Platforms */}
         <section className="py-20 bg-white">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Technology Partners</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Enterprise Low-Code Platforms</h2>
               <p className="text-xl text-slate-600">
@@ -209,7 +209,7 @@ export default function LowCodeDevelopment() {
               {platforms.map((platform, index) => (
                 <motion.div 
                   key={index} 
-                  className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                  className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -234,7 +234,7 @@ export default function LowCodeDevelopment() {
         {/* When to Choose Low-Code vs Custom */}
         <section className="py-20 bg-[oklch(0.97_0.01_250)]">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Decision Guide</p>
               <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Low-Code vs. Custom Development</h2>
               <p className="text-xl text-slate-600">
@@ -243,7 +243,7 @@ export default function LowCodeDevelopment() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <div className="bg-white border-2 border-slate-200 rounded-lg p-8">
+              <div className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Choose Low-Code When:</h3>
                 <ul className="space-y-3">
                   {[ "Speed to market is critical (weeks vs. months)", "Requirements are straightforward (forms, workflows, dashboards)", "Budget is limited or cost savings are important", "Non-technical users need to make updates", "Platform integration is a priority (Microsoft 365, Salesforce)" ].map((item, i) => (
@@ -254,7 +254,7 @@ export default function LowCodeDevelopment() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-white border-2 border-slate-200 rounded-lg p-8">
+              <div className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Choose Custom Dev When:</h3>
                 <ul className="space-y-3">
                   {[ "Unique, complex business logic is required", "High performance and scalability are critical", "Specific UI/UX or branding is non-negotiable", "Full control over the technology stack is needed", "Complex third-party integrations are involved" ].map((item, i) => (
@@ -275,7 +275,7 @@ export default function LowCodeDevelopment() {
         <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
           <div className="container text-center max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold mb-4">Ready to Accelerate Your Mission?</h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Let's discuss how low-code development can help you achieve your goals faster and more efficiently. Contact us for a free consultation and see if rapid application development is the right fit for your agency.
             </p>
             <Button size="lg" asChild className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

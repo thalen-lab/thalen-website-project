@@ -25,7 +25,7 @@ export default function BankFraud() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Case Studies', href: '/case-studies' },
@@ -41,7 +41,7 @@ export default function BankFraud() {
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 leading-tight text-white">
               Implementing AI-Powered Fraud Detection to Protect a Major Financial Institution from $45 Million in Annual Losses
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               A strategic deployment of real-time machine learning fraud detection reduced false positives by 80% while preventing $45 million in fraudulent transactions annually.
             </p>
             <Link href="/contact">
@@ -60,7 +60,7 @@ export default function BankFraud() {
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
             The Opportunity
           </p>
-          <h2 className="text-4xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">
+          <h2 className="text-4xl font-serif font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">
             Addressing Escalating Fraud and Customer Friction in Legacy Systems
           </h2>
           <div className="space-y-6 text-lg leading-relaxed text-slate-600">
@@ -83,7 +83,7 @@ export default function BankFraud() {
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
             The Solution
           </p>
-          <h2 className="text-4xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">
+          <h2 className="text-4xl font-serif font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">
             Deploying a Multi-Model, Real-Time Machine Learning Architecture
           </h2>
           <div className="space-y-6 text-lg leading-relaxed text-slate-600">
@@ -106,16 +106,16 @@ export default function BankFraud() {
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">
             The Impact
           </p>
-          <h2 className="text-4xl font-serif font-bold mb-12 text-[oklch(0.20_0.05_250)]">
+          <h2 className="text-4xl font-serif font-bold mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 text-[oklch(0.20_0.05_250)]">
             Measurable Financial Protection and Enhanced Customer Experience
           </h2>
 
           {/* Statistics Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             {statistics.map((metric, index) => (
               <motion.div 
                 key={index} 
-                className="bg-white border-2 border-slate-200 rounded-lg p-6 text-center transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                className="bg-white border-2 border-slate-200 rounded-lg p-3 sm:p-4 md:p-6 text-center transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -150,7 +150,7 @@ export default function BankFraud() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
             Protect Your Institution from Evolving Financial Threats
           </h2>
-          <p className="text-xl opacity-90 mb-8">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Discover how Thalen's AI fraud detection solutions can reduce losses while dramatically improving customer experience and operational efficiency.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

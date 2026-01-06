@@ -21,7 +21,7 @@ export default function CountyHealthDepartment() {
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Case Studies', href: '/case-studies' },
@@ -37,10 +37,10 @@ export default function CountyHealthDepartment() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               County Health Department Integrates 12 Systems for Real-Time Disease Surveillance
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Implementing HIPAA-compliant integration platform serving 2.5 million residents, reducing outbreak detection time by 40% with automated disease surveillance and state reporting.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Download Full Case Study (PDF)
               </Button>
@@ -117,7 +117,7 @@ export default function CountyHealthDepartment() {
                 viewport={{ once: true }}
               >
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{challenge.title}</h3>
                     <p className="text-slate-600">{challenge.description}</p>
                   </CardContent>
@@ -132,10 +132,10 @@ export default function CountyHealthDepartment() {
       <section className="py-20">
         <div className="container max-w-4xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Solution</p>
-          <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-8">A Unified, Real-Time Public Health Platform</h2>
+          <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">A Unified, Real-Time Public Health Platform</h2>
           <div className="space-y-8">
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">HIPAA-Compliant Health Data Integration Platform</h3>
                 <p className="text-lg text-slate-600 mb-6">
                   Thalen Technologies Technologies designed and implemented a secure integration platform on Azure Government that connected all 12 county health systems with HIPAA-compliant data exchange, enabling real-time disease surveillance and automated state reporting.
@@ -158,7 +158,7 @@ export default function CountyHealthDepartment() {
             </Card>
 
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Real-Time Disease Surveillance System</h3>
                 <p className="text-lg text-slate-600 mb-6">
                   Implemented automated disease surveillance system that analyzes patient data in real-time to detect outbreak patterns, replacing manual 48-72 hour reporting delays with immediate alerts.
@@ -181,7 +181,7 @@ export default function CountyHealthDepartment() {
             </Card>
 
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Public Health Analytics Dashboards</h3>
                 <p className="text-lg text-slate-600 mb-6">
                   Deployed role-based analytics dashboards using Power BI Gov, providing 200+ county health workers with real-time disease trends, outbreak alerts, and population health metrics.
@@ -210,8 +210,8 @@ export default function CountyHealthDepartment() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Results</p>
-          <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-8">40% Faster Outbreak Response and 100% Compliance</h2>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">40% Faster Outbreak Response and 100% Compliance</h2>
+          <div className="grid md:grid-cols-2 gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             {[
               {
                 title: 'Public Health Impact',
@@ -233,7 +233,7 @@ export default function CountyHealthDepartment() {
               }
             ].map((result, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{result.title}</h3>
                   <ul className="space-y-3">
                     {result.metrics.map((metric, i) => (
@@ -254,7 +254,7 @@ export default function CountyHealthDepartment() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">Modernize Your Public Health Infrastructure</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Connect your disparate health systems, automate disease surveillance, and empower your public health teams with real-time data. Thalen Technologies can help you build a secure, compliant, and scalable health integration platform.
           </p>
           <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

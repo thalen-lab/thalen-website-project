@@ -161,7 +161,7 @@ export function MediaPicker({ value, onChange, label = "Featured Image", accept 
           onClick={() => setIsOpen(true)}
         >
           <div className="flex flex-col items-center gap-2">
-            <ImageIcon className="h-8 w-8 text-muted-foreground" />
+            <ImageIcon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-muted-foreground" />
             <span className="text-sm text-muted-foreground">Select or Upload Image</span>
           </div>
         </Button>
@@ -198,7 +198,7 @@ export function MediaPicker({ value, onChange, label = "Featured Image", accept 
               <div className="flex-1 overflow-y-auto">
                 {mediaList.length === 0 ? (
                   <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
-                    <ImageIcon className="h-12 w-12 mb-2" />
+                    <ImageIcon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 mb-2" />
                     <p>No images found</p>
                     <p className="text-sm">Upload your first image to get started</p>
                   </div>
@@ -255,14 +255,14 @@ export function MediaPicker({ value, onChange, label = "Featured Image", accept 
             <TabsContent value="upload" className="flex-1 flex flex-col mt-4">
               <div
                 className={cn(
-                  "flex-1 border-2 border-dashed rounded-lg flex flex-col items-center justify-center p-8 transition-colors",
+                  "flex-1 border-2 border-dashed rounded-lg flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 transition-colors",
                   isDragging ? "border-orange-500 bg-orange-50" : "border-gray-300"
                 )}
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
               >
-                <Upload className="h-12 w-12 text-muted-foreground mb-4" />
+                <Upload className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-muted-foreground mb-4" />
                 <h3 className="text-lg font-semibold mb-2">
                   {isUploading ? "Uploading..." : "Drag and drop your image here"}
                 </h3>

@@ -24,10 +24,10 @@ export default function AppDevelopment() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Application Development & Integration for Mission-Critical Systems
             </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               Your agency needs applications that meet strict security requirements while delivering modern user experiences. Thalen Technologies builds FedRAMP-authorized, CMMC-compliant applications using proven methodologies that balance innovation with the stability your mission demands.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Request Development Assessment
@@ -47,7 +47,7 @@ export default function AppDevelopment() {
       {/* Why Federal Agencies Choose Thalen Technologies */}
       <section className="py-20 bg-white text-[oklch(0.20_0.05_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</p>
             <h2 className="text-4xl font-bold mb-4">Why Federal Agencies Choose Thalen Technologies</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -89,14 +89,14 @@ export default function AppDevelopment() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)] text-[oklch(0.20_0.05_250)]">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                 <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Approach</p>
                 <h2 className="text-4xl font-bold mb-6">What Makes Government Application Development Different?</h2>
                 <p className="text-lg text-slate-600">
                     Building applications for government agencies isn't just about writing code—it's about navigating complex compliance frameworks, integrating with legacy systems, and delivering solutions that meet mission-critical security standards while providing modern user experiences.
                 </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mt-12">
               {[
                 {
                   title: "Works with Legacy Systems",
@@ -112,7 +112,7 @@ export default function AppDevelopment() {
                 }
               ].map((item, index) => (
                 <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                     <p className="text-slate-600 text-sm">{item.description}</p>
                   </CardContent>
@@ -126,7 +126,7 @@ export default function AppDevelopment() {
       {/* Federal Application Development Use Cases */}
       <section className="py-20 bg-white text-[oklch(0.20_0.05_250)]">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Use Cases</p>
             <h2 className="text-4xl font-bold mb-4">Federal Application Development Use Cases</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -167,7 +167,7 @@ export default function AppDevelopment() {
               }
             ].map((useCase, index) => (
                 <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
                   <p className="text-slate-600 mb-4">{useCase.description}</p>
                   <div className="bg-slate-100 rounded-lg p-4 mt-4">
@@ -185,7 +185,7 @@ export default function AppDevelopment() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Build Your Next Mission-Critical Application?</h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Let's discuss your requirements and see how Thalen Technologies can help you deliver secure, compliant, and modern applications that meet your agency's unique needs.
             </p>
             <Link href="/contact">

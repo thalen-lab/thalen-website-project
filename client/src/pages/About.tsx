@@ -67,7 +67,7 @@ export default function About() {
       <Navigation />
 
       {/* Hero - Founding Story */}
-      <section className="relative py-12 sm:py-16 md:py-20 text-white">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-20 text-white">
         <div className="absolute inset-0 bg-[url('/img/patterns/hero-pattern.svg')] bg-center [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         
@@ -76,14 +76,14 @@ export default function About() {
             <Breadcrumb 
               items={[{ label: 'About Us' }]} 
               variant="light" 
-              className="mb-6 md:mb-8"
+              className="mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
             />
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 text-center leading-tight text-white">
+              <h1 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-center leading-tight text-white">
                 Powering Government Mission Success Through Technology
               </h1>
               
@@ -116,7 +116,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Mission</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">
+            <h2 className="text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">
               To deliver strategic automation that amplifies organizational capability while maintaining mission-critical security.
             </h2>
           </motion.div>
@@ -127,7 +127,7 @@ export default function About() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -150,7 +150,7 @@ export default function About() {
                   {principle.number}
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{principle.title}</h3>
+                  <h3 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{principle.title}</h3>
                   <p className="text-lg text-slate-600 leading-relaxed">
                     {principle.description}
                   </p>
@@ -164,7 +164,7 @@ export default function About() {
       {/* Our Approach */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -172,7 +172,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Our Approach</h2>
-              <p className="text-2xl md:text-3xl text-slate-600 mb-8">
+              <p className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 We transform complex government challenges into mission-enabling capabilities through intelligent automation.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
@@ -186,7 +186,7 @@ export default function About() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              <p className="text-lg text-slate-600 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Every engagement begins with deep process analysis to identify the highest-impact automation opportunities for your agency. We then deploy proven frameworks that integrate seamlessly with existing government operations, ensuring zero disruption while delivering significant results that scale with your mission requirements.
               </p>
               
@@ -207,12 +207,12 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">How we operate</h3>
-            <p className="text-2xl md:text-3xl text-slate-600 mb-12">
+            <h3 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">How we operate</h3>
+            <p className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl text-slate-600 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               We deploy automation strategists directly to your agency's most critical operations.
             </p>
 
-            <div className="grid lg:grid-cols-2 gap-12 mb-12">
+            <div className="grid lg:grid-cols-2 gap-12 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               <div>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   Our consultants embed with your agency teams to understand the nuances of government processes, identify optimization opportunities, and implement solutions that deliver immediate and lasting mission impact. We don't build from the outside looking in—we work from within your operations to architect transformation that serves your mission and the citizens who depend on it.
@@ -220,7 +220,7 @@ export default function About() {
               </div>
               
               <div>
-                <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                <p className="text-lg text-slate-600 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                   This approach allows us to deliver automation strategies that integrate seamlessly with existing government workflows, maintain operational security at the highest levels, and scale with your agency's evolving mission needs. Every solution is battle-tested in real-world government environments before full deployment.
                 </p>
                 
@@ -240,10 +240,10 @@ export default function About() {
             </div>
 
             {/* Where We're Needed Most */}
-            <div className="bg-[oklch(0.97_0.01_250)] rounded-lg p-8 md:p-12">
-              <h4 className="text-2xl md:text-3xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Where we're needed most</h4>
+            <div className="bg-[oklch(0.97_0.01_250)] rounded-lg p-4 sm:p-6 md:p-8 md:p-12">
+              <h4 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Where we're needed most</h4>
               
-              <div className="space-y-6 text-lg text-slate-600 mb-8">
+              <div className="space-y-6 text-lg text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <p>
                   We identify the most critical operational challenges that pose the greatest risk not only to agency efficiency, but to mission success itself. Whether it's a federal agency struggling with manual processes that compromise national security timelines, a state government modernizing citizen services, or a local municipality streamlining operations, we focus our efforts where automation can deliver the most strategic value for government and the citizens they serve.
                 </p>
@@ -255,7 +255,7 @@ export default function About() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h5 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">Strategic Assessment</h5>
                     <p className="text-slate-600">
                       We begin every engagement with comprehensive process analysis to identify the automation opportunities that will deliver maximum business impact.
@@ -264,7 +264,7 @@ export default function About() {
                 </Card>
 
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h5 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">Embedded Implementation</h5>
                     <p className="text-slate-600">
                       Our teams work directly within your operations to ensure solutions integrate seamlessly with existing workflows and security requirements.
@@ -281,7 +281,7 @@ export default function About() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -303,7 +303,7 @@ export default function About() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <div className="text-5xl font-bold text-[oklch(0.65_0.18_55)]/20 mb-2">{value.letter}</div>
                     <h3 className="text-xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{value.title}</h3>
                     <p className="text-slate-600">{value.description}</p>
@@ -354,7 +354,7 @@ export default function About() {
             >
               {teamStats.map((stat, index) => (
                 <Card key={index} className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <div className="text-4xl md:text-5xl font-bold text-[oklch(0.65_0.18_55)] mb-2">
                       {stat.value}
                     </div>
@@ -373,7 +373,7 @@ export default function About() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -386,7 +386,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -394,7 +394,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">FedRAMP Expert</h3>
                   <p className="text-sm text-slate-600">
                     Deep expertise implementing FedRAMP-authorized platforms for federal agencies at Moderate and High impact levels with proven ATO support.
@@ -410,7 +410,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="inline-block bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.65_0.18_55)] px-3 py-1 rounded-full text-xs font-semibold mb-3">
                     STATE & LOCAL
                   </div>
@@ -429,7 +429,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">CMMC Consulting Services</h3>
                   <p className="text-sm text-slate-600">
                     Expert consulting to help defense contractors achieve CMMC Level 2 and Level 3 compliance through comprehensive gap analysis and controls implementation.
@@ -445,7 +445,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <Card className="text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">CJIS Compliant</h3>
                   <p className="text-sm text-slate-600">
                     CJIS-compliant implementations for state and local law enforcement agencies with full FBI security policy adherence.
@@ -466,7 +466,7 @@ export default function About() {
               Additional expertise: ISO 27001:2022 implementation services, NIST Cybersecurity Framework v2.0, GSA Schedule application in progress, Top Secret/SCI cleared personnel available upon contract award
             </p>
             <Card className="border-2 border-slate-200 bg-white max-w-4xl mx-auto">
-              <CardContent className="p-6">
+              <CardContent className="p-3 sm:p-4 md:p-6">
                 <h3 className="text-lg font-bold mb-3 text-[oklch(0.20_0.05_250)]">Federal Acquisition Regulation (FAR) Compliance</h3>
                 <p className="text-sm text-slate-600 mb-4">
                   Thalen Technologies maintains compliance with Federal Acquisition Regulation requirements for government IT services, including FAR Part 39 (Acquisition of Information Technology) and associated security clauses.
@@ -502,7 +502,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Our Vision for the Future</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-white">
               Organizations around the world are using Thalen Technologies to transform their most important operations.
             </h2>
             

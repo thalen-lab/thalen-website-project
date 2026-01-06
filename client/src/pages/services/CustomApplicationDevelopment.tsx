@@ -132,11 +132,11 @@ export default function CustomApplicationDevelopment() {
               Custom Application Development
             </h1>
             
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               Mission-critical applications built specifically for government agencies. Our TS/SCI cleared development teams deliver FedRAMP-authorized solutions that meet the unique challenges of government operations, from case management to emergency response systems.
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 <Link href="/contact">Start Your Project</Link>
               </Button>
@@ -151,7 +151,7 @@ export default function CustomApplicationDevelopment() {
       {/* Key Benefits */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Why Choose Custom Development?</h2>
             <p className="text-xl text-slate-600">
               When off-the-shelf solutions can't meet your mission requirements, custom applications provide the flexibility, security, and performance you need.
@@ -183,7 +183,7 @@ export default function CustomApplicationDevelopment() {
       {/* Application Capabilities */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Application Types We Build</h2>
             <p className="text-xl text-slate-600">
@@ -195,7 +195,7 @@ export default function CustomApplicationDevelopment() {
             {capabilities.map((capability, index) => (
               <motion.div 
                 key={index} 
-                className="bg-white rounded-lg p-6 border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-lg p-3 sm:p-4 md:p-6 border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
@@ -218,7 +218,7 @@ export default function CustomApplicationDevelopment() {
       {/* Development Process */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Our Development Process</h2>
             <p className="text-xl text-slate-600">
@@ -230,7 +230,7 @@ export default function CustomApplicationDevelopment() {
             {developmentProcess.map((step, index) => (
               <motion.div 
                 key={index} 
-                className="bg-[oklch(0.97_0.01_250)] rounded-lg p-8"
+                className="bg-[oklch(0.97_0.01_250)] rounded-lg p-4 sm:p-6 md:p-8"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
@@ -262,7 +262,7 @@ export default function CustomApplicationDevelopment() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Ready to Build Your Mission-Critical Application?</h2>
-          <p className="text-xl text-white/80 mb-8">
+          <p className="text-xl text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Schedule a complimentary consultation with our application development experts to discuss your requirements and explore how we can help achieve your mission objectives.
           </p>
           <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

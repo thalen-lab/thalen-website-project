@@ -54,7 +54,7 @@ export default function Security() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Security at {APP_TITLE}
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               We are committed to protecting your data with industry-leading security practices, compliance certifications, and continuous monitoring.
             </p>
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 font-semibold py-3 px-8">
@@ -70,7 +70,7 @@ export default function Security() {
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Commitment</p>
             <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">A Foundation of Trust</h2>
-            <p className="text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-3xl mx-auto">
               Security is not just a feature—it's foundational to everything we do. As a trusted partner to federal agencies and enterprise clients, we maintain the highest standards of data protection and security governance.
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function Security() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white border-2 border-slate-200 rounded-lg p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                className="bg-white border-2 border-slate-200 rounded-lg p-3 sm:p-4 md:p-6 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
               >
                 <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)] mb-3">{practice.title}</h3>
                 <p className="text-slate-600">{practice.description}</p>
@@ -99,7 +99,7 @@ export default function Security() {
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Verified & Certified</p>
             <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Compliance & Certifications</h2>
-            <p className="text-lg text-slate-600 mb-12">
+            <p className="text-lg text-slate-600 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               We maintain comprehensive compliance certifications to meet the stringent requirements of government and enterprise clients.
             </p>
           </div>
@@ -128,7 +128,7 @@ export default function Security() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Practices</p>
-              <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-12">Security Policies & Practices</h2>
+              <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">Security Policies & Practices</h2>
             </div>
 
             <div className="space-y-8">
@@ -161,7 +161,7 @@ export default function Security() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+            <div className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
               <h2 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Report a Security Vulnerability</h2>
               <p className="text-slate-600 mb-6">
                 We take security vulnerabilities seriously and appreciate responsible disclosure. If you believe you have discovered a security vulnerability in our systems, please report it to our security team. We commit to acknowledging reports within 24 hours and providing regular updates on our investigation.
@@ -182,8 +182,8 @@ export default function Security() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Questions About Our Security?</h2>
-            <p className="text-lg text-white/80 mb-8">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Questions About Our Security?</h2>
+            <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Our security team is available to discuss our security practices, compliance certifications, and how we can meet your organization's security requirements.
             </p>
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 font-semibold py-3 px-8">

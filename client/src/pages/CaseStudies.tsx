@@ -221,18 +221,18 @@ export default function CaseStudies() {
     <div className="min-h-screen flex flex-col bg-white text-[oklch(0.20_0.05_250)]">
       <Navigation />
 
-      <section className="relative py-12 sm:py-16 md:py-20 text-white">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-20 text-white">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="relative container">
-          <div className="mb-6 md:mb-8">
+          <div className="mb-6 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb items={[{ label: 'Case Studies' }]} variant="light" />
           </div>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Our Work</p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+            <h1 className="text-3xl sm:text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               Case Studies
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/90">
+            <p className="text-lg sm:text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90">
               Real-world government case studies demonstrating platform implementation expertise. FedRAMP serves federal agencies; StateRAMP/GovRAMP serves state, local, and tribal governments.
             </p>
           </div>
@@ -249,7 +249,7 @@ export default function CaseStudies() {
               { value: '100%', label: 'Authorization Success Rate' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-1 md:mb-2">{stat.value}</div>
+                <div className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-1 md:mb-2">{stat.value}</div>
                 <div className="text-xs sm:text-sm text-slate-600">{stat.label}</div>
               </div>
             ))}
@@ -259,7 +259,7 @@ export default function CaseStudies() {
 
       <section className="py-8 bg-white border-b border-slate-200">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <div className="relative flex-1 max-w-2xl">
               <input
                 type="text"
@@ -309,7 +309,7 @@ export default function CaseStudies() {
 
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="mb-8 text-sm text-slate-600">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-sm text-slate-600">
             {filteredCaseStudies.length === 0 ? (
               'No case studies found'
             ) : (
@@ -363,7 +363,7 @@ export default function CaseStudies() {
                           </div>
                         </div>
 
-                        <CardContent className="p-6 flex flex-col flex-1">
+                        <CardContent className="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
                           <h3 className="text-xl font-bold mb-2 text-[oklch(0.20_0.05_250)]">{study.title}</h3>
                           <p className="text-slate-600 mb-6 flex-1">{study.description}</p>
 
@@ -390,7 +390,7 @@ export default function CaseStudies() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Request an assessment to discuss your agency's technology requirements.
           </p>
           <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-slate-200">

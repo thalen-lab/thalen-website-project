@@ -101,10 +101,10 @@ export default function ZeroTrustArchitecture() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Zero Trust Architecture
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Implement modern Zero Trust security framework with micro-segmentation, continuous verification, and least-privilege access controls. Thalen Technologies delivers NIST 800-207 and DoD Zero Trust Reference Architecture implementations for government agencies (federal, state, local) eliminating implicit trust.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Schedule Zero Trust Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -120,7 +120,7 @@ export default function ZeroTrustArchitecture() {
       {/* Zero Trust Pillars */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Core Principles</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Six Pillars of Zero Trust</h2>
             <p className="text-xl text-slate-600">
@@ -132,7 +132,7 @@ export default function ZeroTrustArchitecture() {
             {ztPillars.map((pillar, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{pillar.title}</h3>
                     <p className="text-slate-600 mb-6">{pillar.description}</p>
                     <ul className="space-y-3">
@@ -154,7 +154,7 @@ export default function ZeroTrustArchitecture() {
       {/* Implementation Phases */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Zero Trust Implementation Roadmap</h2>
             <p className="text-xl text-slate-600">
@@ -165,7 +165,7 @@ export default function ZeroTrustArchitecture() {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {implementationPhases.map((phase, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="flex items-center mb-4">
                     <div className="h-12 w-12 bg-[oklch(0.22_0.06_250)] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
                       {index + 1}
@@ -194,7 +194,7 @@ export default function ZeroTrustArchitecture() {
       {/* Zero Trust Frameworks */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Zero Trust Frameworks & Standards</h2>
             <p className="text-xl text-slate-600">
@@ -205,7 +205,7 @@ export default function ZeroTrustArchitecture() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {ztFrameworks.map((framework, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6 text-center flex flex-col justify-center h-full">
+                <CardContent className="p-3 sm:p-4 md:p-6 text-center flex flex-col justify-center h-full">
                   <p className="font-semibold text-[oklch(0.20_0.05_250)]">{framework}</p>
                 </CardContent>
               </Card>
@@ -217,7 +217,7 @@ export default function ZeroTrustArchitecture() {
       {/* Benefits */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Outcomes</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Zero Trust Security Benefits</h2>
             <p className="text-xl text-slate-600">
@@ -245,7 +245,7 @@ export default function ZeroTrustArchitecture() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Implement Zero Trust Security</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Schedule a Zero Trust assessment and discover how Thalen Technologies can help you eliminate implicit trust and implement modern security architecture.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

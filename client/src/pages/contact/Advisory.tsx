@@ -82,7 +82,7 @@ export default function Advisory() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8"
+            className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
           >
             Expert guidance on automation technology stack and implementation strategy from our technical architects.
           </motion.p>
@@ -100,11 +100,11 @@ export default function Advisory() {
             <div>
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Expertise</p>
               <h2 className="text-3xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Actionable Technical Guidance</h2>
-              <p className="text-slate-600 mb-8">Our team provides in-depth analysis and strategic advice to ensure your technology choices align with your business goals for scalability, performance, and security.</p>
+              <p className="text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Our team provides in-depth analysis and strategic advice to ensure your technology choices align with your business goals for scalability, performance, and security.</p>
 
               <div className="space-y-6">
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h3 className="font-semibold mb-4 text-[oklch(0.20_0.05_250)]">Advisory Services</h3>
                     <ul className="space-y-3 text-slate-600">
                       {[ "Technology stack evaluation and recommendations", "Architecture design and scalability planning", "Integration strategy and API design", "Performance optimization and troubleshooting", "Security architecture and compliance guidance" ].map((item, i) => (
@@ -118,7 +118,7 @@ export default function Advisory() {
                 </Card>
 
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h3 className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">Expert Architects</h3>
                     <p className="text-slate-600">
                       Our technical team includes certified architects across all major automation platforms and cloud providers.
@@ -131,7 +131,7 @@ export default function Advisory() {
             {/* Technical Consultation Form */}
             <div>
               <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h2 className="text-2xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Request a Technical Consultation</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">

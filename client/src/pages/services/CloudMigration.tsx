@@ -85,7 +85,7 @@ export default function CloudMigration() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/cloud-migration-hero.jpg')" }}
@@ -93,7 +93,7 @@ export default function CloudMigration() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         
         <div className="container relative z-10">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Government Solutions', href: '/federal-solutions' },
@@ -109,13 +109,13 @@ export default function CloudMigration() {
             className="max-w-4xl"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">FedRAMP Authorized • Zero Downtime Guaranteed</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
               Cloud Migration & Transition
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               We help agencies migrate mission-critical systems to FedRAMP-authorized cloud platforms (AWS GovCloud, Azure Government, Google Cloud) with proven strategies that ensure complete data integrity, zero downtime, and accelerated timelines. Our migration framework reduces typical 6-12 month timelines to 30-60 days while maintaining 100% operational continuity.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 font-semibold">
                 <Link href="/contact/government">
                   Schedule Migration Assessment
@@ -133,17 +133,17 @@ export default function CloudMigration() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12 max-w-3xl mx-auto"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-3xl mx-auto"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Government Agencies Choose Thalen Technologies</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Why Government Agencies Choose Thalen Technologies</h2>
             <p className="text-lg text-slate-600">
               Unlike commercial migration services, we understand government compliance requirements (FedRAMP, StateRAMP, CJIS), security clearances, and mission continuity imperatives.
             </p>
@@ -158,7 +158,7 @@ export default function CloudMigration() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                <Card className="h-full p-4 sm:p-6 md:p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
                 </Card>
@@ -169,17 +169,17 @@ export default function CloudMigration() {
       </section>
 
       {/* Migration Process */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12 max-w-3xl mx-auto"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-3xl mx-auto"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">A Structured, Repeatable Methodology</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">A Structured, Repeatable Methodology</h2>
             <p className="text-lg text-slate-600">
               Our phased approach ensures successful cloud transitions with zero business disruption, complete data integrity, and full compliance.
             </p>
@@ -194,7 +194,7 @@ export default function CloudMigration() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                <Card className="h-full p-4 sm:p-6 md:p-8 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <div className="text-4xl font-bold text-[oklch(0.65_0.18_55)] mb-2">{phase.step}</div>
                   <h3 className="text-xl font-bold mb-2">{phase.title}</h3>
                   <p className="text-sm text-slate-600 mb-4">{phase.description}</p>
@@ -217,17 +217,17 @@ export default function CloudMigration() {
       </section>
 
       {/* Migration Strategies */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12 max-w-3xl mx-auto"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-3xl mx-auto"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Strategies</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Tailored Migration Strategies</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Tailored Migration Strategies</h2>
             <p className="text-lg text-slate-600">
               We select the right migration path for each application based on your agency's specific technical requirements, budget, and timeline.
             </p>
@@ -242,7 +242,7 @@ export default function CloudMigration() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+                <Card className="h-full p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                   <h3 className="text-lg font-bold mb-2">{type.title}</h3>
                   <p className="text-sm text-slate-600 mb-3">{type.description}</p>
                   <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Use Case: <span className="font-semibold">{type.useCase}</span></p>
@@ -254,7 +254,7 @@ export default function CloudMigration() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -264,7 +264,7 @@ export default function CloudMigration() {
             className="max-w-3xl mx-auto"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Technology Stack</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Industry-Leading Migration Tools</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Industry-Leading Migration Tools</h2>
             <p className="text-lg text-slate-600 mb-10">
               We leverage a powerful suite of automation and management tools from cloud providers and third-party leaders to accelerate migration, reduce risk, and ensure a seamless transition.
             </p>
@@ -287,7 +287,7 @@ export default function CloudMigration() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -295,8 +295,8 @@ export default function CloudMigration() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Cloud Journey?</h2>
-            <p className="text-lg text-white/80 mb-8">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Cloud Journey?</h2>
+            <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Schedule a complimentary migration assessment with our certified cloud architects. We'll provide a detailed roadmap, cost analysis, and timeline for your agency's transition to a secure, compliant, and modernized cloud environment.
             </p>
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 font-semibold">

@@ -22,7 +22,7 @@ export default function ROIMethodology() {
         Demonstrating return on investment for automation initiatives is essential for securing continued funding and executive support. Yet many organizations struggle to quantify automation benefits beyond simple labor savings. This guide provides a comprehensive framework for measuring automation ROI that captures the full spectrum of value—from cost reduction to mission improvement.
       </p>
 
-      <div className="my-12 bg-[oklch(0.97_0.01_250)] p-8 rounded-2xl">
+      <div className="my-12 bg-[oklch(0.97_0.01_250)] p-4 sm:p-6 md:p-8 rounded-2xl">
         <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">
           Key Takeaways
         </h3>
@@ -63,7 +63,7 @@ export default function ROIMethodology() {
 
       <div className="bg-[oklch(0.97_0.01_250)] py-16 my-16">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-8">Quantifying Automation Benefits</h2>
+          <h2 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Quantifying Automation Benefits</h2>
           
           <div className="space-y-6">
             <div>
@@ -88,7 +88,7 @@ export default function ROIMethodology() {
           </div>
 
           <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 my-12">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 md:p-8">
               <h4 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-4">Automation Benefit Categories</h4>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -157,22 +157,22 @@ export default function ROIMethodology() {
 
       <div className="bg-[oklch(0.97_0.01_250)] py-16 my-16">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-8">Government-Specific ROI Considerations</h2>
+          <h2 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Government-Specific ROI Considerations</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div whileHover={{ y: -5 }} className="bg-white p-6 rounded-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+            <motion.div whileHover={{ y: -5 }} className="bg-white p-3 sm:p-4 md:p-6 rounded-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)] mb-2">Mission Impact Metrics</h3>
               <p className="text-slate-600">
                 Government agencies exist to accomplish missions, not generate profits. ROI frameworks must capture mission impact: veterans served faster, benefits delivered more accurately, threats detected more quickly. These mission metrics often matter more to stakeholders than pure cost savings.
               </p>
             </motion.div>
-            <motion.div whileHover={{ y: -5 }} className="bg-white p-6 rounded-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+            <motion.div whileHover={{ y: -5 }} className="bg-white p-3 sm:p-4 md:p-6 rounded-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)] mb-2">Citizen Experience</h3>
               <p className="text-slate-600">
                 Improved citizen experience represents significant value even when difficult to monetize. Faster response times, reduced errors affecting citizens, and more accessible services demonstrate responsible use of public resources. Survey data and service metrics can document experience improvements.
               </p>
             </motion.div>
           </div>
-          <div className="mt-8 bg-white p-6 rounded-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
+          <div className="mt-8 bg-white p-3 sm:p-4 md:p-6 rounded-lg border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
             <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)] mb-2">Workforce Implications</h3>
             <p className="text-slate-600">
               Government automation rarely results in workforce reduction due to civil service protections and persistent backlogs. Frame ROI in terms of capacity creation—enabling existing staff to handle growing workloads or shift to higher-value activities—rather than headcount reduction.

@@ -59,7 +59,7 @@ export default function Government() {
       <section className="relative bg-cover bg-center text-white" style={{ backgroundImage: "url('/img/patterns/hero-pattern.svg')" }}>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="relative container mx-auto px-4 py-20">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Contact', href: '/contact' },
@@ -73,7 +73,7 @@ export default function Government() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Government Relations
             </h1>
-            <p className="text-xl md:text-2xl text-white/90">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90">
               Federal contracting and security clearance specialists for government automation initiatives.
             </p>
           </div>
@@ -89,13 +89,13 @@ export default function Government() {
             <div className="text-slate-600">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Federal Contracting</p>
               <h2 className="text-3xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Dedicated Government Expertise</h2>
-              <p className="mb-8">
+              <p className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Our government relations team provides specialized expertise in federal contracting, security compliance, and automation standards. We partner with agencies to deliver secure, efficient, and compliant AI-powered solutions.
               </p>
 
               <div className="space-y-6">
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h3 className="font-semibold mb-4 text-[oklch(0.20_0.05_250)]">Core Competencies</h3>
                     <ul className="space-y-3 text-slate-600">
                       <li className="flex items-start gap-3">
@@ -123,7 +123,7 @@ export default function Government() {
                 </Card>
 
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h3 className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">Security Clearances</h3>
                     <p className="text-slate-600">
                       Our team maintains active Top Secret/SCI clearances and comprehensive compliance certifications to handle sensitive government projects.
@@ -136,7 +136,7 @@ export default function Government() {
             {/* Government Inquiry Form */}
             <div>
               <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h2 className="text-2xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Government Inquiry</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">

@@ -79,7 +79,7 @@ export default function TMFSupport() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -88,7 +88,7 @@ export default function TMFSupport() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 via-[#0A2540]/80 to-[#12344D]/75"></div>
         <div className="container relative text-white">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -105,10 +105,10 @@ export default function TMFSupport() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Technology Modernization Fund (TMF) Support
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               We help agencies secure Technology Modernization Fund awards through end-to-end proposal development, ROI modeling, TMF Board preparation, and implementation support—we've helped agencies secure $45M+ in TMF funding.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Start TMF Proposal Development
@@ -128,7 +128,7 @@ export default function TMFSupport() {
       {/* TMF Capabilities */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <h2 className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</h2>
             <h3 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">TMF Support Services</h3>
             <p className="text-xl text-slate-600">
@@ -161,7 +161,7 @@ export default function TMFSupport() {
       {/* TMF Priorities */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <h2 className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Alignment</h2>
             <h3 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">TMF Board Priorities</h3>
             <p className="text-xl text-slate-600">
@@ -197,7 +197,7 @@ export default function TMFSupport() {
       {/* Proposal Process */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <h2 className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</h2>
             <h3 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">TMF Proposal Process</h3>
             <p className="text-xl text-slate-600">
@@ -221,14 +221,14 @@ export default function TMFSupport() {
       {/* Success Factors */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <h2 className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Key Factors</h2>
             <h3 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">TMF Proposal Success Factors</h3>
             <p className="text-xl text-slate-600">
               Critical elements that increase TMF proposal approval rates.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {successFactors.map((item, index) => (
               <motion.div key={index} whileHover={{ y: -5 }}>
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
@@ -253,10 +253,10 @@ export default function TMFSupport() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Pursue TMF Funding?</h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Our TMF specialists can help you develop compelling proposals, build financial models, and prepare for TMF Board presentations.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule TMF Consultation

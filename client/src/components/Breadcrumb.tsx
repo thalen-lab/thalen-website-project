@@ -58,21 +58,21 @@ export default function Breadcrumb({ items, className = '', variant = 'dark' }: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      <nav className={`inline-flex items-center text-sm ${className}`} aria-label="Breadcrumb">
-        <ol className="inline-flex items-center gap-1" itemScope itemType="https://schema.org/BreadcrumbList">
+      <nav className={`inline-flex items-center text-xs sm:text-sm overflow-x-auto max-w-full ${className}`} aria-label="Breadcrumb">
+        <ol className="inline-flex items-center gap-0.5 sm:gap-1 flex-nowrap" itemScope itemType="https://schema.org/BreadcrumbList">
           {/* Home link */}
           <li 
-            className="inline-flex items-center"
+            className="inline-flex items-center flex-shrink-0"
             itemProp="itemListElement"
             itemScope
             itemType="https://schema.org/ListItem"
           >
             <Link href="/">
               <span 
-                className={`inline-flex items-center gap-1 transition-colors cursor-pointer ${baseTextColor}`}
+                className={`inline-flex items-center gap-1 transition-colors cursor-pointer min-h-[36px] sm:min-h-[40px] px-1 ${baseTextColor}`}
                 itemProp="item"
               >
-                <Home className="h-4 w-4" />
+                <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 <span className="sr-only" itemProp="name">Home</span>
               </span>
             </Link>
@@ -82,23 +82,23 @@ export default function Breadcrumb({ items, className = '', variant = 'dark' }: 
           {items.map((item, index) => (
             <li 
               key={index} 
-              className="inline-flex items-center"
+              className="inline-flex items-center min-w-0"
               itemProp="itemListElement"
               itemScope
               itemType="https://schema.org/ListItem"
             >
-              <ChevronRight className={`h-4 w-4 mx-1.5 ${separatorColor}`} aria-hidden="true" />
+              <ChevronRight className={`h-3.5 w-3.5 sm:h-4 sm:w-4 mx-0.5 sm:mx-1.5 flex-shrink-0 ${separatorColor}`} aria-hidden="true" />
               {item.href ? (
                 <Link href={item.href}>
                   <span 
-                    className={`transition-colors cursor-pointer ${baseTextColor}`}
+                    className={`transition-colors cursor-pointer truncate max-w-[100px] xs:max-w-[140px] sm:max-w-[200px] md:max-w-none min-h-[36px] sm:min-h-[40px] inline-flex items-center ${baseTextColor}`}
                     itemProp="item"
                   >
-                    <span itemProp="name">{item.label}</span>
+                    <span itemProp="name" className="truncate">{item.label}</span>
                   </span>
                 </Link>
               ) : (
-                <span className={`font-medium ${activeTextColor}`} itemProp="name">
+                <span className={`font-medium truncate max-w-[120px] xs:max-w-[160px] sm:max-w-[220px] md:max-w-none ${activeTextColor}`} itemProp="name">
                   {item.label}
                 </span>
               )}

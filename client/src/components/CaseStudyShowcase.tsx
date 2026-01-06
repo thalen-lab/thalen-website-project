@@ -44,7 +44,7 @@ const caseStudies: CaseStudy[] = [
 
 export default function CaseStudyShowcase() {
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
+    <section className="relative py-10 sm:py-12 md:py-16 lg:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
       {/* Subtle gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0A2540] to-[#12344D]"></div>
       {/* Grid pattern overlay */}
@@ -53,7 +53,7 @@ export default function CaseStudyShowcase() {
       <div className="container relative z-10">
         {/* Header */}
         <motion.div 
-          className="grid lg:grid-cols-2 gap-8 mb-10 md:mb-12 lg:mb-16"
+          className="grid lg:grid-cols-2 gap-8 mb-10 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 lg:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -85,7 +85,7 @@ export default function CaseStudyShowcase() {
               },
             },
           }}
-          className="grid md:grid-cols-3 gap-5 md:gap-6 mb-10 md:mb-12"
+          className="grid md:grid-cols-3 gap-5 md:gap-6 mb-10 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
         >
           {caseStudies.map((study) => (
             <motion.div
@@ -131,7 +131,7 @@ export default function CaseStudyShowcase() {
 // Simple Card Component - Aqua-inspired design
 function SimpleCaseStudyCard({ study }: { study: CaseStudy }) {
   return (
-    <div className="h-full bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg p-6 md:p-8 flex flex-col hover:bg-white/15 transition-all duration-300 group">
+    <div className="h-full bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg p-3 sm:p-4 md:p-6 md:p-8 flex flex-col hover:bg-white/15 transition-all duration-300 group">
       {/* Large Metric */}
       <div className="mb-4">
         <span className="text-4xl md:text-5xl font-bold text-white">

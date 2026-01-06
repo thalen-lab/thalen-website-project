@@ -66,7 +66,7 @@ export default function ResourceDownloadCMMC() {
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Navigation />
         <div className="container py-20">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Resources', href: '/resources' },
@@ -82,18 +82,18 @@ export default function ResourceDownloadCMMC() {
               </div>
             </div>
             <h1 className="text-4xl font-bold mb-4">Download Started!</h1>
-            <p className="text-xl text-slate-600 mb-8">
+            <p className="text-xl text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Your CMMC Implementation Guide should download automatically. If it doesn't, click the button below.
             </p>
             <Button
               size="lg"
               onClick={() => window.open("/resources/cmmc-implementation-guide.pdf", "_blank")}
-              className="mb-8"
+              className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
             >
               <Download className="mr-2 h-5 w-5" />
               Download PDF
             </Button>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-left">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 sm:p-4 md:p-6 text-left">
               <h3 className="font-semibold text-lg mb-3">What's Next?</h3>
               <ul className="space-y-2 text-slate-700">
                 <li className="flex items-start">
@@ -141,7 +141,7 @@ export default function ResourceDownloadCMMC() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg border border-slate-200 p-6 mb-6">
+              <div className="bg-white rounded-lg border border-slate-200 p-3 sm:p-4 md:p-6 mb-6">
                 <h3 className="font-semibold text-lg mb-4">What You'll Learn:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
@@ -167,7 +167,7 @@ export default function ResourceDownloadCMMC() {
                 </ul>
               </div>
 
-              <div className="bg-slate-100 rounded-lg p-6">
+              <div className="bg-slate-100 rounded-lg p-3 sm:p-4 md:p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <FileText className="w-6 h-6 text-slate-600" />
                   <div>

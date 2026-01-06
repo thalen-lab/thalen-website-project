@@ -743,7 +743,7 @@ export default function ComplianceRoadmap() {
       {/* Hero Section */}
       <section className="relative py-20 bg-navy-gradient text-primary-foreground">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Resources', href: '/resources' },
@@ -759,7 +759,7 @@ export default function ComplianceRoadmap() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Compliance Roadmap Generator
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Generate a customized implementation roadmap for FedRAMP, CMMC, or StateRAMP compliance. Get detailed timelines, milestones, resource requirements, and cost estimates.
             </p>
           </div>
@@ -866,7 +866,7 @@ export default function ComplianceRoadmap() {
         <section id="roadmap" className="py-20 bg-navy-gradient">
           <div className="container max-w-6xl">
             {/* Header */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               <h2 className="text-4xl font-bold mb-4 text-white">{roadmap.framework} Compliance Roadmap</h2>
               <p className="text-xl text-slate-300 mb-6">
                 Customized implementation plan for {roadmap.maturityLevel.toLowerCase()}
@@ -901,7 +901,7 @@ export default function ComplianceRoadmap() {
             </div>
 
             {/* Timeline Visualization */}
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               <h3 className="text-2xl font-bold mb-6 text-center text-white">Implementation Timeline</h3>
               <div className="relative">
                 {/* Timeline line */}
@@ -1031,7 +1031,7 @@ export default function ComplianceRoadmap() {
       <section className="py-20 bg-navy-gradient text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Compliance Consultation</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
             Request a consultation to discuss compliance requirements and implementation planning.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -275,9 +275,9 @@ function VehicleAccordion({ category }: { category: VehicleCategory }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="mb-16"
+      className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
     >
-      <div className="mb-8">
+      <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
         <h2 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{category.title}</h2>
         <p className="text-lg text-slate-600">{category.description}</p>
       </div>
@@ -389,7 +389,7 @@ export default function ContractVehicles() {
 
       <div className="min-h-screen flex flex-col">
         {/* Hero Section with Background Image */}
-        <section className="relative py-24 md:py-32 text-white overflow-hidden">
+        <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -400,7 +400,7 @@ export default function ContractVehicles() {
           
           <div className="container relative z-10">
             {/* Breadcrumb */}
-            <div className="mb-8">
+            <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Government Solutions', href: '/federal-solutions' },
@@ -416,13 +416,13 @@ export default function ContractVehicles() {
               className="max-w-4xl"
             >
               <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Federal Procurement</p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Contract Vehicles & Teaming Opportunities
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+              <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Thalen Technologies holds multiple federal contract vehicles and is actively seeking subcontracting and teaming opportunities with prime contractors. We bring specialized IT capabilities, small business credentials, and proven past performance to support your agency's technology initiatives through strategic partnerships.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                 <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                   <Link href="/contact">
                     <Mail className="mr-2 h-5 w-5" />
@@ -462,7 +462,7 @@ export default function ContractVehicles() {
         </section>
 
         {/* Contract Categories */}
-        <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+        <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
           <div className="container">
             <div className="max-w-5xl mx-auto">
               {contractCategories.map((category) => (
@@ -473,7 +473,7 @@ export default function ContractVehicles() {
         </section>
 
         {/* Getting Started Section */}
-        <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+        <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
           <div className="container text-center max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -481,8 +481,8 @@ export default function ContractVehicles() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Seeking Teaming Partnerships</h2>
-              <p className="text-xl text-white/90 mb-8">
+              <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Seeking Teaming Partnerships</h2>
+              <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Thalen Technologies is actively seeking teaming opportunities with prime contractors to support agency contracts.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -512,7 +512,7 @@ export default function ContractVehicles() {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <Card className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-all duration-300">
+              <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <FileText className="h-6 w-6 text-[oklch(0.65_0.18_55)]" />

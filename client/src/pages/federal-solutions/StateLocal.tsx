@@ -122,7 +122,7 @@ export default function StateLocal() {
       <Navigation />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -133,7 +133,7 @@ export default function StateLocal() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Government Solutions', href: '/federal-solutions' },
@@ -149,13 +149,13 @@ export default function StateLocal() {
             className="max-w-4xl"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">State & Local Government Solutions</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               StateRAMP/GovRAMP & CJIS-Compliant IT Implementation
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               We help state, local, and tribal government agencies implement StateRAMP/GovRAMP-authorized platforms, CJIS-compliant systems, and modern IT solutions with state-specific compliance expertise and procurement support.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Request State/Local Assessment
@@ -173,7 +173,7 @@ export default function StateLocal() {
       </section>
 
       {/* Key Differentiators */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             {keyDifferentiators.map((item, index) => (
@@ -194,23 +194,23 @@ export default function StateLocal() {
       </section>
 
       {/* Primary Services */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State & Local Government Services</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State & Local Government Services</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Comprehensive IT implementation services designed for state agencies, counties, municipalities, and special districts.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {primaryServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -220,11 +220,11 @@ export default function StateLocal() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{service.title}</h3>
                     <p className="text-slate-600 mb-6">{service.description}</p>
                     
-                    <ul className="space-y-3 mb-8">
+                    <ul className="space-y-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-start text-sm gap-3">
                           <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
@@ -248,23 +248,23 @@ export default function StateLocal() {
       </section>
 
       {/* State/Local Case Studies */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Stories</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State & Local Government Success Stories</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State & Local Government Success Stories</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Experience implementing IT solutions for state agencies, counties, and municipalities with measurable outcomes.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {stateLocalCaseStudies.map((study, index) => (
               <motion.div
                 key={index}
@@ -274,7 +274,7 @@ export default function StateLocal() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{study.agency}</h3>
                     <p className="text-sm text-slate-500 mb-3">{study.project}</p>
                     <p className="text-lg font-bold text-[oklch(0.65_0.18_55)] mb-4">{study.outcome}</p>
@@ -297,23 +297,23 @@ export default function StateLocal() {
       </section>
 
       {/* Compliance Frameworks */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State & Local Compliance Expertise</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State & Local Compliance Expertise</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Deep expertise with state-specific compliance frameworks and security requirements.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {complianceFrameworks.map((framework, index) => (
               <motion.div
                 key={index}
@@ -323,7 +323,7 @@ export default function StateLocal() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 text-center">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{framework.name}</h3>
                     <p className="text-slate-600">{framework.description}</p>
                   </CardContent>
@@ -335,23 +335,23 @@ export default function StateLocal() {
       </section>
 
       {/* StateRAMP Platforms */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Platform Expertise</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">StateRAMP & State-Approved Platform Expertise</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">StateRAMP & State-Approved Platform Expertise</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We implement and integrate StateRAMP-authorized and state-approved platforms from leading vendors.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {stateRampPlatforms.map((category, index) => (
               <motion.div
                 key={index}
@@ -361,7 +361,7 @@ export default function StateLocal() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{category.category}</h3>
                     <div className="flex flex-wrap gap-2">
                       {category.platforms.map((platform, idx) => (
@@ -391,23 +391,23 @@ export default function StateLocal() {
       </section>
 
       {/* Procurement Paths */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Procurement</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Streamlined State & Local Procurement</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Streamlined State & Local Procurement</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Multiple procurement paths to simplify contracting for state and local government agencies.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {procurementPaths.map((path, index) => (
               <motion.div
                 key={index}
@@ -417,7 +417,7 @@ export default function StateLocal() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{path.title}</h3>
                     <p className="text-slate-600 mb-6">{path.description}</p>
                     
@@ -438,7 +438,7 @@ export default function StateLocal() {
       </section>
 
       {/* Procurement Guide CTA */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -451,11 +451,11 @@ export default function StateLocal() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                   <div>
                     <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Procurement Resource</p>
-                    <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Streamlined State & Local Procurement</h2>
+                    <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Streamlined State & Local Procurement</h2>
                     <p className="text-lg text-slate-600 mb-6">
                       Reduce procurement time from 6-12 months to 1-4 weeks with cooperative purchasing contracts, state master agreements, and grant-funded project support.
                     </p>
-                    <ul className="space-y-3 mb-8">
+                    <ul className="space-y-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                       {[
                         'NASPO ValuePoint, Sourcewell, OMNIA Partners cooperative contracts',
                         '12 state master agreements with pre-negotiated pricing',
@@ -475,7 +475,7 @@ export default function StateLocal() {
                       </Link>
                     </Button>
                   </div>
-                  <div className="bg-[oklch(0.97_0.01_250)] p-8 rounded-lg">
+                  <div className="bg-[oklch(0.97_0.01_250)] p-4 sm:p-6 md:p-8 rounded-lg">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Procurement Paths</h3>
                     <div className="space-y-4">
                       {[
@@ -504,7 +504,7 @@ export default function StateLocal() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -512,8 +512,8 @@ export default function StateLocal() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Modernize Your State or Local Agency?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Ready to Modernize Your State or Local Agency?</h2>
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
               Schedule a state/local government assessment to discuss your agency's IT modernization needs, evaluate StateRAMP platforms, and develop a roadmap for mission-critical implementation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

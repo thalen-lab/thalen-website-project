@@ -10,7 +10,7 @@ import { FloatingPrintButton } from '@/components/PrintButton';
 export default function DODDataPipelines() {
   // Utility component for the statistics grid
   const StatItem = ({ value, label }: { value: string; label: string }) => (
-    <div className="text-center p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
+    <div className="text-center p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 rounded-lg transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl">
       <div className="text-4xl font-bold mb-1 text-[oklch(0.20_0.05_250)] font-sans">{value}</div>
       <div className="text-sm text-slate-600 font-sans">{label}</div>
     </div>
@@ -54,7 +54,7 @@ export default function DODDataPipelines() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 text-white">
               Modernizing Defense Logistics: Automated Data Pipelines Deliver Real-Time Visibility and $12 Million in Annual Savings
             </h1>
-            <p className="text-xl text-white/90 mb-8 font-sans">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 font-sans">
               How the Department of Defense eliminated manual data integration work and achieved real-time supply chain visibility across 47 systems.
             </p>
             <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm font-sans text-white/90">
@@ -87,7 +87,7 @@ export default function DODDataPipelines() {
       <section className="py-20 bg-white">
         <div className="container max-w-4xl">
           <h2 className="text-sm text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Opportunity</h2>
-          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">The Imperative for Real-Time Logistics in a $180 Billion Supply Chain</h3>
+          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">The Imperative for Real-Time Logistics in a $180 Billion Supply Chain</h3>
           
           <EditorialParagraph>
             The Department of Defense (DOD) logistics command oversees a vast, complex supply chain valued at over $180 billion. This critical operation was managed across 47 disparate, siloed systems, including legacy mainframes, various ERP platforms, and specialized warehouse management tools. The inherent heterogeneity of these systems—each with unique data formats, update frequencies, and access protocols—created a significant data integration challenge.
@@ -107,7 +107,7 @@ export default function DODDataPipelines() {
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl">
           <h2 className="text-sm text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Solution</h2>
-          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">Architecting a Secure, Cloud-Native Data Ecosystem for Mission-Critical Data</h3>
+          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">Architecting a Secure, Cloud-Native Data Ecosystem for Mission-Critical Data</h3>
           
           <EditorialParagraph>
             The solution began with the design and deployment of a FedRAMP-authorized, cloud-native data lake within AWS GovCloud. This architecture established a secure, central repository for all supply chain data, utilizing services like S3 for scalable raw data storage, AWS Glue for robust ETL orchestration, and Athena for efficient, cost-effective SQL querying. This foundation provided the necessary security, scalability, and compliance framework for defense-level data workloads.
@@ -127,10 +127,10 @@ export default function DODDataPipelines() {
       <section className="py-20 bg-white">
         <div className="container max-w-4xl">
           <h2 className="text-sm text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Impact</h2>
-          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-[oklch(0.20_0.05_250)]">Transformative Results in Operational Efficiency and Cost Reduction</h3>
+          <h3 className="text-4xl md:text-5xl font-serif font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-[oklch(0.20_0.05_250)]">Transformative Results in Operational Efficiency and Cost Reduction</h3>
           
           {/* Statistics Grid */}
-          <div className="grid md:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-4 gap-6 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <StatItem value="$12M" label="Annual Cost Savings" />
             <StatItem value="95%" label="Reduction in Manual Data Work" />
             <StatItem value="15 Min" label="Data Refresh Time (from 18 Hrs)" />
@@ -155,10 +155,10 @@ export default function DODDataPipelines() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Ready to Automate Your Data Pipelines?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto font-sans">
+          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto font-sans">
             Schedule a free pipeline assessment. We will evaluate your current data processes, identify automation opportunities, and show you how to achieve real-time data visibility.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 transition-colors">
               <Link to="/contact/sales">
                 Request Free Pipeline Assessment

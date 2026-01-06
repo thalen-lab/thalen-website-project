@@ -87,10 +87,10 @@ export default function IncidentResponse() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Incident Response & Forensics
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Rapid incident response and digital forensics services to contain breaches, investigate root causes, and restore operations with minimal impact. Thalen Technologies's TS/SCI cleared team delivers court-admissible forensic analysis and expert breach response for government agencies (federal, state, local).
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Contact Emergency Response
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -106,7 +106,7 @@ export default function IncidentResponse() {
       {/* IR Capabilities */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Comprehensive Incident Response</h2>
             <p className="text-xl text-slate-600">
@@ -117,7 +117,7 @@ export default function IncidentResponse() {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {irCapabilities.map((capability, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{capability.title}</h3>
                   <p className="text-slate-600 mb-6">{capability.description}</p>
                   <ul className="space-y-3">
@@ -138,7 +138,7 @@ export default function IncidentResponse() {
       {/* IR Process */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">NIST-Aligned Incident Response</h2>
             <p className="text-xl text-slate-600">
@@ -149,7 +149,7 @@ export default function IncidentResponse() {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {irProcess.map((step, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="flex items-center mb-4">
                     <div className="h-12 w-12 bg-[oklch(0.22_0.06_250)] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
                       {index + 1}
@@ -178,7 +178,7 @@ export default function IncidentResponse() {
       {/* Forensic Capabilities */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Forensic Analysis</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Digital Forensics Capabilities</h2>
             <p className="text-xl text-slate-600">
@@ -189,7 +189,7 @@ export default function IncidentResponse() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {forensicCapabilities.map((capability, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6 text-center">
+                <CardContent className="p-3 sm:p-4 md:p-6 text-center">
                   <div className="font-semibold text-[oklch(0.20_0.05_250)]">{capability}</div>
                 </CardContent>
               </Card>
@@ -201,7 +201,7 @@ export default function IncidentResponse() {
       {/* Metrics */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Performance</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Incident Response Metrics</h2>
             <p className="text-xl text-slate-600">
@@ -216,7 +216,7 @@ export default function IncidentResponse() {
               { metric: '100%', label: 'Evidence Integrity' },
               { metric: '24/7', label: 'Emergency Hotline' }
             ].map((item, index) => (
-              <div key={index} className="text-center bg-white p-6 rounded-lg border-2 border-slate-200">
+              <div key={index} className="text-center bg-white p-3 sm:p-4 md:p-6 rounded-lg border-2 border-slate-200">
                 <div className="text-5xl font-bold text-[oklch(0.65_0.18_55)] mb-2">{item.metric}</div>
                 <div className="text-slate-600">{item.label}</div>
               </div>
@@ -229,7 +229,7 @@ export default function IncidentResponse() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Prepare for Security Incidents</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Establish incident response capabilities before a breach occurs. Contact Thalen Technologies to develop your IR plan or activate emergency response services.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

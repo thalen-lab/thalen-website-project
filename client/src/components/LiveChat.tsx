@@ -115,17 +115,17 @@ export default function LiveChat() {
             </div>
           </CardHeader>
 
-          <CardContent className="p-6">
+          <CardContent className="p-3 sm:p-4 md:p-6">
             {isOnline ? (
               // Online Chat Form
-              <div className="space-y-4">
+              <div className="space-y-2 sm:space-y-3 md:space-y-4">
                 <div className="bg-secondary p-4 rounded-lg">
                   <p className="text-sm text-muted-foreground">
                     <strong>Welcome!</strong> Our TS/SCI cleared solution architects are available to discuss your application development needs.
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-3 md:space-y-4">
                   <div>
                     <Label htmlFor="chat-name">Name *</Label>
                     <Input
@@ -179,7 +179,7 @@ export default function LiveChat() {
               </div>
             ) : (
               // Offline Message Form
-              <div className="space-y-4">
+              <div className="space-y-2 sm:space-y-3 md:space-y-4">
                 <div className="bg-secondary p-4 rounded-lg">
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-muted-foreground mt-0.5" />
@@ -195,7 +195,7 @@ export default function LiveChat() {
                   </div>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-3 md:space-y-4">
                   <div>
                     <Label htmlFor="offline-name">Name *</Label>
                     <Input

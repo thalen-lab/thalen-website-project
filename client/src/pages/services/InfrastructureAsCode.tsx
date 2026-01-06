@@ -112,7 +112,7 @@ export default function InfrastructureAsCode() {
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -135,10 +135,10 @@ export default function InfrastructureAsCode() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Infrastructure as Code (IaC)
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Automate infrastructure provisioning with Terraform, CloudFormation, and Ansible for consistent, repeatable deployments across all environments. Thalen Technologies's IaC framework reduces provisioning time from days to minutes while ensuring FedRAMP compliance and audit-ready documentation.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Schedule IaC Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -154,7 +154,7 @@ export default function InfrastructureAsCode() {
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Key Benefits</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Infrastructure as Code Benefits</h2>
             <p className="text-xl text-slate-600">
@@ -171,7 +171,7 @@ export default function InfrastructureAsCode() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{benefit.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
                   </CardContent>
@@ -185,7 +185,7 @@ export default function InfrastructureAsCode() {
       {/* Capabilities */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Expertise</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Comprehensive IaC Capabilities</h2>
             <p className="text-xl text-slate-600">
@@ -196,7 +196,7 @@ export default function InfrastructureAsCode() {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {capabilities.map((capability, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{capability.title}</h3>
                   <p className="text-slate-600 mb-6 leading-relaxed">{capability.description}</p>
                   <ul className="space-y-3">
@@ -217,7 +217,7 @@ export default function InfrastructureAsCode() {
       {/* IaC Process */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Process</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Our IaC Implementation Process</h2>
             <p className="text-xl text-slate-600">
@@ -228,7 +228,7 @@ export default function InfrastructureAsCode() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((phase, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{phase.step}</div>
                   <h3 className="text-xl font-bold mb-2 text-[oklch(0.20_0.05_250)]">{phase.title}</h3>
                   <p className="text-sm text-slate-600">{phase.description}</p>
@@ -242,7 +242,7 @@ export default function InfrastructureAsCode() {
       {/* Tools & Technologies */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Tools & Platforms</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">IaC Tools & Platforms</h2>
             <p className="text-xl text-slate-600">
@@ -250,10 +250,10 @@ export default function InfrastructureAsCode() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-6xl mx-auto">
             {tools.map((tool, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                <CardContent className="p-6">
+                <CardContent className="p-3 sm:p-4 md:p-6">
                   <h3 className="text-lg font-bold mb-2 text-[oklch(0.20_0.05_250)]">{tool.name}</h3>
                   <p className="text-sm text-slate-600">{tool.description}</p>
                 </CardContent>
@@ -267,7 +267,7 @@ export default function InfrastructureAsCode() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Automate Your Infrastructure?</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Start with an IaC readiness assessment and discover how Thalen Technologies can deliver automated, version-controlled infrastructure with FedRAMP compliance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

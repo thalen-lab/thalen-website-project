@@ -135,7 +135,7 @@ export default function Home() {
       <TrustedByClients />
 
       {/* Mission-Focused Solutions Section - Dark Navy with Cards */}
-      <section className="relative py-14 sm:py-16 md:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
+      <section className="relative py-14 sm:py-10 sm:py-12 md:py-16 lg:py-20 lg:py-24 bg-[#0A2540] overflow-hidden">
         {/* Subtle gradient overlay for depth */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540] via-[#0A2540] to-[#12344D]"></div>
         {/* Grid pattern overlay */}
@@ -143,7 +143,7 @@ export default function Home() {
         
         <div className="container relative z-10">
           {/* Header Section */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 lg:gap-8 mb-8 md:mb-10">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 lg:gap-8 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ export default function Home() {
                 <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Our Solutions</span>
               </div>
               
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-[1.1] tracking-tight">
+              <h2 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-[1.1] tracking-tight">
                 Mission-Focused Solutions
               </h2>
               <p className="text-sm md:text-base lg:text-lg text-white/80 leading-relaxed border-l-3 border-[#E07020]/50 pl-3">
@@ -409,7 +409,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-8 md:mb-10"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-10"
           >
             {/* Section Label */}
             <div className="inline-flex items-center gap-2 mb-3">
@@ -418,7 +418,7 @@ export default function Home() {
               <div className="w-10 h-[2px] bg-[#E07020]"></div>
             </div>
             
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-[1.1]">
+            <h2 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-[1.1]">
               Mission-First, Compliance-Assured
             </h2>
             <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
@@ -432,7 +432,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mb-8 md:mb-10"
+            className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-10"
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
               {/* FedRAMP */}
@@ -487,7 +487,7 @@ export default function Home() {
           >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
               <div className="flex-1 text-center lg:text-left">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                <h3 className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">
                   Your Technology Investments, Protected
                 </h3>
                 <p className="text-white/80 max-w-2xl text-sm">
@@ -513,7 +513,7 @@ export default function Home() {
       <section className="relative py-12 sm:py-14 md:py-16 lg:py-20 bg-gradient-to-br from-white to-slate-50 overflow-hidden">
         <div className="container relative z-10">
           <motion.div 
-            className="text-center mb-8 md:mb-10"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -526,7 +526,7 @@ export default function Home() {
               <div className="w-10 h-[2px] bg-[#E07020]"></div>
             </div>
             
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-[#0A2540] leading-[1.1]">
+            <h2 className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-[#0A2540] leading-[1.1]">
               Trusted Partners Across Sectors
             </h2>
             <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">

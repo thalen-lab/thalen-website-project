@@ -121,10 +121,10 @@ export default function DisasterRecovery() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Disaster Recovery & Business Continuity
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Enterprise-grade DR solutions with automated failover, geo-redundant backups, and guaranteed RTOs meeting government continuity requirements. Thalen Technologies delivers disaster recovery architecture ensuring mission continuity with &lt; 15 minute recovery times and FedRAMP/StateRAMP compliance.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Request DR Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -140,7 +140,7 @@ export default function DisasterRecovery() {
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Key Benefits</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Enterprise Disaster Recovery Benefits</h2>
             <p className="text-xl text-slate-600">
@@ -157,7 +157,7 @@ export default function DisasterRecovery() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{benefit.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
                   </CardContent>
@@ -171,7 +171,7 @@ export default function DisasterRecovery() {
       {/* DR Capabilities */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Capabilities</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Comprehensive DR Capabilities</h2>
             <p className="text-xl text-slate-600">
@@ -182,7 +182,7 @@ export default function DisasterRecovery() {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {drCapabilities.map((capability, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{capability.title}</h3>
                   <p className="text-slate-600 mb-6 leading-relaxed">{capability.description}</p>
                   <ul className="space-y-3">
@@ -203,7 +203,7 @@ export default function DisasterRecovery() {
       {/* DR Strategies */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Recovery Strategies</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Disaster Recovery Strategies</h2>
             <p className="text-xl text-slate-600">
@@ -214,7 +214,7 @@ export default function DisasterRecovery() {
           <div className="grid md:grid-cols-3 gap-8">
             {drStrategies.map((strategy, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full flex flex-col">
-                <CardContent className="p-8 flex flex-col flex-grow">
+                <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{strategy.title}</h3>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="bg-[oklch(0.97_0.01_250)] p-3 rounded-lg">
@@ -242,7 +242,7 @@ export default function DisasterRecovery() {
       {/* Compliance Standards */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-12 max-w-3xl mx-auto">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance Focus</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal Continuity Compliance</h2>
             <p className="text-xl text-slate-600">
@@ -264,7 +264,7 @@ export default function DisasterRecovery() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Ensure Mission Continuity?</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Start with a comprehensive disaster recovery assessment and discover how Thalen Technologies can deliver &lt; 15 minute RTOs with FedRAMP-compliant architecture.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

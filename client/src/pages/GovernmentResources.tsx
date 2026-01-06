@@ -184,7 +184,7 @@ export default function GovernmentResources() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-10"
+                className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-10"
               >
                 Nexdyne provides secure, compliant, and efficient technology solutions to help federal, state, and local government agencies better serve their communities.
               </motion.p>
@@ -208,7 +208,7 @@ export default function GovernmentResources() {
         {/* Solutions Section */}
         <section id="solutions" className="py-20 bg-[oklch(0.97_0.01_250)]">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Core Government Solutions</h2>
               <p className="text-lg text-slate-600">
                 We deliver specialized solutions to address the unique challenges of public sector organizations, focusing on security, compliance, and digital transformation.
@@ -256,7 +256,7 @@ export default function GovernmentResources() {
         {/* Compliance Frameworks Section */}
         <section id="frameworks" className="py-20 bg-white">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance Frameworks</p>
               <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">FedRAMP vs. StateRAMP</h2>
               <p className="text-lg text-slate-600">
@@ -264,7 +264,7 @@ export default function GovernmentResources() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-[oklch(0.20_0.05_250)]">FedRAMP (Federal)</CardTitle>
@@ -309,7 +309,7 @@ export default function GovernmentResources() {
         {/* Interactive Checklists */}
         <section id="checklists" className="py-20 bg-[oklch(0.97_0.01_250)]">
           <div className="container max-w-4xl">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Interactive Compliance Checklists</h2>
               <p className="text-lg text-slate-600">Track your compliance readiness for CMMC Level 2 with our interactive checklist.</p>
             </div>
@@ -360,14 +360,14 @@ export default function GovernmentResources() {
         {/* ROI Calculators */}
         <section id="calculators" className="py-20 bg-white">
           <div className="container max-w-6xl">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">ROI Calculators</p>
               <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Justify Your IT Modernization</h2>
               <p className="text-lg text-slate-600">Calculate the potential return on investment for your cloud migration and process automation initiatives.</p>
             </div>
 
-            <Card className="mb-8 border-2 border-slate-200 bg-[oklch(0.97_0.01_250)]">
-              <CardContent className="p-6">
+            <Card className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 border-2 border-slate-200 bg-[oklch(0.97_0.01_250)]">
+              <CardContent className="p-3 sm:p-4 md:p-6">
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                   <div className="flex-1">
                     <h3 className="font-semibold text-lg text-[oklch(0.20_0.05_250)] mb-1">ROI Scenario</h3>
@@ -395,7 +395,7 @@ export default function GovernmentResources() {
               <TabsContent value="cloud" className="mt-8">
                 <Card className="bg-white border-2 border-slate-200">
                   <div className="grid md:grid-cols-2">
-                    <div className="p-8">
+                    <div className="p-4 sm:p-6 md:p-8">
                       <h3 className="text-2xl font-semibold text-[oklch(0.20_0.05_250)] mb-6">Cloud Migration ROI Calculator</h3>
                       <div className="space-y-4">
                         <div>
@@ -417,7 +417,7 @@ export default function GovernmentResources() {
                         <Button onClick={calculateCloudROI} className="w-full bg-[oklch(0.22_0.06_250)] text-white hover:bg-[oklch(0.22_0.06_250)]/90">Calculate ROI</Button>
                       </div>
                     </div>
-                    <div className="p-8 bg-[oklch(0.97_0.01_250)] rounded-r-lg">
+                    <div className="p-4 sm:p-6 md:p-8 bg-[oklch(0.97_0.01_250)] rounded-r-lg">
                       <h3 className="text-2xl font-semibold text-[oklch(0.20_0.05_250)] mb-6">3-Year ROI Projection</h3>
                       {cloudROI ? (
                         <div className="space-y-4">
@@ -445,7 +445,7 @@ export default function GovernmentResources() {
               <TabsContent value="automation" className="mt-8">
                 <Card className="bg-white border-2 border-slate-200">
                   <div className="grid md:grid-cols-2">
-                    <div className="p-8">
+                    <div className="p-4 sm:p-6 md:p-8">
                       <h3 className="text-2xl font-semibold text-[oklch(0.20_0.05_250)] mb-6">Process Automation ROI Calculator</h3>
                       <div className="space-y-4">
                         <div>
@@ -467,7 +467,7 @@ export default function GovernmentResources() {
                         <Button onClick={calculateAutomationROI} className="w-full bg-[oklch(0.22_0.06_250)] text-white hover:bg-[oklch(0.22_0.06_250)]/90">Calculate ROI</Button>
                       </div>
                     </div>
-                    <div className="p-8 bg-[oklch(0.97_0.01_250)] rounded-r-lg">
+                    <div className="p-4 sm:p-6 md:p-8 bg-[oklch(0.97_0.01_250)] rounded-r-lg">
                       <h3 className="text-2xl font-semibold text-[oklch(0.20_0.05_250)] mb-6">3-Year ROI Projection</h3>
                       {automationROI ? (
                         <div className="space-y-4">
@@ -500,7 +500,7 @@ export default function GovernmentResources() {
         <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
           <div className="container text-center max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold mb-4">Ready to Modernize Your Agency?</h2>
-            <p className="text-lg text-white/80 mb-8">
+            <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Let's discuss your specific needs and how Nexdyne can help you achieve your modernization goals. Schedule a free consultation with our public sector experts today.
             </p>
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

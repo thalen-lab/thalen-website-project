@@ -105,7 +105,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full h-[500px] sm:h-[560px] md:h-[650px] lg:h-[750px] xl:h-[85vh] min-h-[700px] overflow-hidden shrink-0">
+    <div className="relative w-full h-[320px] xs:h-[380px] sm:h-[450px] md:h-[520px] lg:h-[600px] xl:h-[700px] 2xl:h-[85vh] 2xl:min-h-[700px] overflow-hidden shrink-0">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -138,8 +138,9 @@ export default function HeroCarousel() {
                 className={`w-full h-full object-cover transition-opacity duration-500 ${
                   loadedImages.has(slide.id) ? 'opacity-100' : 'opacity-0'
                 } ${
-                  slide.id === 1 ? 'object-[center_0%]' : 
-                  slide.id === 3 || slide.id === 4 ? 'object-[center_15%]' : 'object-center'
+                  slide.id === 1 ? 'object-[center_20%] sm:object-[center_10%] md:object-[center_0%]' : 
+                  slide.id === 3 || slide.id === 4 ? 'object-[center_30%] sm:object-[center_20%] md:object-[center_15%]' : 
+                  'object-[center_40%] sm:object-[center_30%] md:object-center'
                 }`}
               />
             </picture>
@@ -147,20 +148,20 @@ export default function HeroCarousel() {
         </div>
       ))}
 
-      {/* Bottom Title Banner - Localized transparent text background */}
+      {/* Bottom Title Banner - Responsive text sizing and padding */}
       <div className="absolute bottom-0 left-0 right-0 z-20">
-        <div className="container py-5 sm:py-6 md:py-8">
+        <div className="container py-3 sm:py-4 md:py-6 lg:py-8">
           {/* Text content with localized semi-transparent backdrop */}
-          <div className="inline-block">
-            <div className="bg-[#2A2A2A]/40 backdrop-blur-[6px] px-5 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 rounded-sm">
-              {/* Main Title */}
+          <div className="inline-block max-w-full">
+            <div className="bg-[#2A2A2A]/50 sm:bg-[#2A2A2A]/40 backdrop-blur-[4px] sm:backdrop-blur-[6px] px-3 sm:px-5 md:px-6 lg:px-8 py-3 sm:py-4 md:py-5 lg:py-6 rounded-sm">
+              {/* Main Title - Responsive sizing */}
               <h1 
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide mb-2 sm:mb-3"
+                className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white tracking-wide mb-1.5 sm:mb-2 md:mb-3 leading-tight"
               >
                 {slides[currentSlide].title}
               </h1>
-              {/* Subtitle */}
-              <p className="text-sm sm:text-base md:text-lg text-white/90 font-light max-w-3xl leading-relaxed">
+              {/* Subtitle - Responsive sizing with line clamping on mobile */}
+              <p className="text-xs xs:text-sm sm:text-base md:text-lg text-white/90 font-light max-w-3xl leading-relaxed line-clamp-3 sm:line-clamp-none">
                 {slides[currentSlide].subtitle}
               </p>
             </div>
@@ -168,19 +169,21 @@ export default function HeroCarousel() {
         </div>
       </div>
 
-      {/* Slide Indicators - Subtle dots at bottom right */}
-      <div className="absolute bottom-36 sm:bottom-40 md:bottom-44 lg:bottom-48 right-4 sm:right-6 md:right-8 z-20 flex gap-2">
+      {/* Slide Indicators - Responsive positioning */}
+      <div className="absolute bottom-24 xs:bottom-28 sm:bottom-32 md:bottom-36 lg:bottom-40 xl:bottom-44 right-3 sm:right-4 md:right-6 lg:right-8 z-20 flex gap-1.5 sm:gap-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 min-w-[12px] min-h-[12px] sm:min-w-[16px] sm:min-h-[16px] flex items-center justify-center ${
               index === currentSlide 
-                ? "bg-white w-6" 
+                ? "bg-white w-4 sm:w-6" 
                 : "bg-white/50 hover:bg-white/70"
             }`}
             aria-label={`Go to slide ${index + 1}`}
-          />
+          >
+            <span className="sr-only">Slide {index + 1}</span>
+          </button>
         ))}
       </div>
     </div>

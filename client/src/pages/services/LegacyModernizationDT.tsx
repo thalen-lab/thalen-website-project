@@ -98,7 +98,7 @@ export default function LegacyModernizationDT() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -107,7 +107,7 @@ export default function LegacyModernizationDT() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 via-[#0A2540]/80 to-[#12344D]/75"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <Breadcrumb 
                 items={[
                   { label: 'Services', href: '/consulting-services' },
@@ -129,10 +129,10 @@ export default function LegacyModernizationDT() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Legacy System Modernization
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               We help agencies migrate from mainframe and legacy systems to modern FedRAMP and StateRAMP cloud platforms with zero business disruption, comprehensive change management, and 40-60% cost reduction.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Start Modernization Assessment
@@ -152,7 +152,7 @@ export default function LegacyModernizationDT() {
       {/* Modernization Capabilities */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Legacy Modernization Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive modernization services for mainframe, legacy databases, and aging applications
@@ -192,7 +192,7 @@ export default function LegacyModernizationDT() {
       {/* Modernization Approaches */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Modernization Approaches</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We select the optimal modernization approach based on your business needs and timeline
@@ -228,7 +228,7 @@ export default function LegacyModernizationDT() {
       {/* Legacy System Types */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Legacy Systems We Modernize</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We have deep expertise modernizing mainframes, legacy databases, and aging applications
@@ -236,7 +236,7 @@ export default function LegacyModernizationDT() {
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {legacySystemTypes.map((item, index) => (
-              <div key={index} className="flex gap-3 p-6 bg-secondary rounded-lg border-2 border-border">
+              <div key={index} className="flex gap-3 p-3 sm:p-4 md:p-6 bg-secondary rounded-lg border-2 border-border">
                 <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
                 <div>
                   <div className="font-semibold mb-1">{item.system}</div>
@@ -251,7 +251,7 @@ export default function LegacyModernizationDT() {
       {/* Migration Phases */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Migration Process</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Structured 6-phase process ensures successful legacy system modernization
@@ -259,7 +259,7 @@ export default function LegacyModernizationDT() {
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {migrationPhases.map((item, index) => (
-              <div key={index} className="flex gap-3 p-6 bg-background rounded-lg border-2 border-border">
+              <div key={index} className="flex gap-3 p-3 sm:p-4 md:p-6 bg-background rounded-lg border-2 border-border">
                 <div className="h-1.5 w-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
                 <div>
                   <div className="font-semibold mb-1">{item.phase}</div>
@@ -274,7 +274,7 @@ export default function LegacyModernizationDT() {
       {/* Risk Mitigation */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold mb-4">Risk Mitigation Strategies</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We proactively address common modernization risks with proven mitigation strategies
@@ -302,10 +302,10 @@ export default function LegacyModernizationDT() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your Legacy Systems?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Our legacy modernization specialists can help you migrate to modern cloud platforms with zero business disruption and significant cost savings.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-orange-gradient hover:opacity-90">
                   Schedule Modernization Consultation

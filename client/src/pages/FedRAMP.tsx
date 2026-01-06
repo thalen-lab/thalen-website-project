@@ -114,7 +114,7 @@ export default function FedRAMP() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'FedRAMP' }
@@ -129,10 +129,10 @@ export default function FedRAMP() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               FedRAMP Authorization Services
             </h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-100 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               Accelerate your path to FedRAMP authorization with our proven methodology, expert guidance, and comprehensive support. We help cloud service providers achieve and maintain FedRAMP compliance for federal agencies, opening doors to billions in federal opportunities.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
                   Schedule FedRAMP Assessment
@@ -199,7 +199,7 @@ export default function FedRAMP() {
       {/* Benefits Section */}
       <section className="py-20 bg-slate-50">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Why FedRAMP Authorization Matters</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               FedRAMP authorization opens the door to federal opportunities and demonstrates your commitment to the highest security standards.
@@ -225,7 +225,7 @@ export default function FedRAMP() {
       {/* Services Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Our FedRAMP Services</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Comprehensive support throughout your entire FedRAMP journey, from initial readiness assessment to ongoing continuous monitoring.
@@ -259,7 +259,7 @@ export default function FedRAMP() {
       {/* Process Section */}
       <section className="py-20 bg-slate-50">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Our FedRAMP Authorization Process</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               A proven four-phase methodology that takes you from readiness assessment to full authorization and beyond.
@@ -299,9 +299,9 @@ export default function FedRAMP() {
             <Badge className="mb-4 bg-green-100 text-green-700 hover:bg-green-100">
               Success Story
             </Badge>
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">{caseStudy.title}</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">{caseStudy.title}</h2>
             
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="grid md:grid-cols-2 gap-8 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               <div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">The Challenge</h3>
                 <p className="text-slate-600">{caseStudy.challenge}</p>
@@ -312,7 +312,7 @@ export default function FedRAMP() {
               </div>
             </div>
 
-            <div className="bg-slate-50 rounded-lg p-8">
+            <div className="bg-slate-50 rounded-lg p-4 sm:p-6 md:p-8">
               <h3 className="text-lg font-semibold text-slate-900 mb-4">Results Achieved</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {caseStudy.results.map((result, index) => (
@@ -335,10 +335,10 @@ export default function FedRAMP() {
           <div className="max-w-3xl mx-auto text-center">
             <Users className="h-16 w-16 text-orange-400 mx-auto mb-6" />
             <h2 className="text-4xl font-bold mb-6">Ready to Start Your FedRAMP Journey?</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-100 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Our FedRAMP experts are ready to assess your readiness, develop your authorization strategy, and guide you through every step of the process.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
                   Schedule Consultation

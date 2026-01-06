@@ -4,10 +4,10 @@ export function DashboardLayoutSkeleton() {
   return (
     <div className="flex min-h-screen bg-background">
       {/* Sidebar skeleton */}
-      <div className="w-[280px] border-r border-border bg-background p-4 space-y-6">
+      <div className="w-[280px] border-r border-border bg-background p-4 space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 md:space-y-6">
         {/* Logo area */}
         <div className="flex items-center gap-3 px-2">
-          <Skeleton className="h-8 w-8 rounded-md" />
+          <Skeleton className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 rounded-md" />
           <Skeleton className="h-4 w-24" />
         </div>
 
@@ -31,7 +31,7 @@ export function DashboardLayoutSkeleton() {
       </div>
 
       {/* Main content skeleton */}
-      <div className="flex-1 p-4 space-y-4">
+      <div className="flex-1 p-4 space-y-2 sm:space-y-3 md:space-y-4">
         {/* Content blocks */}
         <Skeleton className="h-12 w-48 rounded-lg" />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

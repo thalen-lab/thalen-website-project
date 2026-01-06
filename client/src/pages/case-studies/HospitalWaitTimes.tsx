@@ -19,7 +19,7 @@ export default function HospitalWaitTimes() {
 
         <div className="container relative z-10">
           <Link href="/case-studies">
-            <Button variant="ghost" className="text-white/90 hover:text-white mb-8 -ml-4">
+            <Button variant="ghost" className="text-white/90 hover:text-white mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 -ml-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Case Studies
             </Button>
@@ -30,11 +30,11 @@ export default function HospitalWaitTimes() {
               Case Study
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-tight">
               Hospital Reduces Wait Times 65%
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed">
               How a patient flow optimization platform reduced emergency department wait times from 4.5 hours to 1.5 hours while improving satisfaction scores by 85%
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function HospitalWaitTimes() {
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Opportunity</p>
               <h2 className="text-4xl md:text-5xl font-serif font-normal text-[oklch(0.20_0.05_250)] leading-tight">
                 A hospital recognized that emergency department crowding was compromising patient care
@@ -73,7 +73,7 @@ export default function HospitalWaitTimes() {
       <section className="py-24 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Solution</p>
               <h2 className="text-4xl md:text-5xl font-serif font-normal text-[oklch(0.20_0.05_250)] leading-tight">
                 A patient flow platform optimized operations through real-time analytics and automated coordination
@@ -151,13 +151,13 @@ export default function HospitalWaitTimes() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-normal text-white mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-white mb-6">
               Transform your hospital operations with patient flow optimization
             </h2>
-            <p className="text-lg text-white/80 mb-8">
+            <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Discover how patient flow platforms can help your hospital reduce wait times, improve satisfaction, and increase throughput while maintaining HIPAA compliance.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                   Schedule a Consultation

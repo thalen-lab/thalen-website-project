@@ -41,11 +41,11 @@ export default function InsightArticleLayout({
       <Navigation />
 
       {/* Article Header - Clean Mission Cloud Style */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-amber-50 to-amber-100/50">
+      <section className="relative py-10 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-b from-amber-50 to-amber-100/50">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             {/* Back Link & Category */}
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-8">
               <Link href="/insights">
                 <span className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   <ArrowLeft className="mr-2 h-4 w-4" />
@@ -65,12 +65,12 @@ export default function InsightArticleLayout({
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-8">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4 sm:mb-6 md:mb-8">
               {title}
             </h1>
 
             {/* Description/Excerpt */}
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed mb-4 sm:mb-6 md:mb-8">
               {description}
             </p>
 
@@ -98,7 +98,7 @@ export default function InsightArticleLayout({
       </section>
 
       {/* Article Content */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-amber-100/50 to-amber-50/30">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-amber-100/50 to-amber-50/30">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             {/* Social Share - Top */}
@@ -159,7 +159,7 @@ export default function InsightArticleLayout({
       />
 
       {/* Comments Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-amber-50/50 to-background">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-amber-50/50 to-background">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <CommentSection articleSlug={articleSlug} />
@@ -168,13 +168,13 @@ export default function InsightArticleLayout({
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Organization?
             </h2>
-            <p className="text-xl text-slate-300 mb-8">
+            <p className="text-xl text-slate-300 mb-4 sm:mb-6 md:mb-8">
               Let's discuss how Thalen Technologies can help you achieve similar results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -160,7 +160,7 @@ export default function FederalSolutions() {
       <Navigation />
 
       {/* Hero Section with Background Image */}
-      <section className="relative py-24 md:py-32 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -171,7 +171,7 @@ export default function FederalSolutions() {
         
         <div className="container relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[{ label: 'Federal Solutions' }]} 
               variant="light" 
@@ -184,13 +184,13 @@ export default function FederalSolutions() {
             className="max-w-4xl"
           >
             <p className="text-[oklch(0.75_0.15_55)] font-semibold mb-4 uppercase tracking-wider">Government Services</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Government Solutions & Contract Vehicles
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Thalen Technologies is a trusted government IT implementation partner with GSA Schedule contracts, StateRAMP expertise, proven past performance, and cleared personnel ready to support federal, state, and local government agencies.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 hover:shadow-xl hover:scale-105 active:scale-95 transition-all font-semibold">
                 <Link href="/contact">
                   Request Capability Statement
@@ -208,23 +208,23 @@ export default function FederalSolutions() {
       </section>
 
       {/* Contract Vehicles */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Contract Vehicles</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Government Contract Vehicles</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Government Contract Vehicles</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Pre-approved contract vehicles enabling streamlined procurement for government agencies and simplified acquisition processes.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {contractVehicles.map((vehicle, index) => (
               <motion.div
                 key={index}
@@ -234,7 +234,7 @@ export default function FederalSolutions() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{vehicle.name}</h3>
                     <p className="text-sm text-[oklch(0.65_0.18_55)] font-mono mb-4">{vehicle.number}</p>
                     <p className="text-slate-600 mb-4">{vehicle.description}</p>
@@ -262,17 +262,17 @@ export default function FederalSolutions() {
       </section>
 
       {/* Procurement Advantages */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Why Choose Us</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Why Procure Through Thalen Technologies?</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Why Procure Through Thalen Technologies?</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Streamlined acquisition, competitive pricing, and proven delivery reduce risk and accelerate mission outcomes.
             </p>
@@ -297,17 +297,17 @@ export default function FederalSolutions() {
       </section>
 
       {/* Past Performance */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Track Record</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Past Performance & Agency Experience</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Past Performance & Agency Experience</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Experience delivering mission-critical IT solutions across federal, state, and local government agencies.
             </p>
@@ -323,7 +323,7 @@ export default function FederalSolutions() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <div className="grid md:grid-cols-5 gap-6 items-center">
                       <div className="md:col-span-2">
                         <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{performance.agency}</h3>
@@ -361,23 +361,23 @@ export default function FederalSolutions() {
       </section>
 
       {/* Certifications & Credentials */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Credentials</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Certifications & Government Credentials</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Certifications & Government Credentials</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Certifications and cleared personnel supporting federal security and quality standards compliance.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
@@ -387,7 +387,7 @@ export default function FederalSolutions() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 text-center">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{cert.name}</h3>
                     <p className="text-sm text-slate-600">{cert.description}</p>
                   </CardContent>
@@ -399,23 +399,23 @@ export default function FederalSolutions() {
       </section>
 
       {/* FAR Compliance & Contract Requirements */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Regulatory Compliance</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal Acquisition Regulation (FAR) Compliance</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Federal Acquisition Regulation (FAR) Compliance</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Thalen Technologies maintains compliance with Federal Acquisition Regulation requirements for government IT services, ensuring streamlined contract execution and reduced agency risk.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -423,7 +423,7 @@ export default function FederalSolutions() {
               transition={{ duration: 0.6 }}
             >
               <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">IT Services Compliance</h3>
                   <p className="text-slate-600 mb-6">
                     Our operations comply with FAR Part 39 (Acquisition of Information Technology) and associated clauses governing IT professional services, cloud solutions, and cybersecurity implementations.
@@ -462,7 +462,7 @@ export default function FederalSolutions() {
               transition={{ duration: 0.6 }}
             >
               <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Defense Contracts Compliance</h3>
                   <p className="text-slate-600 mb-6">
                     For Department of Defense contracts, we maintain compliance with Defense Federal Acquisition Regulation Supplement (DFARS) requirements governing Controlled Unclassified Information (CUI).
@@ -502,7 +502,7 @@ export default function FederalSolutions() {
             transition={{ duration: 0.6 }}
           >
             <Card className="bg-[oklch(0.97_0.01_250)] border-2 border-slate-200">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Procurement Benefits of FAR Compliance</h3>
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
@@ -531,23 +531,23 @@ export default function FederalSolutions() {
       </section>
 
       {/* Core Capabilities */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Expertise</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Core Government IT Capabilities</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Core Government IT Capabilities</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Comprehensive IT implementation services designed for government agencies requiring FedRAMP compliance and mission-critical reliability.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {capabilities.map((capability, index) => (
               <motion.div
                 key={index}
@@ -557,7 +557,7 @@ export default function FederalSolutions() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">{capability.category}</h3>
                     <ul className="space-y-3">
                       {capability.services.map((service, idx) => (
@@ -585,23 +585,23 @@ export default function FederalSolutions() {
       </section>
 
       {/* Teaming & Subcontracting */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Partnerships</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Teaming & Subcontracting Partnerships</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">Teaming & Subcontracting Partnerships</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Thalen Technologies partners with certified small businesses to strengthen proposals for set-aside contracts and deliver comprehensive solutions.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             {[
               { name: '8(a) Partners', description: 'SBA-certified disadvantaged business partnerships' },
               { name: 'SDVOSB Partners', description: 'Service-disabled veteran-owned small business' },
@@ -616,7 +616,7 @@ export default function FederalSolutions() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 text-center">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-lg font-bold text-[oklch(0.20_0.05_250)] mb-2">{partner.name}</h3>
                     <p className="text-sm text-slate-600">{partner.description}</p>
                   </CardContent>
@@ -632,7 +632,7 @@ export default function FederalSolutions() {
             transition={{ duration: 0.6 }}
           >
             <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-6">Teaming Benefits & Capabilities</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   {[
@@ -671,26 +671,26 @@ export default function FederalSolutions() {
       </section>
 
       {/* State & Local Government Solutions */}
-      <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
           >
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">State & Local</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State & Local Government Solutions</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State & Local Government Solutions</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Comprehensive IT implementation services for state agencies, counties, municipalities, and education institutions through cooperative purchasing and state-specific contracts.
             </p>
           </motion.div>
 
           {/* State/Local Contract Vehicles */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-8 text-center">Cooperative Purchasing Contracts</h3>
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
+            <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-center">Cooperative Purchasing Contracts</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 sm:gap-4 md:gap-3 sm:gap-4 md:gap-6 lg:gap-8">
               {[
                 { name: 'NASPO ValuePoint', number: 'Cloud Solutions Contract', description: 'Multi-state cooperative purchasing for cloud services, enabling streamlined procurement across participating states.', scope: 'All 50 states and territories' },
                 { name: 'Sourcewell', number: '#012345-ABC', description: 'Cooperative purchasing organization serving government, education, and nonprofit entities nationwide.', scope: '50,000+ participating agencies' },
@@ -705,7 +705,7 @@ export default function FederalSolutions() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-8">
+                    <CardContent className="p-4 sm:p-6 md:p-8">
                       <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-2">{vehicle.name}</h3>
                       <p className="text-sm text-[oklch(0.65_0.18_55)] font-mono mb-4">{vehicle.number}</p>
                       <p className="text-slate-600 mb-4">{vehicle.description}</p>
@@ -720,9 +720,9 @@ export default function FederalSolutions() {
           </div>
 
           {/* State/Local Compliance */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-8 text-center">State & Local Compliance Expertise</h3>
-            <div className="grid md:grid-cols-3 gap-6">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
+            <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-center">State & Local Compliance Expertise</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {[
                 { name: 'StateRAMP', description: 'State-level cloud security authorization program implementation expertise for state agencies requiring secure cloud solutions.' },
                 { name: 'CJIS Compliance', description: 'Criminal Justice Information Services security policy implementation for law enforcement and public safety agencies.' },
@@ -736,7 +736,7 @@ export default function FederalSolutions() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-6">
+                    <CardContent className="p-3 sm:p-4 md:p-6">
                       <h4 className="font-bold text-[oklch(0.20_0.05_250)] mb-2">{framework.name}</h4>
                       <p className="text-sm text-slate-600">{framework.description}</p>
                     </CardContent>
@@ -748,7 +748,7 @@ export default function FederalSolutions() {
 
           {/* State/Local Past Performance */}
           <div>
-            <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-8 text-center">State & Local Past Performance Highlights</h3>
+            <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-center">State & Local Past Performance Highlights</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 { title: 'State Departments of Transportation', contracts: '8 contracts | $6M+', description: 'Cloud migration, real-time analytics for traffic management, and data integration across legacy systems.', tags: ['Cloud', 'Data Analytics', 'Integration'] },
@@ -764,7 +764,7 @@ export default function FederalSolutions() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Card className="h-full bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-6">
+                    <CardContent className="p-3 sm:p-4 md:p-6">
                       <div className="flex justify-between items-start mb-4">
                         <div>
                           <h4 className="font-bold text-lg text-[oklch(0.20_0.05_250)]">{perf.title}</h4>
@@ -798,14 +798,14 @@ export default function FederalSolutions() {
       </section>
 
       {/* Federal ROI Calculator */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-white">
         <div className="container">
           <FederalROICalculator />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-[oklch(0.22_0.06_250)] text-white">
+      <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -813,8 +813,8 @@ export default function FederalSolutions() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work with Thalen Technologies?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Ready to Work with Thalen Technologies?</h2>
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
               Generate a customized capability statement, schedule a consultation, or learn more about our government contract vehicles and past performance.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

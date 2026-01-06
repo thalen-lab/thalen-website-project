@@ -51,7 +51,7 @@ export default function Healthcare() {
       <Navigation />
 
       <main>
-        <section className="relative py-20 sm:py-24 md:py-32 text-white">
+        <section className="relative py-20 sm:py-12 sm:py-10 sm:py-12 md:py-16 lg:py-24 lg:py-32 text-white">
           <div aria-hidden="true" className="absolute inset-0 bg-[#0A2540]"></div>
           <div className="absolute inset-0 bg-[url(/img/patterns/hero-pattern.svg)] bg-center bg-repeat opacity-5"></div>
           <div className="relative container z-10">
@@ -62,10 +62,10 @@ export default function Healthcare() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
                 Healthcare & Life Sciences
               </h1>
-              <p className="text-lg sm:text-xl text-white/90 max-w-3xl mb-8">
+              <p className="text-lg sm:text-xl text-white/90 max-w-3xl mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 HIPAA-compliant automation and analytics solutions that improve patient outcomes while reducing operational costs. Support clinical workflows, enable value-based care, and facilitate data-driven decision making across your healthcare organization.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                 <Button size="lg" asChild>
                   <a href="#" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                     Schedule Healthcare Assessment
@@ -100,9 +100,9 @@ export default function Healthcare() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20 md:py-24">
+        <section className="py-16 sm:py-10 sm:py-14 md:py-20 lg:py-24">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Key Outcomes</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[oklch(0.20_0.05_250)] mb-4">Healthcare Transformation Outcomes</h2>
               <p className="text-lg text-slate-600">
@@ -120,7 +120,7 @@ export default function Healthcare() {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white border-2 border-slate-200 rounded-xl p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                  className="bg-white border-2 border-slate-200 rounded-xl p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -134,9 +134,9 @@ export default function Healthcare() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20 md:py-24 bg-[oklch(0.97_0.01_250)]">
+        <section className="py-16 sm:py-10 sm:py-14 md:py-20 lg:py-24 bg-[oklch(0.97_0.01_250)]">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Challenges</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[oklch(0.20_0.05_250)] mb-4">Healthcare Challenges We Solve</h2>
               <p className="text-lg text-slate-600">
@@ -145,7 +145,7 @@ export default function Healthcare() {
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {challenges.map((challenge, index) => (
-                <div key={index} className="bg-white border-2 border-slate-200 rounded-xl p-8">
+                <div key={index} className="bg-white border-2 border-slate-200 rounded-xl p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{challenge.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{challenge.description}</p>
                 </div>
@@ -154,9 +154,9 @@ export default function Healthcare() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20 md:py-24">
+        <section className="py-16 sm:py-10 sm:py-14 md:py-20 lg:py-24">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Solutions</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[oklch(0.20_0.05_250)] mb-4">Our Healthcare Solutions</h2>
               <p className="text-lg text-slate-600">
@@ -177,9 +177,9 @@ export default function Healthcare() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20 md:py-24 bg-[oklch(0.97_0.01_250)]">
+        <section className="py-16 sm:py-10 sm:py-14 md:py-20 lg:py-24 bg-[oklch(0.97_0.01_250)]">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16">
               <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[oklch(0.20_0.05_250)] mb-4">Healthcare Success Story</h2>
               <p className="text-lg text-slate-600">
@@ -189,7 +189,7 @@ export default function Healthcare() {
             <Card className="overflow-hidden max-w-5xl mx-auto bg-white border-2 border-slate-200 rounded-xl">
               <CardContent className="p-0">
                 <div className="grid md:grid-cols-2">
-                  <div className="bg-[oklch(0.22_0.06_250)] text-white p-8 sm:p-12 flex flex-col justify-center">
+                  <div className="bg-[oklch(0.22_0.06_250)] text-white p-4 sm:p-6 md:p-8 sm:p-12 flex flex-col justify-center">
                     <p className="font-semibold text-[oklch(0.75_0.15_55)] mb-2 uppercase tracking-wider">Featured Success</p>
                     <h3 className="text-2xl sm:text-3xl font-bold mb-4">Healthcare System Saves $12M Through AI Analytics</h3>
                     <p className="text-white/90 mb-6">
@@ -202,10 +202,10 @@ export default function Healthcare() {
                       </a>
                     </Button>
                   </div>
-                  <div className="bg-white p-8 sm:p-12 flex items-center justify-center">
+                  <div className="bg-white p-4 sm:p-6 md:p-8 sm:p-12 flex items-center justify-center">
                     <div className="text-center w-full">
                       <div className="text-6xl sm:text-7xl font-bold text-[oklch(0.20_0.05_250)] mb-2">$12M</div>
-                      <div className="text-base text-slate-600 mb-8 uppercase tracking-wider">Annual Savings</div>
+                      <div className="text-base text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 uppercase tracking-wider">Annual Savings</div>
                       <div className="grid grid-cols-2 gap-6 text-left text-[oklch(0.20_0.05_250)]">
                         <div>
                           <div className="text-3xl font-bold">40%</div>
@@ -232,10 +232,10 @@ export default function Healthcare() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20 md:py-24 bg-[oklch(0.22_0.06_250)] text-white">
+        <section className="py-16 sm:py-10 sm:py-14 md:py-20 lg:py-24 bg-[oklch(0.22_0.06_250)] text-white">
           <div className="container text-center max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Transform Healthcare Delivery</h2>
-            <p className="text-lg sm:text-xl text-white/90 mb-8">
+            <p className="text-lg sm:text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Schedule a healthcare automation assessment with our clinical informatics experts. We'll analyze your workflows, identify high-impact opportunities, and provide a detailed ROI projection tailored to your organization's clinical and financial goals.
             </p>
             <Button size="lg" asChild>

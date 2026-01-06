@@ -46,7 +46,7 @@ export default function Methodology() {
       {/* Timeline Overview */}
       <section className="py-16 px-4 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-6xl text-center text-[oklch(0.20_0.05_250)]">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <div>
               <div className="text-4xl font-bold mb-2">2-3 weeks</div>
               <div className="text-sm text-slate-600">Research & Assessment</div>
@@ -73,7 +73,7 @@ export default function Methodology() {
       {/* Four Phases */}
       <section className="py-20 px-4 bg-white">
         <div className="container max-w-6xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Framework</p>
             <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)]">Four Phases to Modernization Success</h2>
           </div>
@@ -119,7 +119,7 @@ export default function Methodology() {
             }].map((phaseItem, index) => (
               <motion.div 
                 key={phaseItem.phase}
-                className="bg-white border-2 border-slate-200 rounded-lg p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
+                className="bg-white border-2 border-slate-200 rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -150,7 +150,7 @@ export default function Methodology() {
       <section className="py-16 px-4 bg-[oklch(0.97_0.01_250)]">
         <div className="container max-w-4xl text-center">
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Proven Results</p>
-          <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-12">Framework Success Metrics</h2>
+          <h2 className="text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">Framework Success Metrics</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-[oklch(0.20_0.05_250)]">
             <div>
@@ -185,7 +185,7 @@ export default function Methodology() {
       <section className="py-20 px-4 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-4">Modernize Your Agency with Confidence</h2>
-          <p className="text-lg text-white/80 mb-8">
+          <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Request a complimentary assessment to see how the RAPID Framework can be tailored to your agency's specific modernization and compliance requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

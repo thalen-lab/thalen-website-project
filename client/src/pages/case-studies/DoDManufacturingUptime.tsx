@@ -20,7 +20,7 @@ export default function DoDManufacturingUptime() {
 
         <div className="container relative z-10">
           <Link href="/case-studies">
-            <Button variant="ghost" className="text-white hover:bg-white/10 mb-8 -ml-4">
+            <Button variant="ghost" className="text-white hover:bg-white/10 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 -ml-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Case Studies
             </Button>
@@ -29,11 +29,11 @@ export default function DoDManufacturingUptime() {
           <div className="max-w-4xl">
             <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Defense</p>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               DoD Manufacturing Facility Achieves 99.2% Uptime
             </h1>
             
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.
             </p>
             
@@ -60,7 +60,7 @@ export default function DoDManufacturingUptime() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Challenge</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">A Mission-Critical Mandate for Modernization</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">A Mission-Critical Mandate for Modernization</h2>
             
             <div className="prose prose-lg max-w-none text-slate-600">
               <p className="leading-relaxed mb-6">
@@ -71,7 +71,7 @@ export default function DoDManufacturingUptime() {
                 Equipment downtime averaged 18-22% annually, with each incident requiring 12-48 hours for diagnosis and repair. The facility needed to modernize maintenance operations while meeting strict DoD cybersecurity requirements including CMMC Level 3 certification for handling Controlled Unclassified Information (CUI).
               </p>
               
-              <Card className="bg-white border-2 border-slate-200 p-6 my-8 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+              <Card className="bg-white border-2 border-slate-200 p-3 sm:p-4 md:p-6 my-8 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                 <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)] mb-4">Key Constraints</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
@@ -102,36 +102,36 @@ export default function DoDManufacturingUptime() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Solution</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Predictive Maintenance with Fortified Security</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Predictive Maintenance with Fortified Security</h2>
             
             <div className="prose prose-lg max-w-none text-slate-600">
-              <p className="leading-relaxed mb-8">
+              <p className="leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 We implemented a comprehensive predictive maintenance platform using FedRAMP-authorized IoT and analytics tools, enabling the facility to shift from reactive to proactive maintenance while meeting all DoD cybersecurity requirements.
               </p>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
-                <Card className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                   <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">Phase 1: Assessment</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
                     Conducted equipment criticality analysis and identified 45 high-priority assets. Established baseline performance metrics and failure patterns from historical data.
                   </p>
                 </Card>
                 
-                <Card className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                   <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">Phase 2: Infrastructure</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
                     Deployed secure IoT sensor network with edge computing capabilities. Implemented CMMC-compliant data collection and transmission protocols.
                   </p>
                 </Card>
                 
-                <Card className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                   <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">Phase 3: Analytics</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
                     Built machine learning models for anomaly detection and failure prediction. Integrated real-time dashboards for maintenance teams with mobile alerts.
                   </p>
                 </Card>
                 
-                <Card className="p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+                <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                   <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">Phase 4: Optimization</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
                     Refined predictive models based on actual failure data. Established preventive maintenance schedules and spare parts inventory optimization.
@@ -141,7 +141,7 @@ export default function DoDManufacturingUptime() {
               
               <h3 className="text-2xl font-semibold text-[oklch(0.20_0.05_250)] mb-4 mt-12">Technical Implementation</h3>
               
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
                   <span><strong>IoT Platform:</strong> Deployed 200+ industrial IoT sensors monitoring vibration, temperature, pressure, and power consumption across critical equipment</span>
@@ -169,20 +169,20 @@ export default function DoDManufacturingUptime() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Results & Impact</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Unprecedented Uptime and Operational Resilience</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Unprecedented Uptime and Operational Resilience</h2>
             
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <Card className="p-6 text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
+              <Card className="p-3 sm:p-4 md:p-6 text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                 <div className="text-4xl font-bold text-[oklch(0.65_0.18_55)] mb-2">99.2%</div>
                 <div className="text-sm text-slate-600">Equipment uptime achieved</div>
               </Card>
               
-              <Card className="p-6 text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+              <Card className="p-3 sm:p-4 md:p-6 text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                 <div className="text-4xl font-bold text-[oklch(0.65_0.18_55)] mb-2">78%</div>
                 <div className="text-sm text-slate-600">Reduction in unplanned downtime</div>
               </Card>
               
-              <Card className="p-6 text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
+              <Card className="p-3 sm:p-4 md:p-6 text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
                 <div className="text-4xl font-bold text-[oklch(0.65_0.18_55)] mb-2">45%</div>
                 <div className="text-sm text-slate-600">Decrease in maintenance costs</div>
               </Card>
@@ -200,8 +200,8 @@ export default function DoDManufacturingUptime() {
       {/* CTA Section */}
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Enhance Your Operations?</h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to Enhance Your Operations?</h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Discover how Nexdyne can help you achieve mission-critical uptime and security compliance. 
           </p>
           <div className="flex justify-center gap-4">

@@ -121,17 +121,17 @@ export default function PastPerformance() {
       {/* Past Performance Section */}
       <section className="py-16 bg-slate-100">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
             <div className="inline-block px-4 py-1.5 bg-orange-100 text-orange-700 font-medium mb-4">
               Proven Results
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Past Performance Highlights</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Past Performance Highlights</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Successful delivery of high-value, mission-critical contracts across federal agencies
             </p>
           </div>
 
-          <div className="space-y-8 max-w-6xl mx-auto">
+          <div className="space-y-2 sm:space-y-3 md:space-y-4 sm:space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 md:space-y-6 md:space-y-8 max-w-6xl mx-auto">
             {pastPerformance.map((project, index) => (
               <Card key={index} className="border-2">
                 <CardHeader className="bg-slate-50">
@@ -203,19 +203,19 @@ export default function PastPerformance() {
       {/* Agency Testimonials Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Agency Testimonials</h2>
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
+            <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Agency Testimonials</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               What federal leaders say about working with Thalen Technologies
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="border-2">
                 <CardContent className="pt-6">
                   <div className="mb-4">
-                    <svg className="h-8 w-8 text-orange-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-orange-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>

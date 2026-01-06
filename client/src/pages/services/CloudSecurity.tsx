@@ -127,7 +127,7 @@ export default function CloudSecurity() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-xl md:text-2xl text-white/90 mb-8"
+              className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8"
             >
               We help agencies implement government-grade security controls for FedRAMP High authorization, StateRAMP, CMMC Level 3 certification, and zero-trust architecture for mission-critical workloads. Our team delivers defense-grade cloud security implementation meeting the most stringent government compliance requirements across federal, state, and local levels while enabling operational agility.
             </motion.p>
@@ -135,7 +135,7 @@ export default function CloudSecurity() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-2 sm:gap-3 md:gap-4"
             >
               <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
                 Request Security Assessment
@@ -152,7 +152,7 @@ export default function CloudSecurity() {
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Government-Grade Security</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Defense-Grade Cloud Controls</h2>
             <p className="text-xl text-slate-600">
@@ -169,7 +169,7 @@ export default function CloudSecurity() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-2xl font-bold mb-3 text-[oklch(0.20_0.05_250)]">{benefit.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
                   </CardContent>
@@ -183,7 +183,7 @@ export default function CloudSecurity() {
       {/* Security Layers */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Defense-in-Depth</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Multi-Layered Security Architecture</h2>
             <p className="text-xl text-slate-600">
@@ -194,7 +194,7 @@ export default function CloudSecurity() {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {securityLayers.map((layer, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h3 className="text-2xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">{layer.title}</h3>
                   <ul className="space-y-3 text-slate-600">
                     {layer.controls.map((control, idx) => (
@@ -214,7 +214,7 @@ export default function CloudSecurity() {
       {/* Compliance Frameworks */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Compliance Support</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Government Compliance Frameworks</h2>
             <p className="text-xl text-slate-600">
@@ -225,7 +225,7 @@ export default function CloudSecurity() {
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {complianceFrameworks.map((item, index) => (
               <Card key={index} className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <div className="mb-4">
                     <h3 className="text-2xl font-bold mb-2 text-[oklch(0.20_0.05_250)]">{item.framework}</h3>
                     <p className="text-sm text-slate-600">{item.description}</p>
@@ -247,7 +247,7 @@ export default function CloudSecurity() {
       {/* Security Tools */}
       <section className="py-20 bg-[oklch(0.97_0.01_250)]">
         <div className="container">
-          <div className="text-center mb-12 max-w-3xl mx-auto">
+          <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-3xl mx-auto">
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Tools & Platforms</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Security Tool & Platform Expertise</h2>
             <p className="text-xl text-slate-600">
@@ -269,7 +269,7 @@ export default function CloudSecurity() {
       <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Secure Your Cloud Infrastructure?</h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             Start with a comprehensive security assessment and discover how Thalen Technologies can deliver FedRAMP-authorized platforms and CMMC compliance consulting for your cloud security needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -274,7 +274,7 @@ export default function Resources() {
 
         <section id="resources" className="py-20 bg-[oklch(0.97_0.01_250)]">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-2 mb-12">
+            <div className="flex flex-wrap justify-center gap-2 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
               {categories.map(category => (
                 <Button 
                   key={category.id} 
@@ -297,7 +297,7 @@ export default function Resources() {
                   className="h-full"
                 >
                   <Card className="h-full flex flex-col bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-6 flex flex-col flex-grow">
+                    <CardContent className="p-3 sm:p-4 md:p-6 flex flex-col flex-grow">
                       <div className="flex-grow">
                         <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-2 uppercase tracking-wider text-sm">{resource.type}</p>
                         <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3">{resource.title}</h3>
@@ -337,7 +337,7 @@ export default function Resources() {
 
         <section className="bg-[oklch(0.22_0.06_250)] text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Stay Ahead of the Curve</h2>
+            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter">Stay Ahead of the Curve</h2>
             <p className="max-w-2xl mx-auto mt-4 text-lg text-white/90">Subscribe to our newsletter for the latest insights on government technology, compliance, and automation trends.</p>
             <form className="mt-8 max-w-lg mx-auto flex gap-2">
               <Input 

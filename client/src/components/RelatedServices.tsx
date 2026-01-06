@@ -22,17 +22,17 @@ export default function RelatedServices({
   description = "Explore complementary services that work together with this solution."
 }: RelatedServicesProps) {
   return (
-    <section className="py-20 md:py-28 bg-[oklch(0.97_0.01_250)]">
+    <section className="py-10 sm:py-14 md:py-20 lg:py-28 bg-[oklch(0.97_0.01_250)]">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 md:mb-16"
         >
           <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Explore More</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{title}</h2>
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">{title}</h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             {description}
           </p>
@@ -49,7 +49,7 @@ export default function RelatedServices({
             >
               <Link href={service.href}>
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300 cursor-pointer h-full group">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h3 className="text-xl font-bold text-[oklch(0.20_0.05_250)] mb-3 group-hover:text-[oklch(0.55_0.18_55)] transition-colors">
                       {service.title}
                     </h3>

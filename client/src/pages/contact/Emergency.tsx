@@ -57,7 +57,7 @@ export default function Emergency() {
       <section className="relative py-20 bg-[url('/img/pattern-dark.svg')] bg-cover bg-center text-white">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
         <div className="container relative">
-          <div className="mb-8">
+          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <Breadcrumb 
               items={[
                 { label: 'Contact', href: '/contact' },
@@ -71,7 +71,7 @@ export default function Emergency() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Emergency Support
             </h1>
-            <p className="text-xl md:text-2xl text-white/90">
+            <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90">
               24/7 critical incident response for mission-critical system failures and automation emergencies.
             </p>
           </div>
@@ -88,7 +88,7 @@ export default function Emergency() {
               
               <div className="space-y-6">
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h3 className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">
                       24/7 Emergency Hotline
                     </h3>
@@ -102,7 +102,7 @@ export default function Emergency() {
                 </Card>
 
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h3 className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">
                       Emergency Email
                     </h3>
@@ -116,7 +116,7 @@ export default function Emergency() {
                 </Card>
 
                 <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-4 md:p-6">
                     <h3 className="font-semibold mb-4 text-[oklch(0.20_0.05_250)]">Emergency Response Coverage</h3>
                     <p className="text-slate-600 mb-4">
                       24/7 emergency support for critical situations including:
@@ -150,7 +150,7 @@ export default function Emergency() {
 
             <div>
               <Card className="bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Report an Incident</p>
                   <h2 className="text-2xl font-bold mb-6 text-[oklch(0.20_0.05_250)]">Emergency Report Form</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -248,21 +248,21 @@ export default function Emergency() {
       <section className="bg-[oklch(0.22_0.06_250)] text-white">
         <div className="container py-20 text-center">
             <h2 className="text-3xl font-bold mb-4">Response Time SLAs</h2>
-            <p className="max-w-2xl mx-auto text-white/90 mb-8">
+            <p className="max-w-2xl mx-auto text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 Our commitment to rapid response ensures your critical systems are restored as quickly as possible. We adhere to the following service level agreements for emergency support.
             </p>
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="bg-white/10 p-6 rounded-lg">
+                <div className="bg-white/10 p-3 sm:p-4 md:p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-[oklch(0.75_0.15_55)] mb-2">Critical Incidents</h3>
                     <p className="text-4xl font-bold">2-Hour</p>
                     <p className="text-white/80">Response Time</p>
                 </div>
-                <div className="bg-white/10 p-6 rounded-lg">
+                <div className="bg-white/10 p-3 sm:p-4 md:p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-[oklch(0.75_0.15_55)] mb-2">High Priority</h3>
                     <p className="text-4xl font-bold">4-Hour</p>
                     <p className="text-white/80">Response Time</p>
                 </div>
-                <div className="bg-white/10 p-6 rounded-lg">
+                <div className="bg-white/10 p-3 sm:p-4 md:p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-[oklch(0.75_0.15_55)] mb-2">Standard Emergencies</h3>
                     <p className="text-4xl font-bold">8-Hour</p>
                     <p className="text-white/80">Response Time</p>
