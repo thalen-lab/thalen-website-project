@@ -4254,3 +4254,9 @@
 - [x] Fix "Who We Are" section layout - certification cards appearing in wrong position
 - [x] Fix "Mission-Focused Solutions" section - inconsistent card heights
 - [x] Fix mega menu hover behavior - dropdown disappears before user can select items
+
+
+## Phase 67: Capability Statement Page
+- [x] Add "Capability Statement" to navbar between Case Studies and Contact
+- [x] Build Capability Statement page with flowing narrative design (no cards/bullets)
+- [x] Add download CTA for Capability Statement document

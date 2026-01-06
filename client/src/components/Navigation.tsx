@@ -297,6 +297,9 @@ export default function Navigation() {
             <Link href="/case-studies" className="hover:text-orange-signature transition-colors py-2">
               Case Studies
             </Link>
+            <Link href="/capability-statement" className="hover:text-orange-signature transition-colors py-2">
+              Capability Statement
+            </Link>
             <Link href="/contact" className="hover:text-orange-signature transition-colors py-2">
               Contact
             </Link>
@@ -443,6 +446,13 @@ export default function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Case Studies
+              </Link>
+              <Link 
+                href="/capability-statement" 
+                className="block py-4 min-h-[52px] font-medium text-lg border-b border-primary-foreground/20 flex items-center touch-feedback"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Capability Statement
               </Link>
               <Link 
                 href="/contact" 
