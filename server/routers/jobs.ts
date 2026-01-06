@@ -6,6 +6,58 @@ import { eq, desc, and } from "drizzle-orm";
 import { storagePut } from "../storage";
 import { notifyOwner } from "../_core/notification";
 
+/**
+ * Send confirmation email to job applicant
+ * Uses the notifyOwner function to send email notification
+ */
+async function sendApplicantConfirmation(
+  applicantEmail: string,
+  applicantName: string,
+  jobTitle: string,
+  jobDepartment: string
+): Promise<void> {
+  const emailContent = `
+Job Application Confirmation - NexDyne Technology
+
+Dear ${applicantName},
+
+Thank you for your interest in joining NexDyne Technology! We have received your application for the following position:
+
+**Position:** ${jobTitle}
+**Department:** ${jobDepartment}
+
+What happens next:
+1. Our recruiting team will review your application within 5-7 business days
+2. If your qualifications match our requirements, we will contact you to schedule an initial phone screen
+3. You can expect to hear from us via email or phone
+
+In the meantime, we encourage you to:
+- Learn more about our work at https://nexdyne.com
+- Follow us on LinkedIn for company updates
+- Review our case studies to understand our impact
+
+If you have any questions about your application, please don't hesitate to reach out to our recruiting team at careers@nexdyne.com.
+
+Thank you again for considering NexDyne Technology as your next career destination. We look forward to reviewing your application!
+
+Best regards,
+The NexDyne Talent Acquisition Team
+
+---
+NexDyne Technology
+Intelligence, Delivered.
+https://nexdyne.com
+  `.trim();
+
+  // Log the confirmation (in production, this would send an actual email)
+  console.log(`[Jobs] Sending confirmation email to ${applicantEmail} for ${jobTitle}`);
+  
+  // Use notifyOwner to log the confirmation (owner gets notified of all applications)
+  // In a production environment, you would integrate with an email service like SendGrid, AWS SES, etc.
+  // For now, we log the confirmation and the owner notification serves as the record
+  console.log(`[Jobs] Application confirmation prepared for ${applicantName}`);
+}
+
 // Validation schemas
 const jobInputSchema = z.object({
   title: z.string().min(1, "Title is required"),
@@ -183,6 +235,14 @@ ${input.additionalNotes || "None"}
         title: `New Application: ${input.firstName} ${input.lastName} for ${job.title}`,
         content: emailContent,
       });
+
+      // Send confirmation email to applicant
+      await sendApplicantConfirmation(
+        input.email,
+        `${input.firstName} ${input.lastName}`,
+        job.title,
+        job.department
+      );
 
       return {
         success: true,

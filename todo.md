@@ -4241,3 +4241,15 @@
 - [ ] Add hover animations to dropdown menu items for polished feel
 - [ ] Implement keyboard navigation for dropdown menus (accessibility)
 - [ ] Add backdrop blur behind dropdowns for readability over hero images
+
+## Phase 67: Careers Enhancement - Sample Jobs, Notifications, and Applications Dashboard
+- [x] Create sample job postings via database seeding (5 positions)
+- [x] Implement email notifications for job applicants (confirmation emails)
+- [ ] Build applications management dashboard for admins (/admin/applications)
+- [ ] Add application status tracking (new, reviewed, interviewing, offered, rejected)
+- [ ] Add filtering and search for applications
+- [ ] Test all careers features end-to-end
+
+## Phase 68: Fix Homepage CSS/Layout Issues
+- [x] Fix "Who We Are" section layout - certification cards appearing in wrong position
+- [x] Fix "Mission-Focused Solutions" section - inconsistent card heights

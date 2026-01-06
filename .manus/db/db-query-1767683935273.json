@@ -1,0 +1,45 @@
+{
+  "query": "SELECT id, title, department, location, status FROM jobs ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2CCNywmzdWbuo3h.root --database n2sqWjWBoABpEmsxkmyy92 --execute SELECT id, title, department, location, status FROM jobs ORDER BY id;",
+  "rows": [
+    {
+      "id": "30001",
+      "title": "Senior Software Engineer - Cloud Infrastructure",
+      "department": "Engineering",
+      "location": "Washington, DC / Remote",
+      "status": "published"
+    },
+    {
+      "id": "30002",
+      "title": "Cybersecurity Analyst",
+      "department": "Security",
+      "location": "Reston, VA",
+      "status": "published"
+    },
+    {
+      "id": "30003",
+      "title": "Data Scientist - Machine Learning",
+      "department": "Data Analytics",
+      "location": "Remote",
+      "status": "published"
+    },
+    {
+      "id": "30004",
+      "title": "Project Manager - Federal Programs",
+      "department": "Project Management",
+      "location": "Washington, DC",
+      "status": "published"
+    },
+    {
+      "id": "30005",
+      "title": "DevOps Engineer",
+      "department": "Engineering",
+      "location": "Arlington, VA / Remote",
+      "status": "published"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tdepartment\tlocation\tstatus\n30001\tSenior Software Engineer - Cloud Infrastructure\tEngineering\tWashington, DC / Remote\tpublished\n30002\tCybersecurity Analyst\tSecurity\tReston, VA\tpublished\n30003\tData Scientist - Machine Learning\tData Analytics\tRemote\tpublished\n30004\tProject Manager - Federal Programs\tProject Management\tWashington, DC\tpublished\n30005\tDevOps Engineer\tEngineering\tArlington, VA / Remote\tpublished\n",
+  "stderr": "",
+  "execution_time_ms": 120
+}

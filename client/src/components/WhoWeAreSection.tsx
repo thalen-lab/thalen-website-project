@@ -38,15 +38,14 @@ export default function WhoWeAreSection() {
           <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Who We Are</span>
         </motion.div>
 
-        {/* Main Content Grid - Fixed Layout */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        {/* Main Content Grid - Fixed Layout with proper alignment */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Column - Title and Full Description */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="lg:w-1/2 lg:flex-shrink-0"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A2540] mb-6 leading-[1.1] tracking-tight">
               Thalen Technologies, Inc.
@@ -72,13 +71,13 @@ export default function WhoWeAreSection() {
             </Link>
           </motion.div>
 
-          {/* Right Column - Two Linked Cards */}
+          {/* Right Column - Two Linked Cards - aligned to top */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:w-1/2 lg:flex-shrink-0 flex flex-col gap-4"
+            className="flex flex-col gap-4"
           >
             {featuredCards.map((card, index) => (
               <motion.div

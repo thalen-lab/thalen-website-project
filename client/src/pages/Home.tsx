@@ -179,18 +179,19 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Service Cards Grid - No icons, orange border only on hover */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          {/* Service Cards Grid - Equal height cards with grid auto-rows */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 auto-rows-fr">
             {/* Card 1: Citizen Services Modernization */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
+              className="h-full"
             >
-              <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
-                {/* Image on top - taller like insights cards */}
-                <div className="relative h-44 sm:h-52 overflow-hidden">
+              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
+                {/* Image on top - fixed height */}
+                <div className="relative h-40 flex-shrink-0 overflow-hidden">
                   <img 
                     src="/images/citizen-services-government.jpg" 
                     alt="Citizen Services Modernization" 
@@ -199,20 +200,20 @@ export default function Home() {
                   {/* Gradient overlay for depth */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/60 to-transparent"></div>
                 </div>
-                {/* Content Section */}
-                <CardContent className="p-5 md:p-6 flex flex-col">
+                {/* Content Section - flex-grow to fill remaining space */}
+                <CardContent className="p-5 md:p-6 flex flex-col flex-grow">
                   {/* Title */}
                   <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">
                     Citizen Services Modernization
                   </h3>
                   
-                  {/* Description */}
+                  {/* Description - flex-grow pushes link to bottom */}
                   <p className="text-white/70 text-sm leading-relaxed mb-4 flex-grow">
                     Transforming how agencies interact with the public through <strong className="text-white">accessible, secure, and efficient</strong> digital platforms.
                   </p>
                   
-                  {/* Explore Link */}
-                  <Link href="/services/digital-transformation" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#E07020] font-semibold text-xs uppercase tracking-wider transition-colors">
+                  {/* Explore Link - always at bottom */}
+                  <Link href="/services/digital-transformation" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#E07020] font-semibold text-xs uppercase tracking-wider transition-colors mt-auto">
                     Explore Solution
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
@@ -226,10 +227,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              className="h-full"
             >
-              <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
-                {/* Image on top - taller like insights cards */}
-                <div className="relative h-44 sm:h-52 overflow-hidden">
+              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
+                {/* Image on top - fixed height */}
+                <div className="relative h-40 flex-shrink-0 overflow-hidden">
                   <img 
                     src="/images/mission-critical-security.png" 
                     alt="Mission-Critical Security" 
@@ -238,20 +240,20 @@ export default function Home() {
                   {/* Gradient overlay for depth */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/60 to-transparent"></div>
                 </div>
-                {/* Content Section */}
-                <CardContent className="p-5 md:p-6 flex flex-col">
+                {/* Content Section - flex-grow to fill remaining space */}
+                <CardContent className="p-5 md:p-6 flex flex-col flex-grow">
                   {/* Title */}
                   <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">
                     Mission-Critical Security
                   </h3>
                   
-                  {/* Description */}
+                  {/* Description - flex-grow pushes link to bottom */}
                   <p className="text-white/70 text-sm leading-relaxed mb-4 flex-grow">
                     Protecting sensitive government data with <strong className="text-white">Zero Trust architectures</strong> and advanced threat detection systems.
                   </p>
                   
-                  {/* Explore Link */}
-                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#E07020] font-semibold text-xs uppercase tracking-wider transition-colors">
+                  {/* Explore Link - always at bottom */}
+                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#E07020] font-semibold text-xs uppercase tracking-wider transition-colors mt-auto">
                     Explore Solution
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
@@ -265,10 +267,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              className="h-full"
             >
-              <Card className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
-                {/* Image on top - matching other cards */}
-                <div className="relative h-44 sm:h-52 overflow-hidden">
+              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
+                {/* Image on top - fixed height */}
+                <div className="relative h-40 flex-shrink-0 overflow-hidden">
                   <img 
                     src="/images/compliance-ai-dashboard.webp" 
                     alt="AI-Powered Regulatory Compliance Dashboard" 
@@ -277,20 +280,20 @@ export default function Home() {
                   {/* Gradient overlay for depth */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/60 to-transparent"></div>
                 </div>
-                {/* Content Section */}
-                <CardContent className="p-5 md:p-6 flex flex-col">
+                {/* Content Section - flex-grow to fill remaining space */}
+                <CardContent className="p-5 md:p-6 flex flex-col flex-grow">
                   {/* Title */}
                   <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">
                     Regulatory Compliance
                   </h3>
                   
-                  {/* Description */}
+                  {/* Description - flex-grow pushes link to bottom */}
                   <p className="text-white/70 text-sm leading-relaxed mb-4 flex-grow">
                     Navigating <strong className="text-white">FedRAMP, CMMC, and FISMA</strong> frameworks to ensure continuous authorization to operate.
                   </p>
                   
-                  {/* Explore Link */}
-                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#E07020] font-semibold text-xs uppercase tracking-wider transition-colors">
+                  {/* Explore Link - always at bottom */}
+                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#E07020] font-semibold text-xs uppercase tracking-wider transition-colors mt-auto">
                     Explore Solution
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
