@@ -69,9 +69,16 @@ export default function CaseStudyShowcaseText() {
             </h2>
           </div>
           <div className="flex flex-col justify-end">
-            <p className="text-base lg:text-lg text-white/80 leading-relaxed">
+            <p className="text-base lg:text-lg text-white/80 leading-relaxed mb-4">
               Real-world case studies demonstrating measurable mission impact. FedRAMP serves federal agencies; StateRAMP/GovRAMP serves state, local, and tribal governments.
             </p>
+            <Link 
+              href="/case-studies"
+              className="inline-flex items-center text-[#E07020] hover:text-[#F08030] font-medium text-sm transition-colors self-start"
+            >
+              View All
+              <ArrowRight className="w-4 h-4 ml-1.5" />
+            </Link>
           </div>
         </motion.div>
 

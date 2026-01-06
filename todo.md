@@ -4194,3 +4194,4 @@
 - [x] Add CaseStudyShowcase between Who We Serve and Insights sections (text-based cards without images)
 - [x] Simplify Case Studies section: reduce to 3 cards, remove icons, adjust card size, maintain brand colors
 - [x] Remove orange CTA button from Case Studies section
+- [x] Add "View All" text link in Case Studies section header for navigation to full case studies page
