@@ -186,6 +186,11 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Security from "./pages/Security";
+import SocialResponsibility from "./pages/SocialResponsibility";
+import SecurityCompliance from "./pages/SecurityCompliance";
+import NewsUpdates from "./pages/NewsUpdates";
+import CompanyLatest from "./pages/CompanyLatest";
+import Careers from "./pages/Careers";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -193,6 +198,11 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/about"} component={About} />
+      <Route path={"/about/social-responsibility"} component={SocialResponsibility} />
+      <Route path={"/about/security-compliance"} component={SecurityCompliance} />
+      <Route path={"/about/news-updates"} component={NewsUpdates} />
+      <Route path={"/about/company-latest"} component={CompanyLatest} />
+      <Route path={"/careers"} component={Careers} />
       <Route path={"/consulting-services"} component={ConsultingServices} />
       <Route path={"/team"} component={Team} />
       <Route path={"/contact"} component={Contact} />

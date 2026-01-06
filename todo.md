@@ -4212,4 +4212,4 @@
 - [x] Navbar restructure: Nest Insights, Resources, and Events under new "Learn" dropdown
 - [x] Navbar restructure: Nest About Thalen, Social Responsibility, Security & Compliance, News & Updates, Company's Latest, and Careers under "About" dropdown
 - [x] Keep Case Studies, Contact, and Schedule Assessment as standalone items
-- [ ] Create placeholder pages: Social Responsibility, Security & Compliance, News & Updates, Company's Latest, Careers
+- [x] Create placeholder pages: Social Responsibility, Security & Compliance, News & Updates, Company's Latest, Careers

@@ -86,10 +86,10 @@ export default function Navigation() {
   // About dropdown - nests About Thalen, Social Responsibility, Security & Compliance, News & Updates, Company's Latest, Careers
   const aboutItems = [
     { name: 'About Thalen', href: '/about', description: 'Get to know us better' },
-    { name: 'Social Responsibility', href: '/social-responsibility', description: 'How we give back' },
-    { name: 'Security & Compliance', href: '/security-compliance', description: 'ISO 27001, CMMC & more' },
-    { name: 'News & Updates', href: '/news', description: 'Industry news and trends' },
-    { name: "Company's Latest", href: '/company-news', description: 'Updates from Thalen' },
+    { name: 'Social Responsibility', href: '/about/social-responsibility', description: 'How we give back' },
+    { name: 'Security & Compliance', href: '/about/security-compliance', description: 'ISO 27001, CMMC & more' },
+    { name: 'News & Updates', href: '/about/news-updates', description: 'Industry news and trends' },
+    { name: "Company's Latest", href: '/about/company-latest', description: 'Updates from Thalen' },
     { name: 'Careers', href: '/careers', description: 'Join our team' },
   ];
 
