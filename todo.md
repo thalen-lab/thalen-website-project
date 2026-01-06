@@ -4488,3 +4488,10 @@
 - [x] Adjust hero carousel text overlay to extend from bottom edge with no space
 - [x] Increase hero carousel text size for better visibility
 - [x] Reduce carousel title sizes - they are too large
+
+## Phase 87: Redesign Security & Compliance Page
+- [x] Replace card layout with certification logos above text
+- [x] Add official certification logos (FedRAMP, CMMC, SOC 2, ISO 27001, StateRAMP, HIPAA)
+- [x] Standardize all logos to consistent size
+- [x] Add clean editorial paragraph above certifications section
+- [x] Maintain all existing routes and functionality
