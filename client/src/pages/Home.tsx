@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import CaseStudyShowcase from '@/components/CaseStudyShowcase';
+import CaseStudyShowcaseText from '@/components/CaseStudyShowcaseText';
 import Footer from '@/components/Footer';
 import SmallBusinessCertifications from '@/components/SmallBusinessCertifications';
 import { ImageWithLoader } from '@/components/ImageWithLoader';
@@ -626,6 +627,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Case Studies Showcase - Text-based cards */}
+      <CaseStudyShowcaseText />
 
       {/* Insights Section */}
       <InsightsSection />

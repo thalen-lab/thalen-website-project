@@ -4191,3 +4191,4 @@
 - [x] Update FederalAgencies component to use actual logo images instead of placeholders
 - [x] Edit "How We Work" section: remove numbers from cards, make cards slightly larger with more description space
 - [x] Redesign Who We Are section to match Aqua Nautilus layout - left side has title and description, right side has two linked cards with images
+- [x] Add CaseStudyShowcase between Who We Serve and Insights sections (text-based cards without images)
