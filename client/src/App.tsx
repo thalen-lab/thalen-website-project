@@ -195,6 +195,7 @@ import CompanyLatest from "./pages/CompanyLatest";
 import Careers from "./pages/Careers";
 import JobDetail from "./pages/JobDetail";
 import CapabilityStatement from "./pages/CapabilityStatement";
+import CapabilityStatementPrint from "./pages/CapabilityStatementPrint";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -326,6 +327,7 @@ function Router() {
       
       {/* Case Study Routes */}
       <Route path={"/capability-statement"} component={CapabilityStatement} />
+      <Route path={"/capability-statement/print"} component={CapabilityStatementPrint} />
       <Route path={"/case-studies"} component={CaseStudies} />
       <Route path={"/case-studies/federal-automation"} component={FederalAutomationCase} />
       <Route path={"/case-studies/healthcare-ai"} component={HealthcareAICase} />

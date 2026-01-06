@@ -52,12 +52,16 @@ export default function CapabilityStatement() {
                     <Download className="mr-2 h-5 w-5" />
                     Download Capability Statement
                   </Button>
-                  <PrintButton 
-                    label="Print This Page" 
-                    variant="outline" 
-                    size="lg"
-                    className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6"
-                  />
+                  <Link href="/capability-statement/print">
+                    <Button 
+                      variant="outline" 
+                      size="lg"
+                      className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6"
+                    >
+                      <Printer className="mr-2 h-5 w-5" />
+                      Print View
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             </motion.div>

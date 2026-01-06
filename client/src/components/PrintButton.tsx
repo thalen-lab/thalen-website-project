@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Printer } from "lucide-react";
+import { Printer, Eye } from "lucide-react";
+import { useState } from "react";
 
 interface PrintButtonProps {
   /** Label text for the button */
@@ -94,6 +95,40 @@ export function FloatingPrintButton({
       title="Print this page"
     >
       <Printer className="h-5 w-5 text-gray-700" />
+    </Button>
+  );
+}
+
+/**
+ * PrintWithPreviewButton Component
+ * 
+ * A button that shows a print preview dialog before printing.
+ */
+export function PrintWithPreviewButton({
+  label = "Print with Preview",
+  className = "",
+  variant = "outline",
+  size = "default",
+  previewUrl,
+}: PrintButtonProps & { previewUrl?: string }) {
+  const handleClick = () => {
+    if (previewUrl) {
+      window.open(previewUrl, '_blank');
+    } else {
+      window.print();
+    }
+  };
+
+  return (
+    <Button
+      variant={variant}
+      size={size}
+      onClick={handleClick}
+      className={`print-button no-print ${className}`}
+      aria-label={label}
+    >
+      <Eye className="h-4 w-4 mr-2" />
+      {label}
     </Button>
   );
 }

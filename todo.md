@@ -4265,3 +4265,11 @@
 - [x] Create printer-optimized CSS stylesheet
 - [x] Add print button component for easy access
 - [x] Test print functionality across pages
+
+## Phase: Print Features for Capability Statement
+- [x] Create dedicated Print View page (/capability-statement/print) with simplified 1-2 page layout
+- [x] Implement PDF generation feature (client-side with jspdf/html2canvas)
+- [x] Add print preview mode with toggle and styling preview
+- [x] Add download PDF button to Capability Statement page
+- [x] Create print-optimized CSS styles for the print view
+- [x] Test print functionality across browsers
