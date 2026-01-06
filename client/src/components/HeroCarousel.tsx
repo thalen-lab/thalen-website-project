@@ -169,23 +169,7 @@ export default function HeroCarousel() {
         </div>
       </div>
 
-      {/* Slide Indicators - Responsive positioning */}
-      <div className="absolute bottom-24 xs:bottom-28 sm:bottom-32 md:bottom-36 lg:bottom-40 xl:bottom-44 right-3 sm:right-4 md:right-6 lg:right-8 z-20 flex gap-1.5 sm:gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 min-w-[12px] min-h-[12px] sm:min-w-[16px] sm:min-h-[16px] flex items-center justify-center ${
-              index === currentSlide 
-                ? "bg-white w-4 sm:w-6" 
-                : "bg-white/50 hover:bg-white/70"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          >
-            <span className="sr-only">Slide {index + 1}</span>
-          </button>
-        ))}
-      </div>
+
     </div>
   );
 }

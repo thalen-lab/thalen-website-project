@@ -4476,3 +4476,9 @@
 
 ## Phase 59: Fix Mobile Carousel Indicator Dots
 - [x] Hide carousel indicator dots on mobile/tablet views (only show on desktop)
+- [x] Remove white carousel indicator dots from hero section
+- [ ] Add compelling hero text content with headline and subheadline over Capitol image
+
+## Phase 127: Restore Hero Tagline
+- [x] Update first hero slide title from "Intelligence, Delivered." to "Powering Government Mission Success"
+- [x] Update first hero slide subtitle to original text about 25 years of partnership
