@@ -1681,6 +1681,7 @@
 
 ## Phase 55: Scrolling Client Logos Carousel
 - [x] Make client logos section scrolling like federal agencies carousel
+- [x] Revert client logos to original static grid layout (user requested)
 
 ## RUXI Compliance Audit: FedRAMP Cloud Migration & Integration Section
 

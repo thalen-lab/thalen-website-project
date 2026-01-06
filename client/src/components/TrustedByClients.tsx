@@ -36,9 +36,6 @@ const caseStudyClients = [
   }
 ];
 
-// Duplicate for seamless infinite scroll
-const duplicatedCaseStudyClients = [...caseStudyClients, ...caseStudyClients];
-
 // Federal agency clients for the scrolling carousel
 const federalClients = [
   { name: 'Department of Defense', abbreviation: 'DoD', color: '#0A2540' },
@@ -86,62 +83,48 @@ export default function TrustedByClients() {
           </p>
         </motion.div>
 
-        {/* Scrolling Case Study Results Carousel */}
-        <div className="relative mb-12">
-          {/* Gradient fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
-          
-          {/* Scrolling container */}
-          <div className="overflow-hidden">
+        {/* Case Study Results Grid - NEOGOV Style */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12"
+        >
+          {caseStudyClients.map((client, index) => (
             <motion.div
-              className="flex gap-6 md:gap-8"
-              animate={{
-                x: ['0%', '-50%']
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                  duration: 25,
-                  ease: 'linear'
-                }
-              }}
+              key={client.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 * index }}
+              className="flex flex-col items-center text-center group"
             >
-              {duplicatedCaseStudyClients.map((client, index) => (
-                <div
-                  key={`${client.id}-${index}`}
-                  className="flex-shrink-0 group"
-                >
-                  <div className="relative w-72 md:w-80 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-[#E07020]/30 transition-all duration-300 p-5 md:p-6 cursor-default">
-                    {/* Headline */}
-                    <h3 className="text-[#0A2540] font-semibold text-sm md:text-base leading-snug mb-4 min-h-[48px] flex items-center">
-                      {client.headline}
-                    </h3>
-                    
-                    {/* Logo */}
-                    <div className="relative w-full h-20 md:h-24 flex items-center justify-center mb-4 bg-slate-50/50 rounded-lg">
-                      <img
-                        src={client.logo}
-                        alt={client.logoAlt}
-                        className="max-h-full max-w-[160px] object-contain transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                    
-                    {/* Case Study Info */}
-                    <div className="text-slate-600 text-xs md:text-sm text-center">
-                      <span>{client.caseStudy}</span>
-                      <br />
-                      <span className="text-[#E07020] hover:text-[#c45f1a] transition-colors cursor-pointer font-medium">
-                        {client.agency}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              {/* Headline */}
+              <h3 className="text-[#0A2540] font-semibold text-sm md:text-base leading-snug mb-4 min-h-[48px] flex items-center">
+                {client.headline}
+              </h3>
+              
+              {/* Logo - Standing without card */}
+              <div className="relative w-full h-24 md:h-28 flex items-center justify-center mb-4">
+                <img
+                  src={client.logo}
+                  alt={client.logoAlt}
+                  className="max-h-full max-w-[180px] object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              
+              {/* Case Study Info */}
+              <div className="text-slate-600 text-xs md:text-sm">
+                <span>{client.caseStudy}</span>
+                <br />
+                <span className="text-[#E07020] hover:text-[#c45f1a] transition-colors cursor-pointer font-medium">
+                  {client.agency}
+                </span>
+              </div>
             </motion.div>
-          </div>
-        </div>
+          ))}
+        </motion.div>
 
         {/* Infinite Scrolling Logo Carousel for Federal Agencies */}
         <div className="relative">
@@ -197,31 +180,7 @@ export default function TrustedByClients() {
           </div>
         </div>
 
-        {/* Stats row */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
-        >
-          <div className="text-center p-4 bg-white rounded-lg border border-slate-200">
-            <div className="text-2xl md:text-3xl font-bold text-[#0A2540]">500+</div>
-            <div className="text-xs text-slate-500 uppercase tracking-wider mt-1">Agency Partners</div>
-          </div>
-          <div className="text-center p-4 bg-white rounded-lg border border-slate-200">
-            <div className="text-2xl md:text-3xl font-bold text-[#0A2540]">25+</div>
-            <div className="text-xs text-slate-500 uppercase tracking-wider mt-1">Years Experience</div>
-          </div>
-          <div className="text-center p-4 bg-white rounded-lg border border-slate-200">
-            <div className="text-2xl md:text-3xl font-bold text-[#0A2540]">$2.3B+</div>
-            <div className="text-xs text-slate-500 uppercase tracking-wider mt-1">Client ROI</div>
-          </div>
-          <div className="text-center p-4 bg-white rounded-lg border border-slate-200">
-            <div className="text-2xl md:text-3xl font-bold text-[#0A2540]">100%</div>
-            <div className="text-xs text-slate-500 uppercase tracking-wider mt-1">Mission Success</div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

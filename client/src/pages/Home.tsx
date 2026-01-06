@@ -187,9 +187,9 @@ export default function Home() {
                 {/* Image on top - taller like insights cards */}
                 <div className="relative h-44 sm:h-52 overflow-hidden">
                   <img 
-                    src="/images/citizen-services.jpg" 
+                    src="/images/citizen-services-government.jpg" 
                     alt="Citizen Services Modernization" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Gradient overlay for depth */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/60 to-transparent"></div>
