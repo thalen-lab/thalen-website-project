@@ -107,7 +107,7 @@ export default function SecurityCompliance() {
           >
             <div className="prose prose-lg max-w-none">
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                In an era where cyber threats evolve by the hour and regulatory requirements grow increasingly complex, security cannot be an afterthought—it must be woven into the very fabric of every solution we deliver. At NexDyne Technology, we have built our practice on the principle that trust is earned through rigorous adherence to the most demanding security standards in the industry.
+                In an era where cyber threats evolve by the hour and regulatory requirements grow increasingly complex, security cannot be an afterthought—it must be woven into the very fabric of every solution we deliver. At Thalen Technologies, Inc., we have built our practice on the principle that trust is earned through rigorous adherence to the most demanding security standards in the industry.
               </p>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 Our comprehensive compliance portfolio represents more than a collection of certifications; it reflects our unwavering commitment to protecting the sensitive data and critical operations of the organizations we serve. From federal agencies safeguarding national security to healthcare providers protecting patient privacy, our clients depend on us to meet and exceed the most stringent security requirements.

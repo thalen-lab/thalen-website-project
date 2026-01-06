@@ -4495,3 +4495,8 @@
 - [x] Standardize all logos to consistent size
 - [x] Add clean editorial paragraph above certifications section
 - [x] Maintain all existing routes and functionality
+
+## Phase 129: Enhance Social Responsibility Page
+- [ ] Add commitment paragraph section with image on right side
+- [ ] Add local agency workshops/webinars section for RPA and Agentic automation education
+- [ ] Replace card icons with images like solution cards
