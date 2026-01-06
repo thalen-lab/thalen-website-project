@@ -91,7 +91,7 @@ export default function SocialResponsibility() {
               </h1>
               
               <p className="text-base md:text-lg text-white/90 text-center max-w-3xl mx-auto">
-                At NexDyne Technology, we believe that success is measured not just by business outcomes, but by the positive impact we create in our communities, for our people, and for the planet.
+                At Thalen Technologies, we believe that success is measured not just by business outcomes, but by the positive impact we create in our communities, for our people, and for the planet.
               </p>
             </motion.div>
           </div>
@@ -117,7 +117,7 @@ export default function SocialResponsibility() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  At NexDyne Technology, our commitment to social responsibility extends far beyond the boundaries of our business operations. We recognize that as a technology leader serving government agencies and enterprises, we have both the opportunity and the obligation to leverage our expertise for the greater good of our communities.
+                  At Thalen Technologies, our commitment to social responsibility extends far beyond the boundaries of our business operations. We recognize that as a technology leader serving government agencies and enterprises, we have both the opportunity and the obligation to leverage our expertise for the greater good of our communities.
                 </p>
                 <p>
                   For over two decades, we have invested in programs that create lasting, meaningful change. From supporting STEM education initiatives that inspire the next generation of innovators, to providing career pathways for military veterans transitioning to civilian life, our social impact programs reflect our core values of service, excellence, and integrity.
@@ -138,7 +138,7 @@ export default function SocialResponsibility() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
                   src="/img/social/commitment-team.jpg" 
-                  alt="NexDyne team collaborating on community initiatives"
+                  alt="Thalen Technologies team collaborating on community initiatives"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 to-transparent"></div>
