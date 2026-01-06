@@ -4273,3 +4273,23 @@
 - [x] Add download PDF button to Capability Statement page
 - [x] Create print-optimized CSS styles for the print view
 - [x] Test print functionality across browsers
+
+## Phase 56: Email-to-PDF Delivery Feature
+- [ ] Create backend API endpoint for email PDF delivery with lead capture
+- [ ] Build frontend email capture modal/form component
+- [ ] Integrate email form with Capability Statement section
+- [ ] Write tests for email delivery feature
+- [ ] Test and verify complete email-to-PDF flow
+
+## Phase 57: Bug Fixes
+- [x] Fix Download Capability Statement CTA button not working
+
+## Phase 57: Cookie Consent Banner (GDPR/CCPA Compliance)
+- [x] Create CookieConsent component with bottom banner
+- [x] Add preferences modal with cookie categories (Essential, Analytics, Marketing)
+- [x] Implement localStorage persistence for consent choices
+- [x] Add toggle switches for each cookie category
+- [x] Include Accept All, Reject All, and Save Preferences buttons
+- [x] Add Privacy Policy link integration
+- [x] Style to match NexDyne branding
+- [x] Test consent persistence across page reloads

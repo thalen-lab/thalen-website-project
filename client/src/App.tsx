@@ -9,6 +9,7 @@ import LiveChat from "./components/LiveChat";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
 import { OfflineIndicator } from "./components/OfflineIndicator";
 import BackToTop from "./components/BackToTop";
+import CookieConsent from "./components/CookieConsent";
 import { NotificationBanner } from "./components/NotificationBanner";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -496,6 +497,7 @@ function App() {
           <NotificationBanner />
           <OfflineIndicator position="bottom" />
           <BackToTop threshold={400} />
+          <CookieConsent />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
