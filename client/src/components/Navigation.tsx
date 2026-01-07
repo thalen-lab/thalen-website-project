@@ -325,7 +325,7 @@ export default function Navigation() {
             <div className="ml-6">
               <Link 
                 href="/contact"
-                className="inline-flex items-center justify-center bg-orange-signature hover:bg-orange-signature/90 text-white font-semibold px-5 py-2.5 text-sm rounded-md transition-colors"
+                className="inline-flex items-center justify-center bg-orange-gradient hover:opacity-90 text-white font-semibold px-5 py-2.5 text-sm rounded-md transition-all shadow-md hover:shadow-lg"
               >
                 Schedule Assessment
               </Link>
@@ -497,7 +497,7 @@ export default function Navigation() {
                 <Link 
                   href="/contact" 
                   onClick={closeMobileMenu}
-                  className="block w-full text-center bg-orange-signature hover:bg-orange-signature/90 text-white font-semibold py-3 text-base rounded-md transition-colors"
+                  className="block w-full text-center bg-orange-gradient hover:opacity-90 text-white font-semibold py-3 text-base rounded-md transition-all shadow-md hover:shadow-lg"
                 >
                   Schedule Assessment
                 </Link>

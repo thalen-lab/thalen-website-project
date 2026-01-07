@@ -52,12 +52,12 @@
   --primary-foreground: oklch(0.98 0 0);
   --sidebar-primary: oklch(0.30 0.05 250);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  /* Orange accent inspired by Incentro */
-  --chart-1: oklch(0.70 0.15 40);
-  --chart-2: oklch(0.65 0.18 40);
-  --chart-3: oklch(0.60 0.20 40);
-  --chart-4: oklch(0.55 0.22 40);
-  --chart-5: oklch(0.50 0.24 40);
+  /* Rich Orange accent inspired by Thalen Technologies */
+  --chart-1: oklch(0.68 0.19 35);
+  --chart-2: oklch(0.63 0.21 33);
+  --chart-3: oklch(0.58 0.23 31);
+  --chart-4: oklch(0.53 0.25 29);
+  --chart-5: oklch(0.48 0.27 27);
   --radius: 0.65rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.20 0.05 250);
@@ -69,8 +69,8 @@
   --secondary-foreground: oklch(0.25 0.05 250);
   --muted: oklch(0.96 0.01 250);
   --muted-foreground: oklch(0.50 0.03 250);
-  /* Orange accent for CTAs */
-  --accent: oklch(0.65 0.20 40);
+  /* Rich Orange accent for CTAs - Thalen Technologies style */
+  --accent: oklch(0.62 0.22 32);
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
@@ -86,8 +86,9 @@
   /* Standardized Navy Colors - Two Primary Blues */
   --navy-primary: #0A2540;
   --navy-secondary: #12344D;
-  --orange: oklch(0.65 0.20 40);
-  --orange-dark: oklch(0.55 0.22 40);
+  --orange: oklch(0.62 0.22 32);
+  --orange-light: oklch(0.68 0.20 35);
+  --orange-dark: oklch(0.52 0.24 28);
 }
 
 .dark {
@@ -184,9 +185,14 @@
     background: linear-gradient(135deg, #0A2540 0%, #12344D 100%);
   }
 
-  /* Orange gradient for CTAs */
+  /* Rich Orange gradient for CTAs - Thalen Technologies style */
   .bg-orange-gradient {
-    background: linear-gradient(135deg, oklch(0.65 0.20 40) 0%, oklch(0.55 0.22 40) 100%);
+    background: linear-gradient(135deg, oklch(0.68 0.20 35) 0%, oklch(0.52 0.24 28) 100%);
+  }
+
+  /* Subtle orange gradient hover effect */
+  .bg-orange-gradient-hover {
+    background: linear-gradient(135deg, oklch(0.72 0.18 37) 0%, oklch(0.56 0.22 30) 100%);
   }
 
   /* Navy solid backgrounds - for sections with white text */
@@ -212,26 +218,46 @@
     background-color: oklch(0.97 0.01 250);
   }
 
-  /* Orange accent colors */
+  /* Rich Orange accent colors - Thalen Technologies style */
   .text-orange-accent {
-    color: oklch(0.75 0.15 55);
+    color: oklch(0.62 0.22 32);
   }
 
   .bg-orange-accent {
-    background-color: oklch(0.65 0.18 55);
+    background-color: oklch(0.62 0.22 32);
   }
 
-  /* Signature orange hover color (#FF6B35) */
-  .hover\:text-orange-signature:hover {
-    color: #FF6B35;
+  .bg-orange-solid {
+    background-color: oklch(0.62 0.22 32);
+  }
+
+  .hover\:bg-orange-solid:hover {
+    background-color: oklch(0.56 0.24 30);
+  }
+
+  /* Signature orange - Rich vibrant orange (Thalen Technologies style) */
+  .bg-orange-signature {
+    background: linear-gradient(135deg, oklch(0.68 0.20 35) 0%, oklch(0.52 0.24 28) 100%);
   }
 
   .hover\:bg-orange-signature:hover {
-    background-color: #FF6B35;
+    background: linear-gradient(135deg, oklch(0.72 0.18 37) 0%, oklch(0.56 0.22 30) 100%);
+  }
+
+  .text-orange-signature {
+    color: oklch(0.62 0.22 32);
+  }
+
+  .hover\:text-orange-signature:hover {
+    color: oklch(0.56 0.24 30);
+  }
+
+  .border-orange-signature {
+    border-color: oklch(0.62 0.22 32);
   }
 
   .hover\:border-orange-signature:hover {
-    border-color: #FF6B35;
+    border-color: oklch(0.56 0.24 30);
   }
 
   /* Hide scrollbar for carousel */
@@ -1161,4 +1187,17 @@ html {
     oklch(0.25 0.01 250) 100%
   );
   background-size: 200% 100%;
+}
+
+/* Base orange signature classes */
+.bg-orange-signature {
+  background-color: #FF6B35;
+}
+
+.text-orange-signature {
+  color: #FF6B35;
+}
+
+.border-orange-signature {
+  border-color: #FF6B35;
 }
