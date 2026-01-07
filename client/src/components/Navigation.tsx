@@ -87,35 +87,35 @@ export default function Navigation() {
     }
   }, [mobileMenuOpen]);
 
-  // Government Solutions column items
+  // Government Solutions column items - using correct existing routes
   const governmentSolutionsItems = [
     { name: 'Core Capabilities', href: '/core-capabilities' },
     { name: 'Federal Government', href: '/industries/federal-government' },
-    { name: 'State & Local Government', href: '/industries/state-local-government' },
-    { name: 'Defense & Intelligence', href: '/industries/defense-intelligence' },
-    { name: 'FedRAMP Compliance', href: '/services/fedramp-compliance' },
-    { name: 'StateRAMP/GovRAMP', href: '/services/stateramp-govramp' },
-    { name: 'CMMC Compliance', href: '/services/cmmc-compliance' },
+    { name: 'State & Local Government', href: '/federal-solutions/state-local' },
+    { name: 'Defense & Intelligence', href: '/sectors/federal-government' },
+    { name: 'FedRAMP Compliance', href: '/compliance/fedramp' },
+    { name: 'StateRAMP/GovRAMP', href: '/compliance/stateramp' },
+    { name: 'CMMC Compliance', href: '/federal-solutions/cmmc' },
     { name: 'ATO Support & Authorization', href: '/services/ato-support' },
-    { name: 'Government Cloud Migration', href: '/services/government-cloud-migration' },
-    { name: 'Past Performance', href: '/past-performance' },
+    { name: 'Government Cloud Migration', href: '/federal-solutions/cloud-migration' },
+    { name: 'Past Performance', href: '/federal-solutions/past-performance' },
     { name: 'Contract Vehicles', href: '/contract-vehicles' },
   ];
 
-  // Services column items
+  // Services column items - using correct existing routes
   const servicesItems = [
     { name: 'Intelligent Automation & Process Opti...', href: '/services/automation' },
     { name: 'Data Analytics & Intelligence', href: '/services/data-analytics' },
     { name: 'Cloud Infrastructure & Modernization', href: '/services/cloud' },
     { name: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
-    { name: 'Security & Compliance Consulting', href: '/services/security-compliance-consulting' },
+    { name: 'Security & Compliance Consulting', href: '/consulting-services' },
     { name: 'ATO Support & Authorization', href: '/services/ato-support' },
     { name: 'Application Development & Integration', href: '/services/application-development' },
     { name: 'Custom Software Solutions', href: '/services/custom-software' },
     { name: 'Digital Transformation Enablement', href: '/services/digital-transformation' },
   ];
 
-  // Industries column items
+  // Industries column items - using correct existing routes
   const industriesItems = [
     { name: 'Federal Government', href: '/industries/federal-government' },
     { name: 'Healthcare & Life Sciences', href: '/industries/healthcare' },
@@ -123,14 +123,14 @@ export default function Navigation() {
     { name: 'Financial Services', href: '/industries/financial-services' },
   ];
 
-  // Learn dropdown items with descriptions
+  // Learn dropdown items with descriptions - using correct existing routes
   const learnItems = [
     { name: 'Insights', description: 'Industry trends and thought leadership', href: '/insights' },
     { name: 'Resources', description: 'Guides, whitepapers, and tools', href: '/government-resources' },
     { name: 'Events', description: 'Webinars, conferences, and meetups', href: '/events' },
   ];
 
-  // About dropdown items with descriptions
+  // About dropdown items with descriptions - using correct existing routes
   const aboutItems = [
     { name: 'About Thalen', description: 'Get to know us better', href: '/about' },
     { name: 'Social Responsibility', description: 'How we give back', href: '/about/social-responsibility' },
@@ -324,7 +324,7 @@ export default function Navigation() {
             {/* CTA Button */}
             <div className="ml-6">
               <Link 
-                href="/schedule-assessment"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-orange-signature hover:bg-orange-signature/90 text-white font-semibold px-5 py-2.5 text-sm rounded-md transition-colors"
               >
                 Schedule Assessment
@@ -495,7 +495,7 @@ export default function Navigation() {
               {/* CTA Button */}
               <div className="pt-6">
                 <Link 
-                  href="/schedule-assessment" 
+                  href="/contact" 
                   onClick={closeMobileMenu}
                   className="block w-full text-center bg-orange-signature hover:bg-orange-signature/90 text-white font-semibold py-3 text-base rounded-md transition-colors"
                 >
