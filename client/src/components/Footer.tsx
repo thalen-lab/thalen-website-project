@@ -87,19 +87,174 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main Footer Grid */}
-      <div className="container py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Thalen Technologies, Inc</h3>
-            <p className="text-sm font-semibold text-[#FF6B35] mb-3">
-              Powering Government Mission Success
-            </p>
-            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-              For 25 years, we've partnered with federal, state, and local agencies to deliver mission-enabling technology solutions.
-            </p>
-            <div className="flex space-x-4">
+      {/* Main Footer Navigation */}
+      <div className="container py-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          {/* Challenges Column */}
+          <div>
+            <h4 className="font-bold text-base mb-4 text-gray-900">Challenges</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/about" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Why Thalen?
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/automation" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Process Automation
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/cloud" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Cloud Modernization
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/cybersecurity" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/data-analytics" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link href="/compliance/fedramp" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Compliance
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Solutions Column */}
+          <div className="col-span-2">
+            <h4 className="font-bold text-base mb-4 text-gray-900">Solutions</h4>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+              <div className="space-y-3">
+                <div>
+                  <Link href="/services/automation" className="font-semibold text-[#FF6B35] hover:text-[#e55a2b] transition-colors">
+                    Automate
+                  </Link>
+                  <p className="text-gray-600 text-xs mt-0.5">Intelligent Process Automation</p>
+                </div>
+                <div>
+                  <Link href="/services/data-analytics" className="font-semibold text-[#FF6B35] hover:text-[#e55a2b] transition-colors">
+                    Analyze
+                  </Link>
+                  <p className="text-gray-600 text-xs mt-0.5">Data Analytics & Intelligence</p>
+                </div>
+                <div>
+                  <Link href="/services/cloud" className="font-semibold text-[#FF6B35] hover:text-[#e55a2b] transition-colors">
+                    Modernize
+                  </Link>
+                  <p className="text-gray-600 text-xs mt-0.5">Cloud Infrastructure</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <Link href="/services/cybersecurity" className="font-semibold text-[#FF6B35] hover:text-[#e55a2b] transition-colors">
+                    Secure
+                  </Link>
+                  <p className="text-gray-600 text-xs mt-0.5">Cybersecurity & Compliance</p>
+                </div>
+                <div>
+                  <Link href="/services/application-development" className="font-semibold text-[#FF6B35] hover:text-[#e55a2b] transition-colors">
+                    Build
+                  </Link>
+                  <p className="text-gray-600 text-xs mt-0.5">Application Development</p>
+                </div>
+                <div>
+                  <Link href="/services/digital-transformation" className="font-semibold text-[#FF6B35] hover:text-[#e55a2b] transition-colors">
+                    Transform
+                  </Link>
+                  <p className="text-gray-600 text-xs mt-0.5">Digital Transformation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Industries / Resources Column */}
+          <div>
+            <h4 className="font-bold text-base mb-4 text-gray-900">Industries</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <span className="font-semibold text-gray-700">Federal:</span>
+                <Link href="/federal-solutions" className="text-gray-600 hover:text-[#FF6B35] transition-colors ml-1">
+                  Government
+                </Link>
+              </li>
+              <li>
+                <span className="font-semibold text-gray-700">State & Local:</span>
+                <Link href="/federal-solutions/state-local" className="text-gray-600 hover:text-[#FF6B35] transition-colors ml-1">
+                  Agencies
+                </Link>
+              </li>
+              <li>
+                <span className="font-semibold text-gray-700">Healthcare:</span>
+                <Link href="/industries/healthcare" className="text-gray-600 hover:text-[#FF6B35] transition-colors ml-1">
+                  Life Sciences
+                </Link>
+              </li>
+              <li>
+                <span className="font-semibold text-gray-700">Financial:</span>
+                <Link href="/industries/financial" className="text-gray-600 hover:text-[#FF6B35] transition-colors ml-1">
+                  Services
+                </Link>
+              </li>
+            </ul>
+
+            <h4 className="font-bold text-base mt-6 mb-4 text-gray-900">Resources</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/resources" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Resource Library
+                </Link>
+              </li>
+              <li>
+                <Link href="/insights" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/events" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Events & Webinars
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company Column */}
+          <div>
+            <h4 className="font-bold text-base mb-4 text-gray-900">Company</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/about" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/partners" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+              <li className="pt-2">
+                <span className="font-semibold text-gray-800">1-800-THALEN</span>
+              </li>
+            </ul>
+
+            {/* Social Links */}
+            <div className="flex space-x-4 mt-6">
               <a 
                 href="https://linkedin.com" 
                 target="_blank" 
@@ -130,100 +285,42 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Government Solutions */}
+          {/* Contract Vehicles Column */}
           <div>
-            <h4 className="font-bold text-base mb-4 text-gray-900">Government Solutions</h4>
+            <h4 className="font-bold text-base mb-4 text-gray-900">Contract Vehicles</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/federal-solutions" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Federal Government
-                </Link>
-              </li>
-              <li>
-                <Link href="/federal-solutions/state-local" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  State & Local
-                </Link>
-              </li>
-              <li>
-                <Link href="/compliance/fedramp" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  FedRAMP Compliance
-                </Link>
-              </li>
-              <li>
-                <Link href="/federal-solutions/cmmc" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  CMMC Compliance
+                <Link href="/contract-vehicles" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  GSA Schedule
                 </Link>
               </li>
               <li>
                 <Link href="/contract-vehicles" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Contract Vehicles
+                  SEWP V
+                </Link>
+              </li>
+              <li>
+                <Link href="/contract-vehicles" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  CIO-SP3
+                </Link>
+              </li>
+              <li>
+                <Link href="/compliance/fedramp" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  FedRAMP
+                </Link>
+              </li>
+              <li>
+                <Link href="/federal-solutions/cmmc" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
+                  CMMC
                 </Link>
               </li>
             </ul>
-          </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-bold text-base mb-4 text-gray-900">Services</h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link href="/services/automation" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Intelligent Automation
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/data-analytics" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/cloud" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Cloud Modernization
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/cybersecurity" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ato-support" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  ATO Support
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-bold text-base mb-4 text-gray-900">Company</h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link href="/about" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/federal-solutions/past-performance" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Past Performance
-                </Link>
-              </li>
-              <li>
-                <Link href="/case-studies" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link href="/insights" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Insights
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-600 hover:text-[#FF6B35] transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+            {/* Federal Credentials */}
+            <div className="mt-6 text-xs text-gray-500 space-y-1">
+              <p><span className="font-semibold">UEI:</span> XXXXXXXXX123</p>
+              <p><span className="font-semibold">CAGE:</span> XXXXX</p>
+            </div>
           </div>
         </div>
 
@@ -269,6 +366,9 @@ export default function Footer() {
               </Link>
               <Link href="/security" className="hover:text-[#FF6B35] transition-colors">
                 Security
+              </Link>
+              <Link href="/accessibility" className="hover:text-[#FF6B35] transition-colors">
+                Accessibility
               </Link>
             </div>
           </div>
