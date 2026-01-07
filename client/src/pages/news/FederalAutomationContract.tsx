@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
-import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check, ArrowRight, DollarSign, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check } from 'lucide-react';
 import { useState } from 'react';
 
 export default function FederalAutomationContract() {
@@ -89,37 +89,6 @@ export default function FederalAutomationContract() {
               Under the terms of the contract, Thalen will deploy its proven automation platform and methodology to streamline document-intensive workflows, reduce manual processing times, and improve service delivery to agency stakeholders. The engagement represents one of the largest automation initiatives undertaken by the agency to date.
             </p>
 
-            {/* Highlight Box */}
-            <div className="my-10 p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-100">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-green-600 rounded-xl">
-                  <DollarSign className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Contract Details</h3>
-                  <div className="grid grid-cols-2 gap-4 mt-4">
-                    <div>
-                      <p className="text-sm text-gray-500">Contract Value</p>
-                      <p className="text-2xl font-bold text-gray-900">$15M</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Duration</p>
-                      <p className="text-2xl font-bold text-gray-900">5 Years</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Expected ROI</p>
-                      <p className="text-2xl font-bold text-gray-900">300%+</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Processes Automated</p>
-                      <p className="text-2xl font-bold text-gray-900">50+</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Transforming Agency Operations
             </h2>
@@ -133,25 +102,9 @@ export default function FederalAutomationContract() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Key focus areas of the automation initiative include:
+              The automation initiative encompasses document processing automation through AI-powered document classification, data extraction, and validation to accelerate processing of incoming correspondence, applications, and supporting documentation. Workflow optimization involves redesign and automation of end-to-end business processes to eliminate bottlenecks, reduce handoffs, and improve cycle times. Data integration efforts will develop automated data flows between legacy systems and modern platforms to improve data quality and reduce manual data entry. Reporting and analytics capabilities will provide real-time visibility into operational performance and support data-driven decision making.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Document Processing Automation</strong> – Implementation of AI-powered document classification, data extraction, and validation to accelerate processing of incoming correspondence, applications, and supporting documentation.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Workflow Optimization</strong> – Redesign and automation of end-to-end business processes to eliminate bottlenecks, reduce handoffs, and improve cycle times.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Data Integration</strong> – Development of automated data flows between legacy systems and modern platforms to improve data quality and reduce manual data entry.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Reporting and Analytics</strong> – Implementation of automated reporting capabilities to provide real-time visibility into operational performance and support data-driven decision making.
-              </li>
-            </ul>
-
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Proven Methodology
             </h2>
@@ -168,39 +121,14 @@ export default function FederalAutomationContract() {
               The engagement will be executed in phases, with initial automation deployments expected within the first 90 days. This phased approach allows the agency to realize early benefits while building momentum for broader transformation.
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Expected Outcomes
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              Based on Thalen's experience with similar engagements, the agency anticipates significant improvements across multiple dimensions:
+              Based on Thalen's experience with similar engagements, the agency anticipates significant improvements across multiple dimensions. Processing time for document-intensive workflows is expected to decrease by 85%. Automated data extraction and validation will achieve 99.5% accuracy. End-to-end processing times for key workflows will improve by 60%. Projected savings over the contract period exceed $45 million through efficiency gains. More than 50,000 staff hours will be redirected annually to mission-critical activities.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <TrendingUp className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>85% reduction</strong> in manual processing time for document-intensive workflows</span>
-              </li>
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <TrendingUp className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>99.5% accuracy</strong> in automated data extraction and validation</span>
-              </li>
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <TrendingUp className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>60% faster</strong> end-to-end processing times for key workflows</span>
-              </li>
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <TrendingUp className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>$45M+ in projected savings</strong> over the contract period through efficiency gains</span>
-              </li>
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <TrendingUp className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>50,000+ staff hours</strong> redirected annually to mission-critical activities</span>
-              </li>
-            </ul>
-
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Building on Success
             </h2>
@@ -213,7 +141,6 @@ export default function FederalAutomationContract() {
               "Every engagement teaches us something new about how to deliver value in the federal environment," said the CEO. "We're constantly refining our approach based on lessons learned and emerging technologies. This contract gives us the opportunity to apply everything we've learned to help another agency achieve its modernization goals."
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Contract Vehicle
             </h2>
@@ -222,7 +149,6 @@ export default function FederalAutomationContract() {
               The contract was awarded through the GSA Multiple Award Schedule (MAS) IT Category, demonstrating the efficiency of government-wide acquisition vehicles for procuring innovative technology solutions. Thalen maintains multiple contract vehicles to facilitate federal procurement, including GSA MAS, CIO-SP3, and SEWP V.
             </p>
 
-            {/* About Section */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               About Thalen Technologies
             </h2>
@@ -283,27 +209,25 @@ export default function FederalAutomationContract() {
 
           {/* Related Articles */}
           <div className="mt-16 pt-12 border-t border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Related News</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Related News</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/news/federal-practice-expansion" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">Company News</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
+              <Link href="/news/federal-practice-expansion" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 block">Company News</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
                   Thalen Technologies Expands Federal Practice with New Leadership
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">New executive hires and expanded capabilities position Thalen for continued growth.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  New executive hires and expanded capabilities position Thalen for continued growth.
+                </p>
               </Link>
-              <Link href="/news/document-processing-platform" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-green-600 uppercase tracking-wider">Technology</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
-                  Launch of AI-Powered Document Processing Platform
+              <Link href="/news/document-processing-platform" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-green-600 mb-2 block">Technology</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
+                  Thalen Technologies Launches AI-Powered Document Processing Platform
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">New intelligent document processing solution reduces manual review time by 85%.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  New intelligent document processing solution reduces manual review time by 85%.
+                </p>
               </Link>
             </div>
           </div>

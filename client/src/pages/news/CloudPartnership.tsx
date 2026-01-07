@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
-import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check } from 'lucide-react';
 import { useState } from 'react';
 
 export default function CloudPartnership() {
@@ -89,7 +89,6 @@ export default function CloudPartnership() {
               The partnership combines Thalen's deep expertise in government technology modernization with advanced cloud infrastructure capabilities, enabling faster deployment of mission-critical applications while maintaining the highest levels of security and compliance required for federal operations.
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Expanding Cloud Capabilities
             </h2>
@@ -103,25 +102,9 @@ export default function CloudPartnership() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Key capabilities enabled by the partnership include:
+              The partnership enables accelerated FedRAMP deployments through streamlined pathways to deploy applications on FedRAMP-authorized infrastructure, reducing time-to-authorization by up to 40%. Native integration with advanced AI and machine learning services enables rapid development and deployment of intelligent automation solutions. Enhanced capabilities for designing and implementing hybrid cloud environments span on-premises data centers and multiple cloud providers. Access to advanced security tools and services complements Thalen's existing cybersecurity offerings.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Accelerated FedRAMP Deployments</strong> – Streamlined pathways to deploy applications on FedRAMP-authorized infrastructure, reducing time-to-authorization by up to 40%.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>AI/ML Platform Integration</strong> – Native integration with advanced AI and machine learning services, enabling rapid development and deployment of intelligent automation solutions.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Hybrid Cloud Architecture</strong> – Enhanced capabilities for designing and implementing hybrid cloud environments that span on-premises data centers and multiple cloud providers.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Enhanced Security Services</strong> – Access to advanced security tools and services that complement Thalen's existing cybersecurity offerings.
-              </li>
-            </ul>
-
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Benefits for Federal Clients
             </h2>
@@ -135,25 +118,9 @@ export default function CloudPartnership() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Specific benefits for government clients include:
+              Government clients will experience faster time to value through pre-configured solutions and accelerators that reduce deployment timelines and enable agencies to realize benefits more quickly. Cost optimization tools and expertise help agencies optimize their cloud spending and demonstrate ROI. Joint compliance frameworks ensure solutions meet FedRAMP, FISMA, and other federal security requirements. Early access to emerging cloud capabilities enables agencies to leverage the latest technologies for mission advantage.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Faster Time to Value</strong> – Pre-configured solutions and accelerators reduce deployment timelines and enable agencies to realize benefits more quickly.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Cost Optimization</strong> – Access to cloud economics tools and expertise helps agencies optimize their cloud spending and demonstrate ROI.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Compliance Assurance</strong> – Joint compliance frameworks ensure solutions meet FedRAMP, FISMA, and other federal security requirements.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Innovation Access</strong> – Early access to emerging cloud capabilities enables agencies to leverage the latest technologies for mission advantage.
-              </li>
-            </ul>
-
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Joint Solution Development
             </h2>
@@ -170,7 +137,6 @@ export default function CloudPartnership() {
               The partnership also includes joint investment in a Federal Innovation Lab where Thalen and its partner will develop and demonstrate new capabilities for government clients. The lab will serve as a proving ground for emerging technologies and a resource for agencies exploring modernization options.
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Training and Certification
             </h2>
@@ -183,7 +149,6 @@ export default function CloudPartnership() {
               "Investing in our people is essential to delivering on the promise of this partnership," said the company's Chief Operating Officer. "We're committed to building a team with the skills and certifications needed to deliver world-class cloud solutions for our government clients."
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Looking Ahead
             </h2>
@@ -196,7 +161,6 @@ export default function CloudPartnership() {
               Federal agencies interested in learning more about Thalen's enhanced cloud capabilities can contact the company's Federal Solutions team or visit the company's website for additional information.
             </p>
 
-            {/* About Section */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               About Thalen Technologies
             </h2>
@@ -257,27 +221,25 @@ export default function CloudPartnership() {
 
           {/* Related Articles */}
           <div className="mt-16 pt-12 border-t border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Related News</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Related News</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">Compliance</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
+              <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 block">Compliance</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
                   Thalen Technologies Achieves FedRAMP High Authorization
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">Successfully completed FedRAMP High authorization for our government cloud platform.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  Successfully completed FedRAMP High authorization for our government cloud platform.
+                </p>
               </Link>
-              <Link href="/news/defense-joint-venture" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-purple-600 uppercase tracking-wider">Partnership</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
-                  Joint Venture with Defense Contractor Announced
+              <Link href="/news/federal-practice-expansion" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 block">Company News</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
+                  Thalen Technologies Expands Federal Practice with New Leadership
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">Strategic alliance combines expertise in defense systems integration with advanced AI capabilities.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  New executive hires and expanded capabilities position Thalen for continued growth.
+                </p>
               </Link>
             </div>
           </div>

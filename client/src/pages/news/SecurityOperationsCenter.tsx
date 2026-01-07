@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
-import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check, ArrowRight, Shield, Eye, Clock, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check } from 'lucide-react';
 import { useState } from 'react';
 
 export default function SecurityOperationsCenter() {
@@ -89,39 +89,18 @@ export default function SecurityOperationsCenter() {
               The new facility represents a significant expansion of Thalen's cybersecurity capabilities, tripling the company's security operations capacity and introducing advanced threat detection technologies powered by artificial intelligence and machine learning. The CSOC is staffed by a team of certified security professionals with deep expertise in federal cybersecurity requirements and threat landscapes.
             </p>
 
-            {/* SOC Capabilities */}
-            <div className="my-10 grid md:grid-cols-2 gap-6">
-              <div className="p-6 bg-gradient-to-br from-red-50 to-rose-50 rounded-xl border border-red-100">
-                <div className="p-3 bg-red-600 rounded-xl w-fit mb-4">
-                  <Eye className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">24/7 Threat Monitoring</h3>
-                <p className="text-sm text-gray-600">Continuous surveillance of client environments using advanced SIEM and threat intelligence platforms.</p>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl border border-orange-100">
-                <div className="p-3 bg-orange-600 rounded-xl w-fit mb-4">
-                  <AlertTriangle className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Rapid Incident Response</h3>
-                <p className="text-sm text-gray-600">Expert incident response team available around the clock with 15-minute initial response SLA.</p>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
-                <div className="p-3 bg-blue-600 rounded-xl w-fit mb-4">
-                  <Shield className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Threat Intelligence</h3>
-                <p className="text-sm text-gray-600">Integration with federal threat feeds and proprietary intelligence sources for proactive defense.</p>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl border border-purple-100">
-                <div className="p-3 bg-purple-600 rounded-xl w-fit mb-4">
-                  <Clock className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Compliance Reporting</h3>
-                <p className="text-sm text-gray-600">Automated compliance reporting for FISMA, FedRAMP, CMMC, and other federal requirements.</p>
-              </div>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
+              Comprehensive Security Operations
+            </h2>
 
-            {/* Section Header */}
+            <p className="text-gray-700 leading-relaxed">
+              The expanded CSOC delivers four core capabilities essential to modern federal cybersecurity. The facility provides continuous 24/7 threat monitoring through advanced SIEM and threat intelligence platforms, enabling real-time surveillance of client environments. A dedicated incident response team stands ready around the clock with a 15-minute initial response service level agreement, ensuring rapid containment of security events.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              The center integrates with federal threat feeds and proprietary intelligence sources to enable proactive defense through comprehensive threat intelligence. Additionally, automated compliance reporting capabilities support FISMA, FedRAMP, CMMC, and other federal requirements, reducing the administrative burden on agency security teams while maintaining continuous compliance visibility.
+            </p>
+
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Responding to Evolving Threats
             </h2>
@@ -135,28 +114,13 @@ export default function SecurityOperationsCenter() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Key capabilities of the new CSOC include:
+              The facility leverages AI-powered threat detection, with advanced machine learning algorithms analyzing billions of security events daily to identify potential threats and anomalies that might escape traditional detection methods. Proactive threat hunting teams continuously search for indicators of compromise and advanced persistent threats that may have evaded automated detection. Experienced incident responders remain available 24/7 to contain, eradicate, and recover from security incidents with minimal business impact.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong>AI-Powered Threat Detection</strong> – Advanced machine learning algorithms analyze billions of security events daily to identify potential threats and anomalies that might escape traditional detection methods.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Threat Hunting</strong> – Proactive threat hunting teams continuously search for indicators of compromise and advanced persistent threats that may have evaded automated detection.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Incident Response</strong> – Experienced incident responders available 24/7 to contain, eradicate, and recover from security incidents with minimal business impact.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Vulnerability Management</strong> – Continuous vulnerability scanning and assessment with prioritized remediation guidance based on threat intelligence and asset criticality.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Security Orchestration</strong> – Automated response playbooks that accelerate incident response and reduce mean time to remediation.
-              </li>
-            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              Continuous vulnerability scanning and assessment provides prioritized remediation guidance based on threat intelligence and asset criticality. Automated response playbooks accelerate incident response through security orchestration, reducing mean time to remediation across all client environments.
+            </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Federal-Grade Security
             </h2>
@@ -173,7 +137,6 @@ export default function SecurityOperationsCenter() {
               The CSOC team includes professionals with active security clearances and certifications including CISSP, CISM, CEH, GIAC, and others. All team members undergo rigorous background checks and continuous security training to ensure they remain current on the latest threats and defensive techniques.
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Integration with Federal Threat Sharing
             </h2>
@@ -186,47 +149,30 @@ export default function SecurityOperationsCenter() {
               "Threat sharing is essential in today's environment," said the company's Vice President of Cybersecurity Services. "No organization can defend against modern threats in isolation. By participating in federal threat sharing programs, we ensure our clients benefit from intelligence gathered across the entire federal enterprise."
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Service Offerings
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              The expanded CSOC supports a range of managed security services tailored for federal clients:
+              The expanded CSOC supports a comprehensive range of managed security services tailored for federal clients. Managed Detection and Response services provide continuous monitoring and expert response to security events. Security Information and Event Management as a service delivers cloud-based SIEM capabilities with federal compliance reporting. Endpoint Detection and Response offers advanced endpoint protection with real-time threat detection and automated response.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Managed Detection and Response (MDR)</strong> – Comprehensive threat monitoring and response services with guaranteed SLAs for detection and response times.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Security Information and Event Management (SIEM)</strong> – Fully managed SIEM services including log collection, correlation, analysis, and alerting.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Endpoint Detection and Response (EDR)</strong> – Advanced endpoint protection with real-time monitoring and automated response capabilities.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Vulnerability Management as a Service</strong> – Continuous vulnerability assessment with prioritized remediation guidance and tracking.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Incident Response Retainer</strong> – Pre-positioned incident response services with guaranteed response times and dedicated resources.
-              </li>
-            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              The facility also provides vulnerability management through continuous scanning, assessment, and remediation tracking. Penetration testing services include regular security assessments by certified ethical hackers. Compliance monitoring ensures continuous monitoring and reporting for federal security requirements.
+            </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              Availability
+              Availability and Engagement
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              CSOC services are available immediately for federal agencies through Thalen's existing contract vehicles. The company offers flexible engagement models ranging from fully managed services to co-managed arrangements that complement agencies' existing security capabilities.
+              CSOC services are available to federal agencies through Thalen's existing contract vehicles including GSA MAS, CIO-SP3, and SEWP V. The company offers flexible engagement models ranging from fully managed services to co-managed arrangements that augment existing agency security teams.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Federal agencies interested in learning more about the CSOC can request a briefing or facility tour through Thalen's website or by contacting the Cybersecurity Services team directly.
+              Federal agencies interested in learning more about the expanded CSOC capabilities can schedule a briefing through the company's website or contact the Cybersecurity Services team directly.
             </p>
 
-            {/* About Section */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               About Thalen Technologies
             </h2>
@@ -287,27 +233,25 @@ export default function SecurityOperationsCenter() {
 
           {/* Related Articles */}
           <div className="mt-16 pt-12 border-t border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Related News</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Related News</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/news/cmmc-certification" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">Security</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
-                  New CMMC Level 2 Certification Achieved
-                </h4>
-                <p className="mt-2 text-sm text-gray-600">Strengthening our position as a trusted defense contractor partner.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
-              </Link>
-              <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">Compliance</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
+              <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 block">Compliance</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
                   Thalen Technologies Achieves FedRAMP High Authorization
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">Successfully completed FedRAMP High authorization for our government cloud platform.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  Successfully completed FedRAMP High authorization for our government cloud platform.
+                </p>
+              </Link>
+              <Link href="/news/cmmc-certification" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-green-600 mb-2 block">Compliance</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
+                  Thalen Technologies Achieves CMMC Level 2 Certification
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Certification validates commitment to protecting controlled unclassified information.
+                </p>
               </Link>
             </div>
           </div>

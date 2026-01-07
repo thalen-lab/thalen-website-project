@@ -5,11 +5,11 @@ import { Link } from 'wouter';
 import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check } from 'lucide-react';
 import { useState } from 'react';
 
-export default function GovTech100() {
+export default function ZeroTrustSecurity() {
   const [copied, setCopied] = useState(false);
   
   const articleUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const articleTitle = 'Thalen Technologies Named to GovTech 100 List for Third Consecutive Year';
+  const articleTitle = 'Thalen Technologies Launches Zero Trust Security Framework';
   
   const handleCopyLink = () => {
     navigator.clipboard.writeText(articleUrl);
@@ -40,7 +40,7 @@ export default function GovTech100() {
             items={[
               { label: 'About', href: '/about' },
               { label: 'News & Updates', href: '/about/news-updates' },
-              { label: 'GovTech 100 Recognition' }
+              { label: 'Zero Trust Security Framework' }
             ]}
           />
         </div>
@@ -60,20 +60,20 @@ export default function GovTech100() {
           <header className="mb-12">
             {/* Category Tag */}
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-50 text-amber-700">
-                Awards
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-red-50 text-red-700">
+                Security
               </span>
               <span className="text-sm text-gray-500">June 2025</span>
             </div>
 
             {/* Title */}
             <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-[1.15] tracking-tight mb-8">
-              Thalen Technologies Named to GovTech 100 List for Third Consecutive Year
+              Thalen Technologies Launches Zero Trust Security Framework
             </h1>
 
             {/* Subtitle/Deck */}
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
-              Recognition for innovative solutions that transform how government agencies deliver services and engage with citizens through intelligent automation and AI.
+              Comprehensive security solution helps federal agencies implement zero trust architecture in alignment with Executive Order 14028 and OMB M-22-09 requirements.
             </p>
           </header>
 
@@ -82,87 +82,83 @@ export default function GovTech100() {
             
             {/* Dateline */}
             <p className="text-gray-700 leading-relaxed">
-              <strong>WASHINGTON, D.C. – June 10, 2025</strong> – Thalen Technologies, Inc., a leading provider of intelligent automation and AI solutions for government and enterprise clients, has been named to the prestigious GovTech 100 list for the third consecutive year by Government Technology magazine. The annual list recognizes the 100 companies making the biggest impact on state and local government through technology innovation.
+              <strong>WASHINGTON, D.C. – June 3, 2025</strong> – Thalen Technologies, Inc., a leading provider of intelligent automation and AI solutions for government and enterprise clients, today announced the launch of its Zero Trust Security Framework, a comprehensive solution designed to help federal agencies implement zero trust architecture in compliance with federal cybersecurity mandates.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              The recognition highlights Thalen's continued leadership in developing and deploying solutions that help government agencies modernize operations, improve citizen services, and achieve measurable mission outcomes. The company's inclusion on the list for three straight years—2023, 2024, and 2025—demonstrates sustained excellence and ongoing commitment to government technology innovation.
-            </p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              Driving Government Innovation
-            </h2>
-
-            <p className="text-gray-700 leading-relaxed">
-              The GovTech 100 list is compiled annually by Government Technology magazine's editorial team, which evaluates companies based on their impact on government operations, innovation in product development, customer satisfaction, and overall contribution to the government technology ecosystem.
-            </p>
-
-            <p className="text-gray-700 leading-relaxed">
-              "Being named to the GovTech 100 for the third consecutive year is a tremendous honor," said the company's Chief Executive Officer. "This recognition reflects our team's dedication to developing solutions that make a real difference for government agencies and the citizens they serve. We're proud to be part of a community of innovators working to transform public sector technology."
-            </p>
-
-            <p className="text-gray-700 leading-relaxed">
-              Government Technology magazine specifically highlighted several areas where Thalen has demonstrated leadership. The company's intelligent process automation capabilities have helped agencies reduce processing times by up to 85% while improving accuracy and compliance. Citizen service modernization efforts have resulted in digital service delivery platforms that improve citizen experience and reduce wait times for government services. Data-driven decision making solutions enable agencies to leverage their data for better policy decisions and operational improvements. Cybersecurity excellence has been demonstrated through delivery of security solutions that help agencies protect sensitive data and maintain compliance with evolving requirements.
+              The framework provides agencies with a structured approach to adopting zero trust principles, including identity verification, device validation, network segmentation, and continuous monitoring. The solution addresses the requirements outlined in Executive Order 14028 on Improving the Nation's Cybersecurity and OMB Memorandum M-22-09, which mandates federal agencies to achieve specific zero trust security goals.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              Impact Across Government
+              Addressing Federal Zero Trust Requirements
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              Over the past year, Thalen Technologies has expanded its impact across federal, state, and local government clients. The company's solutions are now deployed in agencies serving over 50 million citizens, processing millions of transactions annually and delivering billions of dollars in documented efficiency gains.
+              Federal agencies face significant challenges in transitioning from traditional perimeter-based security models to zero trust architecture. The transition requires fundamental changes to identity management, network architecture, application security, and data protection practices. Thalen's framework provides a roadmap for this transformation.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              "The scale of impact we're achieving is remarkable," noted the company's Chief Operating Officer. "But what matters most is the individual citizen who gets their benefits faster, the caseworker who can focus on helping people instead of pushing paper, and the agency leader who can make better decisions with real-time data. That's what drives us."
+              "Zero trust is not just a technology initiative—it's a fundamental shift in how agencies approach security," said the company's Chief Information Security Officer. "Our framework helps agencies navigate this transition by providing clear guidance, proven methodologies, and integrated technology solutions that address all aspects of zero trust implementation."
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Key achievements over the past year include more than $200 million in documented cost savings delivered to government clients through automation and process optimization. The company completed 15 new agency deployments across federal, state, and local government. Customer satisfaction ratings reached 98% based on independent surveys. The team developed and deployed more than 50 new automation use cases. Platform availability maintained at 99.9% across all production deployments.
+              The framework addresses five core pillars of zero trust architecture. Identity verification ensures that all users are authenticated and authorized before accessing any resource, with continuous verification throughout each session. Device validation confirms that all devices meet security requirements before granting access, with ongoing compliance monitoring. Network segmentation implements micro-segmentation to limit lateral movement and contain potential breaches. Application security protects applications through secure development practices, runtime protection, and continuous vulnerability management. Data protection ensures that data is encrypted, classified, and protected throughout its lifecycle.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              Commitment to Innovation
+              Comprehensive Implementation Support
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              Thalen's continued recognition on the GovTech 100 reflects the company's ongoing investment in research and development. Over the past year, Thalen has introduced several new capabilities including advanced document processing, predictive analytics, and enhanced cybersecurity features designed specifically for government use cases.
+              Thalen's Zero Trust Security Framework includes comprehensive implementation support to help agencies achieve their security goals. The company's experienced security consultants work with agencies to assess current security posture, develop implementation roadmaps, and execute transformation initiatives.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              "Innovation is in our DNA," said the company's Chief Technology Officer. "We're constantly exploring new technologies and approaches that can help government agencies work more effectively. Our R&D investments ensure that we stay ahead of the curve and continue delivering cutting-edge solutions to our clients."
+              "We don't just provide technology—we provide the expertise and support agencies need to succeed," noted the company's Vice President of Cybersecurity Solutions. "Our team has deep experience in federal security requirements and has helped numerous agencies navigate complex security transformations."
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              The company's innovation agenda for the coming year includes expanded AI capabilities, enhanced integration with emerging technologies, and new solutions designed to address evolving government priorities around equity, accessibility, and sustainability.
+              Implementation services include zero trust maturity assessment to evaluate current security posture against zero trust principles and identify gaps. Architecture design develops target state architecture aligned with agency mission requirements and federal mandates. Technology integration implements and configures zero trust technology components including identity providers, network security tools, and monitoring platforms. Policy development creates security policies and procedures that support zero trust operations. Training and enablement provides staff training on zero trust concepts, tools, and procedures.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              Industry Leadership
+              Technology Integration
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              Beyond product development, Thalen Technologies has established itself as a thought leader in government technology. Company executives regularly speak at industry conferences, contribute to policy discussions, and share best practices through publications and webinars.
+              The framework integrates with leading security technology providers to deliver comprehensive zero trust capabilities. Thalen has established partnerships with identity management, network security, endpoint protection, and security analytics vendors to provide agencies with best-of-breed solutions.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              "We believe in giving back to the community that has supported our growth," noted the CEO. "By sharing our knowledge and experience, we hope to raise the bar for government technology across the board. When the whole ecosystem improves, everyone benefits—especially citizens."
+              "We've built our framework to be technology-agnostic, allowing agencies to leverage their existing investments while filling gaps with proven solutions," said the CISO. "This approach minimizes disruption while accelerating time to value."
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              The company's thought leadership activities include regular contributions to government technology publications, participation in industry working groups, and hosting educational events for government IT professionals.
+              The framework supports integration with major identity providers for single sign-on and multi-factor authentication. Network security integration enables micro-segmentation and software-defined perimeter capabilities. Endpoint detection and response integration provides continuous device monitoring and threat detection. Security information and event management integration enables centralized logging and security analytics.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              Looking Ahead
+              Compliance and Reporting
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              As Thalen Technologies looks to the future, the company remains focused on its mission of helping government agencies leverage technology to better serve citizens. The GovTech 100 recognition validates the company's approach and provides motivation to continue pushing the boundaries of what's possible in government technology.
+              The framework includes comprehensive compliance and reporting capabilities to help agencies demonstrate progress toward zero trust goals. Automated reporting tools track implementation progress against OMB M-22-09 milestones and generate documentation required for compliance reporting.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              "This recognition is not just about looking back at what we've accomplished," said the CEO. "It's about looking forward to the opportunities ahead. We're excited to continue working with government agencies to solve their most challenging problems and deliver better outcomes for the citizens they serve."
+              "Compliance reporting is a significant burden for agencies," noted the Vice President of Cybersecurity Solutions. "Our framework automates much of this reporting, freeing security teams to focus on actual security improvements rather than documentation."
+            </p>
+
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
+              Proven Results
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed">
+              Early adopters of the framework have achieved significant improvements in their security posture. Agencies have reported reduced time to detect and respond to security incidents, improved visibility into network activity, and accelerated progress toward zero trust compliance milestones.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              "The results speak for themselves," said the CISO. "Agencies that have implemented our framework are seeing real improvements in their security posture while making measurable progress toward federal compliance requirements."
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
@@ -227,22 +223,22 @@ export default function GovTech100() {
           <div className="mt-16 pt-12 border-t border-gray-200">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Related News</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/news/government-it-contractor-award" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold uppercase tracking-wider text-amber-600 mb-2 block">Awards</span>
+              <Link href="/news/security-operations-center" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-red-600 mb-2 block">Security</span>
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
-                  Recognized as Top Government IT Contractor 2025
+                  Thalen Technologies Opens Cybersecurity Operations Center
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Industry recognition for excellence in government technology modernization and automation solutions.
+                  New facility provides 24/7 threat monitoring and incident response for federal clients.
                 </p>
               </Link>
-              <Link href="/news/federal-practice-expansion" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 block">Company News</span>
+              <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 block">Compliance</span>
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
-                  Thalen Technologies Expands Federal Practice with New Leadership
+                  Thalen Technologies Achieves FedRAMP High Authorization
                 </h4>
                 <p className="text-sm text-gray-600">
-                  New executive hires and expanded capabilities position Thalen for continued growth.
+                  Successfully completed FedRAMP High authorization for our government cloud platform.
                 </p>
               </Link>
             </div>

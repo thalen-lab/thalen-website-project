@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
-import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check, ArrowRight, FileText, Zap, Brain, Target } from 'lucide-react';
+import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check } from 'lucide-react';
 import { useState } from 'react';
 
 export default function DocumentProcessingPlatform() {
@@ -89,39 +89,14 @@ export default function DocumentProcessingPlatform() {
               The new platform leverages advanced artificial intelligence, machine learning, and natural language processing to automate the classification, extraction, and validation of data from diverse document types. Early adopters have reported processing time reductions of up to 85% while achieving accuracy rates exceeding 99.7%.
             </p>
 
-            {/* Feature Highlights */}
-            <div className="my-10 grid md:grid-cols-2 gap-6">
-              <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
-                <div className="p-3 bg-blue-600 rounded-xl w-fit mb-4">
-                  <Brain className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">AI-Powered Classification</h3>
-                <p className="text-sm text-gray-600">Automatically categorizes documents across 200+ document types with 99.5% accuracy using advanced machine learning models.</p>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-100">
-                <div className="p-3 bg-green-600 rounded-xl w-fit mb-4">
-                  <FileText className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Intelligent Extraction</h3>
-                <p className="text-sm text-gray-600">Extracts structured data from unstructured documents including handwritten forms, scanned images, and complex layouts.</p>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl border border-purple-100">
-                <div className="p-3 bg-purple-600 rounded-xl w-fit mb-4">
-                  <Zap className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Real-Time Processing</h3>
-                <p className="text-sm text-gray-600">Processes documents in seconds, not hours, enabling same-day turnaround for time-sensitive workflows.</p>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl border border-orange-100">
-                <div className="p-3 bg-orange-600 rounded-xl w-fit mb-4">
-                  <Target className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Validation & QA</h3>
-                <p className="text-sm text-gray-600">Built-in validation rules and human-in-the-loop workflows ensure accuracy for high-stakes decisions.</p>
-              </div>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
+              Platform Capabilities
+            </h2>
 
-            {/* Section Header */}
+            <p className="text-gray-700 leading-relaxed">
+              The platform delivers four core capabilities essential to modern document processing. AI-powered classification automatically categorizes documents across more than 200 document types with 99.5% accuracy using advanced machine learning models. Intelligent extraction captures structured data from unstructured documents including handwritten forms, scanned images, and complex layouts. Real-time processing handles documents in seconds rather than hours, enabling same-day turnaround for time-sensitive workflows. Built-in validation rules and human-in-the-loop workflows ensure accuracy for high-stakes decisions.
+            </p>
+
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Addressing Federal Document Challenges
             </h2>
@@ -135,56 +110,25 @@ export default function DocumentProcessingPlatform() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Key capabilities designed for federal use cases include:
+              The platform provides multi-format support that processes PDFs, images, emails, faxes, and electronic forms with equal accuracy, handling the diverse document types common in government operations. Advanced OCR capabilities accurately extract data from handwritten forms and annotations, a critical requirement for many federal workflows. Automatic identification and protection of personally identifiable information ensures compliance with federal privacy requirements. Complete logging of all processing activities supports compliance requirements and enables quality assurance reviews. RESTful APIs enable seamless integration with existing agency systems, case management platforms, and workflow tools.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Multi-Format Support</strong> – Processes PDFs, images, emails, faxes, and electronic forms with equal accuracy, handling the diverse document types common in government operations.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Handwriting Recognition</strong> – Advanced OCR capabilities accurately extract data from handwritten forms and annotations, a critical requirement for many federal workflows.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>PII Detection and Redaction</strong> – Automatically identifies and protects personally identifiable information in accordance with federal privacy requirements.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Audit Trail</strong> – Complete logging of all processing activities supports compliance requirements and enables quality assurance reviews.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Integration APIs</strong> – RESTful APIs enable seamless integration with existing agency systems, case management platforms, and workflow tools.
-              </li>
-            </ul>
-
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Proven Results
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              The platform has been validated through pilot deployments with multiple federal agencies, demonstrating significant improvements in processing efficiency and accuracy:
+              The platform has been validated through pilot deployments with multiple federal agencies, demonstrating significant improvements in processing efficiency and accuracy.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Benefits Administration</strong> – A federal benefits agency reduced application processing time from 5 days to 4 hours, enabling faster service delivery to citizens.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Healthcare Claims</strong> – A healthcare agency achieved 99.7% accuracy in claims data extraction, reducing rework and payment errors.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Immigration Services</strong> – An immigration agency processed 3x more applications with existing staff by automating document intake and classification.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Tax Processing</strong> – A revenue agency reduced manual data entry by 90%, redirecting staff to higher-value audit and compliance activities.
-              </li>
-            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              A federal benefits agency reduced application processing time from 5 days to 4 hours, enabling faster service delivery to citizens. A healthcare agency achieved 99.7% accuracy in claims data extraction, reducing rework and payment errors. An immigration agency processed three times more applications with existing staff by automating document intake and classification. A revenue agency reduced manual data entry by 90%, redirecting staff to higher-value audit and compliance activities.
+            </p>
 
             <p className="text-gray-700 leading-relaxed">
               "The results from our pilot deployments exceeded our expectations," noted the company's Vice President of Product. "Agencies are seeing immediate, measurable improvements in their operations. More importantly, they're able to serve citizens faster and more accurately."
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Security and Compliance
             </h2>
@@ -197,33 +141,26 @@ export default function DocumentProcessingPlatform() {
               "Security is non-negotiable for federal document processing," said the company's Chief Information Security Officer. "We've built security into every layer of the platform, from data encryption and access controls to audit logging and continuous monitoring. Agencies can trust that their sensitive documents are protected."
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              Continuous Learning
+              Implementation and Support
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              Unlike traditional rules-based document processing systems, Thalen's IDP platform continuously learns and improves from user feedback. When human reviewers correct extraction errors or validate uncertain results, the system incorporates these corrections to improve future accuracy.
+              Thalen offers comprehensive implementation services to help agencies deploy the IDP platform quickly and effectively. The company's experienced team works with agencies to configure the platform for their specific document types, integrate with existing systems, and train staff on platform capabilities.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              "The platform gets smarter over time," explained the CTO. "Each correction teaches the system something new. Agencies that have been using the platform for several months are seeing accuracy rates continue to climb as the models learn their specific document types and data patterns."
+              "We don't just deliver software—we deliver outcomes," said the Vice President of Product. "Our implementation team has deep experience in federal document workflows and works closely with agencies to ensure they realize the full value of the platform."
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Availability
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              The Intelligent Document Processing platform is available immediately for federal agencies through Thalen's existing contract vehicles, including GSA MAS, CIO-SP3, and SEWP V. The company offers flexible deployment options including cloud-hosted, hybrid, and on-premises configurations to meet diverse agency requirements.
+              The Intelligent Document Processing platform is available immediately through Thalen's existing contract vehicles including GSA MAS, CIO-SP3, and SEWP V. Federal agencies interested in learning more can schedule a demonstration through the company's website or contact the Federal Solutions team directly.
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
-              Federal agencies interested in learning more about the IDP platform can request a demonstration through Thalen's website or contact the Federal Solutions team directly.
-            </p>
-
-            {/* About Section */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               About Thalen Technologies
             </h2>
@@ -284,27 +221,25 @@ export default function DocumentProcessingPlatform() {
 
           {/* Related Articles */}
           <div className="mt-16 pt-12 border-t border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Related News</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Related News</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/news/federal-automation-contract" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">Company News</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
-                  Awarded $15M Federal Automation Contract
+              <Link href="/news/federal-automation-contract" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-green-600 mb-2 block">Contract</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
+                  Thalen Technologies Awarded Federal Automation Contract
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">Multi-year contract to modernize federal agency operations through intelligent automation.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  Multi-year contract to modernize document processing for federal agency.
+                </p>
               </Link>
-              <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">Compliance</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
+              <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 block">Compliance</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
                   Thalen Technologies Achieves FedRAMP High Authorization
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">Successfully completed FedRAMP High authorization for our government cloud platform.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  Successfully completed FedRAMP High authorization for our government cloud platform.
+                </p>
               </Link>
             </div>
           </div>

@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
-import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check, ArrowRight, ShieldCheck, Award } from 'lucide-react';
+import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check } from 'lucide-react';
 import { useState } from 'react';
 
 export default function CMMCCertification() {
@@ -89,22 +89,10 @@ export default function CMMCCertification() {
               The CMMC Level 2 certification was awarded following a rigorous assessment by a CMMC Third Party Assessment Organization (C3PAO), validating Thalen's implementation of 110 security practices aligned with NIST SP 800-171 requirements. This certification positions Thalen to support DoD contractors and primes on contracts requiring advanced cybersecurity protections.
             </p>
 
-            {/* Highlight Box */}
-            <div className="my-10 p-8 bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl border border-red-100">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-red-600 rounded-xl">
-                  <ShieldCheck className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">CMMC Level 2: Advanced</h3>
-                  <p className="text-gray-700">
-                    CMMC Level 2 requires implementation of 110 security practices based on NIST SP 800-171, designed to protect Controlled Unclassified Information (CUI). This level is required for contractors handling sensitive DoD information that, if compromised, could impact national security.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p className="text-gray-700 leading-relaxed">
+              CMMC Level 2, designated as "Advanced," requires implementation of 110 security practices based on NIST SP 800-171. This level is designed to protect Controlled Unclassified Information and is required for contractors handling sensitive DoD information that, if compromised, could impact national security.
+            </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Protecting the Defense Industrial Base
             </h2>
@@ -118,73 +106,9 @@ export default function CMMCCertification() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              The certification validates Thalen's implementation of security practices across 14 domains:
+              The certification validates Thalen's implementation of security practices across 14 domains: Access Control, Awareness and Training, Audit and Accountability, Configuration Management, Identification and Authentication, Incident Response, Maintenance, Media Protection, Personnel Security, Physical Protection, Risk Assessment, Security Assessment, System and Communications Protection, and System and Information Integrity.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4 my-8">
-              <ul className="space-y-2">
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Access Control
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Awareness and Training
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Audit and Accountability
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Configuration Management
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Identification and Authentication
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Incident Response
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Maintenance
-                </li>
-              </ul>
-              <ul className="space-y-2">
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Media Protection
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Personnel Security
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Physical Protection
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Risk Assessment
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  Security Assessment
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  System and Communications Protection
-                </li>
-                <li className="text-gray-700 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  System and Information Integrity
-                </li>
-              </ul>
-            </div>
-
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Supporting Defense Missions
             </h2>
@@ -198,51 +122,37 @@ export default function CMMCCertification() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Key capabilities now available under CMMC Level 2 certification include:
+              Key capabilities now available under CMMC Level 2 certification include secure software development in CMMC-compliant environments with appropriate controls for protecting CUI throughout the development lifecycle. Cloud services for defense provide hosting and management of defense applications and data on CMMC-compliant infrastructure integrated with FedRAMP-authorized cloud platforms. Cybersecurity consulting offers advisory services to help defense contractors achieve and maintain their own CMMC certifications. Managed security services deliver 24/7 security monitoring and incident response for defense clients requiring CMMC-compliant security operations.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Secure Software Development</strong> – Development of mission-critical applications in CMMC-compliant environments with appropriate controls for protecting CUI throughout the development lifecycle.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Cloud Services for Defense</strong> – Hosting and management of defense applications and data on CMMC-compliant infrastructure integrated with FedRAMP-authorized cloud platforms.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Cybersecurity Consulting</strong> – Advisory services to help defense contractors achieve and maintain their own CMMC certifications.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Managed Security Services</strong> – 24/7 security monitoring and incident response for defense clients requiring CMMC-compliant security operations.
-              </li>
-            </ul>
-
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              Comprehensive Security Portfolio
+              Comprehensive Security Program
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              The CMMC Level 2 certification complements Thalen's existing security credentials, which include FedRAMP High authorization, ISO 27001 certification, and SOC 2 Type II attestation. This comprehensive security portfolio demonstrates Thalen's commitment to meeting the diverse security requirements of its government and enterprise clients.
+              The CMMC Level 2 certification builds on Thalen's existing security credentials, which include FedRAMP High authorization and ISO 27001 certification. Together, these certifications demonstrate a comprehensive approach to information security that meets the requirements of the most demanding government clients.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              "Security is foundational to everything we do," said the CISO. "Our investment in achieving and maintaining multiple security certifications reflects our understanding that different clients have different requirements. We're committed to meeting all of them."
+              "Security is not a checkbox exercise for us—it's fundamental to how we operate," said the CISO. "Our security program is designed to protect our clients' information throughout its lifecycle, from initial receipt through processing, storage, and eventual disposition."
             </p>
 
-            {/* Section Header */}
+            <p className="text-gray-700 leading-relaxed">
+              The company maintains a dedicated security team responsible for continuous monitoring, vulnerability management, incident response, and security awareness training. Regular assessments and audits ensure that security controls remain effective and aligned with evolving requirements.
+            </p>
+
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              Helping Others Achieve Compliance
+              Helping Clients Achieve Compliance
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              In addition to achieving its own certification, Thalen Technologies offers CMMC consulting services to help other defense contractors prepare for and achieve their certifications. The company's experienced consultants have helped numerous organizations navigate the CMMC requirements and implement the necessary security controls.
+              In addition to maintaining its own CMMC certification, Thalen Technologies offers services to help other defense contractors navigate the CMMC compliance journey. The company's cybersecurity consulting practice provides gap assessments, remediation planning, and implementation support to help organizations achieve and maintain their required CMMC levels.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              "We understand the challenges that contractors face in achieving CMMC compliance," noted the VP of Defense Solutions. "Our firsthand experience going through the certification process positions us to provide practical, actionable guidance to organizations on their compliance journey."
+              "Many organizations in the defense supply chain are struggling to understand and implement CMMC requirements," noted the Vice President of Defense Solutions. "We've been through the process ourselves and can help others navigate the complexities of achieving certification while maintaining focus on their core missions."
             </p>
 
-            {/* About Section */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               About Thalen Technologies
             </h2>
@@ -250,14 +160,6 @@ export default function CMMCCertification() {
             <p className="text-gray-700 leading-relaxed">
               Thalen Technologies is a leading provider of intelligent automation, AI solutions, and digital transformation services for government and enterprise clients. With over 15 years of experience and a proven track record of delivering measurable outcomes, Thalen helps organizations modernize their operations, enhance security posture, and achieve mission objectives. The company is headquartered in Washington, D.C. with offices across the United States. For more information, visit{' '}
               <Link href="/" className="text-[#E07020] hover:underline">www.thalentech.com</Link>.
-            </p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              About CMMC
-            </h2>
-
-            <p className="text-gray-700 leading-relaxed">
-              The Cybersecurity Maturity Model Certification (CMMC) is a unified standard for implementing cybersecurity across the Defense Industrial Base (DIB). The CMMC framework incorporates cybersecurity requirements from existing regulations and standards, including NIST SP 800-171 and NIST SP 800-172, to protect Federal Contract Information (FCI) and Controlled Unclassified Information (CUI).
             </p>
 
             {/* Media Contact */}
@@ -311,27 +213,25 @@ export default function CMMCCertification() {
 
           {/* Related Articles */}
           <div className="mt-16 pt-12 border-t border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Related News</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Related News</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">Compliance</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
+              <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 block">Compliance</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
                   Thalen Technologies Achieves FedRAMP High Authorization
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">Successfully completed FedRAMP High authorization for our government cloud platform.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  Successfully completed FedRAMP High authorization for our government cloud platform.
+                </p>
               </Link>
-              <Link href="/news/security-operations-center" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">Security</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
-                  Expanded Cybersecurity Operations Center Opens
+              <Link href="/news/defense-joint-venture" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-purple-600 mb-2 block">Partnership</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
+                  Thalen Technologies Announces Defense Joint Venture
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">New 24/7 Security Operations Center provides enhanced threat monitoring.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  Strategic partnership expands capabilities for defense and intelligence community clients.
+                </p>
               </Link>
             </div>
           </div>

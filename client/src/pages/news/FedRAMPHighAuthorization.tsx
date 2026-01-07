@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'wouter';
-import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check, ArrowRight, Shield, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check } from 'lucide-react';
 import { useState } from 'react';
 
 export default function FedRAMPHighAuthorization() {
@@ -89,22 +89,10 @@ export default function FedRAMPHighAuthorization() {
               The FedRAMP High authorization demonstrates Thalen's commitment to meeting the most stringent security requirements for federal cloud deployments and positions the company to serve agencies handling the most sensitive government data and mission-critical operations.
             </p>
 
-            {/* Highlight Box */}
-            <div className="my-10 p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-600 rounded-xl">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">FedRAMP High Impact Level</h3>
-                  <p className="text-gray-700">
-                    FedRAMP High is the most rigorous authorization level, requiring compliance with 421 security controls. It is required for cloud systems that process highly sensitive government data where loss of confidentiality, integrity, or availability could have severe or catastrophic adverse effects.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p className="text-gray-700 leading-relaxed">
+              FedRAMP High represents the most rigorous authorization level within the federal cloud security framework, requiring compliance with 421 security controls across 17 control families. This authorization level is required for cloud systems that process highly sensitive government data where loss of confidentiality, integrity, or availability could have severe or catastrophic adverse effects on organizational operations, organizational assets, or individuals.
+            </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Rigorous Security Assessment
             </h2>
@@ -118,33 +106,13 @@ export default function FedRAMPHighAuthorization() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              The authorization process included extensive documentation, technical testing, and validation of:
+              The authorization process included extensive documentation, technical testing, and validation across multiple security domains. Access control measures ensure comprehensive identity and access management so that only authorized personnel can access systems and data. Audit and accountability capabilities provide robust logging and monitoring with complete visibility into system activities. Mature incident response capabilities include 24/7 security operations and rapid response procedures.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>Access Control</strong> – Comprehensive identity and access management ensuring only authorized personnel can access systems and data.</span>
-              </li>
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>Audit and Accountability</strong> – Robust logging and monitoring capabilities that provide complete visibility into system activities.</span>
-              </li>
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>Incident Response</strong> – Mature incident response capabilities with 24/7 security operations and rapid response procedures.</span>
-              </li>
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>System and Communications Protection</strong> – Advanced encryption, network segmentation, and boundary protection mechanisms.</span>
-              </li>
-              <li className="text-gray-700 leading-relaxed flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <span><strong>Continuous Monitoring</strong> – Ongoing security assessment and authorization processes that maintain security posture over time.</span>
-              </li>
-            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              System and communications protection features include advanced encryption, network segmentation, and boundary protection mechanisms. Continuous monitoring processes maintain ongoing security assessment and authorization to preserve security posture over time.
+            </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Enabling Secure Federal Deployments
             </h2>
@@ -158,25 +126,9 @@ export default function FedRAMPHighAuthorization() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              The authorized platform includes:
+              The authorized platform includes Thalen's Intelligent Automation Platform with AI-powered process automation capabilities for document processing, workflow optimization, and decision support. The Data Analytics Environment provides secure analytics and business intelligence tools for mission data analysis and reporting. Application Hosting delivers secure infrastructure for hosting mission-critical applications with high availability and disaster recovery. Integration Services offer secure APIs and integration capabilities for connecting with agency systems and external data sources.
             </p>
 
-            <ul className="space-y-4 my-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Intelligent Automation Platform</strong> – AI-powered process automation capabilities for document processing, workflow optimization, and decision support.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Data Analytics Environment</strong> – Secure analytics and business intelligence tools for mission data analysis and reporting.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Application Hosting</strong> – Secure infrastructure for hosting mission-critical applications with high availability and disaster recovery.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong>Integration Services</strong> – Secure APIs and integration capabilities for connecting with agency systems and external data sources.
-              </li>
-            </ul>
-
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Commitment to Continuous Compliance
             </h2>
@@ -193,7 +145,6 @@ export default function FedRAMPHighAuthorization() {
               The continuous monitoring program includes monthly vulnerability scanning, annual penetration testing, ongoing security control assessments, and regular reporting to the FedRAMP Program Management Office (PMO) and authorizing agencies.
             </p>
 
-            {/* Section Header */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               Streamlined Agency Adoption
             </h2>
@@ -203,10 +154,13 @@ export default function FedRAMPHighAuthorization() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              "FedRAMP's 'do once, use many' approach means agencies can benefit from our security investment without duplicating assessment efforts," explained the VP of Federal Solutions. "This significantly reduces the time and cost for agencies to adopt our cloud services."
+              "The reuse of our FedRAMP authorization can save agencies months of assessment time and significant resources," explained the Vice President of Federal Solutions. "We've done the hard work of demonstrating compliance with 421 controls so that agencies can focus on their missions rather than duplicating security assessments."
             </p>
 
-            {/* About Section */}
+            <p className="text-gray-700 leading-relaxed">
+              Thalen's Federal Solutions team is available to support agencies through the ATO process, providing documentation, technical briefings, and implementation support to ensure successful deployments.
+            </p>
+
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
               About Thalen Technologies
             </h2>
@@ -214,14 +168,6 @@ export default function FedRAMPHighAuthorization() {
             <p className="text-gray-700 leading-relaxed">
               Thalen Technologies is a leading provider of intelligent automation, AI solutions, and digital transformation services for government and enterprise clients. With over 15 years of experience and a proven track record of delivering measurable outcomes, Thalen helps organizations modernize their operations, enhance security posture, and achieve mission objectives. The company is headquartered in Washington, D.C. with offices across the United States. For more information, visit{' '}
               <Link href="/" className="text-[#E07020] hover:underline">www.thalentech.com</Link>.
-            </p>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
-              About FedRAMP
-            </h2>
-
-            <p className="text-gray-700 leading-relaxed">
-              The Federal Risk and Authorization Management Program (FedRAMP) is a government-wide program that provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products and services. FedRAMP enables agencies to rapidly adopt secure cloud solutions through reuse of security assessments across the federal government.
             </p>
 
             {/* Media Contact */}
@@ -275,27 +221,25 @@ export default function FedRAMPHighAuthorization() {
 
           {/* Related Articles */}
           <div className="mt-16 pt-12 border-t border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Related News</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Related News</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/news/cmmc-certification" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">Security</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
-                  New CMMC Level 2 Certification Achieved
+              <Link href="/news/cmmc-certification" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-green-600 mb-2 block">Compliance</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
+                  Thalen Technologies Achieves CMMC Level 2 Certification
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">Strengthening our position as a trusted defense contractor partner.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  Certification validates commitment to protecting controlled unclassified information.
+                </p>
               </Link>
-              <Link href="/news/stateramp-authorization" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">Compliance</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
-                  StateRAMP Authorization Achieved
+              <Link href="/news/security-operations-center" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <span className="text-xs font-semibold uppercase tracking-wider text-red-600 mb-2 block">Security</span>
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
+                  Thalen Technologies Opens Expanded Cybersecurity Operations Center
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">Cloud platform now authorized for state and local government deployments.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
-                  Read more <ArrowRight className="w-4 h-4" />
-                </span>
+                <p className="text-sm text-gray-600">
+                  New 24/7 Security Operations Center provides enhanced threat monitoring and incident response.
+                </p>
               </Link>
             </div>
           </div>
