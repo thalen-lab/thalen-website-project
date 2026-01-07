@@ -1,149 +1,111 @@
-import { Button } from '@/components/ui/button';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { Link } from 'wouter';
-import Breadcrumb from '@/components/Breadcrumb';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import { FloatingPrintButton } from '@/components/PrintButton';
 
-// Helper component for the statistics grid
-const StatGrid = ({ metrics }: { metrics: Array<{ value: string; label: string }> }) => (
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
-    {metrics.map((metric: { value: string; label: string }, index: number) => (
-      <div key={index} className="p-4">
-        <div className="text-5xl md:text-6xl font-bold text-accent mb-2 font-serif">{metric.value}</div>
-        <div className="text-base text-muted-foreground">{metric.label}</div>
-      </div>
-    ))}
-  </div>
-);
-
-// Helper component for section content
-const SectionContent = ({ children }: { children: React.ReactNode }) => (
-  <div className="prose max-w-none text-lg leading-relaxed text-muted-foreground space-y-6">
-    {children}
-  </div>
-);
-
 export default function AerospaceDigitalTwin() {
-  const metrics = [
-    { value: '40%', label: 'Maintenance Cost Reduction' },
-    { value: '70%', label: 'Unscheduled Maintenance Reduction' },
-    { value: '$95M', label: 'Annual Operational Savings' },
-    { value: '12%', label: 'Aircraft Availability Improvement' },
-  ];
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
-      {/* Hero */}
-      <section className="relative py-24 bg-navy-gradient text-primary-foreground">
-        <div className="container max-w-4xl">
-          <div className="mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-              <Breadcrumb 
-                items={[
-                  { label: 'Case Studies', href: '/case-studies' },
-                  { label: 'Aerospace Digital Twin' }
-                ]} 
-                variant="light" 
-              />
-            </div>
-          <div className="inline-block bg-muted text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            Aerospace & Defense Case Study
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold font-serif mb-6">
-            Digital Twin Platform Drives $95M Annual Savings for Major Aerospace Fleet Operations
-          </h1>
-          <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
-            A comprehensive digital twin platform enabled predictive maintenance, reducing unscheduled maintenance by 70% and improving operational availability.
-          </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-              Schedule a Consultation
-            </Button>
+      <main className="flex-1 pt-32 pb-24">
+        <article className="container max-w-3xl mx-auto px-6">
+          {/* Back Link */}
+          <Link href="/case-studies" className="inline-flex items-center text-[oklch(0.55_0.15_250)] hover:text-[oklch(0.45_0.15_250)] mb-8 transition-colors">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Case Studies
           </Link>
-        </div>
-      </section>
 
-      {/* The Opportunity */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">Section I</p>
-          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">The Opportunity</h2>
-          <SectionContent>
-            <p>
-              A leading aerospace and defense organization, managing a vast fleet of commercial aircraft, faced a critical challenge: escalating maintenance expenditures exceeding $240 million annually. The reliance on traditional, time-based maintenance schedules led to unnecessary component replacements, excessive downtime, and a high operational cost base.
-            </p>
-            <p>
-              This reactive approach was further complicated by frequent, unscheduled maintenance events. These unexpected failures severely disrupted flight schedules, negatively impacting service delivery and creating significant logistical strain. The lack of foresight into component health meant the organization was constantly reacting to failures rather than proactively preventing them.
-            </p>
-            <p>
-              The imperative was clear: transition from a costly, reactive maintenance model to a data-driven, predictive framework. The organization required a sophisticated, integrated platform capable of providing real-time fleet health monitoring and accurate forecasting of component degradation to optimize maintenance windows and maximize asset utilization.
-            </p>
-          </SectionContent>
-        </div>
-      </section>
+          {/* Title */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[oklch(0.15_0.05_250)] leading-tight mb-6">
+            Aerospace Contractor Implements Digital Twin
+          </h1>
 
-      {/* The Solution */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="container max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">Section II</p>
-          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">The Solution</h2>
-          <SectionContent>
-            <p className="text-lg leading-relaxed text-gray-300">
-              To address this complex operational need, a comprehensive digital twin platform was engineered and deployed across the entire fleet of over 250 aircraft. This solution created high-fidelity virtual replicas of each asset, integrating vast streams of real-time sensor telemetry with advanced physics-based models to simulate wear and fatigue under actual operating conditions.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-300">
-              The core of the solution was a sophisticated predictive maintenance engine powered by machine learning. This engine analyzed over 10,000 sensor streams per aircraft, enabling the accurate forecasting of component failures 30 to 90 days in advance with an 89% prediction accuracy. This foresight allowed maintenance teams to move from emergency repairs to planned, optimized interventions.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-300">
-              Furthermore, the project established a unified data platform, consolidating siloed information from maintenance records, flight operations, and supply chain logistics. This holistic data view, coupled with optimization algorithms, allowed for the intelligent scheduling of maintenance activities, minimizing operational disruption while ensuring maximum safety and component life.
-            </p>
-          </SectionContent>
-        </div>
-      </section>
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
+            How a comprehensive digital twin platform enabled predictive maintenance across a fleet of 250+ aircraft, reducing design costs by 40% and accelerating time-to-market by 6 months for next-generation aircraft development. The platform delivered $95 million in annual operational savings.
+          </p>
 
-      {/* The Impact */}
-      <section className="py-20 bg-secondary">
-        <div className="container max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">Section III</p>
-          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">The Impact</h2>
-          
-          {/* Statistics Grid */}
-          <StatGrid metrics={metrics} />
+          {/* The Opportunity */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[oklch(0.15_0.05_250)] mb-6">
+              The Opportunity
+            </h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-600 leading-relaxed mb-6">
+                A leading aerospace and defense organization, managing a vast fleet of commercial aircraft, faced a critical challenge: escalating maintenance expenditures exceeding $240 million annually. The reliance on traditional, time-based maintenance schedules led to unnecessary component replacements, excessive downtime, and a high operational cost base.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                This reactive approach was further complicated by frequent, unscheduled maintenance events. These unexpected failures severely disrupted flight schedules, negatively impacting service delivery and creating significant logistical strain. The lack of foresight into component health meant the organization was constantly reacting to failures rather than proactively preventing them.
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                The imperative was clear: transition from a costly, reactive maintenance model to a data-driven, predictive framework. The organization required a sophisticated, integrated platform capable of providing real-time fleet health monitoring and accurate forecasting of component degradation to optimize maintenance windows and maximize asset utilization.
+              </p>
+            </div>
+          </section>
 
-          <div className="mt-12">
-            <SectionContent>
-              <p>
+          {/* The Solution */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[oklch(0.15_0.05_250)] mb-6">
+              The Solution
+            </h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Working with NexDyne Technology, a comprehensive digital twin platform was engineered and deployed across the entire fleet of over 250 aircraft. This solution created high-fidelity virtual replicas of each asset, integrating vast streams of real-time sensor telemetry with advanced physics-based models to simulate wear and fatigue under actual operating conditions.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                The core of the solution was a sophisticated predictive maintenance engine powered by machine learning. This engine analyzed over 10,000 sensor streams per aircraft, enabling the accurate forecasting of component failures 30 to 90 days in advance with an 89% prediction accuracy. This foresight allowed maintenance teams to move from emergency repairs to planned, optimized interventions.
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                Furthermore, the project established a unified data platform, consolidating siloed information from maintenance records, flight operations, and supply chain logistics. This holistic data view, coupled with optimization algorithms, allowed for the intelligent scheduling of maintenance activities, minimizing operational disruption while ensuring maximum safety and component life.
+              </p>
+            </div>
+          </section>
+
+          {/* The Impact */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[oklch(0.15_0.05_250)] mb-6">
+              The Impact
+            </h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-600 leading-relaxed mb-6">
                 The implementation of the digital twin platform delivered immediate and substantial financial returns. Maintenance costs were reduced by a remarkable 40%, translating to an annual operational saving of $95 million. This rapid return on investment was achieved by eliminating unnecessary maintenance tasks and optimizing the timing of essential repairs.
               </p>
-              <p>
-                Operational reliability saw a dramatic improvement, with unscheduled maintenance events plummeting by 70%. By accurately predicting and preventing failures, the organization significantly enhanced its service delivery consistency and reduced the logistical complexity associated with unexpected groundings.
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Operational reliability saw a dramatic improvement, with unscheduled maintenance events plummeting by 70%. By accurately predicting and preventing failures, the organization significantly enhanced its service delivery consistency and reduced the logistical complexity associated with unexpected groundings. Aircraft availability improved by 12%, enabling more efficient utilization of the fleet.
               </p>
-              <p>
-                The strategic shift to predictive maintenance also resulted in a 12% improvement in aircraft availability. With a comprehensive, data-driven view of fleet health, the aerospace organization is now operating with greater efficiency, reduced risk, and a significantly lower total cost of ownership for its critical assets.
+              <p className="text-slate-600 leading-relaxed">
+                The strategic shift to predictive maintenance also accelerated new aircraft development timelines by six months. With a comprehensive, data-driven view of fleet health and component performance, the aerospace organization is now operating with greater efficiency, reduced risk, and a significantly lower total cost of ownership for its critical assets. The platform has become a foundational capability for ongoing innovation in aircraft design and operations.
               </p>
-            </SectionContent>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-navy-gradient text-primary-foreground">
-        <div className="container text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-6">Partner with Us for Predictive Maintenance Excellence</h2>
-          <p className="text-xl opacity-90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
-            Discover how our digital twin solutions can transform your operational efficiency, reduce costs, and enhance the reliability of your most critical assets.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-orange-gradient hover:opacity-90">
-                Schedule Digital Twin Assessment
+          {/* CTA Section */}
+          <section className="mt-16 pt-12 border-t border-slate-200">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[oklch(0.15_0.05_250)] mb-4">
+              Partner with us for predictive maintenance excellence
+            </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              Discover how our digital twin solutions can transform your operational efficiency, reduce costs, and enhance the reliability of your most critical assets.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button asChild size="lg" className="bg-[oklch(0.65_0.18_55)] hover:bg-[oklch(0.55_0.18_55)] text-white">
+                <Link href="/contact">
+                  Schedule a Consultation
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+              <Button asChild size="lg" variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-50">
+                <Link href="/case-studies">
+                  Explore More Case Studies
+                </Link>
+              </Button>
+            </div>
+          </section>
+        </article>
+      </main>
 
       <FloatingPrintButton position="bottom-right" />
       <Footer />

@@ -4577,3 +4577,33 @@
 - [x] Redesign DoD Manufacturing 99.2% Uptime case study with clean editorial format
 - [x] Redesign VA Medical Center 12 Legacy Systems case study with clean editorial format
 - [x] Update case study links on homepage to point to redesigned pages
+
+## Phase 132: Redesign Case Study Detail Pages to TrustArc Clean Style
+- [x] Create reusable CaseStudyLayout component with TrustArc-inspired clean design
+- [x] Remove hero section with dark background, replace with simple white header
+- [x] Remove stats/metrics grid boxes
+- [x] Remove cards and boxes from content sections
+- [x] Use clean typography with large title, paragraphs, and simple bullet points
+- [x] Apply redesign to FederalAutomation.tsx
+- [x] Apply redesign to HealthcareAI.tsx
+- [x] Apply redesign to DefenseCloud.tsx
+- [x] Apply redesign to ManufacturingUptime.tsx
+- [x] Apply redesign to EnergyGrid.tsx
+- [x] Apply redesign to BankFraud.tsx
+- [x] Apply redesign to IntelligenceSecurity.tsx
+- [x] Apply redesign to HospitalWaitTimes.tsx
+- [x] Apply redesign to AerospaceDigitalTwin.tsx
+- [x] Apply redesign to VAPredictiveAnalytics.tsx
+- [x] Apply redesign to DODDataPipelines.tsx
+- [x] Apply redesign to HHSPublicHealth.tsx
+- [x] Apply redesign to StateDOT.tsx
+- [x] Apply redesign to CountyHealth.tsx
+- [x] Apply redesign to FederalAgencyAutomation.tsx
+- [x] Apply redesign to DoDManufacturingUptime.tsx
+- [x] Apply redesign to VALegacyIntegration.tsx
+- [x] Apply redesign to StateAttorneyGeneral.tsx
+- [x] Apply redesign to StateEnergyCommission.tsx
+- [x] Apply redesign to CountyHealthDepartment.tsx
+- [x] Apply redesign to DoDManufacturing.tsx
+- [x] Apply redesign to VAHealthcare.tsx
+- [x] Test all case study page routes work correctly
