@@ -153,18 +153,18 @@ export default function HeroCarousel() {
         className="absolute bottom-0 left-0 z-20"
         style={{ width: 'auto', maxWidth: '75%' }}
       >
-        {/* Semi-transparent backdrop - NO left margin/padding on the container, only internal padding for text */}
-        <div className="bg-[#1a1a1a]/75 backdrop-blur-[8px]">
+        {/* Semi-transparent backdrop - More transparent to show background image better */}
+        <div className="bg-[#1a1a1a]/55 backdrop-blur-[6px]">
           {/* Inner padding for text content only - left padding pushes text away from edge */}
           <div className="pl-4 sm:pl-6 md:pl-10 lg:pl-14 xl:pl-20 pr-8 sm:pr-10 md:pr-14 lg:pr-20 xl:pr-28 py-5 sm:py-6 md:py-8 lg:py-10 xl:py-12">
-            {/* Main Title - Larger, more prominent sizing */}
+            {/* Main Title - Reduced sizing for better balance */}
             <h1 
-              className="text-xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem] 2xl:text-5xl font-semibold text-white tracking-wide mb-2 sm:mb-3 md:mb-4 leading-tight"
+              className="text-lg xs:text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] 2xl:text-4xl font-semibold text-white tracking-wide mb-2 sm:mb-3 md:mb-4 leading-tight"
             >
               {slides[currentSlide].title}
             </h1>
-            {/* Subtitle - Larger, more readable sizing */}
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-[1.35rem] xl:text-2xl text-white/90 font-light max-w-4xl leading-relaxed line-clamp-3 sm:line-clamp-none">
+            {/* Subtitle - Slightly reduced sizing */}
+            <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] text-white/90 font-light max-w-4xl leading-relaxed line-clamp-3 sm:line-clamp-none">
               {slides[currentSlide].subtitle}
             </p>
           </div>

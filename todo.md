@@ -4660,3 +4660,7 @@
 
 ## Phase 72: Update Primary Accent Color
 - [x] Update primary accent color to rich orange with gradient (matching Thalen Technologies style)
+
+
+## Phase 68: Increase Text Sizes 2X
+- [x] Increase all text sizes by 2X across the website (global CSS scale) - REVERTED per user request
