@@ -4571,3 +4571,9 @@
 - [x] Revise DocumentProcessingPlatform.tsx - remove icons, cards, bullets
 - [x] Revise FederalAutomationContract.tsx - remove icons, cards, bullets
 - [x] Revise ZeroTrustSecurity.tsx - remove icons, cards, bullets
+
+## Phase 66: Case Study Pages Clean Editorial Redesign
+- [x] Redesign Federal Agency 85% Process Automation case study with clean editorial format
+- [x] Redesign DoD Manufacturing 99.2% Uptime case study with clean editorial format
+- [x] Redesign VA Medical Center 12 Legacy Systems case study with clean editorial format
+- [x] Update case study links on homepage to point to redesigned pages

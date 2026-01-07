@@ -1,221 +1,218 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { Link } from "wouter";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
-import { FloatingPrintButton } from '@/components/PrintButton';
+import { Link } from 'wouter';
+import { ArrowLeft, Linkedin, Twitter, Mail, Link2, Check } from 'lucide-react';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 export default function DoDManufacturingUptime() {
+  const [copied, setCopied] = useState(false);
+  
+  const articleUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const articleTitle = 'DoD Manufacturing Facility Achieves 99.2% Uptime';
+  
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(articleUrl);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const shareOnLinkedIn = () => {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`, '_blank');
+  };
+
+  const shareOnTwitter = () => {
+    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(articleTitle)}`, '_blank');
+  };
+
+  const shareViaEmail = () => {
+    window.location.href = `mailto:?subject=${encodeURIComponent(articleTitle)}&body=${encodeURIComponent(`Read this case study: ${articleUrl}`)}`;
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
+      
+      {/* Breadcrumb */}
+      <div className="bg-gray-50 border-b border-gray-100">
+        <div className="container py-4">
+          <Breadcrumb
+            items={[
+              { label: 'Case Studies', href: '/case-studies' },
+              { label: 'DoD Manufacturing Uptime' }
+            ]}
+          />
+        </div>
+      </div>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 text-white">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/95 via-[#0A2540]/90 to-[#12344D]/85"></div>
-
-        <div className="container relative z-10">
-          <Link href="/case-studies">
-            <Button variant="ghost" className="text-white hover:bg-white/10 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 -ml-4">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Case Studies
-            </Button>
+      {/* Main Content */}
+      <main className="flex-grow">
+        <article className="container max-w-4xl py-12 md:py-16 lg:py-20">
+          
+          {/* Back Link */}
+          <Link href="/case-studies" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#E07020] transition-colors mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Case Studies
           </Link>
 
-          <div className="max-w-4xl">
-            <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mb-4">Defense</p>
-            
-            <h1 className="text-2xl xs:text-3xl sm:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          {/* Article Header */}
+          <header className="mb-12">
+            {/* Category Tag */}
+            <div className="flex items-center gap-3 mb-6">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-green-50 text-green-700">
+                Defense
+              </span>
+              <span className="text-sm text-gray-500">Predictive Maintenance</span>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-[1.15] tracking-tight mb-8">
               DoD Manufacturing Facility Achieves 99.2% Uptime
             </h1>
-            
-            <p className="text-xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-              Implemented FedRAMP-authorized predictive maintenance platform across DoD manufacturing facility. Achieved CMMC Level 3 certification with 99.2% uptime.
+
+            {/* Subtitle/Deck */}
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
+              Deployed FedRAMP-authorized cybersecurity platforms and predictive maintenance analytics for DoD defense manufacturing operations, eliminating 75% of unplanned downtime.
             </p>
+          </header>
+
+          {/* Key Metrics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 mb-12 border-y border-gray-200">
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-[#E07020]">99.2%</div>
+              <div className="text-sm text-gray-600 mt-1">System uptime achieved</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-[#E07020]">78%</div>
+              <div className="text-sm text-gray-600 mt-1">Reduced unplanned downtime</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-[#E07020]">Level 3</div>
+              <div className="text-sm text-gray-600 mt-1">CMMC certified</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-[#E07020]">45%</div>
+              <div className="text-sm text-gray-600 mt-1">Maintenance cost reduction</div>
+            </div>
+          </div>
+
+          {/* Article Body */}
+          <div className="prose prose-lg max-w-none">
             
-            <div className="flex flex-wrap gap-8 text-white">
-              <div>
-                <div className="text-4xl font-bold text-[oklch(0.75_0.15_55)]">99.2%</div>
-                <div className="text-sm text-white/70 mt-1">System Uptime</div>
+            {/* The Opportunity */}
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
+              The Opportunity
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed">
+              A critical DoD manufacturing facility producing defense components was experiencing frequent unplanned equipment failures that disrupted production schedules and threatened mission-critical supply chains. The facility operated 24/7 with aging equipment and relied on reactive maintenance that resulted in costly emergency repairs and production delays. Equipment downtime averaged 18-22% annually, with each incident requiring 12-48 hours for diagnosis and repair.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              The facility needed to modernize maintenance operations while meeting strict DoD cybersecurity requirements including CMMC Level 3 certification for handling Controlled Unclassified Information. Leadership recognized that predictive maintenance technology had matured to the point where it could transform their operations, but implementation would require careful attention to security requirements and integration with legacy industrial control systems.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              The stakes were significant. Production delays at this facility had downstream effects on defense programs across multiple branches of the military. The facility needed to achieve near-continuous operations while maintaining air-gapped network segments for classified operations and ensuring all systems met the stringent requirements for handling CUI.
+            </p>
+
+            {/* The Solution */}
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
+              The Solution
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed">
+              Working with Thalen Technologies, the facility implemented a comprehensive predictive maintenance platform using FedRAMP-authorized IoT and analytics tools. The approach enabled the facility to shift from reactive to proactive maintenance while meeting all DoD cybersecurity requirements. The implementation began with a thorough equipment criticality analysis that identified 45 high-priority assets and established baseline performance metrics from historical failure data.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              The technical infrastructure included deployment of over 200 industrial IoT sensors monitoring vibration, temperature, pressure, and power consumption across critical equipment. Edge computing capabilities enabled real-time data processing while maintaining CMMC-compliant data collection and transmission protocols. The sensor network fed into machine learning models that analyzed 50 million data points daily to predict failures 7-14 days in advance.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              Security architecture received particular attention throughout the implementation. The platform achieved CMMC Level 3 compliance with encrypted data transmission, role-based access control, and comprehensive audit logging. Integration with existing CMMS, ERP, and supply chain systems enabled automated work order generation when the predictive models identified potential issues. Real-time dashboards provided maintenance teams with mobile alerts, while the air-gapped network segments for classified operations remained completely isolated.
+            </p>
+
+            {/* The Impact */}
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
+              The Impact
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed">
+              The predictive maintenance platform transformed facility operations, achieving 99.2% equipment uptime compared to the previous 78-82% baseline. Unplanned downtime decreased by 78%, with the remaining incidents typically resolved within 2-4 hours rather than the previous 12-48 hour average. The facility now schedules maintenance during planned production windows, eliminating the cascade effects that previously disrupted defense supply chains.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              Maintenance costs decreased by 45% as the facility shifted from emergency repairs to planned interventions. The predictive models proved remarkably accurate, identifying potential failures with sufficient lead time to order parts and schedule technicians without disrupting production. Spare parts inventory optimization reduced carrying costs while ensuring critical components remained available when needed.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              The successful CMMC Level 3 certification validated the security architecture and positioned the facility as a model for other DoD manufacturing operations. The platform now serves as a foundation for additional capabilities including digital twin modeling and advanced analytics. Most importantly, the facility has established the operational resilience required to support mission-critical defense programs with confidence.
+            </p>
+
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 p-8 bg-gray-50 rounded-lg">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Ready to achieve operational excellence?</h3>
+            <p className="text-gray-600 mb-6">
+              Discover how predictive maintenance and IoT analytics can transform your manufacturing operations while meeting the most stringent security requirements.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/contact">
+                <Button className="bg-[#E07020] hover:bg-[#c55e15] text-white">
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link href="/case-studies">
+                <Button variant="outline">
+                  View More Case Studies
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Social Share */}
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-medium text-gray-500">Share this case study:</span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={shareOnLinkedIn}
+                  className="p-2 rounded-full bg-gray-100 hover:bg-[#0077B5] hover:text-white text-gray-600 transition-colors"
+                  aria-label="Share on LinkedIn"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={shareOnTwitter}
+                  className="p-2 rounded-full bg-gray-100 hover:bg-black hover:text-white text-gray-600 transition-colors"
+                  aria-label="Share on Twitter"
+                >
+                  <Twitter className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={shareViaEmail}
+                  className="p-2 rounded-full bg-gray-100 hover:bg-[#E07020] hover:text-white text-gray-600 transition-colors"
+                  aria-label="Share via Email"
+                >
+                  <Mail className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={handleCopyLink}
+                  className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 transition-colors"
+                  aria-label="Copy link"
+                >
+                  {copied ? <Check className="w-4 h-4 text-green-600" /> : <Link2 className="w-4 h-4" />}
+                </button>
               </div>
-              <div>
-                <div className="text-4xl font-bold text-[oklch(0.75_0.15_55)]">78%</div>
-                <div className="text-sm text-white/70 mt-1">Reduced Downtime</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-[oklch(0.75_0.15_55)]">Level 3</div>
-                <div className="text-sm text-white/70 mt-1">CMMC Certified</div>
-              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Challenge Section */}
-      <section className="py-20 bg-[oklch(0.97_0.01_250)] text-[oklch(0.20_0.05_250)]">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">The Challenge</p>
-            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">A Mission-Critical Mandate for Modernization</h2>
-            
-            <div className="prose prose-lg max-w-none text-slate-600">
-              <p className="leading-relaxed mb-6">
-                A critical DoD manufacturing facility producing defense components was experiencing frequent unplanned equipment failures that disrupted production schedules and threatened mission-critical supply chains. The facility operated 24/7 with aging equipment and relied on reactive maintenance that resulted in costly emergency repairs and production delays.
-              </p>
-              
-              <p className="leading-relaxed mb-6">
-                Equipment downtime averaged 18-22% annually, with each incident requiring 12-48 hours for diagnosis and repair. The facility needed to modernize maintenance operations while meeting strict DoD cybersecurity requirements including CMMC Level 3 certification for handling Controlled Unclassified Information (CUI).
-              </p>
-              
-              <Card className="bg-white border-2 border-slate-200 p-3 sm:p-4 md:p-6 my-8 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                <h3 className="text-xl font-semibold text-[oklch(0.20_0.05_250)] mb-4">Key Constraints</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                    <span>Required CMMC Level 3 certification for all systems handling CUI</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                    <span>Must maintain continuous operations during implementation</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                    <span>Integration with legacy industrial control systems and IoT sensors</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                    <span>Air-gapped network segments for classified operations</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+        </article>
+      </main>
 
-      {/* Solution Section */}
-      <section className="py-20 bg-white text-[oklch(0.20_0.05_250)]">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Our Solution</p>
-            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Predictive Maintenance with Fortified Security</h2>
-            
-            <div className="prose prose-lg max-w-none text-slate-600">
-              <p className="leading-relaxed mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-                We implemented a comprehensive predictive maintenance platform using FedRAMP-authorized IoT and analytics tools, enabling the facility to shift from reactive to proactive maintenance while meeting all DoD cybersecurity requirements.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6 my-8">
-                <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                  <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">Phase 1: Assessment</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    Conducted equipment criticality analysis and identified 45 high-priority assets. Established baseline performance metrics and failure patterns from historical data.
-                  </p>
-                </Card>
-                
-                <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                  <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">Phase 2: Infrastructure</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    Deployed secure IoT sensor network with edge computing capabilities. Implemented CMMC-compliant data collection and transmission protocols.
-                  </p>
-                </Card>
-                
-                <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                  <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">Phase 3: Analytics</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    Built machine learning models for anomaly detection and failure prediction. Integrated real-time dashboards for maintenance teams with mobile alerts.
-                  </p>
-                </Card>
-                
-                <Card className="p-3 sm:p-4 md:p-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                  <h3 className="text-lg font-semibold text-[oklch(0.20_0.05_250)] mb-2">Phase 4: Optimization</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    Refined predictive models based on actual failure data. Established preventive maintenance schedules and spare parts inventory optimization.
-                  </p>
-                </Card>
-              </div>
-              
-              <h3 className="text-2xl font-semibold text-[oklch(0.20_0.05_250)] mb-4 mt-12">Technical Implementation</h3>
-              
-              <ul className="space-y-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                  <span><strong>IoT Platform:</strong> Deployed 200+ industrial IoT sensors monitoring vibration, temperature, pressure, and power consumption across critical equipment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                  <span><strong>Analytics:</strong> Machine learning models analyzing 50+ million data points daily to predict failures 7-14 days in advance</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                  <span><strong>Security:</strong> CMMC Level 3 compliant architecture with encrypted data transmission, role-based access control, and comprehensive audit logging</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2"></span>
-                  <span><strong>Integration:</strong> Seamless connectivity with existing CMMS, ERP, and supply chain systems for automated work order generation</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Results Section */}
-      <section className="py-20 bg-[oklch(0.97_0.01_250)] text-[oklch(0.20_0.05_250)]">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Results & Impact</p>
-            <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">Unprecedented Uptime and Operational Resilience</h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
-              <Card className="p-3 sm:p-4 md:p-6 text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                <div className="text-4xl font-bold text-[oklch(0.65_0.18_55)] mb-2">99.2%</div>
-                <div className="text-sm text-slate-600">Equipment uptime achieved</div>
-              </Card>
-              
-              <Card className="p-3 sm:p-4 md:p-6 text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                <div className="text-4xl font-bold text-[oklch(0.65_0.18_55)] mb-2">78%</div>
-                <div className="text-sm text-slate-600">Reduction in unplanned downtime</div>
-              </Card>
-              
-              <Card className="p-3 sm:p-4 md:p-6 text-center bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all">
-                <div className="text-4xl font-bold text-[oklch(0.65_0.18_55)] mb-2">45%</div>
-                <div className="text-sm text-slate-600">Decrease in maintenance costs</div>
-              </Card>
-            </div>
-
-            <div className="prose prose-lg max-w-none text-slate-600">
-              <p className="leading-relaxed mb-6">
-                The predictive maintenance platform transformed the facility's operations, enabling a shift from a reactive to a proactive and data-driven culture. Maintenance teams could anticipate failures, schedule repairs during planned downtime, and optimize resource allocation. This resulted in a significant increase in production output and a stronger, more resilient supply chain for critical defense components.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-[oklch(0.22_0.06_250)] text-white">
-        <div className="container text-center">
-          <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to Enhance Your Operations?</h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-            Discover how Nexdyne can help you achieve mission-critical uptime and security compliance. 
-          </p>
-          <div className="flex justify-center gap-4">
-            <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90 font-semibold">
-              <Link href="/contact">Request a Consultation <ArrowRight className="w-4 h-4 ml-2" /></Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)] font-semibold">
-              <Link href="/solutions">Explore Solutions</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <FloatingPrintButton position="bottom-right" />
       <Footer />
     </div>
   );
