@@ -4515,3 +4515,32 @@
 
 ## Phase 56: News Article Detail Page
 - [x] Create news article detail page for "Thalen Technologies Expands Federal Practice" with TrustArc-inspired clean editorial design
+
+## Phase 81: Create Individual News Article Pages (TrustArc Editorial Style)
+- [ ] Create /news/government-it-contractor-award page (Recognized as Top Government IT Contractor 2025)
+- [ ] Create /news/cloud-partnership page (Strategic Partnership with Leading Cloud Provider)
+- [ ] Create /news/fedramp-high-authorization page (Thalen Technologies Achieves FedRAMP High Authorization)
+- [ ] Create /news/cmmc-certification page (New CMMC Level 2 Certification Achieved)
+- [ ] Create /news/federal-automation-contract page (Awarded $15M Federal Automation Contract)
+- [ ] Create /news/document-processing-platform page (Launch of AI-Powered Document Processing Platform)
+- [ ] Create /news/govtech-100 page (Named to GovTech 100 List for Third Consecutive Year)
+- [ ] Create /news/security-operations-center page (Expanded Cybersecurity Operations Center Opens)
+- [ ] Create /news/defense-joint-venture page (Joint Venture with Defense Contractor Announced)
+- [ ] Create /news/stateramp-authorization page (StateRAMP Authorization Achieved)
+- [ ] Update App.tsx with routes for all new news pages
+- [ ] Update NewsUpdates.tsx to link to new article pages
+
+
+## Phase 81: Create Individual News Article Pages
+- [x] Government IT Contractor Award news article
+- [x] Cloud Partnership news article
+- [x] FedRAMP High Authorization news article
+- [x] CMMC Certification news article
+- [x] Federal Automation Contract news article
+- [x] Document Processing Platform news article
+- [x] GovTech 100 news article
+- [x] Security Operations Center news article
+- [x] Defense Joint Venture news article
+- [x] StateRAMP Authorization news article
+- [x] Update App.tsx with routes for all news pages
+- [x] Update NewsUpdates.tsx to link to article pages

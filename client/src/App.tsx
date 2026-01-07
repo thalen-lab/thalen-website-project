@@ -193,6 +193,16 @@ import SocialResponsibility from "./pages/SocialResponsibility";
 import SecurityCompliance from "./pages/SecurityCompliance";
 import NewsUpdates from "./pages/NewsUpdates";
 import FederalPracticeExpansion from "./pages/news/FederalPracticeExpansion";
+import GovernmentITContractorAward from "./pages/news/GovernmentITContractorAward";
+import CloudPartnership from "./pages/news/CloudPartnership";
+import FedRAMPHighAuthorization from "./pages/news/FedRAMPHighAuthorization";
+import CMMCCertification from "./pages/news/CMMCCertification";
+import FederalAutomationContract from "./pages/news/FederalAutomationContract";
+import DocumentProcessingPlatform from "./pages/news/DocumentProcessingPlatform";
+import GovTech100 from "./pages/news/GovTech100";
+import SecurityOperationsCenterNews from "./pages/news/SecurityOperationsCenter";
+import DefenseJointVenture from "./pages/news/DefenseJointVenture";
+import StateRAMPAuthorization from "./pages/news/StateRAMPAuthorization";
 import CompanyLatest from "./pages/CompanyLatest";
 import Careers from "./pages/Careers";
 import JobDetail from "./pages/JobDetail";
@@ -209,6 +219,16 @@ function Router() {
       <Route path={"/about/security-compliance"} component={SecurityCompliance} />
       <Route path={"/about/news-updates"} component={NewsUpdates} />
       <Route path={"/news/federal-practice-expansion"} component={FederalPracticeExpansion} />
+      <Route path={"/news/government-it-contractor-award"} component={GovernmentITContractorAward} />
+      <Route path={"/news/cloud-partnership"} component={CloudPartnership} />
+      <Route path={"/news/fedramp-high-authorization"} component={FedRAMPHighAuthorization} />
+      <Route path={"/news/cmmc-certification"} component={CMMCCertification} />
+      <Route path={"/news/federal-automation-contract"} component={FederalAutomationContract} />
+      <Route path={"/news/document-processing-platform"} component={DocumentProcessingPlatform} />
+      <Route path={"/news/govtech-100"} component={GovTech100} />
+      <Route path={"/news/security-operations-center"} component={SecurityOperationsCenterNews} />
+      <Route path={"/news/defense-joint-venture"} component={DefenseJointVenture} />
+      <Route path={"/news/stateramp-authorization"} component={StateRAMPAuthorization} />
       <Route path={"/about/company-latest"} component={CompanyLatest} />
       <Route path={"/careers"} component={Careers} />
       <Route path={"/careers/:slug"} component={JobDetail} />
