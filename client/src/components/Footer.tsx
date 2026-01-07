@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { APP_LOGO } from '@/const';
-import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin, Shield, Award, Building2, FileCheck, CheckCircle } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -114,64 +114,16 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Certifications & Credentials Section - Improved mobile layout */}
-        <div className="border-t border-primary-foreground/20 pt-6 sm:pt-8 mb-6 sm:mb-4 sm:mb-6 md:mb-8">
-          <h4 className="text-center text-xs sm:text-sm font-semibold uppercase tracking-wider mb-4 sm:mb-6 opacity-70">
-            Certifications & Credentials
-          </h4>
-          {/* Mobile: 2x3 grid, Tablet: 3x2, Desktop: 5x1 row */}
-          <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
-            {/* FedRAMP Badge */}
-            <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 border border-primary-foreground/20">
-              <Shield className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-accent mb-1 sm:mb-2" />
-              <span className="text-xs sm:text-sm font-bold text-accent">FedRAMP</span>
-              <span className="text-[10px] sm:text-xs text-primary-foreground/70">Authorized</span>
-            </div>
-
-            {/* CMMC Badge */}
-            <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 border border-primary-foreground/20">
-              <Shield className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-accent mb-1 sm:mb-2" />
-              <span className="text-xs sm:text-sm font-bold text-accent">CMMC</span>
-              <span className="text-[10px] sm:text-xs text-primary-foreground/70">Level 2</span>
-            </div>
-
-            {/* FISMA Badge */}
-            <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 border border-primary-foreground/20">
-              <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-accent mb-1 sm:mb-2" />
-              <span className="text-xs sm:text-sm font-bold text-accent">FISMA</span>
-              <span className="text-[10px] sm:text-xs text-primary-foreground/70">Compliant</span>
-            </div>
-
-            {/* Small Business Badge */}
-            <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 border border-primary-foreground/20">
-              <Building2 className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-accent mb-1 sm:mb-2" />
-              <span className="text-xs sm:text-sm font-bold text-accent">SBA</span>
-              <span className="text-[10px] sm:text-xs text-primary-foreground/70">Small Biz</span>
-            </div>
-
-            {/* ISO Badge - spans 2 cols on mobile to center */}
-            <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 border border-primary-foreground/20 col-span-2 xs:col-span-1">
-              <Award className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-accent mb-1 sm:mb-2" />
-              <span className="text-xs sm:text-sm font-bold text-accent">ISO 9001</span>
-              <span className="text-[10px] sm:text-xs text-primary-foreground/70">Certified</span>
-            </div>
-          </div>
-
-          {/* Federal Credentials Row - Improved mobile layout */}
-          <div className="flex flex-col xs:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 mt-4 sm:mt-6 text-xs sm:text-sm">
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <FileCheck className="h-3 w-3 sm:h-4 sm:w-4 text-accent" />
+        {/* Federal Credentials - Simple text display */}
+        <div className="border-t border-primary-foreground/20 pt-6 sm:pt-8 mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm">
+            <div className="flex items-center gap-2">
               <span className="text-primary-foreground/70">UEI:</span>
-              <span className="font-mono font-semibold text-accent text-[10px] sm:text-xs md:text-sm">XXXXXXXXX123</span>
+              <span className="font-mono font-semibold text-primary-foreground">XXXXXXXXX123</span>
             </div>
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <FileCheck className="h-3 w-3 sm:h-4 sm:w-4 text-accent" />
+            <div className="flex items-center gap-2">
               <span className="text-primary-foreground/70">CAGE:</span>
-              <span className="font-mono font-semibold text-accent text-[10px] sm:text-xs md:text-sm">XXXXX</span>
-            </div>
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <FileCheck className="h-3 w-3 sm:h-4 sm:w-4 text-accent" />
-              <span className="text-primary-foreground/70">GSA Schedule</span>
+              <span className="font-mono font-semibold text-primary-foreground">XXXXX</span>
             </div>
           </div>
         </div>

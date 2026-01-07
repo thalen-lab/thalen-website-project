@@ -4618,3 +4618,8 @@
 - [x] Add "What's in it for you?" detailed benefits section with engaging copy
 - [x] Add team culture image alongside the intro text
 - [x] Add call-to-action encouraging candidates to apply or upload resume
+
+## Phase 45: Footer and Navbar Updates
+- [x] Remove certification cards from footer (FedRAMP, CMMC, FISMA, SBA, ISO 9001)
+- [x] Keep only UEI and CAGE numbers as plain text without icons
+- [x] Reformat navbar to match NEOGOV style (clean horizontal layout)
