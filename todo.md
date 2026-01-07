@@ -4641,3 +4641,10 @@
 - [x] Restore "Learn" dropdown instead of "Resources"
 - [x] Restore original menu structure (Solutions, Learn, About, Case Studies, Capability Statement, Contact)
 - [x] Keep orange "Schedule Assessment" CTA button
+
+## Phase 71: Restore Original Navbar with Mega-Menu
+- [x] Restore dark navy background navbar
+- [x] Create Solutions mega-menu with 3 columns (Government Solutions, Services, Industries)
+- [x] Create Learn dropdown with descriptions (Insights, Resources, Events)
+- [x] Create About dropdown with descriptions (About Thalen, Social Responsibility, Security & Compliance, News & Updates, Company's Latest, Careers)
+- [x] Keep orange Schedule Assessment CTA button

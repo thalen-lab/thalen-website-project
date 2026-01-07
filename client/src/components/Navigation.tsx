@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'wouter';
+import { Link } from 'wouter';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Navigation() {
@@ -7,7 +7,6 @@ export default function Navigation() {
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [learnOpen, setLearnOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
-  const [location] = useLocation();
   
   // Refs for timeout delays to prevent menu from closing too quickly
   const solutionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -88,32 +87,57 @@ export default function Navigation() {
     }
   }, [mobileMenuOpen]);
 
-  // Solutions dropdown items
-  const solutionsItems = [
-    { name: 'Intelligent Automation', href: '/services/automation' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Cloud Modernization', href: '/services/cloud' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
-    { name: 'ATO Support', href: '/services/ato-support' },
-    { name: 'Application Development', href: '/services/application-development' },
-    { name: 'Custom Software', href: '/services/custom-software' },
-    { name: 'Digital Transformation', href: '/services/digital-transformation' },
+  // Government Solutions column items
+  const governmentSolutionsItems = [
+    { name: 'Core Capabilities', href: '/core-capabilities' },
+    { name: 'Federal Government', href: '/industries/federal-government' },
+    { name: 'State & Local Government', href: '/industries/state-local-government' },
+    { name: 'Defense & Intelligence', href: '/industries/defense-intelligence' },
+    { name: 'FedRAMP Compliance', href: '/services/fedramp-compliance' },
+    { name: 'StateRAMP/GovRAMP', href: '/services/stateramp-govramp' },
+    { name: 'CMMC Compliance', href: '/services/cmmc-compliance' },
+    { name: 'ATO Support & Authorization', href: '/services/ato-support' },
+    { name: 'Government Cloud Migration', href: '/services/government-cloud-migration' },
+    { name: 'Past Performance', href: '/past-performance' },
+    { name: 'Contract Vehicles', href: '/contract-vehicles' },
   ];
 
-  // Learn dropdown items
+  // Services column items
+  const servicesItems = [
+    { name: 'Intelligent Automation & Process Opti...', href: '/services/automation' },
+    { name: 'Data Analytics & Intelligence', href: '/services/data-analytics' },
+    { name: 'Cloud Infrastructure & Modernization', href: '/services/cloud' },
+    { name: 'Cybersecurity & Compliance', href: '/services/cybersecurity' },
+    { name: 'Security & Compliance Consulting', href: '/services/security-compliance-consulting' },
+    { name: 'ATO Support & Authorization', href: '/services/ato-support' },
+    { name: 'Application Development & Integration', href: '/services/application-development' },
+    { name: 'Custom Software Solutions', href: '/services/custom-software' },
+    { name: 'Digital Transformation Enablement', href: '/services/digital-transformation' },
+  ];
+
+  // Industries column items
+  const industriesItems = [
+    { name: 'Federal Government', href: '/industries/federal-government' },
+    { name: 'Healthcare & Life Sciences', href: '/industries/healthcare' },
+    { name: 'Manufacturing & Energy', href: '/industries/manufacturing' },
+    { name: 'Financial Services', href: '/industries/financial-services' },
+  ];
+
+  // Learn dropdown items with descriptions
   const learnItems = [
-    { name: 'Resources', href: '/government-resources' },
-    { name: 'Insights', href: '/insights' },
-    { name: 'Events', href: '/events' },
-    { name: 'Methodology', href: '/methodology' },
+    { name: 'Insights', description: 'Industry trends and thought leadership', href: '/insights' },
+    { name: 'Resources', description: 'Guides, whitepapers, and tools', href: '/government-resources' },
+    { name: 'Events', description: 'Webinars, conferences, and meetups', href: '/events' },
   ];
 
-  // About dropdown items
+  // About dropdown items with descriptions
   const aboutItems = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'News & Updates', href: '/about/news-updates' },
+    { name: 'About Thalen', description: 'Get to know us better', href: '/about' },
+    { name: 'Social Responsibility', description: 'How we give back', href: '/about/social-responsibility' },
+    { name: 'Security & Compliance', description: 'ISO 27001, CMMC & more', href: '/about/security-compliance' },
+    { name: 'News & Updates', description: 'Industry news and trends', href: '/about/news-updates' },
+    { name: "Company's Latest", description: 'Updates from Thalen', href: '/about/company-latest' },
+    { name: 'Careers', description: 'Join our team', href: '/careers' },
   ];
 
   // Close mobile menu helper
@@ -122,12 +146,12 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white text-foreground sticky top-0 z-50 shadow-md border-b border-gray-100">
+    <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity shrink-0">
-            <span className="text-lg md:text-xl lg:text-2xl font-bold text-primary">
+            <span className="text-lg md:text-xl lg:text-2xl font-bold">
               <span className="hidden sm:inline">Thalen Technologies, Inc</span>
               <span className="sm:hidden">Thalen</span>
             </span>
@@ -137,32 +161,72 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center">
             {/* Main Nav Links */}
             <div className="flex items-center space-x-1 xl:space-x-2">
-              {/* Solutions Dropdown */}
+              {/* Solutions Mega-Menu Dropdown */}
               <div 
                 className="relative"
                 onMouseEnter={handleSolutionsEnter}
                 onMouseLeave={handleSolutionsLeave}
               >
-                <button className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-signature transition-colors">
+                <button className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium hover:text-orange-signature transition-colors ${solutionsOpen ? 'text-orange-signature' : ''}`}>
                   <span>Solutions</span>
                   <ChevronDown className={`h-4 w-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {solutionsOpen && (
                   <div 
-                    className="absolute left-0 top-full pt-2 z-50"
+                    className="absolute left-1/2 -translate-x-1/2 top-full pt-2 z-50"
                     onMouseEnter={handleSolutionsEnter}
                     onMouseLeave={handleSolutionsLeave}
                   >
-                    <div className="bg-white rounded-lg shadow-xl border border-gray-200 py-2 min-w-[280px]">
-                      {solutionsItems.map((item) => (
-                        <Link 
-                          key={item.href} 
-                          href={item.href}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-signature transition-colors"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                    <div className="bg-white text-gray-800 rounded-lg shadow-2xl border border-gray-200 p-6 min-w-[800px]">
+                      <div className="grid grid-cols-3 gap-8">
+                        {/* Government Solutions Column */}
+                        <div>
+                          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Government Solutions</h3>
+                          <div className="space-y-1">
+                            {governmentSolutionsItems.map((item) => (
+                              <Link 
+                                key={item.href} 
+                                href={item.href}
+                                className="block py-1.5 text-sm text-gray-700 hover:text-orange-signature transition-colors"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Services Column */}
+                        <div>
+                          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Services</h3>
+                          <div className="space-y-1">
+                            {servicesItems.map((item) => (
+                              <Link 
+                                key={item.href + item.name} 
+                                href={item.href}
+                                className="block py-1.5 text-sm text-gray-700 hover:text-orange-signature transition-colors"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Industries Column */}
+                        <div>
+                          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Industries</h3>
+                          <div className="space-y-1">
+                            {industriesItems.map((item) => (
+                              <Link 
+                                key={item.href} 
+                                href={item.href}
+                                className="block py-1.5 text-sm text-gray-700 hover:text-orange-signature transition-colors"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -174,7 +238,7 @@ export default function Navigation() {
                 onMouseEnter={handleLearnEnter}
                 onMouseLeave={handleLearnLeave}
               >
-                <button className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-signature transition-colors">
+                <button className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium hover:text-orange-signature transition-colors ${learnOpen ? 'text-orange-signature' : ''}`}>
                   <span>Learn</span>
                   <ChevronDown className={`h-4 w-4 transition-transform ${learnOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -184,14 +248,15 @@ export default function Navigation() {
                     onMouseEnter={handleLearnEnter}
                     onMouseLeave={handleLearnLeave}
                   >
-                    <div className="bg-white rounded-lg shadow-xl border border-gray-200 py-2 min-w-[200px]">
+                    <div className="bg-white text-gray-800 rounded-lg shadow-2xl border border-gray-200 py-3 min-w-[280px]">
                       {learnItems.map((item) => (
                         <Link 
                           key={item.href} 
                           href={item.href}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-signature transition-colors"
+                          className="block px-4 py-3 hover:bg-gray-50 transition-colors"
                         >
-                          {item.name}
+                          <div className="text-sm font-medium text-gray-800">{item.name}</div>
+                          <div className="text-xs text-gray-500 mt-0.5">{item.description}</div>
                         </Link>
                       ))}
                     </div>
@@ -205,7 +270,7 @@ export default function Navigation() {
                 onMouseEnter={handleAboutEnter}
                 onMouseLeave={handleAboutLeave}
               >
-                <button className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-signature transition-colors">
+                <button className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium hover:text-orange-signature transition-colors ${aboutOpen ? 'text-orange-signature' : ''}`}>
                   <span>About</span>
                   <ChevronDown className={`h-4 w-4 transition-transform ${aboutOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -215,14 +280,15 @@ export default function Navigation() {
                     onMouseEnter={handleAboutEnter}
                     onMouseLeave={handleAboutLeave}
                   >
-                    <div className="bg-white rounded-lg shadow-xl border border-gray-200 py-2 min-w-[200px]">
+                    <div className="bg-white text-gray-800 rounded-lg shadow-2xl border border-gray-200 py-3 min-w-[280px]">
                       {aboutItems.map((item) => (
                         <Link 
                           key={item.href} 
                           href={item.href}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-signature transition-colors"
+                          className="block px-4 py-3 hover:bg-gray-50 transition-colors"
                         >
-                          {item.name}
+                          <div className="text-sm font-medium text-gray-800">{item.name}</div>
+                          <div className="text-xs text-gray-500 mt-0.5">{item.description}</div>
                         </Link>
                       ))}
                     </div>
@@ -233,7 +299,7 @@ export default function Navigation() {
               {/* Case Studies */}
               <Link 
                 href="/case-studies" 
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-signature transition-colors"
+                className="px-4 py-2 text-sm font-medium hover:text-orange-signature transition-colors"
               >
                 Case Studies
               </Link>
@@ -241,7 +307,7 @@ export default function Navigation() {
               {/* Capability Statement */}
               <Link 
                 href="/capability-statement" 
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-signature transition-colors"
+                className="px-4 py-2 text-sm font-medium hover:text-orange-signature transition-colors"
               >
                 Capability Statement
               </Link>
@@ -249,13 +315,13 @@ export default function Navigation() {
               {/* Contact */}
               <Link 
                 href="/contact" 
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-signature transition-colors"
+                className="px-4 py-2 text-sm font-medium hover:text-orange-signature transition-colors"
               >
                 Contact
               </Link>
             </div>
 
-            {/* CTA Button - using native button styling instead of Button component to avoid nested anchor issues */}
+            {/* CTA Button */}
             <div className="ml-6">
               <Link 
                 href="/schedule-assessment"
@@ -268,7 +334,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-700"
+            className="lg:hidden p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -279,30 +345,70 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-16 bg-white z-40 overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-16 bg-primary z-40 overflow-y-auto">
           <div className="container py-6">
             <div className="space-y-1">
               {/* Solutions Section */}
               <div>
                 <button
                   onClick={() => setSolutionsOpen(!solutionsOpen)}
-                  className="flex items-center justify-between w-full py-3 text-lg font-medium text-gray-800 border-b border-gray-200"
+                  className="flex items-center justify-between w-full py-3 text-lg font-medium border-b border-primary-foreground/20"
                 >
                   <span>Solutions</span>
                   <ChevronDown className={`h-5 w-5 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {solutionsOpen && (
-                  <div className="py-2 pl-4 space-y-1">
-                    {solutionsItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        onClick={closeMobileMenu}
-                        className="block py-2.5 text-base text-gray-600 hover:text-orange-signature transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
+                  <div className="py-4 pl-4 space-y-4">
+                    {/* Government Solutions */}
+                    <div>
+                      <h4 className="text-xs font-semibold text-primary-foreground/60 uppercase tracking-wider mb-2">Government Solutions</h4>
+                      <div className="space-y-1">
+                        {governmentSolutionsItems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={closeMobileMenu}
+                            className="block py-2 text-sm text-primary-foreground/80 hover:text-orange-signature transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Services */}
+                    <div>
+                      <h4 className="text-xs font-semibold text-primary-foreground/60 uppercase tracking-wider mb-2">Services</h4>
+                      <div className="space-y-1">
+                        {servicesItems.map((item) => (
+                          <Link
+                            key={item.href + item.name}
+                            href={item.href}
+                            onClick={closeMobileMenu}
+                            className="block py-2 text-sm text-primary-foreground/80 hover:text-orange-signature transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Industries */}
+                    <div>
+                      <h4 className="text-xs font-semibold text-primary-foreground/60 uppercase tracking-wider mb-2">Industries</h4>
+                      <div className="space-y-1">
+                        {industriesItems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={closeMobileMenu}
+                            className="block py-2 text-sm text-primary-foreground/80 hover:text-orange-signature transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
@@ -311,7 +417,7 @@ export default function Navigation() {
               <div>
                 <button
                   onClick={() => setLearnOpen(!learnOpen)}
-                  className="flex items-center justify-between w-full py-3 text-lg font-medium text-gray-800 border-b border-gray-200"
+                  className="flex items-center justify-between w-full py-3 text-lg font-medium border-b border-primary-foreground/20"
                 >
                   <span>Learn</span>
                   <ChevronDown className={`h-5 w-5 transition-transform ${learnOpen ? 'rotate-180' : ''}`} />
@@ -323,9 +429,10 @@ export default function Navigation() {
                         key={item.href}
                         href={item.href}
                         onClick={closeMobileMenu}
-                        className="block py-2.5 text-base text-gray-600 hover:text-orange-signature transition-colors"
+                        className="block py-2.5"
                       >
-                        {item.name}
+                        <div className="text-base text-primary-foreground/90 hover:text-orange-signature transition-colors">{item.name}</div>
+                        <div className="text-xs text-primary-foreground/60">{item.description}</div>
                       </Link>
                     ))}
                   </div>
@@ -336,7 +443,7 @@ export default function Navigation() {
               <div>
                 <button
                   onClick={() => setAboutOpen(!aboutOpen)}
-                  className="flex items-center justify-between w-full py-3 text-lg font-medium text-gray-800 border-b border-gray-200"
+                  className="flex items-center justify-between w-full py-3 text-lg font-medium border-b border-primary-foreground/20"
                 >
                   <span>About</span>
                   <ChevronDown className={`h-5 w-5 transition-transform ${aboutOpen ? 'rotate-180' : ''}`} />
@@ -348,9 +455,10 @@ export default function Navigation() {
                         key={item.href}
                         href={item.href}
                         onClick={closeMobileMenu}
-                        className="block py-2.5 text-base text-gray-600 hover:text-orange-signature transition-colors"
+                        className="block py-2.5"
                       >
-                        {item.name}
+                        <div className="text-base text-primary-foreground/90 hover:text-orange-signature transition-colors">{item.name}</div>
+                        <div className="text-xs text-primary-foreground/60">{item.description}</div>
                       </Link>
                     ))}
                   </div>
@@ -361,7 +469,7 @@ export default function Navigation() {
               <Link
                 href="/case-studies"
                 onClick={closeMobileMenu}
-                className="block py-3 text-lg font-medium text-gray-800 border-b border-gray-200"
+                className="block py-3 text-lg font-medium border-b border-primary-foreground/20"
               >
                 Case Studies
               </Link>
@@ -370,7 +478,7 @@ export default function Navigation() {
               <Link
                 href="/capability-statement"
                 onClick={closeMobileMenu}
-                className="block py-3 text-lg font-medium text-gray-800 border-b border-gray-200"
+                className="block py-3 text-lg font-medium border-b border-primary-foreground/20"
               >
                 Capability Statement
               </Link>
@@ -379,7 +487,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={closeMobileMenu}
-                className="block py-3 text-lg font-medium text-gray-800 border-b border-gray-200"
+                className="block py-3 text-lg font-medium border-b border-primary-foreground/20"
               >
                 Contact
               </Link>
