@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Briefcase, Users, Heart, Zap, Shield, GraduationCap, MapPin, Clock, Loader2, Search, Building2, CheckCircle2, Gift, DollarSign, Calendar, Coffee, Award } from 'lucide-react';
+import { ArrowRight, Briefcase, Users, Heart, Zap, Shield, GraduationCap, MapPin, Clock, Loader2, Search, Building2 } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -84,12 +84,12 @@ export default function Careers() {
   ];
 
   const perksHighlights = [
-    { icon: DollarSign, text: 'Competitive salaries with performance bonuses' },
-    { icon: Calendar, text: 'Generous paid holidays and time off' },
-    { icon: Gift, text: '401(k) with matching and immediate vesting' },
-    { icon: GraduationCap, text: 'Tuition assistance and professional development funds' },
-    { icon: Coffee, text: 'Modern offices with collaborative spaces' },
-    { icon: Award, text: 'Recognition programs and team celebrations' },
+    'Competitive salaries with performance bonuses',
+    'Generous paid holidays and time off',
+    '401(k) with matching and immediate vesting',
+    'Tuition assistance and professional development funds',
+    'Modern offices with collaborative spaces',
+    'Recognition programs and team celebrations',
   ];
 
   return (
@@ -121,14 +121,14 @@ export default function Careers() {
               </h1>
               
               <p className="text-base md:text-lg text-white/90 text-center max-w-3xl mx-auto">
-                Build your career at NexDyne Technology, where your expertise directly contributes to modernizing government services and protecting critical infrastructure.
+                Build your career at Thalen Technologies, where your expertise directly contributes to modernizing government services and protecting critical infrastructure.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Come Join Our Team Section - Procon Inspired */}
+      {/* Come Join Our Team Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -140,40 +140,38 @@ export default function Careers() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[#0A2540]">
-                Come Join Our Team
+                Build Something That Matters
               </h2>
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
-                NexDyne is always looking to meet both newcomers and experienced professionals. We seek bright and dynamic candidates with a can-do attitude and a desire to be challenged. Our team thrives on solving complex problems and delivering innovative solutions that make a real difference in government technology.
+                At Thalen Technologies, Inc., we welcome fresh perspectives and seasoned expertise alike. We're searching for motivated individuals who embrace challenges head-on and bring energy to everything they do. Our people tackle intricate problems every day, crafting solutions that genuinely transform how government technology serves the public.
               </p>
 
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-[#0A2540]">
-                What's in it for you?
+                Why Work Here?
               </h3>
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
-                With our innovative roots still fresh in our corporate memory, we strive to keep NexDyne a place where we all look forward to going to work each day. But we know that won't pay the mortgage. In addition to all the usual—competitively generous salaries, paid holidays and time off, and medical/dental/life/disability insurance—we also offer:
+                We've held onto the entrepreneurial spirit that built this company, and we work hard to make Thalen a place people genuinely enjoy coming to each day. Of course, enthusiasm alone doesn't cover the bills. Beyond the essentials—competitive pay, paid time off, and comprehensive medical, dental, life, and disability coverage—we provide:
               </p>
 
-              {/* Perks List */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+              {/* Perks List with Clean Black Bullets */}
+              <ul className="space-y-3 mb-8">
                 {perksHighlights.map((perk, index) => (
-                  <motion.div
+                  <motion.li
                     key={index}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex items-center gap-3"
+                    className="flex items-start gap-3"
                   >
-                    <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
-                      <perk.icon className="w-4 h-4 text-orange-600" />
-                    </div>
-                    <span className="text-gray-700 text-sm sm:text-base">{perk.text}</span>
-                  </motion.div>
+                    <span className="w-2 h-2 rounded-full bg-black mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-700 text-sm sm:text-base">{perk}</span>
+                  </motion.li>
                 ))}
-              </div>
+              </ul>
 
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
-                With new opportunities arising on a weekly basis, we'd love to hear from you. Apply to one of the posted jobs or just send us your resume using the contact form below. You never know what might come up.
+                New roles open up regularly, and we'd love to connect with you. Browse our current openings or submit your resume through the contact form below—the right opportunity might be just around the corner.
               </p>
 
               <Link href="/contact">
@@ -194,7 +192,7 @@ export default function Careers() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
                   src="/img/careers/team-culture.jpg" 
-                  alt="NexDyne team collaborating in modern office" 
+                  alt="Thalen Technologies team collaborating in modern office" 
                   className="w-full h-auto object-cover aspect-[4/3]"
                 />
                 {/* Overlay gradient */}
@@ -218,7 +216,7 @@ export default function Careers() {
             transition={{ duration: 0.6 }}
             className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
-            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Why Join NexDyne?</h2>
+            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Why Join Thalen?</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We offer more than just a job—we offer a career with purpose, growth, and exceptional benefits.
             </p>
