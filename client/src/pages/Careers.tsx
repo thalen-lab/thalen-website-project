@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, Briefcase, Users, Heart, Zap, Shield, GraduationCap, MapPin, Clock, Loader2, Search, Filter, Building2 } from 'lucide-react';
+import { ArrowRight, Briefcase, Users, Heart, Zap, Shield, GraduationCap, MapPin, Clock, Loader2, Search, Building2, CheckCircle2, Gift, DollarSign, Calendar, Coffee, Award } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -83,6 +83,15 @@ export default function Careers() {
     }
   ];
 
+  const perksHighlights = [
+    { icon: DollarSign, text: 'Competitive salaries with performance bonuses' },
+    { icon: Calendar, text: 'Generous paid holidays and time off' },
+    { icon: Gift, text: '401(k) with matching and immediate vesting' },
+    { icon: GraduationCap, text: 'Tuition assistance and professional development funds' },
+    { icon: Coffee, text: 'Modern offices with collaborative spaces' },
+    { icon: Award, text: 'Recognition programs and team celebrations' },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-white text-[oklch(0.20_0.05_250)]">
       <Navigation />
@@ -112,8 +121,88 @@ export default function Careers() {
               </h1>
               
               <p className="text-base md:text-lg text-white/90 text-center max-w-3xl mx-auto">
-                Build your career at Thalen Technologies, where your expertise directly contributes to modernizing government services and protecting critical infrastructure.
+                Build your career at NexDyne Technology, where your expertise directly contributes to modernizing government services and protecting critical infrastructure.
               </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Come Join Our Team Section - Procon Inspired */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[#0A2540]">
+                Come Join Our Team
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
+                NexDyne is always looking to meet both newcomers and experienced professionals. We seek bright and dynamic candidates with a can-do attitude and a desire to be challenged. Our team thrives on solving complex problems and delivering innovative solutions that make a real difference in government technology.
+              </p>
+
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-[#0A2540]">
+                What's in it for you?
+              </h3>
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
+                With our innovative roots still fresh in our corporate memory, we strive to keep NexDyne a place where we all look forward to going to work each day. But we know that won't pay the mortgage. In addition to all the usual—competitively generous salaries, paid holidays and time off, and medical/dental/life/disability insurance—we also offer:
+              </p>
+
+              {/* Perks List */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                {perksHighlights.map((perk, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="flex items-center gap-3"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                      <perk.icon className="w-4 h-4 text-orange-600" />
+                    </div>
+                    <span className="text-gray-700 text-sm sm:text-base">{perk.text}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
+                With new opportunities arising on a weekly basis, we'd love to hear from you. Apply to one of the posted jobs or just send us your resume using the contact form below. You never know what might come up.
+              </p>
+
+              <Link href="/contact">
+                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
+                  Send Your Resume <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+            </motion.div>
+
+            {/* Right Column - Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/img/careers/team-culture.jpg" 
+                  alt="NexDyne team collaborating in modern office" 
+                  className="w-full h-auto object-cover aspect-[4/3]"
+                />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent"></div>
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl"></div>
+              <div className="absolute -top-4 -left-4 w-32 h-32 bg-[#0A2540]/10 rounded-full blur-2xl"></div>
             </motion.div>
           </div>
         </div>
@@ -129,7 +218,7 @@ export default function Careers() {
             transition={{ duration: 0.6 }}
             className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 md:mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
           >
-            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Why Join Thalen?</h2>
+            <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Why Join NexDyne?</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We offer more than just a job—we offer a career with purpose, growth, and exceptional benefits.
             </p>
