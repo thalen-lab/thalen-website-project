@@ -4631,3 +4631,13 @@
 - [x] Remove certification cards from footer (FedRAMP, CMMC, FISMA, SBA, ISO 9001)
 - [x] Keep only UEI and CAGE numbers as plain text without icons
 - [x] Reformat navbar to match NEOGOV style (clean horizontal layout)
+
+## Phase 64: Footer Background Color Update
+- [x] Change footer background to blue color while keeping all design improvements
+
+## Phase 70: Restore Previous Navbar Design
+- [x] Restore white/light background navbar
+- [x] Change navigation text to dark color
+- [x] Restore "Learn" dropdown instead of "Resources"
+- [x] Restore original menu structure (Solutions, Learn, About, Case Studies, Capability Statement, Contact)
+- [x] Keep orange "Schedule Assessment" CTA button
