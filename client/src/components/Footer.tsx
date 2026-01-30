@@ -356,7 +356,7 @@ export default function Footer() {
       <div className="border-t border-white/10 bg-[#081c30]">
         <div className="container py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
-            <p>© 2024 Thalen Technologies, Inc. All rights reserved.</p>
+            <p>© 2025 Thalen Technologies, Inc. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               <Link href="/privacy" className="text-white/60 hover:text-[#FF6B35] transition-colors">
                 Privacy Policy

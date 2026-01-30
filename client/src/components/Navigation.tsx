@@ -150,11 +150,12 @@ export default function Navigation() {
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity shrink-0">
-            <span className="text-lg md:text-xl lg:text-2xl font-bold">
-              <span className="hidden sm:inline">Thalen Technologies, Inc</span>
-              <span className="sm:hidden">Thalen</span>
-            </span>
+          <Link href="/" className="flex items-center hover:opacity-90 transition-opacity shrink-0">
+            <img 
+              src="/thalen-logo-new.png?v=2" 
+              alt="Thalen Technologies" 
+              className="h-32 md:h-40 lg:h-48 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
