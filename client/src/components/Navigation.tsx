@@ -152,9 +152,9 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity shrink-0">
             <img 
-              src="/thalen-logo-new.png?v=2" 
+              src="/thalen-logo-gold-v2.png" 
               alt="Thalen Technologies" 
-              className="h-32 md:h-40 lg:h-48 w-auto"
+              className="h-28 md:h-32 lg:h-40 w-auto"
             />
           </Link>
 
