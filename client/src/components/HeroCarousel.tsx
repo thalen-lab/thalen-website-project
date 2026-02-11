@@ -20,15 +20,15 @@ interface CarouselSlide {
 const slides: CarouselSlide[] = [
   {
     id: 1,
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/WMBsiHLOQtWinyOk.jpg",
-    imageWebp: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/WMBsiHLOQtWinyOk.jpg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/EpYjKnOMYbTRuxPs.JPG",
+    imageWebp: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/EpYjKnOMYbTRuxPs.JPG",
     category: "GOVERNMENT TECHNOLOGY",
     title: "Powering Government\nMission Success",
     subtitle: "For 25 years, we have partnered with federal, state, and local agencies to modernize critical systems, secure sensitive data, and deliver superior citizen services.",
     ctaText: "EXPLORE SOLUTIONS",
     ctaLink: "/core-capabilities",
     tabLabel: "Government",
-    objectPosition: ["center 45%", "center 40%", "center 35%"],
+    objectPosition: ["center 50%", "center 50%", "center 50%"],
   },
   {
     id: 2,
