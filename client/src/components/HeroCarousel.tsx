@@ -40,8 +40,8 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 3,
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/GwGSVnVhZmVGySBG.png",
-    imageWebp: "/hero-defense-cyber.webp",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/TZgvtBBRnFSFHvfs.jpg",
+    imageWebp: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/TZgvtBBRnFSFHvfs.jpg",
     category: "CYBERSECURITY",
     title: "Defending Digital\nInfrastructure",
     subtitle: "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements.",
