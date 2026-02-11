@@ -62,8 +62,8 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 5,
-    image: "/industries-regulated.jpg",
-    imageWebp: "/industries-regulated.jpg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/LOCqIXVrCXhGcRea.jpg",
+    imageWebp: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/LOCqIXVrCXhGcRea.jpg",
     category: "REGULATED INDUSTRIES",
     title: "Government-Grade Solutions\nfor Regulated Industries",
     subtitle: "We apply the same rigorous standards of security and compliance demanded by our government partners to solve challenges for regulated industries.",
