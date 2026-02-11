@@ -13,6 +13,8 @@ interface CarouselSlide {
   ctaText: string;
   ctaLink: string;
   tabLabel: string;
+  /** Per-slide responsive object-position: [mobile, sm, md+] */
+  objectPosition: [string, string, string];
 }
 
 const slides: CarouselSlide[] = [
@@ -26,6 +28,7 @@ const slides: CarouselSlide[] = [
     ctaText: "EXPLORE SOLUTIONS",
     ctaLink: "/core-capabilities",
     tabLabel: "Government",
+    objectPosition: ["center 20%", "center 15%", "center 10%"],
   },
   {
     id: 2,
@@ -37,6 +40,7 @@ const slides: CarouselSlide[] = [
     ctaText: "LEARN MORE",
     ctaLink: "/federal-solutions/fedramp",
     tabLabel: "FedRAMP",
+    objectPosition: ["center 45%", "center 40%", "center 35%"],
   },
   {
     id: 3,
@@ -48,6 +52,7 @@ const slides: CarouselSlide[] = [
     ctaText: "GET CMMC READY",
     ctaLink: "/federal-solutions/cmmc",
     tabLabel: "Cybersecurity",
+    objectPosition: ["center 55%", "center 50%", "center 45%"],
   },
   {
     id: 4,
@@ -59,6 +64,7 @@ const slides: CarouselSlide[] = [
     ctaText: "START MIGRATION",
     ctaLink: "/federal-solutions/cloud-migration",
     tabLabel: "Cloud",
+    objectPosition: ["center 30%", "center 25%", "center 20%"],
   },
   {
     id: 5,
@@ -70,6 +76,7 @@ const slides: CarouselSlide[] = [
     ctaText: "VIEW INDUSTRIES",
     ctaLink: "/sectors/regulated-industries",
     tabLabel: "Industries",
+    objectPosition: ["center 60%", "center 55%", "center 50%"],
   },
   {
     id: 6,
@@ -81,6 +88,7 @@ const slides: CarouselSlide[] = [
     ctaText: "OUR APPROACH",
     ctaLink: "/our-approach",
     tabLabel: "Infrastructure",
+    objectPosition: ["center 35%", "center 30%", "center 25%"],
   },
 ];
 
@@ -94,10 +102,24 @@ function supportsWebP(): boolean {
   return false;
 }
 
+function useBreakpoint() {
+  const [bp, setBp] = useState<0 | 1 | 2>(typeof window !== 'undefined' && window.innerWidth >= 768 ? 2 : typeof window !== 'undefined' && window.innerWidth >= 640 ? 1 : 0);
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      setBp(w >= 768 ? 2 : w >= 640 ? 1 : 0);
+    };
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+  return bp;
+}
+
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
   const [webpSupported, setWebpSupported] = useState(true);
+  const bp = useBreakpoint();
 
   // Detect WebP support on mount
   useEffect(() => {
@@ -120,14 +142,14 @@ export default function HeroCarousel() {
     img.onload = () => handleImageLoad(nextSlide.id);
   }, [currentSlide, webpSupported, handleImageLoad]);
 
-  // Auto-advance carousel
+  // Auto-advance carousel - resets when user clicks a tab
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [currentSlide]);
 
   // Get image source based on WebP support
   const getImageSrc = (slide: CarouselSlide) => {
@@ -166,13 +188,8 @@ export default function HeroCarousel() {
                 onLoad={() => handleImageLoad(slide.id)}
                 className={`w-full h-full object-cover transition-opacity duration-500 ${
                   loadedImages.has(slide.id) ? "opacity-100" : "opacity-0"
-                } ${
-                  slide.id === 1
-                    ? "object-[center_20%] sm:object-[center_10%] md:object-[center_0%]"
-                    : slide.id === 3 || slide.id === 4
-                    ? "object-[center_30%] sm:object-[center_20%] md:object-[center_15%]"
-                    : "object-[center_40%] sm:object-[center_30%] md:object-center"
                 }`}
+                style={{ objectPosition: slide.objectPosition[bp] }}
               />
             </picture>
 
