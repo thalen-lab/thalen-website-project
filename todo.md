@@ -4671,3 +4671,4 @@
 - [x] Update Slide 3 "Defending Digital Infrastructure" hero image with industrial engineers photo
 - [x] Update Slide 4 "Secure Cloud Migration for Government" hero image with neon data center photo
 - [x] Update Slide 5 "Government-Grade Solutions for Regulated Industries" hero image with refinery at night photo
+- [x] Replace Slide 2 "Mission-First, Compliance-Assured" hero image with army satellite targeting photo
