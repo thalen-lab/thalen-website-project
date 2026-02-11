@@ -29,8 +29,8 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 2,
-    image: "/fedramp-hero.webp",
-    imageWebp: "/fedramp-hero.webp",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/uoDoMkvjAchJfdbE.jpg",
+    imageWebp: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/uoDoMkvjAchJfdbE.jpg",
     category: "COMPLIANCE & AUTHORIZATION",
     title: "Mission-First,\nCompliance-Assured",
     subtitle: "Accelerate your path to FedRAMP authorization with our battle-tested methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months.",

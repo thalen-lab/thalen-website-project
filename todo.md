@@ -4667,3 +4667,4 @@
 
 ## Hero Image Updates
 - [x] Update Slide 1 "Powering Government Mission Success" hero image with user-provided Capitol building photo
+- [x] Update Slide 2 "Mission-First, Compliance-Assured" hero image with military cyber control center photo
