@@ -1,12 +1,18 @@
 import { useState, useEffect, useCallback } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 interface CarouselSlide {
   id: number;
   image: string;
   imageWebp: string;
+  category: string;
   title: string;
   subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+  tabLabel: string;
 }
 
 const slides: CarouselSlide[] = [
@@ -14,52 +20,76 @@ const slides: CarouselSlide[] = [
     id: 1,
     image: "/capitol-building-new.webp",
     imageWebp: "/capitol-building-new.webp",
-    title: "Powering Government Mission Success",
+    category: "GOVERNMENT TECHNOLOGY",
+    title: "Powering Government\nMission Success",
     subtitle: "For 25 years, we have partnered with federal, state, and local agencies to modernize critical systems, secure sensitive data, and deliver superior citizen services.",
+    ctaText: "EXPLORE SOLUTIONS",
+    ctaLink: "/core-capabilities",
+    tabLabel: "Government",
   },
   {
     id: 2,
     image: "/fedramp-hero.webp",
     imageWebp: "/fedramp-hero.webp",
-    title: "Mission-First, Compliance-Assured",
+    category: "COMPLIANCE & AUTHORIZATION",
+    title: "Mission-First,\nCompliance-Assured",
     subtitle: "Accelerate your path to FedRAMP authorization with our battle-tested methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months.",
+    ctaText: "LEARN MORE",
+    ctaLink: "/federal-solutions/fedramp",
+    tabLabel: "FedRAMP",
   },
   {
     id: 3,
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/GwGSVnVhZmVGySBG.png",
     imageWebp: "/hero-defense-cyber.webp",
-    title: "Defending Digital Infrastructure",
+    category: "CYBERSECURITY",
+    title: "Defending Digital\nInfrastructure",
     subtitle: "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements.",
+    ctaText: "GET CMMC READY",
+    ctaLink: "/federal-solutions/cmmc",
+    tabLabel: "Cybersecurity",
   },
   {
     id: 4,
     image: "/images/hero-cloud-migration.png",
     imageWebp: "/images/hero-cloud-migration.webp",
-    title: "Secure Cloud Migration for Government",
+    category: "CLOUD MODERNIZATION",
+    title: "Secure Cloud Migration\nfor Government",
     subtitle: "Modernize your infrastructure with secure migration to AWS GovCloud, Azure Government, or Google Cloud for Government with 99.99% uptime.",
+    ctaText: "START MIGRATION",
+    ctaLink: "/federal-solutions/cloud-migration",
+    tabLabel: "Cloud",
   },
   {
     id: 5,
     image: "/industries-regulated.jpg",
     imageWebp: "/industries-regulated.jpg",
-    title: "Government-Grade Solutions for Regulated Industries",
+    category: "REGULATED INDUSTRIES",
+    title: "Government-Grade Solutions\nfor Regulated Industries",
     subtitle: "We apply the same rigorous standards of security and compliance demanded by our government partners to solve challenges for regulated industries.",
+    ctaText: "VIEW INDUSTRIES",
+    ctaLink: "/sectors/regulated-industries",
+    tabLabel: "Industries",
   },
   {
     id: 6,
     image: "/hero-infrastructure-new.webp",
     imageWebp: "/hero-infrastructure-new.webp",
-    title: "Protecting Critical Infrastructure",
+    category: "CRITICAL INFRASTRUCTURE",
+    title: "Protecting Critical\nInfrastructure",
     subtitle: "Safeguarding and modernizing the nation's critical infrastructure with enterprise-grade security, resilience, and compliance frameworks.",
+    ctaText: "OUR APPROACH",
+    ctaLink: "/our-approach",
+    tabLabel: "Infrastructure",
   },
 ];
 
 // Check WebP support
 function supportsWebP(): boolean {
-  if (typeof window === 'undefined') return false;
-  const canvas = document.createElement('canvas');
-  if (canvas.getContext && canvas.getContext('2d')) {
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  if (typeof window === "undefined") return false;
+  const canvas = document.createElement("canvas");
+  if (canvas.getContext && canvas.getContext("2d")) {
+    return canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
   }
   return false;
 }
@@ -76,7 +106,7 @@ export default function HeroCarousel() {
 
   // Handle image load
   const handleImageLoad = useCallback((slideId: number) => {
-    setLoadedImages(prev => new Set(prev).add(slideId));
+    setLoadedImages((prev) => new Set(prev).add(slideId));
   }, []);
 
   // Preload next slide image
@@ -84,7 +114,7 @@ export default function HeroCarousel() {
     const nextSlideIndex = (currentSlide + 1) % slides.length;
     const nextSlide = slides[nextSlideIndex];
     const imgSrc = webpSupported ? nextSlide.imageWebp : nextSlide.image;
-    
+
     const img = new Image();
     img.src = imgSrc;
     img.onload = () => handleImageLoad(nextSlide.id);
@@ -105,7 +135,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full h-[320px] xs:h-[380px] sm:h-[450px] md:h-[520px] lg:h-[600px] xl:h-[700px] 2xl:h-[85vh] 2xl:min-h-[700px] overflow-hidden shrink-0">
+    <div className="relative w-full h-[420px] xs:h-[480px] sm:h-[520px] md:h-[580px] lg:h-[650px] xl:h-[750px] 2xl:h-[85vh] 2xl:min-h-[750px] overflow-hidden shrink-0">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -116,16 +146,15 @@ export default function HeroCarousel() {
         >
           {/* Background Image with Skeleton */}
           <div className="absolute inset-0">
-            {/* Skeleton loader - shows until image is loaded */}
+            {/* Skeleton loader */}
             {!loadedImages.has(slide.id) && (
               <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900">
                 <Skeleton className="w-full h-full rounded-none" />
-                {/* Shimmer effect overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
               </div>
             )}
-            
-            {/* Actual image with picture element for format fallback */}
+
+            {/* Actual image */}
             <picture>
               <source srcSet={slide.imageWebp} type="image/webp" />
               <source srcSet={slide.image} type="image/png" />
@@ -136,37 +165,111 @@ export default function HeroCarousel() {
                 decoding={index === 0 ? "sync" : "async"}
                 onLoad={() => handleImageLoad(slide.id)}
                 className={`w-full h-full object-cover transition-opacity duration-500 ${
-                  loadedImages.has(slide.id) ? 'opacity-100' : 'opacity-0'
+                  loadedImages.has(slide.id) ? "opacity-100" : "opacity-0"
                 } ${
-                  slide.id === 1 ? 'object-[center_20%] sm:object-[center_10%] md:object-[center_0%]' : 
-                  slide.id === 3 || slide.id === 4 ? 'object-[center_30%] sm:object-[center_20%] md:object-[center_15%]' : 
-                  'object-[center_40%] sm:object-[center_30%] md:object-center'
+                  slide.id === 1
+                    ? "object-[center_20%] sm:object-[center_10%] md:object-[center_0%]"
+                    : slide.id === 3 || slide.id === 4
+                    ? "object-[center_30%] sm:object-[center_20%] md:object-[center_15%]"
+                    : "object-[center_40%] sm:object-[center_30%] md:object-center"
                 }`}
               />
             </picture>
+
+            {/* Gradient overlays - reduced opacity */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0A2540]/65 via-[#0A2540]/35 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 via-transparent to-[#0A2540]/10" />
           </div>
         </div>
       ))}
 
-      {/* Bottom Title Banner - Tygart Style: Extends exactly to left and bottom edges with NO gap */}
-      <div 
-        className="absolute bottom-0 left-0 z-20"
-        style={{ width: 'auto', maxWidth: '75%' }}
-      >
-        {/* Semi-transparent backdrop - More transparent to show background image better */}
-        <div className="bg-[#1a1a1a]/55 backdrop-blur-[6px]">
-          {/* Inner padding for text content only - left padding pushes text away from edge */}
-          <div className="pl-4 sm:pl-6 md:pl-10 lg:pl-14 xl:pl-20 pr-8 sm:pr-10 md:pr-14 lg:pr-20 xl:pr-28 py-5 sm:py-6 md:py-8 lg:py-10 xl:py-12">
-            {/* Main Title - Reduced sizing for better balance */}
-            <h1 
-              className="text-lg xs:text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] 2xl:text-4xl font-semibold text-white tracking-wide mb-2 sm:mb-3 md:mb-4 leading-tight"
+      {/* Text Content Overlay - Bain Style */}
+      <div className="absolute inset-0 z-20 flex items-center pointer-events-none">
+        <div className="container pointer-events-auto">
+          <div className="max-w-3xl">
+            {/* Category Label */}
+            <div
+              className={`transition-all duration-700 ease-out ${
+                currentSlide >= 0
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
             >
-              {slides[currentSlide].title}
-            </h1>
-            {/* Subtitle - Slightly reduced sizing */}
-            <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] text-white/90 font-light max-w-4xl leading-relaxed line-clamp-3 sm:line-clamp-none">
-              {slides[currentSlide].subtitle}
-            </p>
+              <span className="text-xs sm:text-sm md:text-base font-medium tracking-[0.2em] text-white/70 uppercase">
+                {slides[currentSlide].category}
+              </span>
+            </div>
+
+            {/* H1 Headline */}
+            <div
+              className={`mt-3 sm:mt-4 transition-all duration-700 delay-100 ease-out ${
+                currentSlide >= 0
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
+            >
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.08] tracking-tight whitespace-pre-line mb-4 sm:mb-5 md:mb-6">
+                {slides[currentSlide].title}
+              </h1>
+            </div>
+
+            {/* Subtitle */}
+            <div
+              className={`transition-all duration-700 delay-200 ease-out ${
+                currentSlide >= 0
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
+            >
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/85 font-light max-w-2xl leading-relaxed mb-6 sm:mb-8">
+                {slides[currentSlide].subtitle}
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <div
+              className={`transition-all duration-700 delay-300 ease-out ${
+                currentSlide >= 0
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
+            >
+              <Link
+                href={slides[currentSlide].ctaLink}
+                className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-white tracking-wide hover:gap-3 transition-all duration-300 group"
+              >
+                {slides[currentSlide].ctaText}
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Navigation Tabs - Bain Style */}
+      <div className="absolute bottom-0 left-0 right-0 z-30">
+        {/* Tab Navigation */}
+        <div className="bg-[#0A2540]/80 backdrop-blur-md">
+          <div className="container">
+            <div className="flex items-stretch overflow-x-auto scrollbar-hide">
+              {slides.map((slide, index) => (
+                <button
+                  key={slide.id}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`relative flex-1 min-w-[100px] sm:min-w-[120px] px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-xs sm:text-sm md:text-base font-medium tracking-wide transition-all duration-300 whitespace-nowrap ${
+                    index === currentSlide
+                      ? "text-white"
+                      : "text-white/50 hover:text-white/75"
+                  }`}
+                >
+                  {/* Active indicator - top border */}
+                  {index === currentSlide && (
+                    <div className="absolute top-0 left-0 right-0 h-[3px] bg-orange-signature" />
+                  )}
+                  {slide.tabLabel}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

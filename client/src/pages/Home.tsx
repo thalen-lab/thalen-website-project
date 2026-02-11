@@ -125,8 +125,6 @@ export default function Home() {
       {/* Hero Carousel Section */}
       <HeroCarousel />
 
-      {/* Announcement Ticker Section */}
-      <AnnouncementTicker />
 
       {/* Who We Are Section - Enhanced with Signature Blue */}
       <WhoWeAreSection />
@@ -596,7 +594,7 @@ export default function Home() {
                 }}
               >
                 {/* Image Container */}
-                <div className="relative h-36 sm:h-40 overflow-hidden">
+                <div className="relative h-44 sm:h-52 overflow-hidden">
                   <img 
                     src={category.image} 
                     alt={category.title}
@@ -604,10 +602,7 @@ export default function Home() {
                   />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/80 via-[#0A2540]/30 to-transparent" />
-                  {/* Number badge */}
-                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#0A2540]/80 flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">{category.number}</span>
-                  </div>
+  
                   {/* Title overlay on image */}
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <h3 className="text-lg font-bold text-white drop-shadow-lg">
