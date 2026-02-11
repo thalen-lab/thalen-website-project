@@ -4664,3 +4664,6 @@
 
 ## Phase 68: Increase Text Sizes 2X
 - [x] Increase all text sizes by 2X across the website (global CSS scale) - REVERTED per user request
+
+## Hero Image Updates
+- [x] Update Slide 1 "Powering Government Mission Success" hero image with user-provided Capitol building photo
