@@ -51,8 +51,8 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 4,
-    image: "/images/hero-cloud-migration.png",
-    imageWebp: "/images/hero-cloud-migration.webp",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/KuwDVAulchBHkThE.jpg",
+    imageWebp: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/KuwDVAulchBHkThE.jpg",
     category: "CLOUD MODERNIZATION",
     title: "Secure Cloud Migration\nfor Government",
     subtitle: "Modernize your infrastructure with secure migration to AWS GovCloud, Azure Government, or Google Cloud for Government with 99.99% uptime.",

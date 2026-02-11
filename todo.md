@@ -4669,3 +4669,4 @@
 - [x] Update Slide 1 "Powering Government Mission Success" hero image with user-provided Capitol building photo
 - [x] Update Slide 2 "Mission-First, Compliance-Assured" hero image with military cyber control center photo
 - [x] Update Slide 3 "Defending Digital Infrastructure" hero image with industrial engineers photo
+- [x] Update Slide 4 "Secure Cloud Migration for Government" hero image with neon data center photo
