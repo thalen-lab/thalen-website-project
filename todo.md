@@ -4676,3 +4676,4 @@
 - [x] Update Slide 1 "Powering Government Mission Success" hero image with airplane/skyscrapers photo (corrected from army image)
 - [x] Add Montana APEX Accelerator logo to the navbar
 - [x] Remove old Thalen logo from navbar and push APEX logo to far left
+- [x] Make APEX Accelerator logo in navbar 2x bigger
