@@ -4674,3 +4674,4 @@
 - [x] Replace Slide 2 "Mission-First, Compliance-Assured" hero image with army satellite targeting photo
 - [x] Adjust hero image object-position for all 6 slides so focal points (heads, key subjects) display properly
 - [x] Update Slide 1 "Powering Government Mission Success" hero image with airplane/skyscrapers photo (corrected from army image)
+- [x] Add Montana APEX Accelerator logo to the navbar
