@@ -4679,3 +4679,4 @@
 - [x] Make APEX Accelerator logo in navbar 2x bigger
 - [x] Reduce APEX logo size slightly in navbar
 - [x] Verify all navigation links are preserved
+- [x] Revert APEX logo to original first-added size (h-10/h-12/h-14)
