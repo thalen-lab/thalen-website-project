@@ -149,24 +149,14 @@ export default function Navigation() {
     <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logos */}
-          <div className="flex items-center gap-3 md:gap-4 shrink-0">
-            <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
-              <img 
-                src="/thalen-logo-gold-v2.png" 
-                alt="Thalen Technologies" 
-                className="h-28 md:h-32 lg:h-40 w-auto"
-              />
-            </Link>
-            <div className="h-8 md:h-10 w-px bg-primary-foreground/30" />
-            <a href="https://www.montanaapex.org" target="_blank" rel="noopener noreferrer" className="flex items-center hover:opacity-80 transition-opacity">
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/HfKopUNwLeHVoefH.png" 
-                alt="Montana APEX Accelerator" 
-                className="h-8 md:h-10 lg:h-12 w-auto"
-              />
-            </a>
-          </div>
+          {/* Logo */}
+          <Link href="/" className="flex items-center hover:opacity-90 transition-opacity shrink-0">
+            <img 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/HfKopUNwLeHVoefH.png" 
+              alt="Montana APEX Accelerator" 
+              className="h-10 md:h-12 lg:h-14 w-auto"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center">

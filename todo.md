@@ -4675,3 +4675,4 @@
 - [x] Adjust hero image object-position for all 6 slides so focal points (heads, key subjects) display properly
 - [x] Update Slide 1 "Powering Government Mission Success" hero image with airplane/skyscrapers photo (corrected from army image)
 - [x] Add Montana APEX Accelerator logo to the navbar
+- [x] Remove old Thalen logo from navbar and push APEX logo to far left
