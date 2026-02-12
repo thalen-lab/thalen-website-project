@@ -154,7 +154,7 @@ export default function Navigation() {
             <img 
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/HfKopUNwLeHVoefH.png" 
               alt="Montana APEX Accelerator" 
-              className="h-20 md:h-24 lg:h-28 w-auto"
+              className="h-16 md:h-18 lg:h-20 w-auto"
             />
           </Link>
 

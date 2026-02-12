@@ -4677,3 +4677,5 @@
 - [x] Add Montana APEX Accelerator logo to the navbar
 - [x] Remove old Thalen logo from navbar and push APEX logo to far left
 - [x] Make APEX Accelerator logo in navbar 2x bigger
+- [x] Reduce APEX logo size slightly in navbar
+- [x] Verify all navigation links are preserved
