@@ -9,14 +9,14 @@ export default function WhoWeAreSection() {
       image: '/images/state-local-hero.a1b2c3d4.jpg',
       title: 'StateRAMP & GovRAMP Compliance',
       subtitle: 'For State, Local & Tribal Governments',
-      description: 'End-to-end authorization support—from readiness assessments and gap analysis to continuous monitoring and annual renewals. Ensuring your cloud services meet the security baselines required for state, local, and tribal procurement.',
+      description: 'End-to-end authorization support—from readiness assessments and gap analysis to continuous monitoring. Ensuring your cloud services meet state, local, and tribal security baselines.',
       href: '/compliance/stateramp'
     },
     {
       image: '/images/federal-capitol.png',
       title: 'FedRAMP Authorization Support',
       subtitle: 'Federal Cloud Security Compliance',
-      description: 'Full-lifecycle FedRAMP support—boundary definition, SSP development, 3PAO coordination, and POA&M remediation. Accelerating your path to Authority to Operate while reducing audit risk and rework.',
+      description: 'Full-lifecycle FedRAMP support—boundary definition, SSP development, 3PAO coordination, and POA&M remediation. Accelerating your path to Authority to Operate.',
       href: '/compliance/fedramp'
     }
   ];
