@@ -9,12 +9,14 @@ export default function WhoWeAreSection() {
       image: '/images/state-local-hero.a1b2c3d4.jpg',
       title: 'StateRAMP & GovRAMP Compliance',
       subtitle: 'For State, Local & Tribal Governments',
+      description: 'End-to-end authorization support—from readiness assessments and gap analysis to continuous monitoring and annual renewals. Ensuring your cloud services meet the security baselines required for state, local, and tribal procurement.',
       href: '/compliance/stateramp'
     },
     {
       image: '/images/federal-capitol.png',
       title: 'FedRAMP Authorization Support',
       subtitle: 'Federal Cloud Security Compliance',
+      description: 'Full-lifecycle FedRAMP support—boundary definition, SSP development, 3PAO coordination, and POA&M remediation. Accelerating your path to Authority to Operate while reducing audit risk and rework.',
       href: '/compliance/fedramp'
     }
   ];
@@ -47,17 +49,20 @@ export default function WhoWeAreSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A2540] mb-4 sm:mb-6 leading-[1.1] tracking-tight">
-              Thalen Technologies, Inc.
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A2540] mb-4 sm:mb-6 leading-[1.1] tracking-tight">
+              Trusted Implementation Partners for Government and Regulated Industries
             </h2>
             
             {/* Full Description */}
             <div className="space-y-3 sm:space-y-2 sm:space-y-3 md:space-y-4 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed">
               <p>
-                <strong className="text-[#0A2540]">Thalen Technologies, Inc.</strong> provides a broad spectrum of information technology services and cloud-based artificial intelligence and advanced analytics solutions to the <strong className="text-[#0A2540]">U.S. Federal Government</strong>.
+                We partner with federal, state, and local agencies, as well as defense contractors and regulated industries, to implement, integrate, and sustain mission-critical systems across complex operating environments.
+              </p>
+              <p>
+                As platforms evolve and vendors rotate, Thalen remains—accumulating institutional knowledge, maintaining cross-platform intelligence, and serving as the single thread of continuity across your ecosystem.
               </p>
               <p className="hidden xs:block">
-                Thalen Technologies' support of the <strong className="text-[#0A2540]">U.S. Military</strong>, <strong className="text-[#0A2540]">Intelligence Community</strong>, and civilian agencies is making government more efficient through the strategic use of advanced technology, process automation, and data-driven decision making.
+                We embed with your teams, understand your environment, and stay engaged beyond initial implementation to ensure systems remain aligned, secure, and mission-ready over time.
               </p>
             </div>
 
@@ -88,7 +93,7 @@ export default function WhoWeAreSection() {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
               >
                 <Link href={card.href}>
-                  <div className="group relative flex items-center gap-3 sm:gap-4 bg-gradient-to-br from-[#0A2540]/[0.04] to-[#0A2540]/[0.02] border border-[#0A2540]/10 rounded-xl p-3 sm:p-4 hover:border-[#E07020]/40 hover:shadow-lg hover:shadow-[#E07020]/5 transition-all duration-300 cursor-pointer min-h-[80px] sm:min-h-[96px]">
+                  <div className="group relative flex items-start gap-3 sm:gap-4 bg-gradient-to-br from-[#0A2540]/[0.04] to-[#0A2540]/[0.02] border border-[#0A2540]/10 rounded-xl p-3 sm:p-4 hover:border-[#E07020]/40 hover:shadow-lg hover:shadow-[#E07020]/5 transition-all duration-300 cursor-pointer">
                     {/* Card Image */}
                     <div className="relative flex-shrink-0 w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-lg overflow-hidden">
                       <img 
@@ -105,13 +110,16 @@ export default function WhoWeAreSection() {
                       <h3 className="text-sm xs:text-base sm:text-lg font-bold text-[#0A2540] mb-0.5 sm:mb-1 leading-tight group-hover:text-[#E07020] transition-colors line-clamp-2">
                         {card.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-slate-500 leading-snug line-clamp-2">
+                      <p className="text-xs sm:text-sm text-slate-500 leading-snug mb-1">
                         {card.subtitle}
+                      </p>
+                      <p className="text-xs sm:text-sm text-slate-500 leading-snug line-clamp-3">
+                        {card.description}
                       </p>
                     </div>
                     
                     {/* Arrow Icon */}
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0 mt-1">
                       <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 group-hover:text-[#E07020] group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                   </div>

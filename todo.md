@@ -4680,3 +4680,9 @@
 - [x] Reduce APEX logo size slightly in navbar
 - [x] Verify all navigation links are preserved
 - [x] Revert APEX logo to original first-added size (h-10/h-12/h-14)
+
+## Phase 62: Update WHO WE ARE Section and Compliance Cards
+- [x] Update WHO WE ARE title to "Trusted Implementation Partners for Government and Regulated Industries" (H2 matching Mission-Focused Solutions size)
+- [x] Replace WHO WE ARE description text with new copy about embedding with teams and cross-platform intelligence
+- [x] Expand StateRAMP & GovRAMP Compliance card description with two additional lines
+- [x] Expand FedRAMP Authorization Support card description with two additional lines
