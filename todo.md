@@ -4701,3 +4701,6 @@
 
 ## Phase 65: Our Approach Section Refinement
 - [x] Remove orange left border bar from the description text in the HOW WE WORK / Our Approach section
+
+## Phase 66: Fix Sector Card Image Gaps
+- [x] Stretch sector card images to fill card edges with no gaps at top borders

@@ -187,7 +187,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="h-full"
             >
-              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
+              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden !p-0 !gap-0">
                 {/* Image on top - fixed height */}
                 <div className="relative h-40 flex-shrink-0 overflow-hidden">
                   <img 
@@ -227,7 +227,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="h-full"
             >
-              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
+              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden !p-0 !gap-0">
                 {/* Image on top - fixed height */}
                 <div className="relative h-40 flex-shrink-0 overflow-hidden">
                   <img 
@@ -267,7 +267,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="h-full"
             >
-              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden">
+              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden !p-0 !gap-0">
                 {/* Image on top - fixed height */}
                 <div className="relative h-40 flex-shrink-0 overflow-hidden">
                   <img 
