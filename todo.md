@@ -4698,3 +4698,6 @@
 - [x] Remove the "5 Critical Frameworks / Mastered & Battle-Tested" stat block
 - [x] Reposition FedRAMP card below the other four compliance cards
 - [x] Remove static orange left borders on cards, only show orange border on hover
+
+## Phase 65: Our Approach Section Refinement
+- [x] Remove orange left border bar from the description text in the HOW WE WORK / Our Approach section

@@ -325,7 +325,7 @@ export default function Home() {
               </h2>
               
               <div className="space-y-3 mb-5">
-                <p className="text-base md:text-lg text-slate-600 leading-relaxed border-l-3 border-[#E07020] pl-3">
+                <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                   Our approach combines <strong className="text-[#0A2540]">deep domain expertise</strong> with rigorous compliance methodology.
                 </p>
                 <p className="text-sm md:text-base text-slate-600 leading-relaxed">
