@@ -4704,3 +4704,6 @@
 
 ## Phase 66: Fix Sector Card Image Gaps
 - [x] Stretch sector card images to fill card edges with no gaps at top borders
+
+## Phase 67: Increase Solution Card Image Heights
+- [x] Increase image height on three Mission-Focused Solutions cards from h-40 to h-48

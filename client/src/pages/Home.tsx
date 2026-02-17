@@ -189,7 +189,7 @@ export default function Home() {
             >
               <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden !p-0 !gap-0">
                 {/* Image on top - fixed height */}
-                <div className="relative h-40 flex-shrink-0 overflow-hidden">
+                <div className="relative h-48 flex-shrink-0 overflow-hidden">
                   <img 
                     src="/images/citizen-services-government.jpg" 
                     alt="Citizen Services Modernization" 
@@ -229,7 +229,7 @@ export default function Home() {
             >
               <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden !p-0 !gap-0">
                 {/* Image on top - fixed height */}
-                <div className="relative h-40 flex-shrink-0 overflow-hidden">
+                <div className="relative h-48 flex-shrink-0 overflow-hidden">
                   <img 
                     src="/images/mission-critical-security.png" 
                     alt="Mission-Critical Security" 
@@ -269,7 +269,7 @@ export default function Home() {
             >
               <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden !p-0 !gap-0">
                 {/* Image on top - fixed height */}
-                <div className="relative h-40 flex-shrink-0 overflow-hidden">
+                <div className="relative h-48 flex-shrink-0 overflow-hidden">
                   <img 
                     src="/images/compliance-ai-dashboard.webp" 
                     alt="AI-Powered Regulatory Compliance Dashboard" 
