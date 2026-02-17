@@ -18,6 +18,13 @@ export default function WhoWeAreSection() {
       subtitle: 'Federal Cloud Security Compliance',
       description: 'Boundary definition, SSP development, 3PAO coordination, and POA&M remediation. Accelerating your path to ATO.',
       href: '/compliance/fedramp'
+    },
+    {
+      image: '/images/mission-critical-security.png',
+      title: 'CMMC Compliance & Certification',
+      subtitle: 'Defense Industrial Base Cybersecurity',
+      description: 'Gap assessments, SSP documentation, and Level 1–3 preparation. End-to-end support for DoD contract readiness.',
+      href: '/federal-solutions/cmmc'
     }
   ];
 

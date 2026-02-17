@@ -4707,3 +4707,8 @@
 
 ## Phase 67: Increase Solution Card Image Heights
 - [x] Increase image height on three Mission-Focused Solutions cards from h-40 to h-48
+
+## Phase 68: Add CMMC Card to WHO WE ARE Section
+- [x] Add third CMMC compliance card below StateRAMP and FedRAMP cards
+- [x] Link CMMC card to /federal-solutions/cmmc page
+- [x] Match card style with existing StateRAMP and FedRAMP cards
