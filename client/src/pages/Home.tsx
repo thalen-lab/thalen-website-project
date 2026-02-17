@@ -552,28 +552,28 @@ export default function Home() {
               {
                 title: 'Federal Government',
                 description: 'Supporting federal agencies with FedRAMP-authorized solutions, cleared personnel, and mission-critical technology implementations.',
-                image: '/federal-handshake.png',
+                image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/xQGPfhhxYkvzGYov.jpg',
                 link: '/sectors/federal-government',
                 number: '01'
               },
               {
                 title: 'State & Local Government',
                 description: 'Empowering state and municipal agencies with scalable, compliant solutions that modernize public services and citizen engagement.',
-                image: '/government-contracts.jpg',
+                image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/CuywQSPKAgQDWQFr.jpg',
                 link: '/sectors/state-local-government',
                 number: '02'
               },
               {
                 title: 'Regulated Industries',
                 description: 'Serving healthcare, financial services, and energy sectors with solutions that meet stringent regulatory and compliance requirements.',
-                image: '/manufacturing.webp',
+                image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/xyazUvJLeQlThDJL.JPG',
                 link: '/sectors/regulated-industries',
                 number: '03'
               },
               {
                 title: 'Federal Contractors',
                 description: 'Guiding defense contractors through CMMC certification and compliance, ensuring readiness for DoD contract requirements.',
-                image: '/defense.webp',
+                image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/rAoswLqnmOzobrXm.jpg',
                 link: '/sectors/federal-contractors',
                 number: '04'
               }
