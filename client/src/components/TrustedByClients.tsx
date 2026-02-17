@@ -75,7 +75,7 @@ export default function TrustedByClients() {
             <span className="text-[#E07020] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Trusted By</span>
             <div className="w-8 sm:w-10 h-[2px] bg-[#E07020]"></div>
           </div>
-          <h2 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-[#0A2540] mb-1.5 sm:mb-2">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A2540] mb-1.5 sm:mb-2 leading-[1.1] tracking-tight">
             Serving America's Most Critical Missions
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm md:text-base max-w-2xl mx-auto px-4 sm:px-0">
