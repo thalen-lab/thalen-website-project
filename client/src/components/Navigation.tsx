@@ -152,9 +152,9 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity shrink-0">
             <img 
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/HfKopUNwLeHVoefH.png" 
-              alt="Montana APEX Accelerator" 
-              className="h-10 md:h-12 lg:h-14 w-auto"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663032212491/n2sqWjWBoABpEmsxkmyy92/ThalenTechnologiesLogoDesignTransparent1_7790e9c6.png" 
+              alt="Thalen Technologies" 
+              className="h-8 md:h-10 lg:h-11 w-auto max-w-[220px] md:max-w-[260px] lg:max-w-[300px]"
             />
           </Link>
 
