@@ -146,7 +146,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white text-[#0A2540] sticky top-0 z-50 shadow-md border-b border-slate-200">
+    <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -168,7 +168,7 @@ export default function Navigation() {
                 onMouseEnter={handleSolutionsEnter}
                 onMouseLeave={handleSolutionsLeave}
               >
-                <button className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium hover:text-orange-signature transition-colors ${solutionsOpen ? 'text-orange-signature' : 'text-[#0A2540]'}`}>
+                <button className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium hover:text-accent transition-colors ${solutionsOpen ? 'text-accent' : 'text-primary-foreground/90'}`}>
                   <span>Solutions</span>
                   <ChevronDown className={`h-4 w-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -239,7 +239,7 @@ export default function Navigation() {
                 onMouseEnter={handleLearnEnter}
                 onMouseLeave={handleLearnLeave}
               >
-                <button className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium hover:text-orange-signature transition-colors ${learnOpen ? 'text-orange-signature' : 'text-[#0A2540]'}`}>
+                <button className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium hover:text-accent transition-colors ${learnOpen ? 'text-accent' : 'text-primary-foreground/90'}`}>
                   <span>Learn</span>
                   <ChevronDown className={`h-4 w-4 transition-transform ${learnOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -271,7 +271,7 @@ export default function Navigation() {
                 onMouseEnter={handleAboutEnter}
                 onMouseLeave={handleAboutLeave}
               >
-                <button className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium hover:text-orange-signature transition-colors ${aboutOpen ? 'text-orange-signature' : 'text-[#0A2540]'}`}>
+                <button className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium hover:text-accent transition-colors ${aboutOpen ? 'text-accent' : 'text-primary-foreground/90'}`}>
                   <span>About</span>
                   <ChevronDown className={`h-4 w-4 transition-transform ${aboutOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -300,7 +300,7 @@ export default function Navigation() {
               {/* Case Studies */}
               <Link 
                 href="/case-studies" 
-                className="px-4 py-2 text-sm font-medium text-[#0A2540] hover:text-orange-signature transition-colors"
+                className="px-4 py-2 text-sm font-medium text-primary-foreground/90 hover:text-accent transition-colors"
               >
                 Case Studies
               </Link>
@@ -308,7 +308,7 @@ export default function Navigation() {
               {/* Capability Statement */}
               <Link 
                 href="/capability-statement" 
-                className="px-4 py-2 text-sm font-medium text-[#0A2540] hover:text-orange-signature transition-colors"
+                className="px-4 py-2 text-sm font-medium text-primary-foreground/90 hover:text-accent transition-colors"
               >
                 Capability Statement
               </Link>
@@ -316,7 +316,7 @@ export default function Navigation() {
               {/* Contact */}
               <Link 
                 href="/contact" 
-                className="px-4 py-2 text-sm font-medium text-[#0A2540] hover:text-orange-signature transition-colors"
+                className="px-4 py-2 text-sm font-medium text-primary-foreground/90 hover:text-accent transition-colors"
               >
                 Contact
               </Link>
@@ -335,7 +335,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-[#0A2540]"
+            className="lg:hidden p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-primary-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -346,14 +346,14 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-16 bg-white z-40 overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-16 bg-primary z-40 overflow-y-auto">
           <div className="container py-6">
             <div className="space-y-1">
               {/* Solutions Section */}
               <div>
                 <button
                   onClick={() => setSolutionsOpen(!solutionsOpen)}
-                  className="flex items-center justify-between w-full py-3 text-lg font-medium text-[#0A2540] border-b border-slate-200"
+                  className="flex items-center justify-between w-full py-3 text-lg font-medium text-primary-foreground border-b border-white/10"
                 >
                   <span>Solutions</span>
                   <ChevronDown className={`h-5 w-5 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
@@ -362,14 +362,14 @@ export default function Navigation() {
                   <div className="py-4 pl-4 space-y-4">
                     {/* Government Solutions */}
                     <div>
-                      <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Government Solutions</h4>
+                      <h4 className="text-xs font-semibold text-primary-foreground/50 uppercase tracking-wider mb-2">Government Solutions</h4>
                       <div className="space-y-1">
                         {governmentSolutionsItems.map((item) => (
                           <Link
                             key={item.href}
                             href={item.href}
                             onClick={closeMobileMenu}
-                            className="block py-2 text-sm text-slate-700 hover:text-orange-signature transition-colors"
+                            className="block py-2 text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                           >
                             {item.name}
                           </Link>
@@ -379,14 +379,14 @@ export default function Navigation() {
                     
                     {/* Services */}
                     <div>
-                      <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Services</h4>
+                      <h4 className="text-xs font-semibold text-primary-foreground/50 uppercase tracking-wider mb-2">Services</h4>
                       <div className="space-y-1">
                         {servicesItems.map((item) => (
                           <Link
                             key={item.href + item.name}
                             href={item.href}
                             onClick={closeMobileMenu}
-                            className="block py-2 text-sm text-slate-700 hover:text-orange-signature transition-colors"
+                            className="block py-2 text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                           >
                             {item.name}
                           </Link>
@@ -396,14 +396,14 @@ export default function Navigation() {
                     
                     {/* Industries */}
                     <div>
-                      <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Industries</h4>
+                      <h4 className="text-xs font-semibold text-primary-foreground/50 uppercase tracking-wider mb-2">Industries</h4>
                       <div className="space-y-1">
                         {industriesItems.map((item) => (
                           <Link
                             key={item.href}
                             href={item.href}
                             onClick={closeMobileMenu}
-                            className="block py-2 text-sm text-slate-700 hover:text-orange-signature transition-colors"
+                            className="block py-2 text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                           >
                             {item.name}
                           </Link>
@@ -418,7 +418,7 @@ export default function Navigation() {
               <div>
                 <button
                   onClick={() => setLearnOpen(!learnOpen)}
-                  className="flex items-center justify-between w-full py-3 text-lg font-medium text-[#0A2540] border-b border-slate-200"
+                  className="flex items-center justify-between w-full py-3 text-lg font-medium text-primary-foreground border-b border-white/10"
                 >
                   <span>Learn</span>
                   <ChevronDown className={`h-5 w-5 transition-transform ${learnOpen ? 'rotate-180' : ''}`} />
@@ -432,8 +432,8 @@ export default function Navigation() {
                         onClick={closeMobileMenu}
                         className="block py-2.5"
                       >
-                        <div className="text-base text-[#0A2540] hover:text-orange-signature transition-colors">{item.name}</div>
-                        <div className="text-xs text-slate-500">{item.description}</div>
+                        <div className="text-base text-primary-foreground hover:text-accent transition-colors">{item.name}</div>
+                        <div className="text-xs text-primary-foreground/50">{item.description}</div>
                       </Link>
                     ))}
                   </div>
@@ -444,7 +444,7 @@ export default function Navigation() {
               <div>
                 <button
                   onClick={() => setAboutOpen(!aboutOpen)}
-                  className="flex items-center justify-between w-full py-3 text-lg font-medium text-[#0A2540] border-b border-slate-200"
+                  className="flex items-center justify-between w-full py-3 text-lg font-medium text-primary-foreground border-b border-white/10"
                 >
                   <span>About</span>
                   <ChevronDown className={`h-5 w-5 transition-transform ${aboutOpen ? 'rotate-180' : ''}`} />
@@ -458,8 +458,8 @@ export default function Navigation() {
                         onClick={closeMobileMenu}
                         className="block py-2.5"
                       >
-                        <div className="text-base text-[#0A2540] hover:text-orange-signature transition-colors">{item.name}</div>
-                        <div className="text-xs text-slate-500">{item.description}</div>
+                        <div className="text-base text-primary-foreground hover:text-accent transition-colors">{item.name}</div>
+                        <div className="text-xs text-primary-foreground/50">{item.description}</div>
                       </Link>
                     ))}
                   </div>
@@ -470,7 +470,7 @@ export default function Navigation() {
               <Link
                 href="/case-studies"
                 onClick={closeMobileMenu}
-                className="block py-3 text-lg font-medium text-[#0A2540] border-b border-slate-200"
+                className="block py-3 text-lg font-medium text-primary-foreground border-b border-white/10"
               >
                 Case Studies
               </Link>
@@ -479,7 +479,7 @@ export default function Navigation() {
               <Link
                 href="/capability-statement"
                 onClick={closeMobileMenu}
-                className="block py-3 text-lg font-medium text-[#0A2540] border-b border-slate-200"
+                className="block py-3 text-lg font-medium text-primary-foreground border-b border-white/10"
               >
                 Capability Statement
               </Link>
@@ -488,7 +488,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={closeMobileMenu}
-                className="block py-3 text-lg font-medium text-[#0A2540] border-b border-slate-200"
+                className="block py-3 text-lg font-medium text-primary-foreground border-b border-white/10"
               >
                 Contact
               </Link>
