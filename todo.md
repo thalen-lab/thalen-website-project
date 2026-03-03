@@ -4793,3 +4793,7 @@
 - [x] Upload Capitol dome image to CDN
 - [x] Replace slide 2 image URL in HeroCarousel.tsx
 - [x] Adjust object-position for new image focal point
+## Phase 82: Replace Hero Slide 6 Image (Critical Infrastructure - Protecting Critical Infrastructure)
+- [x] Upload wind turbine engineer image to CDN
+- [x] Replace slide 6 image URL in HeroCarousel.tsx
+- [x] Adjust object-position for new image focal point

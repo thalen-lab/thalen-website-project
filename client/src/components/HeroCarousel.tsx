@@ -80,8 +80,8 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 6,
-    image: "/hero-infrastructure-new.webp",
-    imageWebp: "/hero-infrastructure-new.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032212491/n2sqWjWBoABpEmsxkmyy92/engineer-workers-working-outdoor-with-safety-at-wi-2026-01-08-22-25-45-utc_c6b46de0.jpg",
+    imageWebp: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032212491/n2sqWjWBoABpEmsxkmyy92/engineer-workers-working-outdoor-with-safety-at-wi-2026-01-08-22-25-45-utc_c6b46de0.jpg",
     category: "CRITICAL INFRASTRUCTURE",
     title: "Protecting Critical\nInfrastructure",
     subtitle: "Safeguarding and modernizing the nation's critical infrastructure with enterprise-grade security, resilience, and compliance frameworks.",
