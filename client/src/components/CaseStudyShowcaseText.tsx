@@ -61,8 +61,8 @@ export default function CaseStudyShowcaseText() {
         >
           <div>
             <div className="inline-flex items-center gap-2 mb-2 sm:mb-3">
-              <div className="w-8 sm:w-10 h-[2px] bg-[#E07020]"></div>
-              <span className="text-[#E07020] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Case Studies</span>
+              <div className="w-8 sm:w-10 h-[2px] bg-[#FF6B35]"></div>
+              <span className="text-[#FF6B35] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Case Studies</span>
             </div>
             <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
               Proven Government Results
@@ -74,7 +74,7 @@ export default function CaseStudyShowcaseText() {
             </p>
             <Link 
               href="/case-studies"
-              className="inline-flex items-center text-[#E07020] hover:text-[#F08030] font-medium text-xs sm:text-sm transition-colors self-start min-h-[44px]"
+              className="inline-flex items-center text-[#FF6B35] hover:text-[#e55a2b] font-medium text-xs sm:text-sm transition-colors self-start min-h-[44px]"
             >
               View All
               <ArrowRight className="w-4 h-4 ml-1.5" />
@@ -135,7 +135,7 @@ function SimpleCaseStudyCard({ study }: { study: CaseStudy }) {
       </div>
       
       {/* Metric Label */}
-      <p className="text-[#E07020] font-semibold text-[10px] xs:text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">
+      <p className="text-[#FF6B35] font-semibold text-[10px] xs:text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">
         {study.metricLabel}
       </p>
       
@@ -152,7 +152,7 @@ function SimpleCaseStudyCard({ study }: { study: CaseStudy }) {
       {/* Link */}
       <Link 
         href={study.link}
-        className="inline-flex items-center text-[#E07020] hover:text-[#F08030] font-medium text-xs sm:text-sm group/link transition-colors min-h-[44px]"
+        className="inline-flex items-center text-[#FF6B35] hover:text-[#e55a2b] font-medium text-xs sm:text-sm group/link transition-colors min-h-[44px]"
       >
         {study.linkText}
         <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />

@@ -51,7 +51,7 @@ export default function StateRAMPAuthorization() {
         <article className="container max-w-4xl py-12 md:py-16 lg:py-20">
           
           {/* Back Link */}
-          <Link href="/about/news-updates" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#E07020] transition-colors mb-8">
+          <Link href="/about/news-updates" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#FF6B35] transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" />
             Back to News & Updates
           </Link>
@@ -243,7 +243,7 @@ export default function StateRAMPAuthorization() {
 
             <p className="text-gray-700 leading-relaxed">
               Thalen Technologies is a leading provider of intelligent automation, AI solutions, and digital transformation services for government and enterprise clients. With over 15 years of experience and a proven track record of delivering measurable outcomes, Thalen helps organizations modernize their operations, enhance security posture, and achieve mission objectives. The company is headquartered in Washington, D.C. with offices across the United States. For more information, visit{' '}
-              <Link href="/" className="text-[#E07020] hover:underline">www.thalentech.com</Link>.
+              <Link href="/" className="text-[#FF6B35] hover:underline">www.thalentech.com</Link>.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
@@ -260,7 +260,7 @@ export default function StateRAMPAuthorization() {
                 <strong className="text-gray-900">Media Contact:</strong><br />
                 Corporate Communications<br />
                 Thalen Technologies, Inc.<br />
-                <a href="mailto:press@thalentech.com" className="text-[#E07020] hover:underline">press@thalentech.com</a>
+                <a href="mailto:press@thalentech.com" className="text-[#FF6B35] hover:underline">press@thalentech.com</a>
               </p>
             </div>
 
@@ -294,7 +294,7 @@ export default function StateRAMPAuthorization() {
                 </button>
                 <button
                   onClick={handleCopyLink}
-                  className="p-2 rounded-full bg-gray-100 hover:bg-[#E07020] hover:text-white text-gray-600 transition-colors"
+                  className="p-2 rounded-full bg-gray-100 hover:bg-[#FF6B35] hover:text-white text-gray-600 transition-colors"
                   aria-label="Copy link"
                 >
                   {copied ? <Check className="w-4 h-4" /> : <Link2 className="w-4 h-4" />}
@@ -309,21 +309,21 @@ export default function StateRAMPAuthorization() {
             <div className="grid md:grid-cols-2 gap-6">
               <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
                 <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">Compliance</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
+                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#FF6B35] transition-colors">
                   Thalen Technologies Achieves FedRAMP High Authorization
                 </h4>
                 <p className="mt-2 text-sm text-gray-600">Successfully completed FedRAMP High authorization for our government cloud platform.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
+                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#FF6B35]">
                   Read more <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
               <Link href="/news/cloud-partnership" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
                 <span className="text-xs font-semibold text-purple-600 uppercase tracking-wider">Partnership</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
+                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#FF6B35] transition-colors">
                   Strategic Partnership with Leading Cloud Provider
                 </h4>
                 <p className="mt-2 text-sm text-gray-600">New technology partnerships expand our capabilities in AI-powered automation.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
+                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#FF6B35]">
                   Read more <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>

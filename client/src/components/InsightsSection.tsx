@@ -49,8 +49,8 @@ export default function InsightsSection() {
           >
             {/* Section Label */}
             <div className="inline-flex items-center gap-2 mb-2 sm:mb-3">
-              <div className="w-8 sm:w-10 h-[2px] bg-[#E07020]"></div>
-              <span className="text-[#E07020] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Insights</span>
+              <div className="w-8 sm:w-10 h-[2px] bg-[#FF6B35]"></div>
+              <span className="text-[#FF6B35] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Insights</span>
             </div>
             
             <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-[#0A2540] mb-2 sm:mb-3 leading-[1.1] tracking-tight">
@@ -68,7 +68,7 @@ export default function InsightsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Link href="/insights" className="group inline-flex items-center gap-2 text-[#0A2540] hover:text-[#E07020] font-semibold tracking-wider text-xs sm:text-sm uppercase transition-colors min-h-[44px]">
+            <Link href="/insights" className="group inline-flex items-center gap-2 text-[#0A2540] hover:text-[#FF6B35] font-semibold tracking-wider text-xs sm:text-sm uppercase transition-colors min-h-[44px]">
               View All Insights
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -86,7 +86,7 @@ export default function InsightsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Link href={insight.href}>
-                <Card className="group h-full bg-white border border-slate-200 hover:border-[#E07020] transition-all duration-300 overflow-hidden cursor-pointer">
+                <Card className="group h-full bg-white border border-slate-200 hover:border-[#FF6B35] transition-all duration-300 overflow-hidden cursor-pointer">
                   {/* Image Container */}
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <ImageWithLoader
@@ -116,7 +116,7 @@ export default function InsightsSection() {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#0A2540] mb-1.5 sm:mb-2 leading-tight group-hover:text-[#E07020] transition-colors line-clamp-2">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#0A2540] mb-1.5 sm:mb-2 leading-tight group-hover:text-[#FF6B35] transition-colors line-clamp-2">
                       {insight.title}
                     </h3>
                     
@@ -126,7 +126,7 @@ export default function InsightsSection() {
                     </p>
                     
                     {/* Read More Link */}
-                    <span className="inline-flex items-center gap-1.5 text-[#0A2540] group-hover:text-[#E07020] font-semibold text-[10px] sm:text-xs uppercase tracking-wider transition-colors">
+                    <span className="inline-flex items-center gap-1.5 text-[#0A2540] group-hover:text-[#FF6B35] font-semibold text-[10px] sm:text-xs uppercase tracking-wider transition-colors">
                       Read Article
                       <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                     </span>

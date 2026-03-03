@@ -143,8 +143,8 @@ export default function IndustryUpdates() {
             <div>
               {/* Section Label */}
               <div className="inline-flex items-center gap-2 mb-2 sm:mb-3">
-                <div className="w-8 sm:w-10 h-[2px] bg-[#E07020]"></div>
-                <span className="text-[#E07020] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Industry Updates</span>
+                <div className="w-8 sm:w-10 h-[2px] bg-[#FF6B35]"></div>
+                <span className="text-[#FF6B35] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Industry Updates</span>
               </div>
               
               <h2 className="text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1]">
@@ -152,7 +152,7 @@ export default function IndustryUpdates() {
               </h2>
             </div>
             <div className="max-w-lg">
-              <p className="text-xs sm:text-sm md:text-base text-white/80 leading-relaxed border-l-2 sm:border-l-3 border-[#E07020]/50 pl-2 sm:pl-3">
+              <p className="text-xs sm:text-sm md:text-base text-white/80 leading-relaxed border-l-2 sm:border-l-3 border-[#FF6B35]/50 pl-2 sm:pl-3">
                 Stay informed on the latest <strong className="text-white">compliance requirements</strong>, security updates, and policy changes affecting federal technology programs.
               </p>
             </div>
@@ -189,7 +189,7 @@ export default function IndustryUpdates() {
                 className={cn(
                   "w-2 h-2 rounded-full transition-all duration-300 min-w-[16px] min-h-[16px] flex items-center justify-center",
                   index === currentIndex 
-                    ? "bg-[#E07020] w-4 sm:w-5" 
+                    ? "bg-[#FF6B35] w-4 sm:w-5" 
                     : "bg-white/30 hover:bg-white/50"
                 )}
                 aria-label={`Go to slide ${index + 1}`}
@@ -254,7 +254,7 @@ function UpdateCard({ update, index = 0 }: { update: UpdateItem; index?: number 
       className="block h-full"
     >
       <Card 
-        className="h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] rounded-lg transition-all duration-300 overflow-hidden group flex flex-col p-0"
+        className="h-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FF6B35] rounded-lg transition-all duration-300 overflow-hidden group flex flex-col p-0"
       >
         {/* Content - Reduced padding */}
         <div className="p-3 sm:p-4 flex flex-col flex-grow">
@@ -270,7 +270,7 @@ function UpdateCard({ update, index = 0 }: { update: UpdateItem; index?: number 
           </div>
 
           {/* Title */}
-          <h3 className="text-sm sm:text-base font-bold text-white mb-1.5 sm:mb-2 line-clamp-2 group-hover:text-[#E07020] transition-colors">
+          <h3 className="text-sm sm:text-base font-bold text-white mb-1.5 sm:mb-2 line-clamp-2 group-hover:text-[#FF6B35] transition-colors">
             {update.title}
           </h3>
 
@@ -284,7 +284,7 @@ function UpdateCard({ update, index = 0 }: { update: UpdateItem; index?: number 
             <span className="text-[10px] sm:text-xs text-white/50 line-clamp-1 flex-1 mr-2">
               <span className="text-white/70 font-medium">{update.source}</span>
             </span>
-            <span className="inline-flex items-center gap-1 text-white/70 text-[10px] sm:text-xs font-semibold uppercase tracking-wider group-hover:text-[#E07020] transition-colors flex-shrink-0">
+            <span className="inline-flex items-center gap-1 text-white/70 text-[10px] sm:text-xs font-semibold uppercase tracking-wider group-hover:text-[#FF6B35] transition-colors flex-shrink-0">
               Read
               <ArrowRight className="w-3 h-3" />
             </span>

@@ -51,7 +51,7 @@ export default function GovernmentITContractorAward() {
         <article className="container max-w-4xl py-12 md:py-16 lg:py-20">
           
           {/* Back Link */}
-          <Link href="/about/news-updates" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#E07020] transition-colors mb-8">
+          <Link href="/about/news-updates" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#FF6B35] transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" />
             Back to News & Updates
           </Link>
@@ -182,7 +182,7 @@ export default function GovernmentITContractorAward() {
 
             <p className="text-gray-700 leading-relaxed">
               Thalen Technologies is a leading provider of intelligent automation, AI solutions, and digital transformation services for government and enterprise clients. With over 15 years of experience and a proven track record of delivering measurable outcomes, Thalen helps organizations modernize their operations, enhance security posture, and achieve mission objectives. The company is headquartered in Washington, D.C. with offices across the United States. For more information, visit{' '}
-              <Link href="/" className="text-[#E07020] hover:underline">www.thalentech.com</Link>.
+              <Link href="/" className="text-[#FF6B35] hover:underline">www.thalentech.com</Link>.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">
@@ -199,7 +199,7 @@ export default function GovernmentITContractorAward() {
                 <strong className="text-gray-900">Media Contact:</strong><br />
                 Corporate Communications<br />
                 Thalen Technologies, Inc.<br />
-                <a href="mailto:press@thalentech.com" className="text-[#E07020] hover:underline">press@thalentech.com</a>
+                <a href="mailto:press@thalentech.com" className="text-[#FF6B35] hover:underline">press@thalentech.com</a>
               </p>
             </div>
 
@@ -233,7 +233,7 @@ export default function GovernmentITContractorAward() {
                 </button>
                 <button
                   onClick={handleCopyLink}
-                  className="p-2 rounded-full bg-gray-100 hover:bg-[#E07020] hover:text-white text-gray-600 transition-colors"
+                  className="p-2 rounded-full bg-gray-100 hover:bg-[#FF6B35] hover:text-white text-gray-600 transition-colors"
                   aria-label="Copy link"
                 >
                   {copied ? <Check className="w-4 h-4" /> : <Link2 className="w-4 h-4" />}
@@ -248,21 +248,21 @@ export default function GovernmentITContractorAward() {
             <div className="grid md:grid-cols-2 gap-6">
               <Link href="/news/federal-practice-expansion" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
                 <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">Company News</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
+                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#FF6B35] transition-colors">
                   Thalen Technologies Expands Federal Practice with New Leadership
                 </h4>
                 <p className="mt-2 text-sm text-gray-600">New executive hires and expanded capabilities position Thalen for continued growth.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
+                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#FF6B35]">
                   Read more <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
               <Link href="/news/govtech-100" className="group block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
                 <span className="text-xs font-semibold text-amber-600 uppercase tracking-wider">Awards</span>
-                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors">
+                <h4 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-[#FF6B35] transition-colors">
                   Named to GovTech 100 List for Third Consecutive Year
                 </h4>
                 <p className="mt-2 text-sm text-gray-600">Recognition for innovative solutions transforming government service delivery.</p>
-                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#E07020]">
+                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#FF6B35]">
                   Read more <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>

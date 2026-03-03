@@ -71,9 +71,9 @@ export default function TrustedByClients() {
           className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-8"
         >
           <div className="inline-flex items-center gap-2 mb-2 sm:mb-3">
-            <div className="w-8 sm:w-10 h-[2px] bg-[#E07020]"></div>
-            <span className="text-[#E07020] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Trusted By</span>
-            <div className="w-8 sm:w-10 h-[2px] bg-[#E07020]"></div>
+            <div className="w-8 sm:w-10 h-[2px] bg-[#FF6B35]"></div>
+            <span className="text-[#FF6B35] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Trusted By</span>
+            <div className="w-8 sm:w-10 h-[2px] bg-[#FF6B35]"></div>
           </div>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A2540] mb-1.5 sm:mb-2 leading-[1.1] tracking-tight">
             Serving America's Most Critical Missions
@@ -118,7 +118,7 @@ export default function TrustedByClients() {
               <div className="text-slate-600 text-[10px] sm:text-xs md:text-sm">
                 <span className="hidden xs:inline">{client.caseStudy}</span>
                 <br className="hidden xs:block" />
-                <span className="text-[#E07020] hover:text-[#c45f1a] transition-colors cursor-pointer font-medium line-clamp-2">
+                <span className="text-[#FF6B35] hover:text-[#c45f1a] transition-colors cursor-pointer font-medium line-clamp-2">
                   {client.agency}
                 </span>
               </div>
@@ -153,7 +153,7 @@ export default function TrustedByClients() {
                   key={`${client.abbreviation}-${index}`}
                   className="flex-shrink-0 group"
                 >
-                  <div className="relative w-24 h-16 xs:w-28 xs:h-18 sm:w-32 sm:h-20 md:w-40 md:h-24 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md hover:border-[#E07020]/30 transition-all duration-300 flex items-center justify-center p-2 sm:p-3 cursor-default">
+                  <div className="relative w-24 h-16 xs:w-28 xs:h-18 sm:w-32 sm:h-20 md:w-40 md:h-24 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md hover:border-[#FF6B35]/30 transition-all duration-300 flex items-center justify-center p-2 sm:p-3 cursor-default">
                     {/* Show actual logo if available, otherwise show abbreviation */}
                     {client.logo ? (
                       <div className="flex flex-col items-center gap-0.5 sm:gap-1">

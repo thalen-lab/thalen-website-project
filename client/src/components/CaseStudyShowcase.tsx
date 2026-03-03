@@ -60,7 +60,7 @@ export default function CaseStudyShowcase() {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <p className="text-[#E07020] font-semibold mb-3 uppercase tracking-wider text-sm">Case Studies</p>
+            <p className="text-[#FF6B35] font-semibold mb-3 uppercase tracking-wider text-sm">Case Studies</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
               Proven Government Results
             </h2>
@@ -117,7 +117,7 @@ export default function CaseStudyShowcase() {
         >
           <Link 
             href="/case-studies"
-            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md bg-gradient-to-r from-[#E07020] to-[#F08030] hover:from-[#D06010] hover:to-[#E07020] text-white font-semibold transition-all shadow-lg hover:shadow-xl"
+            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white font-semibold transition-all shadow-lg hover:shadow-xl"
           >
             View All Cases
             <ArrowRight className="w-4 h-4" />
@@ -140,7 +140,7 @@ function SimpleCaseStudyCard({ study }: { study: CaseStudy }) {
       </div>
       
       {/* Metric Label */}
-      <p className="text-[#E07020] font-semibold text-sm uppercase tracking-wider mb-4">
+      <p className="text-[#FF6B35] font-semibold text-sm uppercase tracking-wider mb-4">
         {study.metricLabel}
       </p>
       
@@ -157,7 +157,7 @@ function SimpleCaseStudyCard({ study }: { study: CaseStudy }) {
       {/* Link */}
       <Link 
         href={study.link}
-        className="inline-flex items-center text-[#E07020] hover:text-[#F08030] font-medium text-sm group/link transition-colors"
+        className="inline-flex items-center text-[#FF6B35] hover:text-[#e55a2b] font-medium text-sm group/link transition-colors"
       >
         {study.linkText}
         <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />

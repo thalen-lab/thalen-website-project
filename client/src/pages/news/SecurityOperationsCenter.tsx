@@ -51,7 +51,7 @@ export default function SecurityOperationsCenter() {
         <article className="container max-w-4xl py-12 md:py-16 lg:py-20">
           
           {/* Back Link */}
-          <Link href="/about/news-updates" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#E07020] transition-colors mb-8">
+          <Link href="/about/news-updates" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#FF6B35] transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" />
             Back to News & Updates
           </Link>
@@ -179,7 +179,7 @@ export default function SecurityOperationsCenter() {
 
             <p className="text-gray-700 leading-relaxed">
               Thalen Technologies is a leading provider of intelligent automation, AI solutions, and digital transformation services for government and enterprise clients. With over 15 years of experience and a proven track record of delivering measurable outcomes, Thalen helps organizations modernize their operations, enhance security posture, and achieve mission objectives. The company is headquartered in Washington, D.C. with offices across the United States. For more information, visit{' '}
-              <Link href="/" className="text-[#E07020] hover:underline">www.thalentech.com</Link>.
+              <Link href="/" className="text-[#FF6B35] hover:underline">www.thalentech.com</Link>.
             </p>
 
             {/* Media Contact */}
@@ -188,7 +188,7 @@ export default function SecurityOperationsCenter() {
                 <strong className="text-gray-900">Media Contact:</strong><br />
                 Corporate Communications<br />
                 Thalen Technologies, Inc.<br />
-                <a href="mailto:press@thalentech.com" className="text-[#E07020] hover:underline">press@thalentech.com</a>
+                <a href="mailto:press@thalentech.com" className="text-[#FF6B35] hover:underline">press@thalentech.com</a>
               </p>
             </div>
 
@@ -222,7 +222,7 @@ export default function SecurityOperationsCenter() {
                 </button>
                 <button
                   onClick={handleCopyLink}
-                  className="p-2 rounded-full bg-gray-100 hover:bg-[#E07020] hover:text-white text-gray-600 transition-colors"
+                  className="p-2 rounded-full bg-gray-100 hover:bg-[#FF6B35] hover:text-white text-gray-600 transition-colors"
                   aria-label="Copy link"
                 >
                   {copied ? <Check className="w-4 h-4" /> : <Link2 className="w-4 h-4" />}
@@ -237,7 +237,7 @@ export default function SecurityOperationsCenter() {
             <div className="grid md:grid-cols-2 gap-6">
               <Link href="/news/fedramp-high-authorization" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                 <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 block">Compliance</span>
-                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">
                   Thalen Technologies Achieves FedRAMP High Authorization
                 </h4>
                 <p className="text-sm text-gray-600">
@@ -246,7 +246,7 @@ export default function SecurityOperationsCenter() {
               </Link>
               <Link href="/news/cmmc-certification" className="group block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                 <span className="text-xs font-semibold uppercase tracking-wider text-green-600 mb-2 block">Compliance</span>
-                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#E07020] transition-colors mb-2">
+                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">
                   Thalen Technologies Achieves CMMC Level 2 Certification
                 </h4>
                 <p className="text-sm text-gray-600">

@@ -43,8 +43,8 @@ export default function WhoWeAreSection() {
           transition={{ duration: 0.5 }}
           className="flex items-center gap-2 mb-3"
         >
-          <div className="w-8 sm:w-10 h-[2px] bg-[#E07020]"></div>
-          <span className="text-[#E07020] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Who We Are</span>
+          <div className="w-8 sm:w-10 h-[2px] bg-[#FF6B35]"></div>
+          <span className="text-[#FF6B35] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em]">Who We Are</span>
         </motion.div>
 
         {/* Main Content Grid - Fixed Layout with proper alignment */}
@@ -76,7 +76,7 @@ export default function WhoWeAreSection() {
             {/* Read More Link */}
             <Link 
               href="/about" 
-              className="group inline-flex items-center gap-2 text-[#E07020] hover:text-[#0A2540] font-semibold text-xs sm:text-sm uppercase tracking-wider transition-colors mt-4 sm:mt-6 min-h-[44px]"
+              className="group inline-flex items-center gap-2 text-[#FF6B35] hover:text-[#0A2540] font-semibold text-xs sm:text-sm uppercase tracking-wider transition-colors mt-4 sm:mt-6 min-h-[44px]"
             >
               <span>Read More about Thalen Technologies</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -100,7 +100,7 @@ export default function WhoWeAreSection() {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
               >
                 <Link href={card.href}>
-                  <div className="group relative flex items-start gap-3 sm:gap-4 bg-gradient-to-br from-[#0A2540]/[0.04] to-[#0A2540]/[0.02] border border-[#0A2540]/10 rounded-xl p-3 sm:p-4 hover:border-[#E07020]/40 hover:shadow-lg hover:shadow-[#E07020]/5 transition-all duration-300 cursor-pointer">
+                  <div className="group relative flex items-start gap-3 sm:gap-4 bg-gradient-to-br from-[#0A2540]/[0.04] to-[#0A2540]/[0.02] border border-[#0A2540]/10 rounded-xl p-3 sm:p-4 hover:border-[#FF6B35]/40 hover:shadow-lg hover:shadow-[#FF6B35]/5 transition-all duration-300 cursor-pointer">
                     {/* Card Image */}
                     <div className="relative flex-shrink-0 w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-lg overflow-hidden">
                       <img 
@@ -114,7 +114,7 @@ export default function WhoWeAreSection() {
                     
                     {/* Card Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-sm xs:text-base sm:text-lg font-bold text-[#0A2540] mb-0.5 sm:mb-1 leading-tight group-hover:text-[#E07020] transition-colors line-clamp-2">
+                      <h3 className="text-sm xs:text-base sm:text-lg font-bold text-[#0A2540] mb-0.5 sm:mb-1 leading-tight group-hover:text-[#FF6B35] transition-colors line-clamp-2">
                         {card.title}
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-500 leading-snug mb-1">
@@ -127,7 +127,7 @@ export default function WhoWeAreSection() {
                     
                     {/* Arrow Icon */}
                     <div className="flex-shrink-0 mt-1">
-                      <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 group-hover:text-[#E07020] group-hover:translate-x-1 transition-all duration-300" />
+                      <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 group-hover:text-[#FF6B35] group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                   </div>
                 </Link>
@@ -138,7 +138,7 @@ export default function WhoWeAreSection() {
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0A2540] via-[#E07020] to-[#0A2540]"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#0A2540]"></div>
     </section>
   );
 }

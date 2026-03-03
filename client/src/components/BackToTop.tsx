@@ -123,9 +123,9 @@ export function BackToTop({
         // Position - bottom right with safe area padding
         'bottom-6 right-6 md:bottom-8 md:right-8',
         // Colors - navy with orange hover
-        'bg-[#0A2540] text-white hover:bg-[#E07020]',
+        'bg-[#0A2540] text-white hover:bg-[#FF6B35]',
         // Focus states for accessibility
-        'focus:outline-none focus:ring-2 focus:ring-[#E07020] focus:ring-offset-2',
+        'focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:ring-offset-2',
         // Visibility animation
         isVisible 
           ? 'opacity-100 translate-y-0 pointer-events-auto' 

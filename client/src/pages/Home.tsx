@@ -151,14 +151,14 @@ export default function Home() {
             >
               {/* Section Label */}
               <div className="inline-flex items-center gap-2 mb-3">
-                <div className="w-10 h-[2px] bg-[#E07020]"></div>
-                <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Our Solutions</span>
+                <div className="w-10 h-[2px] bg-[#FF6B35]"></div>
+                <span className="text-[#FF6B35] font-semibold text-xs uppercase tracking-[0.2em]">Our Solutions</span>
               </div>
               
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 leading-[1.1] tracking-tight">
                 Mission-Focused Solutions
               </h2>
-              <p className="text-sm md:text-base lg:text-lg text-white/80 leading-relaxed border-l-3 border-[#E07020]/50 pl-3">
+              <p className="text-sm md:text-base lg:text-lg text-white/80 leading-relaxed border-l-3 border-[#FF6B35]/50 pl-3">
                 We don't just implement technology—we solve <strong className="text-white">mission-critical challenges</strong>. Our solutions are purpose-built for the unique constraints and requirements of the public sector.
               </p>
             </motion.div>
@@ -170,7 +170,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Link href="/services" className="group inline-flex items-center gap-2 text-white hover:text-[#E07020] font-semibold tracking-wider text-sm uppercase transition-colors">
+              <Link href="/services" className="group inline-flex items-center gap-2 text-white hover:text-[#FF6B35] font-semibold tracking-wider text-sm uppercase transition-colors">
                 View All Capabilities
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -187,7 +187,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="h-full"
             >
-              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden !p-0 !gap-0">
+              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FF6B35] transition-all duration-300 overflow-hidden !p-0 !gap-0">
                 {/* Image on top - fixed height */}
                 <div className="relative h-48 flex-shrink-0 overflow-hidden">
                   <img 
@@ -211,7 +211,7 @@ export default function Home() {
                   </p>
                   
                   {/* Explore Link - always at bottom */}
-                  <Link href="/services/digital-transformation" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#E07020] font-semibold text-xs uppercase tracking-wider transition-colors mt-auto">
+                  <Link href="/services/digital-transformation" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#FF6B35] font-semibold text-xs uppercase tracking-wider transition-colors mt-auto">
                     Explore Solution
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
@@ -227,7 +227,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="h-full"
             >
-              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden !p-0 !gap-0">
+              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FF6B35] transition-all duration-300 overflow-hidden !p-0 !gap-0">
                 {/* Image on top - fixed height */}
                 <div className="relative h-48 flex-shrink-0 overflow-hidden">
                   <img 
@@ -251,7 +251,7 @@ export default function Home() {
                   </p>
                   
                   {/* Explore Link - always at bottom */}
-                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#E07020] font-semibold text-xs uppercase tracking-wider transition-colors mt-auto">
+                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#FF6B35] font-semibold text-xs uppercase tracking-wider transition-colors mt-auto">
                     Explore Solution
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
@@ -267,7 +267,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="h-full"
             >
-              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020] transition-all duration-300 overflow-hidden !p-0 !gap-0">
+              <Card className="group relative h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FF6B35] transition-all duration-300 overflow-hidden !p-0 !gap-0">
                 {/* Image on top - fixed height */}
                 <div className="relative h-48 flex-shrink-0 overflow-hidden">
                   <img 
@@ -291,7 +291,7 @@ export default function Home() {
                   </p>
                   
                   {/* Explore Link - always at bottom */}
-                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#E07020] font-semibold text-xs uppercase tracking-wider transition-colors mt-auto">
+                  <Link href="/services/cybersecurity" className="group/link inline-flex items-center gap-1.5 text-white/80 hover:text-[#FF6B35] font-semibold text-xs uppercase tracking-wider transition-colors mt-auto">
                     Explore Solution
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
@@ -316,8 +316,8 @@ export default function Home() {
             >
               {/* Section Label */}
               <div className="inline-flex items-center gap-2 mb-3">
-                <div className="w-10 h-[2px] bg-[#E07020]"></div>
-                <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">How We Work</span>
+                <div className="w-10 h-[2px] bg-[#FF6B35]"></div>
+                <span className="text-[#FF6B35] font-semibold text-xs uppercase tracking-[0.2em]">How We Work</span>
               </div>
               
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0A2540] mb-4 leading-[1.1]">
@@ -337,7 +337,7 @@ export default function Home() {
               </div>
               
               {/* Navy link, not orange CTA */}
-              <Link href="/our-approach" className="group inline-flex items-center gap-2 text-[#0A2540] hover:text-[#E07020] font-semibold text-sm uppercase tracking-wider transition-colors">
+              <Link href="/our-approach" className="group inline-flex items-center gap-2 text-[#0A2540] hover:text-[#FF6B35] font-semibold text-sm uppercase tracking-wider transition-colors">
                 Learn Our Methodology
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -352,7 +352,7 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               {/* Capability 1: Security-First Architecture */}
-              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#E07020] hover:shadow-lg transition-all duration-300">
+              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#FF6B35] hover:shadow-lg transition-all duration-300">
                 <h3 className="text-lg font-bold text-[#0A2540] mb-2">
                   Security-First Architecture
                 </h3>
@@ -362,7 +362,7 @@ export default function Home() {
               </div>
 
               {/* Capability 2: Compliance Expertise */}
-              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#E07020] hover:shadow-lg transition-all duration-300">
+              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#FF6B35] hover:shadow-lg transition-all duration-300">
                 <h3 className="text-lg font-bold text-[#0A2540] mb-2">
                   Compliance Expertise
                 </h3>
@@ -372,7 +372,7 @@ export default function Home() {
               </div>
 
               {/* Capability 3: Mission Assurance */}
-              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#E07020] hover:shadow-lg transition-all duration-300">
+              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#FF6B35] hover:shadow-lg transition-all duration-300">
                 <h3 className="text-lg font-bold text-[#0A2540] mb-2">
                   Mission Assurance
                 </h3>
@@ -382,7 +382,7 @@ export default function Home() {
               </div>
 
               {/* Capability 4: Acquisition Alignment */}
-              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#E07020] hover:shadow-lg transition-all duration-300">
+              <div className="group relative bg-white rounded-xl p-5 border border-slate-200 hover:border-[#FF6B35] hover:shadow-lg transition-all duration-300">
                 <h3 className="text-lg font-bold text-[#0A2540] mb-2">
                   Acquisition Alignment
                 </h3>
@@ -404,7 +404,7 @@ export default function Home() {
           <ShieldCheck className="w-full h-full text-white" strokeWidth={0.5} />
         </div>
         {/* Accent line top */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#E07020] to-transparent"></div>
+        <div className="absolute top-0 left-0 right-0 h-1 bg-[#0A2540]"></div>
         
         <div className="container relative z-10">
           {/* Two-column layout: Left = big statement, Right = framework cards */}
@@ -420,8 +420,8 @@ export default function Home() {
             >
               {/* Section Label */}
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-[2px] bg-[#E07020]"></div>
-                <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Compliance Excellence</span>
+                <div className="w-10 h-[2px] bg-[#FF6B35]"></div>
+                <span className="text-[#FF6B35] font-semibold text-xs uppercase tracking-[0.2em]">Compliance Excellence</span>
               </div>
               
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-[1.05] tracking-tight">
@@ -435,11 +435,11 @@ export default function Home() {
 
               {/* CTA Links */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/about#story" className="group inline-flex items-center gap-2 text-white hover:text-[#E07020] font-semibold text-sm uppercase tracking-wider transition-colors">
+                <Link href="/about#story" className="group inline-flex items-center gap-2 text-white hover:text-[#FF6B35] font-semibold text-sm uppercase tracking-wider transition-colors">
                   Our Story
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="/our-approach" className="group inline-flex items-center gap-2 text-white/70 hover:text-[#E07020] font-semibold text-sm uppercase tracking-wider transition-colors">
+                <Link href="/our-approach" className="group inline-flex items-center gap-2 text-white/70 hover:text-[#FF6B35] font-semibold text-sm uppercase tracking-wider transition-colors">
                   Learn Our Approach
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -456,31 +456,31 @@ export default function Home() {
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* StateRAMP */}
-                <div className="group relative bg-white/[0.06] backdrop-blur-sm rounded-xl p-5 md:p-6 border border-white/10 hover:border-[#E07020] transition-all duration-400 hover:bg-white/[0.1] hover:shadow-lg">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#E07020] transition-colors">StateRAMP</h3>
+                <div className="group relative bg-white/[0.06] backdrop-blur-sm rounded-xl p-5 md:p-6 border border-white/10 hover:border-[#FF6B35] transition-all duration-400 hover:bg-white/[0.1] hover:shadow-lg">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#FF6B35] transition-colors">StateRAMP</h3>
                   <p className="text-xs sm:text-sm text-white/70 leading-relaxed">Standardized security for state and local government cloud.</p>
                 </div>
 
                 {/* CMMC */}
-                <div className="group relative bg-white/[0.06] backdrop-blur-sm rounded-xl p-5 md:p-6 border border-white/10 hover:border-[#E07020] transition-all duration-400 hover:bg-white/[0.1] hover:shadow-lg">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#E07020] transition-colors">CMMC</h3>
+                <div className="group relative bg-white/[0.06] backdrop-blur-sm rounded-xl p-5 md:p-6 border border-white/10 hover:border-[#FF6B35] transition-all duration-400 hover:bg-white/[0.1] hover:shadow-lg">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#FF6B35] transition-colors">CMMC</h3>
                   <p className="text-xs sm:text-sm text-white/70 leading-relaxed">Cybersecurity Maturity Model for defense contractors.</p>
                 </div>
 
                 {/* FISMA */}
-                <div className="group relative bg-white/[0.06] backdrop-blur-sm rounded-xl p-5 md:p-6 border border-white/10 hover:border-[#E07020] transition-all duration-400 hover:bg-white/[0.1] hover:shadow-lg">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#E07020] transition-colors">FISMA</h3>
+                <div className="group relative bg-white/[0.06] backdrop-blur-sm rounded-xl p-5 md:p-6 border border-white/10 hover:border-[#FF6B35] transition-all duration-400 hover:bg-white/[0.1] hover:shadow-lg">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#FF6B35] transition-colors">FISMA</h3>
                   <p className="text-xs sm:text-sm text-white/70 leading-relaxed">Federal Information Security Management Act compliance.</p>
                 </div>
 
                 {/* HIPAA */}
-                <div className="group relative bg-white/[0.06] backdrop-blur-sm rounded-xl p-5 md:p-6 border border-white/10 hover:border-[#E07020] transition-all duration-400 hover:bg-white/[0.1] hover:shadow-lg">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#E07020] transition-colors">HIPAA</h3>
+                <div className="group relative bg-white/[0.06] backdrop-blur-sm rounded-xl p-5 md:p-6 border border-white/10 hover:border-[#FF6B35] transition-all duration-400 hover:bg-white/[0.1] hover:shadow-lg">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#FF6B35] transition-colors">HIPAA</h3>
                   <p className="text-xs sm:text-sm text-white/70 leading-relaxed">Healthcare data protection and privacy standards.</p>
                 </div>
 
                 {/* FedRAMP - Full width below the four cards */}
-                <div className="group relative sm:col-span-2 bg-white/[0.06] backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/10 hover:border-[#E07020] transition-all duration-500 hover:bg-white/[0.1] hover:shadow-lg">
+                <div className="group relative sm:col-span-2 bg-white/[0.06] backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/10 hover:border-[#FF6B35] transition-all duration-500 hover:bg-white/[0.1] hover:shadow-lg">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                     <div className="flex-shrink-0">
                       <div className="w-14 h-14 rounded-lg bg-white/10 flex items-center justify-center">
@@ -488,7 +488,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 group-hover:text-[#E07020] transition-colors">FedRAMP</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 group-hover:text-[#FF6B35] transition-colors">FedRAMP</h3>
                       <p className="text-sm text-white/70 leading-relaxed">Federal Risk & Authorization Program for cloud service providers. The gold standard for federal cloud security authorization.</p>
                     </div>
                   </div>
@@ -498,7 +498,7 @@ export default function Home() {
           </div>
         </div>
         {/* Accent line bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#E07020] to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#0A2540]"></div>
       </section>
 
       {/* Who We Serve Section - Refined Design */}
@@ -513,9 +513,9 @@ export default function Home() {
           >
             {/* Section Label */}
             <div className="inline-flex items-center gap-2 mb-3">
-              <div className="w-10 h-[2px] bg-[#E07020]"></div>
-              <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Who We Serve</span>
-              <div className="w-10 h-[2px] bg-[#E07020]"></div>
+              <div className="w-10 h-[2px] bg-[#FF6B35]"></div>
+              <span className="text-[#FF6B35] font-semibold text-xs uppercase tracking-[0.2em]">Who We Serve</span>
+              <div className="w-10 h-[2px] bg-[#FF6B35]"></div>
             </div>
             
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-[#0A2540] leading-[1.1]">
@@ -574,7 +574,7 @@ export default function Home() {
             ].map((category, index) => (
               <motion.div
                 key={category.title}
-                className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200 hover:border-[#E07020] flex flex-col"
+                className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200 hover:border-[#FF6B35] flex flex-col"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { 
@@ -612,7 +612,7 @@ export default function Home() {
                   </p>
                   <Link 
                     href={category.link}
-                    className="inline-flex items-center text-[#0A2540] font-semibold text-xs uppercase tracking-wider hover:text-[#E07020] transition-colors group/link mt-3"
+                    className="inline-flex items-center text-[#0A2540] font-semibold text-xs uppercase tracking-wider hover:text-[#FF6B35] transition-colors group/link mt-3"
                   >
                     Learn More
                     <ArrowRight className="ml-1 w-3 h-3 transition-transform group-hover/link:translate-x-1" />
