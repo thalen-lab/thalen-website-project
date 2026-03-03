@@ -4779,3 +4779,8 @@
 ## Phase 78: Reduce Spacing Between Hero and Who We Are Section
 - [x] Reduce top padding on Who We Are section for desktop (xl:py-24 → xl:py-16, lg:py-20 → lg:py-14)
 - [x] Keep bottom padding unchanged for balance with Trusted By section
+
+## Phase 79: Replace Hero Slide 1 Image (Government Mission Success)
+- [x] Upload curved glass tower image to CDN
+- [x] Replace slide 1 image URL in HeroCarousel.tsx
+- [x] Adjust object-position for new image focal point
