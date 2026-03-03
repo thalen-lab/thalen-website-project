@@ -4770,3 +4770,8 @@
 - [x] Reduce hero height from 600px to 500px
 - [x] Ensure responsive heights are proportionally adjusted
 - [x] Verify hero text and CTA buttons still fit properly
+
+## Phase 77: Adjust Hero Images Object-Position for Main Focus
+- [x] Review each of the 6 hero slide images to identify focal points
+- [x] Adjust object-position values for each slide (mobile, sm, md+)
+- [x] Verify all slides show the main subject properly within the reduced hero frame
