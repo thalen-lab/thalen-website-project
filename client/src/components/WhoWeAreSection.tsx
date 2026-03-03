@@ -29,7 +29,7 @@ export default function WhoWeAreSection() {
   ];
 
   return (
-    <section className="relative bg-white overflow-hidden py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+    <section className="relative bg-white overflow-hidden pt-8 pb-10 sm:pt-10 sm:pb-12 md:pt-12 md:pb-16 lg:pt-14 lg:pb-20 xl:pt-16 xl:pb-24">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(10,37,64,0.03)_0%,transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(224,112,32,0.03)_0%,transparent_50%)]"></div>

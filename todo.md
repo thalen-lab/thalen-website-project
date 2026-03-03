@@ -4775,3 +4775,7 @@
 - [x] Review each of the 6 hero slide images to identify focal points
 - [x] Adjust object-position values for each slide (mobile, sm, md+)
 - [x] Verify all slides show the main subject properly within the reduced hero frame
+
+## Phase 78: Reduce Spacing Between Hero and Who We Are Section
+- [x] Reduce top padding on Who We Are section for desktop (xl:py-24 → xl:py-16, lg:py-20 → lg:py-14)
+- [x] Keep bottom padding unchanged for balance with Trusted By section
