@@ -28,7 +28,7 @@ const slides: CarouselSlide[] = [
     ctaText: "EXPLORE SOLUTIONS",
     ctaLink: "/core-capabilities",
     tabLabel: "Government",
-    objectPosition: ["center 55%", "center 50%", "center 45%"],
+    objectPosition: ["center 30%", "center 25%", "center 20%"],
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const slides: CarouselSlide[] = [
     ctaText: "LEARN MORE",
     ctaLink: "/federal-solutions/fedramp",
     tabLabel: "FedRAMP",
-    objectPosition: ["center 45%", "center 42%", "center 40%"],
+    objectPosition: ["center 25%", "center 22%", "center 18%"],
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ const slides: CarouselSlide[] = [
     ctaText: "GET CMMC READY",
     ctaLink: "/federal-solutions/cmmc",
     tabLabel: "Cybersecurity",
-    objectPosition: ["center 45%", "center 42%", "center 40%"],
+    objectPosition: ["center 38%", "center 35%", "center 32%"],
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ const slides: CarouselSlide[] = [
     ctaText: "START MIGRATION",
     ctaLink: "/federal-solutions/cloud-migration",
     tabLabel: "Cloud",
-    objectPosition: ["center 52%", "center 50%", "center 48%"],
+    objectPosition: ["center 42%", "center 38%", "center 35%"],
   },
   {
     id: 5,
@@ -76,7 +76,7 @@ const slides: CarouselSlide[] = [
     ctaText: "VIEW INDUSTRIES",
     ctaLink: "/sectors/regulated-industries",
     tabLabel: "Industries",
-    objectPosition: ["center 42%", "center 40%", "center 38%"],
+    objectPosition: ["center 50%", "center 48%", "center 45%"],
   },
   {
     id: 6,
@@ -88,7 +88,7 @@ const slides: CarouselSlide[] = [
     ctaText: "OUR APPROACH",
     ctaLink: "/our-approach",
     tabLabel: "Infrastructure",
-    objectPosition: ["center 48%", "center 45%", "center 42%"],
+    objectPosition: ["center 35%", "center 30%", "center 25%"],
   },
 ];
 

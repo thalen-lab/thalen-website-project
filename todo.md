@@ -4797,3 +4797,10 @@
 - [x] Upload wind turbine engineer image to CDN
 - [x] Replace slide 6 image URL in HeroCarousel.tsx
 - [x] Adjust object-position for new image focal point
+## Phase 83: Adjust Hero Carousel Image Object-Position for All Slides
+- [x] Review and adjust slide 1 (Government Technology) object-position
+- [x] Review and adjust slide 2 (FedRAMP / Capitol dome) object-position
+- [x] Review and adjust slide 3 (Cybersecurity / military command center) object-position
+- [x] Review and adjust slide 4 (Cloud Modernization) object-position
+- [x] Review and adjust slide 5 (Regulated Industries) object-position
+- [x] Review and adjust slide 6 (Infrastructure / wind turbine engineer) object-position
