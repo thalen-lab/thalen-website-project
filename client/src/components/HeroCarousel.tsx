@@ -32,15 +32,15 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 2,
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/WMBsiHLOQtWinyOk.jpg",
-    imageWebp: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/WMBsiHLOQtWinyOk.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032212491/n2sqWjWBoABpEmsxkmyy92/capital-2026-01-05-00-32-55-utc_2988eb60.jpg",
+    imageWebp: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032212491/n2sqWjWBoABpEmsxkmyy92/capital-2026-01-05-00-32-55-utc_2988eb60.jpg",
     category: "COMPLIANCE & AUTHORIZATION",
     title: "Mission-First,\nCompliance-Assured",
     subtitle: "Accelerate your path to FedRAMP authorization with our battle-tested methodology. We've helped 15+ organizations achieve FedRAMP compliance in an average of 9 months.",
     ctaText: "LEARN MORE",
     ctaLink: "/federal-solutions/fedramp",
     tabLabel: "FedRAMP",
-    objectPosition: ["center 58%", "center 55%", "center 52%"],
+    objectPosition: ["center 45%", "center 42%", "center 40%"],
   },
   {
     id: 3,

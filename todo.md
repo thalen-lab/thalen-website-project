@@ -4789,3 +4789,7 @@
 - [x] Upload military command center image to CDN
 - [x] Replace slide 3 image URL in HeroCarousel.tsx
 - [x] Adjust object-position for new image focal point
+## Phase 81: Replace Hero Slide 2 Image (Mission-First, Compliance-Assured / FedRAMP)
+- [x] Upload Capitol dome image to CDN
+- [x] Replace slide 2 image URL in HeroCarousel.tsx
+- [x] Adjust object-position for new image focal point
