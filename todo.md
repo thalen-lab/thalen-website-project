@@ -4765,3 +4765,8 @@
 - [x] Fix 150+ remaining #E07020 references across 20 files (Home.tsx + 12 news pages + 7 components)
 - [x] Replace all #F08030 and #D06010 non-standard hover oranges
 - [x] Zero non-standard orange hex codes remain in codebase
+
+## Phase 76: Reduce Hero Section Height
+- [x] Reduce hero height from 600px to 500px
+- [x] Ensure responsive heights are proportionally adjusted
+- [x] Verify hero text and CTA buttons still fit properly
