@@ -114,7 +114,7 @@ export default function PWAInstallPrompt() {
         <Card className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 shadow-2xl">
           <div className="p-4">
             <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#FF6B35] to-[#e55a2b] rounded-lg flex items-center justify-center">
                 <Smartphone className="w-6 h-6 text-white" />
               </div>
               <div className="flex-1 min-w-0">
@@ -164,7 +164,7 @@ export default function PWAInstallPrompt() {
       <Card className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 shadow-2xl">
         <div className="p-4">
           <div className="flex items-start gap-3">
-            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#FF6B35] to-[#e55a2b] rounded-lg flex items-center justify-center">
               <Download className="w-6 h-6 text-white" />
             </div>
             
@@ -190,7 +190,7 @@ export default function PWAInstallPrompt() {
                 <Button
                   onClick={handleInstallClick}
                   size="sm"
-                  className="bg-orange-600 hover:bg-orange-700 text-white text-xs h-8"
+                  className="bg-[#e55a2b] hover:bg-[#e55a2b] text-white text-xs h-8"
                 >
                   Install
                 </Button>

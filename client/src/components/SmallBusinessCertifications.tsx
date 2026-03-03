@@ -24,7 +24,7 @@ export default function SmallBusinessCertifications() {
           {/* 25 Years Experience */}
           <div className="bg-slate-800/50 p-4 sm:p-5 md:p-6 lg:p-8 border border-slate-700 hover:border-[#FF6B35] transition-all duration-300 hover:shadow-xl group rounded-lg">
             <div className="mb-4 sm:mb-5 md:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#FF6B35] to-[#E05A25] rounded-lg flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#FF6B35] to-[#e55a2b] rounded-lg flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Clock className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
               </div>
               <h3 className="text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-white mb-1.5 sm:mb-2">

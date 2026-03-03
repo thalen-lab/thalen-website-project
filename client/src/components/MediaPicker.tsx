@@ -210,7 +210,7 @@ export function MediaPicker({ value, onChange, label = "Featured Image", accept 
                         className={cn(
                           "relative group cursor-pointer rounded-lg overflow-hidden border-2 transition-all",
                           selectedMediaId === media.id
-                            ? "border-orange-500 ring-2 ring-orange-200"
+                            ? "border-[#FF6B35] ring-2 ring-[#FF6B35]/20"
                             : "border-transparent hover:border-gray-300"
                         )}
                         onClick={() => handleSelectMedia(media)}
@@ -222,7 +222,7 @@ export function MediaPicker({ value, onChange, label = "Featured Image", accept 
                           loading="lazy"
                         />
                         {selectedMediaId === media.id && (
-                          <div className="absolute top-2 right-2 bg-orange-500 text-white rounded-full p-1">
+                          <div className="absolute top-2 right-2 bg-[#FF6B35] text-white rounded-full p-1">
                             <Check className="h-4 w-4" />
                           </div>
                         )}
@@ -256,7 +256,7 @@ export function MediaPicker({ value, onChange, label = "Featured Image", accept 
               <div
                 className={cn(
                   "flex-1 border-2 border-dashed rounded-lg flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 transition-colors",
-                  isDragging ? "border-orange-500 bg-orange-50" : "border-gray-300"
+                  isDragging ? "border-[#FF6B35] bg-[#FF6B35]/5" : "border-gray-300"
                 )}
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}

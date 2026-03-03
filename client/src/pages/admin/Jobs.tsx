@@ -80,7 +80,7 @@ export default function AdminJobs() {
             <p className="text-gray-500">Manage career opportunities and job postings</p>
           </div>
           <Link href="/admin/jobs/new">
-            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
+            <Button className="bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white">
               <Plus className="w-4 h-4 mr-2" />
               Add New Job
             </Button>
@@ -167,7 +167,7 @@ export default function AdminJobs() {
           <CardContent>
             {isLoading ? (
               <div className="flex items-center justify-center py-12">
-                <Loader2 className="w-8 h-8 animate-spin text-orange-500" />
+                <Loader2 className="w-8 h-8 animate-spin text-[#FF6B35]" />
               </div>
             ) : filteredJobs.length === 0 ? (
               <div className="text-center py-12">

@@ -76,7 +76,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                     <a
                       className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                         isActive
-                          ? "bg-orange-500 text-white"
+                          ? "bg-[#FF6B35] text-white"
                           : "text-gray-300 hover:bg-navy-800 hover:text-white"
                       }`}
                       onClick={() => setSidebarOpen(false)}
@@ -92,7 +92,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
             {/* User info & logout */}
             <div className="p-4 border-t border-navy-800">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center font-bold">
+                <div className="w-10 h-10 rounded-full bg-[#FF6B35] flex items-center justify-center font-bold">
                   {user?.name?.[0]?.toUpperCase() || "A"}
                 </div>
                 <div className="flex-1 min-w-0">

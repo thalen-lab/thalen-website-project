@@ -116,7 +116,7 @@ export default function CapabilityStatementPrint() {
               <Button
                 size="sm"
                 onClick={handlePrint}
-                className="bg-orange-500 hover:bg-orange-600 text-white"
+                className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white"
                 disabled={isPrinting}
               >
                 <Printer className="h-4 w-4 mr-2" />
@@ -204,15 +204,15 @@ export default function CapabilityStatementPrint() {
                   Past Performance Highlights
                 </h2>
                 <div className="text-sm text-gray-700 space-y-2">
-                  <div className="border-l-2 border-orange-500 pl-2">
+                  <div className="border-l-2 border-[#FF6B35] pl-2">
                     <p className="font-semibold">Federal Agency Process Automation</p>
                     <p className="text-xs">85% reduction in processing time, $47M savings over 3 years</p>
                   </div>
-                  <div className="border-l-2 border-orange-500 pl-2">
+                  <div className="border-l-2 border-[#FF6B35] pl-2">
                     <p className="font-semibold">Healthcare Cloud Migration</p>
                     <p className="text-xs">47 applications migrated, 99.99% availability, HIPAA compliant</p>
                   </div>
-                  <div className="border-l-2 border-orange-500 pl-2">
+                  <div className="border-l-2 border-[#FF6B35] pl-2">
                     <p className="font-semibold">Defense Predictive Maintenance</p>
                     <p className="text-xs">99.2% uptime, 73% reduction in unplanned downtime</p>
                   </div>
@@ -230,27 +230,27 @@ export default function CapabilityStatementPrint() {
                 </h2>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
                   <div>
-                    <p className="text-xs font-semibold text-orange-600 uppercase">Legal Name</p>
+                    <p className="text-xs font-semibold text-[#FF6B35] uppercase">Legal Name</p>
                     <p className="text-gray-800">Thalen Technologies, Inc.</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-orange-600 uppercase">Business Size</p>
+                    <p className="text-xs font-semibold text-[#FF6B35] uppercase">Business Size</p>
                     <p className="text-gray-800">Small Business (SDVOSB)</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-orange-600 uppercase">Primary NAICS</p>
+                    <p className="text-xs font-semibold text-[#FF6B35] uppercase">Primary NAICS</p>
                     <p className="text-gray-800">541512</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-orange-600 uppercase">Years in Business</p>
+                    <p className="text-xs font-semibold text-[#FF6B35] uppercase">Years in Business</p>
                     <p className="text-gray-800">25+ Years</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-orange-600 uppercase">Headquarters</p>
+                    <p className="text-xs font-semibold text-[#FF6B35] uppercase">Headquarters</p>
                     <p className="text-gray-800">Washington, D.C. Metro</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-orange-600 uppercase">Employees</p>
+                    <p className="text-xs font-semibold text-[#FF6B35] uppercase">Employees</p>
                     <p className="text-gray-800">250+ Professionals</p>
                   </div>
                 </div>
@@ -306,19 +306,19 @@ export default function CapabilityStatementPrint() {
                 </h2>
                 <div className="grid grid-cols-2 gap-3 text-center">
                   <div>
-                    <p className="text-2xl font-bold text-orange-400">$2.3B+</p>
+                    <p className="text-2xl font-bold text-[#FF6B35]">$2.3B+</p>
                     <p className="text-xs">Documented Savings</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-orange-400">340%</p>
+                    <p className="text-2xl font-bold text-[#FF6B35]">340%</p>
                     <p className="text-xs">Average ROI</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-orange-400">15+</p>
+                    <p className="text-2xl font-bold text-[#FF6B35]">15+</p>
                     <p className="text-xs">FedRAMP Authorizations</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-orange-400">99.7%</p>
+                    <p className="text-2xl font-bold text-[#FF6B35]">99.7%</p>
                     <p className="text-xs">Processing Accuracy</p>
                   </div>
                 </div>
@@ -376,9 +376,8 @@ export default function CapabilityStatementPrint() {
             print-color-adjust: exact !important;
           }
           
-          .text-orange-400 {
-            color: #fb923c !important;
-            -webkit-print-color-adjust: exact !important;
+          .text-\[\#FF6B35\] {
+            color: #FF6B35 !important;            -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
           }
           
@@ -388,10 +387,9 @@ export default function CapabilityStatementPrint() {
             print-color-adjust: exact !important;
           }
           
-          .border-orange-500 {
-            border-color: #f97316 !important;
-          }
-          
+          .border-\[\#FF6B35\] {
+            border-color: #FF6B35 !important;
+          }          
           /* Ensure two-column layout in print */
           .print\\:grid-cols-2 {
             grid-template-columns: repeat(2, minmax(0, 1fr)) !important;

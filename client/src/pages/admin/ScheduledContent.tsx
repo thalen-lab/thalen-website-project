@@ -195,7 +195,7 @@ export default function AdminScheduledContent() {
                         <Clock className="h-4 w-4" />
                         <span>{format(new Date(item.scheduledPublishAt!), 'h:mm a')}</span>
                       </div>
-                      <span className="text-orange-600 font-medium">
+                      <span className="text-[#FF6B35] font-medium">
                         {getTimeUntilPublish(item.scheduledPublishAt!)}
                       </span>
                     </div>

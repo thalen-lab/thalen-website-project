@@ -162,7 +162,7 @@ export default function BlogPostForm() {
             <Button
               type="submit"
               disabled={createMutation.isPending || updateMutation.isPending}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700"
+              className="bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a]"
             >
               <Save className="w-4 h-4 mr-2" />
               {isEdit ? "Update" : "Create"}

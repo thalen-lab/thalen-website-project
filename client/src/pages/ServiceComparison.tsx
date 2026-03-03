@@ -399,7 +399,7 @@ export default function ServiceComparison() {
                       <div className="text-right">
                         <div className="text-sm text-muted-foreground">Complexity</div>
                         <div className={`font-bold ${
-                          service.complexity === 'High' ? 'text-orange-500' :
+                          service.complexity === 'High' ? 'text-[#FF6B35]' :
                           service.complexity === 'Medium' ? 'text-yellow-500' :
                           'text-green-500'
                         }`}>

@@ -122,7 +122,7 @@ export default function PastPerformance() {
       <section className="py-16 bg-slate-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
-            <div className="inline-block px-4 py-1.5 bg-orange-100 text-orange-700 font-medium mb-4">
+            <div className="inline-block px-4 py-1.5 bg-[#FF6B35]/10 text-[#FF6B35] font-medium mb-4">
               Proven Results
             </div>
             <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Past Performance Highlights</h2>
@@ -160,7 +160,7 @@ export default function PastPerformance() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold mb-3 flex items-center">
-                        <TrendingUp className="h-4 w-4 mr-2 text-orange-600" />
+                        <TrendingUp className="h-4 w-4 mr-2 text-[#FF6B35]" />
                         Key Outcomes
                       </h4>
                       <ul className="space-y-2">
@@ -174,7 +174,7 @@ export default function PastPerformance() {
                     </div>
                     <div className="bg-slate-50 rounded-lg p-4">
                       <h4 className="font-semibold mb-3 flex items-center">
-                        <Award className="h-4 w-4 mr-2 text-orange-600" />
+                        <Award className="h-4 w-4 mr-2 text-[#FF6B35]" />
                         Impact Summary
                       </h4>
                       <div className="space-y-3">
@@ -215,7 +215,7 @@ export default function PastPerformance() {
               <Card key={index} className="border-2">
                 <CardContent className="pt-6">
                   <div className="mb-4">
-                    <svg className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-orange-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-[#FF6B35] mb-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -237,19 +237,19 @@ export default function PastPerformance() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-orange-400">$82.6M</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">$82.6M</div>
               <div className="text-sm md:text-base opacity-90">Total Contract Value</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-orange-400">$35.2M</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">$35.2M</div>
               <div className="text-sm md:text-base opacity-90">Documented Savings</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-orange-400">100%</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">100%</div>
               <div className="text-sm md:text-base opacity-90">On-Time Delivery Rate</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-orange-400">4</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">4</div>
               <div className="text-sm md:text-base opacity-90">Active Contract Vehicles</div>
             </div>
           </div>

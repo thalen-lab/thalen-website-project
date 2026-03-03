@@ -159,7 +159,7 @@ export default function CookieConsent() {
                   <p className="font-medium text-white mb-1">We Value Your Privacy</p>
                   <p>
                     This site uses cookies and related technologies for site operation, analytics, and third-party advertising purposes as described in our{' '}
-                    <Link href="/privacy" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+                    <Link href="/privacy" className="text-[#FF6B35] hover:text-[#FF6B35]/70 underline underline-offset-2">
                       Privacy Policy
                     </Link>
                     . You may choose to consent to our use of these technologies, reject non-essential technologies, or manage your preferences.
@@ -189,7 +189,7 @@ export default function CookieConsent() {
                 <Button
                   size="sm"
                   onClick={handleAcceptAll}
-                  className="bg-orange-500 hover:bg-orange-600 text-white border-0 order-1 sm:order-3"
+                  className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white border-0 order-1 sm:order-3"
                 >
                   Accept All
                 </Button>
@@ -230,7 +230,7 @@ export default function CookieConsent() {
               <p className="text-gray-600 text-sm mb-6">
                 Please choose whether this site may use cookies or related technologies as described below. 
                 You can learn more about how this site uses cookies and related technologies by reading our{' '}
-                <Link href="/privacy" className="text-[#0A2540] hover:text-orange-500 underline underline-offset-2">
+                <Link href="/privacy" className="text-[#0A2540] hover:text-[#FF6B35] underline underline-offset-2">
                   Privacy Policy
                 </Link>.
               </p>
@@ -281,7 +281,7 @@ export default function CookieConsent() {
                       {/* Expand Details Button */}
                       <button
                         onClick={() => toggleCategoryDetails(category.id)}
-                        className="flex items-center gap-1 text-sm text-[#0A2540] hover:text-orange-500 mt-3 transition-colors"
+                        className="flex items-center gap-1 text-sm text-[#0A2540] hover:text-[#FF6B35] mt-3 transition-colors"
                       >
                         {expandedCategory === category.id ? (
                           <>
@@ -303,7 +303,7 @@ export default function CookieConsent() {
                         <ul className="mt-3 space-y-2">
                           {category.details.map((detail, index) => (
                             <li key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                              <span className="w-1.5 h-1.5 bg-orange-400 rounded-full shrink-0" />
+                              <span className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full shrink-0" />
                               {detail}
                             </li>
                           ))}

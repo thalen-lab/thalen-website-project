@@ -4747,3 +4747,12 @@
 - [x] Update VITE_APP_LOGO environment variable (built-in, used CDN URL directly in index.html instead)
 - [x] Update favicon reference in client/index.html
 - [x] Update const.ts if needed (not needed, favicon set directly in index.html)
+
+## Phase 74: Update Orange Color to #ff6b35 Across Entire Website
+- [x] Audit all files for orange color references
+- [x] Update CSS variables in index.css (accent, orange-signature, gradients)
+- [x] Update all component files with hardcoded orange values (29+ files, 100+ replacements)
+- [x] Verify hovers, CTAs, footers, navbar, section dividers all use #ff6b35
+- [x] Eliminated all Tailwind orange-* classes (orange-400/500/600/700/50) across entire codebase
+- [x] Standardized hover states to #e55a2b and deep hover to #c84d1a
+- [x] Removed duplicate/conflicting CSS definitions

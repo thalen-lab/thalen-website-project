@@ -123,7 +123,7 @@ export default function FedRAMP() {
             />
           </div>
           <div className="max-w-4xl">
-            <Badge className="mb-4 bg-orange-500/20 text-orange-300 border-orange-500/30">
+            <Badge className="mb-4 bg-[#FF6B35]/20 text-[#FF6B35]/70 border-[#FF6B35]/30">
               Federal Cloud Security
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -134,7 +134,7 @@ export default function FedRAMP() {
             </p>
             <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                <Button size="lg" className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white">
                   Schedule FedRAMP Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -333,14 +333,14 @@ export default function FedRAMP() {
         
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <Users className="h-16 w-16 text-orange-400 mx-auto mb-6" />
+            <Users className="h-16 w-16 text-[#FF6B35] mx-auto mb-6" />
             <h2 className="text-4xl font-bold mb-6">Ready to Start Your FedRAMP Journey?</h2>
             <p className="text-xl text-blue-100 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
               Our FedRAMP experts are ready to assess your readiness, develop your authorization strategy, and guide you through every step of the process.
             </p>
             <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                <Button size="lg" className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white">
                   Schedule Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

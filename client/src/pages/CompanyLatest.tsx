@@ -111,7 +111,7 @@ export default function CompanyLatest() {
                 <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md">
                   <CardContent className="p-3 sm:p-4 md:p-6 md:p-8">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#FF6B35] to-[#e55a2b] flex items-center justify-center">
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
                       <span className="inline-flex items-center gap-1 px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
@@ -192,7 +192,7 @@ export default function CompanyLatest() {
               Connect with our team to discuss how our latest capabilities can support your agency's mission.
             </p>
             <Link href="/schedule-assessment">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
+              <Button className="bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white">
                 Schedule a Consultation <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>

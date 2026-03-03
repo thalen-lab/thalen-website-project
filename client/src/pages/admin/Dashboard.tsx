@@ -117,7 +117,7 @@ export default function AdminDashboard() {
                   <Link key={action.title} href={action.href}>
                     <Button
                       variant="outline"
-                      className="w-full h-auto py-6 flex flex-col items-center gap-3 hover:border-orange-500 hover:text-orange-500 transition-colors"
+                      className="w-full h-auto py-6 flex flex-col items-center gap-3 hover:border-[#FF6B35] hover:text-[#FF6B35] transition-colors"
                     >
                       <div className={`p-3 rounded-lg ${action.color} text-white`}>
                         <Plus className="w-6 h-6" />

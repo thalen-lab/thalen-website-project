@@ -150,7 +150,7 @@ export default function Careers() {
               </p>
 
               <Link href="/contact">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
+                <Button className="bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white">
                   Send Your Resume <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
@@ -174,7 +174,7 @@ export default function Careers() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent"></div>
               </div>
               {/* Decorative elements */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#FF6B35]/10 rounded-full blur-2xl"></div>
               <div className="absolute -top-4 -left-4 w-32 h-32 bg-[#0A2540]/10 rounded-full blur-2xl"></div>
             </motion.div>
           </div>
@@ -255,7 +255,7 @@ export default function Careers() {
           <div className="max-w-4xl mx-auto space-y-4">
             {isLoading ? (
               <div className="flex items-center justify-center py-12">
-                <Loader2 className="w-8 h-8 animate-spin text-orange-500" />
+                <Loader2 className="w-8 h-8 animate-spin text-[#FF6B35]" />
                 <span className="ml-3 text-gray-600">Loading positions...</span>
               </div>
             ) : error ? (
@@ -321,14 +321,14 @@ export default function Careers() {
                               </p>
                             )}
                             {job.clearanceRequired && job.clearanceRequired !== 'None' && (
-                              <p className="text-sm text-orange-600 mt-1">
+                              <p className="text-sm text-[#FF6B35] mt-1">
                                 <Shield className="w-3 h-3 inline mr-1" />
                                 {job.clearanceRequired} clearance required
                               </p>
                             )}
                           </div>
                           <Link href={`/careers/${job.slug}`}>
-                            <Button variant="outline" className="shrink-0 border-orange-500 text-orange-600 hover:bg-orange-50">
+                            <Button variant="outline" className="shrink-0 border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35]/5">
                               View Details <ArrowRight className="ml-2 w-4 h-4" />
                             </Button>
                           </Link>
@@ -364,7 +364,7 @@ export default function Careers() {
               We're always looking for talented individuals who share our passion for government technology modernization. Send us your resume and let's start a conversation.
             </p>
             <Link href="/contact">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
+              <Button className="bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white">
                 Contact Us <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>

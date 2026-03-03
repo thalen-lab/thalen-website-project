@@ -1004,7 +1004,7 @@ export default function ComplianceRoadmap() {
             <Card className="border-2 border-white/20 bg-white/10 text-white">
               <CardHeader>
                 <CardTitle className="flex items-center text-white">
-                  <AlertTriangle className="h-6 w-6 text-orange-400 mr-3" />
+                  <AlertTriangle className="h-6 w-6 text-[#FF6B35] mr-3" />
                   Important Considerations
                 </CardTitle>
               </CardHeader>

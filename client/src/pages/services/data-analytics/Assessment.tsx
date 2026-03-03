@@ -137,7 +137,7 @@ const maturityLevels: Record<string, MaturityLevel> = {
   developing: {
     level: "Developing (17-24 points)",
     description: "Your organization has basic data capabilities but lacks consistency and automation. There are opportunities for significant improvement.",
-    color: "text-orange-600",
+    color: "text-[#FF6B35]",
     services: ["Enterprise Data Platform", "Data Quality Management", "Analytics Dashboard Development"],
     estimatedROI: "150-250% over 2 years",
     timeline: "9-12 months to reach Defined level",

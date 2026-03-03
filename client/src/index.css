@@ -86,9 +86,9 @@
   /* Standardized Navy Colors - Two Primary Blues */
   --navy-primary: #0A2540;
   --navy-secondary: #12344D;
-  --orange: oklch(0.62 0.22 32);
-  --orange-light: oklch(0.68 0.20 35);
-  --orange-dark: oklch(0.52 0.24 28);
+  --orange: #FF6B35;
+  --orange-light: #FF8255;
+  --orange-dark: #e55a2b;
 }
 
 .dark {
@@ -187,12 +187,12 @@
 
   /* Rich Orange gradient for CTAs - Thalen Technologies style */
   .bg-orange-gradient {
-    background: linear-gradient(135deg, oklch(0.68 0.20 35) 0%, oklch(0.52 0.24 28) 100%);
+    background: linear-gradient(135deg, #FF6B35 0%, #e55a2b 100%);
   }
 
   /* Subtle orange gradient hover effect */
   .bg-orange-gradient-hover {
-    background: linear-gradient(135deg, oklch(0.72 0.18 37) 0%, oklch(0.56 0.22 30) 100%);
+    background: linear-gradient(135deg, #FF8255 0%, #FF6B35 100%);
   }
 
   /* Navy solid backgrounds - for sections with white text */
@@ -220,44 +220,44 @@
 
   /* Rich Orange accent colors - Thalen Technologies style */
   .text-orange-accent {
-    color: oklch(0.62 0.22 32);
+    color: #FF6B35;
   }
 
   .bg-orange-accent {
-    background-color: oklch(0.62 0.22 32);
+    background-color: #FF6B35;
   }
 
   .bg-orange-solid {
-    background-color: oklch(0.62 0.22 32);
+    background-color: #FF6B35;
   }
 
   .hover\:bg-orange-solid:hover {
-    background-color: oklch(0.56 0.24 30);
+    background-color: #e55a2b;
   }
 
-  /* Signature orange - Rich vibrant orange (Thalen Technologies style) */
+  /* Signature orange - Thalen Technologies #FF6B35 */
   .bg-orange-signature {
-    background: linear-gradient(135deg, oklch(0.68 0.20 35) 0%, oklch(0.52 0.24 28) 100%);
+    background-color: #FF6B35;
   }
 
   .hover\:bg-orange-signature:hover {
-    background: linear-gradient(135deg, oklch(0.72 0.18 37) 0%, oklch(0.56 0.22 30) 100%);
+    background-color: #e55a2b;
   }
 
   .text-orange-signature {
-    color: oklch(0.62 0.22 32);
+    color: #FF6B35;
   }
 
   .hover\:text-orange-signature:hover {
-    color: oklch(0.56 0.24 30);
+    color: #e55a2b;
   }
 
   .border-orange-signature {
-    border-color: oklch(0.62 0.22 32);
+    border-color: #FF6B35;
   }
 
   .hover\:border-orange-signature:hover {
-    border-color: oklch(0.56 0.24 30);
+    border-color: #e55a2b;
   }
 
   /* Hide scrollbar for carousel */
@@ -1189,7 +1189,7 @@ html {
   background-size: 200% 100%;
 }
 
-/* Base orange signature classes */
+/* Base orange signature classes - kept for specificity */
 .bg-orange-signature {
   background-color: #FF6B35;
 }

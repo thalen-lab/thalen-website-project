@@ -187,8 +187,8 @@ export default function SecurityCompliance() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex gap-4"
               >
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 text-orange-600" />
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#FF6B35]/10 flex items-center justify-center">
+                  <CheckCircle className="w-5 h-5 text-[#FF6B35]" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-2">{principle.title}</h3>
@@ -217,7 +217,7 @@ export default function SecurityCompliance() {
               Need detailed security documentation for your procurement process? Contact us to request our security packages, compliance attestations, and authorization documentation.
             </p>
             <Link href="/contact">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
+              <Button className="bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white">
                 Request Documentation <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>

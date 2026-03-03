@@ -100,7 +100,7 @@ Phone: ${formData.phone}`;
           </p>
           <div className="space-y-3">
             <Link href="/">
-              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+              <Button className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white">
                 Back to Home
               </Button>
             </Link>
@@ -142,7 +142,7 @@ Phone: ${formData.phone}`;
         <div className="container max-w-2xl">
           <div className="h-1 bg-slate-700">
             <div
-              className="h-full bg-orange-500 transition-all duration-300"
+              className="h-full bg-[#FF6B35] transition-all duration-300"
               style={{ width: `${(step / 2) * 100}%` }}
             />
           </div>
@@ -154,8 +154,8 @@ Phone: ${formData.phone}`;
         {/* Hero Section */}
         {step === 1 && (
           <div className="text-center mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-            <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Calendar className="w-8 h-8 text-orange-500" />
+            <div className="w-16 h-16 bg-[#FF6B35]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Calendar className="w-8 h-8 text-[#FF6B35]" />
             </div>
             <h1 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">
               Free IT Assessment
@@ -170,22 +170,22 @@ Phone: ${formData.phone}`;
         {step === 1 && (
           <div className="grid grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
             <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700">
-              <div className="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                <DollarSign className="w-5 h-5 text-orange-500" />
+              <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                <DollarSign className="w-5 h-5 text-[#FF6B35]" />
               </div>
               <div className="text-xs font-medium text-white mb-1">100% Free</div>
               <div className="text-xs text-slate-400">No obligation</div>
             </div>
             <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700">
-              <div className="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Users className="w-5 h-5 text-orange-500" />
+              <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                <Users className="w-5 h-5 text-[#FF6B35]" />
               </div>
               <div className="text-xs font-medium text-white mb-1">Expert Team</div>
               <div className="text-xs text-slate-400">15+ years</div>
             </div>
             <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700">
-              <div className="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                <Building2 className="w-5 h-5 text-orange-500" />
+              <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                <Building2 className="w-5 h-5 text-[#FF6B35]" />
               </div>
               <div className="text-xs font-medium text-white mb-1">Gov Focus</div>
               <div className="text-xs text-slate-400">Specialized</div>
@@ -211,7 +211,7 @@ Phone: ${formData.phone}`;
                   placeholder="John Doe"
                   required
                   autoComplete="name"
-                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500"
+                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35]"
                 />
               </div>
 
@@ -229,7 +229,7 @@ Phone: ${formData.phone}`;
                   required
                   autoComplete="email"
                   inputMode="email"
-                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500"
+                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35]"
                 />
               </div>
 
@@ -247,14 +247,14 @@ Phone: ${formData.phone}`;
                   required
                   autoComplete="tel"
                   inputMode="tel"
-                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500"
+                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35]"
                 />
               </div>
 
               <Button
                 type="button"
                 onClick={handleNext}
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white h-12 text-base font-semibold"
+                className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white h-12 text-base font-semibold"
               >
                 Continue
               </Button>
@@ -286,7 +286,7 @@ Phone: ${formData.phone}`;
                   placeholder="Department of..."
                   required
                   autoComplete="organization"
-                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500"
+                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35]"
                 />
               </div>
 
@@ -303,7 +303,7 @@ Phone: ${formData.phone}`;
                   placeholder="CIO, IT Director, etc."
                   required
                   autoComplete="organization-title"
-                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500"
+                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35]"
                 />
               </div>
 
@@ -319,7 +319,7 @@ Phone: ${formData.phone}`;
                   placeholder="What's your biggest IT challenge right now?"
                   required
                   rows={4}
-                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500 resize-none"
+                  className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35] resize-none"
                 />
               </div>
 
@@ -333,7 +333,7 @@ Phone: ${formData.phone}`;
                   value={formData.timeline}
                   onChange={handleChange}
                   required
-                  className="w-full h-10 px-3 bg-slate-800/50 border border-slate-700 rounded-md text-white focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
+                  className="w-full h-10 px-3 bg-slate-800/50 border border-slate-700 rounded-md text-white focus:border-[#FF6B35] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]/20"
                 >
                   <option value="asap">As soon as possible</option>
                   <option value="1-3months">1-3 months</option>
@@ -355,7 +355,7 @@ Phone: ${formData.phone}`;
                 <Button
                   type="submit"
                   disabled={assessmentMutation.isPending}
-                  className="flex-1 bg-orange-500 hover:bg-orange-600 text-white h-12 text-base font-semibold"
+                  className="flex-1 bg-[#FF6B35] hover:bg-[#e55a2b] text-white h-12 text-base font-semibold"
                 >
                   {assessmentMutation.isPending ? 'Scheduling...' : 'Schedule Assessment'}
                 </Button>
@@ -376,15 +376,15 @@ Phone: ${formData.phone}`;
             </div>
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
-                <div className="text-2xl font-bold text-orange-500 mb-1">$2.3B</div>
+                <div className="text-2xl font-bold text-[#FF6B35] mb-1">$2.3B</div>
                 <div className="text-xs text-slate-400">ROI Delivered</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-orange-500 mb-1">200+</div>
+                <div className="text-2xl font-bold text-[#FF6B35] mb-1">200+</div>
                 <div className="text-xs text-slate-400">Projects</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-orange-500 mb-1">98%</div>
+                <div className="text-2xl font-bold text-[#FF6B35] mb-1">98%</div>
                 <div className="text-xs text-slate-400">Satisfaction</div>
               </div>
             </div>

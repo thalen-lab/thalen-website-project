@@ -209,8 +209,8 @@ function NewsCard({ item, variant = 'dark' }: { item: NewsItem; variant?: 'dark'
       className={cn(
         "h-full rounded-lg transition-all duration-300 overflow-hidden group flex flex-col p-0",
         variant === 'dark' 
-          ? "bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#E07020]" 
-          : "bg-white border border-gray-200 hover:border-[#E07020] hover:shadow-lg"
+          ? "bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FF6B35]" 
+          : "bg-white border border-gray-200 hover:border-[#FF6B35] hover:shadow-lg"
       )}
     >
       <div className="p-4 sm:p-5 flex flex-col flex-grow">
@@ -235,7 +235,7 @@ function NewsCard({ item, variant = 'dark' }: { item: NewsItem; variant?: 'dark'
 
         {/* Title */}
         <h3 className={cn(
-          "text-base sm:text-lg font-bold mb-2 line-clamp-2 group-hover:text-[#E07020] transition-colors",
+          "text-base sm:text-lg font-bold mb-2 line-clamp-2 group-hover:text-[#FF6B35] transition-colors",
           variant === 'dark' ? "text-white" : "text-gray-900"
         )}>
           {item.title}
@@ -266,7 +266,7 @@ function NewsCard({ item, variant = 'dark' }: { item: NewsItem; variant?: 'dark'
             </span>
           </span>
           <span className={cn(
-            "inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider group-hover:text-[#E07020] transition-colors flex-shrink-0",
+            "inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider group-hover:text-[#FF6B35] transition-colors flex-shrink-0",
             variant === 'dark' ? "text-white/70" : "text-gray-500"
           )}>
             Read
@@ -360,7 +360,7 @@ function MobileCarousel({ items, variant = 'dark' }: { items: NewsItem[]; varian
             className={cn(
               "w-2 h-2 rounded-full transition-all duration-300 min-w-[16px] min-h-[16px] flex items-center justify-center",
               index === currentIndex 
-                ? "bg-[#E07020] w-5" 
+                ? "bg-[#FF6B35] w-5" 
                 : variant === 'dark' ? "bg-white/30 hover:bg-white/50" : "bg-gray-300 hover:bg-gray-400"
             )}
             aria-label={`Go to slide ${index + 1}`}
@@ -431,8 +431,8 @@ export default function NewsUpdates() {
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
               <div>
                 <div className="inline-flex items-center gap-2 mb-3">
-                  <div className="w-10 h-[2px] bg-[#E07020]"></div>
-                  <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Company News</span>
+                  <div className="w-10 h-[2px] bg-[#FF6B35]"></div>
+                  <span className="text-[#FF6B35] font-semibold text-xs uppercase tracking-[0.2em]">Company News</span>
                 </div>
                 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
@@ -440,7 +440,7 @@ export default function NewsUpdates() {
                 </h2>
               </div>
               <div className="max-w-lg">
-                <p className="text-sm md:text-base text-gray-600 leading-relaxed border-l-3 border-[#E07020]/50 pl-3">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed border-l-3 border-[#FF6B35]/50 pl-3">
                   Latest updates on <strong className="text-gray-900">company milestones</strong>, awards, partnerships, and strategic initiatives.
                 </p>
               </div>
@@ -502,8 +502,8 @@ export default function NewsUpdates() {
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
               <div>
                 <div className="inline-flex items-center gap-2 mb-3">
-                  <div className="w-10 h-[2px] bg-[#E07020]"></div>
-                  <span className="text-[#E07020] font-semibold text-xs uppercase tracking-[0.2em]">Industry Updates</span>
+                  <div className="w-10 h-[2px] bg-[#FF6B35]"></div>
+                  <span className="text-[#FF6B35] font-semibold text-xs uppercase tracking-[0.2em]">Industry Updates</span>
                 </div>
                 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -511,7 +511,7 @@ export default function NewsUpdates() {
                 </h2>
               </div>
               <div className="max-w-lg">
-                <p className="text-sm md:text-base text-white/80 leading-relaxed border-l-3 border-[#E07020]/50 pl-3">
+                <p className="text-sm md:text-base text-white/80 leading-relaxed border-l-3 border-[#FF6B35]/50 pl-3">
                   Stay informed on the latest <strong className="text-white">compliance requirements</strong>, security updates, and policy changes affecting federal technology programs.
                 </p>
               </div>
@@ -580,7 +580,7 @@ export default function NewsUpdates() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8">
+                <Button className="bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white px-8">
                   Contact Us <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>

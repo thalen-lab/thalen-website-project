@@ -74,7 +74,7 @@ export default function MobileContact() {
           </p>
           <div className="space-y-3">
             <Link href="/">
-              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+              <Button className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white">
                 Back to Home
               </Button>
             </Link>
@@ -124,20 +124,20 @@ export default function MobileContact() {
         <div className="grid grid-cols-2 gap-3 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
           <a
             href="tel:+18005551234"
-            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-800 hover:border-orange-500/50 transition-all active:scale-95"
+            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-800 hover:border-[#FF6B35]/50 transition-all active:scale-95"
           >
-            <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center">
-              <Phone className="w-6 h-6 text-orange-500" />
+            <div className="w-12 h-12 bg-[#FF6B35]/10 rounded-full flex items-center justify-center">
+              <Phone className="w-6 h-6 text-[#FF6B35]" />
             </div>
             <span className="text-sm font-medium text-white">Call Us</span>
             <span className="text-xs text-slate-400">1-800-555-1234</span>
           </a>
           <a
             href="mailto:contact@thalentech.com"
-            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-800 hover:border-orange-500/50 transition-all active:scale-95"
+            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-800 hover:border-[#FF6B35]/50 transition-all active:scale-95"
           >
-            <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center">
-              <Mail className="w-6 h-6 text-orange-500" />
+            <div className="w-12 h-12 bg-[#FF6B35]/10 rounded-full flex items-center justify-center">
+              <Mail className="w-6 h-6 text-[#FF6B35]" />
             </div>
             <span className="text-sm font-medium text-white">Email Us</span>
             <span className="text-xs text-slate-400">Quick reply</span>
@@ -169,7 +169,7 @@ export default function MobileContact() {
               placeholder="John Doe"
               required
               autoComplete="name"
-              className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500"
+              className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35]"
             />
           </div>
 
@@ -187,7 +187,7 @@ export default function MobileContact() {
               required
               autoComplete="email"
               inputMode="email"
-              className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500"
+              className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35]"
             />
           </div>
 
@@ -204,7 +204,7 @@ export default function MobileContact() {
               placeholder="(555) 123-4567"
               autoComplete="tel"
               inputMode="tel"
-              className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500"
+              className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35]"
             />
           </div>
 
@@ -220,14 +220,14 @@ export default function MobileContact() {
               placeholder="Tell us about your project or question..."
               required
               rows={5}
-              className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-orange-500 resize-none"
+              className="bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-[#FF6B35] resize-none"
             />
           </div>
 
           <Button
             type="submit"
             disabled={contactMutation.isPending}
-            className="w-full bg-orange-500 hover:bg-orange-600 text-white h-12 text-base font-semibold"
+            className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white h-12 text-base font-semibold"
           >
             {contactMutation.isPending ? 'Sending...' : 'Send Message'}
           </Button>
@@ -241,15 +241,15 @@ export default function MobileContact() {
         <div className="mt-8 pt-8 border-t border-slate-700">
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>
-              <div className="text-2xl font-bold text-orange-500 mb-1">24h</div>
+              <div className="text-2xl font-bold text-[#FF6B35] mb-1">24h</div>
               <div className="text-xs text-slate-400">Response Time</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-orange-500 mb-1">15+</div>
+              <div className="text-2xl font-bold text-[#FF6B35] mb-1">15+</div>
               <div className="text-xs text-slate-400">Years Experience</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-orange-500 mb-1">100%</div>
+              <div className="text-2xl font-bold text-[#FF6B35] mb-1">100%</div>
               <div className="text-xs text-slate-400">Confidential</div>
             </div>
           </div>

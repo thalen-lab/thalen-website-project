@@ -220,7 +220,7 @@ export default function AdminMediaLibrary() {
         </div>
 
         {selectedIds.length > 0 && (
-          <Card className="border-orange-200 bg-orange-50">
+          <Card className="border-[#FF6B35]/20 bg-[#FF6B35]/5">
             <CardContent className="py-3">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium">
@@ -288,7 +288,7 @@ export default function AdminMediaLibrary() {
                   className={cn(
                     "relative group rounded-lg overflow-hidden border-2 transition-all",
                     selectedIds.includes(media.id)
-                      ? "border-orange-500 ring-2 ring-orange-200"
+                      ? "border-[#FF6B35] ring-2 ring-[#FF6B35]/20"
                       : "border-gray-200"
                   )}
                 >

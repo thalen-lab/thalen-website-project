@@ -136,7 +136,7 @@ export default function JobDetail() {
       <div className="min-h-screen flex flex-col bg-white">
         <Navigation />
         <div className="flex-1 flex items-center justify-center">
-          <Loader2 className="w-8 h-8 animate-spin text-orange-500" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#FF6B35]" />
           <span className="ml-3 text-gray-600">Loading job details...</span>
         </div>
         <Footer />
@@ -153,7 +153,7 @@ export default function JobDetail() {
           <h1 className="text-2xl font-bold text-gray-700 mb-2">Job Not Found</h1>
           <p className="text-gray-500 mb-6">This position may no longer be available.</p>
           <Link href="/careers">
-            <Button variant="outline" className="border-orange-500 text-orange-600 hover:bg-orange-50">
+            <Button variant="outline" className="border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35]/5">
               <ArrowLeft className="mr-2 w-4 h-4" /> View All Positions
             </Button>
           </Link>
@@ -345,10 +345,10 @@ export default function JobDetail() {
                         
                         {job.clearanceRequired && job.clearanceRequired !== 'None' && (
                           <div className="flex items-start gap-3">
-                            <Shield className="w-5 h-5 text-orange-500 mt-0.5" />
+                            <Shield className="w-5 h-5 text-[#FF6B35] mt-0.5" />
                             <div>
                               <p className="text-gray-500">Security Clearance</p>
-                              <p className="font-medium text-orange-600">{job.clearanceRequired}</p>
+                              <p className="font-medium text-[#FF6B35]">{job.clearanceRequired}</p>
                             </div>
                           </div>
                         )}
@@ -373,7 +373,7 @@ export default function JobDetail() {
                       <div className="pt-4 border-t">
                         <Button 
                           onClick={() => setShowApplicationForm(true)}
-                          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
+                          className="w-full bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white"
                         >
                           Apply Now
                         </Button>
@@ -413,7 +413,7 @@ export default function JobDetail() {
                     Close
                   </Button>
                   <Link href="/careers">
-                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
+                    <Button className="bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white">
                       View More Positions
                     </Button>
                   </Link>
@@ -521,7 +521,7 @@ export default function JobDetail() {
                     <div
                       onClick={() => fileInputRef.current?.click()}
                       className={`border-2 border-dashed rounded-lg p-3 sm:p-4 md:p-6 text-center cursor-pointer transition-colors ${
-                        resumeFile ? 'border-green-500 bg-green-50' : 'border-gray-300 hover:border-orange-500'
+                        resumeFile ? 'border-green-500 bg-green-50' : 'border-gray-300 hover:border-[#FF6B35]'
                       }`}
                     >
                       <input
@@ -660,7 +660,7 @@ export default function JobDetail() {
                     <Button
                       type="submit"
                       disabled={isSubmitting || !resumeFile}
-                      className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
+                      className="flex-1 bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white"
                     >
                       {isSubmitting ? (
                         <>

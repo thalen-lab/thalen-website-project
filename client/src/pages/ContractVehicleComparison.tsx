@@ -573,13 +573,13 @@ export default function ContractVehicleComparison() {
                       </div>
                       <div>
                         <h4 className="font-semibold mb-3 flex items-center">
-                          <XCircle className="h-5 w-5 text-orange-500 mr-2" />
+                          <XCircle className="h-5 w-5 text-[#FF6B35] mr-2" />
                           Considerations
                         </h4>
                         <ul className="space-y-2">
                           {vehicle.cons.map((con, idx) => (
                             <li key={idx} className="text-sm flex items-start">
-                              <XCircle className="h-4 w-4 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
+                              <XCircle className="h-4 w-4 text-[#FF6B35] mr-2 mt-0.5 flex-shrink-0" />
                               <span>{con}</span>
                             </li>
                           ))}

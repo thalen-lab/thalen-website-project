@@ -108,7 +108,7 @@ export default function SocialResponsibility() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FF6B35]/10 text-[#FF6B35] rounded-full text-sm font-medium mb-6">
                 <Heart className="w-4 h-4" />
                 Our Commitment
               </div>
@@ -144,7 +144,7 @@ export default function SocialResponsibility() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 to-transparent"></div>
               </div>
               {/* Decorative element */}
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl -z-10"></div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-[#FF6B35] to-[#e55a2b] rounded-2xl -z-10"></div>
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#0A2540]/10 to-[#0A2540]/5 rounded-2xl -z-10"></div>
             </motion.div>
           </div>
@@ -178,7 +178,7 @@ export default function SocialResponsibility() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="order-1 lg:order-2"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FF6B35]/20 text-[#FF6B35]/70 rounded-full text-sm font-medium mb-6">
                 <Users className="w-4 h-4" />
                 Community Education
               </div>
@@ -213,7 +213,7 @@ export default function SocialResponsibility() {
                 <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/15 transition-all duration-300">
                   <CardContent className="p-6">
                     <h4 className="text-lg font-bold text-white mb-3">{workshop.title}</h4>
-                    <div className="flex items-center gap-2 text-orange-300 text-sm mb-2">
+                    <div className="flex items-center gap-2 text-[#FF6B35]/70 text-sm mb-2">
                       <Calendar className="w-4 h-4" />
                       {workshop.date}
                     </div>
@@ -223,7 +223,7 @@ export default function SocialResponsibility() {
                     </div>
                     <p className="text-white/70 text-sm mb-4">{workshop.description}</p>
                     <Link href="/events">
-                      <Button variant="outline" size="sm" className="border-orange-400 text-orange-300 hover:bg-orange-500/20 w-full">
+                      <Button variant="outline" size="sm" className="border-[#FF6B35] text-[#FF6B35]/70 hover:bg-[#FF6B35]/20 w-full">
                         Register Now <ExternalLink className="ml-2 w-3 h-3" />
                       </Button>
                     </Link>
@@ -290,7 +290,7 @@ export default function SocialResponsibility() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FF6B35]/10 text-[#FF6B35] rounded-full text-sm font-medium mb-6">
               <Heart className="w-4 h-4" />
               Get Involved
             </div>
@@ -302,7 +302,7 @@ export default function SocialResponsibility() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/events">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
+                <Button className="bg-gradient-to-r from-[#FF6B35] to-[#e55a2b] hover:from-[#e55a2b] hover:to-[#c84d1a] text-white">
                   View Upcoming Events <Calendar className="ml-2 w-4 h-4" />
                 </Button>
               </Link>

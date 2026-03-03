@@ -104,7 +104,7 @@ export default function AdminBreadcrumb({ items, className = "" }: AdminBreadcru
                 </span>
               ) : (
                 <Link href={item.href}>
-                  <span className="text-gray-500 hover:text-orange-500 transition-colors cursor-pointer flex items-center">
+                  <span className="text-gray-500 hover:text-[#FF6B35] transition-colors cursor-pointer flex items-center">
                     {isFirst && (
                       <Home className="w-4 h-4 mr-1.5" />
                     )}
