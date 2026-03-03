@@ -44,15 +44,15 @@ const slides: CarouselSlide[] = [
   },
   {
     id: 3,
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/TZgvtBBRnFSFHvfs.jpg",
-    imageWebp: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663032212491/TZgvtBBRnFSFHvfs.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032212491/n2sqWjWBoABpEmsxkmyy92/control-room-military-and-fist-bump-by-soldier-te-2026-01-09-10-08-41-utc_5d697a21.jpg",
+    imageWebp: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032212491/n2sqWjWBoABpEmsxkmyy92/control-room-military-and-fist-bump-by-soldier-te-2026-01-09-10-08-41-utc_5d697a21.jpg",
     category: "CYBERSECURITY",
     title: "Defending Digital\nInfrastructure",
     subtitle: "Protect your DoD contracts with CMMC certification. Our comprehensive assessment and implementation services ensure you meet all cybersecurity requirements.",
     ctaText: "GET CMMC READY",
     ctaLink: "/federal-solutions/cmmc",
     tabLabel: "Cybersecurity",
-    objectPosition: ["center 38%", "center 35%", "center 32%"],
+    objectPosition: ["center 45%", "center 42%", "center 40%"],
   },
   {
     id: 4,

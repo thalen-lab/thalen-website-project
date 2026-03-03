@@ -4784,3 +4784,8 @@
 - [x] Upload curved glass tower image to CDN
 - [x] Replace slide 1 image URL in HeroCarousel.tsx
 - [x] Adjust object-position for new image focal point
+
+## Phase 80: Replace Hero Slide 3 Image (Cybersecurity - Defending Digital Infrastructure)
+- [x] Upload military command center image to CDN
+- [x] Replace slide 3 image URL in HeroCarousel.tsx
+- [x] Adjust object-position for new image focal point
