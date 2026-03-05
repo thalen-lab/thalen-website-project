@@ -287,21 +287,21 @@ export default function Footer() {
 
           {/* Contract Vehicles Column */}
           <div>
-            <h4 className="font-bold text-base mb-4 text-white">Contract Vehicles</h4>
+            <h4 className="font-bold text-base mb-4 text-white">Contract Vehicles & Pursuits</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/contract-vehicles" className="text-white/70 hover:text-[#FF6B35] transition-colors">
-                  GSA Schedule
+                  GSA MAS <span className="text-xs text-white/40">(Pursuing)</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contract-vehicles" className="text-white/70 hover:text-[#FF6B35] transition-colors">
-                  SEWP V
+                  SEWP VI <span className="text-xs text-white/40">(Pursuing)</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contract-vehicles" className="text-white/70 hover:text-[#FF6B35] transition-colors">
-                  CIO-SP3
+                  CIO-SP4 <span className="text-xs text-white/40">(Pursuing)</span>
                 </Link>
               </li>
               <li>

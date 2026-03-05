@@ -4811,3 +4811,10 @@
 ## Phase 86: Fix Business Phone Number in Global Footer
 - [x] Change footer phone from '+1 (555) 123-4567' to '(269) 491-7331'
 - [x] Also update the 1-800-THALEN placeholder in the Company column
+## Phase 87: Fix Contract Vehicles Section in Global Footer
+- [x] Change heading from 'Contract Vehicles' to 'Contract Vehicles & Pursuits'
+- [x] Update GSA Schedule to 'GSA MAS (Pursuing)' with muted styling on '(Pursuing)'
+- [x] Update SEWP V to 'SEWP VI (Pursuing)' with muted styling on '(Pursuing)'
+- [x] Update CIO-SP3 to 'CIO-SP4 (Pursuing)' with muted styling on '(Pursuing)'
+- [x] Keep FedRAMP and CMMC links unchanged (no Pursuing label)
+- [x] Preserve all existing link routes
