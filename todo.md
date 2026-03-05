@@ -4829,3 +4829,9 @@
 - [x] Change '500+' to '50+' for Agency Partners Served
 - [x] Change 'FedRAMP Authorizations' to 'FedRAMP Implementations'
 - [x] Change 'Mission Success Rate' to 'Client Satisfaction Rate'
+## Phase 92: Remove SDVOSB/Veteran-Owned Claims Site-Wide (Instructions 6 & 7)
+- [x] Audit entire codebase for SDVOSB and veteran-owned references
+- [x] No SDVOSB/veteran-owned language found on About page (clean)
+- [x] Fix Capability Statement overview: remove 'veteran-owned', change location to Grand Rapids, Michigan
+- [x] Fix CapabilityStatementPrint.tsx: same changes applied
+- [x] Verified: zero 'veteran-owned', 'SDVOSB', or 'Washington DC' references remain in client code

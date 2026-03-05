@@ -88,7 +88,7 @@ export default function CapabilityStatement() {
               
               <div className="prose prose-lg max-w-none text-[oklch(0.35_0.03_250)]">
                 <p className="text-xl leading-relaxed mb-6">
-                  Thalen Technologies, Inc. is a veteran-owned small business headquartered in the Washington, D.C. metropolitan area, specializing in technology modernization and digital transformation for government agencies at all levels. For over 25 years, we have served as a trusted partner to federal departments, state agencies, and local governments, delivering solutions that enhance operational efficiency, strengthen cybersecurity posture, and improve citizen services.
+                  Thalen Technologies, Inc. is a small business headquartered in Grand Rapids, Michigan, with a team bringing over 25 years of combined experience serving federal, state, and local government agencies. We specialize in technology modernization and digital transformation, delivering solutions that enhance operational efficiency, strengthen cybersecurity posture, and improve citizen services.
                 </p>
                 
                 <p className="text-lg leading-relaxed mb-6">

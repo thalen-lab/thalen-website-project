@@ -164,9 +164,9 @@ export default function CapabilityStatementPrint() {
                   Company Overview
                 </h2>
                 <p className="text-sm text-gray-700 leading-relaxed">
-                  Thalen Technologies is a veteran-owned small business specializing in technology 
-                  modernization and digital transformation for government agencies. With 25+ years 
-                  of experience, we deliver solutions that enhance operational efficiency, strengthen 
+                  Thalen Technologies is a small business headquartered in Grand Rapids, Michigan, specializing in technology 
+                  modernization and digital transformation for government agencies. With a team bringing 25+ years 
+                  of combined experience, we deliver solutions that enhance operational efficiency, strengthen 
                   cybersecurity, and improve citizen services.
                 </p>
               </section>
