@@ -24,7 +24,7 @@ const slides: CarouselSlide[] = [
     imageWebp: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032212491/n2sqWjWBoABpEmsxkmyy92/office-building-2026-01-09-08-22-34-utc_1f607c12.jpg",
     category: "GOVERNMENT TECHNOLOGY",
     title: "Powering Government\nMission Success",
-    subtitle: "For 25 years, we have partnered with federal, state, and local agencies to modernize critical systems, secure sensitive data, and deliver superior citizen services.",
+    subtitle: "Our team brings over 25 years of combined experience partnering with federal, state, and local agencies to modernize critical systems, secure sensitive data, and deliver superior citizen services.",
     ctaText: "EXPLORE SOLUTIONS",
     ctaLink: "/core-capabilities",
     tabLabel: "Government",

@@ -4818,3 +4818,5 @@
 - [x] Update CIO-SP3 to 'CIO-SP4 (Pursuing)' with muted styling on '(Pursuing)'
 - [x] Keep FedRAMP and CMMC links unchanged (no Pursuing label)
 - [x] Preserve all existing link routes
+## Phase 88: Fix Homepage Hero Banner Text
+- [x] Change 'For 25 years, we have partnered...' to 'Our team brings over 25 years of combined experience partnering...'
