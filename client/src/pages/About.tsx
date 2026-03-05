@@ -51,10 +51,10 @@ export default function About() {
   ];
 
   const teamStats = [
-    { value: '25+', label: 'Years Federal Service' },
-    { value: '500+', label: 'Agency Partners Served' },
-    { value: '15+', label: 'FedRAMP Authorizations' },
-    { value: '100%', label: 'Mission Success Rate' }
+    { value: '25+', label: 'Years Combined Team Experience' },
+    { value: '50+', label: 'Agency Partners Served' },
+    { value: '15+', label: 'FedRAMP Implementations' },
+    { value: '100%', label: 'Client Satisfaction Rate' }
   ];
 
   const operationalStats = [

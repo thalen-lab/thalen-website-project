@@ -4824,3 +4824,8 @@
 - [x] Change 'For 25 years, Thalen Technologies has been the trusted technology partner...' to 'Thalen Technologies is built on a foundation of over 25 years of combined team expertise serving as trusted technology partners...'
 ## Phase 90: Fix SmallBusinessCertifications Component Text
 - [x] Reframe 'For over two decades, Thalen Technologies has been the trusted technology partner...' to match team expertise framing
+## Phase 91: Fix About Page Stats Section
+- [x] Change 'Years Federal Service' to 'Years Combined Team Experience'
+- [x] Change '500+' to '50+' for Agency Partners Served
+- [x] Change 'FedRAMP Authorizations' to 'FedRAMP Implementations'
+- [x] Change 'Mission Success Rate' to 'Client Satisfaction Rate'
