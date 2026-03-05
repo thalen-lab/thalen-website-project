@@ -132,7 +132,7 @@ export default function GovernmentITContractorAward() {
 
             <ul className="space-y-4 my-8">
               <li className="text-gray-700 leading-relaxed">
-                <strong>$47M in documented cost savings</strong> for federal clients through automation and process optimization initiatives
+                <strong>Estimated $47M in documented cost savings</strong> for federal clients through automation and process optimization initiatives
               </li>
               <li className="text-gray-700 leading-relaxed">
                 <strong>99.7% system availability</strong> maintained across all managed government platforms

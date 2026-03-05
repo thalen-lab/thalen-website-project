@@ -90,7 +90,7 @@ export default function Healthcare() {
               </div>
               <div>
                 <div className="text-4xl md:text-5xl font-bold mb-2">$12M+</div>
-                <div className="text-sm text-slate-600 uppercase tracking-wider">Average Annual Savings</div>
+                <div className="text-sm text-slate-600 uppercase tracking-wider">Estimated Annual Savings</div>
               </div>
               <div>
                 <div className="text-4xl md:text-5xl font-bold mb-2">100%</div>
@@ -113,7 +113,7 @@ export default function Healthcare() {
               {[
                 { title: 'Patient Outcomes', desc: '40% improvement through AI-powered analytics and predictive modeling that enables proactive interventions' },
                 { title: 'HIPAA Compliance', desc: 'Full BAA support with encrypted data handling, comprehensive audit trails, and OCR audit readiness' },
-                { title: 'Cost Reduction', desc: '$12M+ average annual savings per facility through workflow optimization and resource utilization' },
+                { title: 'Cost Reduction', desc: 'Estimated $12M+ average annual savings per facility through workflow optimization and resource utilization' },
                 { title: 'Administrative Efficiency', desc: '50% reduction in manual documentation time, freeing clinicians to focus on direct patient care' },
                 { title: 'Care Coordination', desc: 'Unified patient views across care settings enabling seamless transitions and reducing readmissions by 30%' },
                 { title: 'Population Health', desc: 'Real-time risk stratification and care management tools that improve quality metrics and value-based outcomes' }
@@ -191,7 +191,7 @@ export default function Healthcare() {
                 <div className="grid md:grid-cols-2">
                   <div className="bg-[oklch(0.22_0.06_250)] text-white p-4 sm:p-6 md:p-8 sm:p-12 flex flex-col justify-center">
                     <p className="font-semibold text-[oklch(0.75_0.15_55)] mb-2 uppercase tracking-wider">Featured Success</p>
-                    <h3 className="text-2xl sm:text-3xl font-bold mb-4">Healthcare System Saves $12M Through AI Analytics</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-4">Healthcare System Saves Estimated $12M Through AI Analytics</h3>
                     <p className="text-white/90 mb-6">
                       Real-time data intelligence platform improved patient outcomes by 40% across a multi-facility network while reducing operational costs.
                     </p>
@@ -205,7 +205,7 @@ export default function Healthcare() {
                   <div className="bg-white p-4 sm:p-6 md:p-8 sm:p-12 flex items-center justify-center">
                     <div className="text-center w-full">
                       <div className="text-6xl sm:text-7xl font-bold text-[oklch(0.20_0.05_250)] mb-2">$12M</div>
-                      <div className="text-base text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 uppercase tracking-wider">Annual Savings</div>
+                      <div className="text-base text-slate-600 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 uppercase tracking-wider">Estimated Annual Savings</div>
                       <div className="grid grid-cols-2 gap-6 text-left text-[oklch(0.20_0.05_250)]">
                         <div>
                           <div className="text-3xl font-bold">40%</div>

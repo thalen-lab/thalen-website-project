@@ -59,35 +59,35 @@ export default function FederalSolutions() {
     {
       agency: 'Department of Defense',
       projects: '12 contracts',
-      value: '$45M+',
+      value: '~$45M+',
       clearance: 'Secret/TS-SCI',
       services: 'Cloud migration, CMMC implementation, data analytics'
     },
     {
       agency: 'Department of Veterans Affairs',
       projects: '8 contracts',
-      value: '$28M+',
+      value: '~$28M+',
       clearance: 'Public Trust',
       services: 'Predictive analytics, automation, cloud infrastructure'
     },
     {
       agency: 'Department of Health & Human Services',
       projects: '6 contracts',
-      value: '$22M+',
+      value: '~$22M+',
       clearance: 'Public Trust',
       services: 'Real-time analytics, data visualization, integration'
     },
     {
       agency: 'Intelligence Community',
       projects: '4 contracts',
-      value: '$35M+',
+      value: '~$35M+',
       clearance: 'TS/SCI with Poly',
       services: 'Secure collaboration, zero trust architecture, SOC'
     },
     {
       agency: 'State & Local Government',
       projects: '25+ contracts',
-      value: '$18M+',
+      value: '~$18M+',
       clearance: 'N/A',
       services: 'Cloud migration, cybersecurity, data modernization'
     }
@@ -638,7 +638,7 @@ export default function FederalSolutions() {
                   {[
                     { title: 'Set-Aside Contract Eligibility', description: 'Our small business partnerships enable participation in 8(a), SDVOSB, WOSB, and HUBZone set-aside contracts, expanding opportunities for both prime and subcontractor roles.' },
                     { title: 'Complementary Expertise', description: 'Partners bring specialized capabilities in niche technologies, regional presence, and industry-specific domain knowledge that complement Thalen Technologies\'s core competencies.' },
-                    { title: 'Proven Teaming Success', description: '15+ successful teaming arrangements resulting in $45M+ in contract awards, with documented past performance demonstrating effective collaboration and delivery.' },
+                    { title: 'Proven Teaming Success', description: '15+ successful teaming arrangements resulting in an estimated $45M+ in contract awards, with documented past performance demonstrating effective collaboration and delivery.' },
                     { title: 'Mentor-Protégé Programs', description: 'Active participation in SBA Mentor-Protégé and agency-specific programs, providing technical assistance and business development support to small business partners.' }
                   ].map((item, index) => (
                     <div key={index}>
@@ -751,10 +751,10 @@ export default function FederalSolutions() {
             <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 text-center">State & Local Past Performance Highlights</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { title: 'State Departments of Transportation', contracts: '8 contracts | $6M+', description: 'Cloud migration, real-time analytics for traffic management, and data integration across legacy systems.', tags: ['Cloud', 'Data Analytics', 'Integration'] },
-                { title: 'County Sheriff Departments', contracts: '6 contracts | $4M+', description: 'CJIS-compliant cloud infrastructure, cybersecurity assessments, and secure data sharing platforms.', tags: ['CJIS Compliance', 'Cybersecurity', 'Cloud'] },
-                { title: 'State Health Departments', contracts: '7 contracts | $5M+', description: 'Public health surveillance analytics, HIPAA-compliant cloud solutions, and data visualization dashboards.', tags: ['Data Analytics', 'HIPAA', 'Cloud'] },
-                { title: 'Municipal Government', contracts: '4 contracts | $3M+', description: 'Process automation for permitting, cloud-based constituent services, and legacy system modernization.', tags: ['Automation', 'Cloud', 'Modernization'] }
+                { title: 'State Departments of Transportation', contracts: '8 contracts | ~$6M+', description: 'Cloud migration, real-time analytics for traffic management, and data integration across legacy systems.', tags: ['Cloud', 'Data Analytics', 'Integration'] },
+                { title: 'County Sheriff Departments', contracts: '6 contracts | ~$4M+', description: 'CJIS-compliant cloud infrastructure, cybersecurity assessments, and secure data sharing platforms.', tags: ['CJIS Compliance', 'Cybersecurity', 'Cloud'] },
+                { title: 'State Health Departments', contracts: '7 contracts | ~$5M+', description: 'Public health surveillance analytics, HIPAA-compliant cloud solutions, and data visualization dashboards.', tags: ['Data Analytics', 'HIPAA', 'Cloud'] },
+                { title: 'Municipal Government', contracts: '4 contracts | ~$3M+', description: 'Process automation for permitting, cloud-based constituent services, and legacy system modernization.', tags: ['Automation', 'Cloud', 'Modernization'] }
               ].map((perf, index) => (
                 <motion.div
                   key={index}

@@ -208,8 +208,8 @@ export default function Resources() {
     {
       id: 'cs-healthcare-ai',
       category: 'case-studies',
-      title: 'Healthcare System $12M Savings Case Study',
-      description: 'Case study showing how AI-powered analytics delivered $12M annual savings and 40% improvement in patient outcomes for a government healthcare system.',
+      title: 'Healthcare System Estimated $12M Savings Case Study',
+      description: 'Case study showing how AI-powered analytics delivered an estimated $12M in annual savings and 40% improvement in patient outcomes for a government healthcare system.',
       pages: 6,
       type: 'PDF Case Study',
       popular: false

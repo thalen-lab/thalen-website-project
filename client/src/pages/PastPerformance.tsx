@@ -14,7 +14,7 @@ export default function PastPerformance() {
       sectorColor: "oklch(0.65_0.18_55)",
       title: "Real-Time Fraud Detection Platform",
       description1: "Designed and implemented an advanced fraud detection system for a major financial institution processing over 50 million transactions daily. The platform leveraged machine learning algorithms and real-time analytics to identify suspicious patterns and reduce false positives by 65%.",
-      description2: "The solution delivered $18M in annual savings through fraud prevention and reduced manual review costs. Machine learning models trained on historical transaction data achieved 92% detection accuracy, while the system maintained sub-second response times for transaction analysis and risk scoring. The platform's ability to process massive transaction volumes in real time transformed the institution's fraud prevention capabilities and significantly reduced operational overhead.",
+      description2: "The solution delivered an estimated $18M in annual savings through fraud prevention and reduced manual review costs. Machine learning models trained on historical transaction data achieved 92% detection accuracy, while the system maintained sub-second response times for transaction analysis and risk scoring. The platform's ability to process massive transaction volumes in real time transformed the institution's fraud prevention capabilities and significantly reduced operational overhead.",
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
       imageAlt: "Financial data analytics dashboard"
     },
@@ -32,7 +32,7 @@ export default function PastPerformance() {
       sectorColor: "oklch(0.55_0.18_280)",
       title: "IoT-Enabled Predictive Maintenance System",
       description1: "Developed an industrial IoT platform for a global manufacturing company with 47 production facilities. The system collected real-time sensor data from 12,000 machines and used predictive analytics to forecast equipment failures before they occurred.",
-      description2: "The implementation generated $24M in annual savings from reduced unplanned downtime and maintenance costs. Proactive maintenance scheduling enabled by the platform resulted in a 78% reduction in equipment failures across all facilities. Real-time dashboards provided operational insights to plant managers, enabling data-driven decisions that optimized production efficiency and extended equipment lifecycles throughout the global manufacturing network.",
+      description2: "The implementation generated an estimated $24M in annual savings from reduced unplanned downtime and maintenance costs. Proactive maintenance scheduling enabled by the platform resulted in a 78% reduction in equipment failures across all facilities. Real-time dashboards provided operational insights to plant managers, enabling data-driven decisions that optimized production efficiency and extended equipment lifecycles throughout the global manufacturing network.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
       imageAlt: "Industrial manufacturing facility with IoT sensors"
     }

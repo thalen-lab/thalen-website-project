@@ -276,7 +276,7 @@ export default function GovernmentResources() {
                     <li className="flex items-start"><span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span><span>Managed by GSA (General Services Administration)</span></li>
                     <li className="flex items-start"><span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span><span>Timeline: <strong>12-18 months</strong> typical</span></li>
                     <li className="flex items-start"><span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span><span>Cost: <strong>$250K-$3M+</strong> (by impact level)</span></li>
-                    <li className="flex items-start"><span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span><span>Access to $50B+ federal cloud market</span></li>
+                    <li className="flex items-start"><span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span><span>Access to estimated $50B+ federal cloud market</span></li>
                   </ul>
                 </CardContent>
               </Card>

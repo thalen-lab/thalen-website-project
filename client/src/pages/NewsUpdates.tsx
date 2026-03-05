@@ -68,7 +68,7 @@ const companyNews: NewsItem[] = [
   },
   {
     id: 'c6',
-    title: 'Awarded $15M Federal Automation Contract',
+    title: 'Awarded Estimated $15M Federal Automation Contract',
     source: 'Thalen Technologies',
     sourceUrl: '/news/federal-automation-contract',
     date: 'Aug 2025',

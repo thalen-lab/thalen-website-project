@@ -60,16 +60,16 @@ export default function CapabilityGenerator() {
 
   const pastPerformance = {
     federal: [
-      { agency: 'Department of Defense', contracts: 12, value: '$45M+', services: ['Cloud', 'Cybersecurity', 'Data Analytics'] },
-      { agency: 'Department of Veterans Affairs', contracts: 8, value: '$28M+', services: ['Data Analytics', 'Automation', 'Cloud'] },
-      { agency: 'Health & Human Services', contracts: 6, value: '$22M+', services: ['Data Analytics', 'Cloud', 'Integration'] },
-      { agency: 'Intelligence Community', contracts: 4, value: '$35M+', services: ['Cybersecurity', 'Zero Trust', 'SOC'] },
+      { agency: 'Department of Defense', contracts: 12, value: '~$45M+', services: ['Cloud', 'Cybersecurity', 'Data Analytics'] },
+      { agency: 'Department of Veterans Affairs', contracts: 8, value: '~$28M+', services: ['Data Analytics', 'Automation', 'Cloud'] },
+      { agency: 'Health & Human Services', contracts: 6, value: '~$22M+', services: ['Data Analytics', 'Cloud', 'Integration'] },
+      { agency: 'Intelligence Community', contracts: 4, value: '~$35M+', services: ['Cybersecurity', 'Zero Trust', 'SOC'] },
     ],
     'state-local': [
-      { agency: 'State Departments of Transportation', contracts: 8, value: '$6M+', services: ['Cloud', 'Data Analytics', 'Integration'] },
-      { agency: 'State Health Departments', contracts: 7, value: '$5M+', services: ['Data Analytics', 'Cloud', 'Compliance'] },
-      { agency: 'County Sheriff Departments', contracts: 6, value: '$4M+', services: ['Cybersecurity', 'CJIS', 'Cloud'] },
-      { agency: 'Municipal Government', contracts: 4, value: '$3M+', services: ['Automation', 'Cloud', 'Integration'] },
+      { agency: 'State Departments of Transportation', contracts: 8, value: '~$6M+', services: ['Cloud', 'Data Analytics', 'Integration'] },
+      { agency: 'State Health Departments', contracts: 7, value: '~$5M+', services: ['Data Analytics', 'Cloud', 'Compliance'] },
+      { agency: 'County Sheriff Departments', contracts: 6, value: '~$4M+', services: ['Cybersecurity', 'CJIS', 'Cloud'] },
+      { agency: 'Municipal Government', contracts: 4, value: '~$3M+', services: ['Automation', 'Cloud', 'Integration'] },
     ]
   };
 

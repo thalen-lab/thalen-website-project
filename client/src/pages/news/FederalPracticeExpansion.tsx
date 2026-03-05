@@ -144,7 +144,7 @@ export default function FederalPracticeExpansion() {
                 <strong>85% reduction</strong> in manual processing time for a major federal agency's benefits administration program
               </li>
               <li className="text-gray-700 leading-relaxed">
-                <strong>$12M in annual savings</strong> through intelligent automation of healthcare claims processing
+                <strong>Estimated $12M in annual savings</strong> through intelligent automation of healthcare claims processing
               </li>
               <li className="text-gray-700 leading-relaxed">
                 <strong>99.2% system uptime</strong> for mission-critical defense manufacturing operations

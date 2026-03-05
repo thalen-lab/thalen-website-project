@@ -82,7 +82,7 @@ export default function FederalContractorsSector() {
       metrics: [
         { value: '150+', label: 'Applications Migrated' },
         { value: '500TB', label: 'Data Migrated' },
-        { value: '$4.5M', label: 'Annual Savings' }
+        { value: '$4.5M', label: 'Estimated Annual Savings' }
       ],
       href: '/case-studies/defense-cloud'
     },

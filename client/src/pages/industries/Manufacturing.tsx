@@ -192,7 +192,7 @@ export default function Manufacturing() {
                 <div className="grid md:grid-cols-2">
                   <div className="bg-[oklch(0.22_0.06_250)] text-white p-12 flex flex-col justify-center">
                     <h3 className="text-3xl font-bold mb-4">Major Auto Manufacturer</h3>
-                    <p className="text-white/80 mb-6">Nexdyne implemented a predictive maintenance solution for a fleet of 2,000+ robotic arms, reducing downtime by 90% and saving $15M annually.</p>
+                    <p className="text-white/80 mb-6">Thalen Technologies implemented a predictive maintenance solution for a fleet of 2,000+ robotic arms, reducing downtime by 90% and saving an estimated $15M annually.</p>
                     <ul className="space-y-4">
                       <li className="flex items-start">
                         <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span>
@@ -200,7 +200,7 @@ export default function Manufacturing() {
                       </li>
                       <li className="flex items-start">
                         <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span>
-                        <span>$15M+ annual savings in maintenance costs</span>
+                        <span>Estimated $15M+ annual savings in maintenance costs</span>
                       </li>
                       <li className="flex items-start">
                         <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-2 mr-3"></span>

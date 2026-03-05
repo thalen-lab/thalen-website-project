@@ -198,7 +198,7 @@ export default function StateRAMPAuthorization() {
               </li>
               <li className="text-gray-700 leading-relaxed flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
-                <span>A county government achieved $3M in annual savings by automating document-intensive workflows</span>
+                <span>A county government achieved an estimated $3M in annual savings by automating document-intensive workflows</span>
               </li>
               <li className="text-gray-700 leading-relaxed flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />

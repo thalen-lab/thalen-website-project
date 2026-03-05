@@ -82,9 +82,9 @@ export default function CustomSoftware() {
     {
       industry: "FinTech Startup",
       title: "Payment Processing SaaS Platform",
-      description: "Built multi-tenant payment gateway processing $50M+ annually with 99.99% uptime.",
+      description: "Built multi-tenant payment gateway processing an estimated $50M+ annually with 99.99% uptime.",
       metrics: [
-        { label: "Transaction Volume", value: "$50M+" },
+        { label: "Transaction Volume", value: "~$50M+" },
         { label: "Uptime", value: "99.99%" },
         { label: "Time to Market", value: "4 months" }
       ]
@@ -92,10 +92,10 @@ export default function CustomSoftware() {
     {
       industry: "E-Commerce",
       title: "Custom Marketplace Platform",
-      description: "Developed two-sided marketplace connecting 10K+ buyers with 500+ sellers, handling $5M GMV.",
+      description: "Developed two-sided marketplace connecting 10K+ buyers with 500+ sellers, handling an estimated $5M GMV.",
       metrics: [
         { label: "Active Users", value: "10K+" },
-        { label: "GMV", value: "$5M" },
+        { label: "GMV", value: "~$5M" },
         { label: "Conversion Rate", value: "8.5%" }
       ]
     },

@@ -9,7 +9,7 @@ export default function FederalAutomationContract() {
   const [copied, setCopied] = useState(false);
   
   const articleUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const articleTitle = 'Thalen Technologies Awarded $15M Federal Automation Contract';
+  const articleTitle = 'Thalen Technologies Awarded Estimated $15M Federal Automation Contract';
   
   const handleCopyLink = () => {
     navigator.clipboard.writeText(articleUrl);
@@ -40,7 +40,7 @@ export default function FederalAutomationContract() {
             items={[
               { label: 'About', href: '/about' },
               { label: 'News & Updates', href: '/about/news-updates' },
-              { label: '$15M Federal Contract Award' }
+              { label: 'Estimated $15M Federal Contract Award' }
             ]}
           />
         </div>
@@ -68,7 +68,7 @@ export default function FederalAutomationContract() {
 
             {/* Title */}
             <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-[1.15] tracking-tight mb-8">
-              Thalen Technologies Awarded $15M Federal Automation Contract
+              Thalen Technologies Awarded Estimated $15M Federal Automation Contract
             </h1>
 
             {/* Subtitle/Deck */}
@@ -82,7 +82,7 @@ export default function FederalAutomationContract() {
             
             {/* Dateline */}
             <p className="text-gray-700 leading-relaxed">
-              <strong>WASHINGTON, D.C. – August 12, 2025</strong> – Thalen Technologies, Inc., a leading provider of intelligent automation and AI solutions for government and enterprise clients, today announced it has been awarded a $15 million, five-year contract to implement intelligent automation solutions for a major federal agency. The contract will support the agency's digital transformation initiatives and modernize critical operational processes.
+              <strong>WASHINGTON, D.C. – August 12, 2025</strong> – Thalen Technologies, Inc., a leading provider of intelligent automation and AI solutions for government and enterprise clients, today announced it has been awarded an estimated $15 million, five-year contract to implement intelligent automation solutions for a major federal agency. The contract will support the agency's digital transformation initiatives and modernize critical operational processes.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
@@ -134,7 +134,7 @@ export default function FederalAutomationContract() {
             </h2>
 
             <p className="text-gray-700 leading-relaxed">
-              This contract award builds on Thalen's track record of successful federal automation engagements. Over the past five years, the company has delivered automation solutions that have generated over $200 million in documented cost savings for federal clients while improving service delivery and employee satisfaction.
+              This contract award builds on Thalen's track record of successful federal automation engagements. Over the past five years, the company has delivered automation solutions that have generated an estimated $200 million in cost savings for federal clients while improving service delivery and employee satisfaction.
             </p>
 
             <p className="text-gray-700 leading-relaxed">

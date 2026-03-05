@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 export default function RegulatedIndustriesSector() {
   const stats = [
     { value: '99.9%', label: 'Fraud Detection Accuracy' },
-    { value: '$45M+', label: 'Fraud Prevented' },
+    { value: '$45M+', label: 'Estimated Fraud Prevented' },
     { value: '40%', label: 'Patient Outcome Improvement' },
     { value: '75%', label: 'Downtime Reduction' }
   ];
@@ -60,22 +60,22 @@ export default function RegulatedIndustriesSector() {
 
   const caseStudies = [
     {
-      title: 'Healthcare System Saves $12M Through AI Analytics',
+      title: 'Healthcare System Saves Estimated $12M Through AI Analytics',
       industry: 'Healthcare',
       description: 'Data intelligence platform delivered real-time insights improving patient outcomes by 40% while achieving full HIPAA compliance across 15 facilities.',
       metrics: [
-        { value: '$12M', label: 'Annual Savings' },
+        { value: '$12M', label: 'Estimated Annual Savings' },
         { value: '40%', label: 'Outcome Improvement' },
         { value: '15', label: 'Facilities' }
       ],
       href: '/case-studies/healthcare-ai'
     },
     {
-      title: 'Bank Prevents $45M in Fraud with AI',
+      title: 'Bank Prevents Estimated $45M in Fraud with AI',
       industry: 'Financial Services',
       description: 'Real-time fraud detection system analyzing 50M+ transactions daily with 99.7% accuracy and sub-second response times.',
       metrics: [
-        { value: '$45M', label: 'Fraud Prevented' },
+        { value: '$45M', label: 'Estimated Fraud Prevented' },
         { value: '99.7%', label: 'Accuracy' },
         { value: '50M+', label: 'Daily Transactions' }
       ],

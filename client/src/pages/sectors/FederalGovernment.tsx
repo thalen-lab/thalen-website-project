@@ -64,7 +64,7 @@ export default function FederalGovernmentSector() {
       description: 'Implemented UiPath Gov RPA platform with comprehensive ATO documentation, reducing claims processing time from 6 weeks to 2 days.',
       metrics: [
         { value: '85%', label: 'Automation Rate' },
-        { value: '$4.2M', label: 'Contract Value' },
+        { value: '~$4.2M', label: 'Contract Value' },
         { value: '6 mo', label: 'Time to ROI' }
       ],
       href: '/case-studies/federal-automation'

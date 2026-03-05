@@ -99,7 +99,7 @@ export default function FedRAMP() {
       "Achieved FedRAMP Moderate authorization in 9 months",
       "Implemented 325+ security controls across AWS infrastructure",
       "Passed 3PAO assessment with zero high findings",
-      "$45M in new federal contracts secured within first year",
+      "Estimated $45M in new federal contracts secured within first year",
       "Established continuous monitoring program for ongoing compliance"
     ]
   };

@@ -106,7 +106,7 @@ export default function TMFSupport() {
               Technology Modernization Fund (TMF) Support
             </h1>
             <p className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8 leading-relaxed">
-              We help agencies secure Technology Modernization Fund awards through end-to-end proposal development, ROI modeling, TMF Board preparation, and implementation support—we've helped agencies secure $45M+ in TMF funding.
+              We help agencies secure Technology Modernization Fund awards through end-to-end proposal development, ROI modeling, TMF Board preparation, and implementation support—we've helped agencies pursue an estimated $45M+ in TMF funding.
             </p>
             <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               <Link href="/contact">

@@ -390,7 +390,7 @@ export default function FedRAMP() {
             {[
               {
                 title: "Market Access",
-                description: "Unlock access to the $50+ billion federal cloud market and growing state/local government sector."
+                description: "Unlock access to the estimated $50+ billion federal cloud market and growing state/local government sector."
               },
               {
                 title: "Competitive Advantage",

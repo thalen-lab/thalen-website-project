@@ -54,7 +54,7 @@ export default function DigitalTransformation() {
     },
     {
       title: 'TMF & Modernization Funding Expertise',
-      description: "We've helped agencies secure $45M+ in Technology Modernization Fund awards with compelling business cases and implementation experience."
+      description: "We've helped agencies pursue an estimated $45M+ in Technology Modernization Fund awards with compelling business cases and implementation experience."
     }
   ];
 
@@ -93,9 +93,9 @@ export default function DigitalTransformation() {
   ];
 
   const tmfSuccessStories = [
-    { agency: 'Federal Civilian Agency', award: '$15M', project: 'Legacy mainframe modernization to cloud-native architecture', roi: '40% cost reduction' },
-    { agency: 'Department of Veterans Affairs', award: '$18M', project: 'Citizen services digital transformation', roi: '60% faster service delivery' },
-    { agency: 'Department of Justice', award: '$12M', project: 'Case management system modernization', roi: '50% efficiency gain' }
+    { agency: 'Federal Civilian Agency', award: '~$15M', project: 'Legacy mainframe modernization to cloud-native architecture', roi: 'Estimated 40% cost reduction' },
+    { agency: 'Department of Veterans Affairs', award: '~$18M', project: 'Citizen services digital transformation', roi: 'Estimated 60% faster service delivery' },
+    { agency: 'Department of Justice', award: '~$12M', project: 'Case management system modernization', roi: 'Estimated 50% efficiency gain' }
   ];
 
   return (
@@ -304,7 +304,7 @@ export default function DigitalTransformation() {
             <div className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">TMF Success</div>
             <h2 className="text-4xl font-bold mb-4 text-[oklch(0.20_0.05_250)]">Technology Modernization Fund (TMF) Success</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We've helped agencies secure $45M+ in TMF awards with compelling business cases and proven implementation
+              We've helped agencies pursue an estimated $45M+ in TMF awards with compelling business cases and proven implementation
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">

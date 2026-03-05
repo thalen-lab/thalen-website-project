@@ -135,7 +135,7 @@ export default function Analytics() {
               <div className="grid md:grid-cols-2">
                 <div className="bg-[oklch(0.22_0.06_250)] text-white p-12 flex flex-col justify-center">
                   <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Featured Success Story</p>
-                  <h3 className="text-3xl font-bold mb-4">Healthcare System Saves $12M Through AI Analytics</h3>
+                  <h3 className="text-3xl font-bold mb-4">Healthcare System Saves Estimated $12M Through AI Analytics</h3>
                   <p className="text-white/90 mb-6">
                     Thalen Technologies's data intelligence platform transformed a multi-facility healthcare network's decision-making, delivering real-time insights that improved patient outcomes and operational efficiency by 40%.
                   </p>
@@ -147,7 +147,7 @@ export default function Analytics() {
                 <div className="p-12 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-7xl font-bold text-[oklch(0.65_0.18_55)] mb-2">$12M</div>
-                    <div className="text-lg text-slate-600 mb-4">Annual Savings</div>
+                    <div className="text-lg text-slate-600 mb-4">Estimated Annual Savings</div>
                     <div className="text-5xl font-bold text-[oklch(0.65_0.18_55)] mb-2">40%</div>
                     <div className="text-lg text-slate-600">Efficiency Improvement</div>
                   </div>

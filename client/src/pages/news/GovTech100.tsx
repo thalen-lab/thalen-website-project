@@ -118,7 +118,7 @@ export default function GovTech100() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Key achievements over the past year include more than $200 million in documented cost savings delivered to government clients through automation and process optimization. The company completed 15 new agency deployments across federal, state, and local government. Customer satisfaction ratings reached 98% based on independent surveys. The team developed and deployed more than 50 new automation use cases. Platform availability maintained at 99.9% across all production deployments.
+              Key achievements over the past year include an estimated $200 million in cost savings delivered to government clients through automation and process optimization. The company completed 15 new agency deployments across federal, state, and local government. Customer satisfaction ratings reached 98% based on independent surveys. The team developed and deployed more than 50 new automation use cases. Platform availability maintained at 99.9% across all production deployments.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6">

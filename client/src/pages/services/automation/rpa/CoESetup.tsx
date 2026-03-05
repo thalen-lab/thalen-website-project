@@ -170,7 +170,7 @@ export default function CoESetup() {
     {
       agency: 'Federal Civilian Agency',
       scope: 'Enterprise CoE serving 8 bureaus',
-      outcome: '120+ bots deployed, $18M annual savings',
+      outcome: '120+ bots deployed, estimated $18M annual savings',
       timeline: '12-week CoE setup'
     },
     {

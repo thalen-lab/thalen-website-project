@@ -125,7 +125,7 @@ export default function Events() {
       recording: true,
       slides: true,
       presenter: 'Dr. Priya Patel, Chief Strategy Officer',
-      description: 'Case study analysis of federal healthcare AI implementations delivering $12M+ savings, including patient outcome improvements and operational efficiency gains at VA and HHS agencies.'
+      description: 'Case study analysis of federal healthcare AI implementations delivering an estimated $12M+ in savings, including patient outcome improvements and operational efficiency gains at VA and HHS agencies.'
     },
     {
       id: 'past-cloud-migration',

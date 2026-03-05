@@ -139,7 +139,7 @@ export default function PlatformImplementation() {
       agency: 'Federal Agency',
       platform: 'UiPath Government Cloud',
       scope: '45 bots deployed across 12 processes',
-      outcome: '85% automation rate, $4.2M annual savings'
+      outcome: '85% automation rate, estimated $4.2M annual savings'
     },
     {
       agency: 'Department of Defense',

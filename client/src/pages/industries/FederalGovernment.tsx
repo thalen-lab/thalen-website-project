@@ -553,7 +553,7 @@ export default function FederalGovernment() {
                         </div>
                         <div>
                           <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)]">$12M</div>
-                          <div className="text-sm text-slate-600">Annual Savings</div>
+                          <div className="text-sm text-slate-600">Estimated Annual Savings</div>
                         </div>
                         <div>
                           <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)]">8 months</div>

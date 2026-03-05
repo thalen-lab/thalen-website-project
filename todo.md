@@ -4882,3 +4882,29 @@
 - [x] Added professional disclaimer section to CaseStudies.tsx index page
 - [x] Updated CaseStudies.tsx stats: '15+ Years Government Experience' → '25+ Years Combined Team Experience'
 - [x] Zero NexDyne references remain in client/src/ code
+## Phase 96: Final Monetary Value Sweep
+- [x] Full-site scan for any remaining unsoftened monetary values
+- [x] Fix all remaining monetary values without estimated/projected qualifiers
+- [x] Save checkpoint
+- [x] Softened: FederalAutomationContract.tsx ($15M title, $200M body)
+- [x] Softened: FederalPracticeExpansion.tsx ($12M)
+- [x] Softened: GovTech100.tsx ($200M)
+- [x] Softened: GovernmentITContractorAward.tsx ($47M)
+- [x] Softened: StateRAMPAuthorization.tsx ($3M)
+- [x] Softened: Analytics.tsx ($12M title and label)
+- [x] Softened: Automation.tsx ($4.2M)
+- [x] Softened: CustomSoftware.tsx ($50M+, $5M)
+- [x] Softened: DataAnalytics.tsx ($12M outcome, $50M fraud)
+- [x] Softened: PastPerformance.tsx ($18M, $24M)
+- [x] Softened: NewsUpdates.tsx ($15M)
+- [x] Softened: Resources.tsx ($12M)
+- [x] Softened: GovernmentResources.tsx ($50B market)
+- [x] Softened: StateLocal.tsx ($50M)
+- [x] Softened: CMMC.tsx ($120M, $45M)
+- [x] Softened: FederalSolutions.tsx (all contract values: $45M+, $28M+, $22M+, $35M+, $18M+, $6M+, $4M+, $5M+, $3M+, $45M teaming)
+- [x] Softened: CapabilityGenerator.tsx (all 8 contract values)
+- [x] Softened: Events.tsx ($12M)
+- [x] Softened: FedRAMP.tsx ($45M)
+- [x] Softened: FederalROICalculator.tsx (labor savings label)
+- [x] Verified: All display-only $12M/$50M/$25M values have 'Estimated' in labels
+- [x] Excluded from softening: Contract size ranges, pricing tiers, salary placeholders, budget selectors, DoD supply chain context ($180B)

@@ -204,7 +204,7 @@ export default function SuccessMetrics() {
                   Department of Transportation Achieves 250% ROI Through Metrics-Driven Transformation
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Implemented comprehensive metrics framework and executive dashboards for Department of Transportation's digital transformation initiative, enabling data-driven decision making and continuous optimization. Real-time visibility into adoption metrics, operational efficiency, and cost savings resulted in 250% ROI within 18 months and $25M in documented cost avoidance.
+                  Implemented comprehensive metrics framework and executive dashboards for Department of Transportation's digital transformation initiative, enabling data-driven decision making and continuous optimization. Real-time visibility into adoption metrics, operational efficiency, and cost savings resulted in an estimated 250% ROI within 18 months and an estimated $25M in documented cost avoidance.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-6">
                   <div>
@@ -213,7 +213,7 @@ export default function SuccessMetrics() {
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-accent mb-1">$25M</div>
-                    <div className="text-sm text-muted-foreground">Cost Avoidance</div>
+                    <div className="text-sm text-muted-foreground">Estimated Cost Avoidance</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-accent mb-1">18 Months</div>

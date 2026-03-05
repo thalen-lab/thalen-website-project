@@ -52,13 +52,13 @@ const services = [
 
 const caseStudy = {
   title: "Mid-Sized Defense Contractor: CMMC Level 2 Certification",
-  challenge: "A defense contractor with $120M in annual DoD contracts needed CMMC Level 2 certification to maintain contract eligibility. Initial contract analysis revealed CUI handling requirements across 15 active contracts with varying scoping needs. The organization faced significant gaps in security controls, inadequate documentation, and unclear subcontractor compliance requirements.",
+  challenge: "A defense contractor with an estimated $120M in annual DoD contracts needed CMMC Level 2 certification to maintain contract eligibility. Initial contract analysis revealed CUI handling requirements across 15 active contracts with varying scoping needs. The organization faced significant gaps in security controls, inadequate documentation, and unclear subcontractor compliance requirements.",
   results: [
     "CMMC Level 2 certification achieved in 7 months following contract-first methodology",
     "Zero findings during C3PAO assessment with comprehensive evidence package",
     "Subcontractor compliance program established for 8 key suppliers",
     "Vulnerability assessment identified and remediated 47 security gaps pre-assessment",
-    "Maintained $120M contract portfolio eligibility and positioned for $45M in new opportunities"
+    "Maintained contract portfolio eligibility and positioned for an estimated $45M in new opportunities"
   ]
 };
 

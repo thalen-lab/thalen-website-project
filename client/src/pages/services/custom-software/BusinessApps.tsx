@@ -57,7 +57,7 @@ export default function BusinessApps() {
     results: [
       { metric: "Inventory Accuracy", value: "99.5%" },
       { metric: "Order Processing Time", value: "-60%" },
-      { metric: "Annual Cost Savings", value: "$500K" },
+      { metric: "Estimated Annual Cost Savings", value: "$500K" },
       { metric: "User Adoption", value: "95%" }
     ]
   };
@@ -179,7 +179,7 @@ export default function BusinessApps() {
           <Card className="max-w-5xl mx-auto">
             <CardContent className="p-12">
               <div className="text-sm text-accent font-semibold mb-2">{caseStudy.industry}</div>
-              <h3 className="text-3xl font-bold mb-6">Custom ERP Saves $500K Annually</h3>
+              <h3 className="text-3xl font-bold mb-6">Custom ERP Saves Estimated $500K Annually</h3>
               
               <div className="space-y-6 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div>

@@ -231,7 +231,7 @@ export default function StartupMVP() {
           <Card className="max-w-5xl mx-auto">
             <CardContent className="p-12">
               <div className="text-sm text-accent font-semibold mb-2">{caseStudy.startup}</div>
-              <h3 className="text-3xl font-bold mb-6">Telemedicine MVP Secures $2M Seed Funding</h3>
+              <h3 className="text-3xl font-bold mb-6">Telemedicine MVP Secures $2M in Seed Funding</h3>
               
               <div className="space-y-6 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                 <div>

@@ -56,7 +56,7 @@ export default function EnterpriseSaaS() {
     challenge: "Build a multi-tenant payment processing platform handling millions in transactions with 99.99% uptime requirements.",
     solution: "Developed microservices architecture with Kubernetes orchestration, PostgreSQL for data isolation, Redis for caching, and Stripe for payment processing.",
     results: [
-      { metric: "Transaction Volume", value: "$50M+ annually" },
+      { metric: "Transaction Volume", value: "$50M+ annually (projected)" },
       { metric: "Uptime", value: "99.99%" },
       { metric: "Active Tenants", value: "500+" },
       { metric: "Time to Market", value: "4 months" }

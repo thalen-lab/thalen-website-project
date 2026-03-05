@@ -126,8 +126,8 @@ export default function ProcessAssessment() {
       automationRate: '85%',
       timePerInvoice: '2 minutes (bot)',
       totalHours: '17 hours/month',
-      monthlySavings: '$5,400',
-      annualSavings: '$64,800',
+      monthlySavings: '~$5,400',
+      annualSavings: '~$64,800',
       paybackPeriod: '8.3 months'
     }
   };

@@ -201,15 +201,15 @@ export default function StrategyDevelopment() {
               <CardContent className="p-4 sm:p-6 md:p-8 md:p-12">
                 <div className="text-sm font-semibold text-accent mb-2">FEDERAL AGENCY SUCCESS STORY</div>
                 <h3 className="text-lg xs:text-xl sm:text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-                  Defense Agency Achieves $50M Cost Avoidance Through Strategic Roadmap
+                  Defense Agency Achieves Estimated $50M Cost Avoidance Through Strategic Roadmap
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Developed comprehensive 5-year digital transformation strategy for large defense agency, identifying $50M in cost avoidance opportunities through process optimization, legacy system modernization, and cloud migration. Strategic roadmap enabled phased implementation with clear ROI milestones and risk mitigation strategies.
+                  Developed comprehensive 5-year digital transformation strategy for large defense agency, identifying an estimated $50M in cost avoidance opportunities through process optimization, legacy system modernization, and cloud migration. Strategic roadmap enabled phased implementation with clear ROI milestones and risk mitigation strategies.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-6">
                   <div>
                     <div className="text-3xl font-bold text-accent mb-1">$50M</div>
-                    <div className="text-sm text-muted-foreground">Cost Avoidance Identified</div>
+                    <div className="text-sm text-muted-foreground">Estimated Cost Avoidance</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-accent mb-1">5-Year</div>

@@ -70,7 +70,7 @@ export default function DataAnalytics() {
     { 
       agency: 'Department of Defense', 
       project: 'Automated Data Pipelines', 
-      outcome: '$12M annual cost savings',
+      outcome: 'Estimated $12M annual cost savings',
       details: 'Built automated ETL pipelines using Informatica Gov to consolidate data from 14 legacy systems. Eliminated 85,000 hours of manual data processing annually. Reduced data latency from 48 hours to 15 minutes. Improved data accuracy to 99.7%.'
     },
     { 
@@ -391,7 +391,7 @@ export default function DataAnalytics() {
             <p className="text-[oklch(0.65_0.18_55)] font-semibold mb-4 uppercase tracking-wider">Success Story</p>
             <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-[oklch(0.20_0.05_250)] mb-4">See Government Data Analytics in Action</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Learn how a state attorney general's office prevented $50M in fraud with CJIS-compliant real-time ML analytics processing 10M+ daily transactions.
+              Learn how a state attorney general's office prevented an estimated $50M in fraud with CJIS-compliant real-time ML analytics processing 10M+ daily transactions.
             </p>
           </motion.div>
           <Card className="max-w-4xl mx-auto overflow-hidden border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
@@ -400,14 +400,14 @@ export default function DataAnalytics() {
                 <span className="inline-block px-3 py-1 bg-[oklch(0.65_0.18_55)]/10 text-[oklch(0.55_0.18_55)] rounded-full text-xs font-semibold mb-4 w-fit">
                   State Government
                 </span>
-                <h3 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State Attorney General Prevents $50M in Fraud</h3>
+                <h3 className="text-3xl font-bold text-[oklch(0.20_0.05_250)] mb-4">State Attorney General Prevents Estimated $50M in Fraud</h3>
                 <p className="text-slate-600 mb-6">
-                  Implemented CJIS-compliant fraud detection system processing 10M+ daily transactions with real-time ML analytics and preventing $50M in fraudulent activities annually.
+                  Implemented CJIS-compliant fraud detection system processing 10M+ daily transactions with real-time ML analytics and preventing an estimated $50M in fraudulent activities annually.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
                   <div>
                     <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)]">$50M+</div>
-                    <div className="text-sm text-slate-500">Annual Fraud Prevented</div>
+                    <div className="text-sm text-slate-500">Estimated Annual Fraud Prevented</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-[oklch(0.65_0.18_55)]">10M+</div>

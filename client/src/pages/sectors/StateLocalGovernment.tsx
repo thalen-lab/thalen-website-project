@@ -12,7 +12,7 @@ export default function StateLocalGovernmentSector() {
   const stats = [
     { value: '20+', label: 'States Served' },
     { value: '100+', label: 'Local Agencies' },
-    { value: '$50M+', label: 'Fraud Prevented' },
+    { value: '$50M+', label: 'Estimated Fraud Prevented' },
     { value: '92%', label: 'Efficiency Gains' }
   ];
 
@@ -59,11 +59,11 @@ export default function StateLocalGovernmentSector() {
 
   const caseStudies = [
     {
-      title: 'State Attorney General Prevents $50M+ in Fraud',
+      title: 'State Attorney General Prevents Estimated $50M+ in Fraud',
       agency: 'State Attorney General Office',
-      description: 'Implemented AI-powered fraud detection system with CJIS compliance for state law enforcement, analyzing 2.3M cases and preventing over $50M in fraud annually.',
+      description: 'Implemented AI-powered fraud detection system with CJIS compliance for state law enforcement, analyzing 2.3M cases and preventing an estimated $50M+ in fraud annually.',
       metrics: [
-        { value: '$50M+', label: 'Fraud Prevented' },
+        { value: '$50M+', label: 'Estimated Fraud Prevented' },
         { value: '2.3M', label: 'Cases Analyzed' },
         { value: 'CJIS', label: 'Compliant' }
       ],
@@ -83,10 +83,10 @@ export default function StateLocalGovernmentSector() {
     {
       title: 'State DOT Achieves 92% Efficiency Gain',
       agency: 'State Department of Transportation',
-      description: 'Migrated 40-year-old COBOL mainframe to Salesforce Government Cloud, achieving 92% efficiency improvement and $3.8M annual savings.',
+      description: 'Migrated 40-year-old COBOL mainframe to Salesforce Government Cloud, achieving 92% efficiency improvement and an estimated $3.8M in annual savings.',
       metrics: [
         { value: '92%', label: 'Efficiency Gain' },
-        { value: '$3.8M', label: 'Annual Savings' },
+        { value: '$3.8M', label: 'Estimated Annual Savings' },
         { value: '40yr', label: 'Legacy Replaced' }
       ],
       href: '/case-studies/state-dot'

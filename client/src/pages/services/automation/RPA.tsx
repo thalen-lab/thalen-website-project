@@ -49,7 +49,7 @@ export default function RPA() {
     {
       category: 'Federal Government',
       title: 'Federal Agency Achieves 85% Process Automation',
-      description: 'Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
+      description: 'Implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. Estimated $4.2M contract value with projected 6-month ROI.',
       attribution: 'Led by [Team Member Name] at [Previous Agency/Organization]',
       tags: ['RPA', 'FedRAMP', 'CMMC'],
       link: '/case-studies/federal-agency-automation'

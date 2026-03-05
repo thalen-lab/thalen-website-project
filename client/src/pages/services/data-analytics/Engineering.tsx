@@ -117,7 +117,7 @@ export default function Engineering() {
     challenge: 'DOD was spending 85,000 hours annually on manual data processing across 14 legacy systems. Data latency of 48+ hours prevented real-time decision-making.',
     solution: 'Built automated ETL pipelines using Informatica Gov to consolidate data from all legacy systems with real-time streaming for critical operational data.',
     results: [
-      { metric: '$12M', label: 'Annual cost savings' },
+      { metric: '$12M', label: 'Estimated annual cost savings' },
       { metric: '48hrs → 15min', label: 'Data latency reduction' },
       { metric: '99.7%', label: 'Data accuracy achieved' },
       { metric: '85,000', label: 'Manual hours eliminated' }

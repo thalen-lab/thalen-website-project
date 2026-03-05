@@ -114,10 +114,10 @@ export default function MLAI() {
 
   const caseStudy = {
     agency: 'Federal Benefits Agency',
-    challenge: 'The agency was losing $1.2B annually to fraudulent benefits claims. Manual review processes could only catch obvious fraud, missing sophisticated schemes.',
+    challenge: 'The agency was losing an estimated $1.2B annually to fraudulent benefits claims. Manual review processes could only catch obvious fraud, missing sophisticated schemes.',
     solution: 'Deployed ML-powered fraud detection analyzing claim patterns, applicant behavior, and third-party data with explainable AI for investigator review.',
     results: [
-      { metric: '$500M', label: 'Fraud prevented annually' },
+      { metric: '$500M', label: 'Estimated fraud prevented annually' },
       { metric: '95%', label: 'Detection accuracy' },
       { metric: '<2%', label: 'False positive rate' },
       { metric: '40%', label: 'Reduction in fraud losses' }

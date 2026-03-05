@@ -236,7 +236,7 @@ export default function FederalROICalculator() {
               <div className="flex items-start">
                 <DollarSign className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-accent mr-2 sm:mr-3 flex-shrink-0 mt-0.5 sm:mt-1" />
                 <div className="min-w-0">
-                  <div className="font-semibold text-sm sm:text-base mb-0.5 sm:mb-1">Labor Cost Savings</div>
+                  <div className="font-semibold text-sm sm:text-base mb-0.5 sm:mb-1">Estimated Labor Cost Savings</div>
                   <div className="text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-accent">{result.details.laborSavings}</div>
                   <div className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Annual labor efficiency</div>
                 </div>

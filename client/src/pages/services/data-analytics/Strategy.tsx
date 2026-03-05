@@ -114,10 +114,10 @@ export default function Strategy() {
 
   const caseStudy = {
     agency: 'Federal Civilian Agency',
-    challenge: 'The agency had no enterprise data strategy—each bureau managed data independently with inconsistent quality, no governance, and duplicate systems costing $15M annually.',
+    challenge: 'The agency had no enterprise data strategy—each bureau managed data independently with inconsistent quality, no governance, and duplicate systems costing an estimated $15M annually.',
     solution: 'Developed comprehensive data strategy with governance framework, established data governance council, and implemented data catalog across all bureaus.',
     results: [
-      { metric: '$8M', label: 'Annual cost savings' },
+      { metric: '$8M', label: 'Estimated annual cost savings' },
       { metric: '40%', label: 'Data quality improvement' },
       { metric: '6 months', label: 'Strategy to implementation' },
       { metric: '12', label: 'Bureaus unified' }

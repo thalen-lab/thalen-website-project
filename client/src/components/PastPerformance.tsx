@@ -31,7 +31,7 @@ const pastPerformance: PastPerformanceProject[] = [
   {
     agency: "Department of Defense",
     contract: "Federal Agency Process Automation",
-    value: "$24.5M",
+    value: "~$24.5M",
     duration: "2020-2024",
     outcome: "85% process automation achieved",
     savings: "Estimated $18M annual cost savings",
@@ -47,7 +47,7 @@ const pastPerformance: PastPerformanceProject[] = [
   {
     agency: "Department of Health & Human Services",
     contract: "Healthcare Claims Processing Modernization",
-    value: "$16.8M",
+    value: "~$16.8M",
     duration: "2019-2023",
     outcome: "60% faster claims processing",
     savings: "Estimated $12M cost reduction",
@@ -63,10 +63,10 @@ const pastPerformance: PastPerformanceProject[] = [
   {
     agency: "Department of Defense",
     contract: "Enterprise Cloud Migration & Security",
-    value: "$32.4M",
+    value: "~$32.4M",
     duration: "2021-2025",
     outcome: "15,000 workloads migrated to FedRAMP High cloud",
-    savings: "40% infrastructure cost reduction",
+    savings: "Estimated 40% infrastructure cost reduction",
     metrics: [
       "Zero downtime during migration",
       "FedRAMP High authorization achieved",
@@ -79,7 +79,7 @@ const pastPerformance: PastPerformanceProject[] = [
   {
     agency: "Department of Veterans Affairs",
     contract: "Real-Time Analytics Platform",
-    value: "$8.9M",
+    value: "~$8.9M",
     duration: "2022-2024",
     outcome: "Real-time visibility into veteran services delivery",
     savings: "Estimated $5.2M operational efficiency gains",
@@ -237,11 +237,11 @@ export default function PastPerformance() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">$82.6M</div>
-              <div className="text-sm md:text-base opacity-90">Total Contract Value</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">~$82.6M</div>
+              <div className="text-sm md:text-base opacity-90">Estimated Total Contract Value</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">$35.2M</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">~$35.2M</div>
               <div className="text-sm md:text-base opacity-90">Estimated Client Savings</div>
             </div>
             <div>

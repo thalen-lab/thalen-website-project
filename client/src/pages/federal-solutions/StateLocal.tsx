@@ -48,7 +48,7 @@ export default function StateLocal() {
     {
       agency: 'State Attorney General',
       project: 'CJIS-Compliant Fraud Detection',
-      outcome: '$50M in fraud prevented annually',
+      outcome: 'Estimated $50M in fraud prevented annually',
       description: 'Implemented CJIS-compliant fraud detection system processing 10M+ daily transactions with real-time ML analytics.'
     },
     {
