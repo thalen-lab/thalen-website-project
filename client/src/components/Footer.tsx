@@ -249,7 +249,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="pt-2">
-                <span className="font-semibold text-white">1-800-THALEN</span>
+                <span className="font-semibold text-white">(269) 491-7331</span>
               </li>
             </ul>
 
@@ -331,21 +331,21 @@ export default function Footer() {
               <Phone className="h-5 w-5 text-white/50 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium text-white mb-1">Phone</p>
-                <p className="text-white/70">+1 (555) 123-4567</p>
+                <p className="text-white/70">(269) 491-7331</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
               <Mail className="h-5 w-5 text-white/50 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium text-white mb-1">Email</p>
-                <p className="text-white/70">contact@nexdyne.com</p>
+                <p className="text-white/70">contact@nexdynetechnologies.com</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
               <MapPin className="h-5 w-5 text-white/50 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium text-white mb-1">Headquarters</p>
-                <p className="text-white/70">Washington, DC Metro Area</p>
+                <p className="text-white/70">300 Ottawa Ave NW, Suite 500<br />Grand Rapids, MI 49503</p>
               </div>
             </div>
           </div>

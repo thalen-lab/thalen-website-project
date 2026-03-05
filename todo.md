@@ -4804,3 +4804,10 @@
 - [x] Review and adjust slide 4 (Cloud Modernization) object-position
 - [x] Review and adjust slide 5 (Regulated Industries) object-position
 - [x] Review and adjust slide 6 (Infrastructure / wind turbine engineer) object-position
+## Phase 84: Fix Headquarters Address in Global Footer
+- [x] Change footer address from 'Washington, DC Metro Area' to '300 Ottawa Ave NW, Suite 500, Grand Rapids, MI 49503'
+## Phase 85: Fix Headquarters Email in Global Footer
+- [x] Change footer email from 'contact@nexdyne.com' to 'contact@nexdynetechnologies.com'
+## Phase 86: Fix Business Phone Number in Global Footer
+- [x] Change footer phone from '+1 (555) 123-4567' to '(269) 491-7331'
+- [x] Also update the 1-800-THALEN placeholder in the Company column
