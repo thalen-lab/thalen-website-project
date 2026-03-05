@@ -126,8 +126,8 @@ export default function FederalGovernment() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
               { value: '15+', label: 'Years Federal Experience' },
-              { value: '50+', label: 'Successful ATOs' },
-              { value: '$2.3B+', label: 'Federal ROI Delivered' },
+              { value: '50+', label: 'Agency Partners Served' },
+              { value: '7+', label: 'Security Certifications' },
               { value: '100%', label: 'Security Clearance Rate' }
             ].map((stat, index) => (
               <motion.div

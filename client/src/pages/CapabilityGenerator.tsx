@@ -361,8 +361,8 @@ export default function CapabilityGenerator() {
                       <div className="text-sm text-muted-foreground">Years Experience</div>
                     </div>
                     <div className="text-center p-4 bg-background rounded-lg">
-                      <div className="text-3xl font-bold text-accent">$2.3B+</div>
-                      <div className="text-sm text-muted-foreground">Contracts Delivered</div>
+                      <div className="text-3xl font-bold text-accent">7+</div>
+                      <div className="text-sm text-muted-foreground">Security Certifications</div>
                     </div>
                     <div className="text-center p-4 bg-background rounded-lg">
                       <div className="text-3xl font-bold text-accent">50+</div>

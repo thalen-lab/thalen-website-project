@@ -11,15 +11,15 @@ import { motion } from 'framer-motion';
 export default function FederalGovernmentSector() {
   const stats = [
     { value: '15+', label: 'Years Federal Experience' },
-    { value: '50+', label: 'Successful ATOs' },
-    { value: '$2.3B+', label: 'Federal ROI Delivered' },
+    { value: '50+', label: 'Agency Partners Served' },
+    { value: '7+', label: 'Security Certifications' },
     { value: '25+', label: 'Agencies Served' }
   ];
 
   const capabilities = [
     {
       title: 'FedRAMP Authorization Support',
-      description: 'We guide agencies through the complete FedRAMP authorization lifecycle, from readiness assessment through continuous monitoring. Our team has achieved 15+ FedRAMP authorizations at Moderate and High impact levels with a 100% success rate, implementing 325+ security controls and managing 3PAO assessments with zero high findings.',
+      description: 'We guide agencies through the complete FedRAMP authorization lifecycle, from readiness assessment through continuous monitoring. Our team has supported 15+ FedRAMP implementations at Moderate and High impact levels, implementing 325+ security controls and managing 3PAO assessments.',
       features: ['Readiness Assessment', 'SSP Development', 'Security Controls Implementation', '3PAO Coordination', 'Continuous Monitoring']
     },
     {

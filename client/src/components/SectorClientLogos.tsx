@@ -163,16 +163,16 @@ export default function SectorClientLogos({
             <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Client Satisfaction</div>
           </div>
           <div className="text-center">
-            <div className={`text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>500+</div>
-            <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Projects Delivered</div>
+            <div className={`text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>50+</div>
+            <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Agency Partners</div>
           </div>
           <div className="text-center">
             <div className={`text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>25+</div>
             <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Years Experience</div>
           </div>
           <div className="text-center">
-            <div className={`text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>$2.3B+</div>
-            <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Client ROI</div>
+            <div className={`text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold ${variant === 'dark' ? 'text-[oklch(0.70_0.18_55)]' : 'text-[oklch(0.65_0.18_55)]'}`}>7+</div>
+            <div className={`text-xs ${subtextClass} uppercase tracking-wider mt-1`}>Security Certifications</div>
           </div>
         </motion.div>
       </div>

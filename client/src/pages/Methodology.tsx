@@ -166,8 +166,8 @@ export default function Methodology() {
               <div className="text-sm text-slate-600">Operational Disruptions</div>
             </div>
             <div className="sm:col-span-1">
-              <div className="text-5xl font-bold mb-2">$2.3B</div>
-              <div className="text-sm text-slate-600">Total Agency ROI Delivered</div>
+              <div className="text-5xl font-bold mb-2">50+</div>
+              <div className="text-sm text-slate-600">Agency Partners Served</div>
             </div>
             <div className="sm:col-span-1">
               <div className="text-5xl font-bold mb-2">85%</div>

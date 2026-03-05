@@ -177,8 +177,8 @@ export default function CapabilityStatementPrint() {
                   Core Competencies
                 </h2>
                 <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                  <li><strong>Intelligent Automation</strong> - RPA, process optimization, $2.3B+ documented savings</li>
-                  <li><strong>Cloud Infrastructure</strong> - FedRAMP migrations, 15+ authorizations completed</li>
+                  <li><strong>Intelligent Automation</strong> - RPA, process optimization, measurable efficiency gains</li>
+                  <li><strong>Cloud Infrastructure</strong> - FedRAMP migrations, 15+ implementations supported</li>
                   <li><strong>Cybersecurity</strong> - Zero-trust architecture, FISMA, CMMC, NIST 800-53</li>
                   <li><strong>Data Analytics & AI</strong> - Predictive modeling, responsible AI implementations</li>
                   <li><strong>Application Development</strong> - DevSecOps, legacy modernization, integration</li>
@@ -306,16 +306,16 @@ export default function CapabilityStatementPrint() {
                 </h2>
                 <div className="grid grid-cols-2 gap-3 text-center">
                   <div>
-                    <p className="text-2xl font-bold text-[#FF6B35]">$2.3B+</p>
-                    <p className="text-xs">Documented Savings</p>
+                    <p className="text-2xl font-bold text-[#FF6B35]">50+</p>
+                    <p className="text-xs">Agency Partners</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-[#FF6B35]">340%</p>
-                    <p className="text-xs">Average ROI</p>
+                    <p className="text-2xl font-bold text-[#FF6B35]">7+</p>
+                    <p className="text-xs">Security Certifications</p>
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-[#FF6B35]">15+</p>
-                    <p className="text-xs">FedRAMP Authorizations</p>
+                    <p className="text-xs">FedRAMP Implementations</p>
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-[#FF6B35]">99.7%</p>

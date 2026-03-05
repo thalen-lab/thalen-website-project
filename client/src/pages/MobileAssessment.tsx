@@ -376,12 +376,12 @@ Phone: ${formData.phone}`;
             </div>
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
-                <div className="text-2xl font-bold text-[#FF6B35] mb-1">$2.3B</div>
-                <div className="text-xs text-slate-400">ROI Delivered</div>
+                <div className="text-2xl font-bold text-[#FF6B35] mb-1">50+</div>
+                <div className="text-xs text-slate-400">Agency Partners</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-[#FF6B35] mb-1">200+</div>
-                <div className="text-xs text-slate-400">Projects</div>
+                <div className="text-2xl font-bold text-[#FF6B35] mb-1">25+</div>
+                <div className="text-xs text-slate-400">Years Experience</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-[#FF6B35] mb-1">98%</div>

@@ -38,15 +38,15 @@ export default function SmallBusinessCertifications() {
             <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-5 md:mb-6">
               <div className="flex items-center gap-2 text-slate-300 text-xs sm:text-sm">
                 <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF6B35] flex-shrink-0" />
-                <span>500+ Agency Partners Served</span>
+                <span>50+ Agency Partners Served</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300 text-xs sm:text-sm">
                 <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF6B35] flex-shrink-0" />
-                <span>100% Mission Success Rate</span>
+                <span>100% Client Satisfaction Rate</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300 text-xs sm:text-sm">
                 <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF6B35] flex-shrink-0" />
-                <span>$2.3B+ Client ROI Delivered</span>
+                <span>7+ Security Certifications Held</span>
               </div>
             </div>
             <Link href="/about">
