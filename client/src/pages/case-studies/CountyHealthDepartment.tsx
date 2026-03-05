@@ -41,7 +41,7 @@ export default function CountyHealthDepartment() {
                 The lack of automated disease surveillance capabilities meant staff reviewed paper charts and spreadsheets to detect trends, often missing critical early warning signs of outbreaks. Mandatory disease reporting to the state health department was manual, error-prone, and frequently late. The county needed to achieve 100% on-time compliance while also meeting strict HIPAA requirements for protected health information.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                NexDyne Technology was selected through a competitive county procurement process to design and implement a HIPAA-compliant health data integration platform. The solution would connect all 12 county health systems, enable real-time disease surveillance, automate mandatory state reporting, and provide public health analytics dashboards for 200+ county health workers.
+                Thalen Technologies was selected through a competitive county procurement process to design and implement a HIPAA-compliant health data integration platform. The solution would connect all 12 county health systems, enable real-time disease surveillance, automate mandatory state reporting, and provide public health analytics dashboards for 200+ county health workers.
               </p>
             </div>
           </section>
@@ -53,7 +53,7 @@ export default function CountyHealthDepartment() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                NexDyne Technology designed and implemented a secure integration platform on Azure Government that connected all 12 county health systems with HIPAA-compliant data exchange. The platform enabled real-time disease surveillance and automated state reporting. Key technical components included building a HIPAA-compliant integration hub with end-to-end PHI encryption, implementing HL7 FHIR interfaces for all systems, and establishing secure data pipelines with role-based access controls and audit logging.
+                Thalen Technologies designed and implemented a secure integration platform on Azure Government that connected all 12 county health systems with HIPAA-compliant data exchange. The platform enabled real-time disease surveillance and automated state reporting. Key technical components included building a HIPAA-compliant integration hub with end-to-end PHI encryption, implementing HL7 FHIR interfaces for all systems, and establishing secure data pipelines with role-based access controls and audit logging.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The real-time disease surveillance system implemented automated algorithms based on CDC guidelines, creating automated outbreak detection for 45+ reportable diseases. Geographic heat maps showed disease distribution across the county, with automated alerts triggering when thresholds were exceeded. This replaced the manual 48-72 hour reporting delays with immediate detection capabilities.

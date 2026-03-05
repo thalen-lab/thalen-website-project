@@ -194,7 +194,7 @@ export default function RegulatedIndustriesSector() {
                 Regulated industries operate in environments where a single compliance failure can result in millions of dollars in fines, reputational damage, and operational disruption. Healthcare organizations must protect patient data under HIPAA while improving care quality. Financial institutions must detect fraud in milliseconds while meeting complex AML and KYC requirements. Energy companies must secure critical infrastructure while modernizing aging operational technology.
               </p>
               <p>
-                NexDyne Technologies brings deep expertise across these highly regulated sectors, combining industry-specific knowledge with advanced technology capabilities. Our teams include former compliance officers, healthcare IT specialists, and financial services technologists who understand both the regulatory landscape and the operational realities of your industry. This dual expertise enables us to design solutions that achieve compliance objectives while delivering measurable business value.
+                Thalen Technologies brings deep expertise across these highly regulated sectors, combining industry-specific knowledge with advanced technology capabilities. Our teams include former compliance officers, healthcare IT specialists, and financial services technologists who understand both the regulatory landscape and the operational realities of your industry. This dual expertise enables us to design solutions that achieve compliance objectives while delivering measurable business value.
               </p>
               <p>
                 Our approach integrates compliance requirements into solution architecture from day one—not as an afterthought. We implement defense-in-depth security strategies, comprehensive audit logging, and automated compliance monitoring that provide continuous assurance. Whether you're modernizing legacy systems, implementing AI-powered analytics, or transforming customer experiences, our solutions are designed to meet the highest standards of security, privacy, and regulatory compliance.
@@ -403,7 +403,7 @@ export default function RegulatedIndustriesSector() {
           >
             <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Regulated Operations?</h2>
             <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-              Let's discuss how NexDyne can help your organization achieve compliance objectives while delivering measurable business value. Schedule a complimentary industry assessment today.
+              Let's discuss how Thalen Technologies can help your organization achieve compliance objectives while delivering measurable business value. Schedule a complimentary industry assessment today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

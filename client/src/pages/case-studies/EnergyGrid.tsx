@@ -20,7 +20,7 @@ export default function EnergyGrid() {
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[oklch(0.15_0.05_250)] leading-tight mb-6">
-            Energy Company Deploys $500M Smart Grid
+            Energy Company Deploys Major Smart Grid Initiative
           </h1>
 
           {/* Subtitle */}
@@ -50,7 +50,7 @@ export default function EnergyGrid() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                Working with NexDyne Technology, the utility designed and deployed a holistic, AI-driven smart grid ecosystem. The initial phase involved establishing a foundational layer of intelligence through the deployment of over 50,000 smart meters and 2,000 grid sensors. This massive IoT infrastructure provided the utility with unprecedented, real-time visibility into grid conditions, load patterns, and equipment health, transforming a previously opaque system into a transparent, data-rich environment.
+                Working with Thalen Technologies, the utility designed and deployed a holistic, AI-driven smart grid ecosystem. The initial phase involved establishing a foundational layer of intelligence through the deployment of over 50,000 smart meters and 2,000 grid sensors. This massive IoT infrastructure provided the utility with unprecedented, real-time visibility into grid conditions, load patterns, and equipment health, transforming a previously opaque system into a transparent, data-rich environment.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 Building upon this data foundation, the team implemented advanced machine learning models for AI-powered grid optimization. These models were engineered to perform highly accurate load forecasting and automated grid balancing, optimizing power flow in real-time to manage the inherent variability of renewable energy sources. Crucially, this system included automated fault detection and isolation capabilities, enabling the grid to identify and self-heal localized issues within seconds, drastically minimizing the scope and duration of service disruptions.

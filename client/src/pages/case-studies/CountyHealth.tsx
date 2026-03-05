@@ -41,7 +41,7 @@ export default function CountyHealth() {
                 The root causes extended beyond simple process inefficiency. The county had no real-time visibility into disease patterns, with seasonal flu outbreaks often identified weeks after peak transmission began. Data sources were completely disconnected—120+ healthcare providers, 15 labs, and 80 pharmacies all reported through different channels with no integration.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Any solution needed to meet strict compliance requirements. The platform required HIPAA compliance for protected health information and CJIS compliance for law enforcement integration supporting contact tracing and quarantine enforcement. NexDyne Technology was selected through a competitive procurement process to design and implement a comprehensive real-time public health surveillance platform.
+                Any solution needed to meet strict compliance requirements. The platform required HIPAA compliance for protected health information and CJIS compliance for law enforcement integration supporting contact tracing and quarantine enforcement. Thalen Technologies was selected through a competitive procurement process to design and implement a comprehensive real-time public health surveillance platform.
               </p>
             </div>
           </section>
@@ -53,7 +53,7 @@ export default function CountyHealth() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                NexDyne Technology designed and implemented a HIPAA-compliant real-time surveillance platform that automatically ingests disease reports from all healthcare providers, labs, and pharmacies. The platform enables outbreak detection within 3 days instead of 14, transforming the county's public health response capabilities.
+                Thalen Technologies designed and implemented a HIPAA-compliant real-time surveillance platform that automatically ingests disease reports from all healthcare providers, labs, and pharmacies. The platform enables outbreak detection within 3 days instead of 14, transforming the county's public health response capabilities.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The technical implementation included building HL7/FHIR integration with 120+ healthcare providers for automated disease reporting, integrating with 15 commercial labs for real-time lab result ingestion, and connecting to 80 pharmacies for syndromic surveillance including flu medication purchases. Automated outbreak detection algorithms using CDC guidelines were implemented alongside real-time dashboards for epidemiologists with geographic heat maps.

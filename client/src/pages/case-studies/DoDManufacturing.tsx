@@ -38,7 +38,7 @@ export default function DoDManufacturing() {
                 A Department of Defense manufacturing facility producing critical defense components across 50 production lines experienced 150+ unplanned downtime incidents annually. The facility's aging industrial control systems, some over 15 years old, lacked predictive maintenance capabilities and had significant cybersecurity vulnerabilities. Unplanned downtime disrupted mission-critical production schedules, threatened delivery commitments, and cost an estimated $18 million annually in lost production and emergency repairs.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                NexDyne Technology was awarded a contract through DoD's IDIQ vehicle to modernize the facility's cybersecurity posture, implement predictive maintenance analytics, and achieve CMMC Level 3 certification. The solution would eliminate unplanned downtime, provide real-time operational visibility, and ensure compliance with stringent defense cybersecurity requirements.
+                Thalen Technologies was awarded a contract through DoD's IDIQ vehicle to modernize the facility's cybersecurity posture, implement predictive maintenance analytics, and achieve CMMC Level 3 certification. The solution would eliminate unplanned downtime, provide real-time operational visibility, and ensure compliance with stringent defense cybersecurity requirements.
               </p>
             </div>
           </section>
@@ -50,7 +50,7 @@ export default function DoDManufacturing() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                NexDyne Technology deployed FedRAMP-authorized cybersecurity platforms with zero-trust network architecture and continuous monitoring specifically designed for ICS/SCADA environments. The implementation included zero-trust network architecture with micro-segmentation, FedRAMP-authorized endpoint protection on all industrial control systems, and continuous monitoring with SIEM integration for real-time threat detection.
+                Thalen Technologies deployed FedRAMP-authorized cybersecurity platforms with zero-trust network architecture and continuous monitoring specifically designed for ICS/SCADA environments. The implementation included zero-trust network architecture with micro-segmentation, FedRAMP-authorized endpoint protection on all industrial control systems, and continuous monitoring with SIEM integration for real-time threat detection.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The team deployed IoT sensors across all 50 production lines with machine learning-powered predictive maintenance analytics. Over 2,500 IoT sensors were installed monitoring vibration, temperature, and pressure across critical equipment. The system achieved 94% accuracy in predicting equipment failures 72 hours in advance, enabling maintenance teams to schedule repairs during planned downtime rather than responding to emergency situations.

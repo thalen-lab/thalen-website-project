@@ -41,7 +41,7 @@ export default function StateDOT() {
                 The challenges were significant. Asset data resided in the mainframe, GIS data in ArcGIS, and financial data in SAP—with no integration between systems, requiring manual data reconciliation. Field crews lacked real-time access to asset condition data during emergency repairs, causing delays and safety risks. The mainframe itself cost an estimated $1.2M annually just to maintain.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                NexDyne Technology was selected through a competitive RFP process to migrate the DOT's asset management system to Salesforce Government Cloud, a StateRAMP-authorized platform. The project required zero downtime during migration, integration with existing GIS and financial systems, and comprehensive training for 850+ field and office personnel.
+                Thalen Technologies was selected through a competitive RFP process to migrate the DOT's asset management system to Salesforce Government Cloud, a StateRAMP-authorized platform. The project required zero downtime during migration, integration with existing GIS and financial systems, and comprehensive training for 850+ field and office personnel.
               </p>
             </div>
           </section>
@@ -53,7 +53,7 @@ export default function StateDOT() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                NexDyne Technology designed and implemented a comprehensive asset management solution on Salesforce Government Cloud, replacing the 40-year-old mainframe with a modern, mobile-first platform. The team migrated 2.4 million asset records from the COBOL mainframe to Salesforce with zero data loss, built a custom mobile app for field crews to access asset data and submit inspection reports offline, and integrated Salesforce with ArcGIS for real-time location-based asset visualization.
+                Thalen Technologies designed and implemented a comprehensive asset management solution on Salesforce Government Cloud, replacing the 40-year-old mainframe with a modern, mobile-first platform. The team migrated 2.4 million asset records from the COBOL mainframe to Salesforce with zero data loss, built a custom mobile app for field crews to access asset data and submit inspection reports offline, and integrated Salesforce with ArcGIS for real-time location-based asset visualization.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The platform connected to the SAP financial system for automated budget tracking and procurement workflows. Predictive maintenance algorithms were implemented using historical inspection data to prioritize maintenance activities. Full compliance with state security and data residency requirements was achieved through StateRAMP-authorized infrastructure with data residency configured to keep all state data within state boundaries.

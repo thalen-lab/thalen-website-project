@@ -20,7 +20,7 @@ export default function StateAttorneyGeneral() {
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[oklch(0.15_0.05_250)] leading-tight mb-6">
-            State Attorney General Prevents $50M+ in Fraud
+            State Attorney General Prevents Estimated $50M+ in Fraud
           </h1>
 
           {/* Subtitle */}
@@ -53,7 +53,7 @@ export default function StateAttorneyGeneral() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                The attorney general's office needed a platform that could analyze massive volumes of complaint data while meeting the strict security requirements for law enforcement systems. Working with NexDyne Technology, the office deployed a CJIS-compliant fraud detection platform that applied machine learning and network analysis to identify fraud schemes operating across the state. The platform integrated with the office's existing case management system, enriching complaint data with external information sources while maintaining the security controls required for handling criminal justice information.
+                The attorney general's office needed a platform that could analyze massive volumes of complaint data while meeting the strict security requirements for law enforcement systems. Working with Thalen Technologies, the office deployed a CJIS-compliant fraud detection platform that applied machine learning and network analysis to identify fraud schemes operating across the state. The platform integrated with the office's existing case management system, enriching complaint data with external information sources while maintaining the security controls required for handling criminal justice information.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The technical architecture leveraged multiple AI techniques to detect fraud patterns. Natural language processing analyzed complaint narratives to identify similar descriptions of fraudulent schemes even when victims used different terminology. Network analysis mapped relationships between complaints based on shared phone numbers, addresses, bank accounts, and other identifiers, revealing organized fraud operations that targeted multiple victims. Machine learning models trained on historical cases learned to predict which complaints likely represented serious fraud warranting immediate investigation. The platform generated risk scores and relationship maps that enabled investigators to quickly assess whether individual complaints represented isolated incidents or components of larger fraud schemes.

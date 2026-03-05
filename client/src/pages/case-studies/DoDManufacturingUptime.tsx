@@ -53,7 +53,7 @@ export default function DoDManufacturingUptime() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                Working with NexDyne Technology, the facility implemented a comprehensive predictive maintenance platform using FedRAMP-authorized IoT and analytics tools. The approach enabled the facility to shift from reactive to proactive maintenance while meeting all DoD cybersecurity requirements. The implementation began with a thorough equipment criticality analysis that identified 45 high-priority assets and established baseline performance metrics from historical failure data.
+                Working with Thalen Technologies, the facility implemented a comprehensive predictive maintenance platform using FedRAMP-authorized IoT and analytics tools. The approach enabled the facility to shift from reactive to proactive maintenance while meeting all DoD cybersecurity requirements. The implementation began with a thorough equipment criticality analysis that identified 45 high-priority assets and established baseline performance metrics from historical failure data.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The technical infrastructure included deployment of over 200 industrial IoT sensors monitoring vibration, temperature, pressure, and power consumption across critical equipment. Edge computing capabilities enabled real-time data processing while maintaining CMMC-compliant data collection and transmission protocols. The sensor network fed into machine learning models that analyzed 50 million data points daily to predict failures 7-14 days in advance.

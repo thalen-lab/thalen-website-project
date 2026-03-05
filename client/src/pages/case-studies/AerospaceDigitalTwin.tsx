@@ -53,7 +53,7 @@ export default function AerospaceDigitalTwin() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                Working with NexDyne Technology, a comprehensive digital twin platform was engineered and deployed across the entire fleet of over 250 aircraft. This solution created high-fidelity virtual replicas of each asset, integrating vast streams of real-time sensor telemetry with advanced physics-based models to simulate wear and fatigue under actual operating conditions.
+                Working with Thalen Technologies, a comprehensive digital twin platform was engineered and deployed across the entire fleet of over 250 aircraft. This solution created high-fidelity virtual replicas of each asset, integrating vast streams of real-time sensor telemetry with advanced physics-based models to simulate wear and fatigue under actual operating conditions.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The core of the solution was a sophisticated predictive maintenance engine powered by machine learning. This engine analyzed over 10,000 sensor streams per aircraft, enabling the accurate forecasting of component failures 30 to 90 days in advance with an 89% prediction accuracy. This foresight allowed maintenance teams to move from emergency repairs to planned, optimized interventions.

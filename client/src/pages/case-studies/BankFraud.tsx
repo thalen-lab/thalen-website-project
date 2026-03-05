@@ -20,7 +20,7 @@ export default function BankFraud() {
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[oklch(0.15_0.05_250)] leading-tight mb-6">
-            Bank Prevents $45M in Fraud with AI
+            Bank Prevents Estimated $45M in Fraud with AI
           </h1>
 
           {/* Subtitle */}
@@ -53,7 +53,7 @@ export default function BankFraud() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                Working with NexDyne Technology, the bank designed and deployed a multi-model machine learning architecture. This advanced system utilized an ensemble of specialized models, including gradient boosting, neural networks, and graph analytics, each optimized for distinct fraud typologies. A model stacking approach was implemented to synthesize the outputs for a final, highly accurate decision, moving beyond the limitations of single-model systems.
+                Working with Thalen Technologies, the bank designed and deployed a multi-model machine learning architecture. This advanced system utilized an ensemble of specialized models, including gradient boosting, neural networks, and graph analytics, each optimized for distinct fraud typologies. A model stacking approach was implemented to synthesize the outputs for a final, highly accurate decision, moving beyond the limitations of single-model systems.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 Central to the solution was the development of a sophisticated behavioral analytics engine. This engine continuously analyzed over 200 features per transaction, incorporating device fingerprinting, geolocation patterns, and transaction velocity to establish a unique, real-time profile for every user. This shift from static rules to dynamic behavioral modeling was key to reducing false positives and accurately identifying anomalous behavior indicative of fraud.

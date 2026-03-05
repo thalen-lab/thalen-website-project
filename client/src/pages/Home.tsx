@@ -84,7 +84,7 @@ export default function Home() {
     {
       category: 'Federal Government',
       title: 'Federal Agency Achieves 85% Process Automation',
-      description: 'Implemented UiPath Gov RPA platform with comprehensive ATO documentation, reducing claims processing time from 6 weeks to 2 days. $4.2M contract delivered 85% automation rate.',
+      description: 'Implemented UiPath Gov RPA platform with comprehensive ATO documentation, reducing claims processing time from 6 weeks to 2 days. Estimated $4.2M contract delivered 85% automation rate.',
       metric: '85%',
       metricLabel: 'Automation Rate',
       href: '/case-studies/federal-automation'

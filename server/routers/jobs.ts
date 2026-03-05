@@ -17,11 +17,11 @@ async function sendApplicantConfirmation(
   jobDepartment: string
 ): Promise<void> {
   const emailContent = `
-Job Application Confirmation - NexDyne Technology
+Job Application Confirmation - Thalen Technologies
 
 Dear ${applicantName},
 
-Thank you for your interest in joining NexDyne Technology! We have received your application for the following position:
+Thank you for your interest in joining Thalen Technologies! We have received your application for the following position:
 
 **Position:** ${jobTitle}
 **Department:** ${jobDepartment}
@@ -38,13 +38,13 @@ In the meantime, we encourage you to:
 
 If you have any questions about your application, please don't hesitate to reach out to our recruiting team at careers@nexdyne.com.
 
-Thank you again for considering NexDyne Technology as your next career destination. We look forward to reviewing your application!
+Thank you again for considering Thalen Technologies as your next career destination. We look forward to reviewing your application!
 
 Best regards,
-The NexDyne Talent Acquisition Team
+The Thalen Talent Acquisition Team
 
 ---
-NexDyne Technology
+Thalen Technologies
 Intelligence, Delivered.
 https://nexdyne.com
   `.trim();

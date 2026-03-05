@@ -20,7 +20,7 @@ export default function HealthcareAI() {
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[oklch(0.15_0.05_250)] leading-tight mb-6">
-            Healthcare System Saves $12M Through AI Analytics
+            Healthcare System Saves Estimated $12M Through AI Analytics
           </h1>
 
           {/* Subtitle */}
@@ -53,7 +53,7 @@ export default function HealthcareAI() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                The healthcare system needed more than a technical integration project. It required a fundamental transformation in how clinical data flowed through the organization and how that data informed patient care. Working with NexDyne Technology, the organization designed and deployed an AI-powered analytics platform that created a unified view of patient information while respecting the autonomy of individual facilities and their existing systems.
+                The healthcare system needed more than a technical integration project. It required a fundamental transformation in how clinical data flowed through the organization and how that data informed patient care. Working with Thalen Technologies, the organization designed and deployed an AI-powered analytics platform that created a unified view of patient information while respecting the autonomy of individual facilities and their existing systems.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The platform established secure connections to eight different electronic medical records systems, extracting and normalizing patient data in real time. Advanced natural language processing analyzed unstructured clinical notes, radiology reports, and physician observations to identify patterns that structured data alone would miss. Machine learning models trained on the healthcare system's historical data learned to predict which patients faced elevated risks for readmission, sepsis, or other adverse events, enabling proactive intervention before conditions became critical.

@@ -4866,3 +4866,19 @@
 - [x] Fixed remaining NexDyne references in CookieConsent.tsx and InsightArticleLayout.tsx
 - [x] Confirmed $2.3B claim already removed from CapabilityStatement.tsx (was cleaned in earlier phase)
 - [x] Confirmed zero remaining: veteran-owned, SDVOSB, Washington DC, 500+, FedRAMP Authorizations, Mission Success Rate
+## Phase 95: Final Credibility Polish - Titles, NexDyne References, Disclaimer
+- [x] Soften case study titles that contain specific dollar figures
+- [x] Replace all remaining NexDyne Technology references with Thalen Technologies in case study body text
+- [x] Add general disclaimer to Case Studies index page about projected/client-reported metrics
+- [x] Softened titles: BankFraud, DODDataPipelines, HealthcareAI, StateAttorneyGeneral (added 'Estimated')
+- [x] Softened title: EnergyGrid (removed $500M, reworded to 'Major Smart Grid Initiative')
+- [x] Updated matching card titles in CaseStudies.tsx index page
+- [x] Softened $4.2M reference in Home.tsx case study card
+- [x] Replaced all 27 NexDyne Technology references in case study body text with Thalen Technologies
+- [x] Replaced NexDyne references in 4 sector pages (FederalContractors, FederalGovernment, RegulatedIndustries, StateLocalGovernment)
+- [x] Replaced NexDyne in server/routers/jobs.ts (user-facing email content)
+- [x] Replaced NexDyne in print.css
+- [x] Softened 100% claims in FederalContractors.tsx (C3PAO Success Rate, certification success)
+- [x] Added professional disclaimer section to CaseStudies.tsx index page
+- [x] Updated CaseStudies.tsx stats: '15+ Years Government Experience' → '25+ Years Combined Team Experience'
+- [x] Zero NexDyne references remain in client/src/ code

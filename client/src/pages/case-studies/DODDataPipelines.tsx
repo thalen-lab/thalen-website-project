@@ -20,7 +20,7 @@ export default function DODDataPipelines() {
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[oklch(0.15_0.05_250)] leading-tight mb-6">
-            DOD Saves $12M Annually with Automated Data Pipelines
+            DOD Saves Estimated $12M Annually with Automated Data Pipelines
           </h1>
 
           {/* Subtitle */}
@@ -53,7 +53,7 @@ export default function DODDataPipelines() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                Working with NexDyne Technology, the solution began with the design and deployment of a FedRAMP-authorized, cloud-native data lake within AWS GovCloud. This architecture established a secure, central repository for all supply chain data, utilizing services like S3 for scalable raw data storage, AWS Glue for robust ETL orchestration, and Athena for efficient, cost-effective SQL querying. This foundation provided the necessary security, scalability, and compliance framework for defense-level data workloads.
+                Working with Thalen Technologies, the solution began with the design and deployment of a FedRAMP-authorized, cloud-native data lake within AWS GovCloud. This architecture established a secure, central repository for all supply chain data, utilizing services like S3 for scalable raw data storage, AWS Glue for robust ETL orchestration, and Athena for efficient, cost-effective SQL querying. This foundation provided the necessary security, scalability, and compliance framework for defense-level data workloads.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The core of the solution involved building 47 custom, high-performance data connectors. These connectors were engineered to automatically and securely extract data from each of the 47 source systems, with a refresh cycle reduced to every 15 minutes. Each pipeline incorporated system-specific authentication, rate-limiting, and self-healing error recovery logic, ensuring continuous, reliable data flow without manual intervention.

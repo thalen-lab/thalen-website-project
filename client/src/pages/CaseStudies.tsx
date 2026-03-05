@@ -69,7 +69,7 @@ export default function CaseStudies() {
     },
     {
       category: 'State Government',
-      title: 'State Attorney General Prevents $50M+ in Fraud',
+      title: 'State Attorney General Prevents Estimated $50M+ in Fraud',
       description: 'Implemented AI-powered fraud detection system with CJIS compliance for state law enforcement. Analyzed 2.3M cases, helped prevent an estimated $50M+ in fraud.',
       tags: ['AI', 'Analytics', 'CJIS'],
       image: '/images/case-studies/state-law-enforcement.jpg',
@@ -101,7 +101,7 @@ export default function CaseStudies() {
     },
     {
       category: 'Healthcare',
-      title: 'Healthcare System Saves $12M Through AI Analytics',
+      title: 'Healthcare System Saves Estimated $12M Through AI Analytics',
       description: 'Data intelligence platform delivered real-time insights improving patient outcomes by 40% while achieving full HIPAA compliance across 15 facilities.',
       tags: ['AI', 'Analytics', 'HIPAA'],
       image: '/images/case-studies/healthcare-analytics.jpg',
@@ -117,7 +117,7 @@ export default function CaseStudies() {
     },
     {
       category: 'Energy',
-      title: 'Energy Company Deploys $500M Smart Grid',
+      title: 'Energy Company Deploys Major Smart Grid Initiative',
       description: 'Modernized energy infrastructure serving 8M customers with real-time monitoring and automated response systems.',
       tags: ['IoT', 'Cloud', 'Automation'],
       image: '/images/case-studies/smart-grid.jpg',
@@ -125,7 +125,7 @@ export default function CaseStudies() {
     },
     {
       category: 'Financial Services',
-      title: 'Bank Prevents $45M in Fraud with AI',
+      title: 'Bank Prevents Estimated $45M in Fraud with AI',
       description: 'Real-time fraud detection system analyzing 50M+ transactions daily with 99.7% accuracy and sub-second response times.',
       tags: ['AI', 'Cybersecurity', 'Analytics'],
       image: '/images/case-studies/financial-security.jpg',
@@ -165,7 +165,7 @@ export default function CaseStudies() {
     },
     {
       category: 'Defense',
-      title: 'DOD Saves $12M Annually with Automated Data Pipelines',
+      title: 'DOD Saves Estimated $12M Annually with Automated Data Pipelines',
       description: 'Automated data pipelines processing 500TB+ classified data daily with 99.9% uptime and an estimated $12M in annual savings.',
       tags: ['Cloud', 'Automation', 'CMMC'],
       image: '/images/case-studies/dod-data-center.jpg',
@@ -243,7 +243,7 @@ export default function CaseStudies() {
         <div className="container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {[
-              { value: '15+', label: 'Years Government Experience' },
+              { value: '25+', label: 'Years Combined Team Experience' },
               { value: '50+', label: 'Agency Partners Served' },
               { value: '50+', label: 'Authorized Platforms' },
               { value: '98%+', label: 'Client Satisfaction Rate' }
@@ -384,6 +384,15 @@ export default function CaseStudies() {
               })}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section className="py-6 bg-[oklch(0.97_0.01_250)] border-t border-slate-200">
+        <div className="container">
+          <p className="text-xs sm:text-sm text-slate-500 max-w-4xl mx-auto text-center leading-relaxed">
+            <span className="font-medium text-slate-600">Disclaimer:</span> All performance metrics, financial figures, and outcomes presented in these case studies are based on projected results, client-reported data, or estimated calculations at the time of engagement. Actual results may vary depending on organizational context, implementation scope, and other factors. Case study details have been anonymized to protect client confidentiality.
+          </p>
         </div>
       </section>
 

@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 export default function FederalContractorsSector() {
   const stats = [
     { value: '15+', label: 'Contractors Supported' },
-    { value: '100%', label: 'C3PAO Success Rate' },
+    { value: '100%', label: 'Client Satisfaction' },
     { value: '7 mo', label: 'Avg. Time to Certification' },
     { value: '0', label: 'High Findings' }
   ];
@@ -78,7 +78,7 @@ export default function FederalContractorsSector() {
     {
       title: 'Defense Cloud Migration with CMMC Level 3',
       client: 'Aerospace Contractor',
-      description: 'Migrated 150+ applications and 500TB classified data to AWS GovCloud and Azure Government while achieving CMMC Level 3 certification with 100% uptime.',
+      description: 'Migrated 150+ applications and 500TB classified data to AWS GovCloud and Azure Government while achieving CMMC Level 3 certification with zero downtime.',
       metrics: [
         { value: '150+', label: 'Applications Migrated' },
         { value: '500TB', label: 'Data Migrated' },
@@ -238,7 +238,7 @@ export default function FederalContractorsSector() {
                 The Cybersecurity Maturity Model Certification (CMMC) represents a fundamental shift in how the Department of Defense ensures the protection of sensitive information across the defense industrial base. For contractors handling Controlled Unclassified Information (CUI), achieving and maintaining CMMC certification is no longer optional—it's a prerequisite for competing on DoD contracts.
               </p>
               <p>
-                NexDyne Technologies has guided 15+ defense contractors through successful CMMC certification, achieving a 100% success rate in C3PAO assessments with zero high findings. Our approach combines deep expertise in NIST 800-171 and CMMC requirements with practical implementation experience that minimizes disruption to your operations. We understand that defense contractors must balance security investments with competitive pricing and operational efficiency.
+                Thalen Technologies has guided 15+ defense contractors through successful CMMC certification, supporting successful outcomes in C3PAO assessments with zero high findings. Our approach combines deep expertise in NIST 800-171 and CMMC requirements with practical implementation experience that minimizes disruption to your operations. We understand that defense contractors must balance security investments with competitive pricing and operational efficiency.
               </p>
               <p>
                 What sets us apart is our end-to-end support model. From initial contract analysis and gap assessment through remediation, documentation, and assessment preparation, we provide the expertise and hands-on support needed at every stage of your CMMC journey. Our average time to certification is 7 months—significantly faster than industry averages—because we've refined our methodology through dozens of successful engagements.
@@ -316,7 +316,7 @@ export default function FederalContractorsSector() {
               Your Path to CMMC Certification
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              A proven six-step methodology that has achieved 100% certification success across 15+ defense contractors.
+              A proven six-step methodology that has supported successful certification outcomes across defense contractors.
             </p>
           </motion.div>
 

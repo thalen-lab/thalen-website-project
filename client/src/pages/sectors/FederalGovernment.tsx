@@ -188,7 +188,7 @@ export default function FederalGovernmentSector() {
             </h2>
             <div className="prose prose-lg max-w-none text-slate-600 space-y-6">
               <p>
-                Federal agencies face unprecedented pressure to modernize legacy systems, enhance cybersecurity posture, and deliver improved citizen services—all while navigating complex compliance requirements and budget constraints. NexDyne Technologies brings 15+ years of dedicated federal experience to help agencies overcome these challenges with proven methodologies and measurable results.
+                Federal agencies face unprecedented pressure to modernize legacy systems, enhance cybersecurity posture, and deliver improved citizen services—all while navigating complex compliance requirements and budget constraints. Thalen Technologies brings 15+ years of dedicated federal experience to help agencies overcome these challenges with proven methodologies and measurable results.
               </p>
               <p>
                 Our approach begins with understanding your mission objectives, not just your technology requirements. We work backward from mission outcomes to identify the right combination of process optimization, platform implementation, and organizational change management. Whether you need to modernize a 40-year-old mainframe system, achieve FedRAMP authorization for a cloud migration, or implement zero-trust architecture across your enterprise, our cleared professionals deliver solutions that work within your operational constraints.
@@ -418,7 +418,7 @@ export default function FederalGovernmentSector() {
           >
             <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to Modernize Your Federal Operations?</h2>
             <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-              Let's discuss how NexDyne can help your agency achieve mission objectives with compliant, secure technology solutions. Schedule a complimentary assessment with our federal experts today.
+              Let's discuss how Thalen Technologies can help your agency achieve mission objectives with compliant, secure technology solutions. Schedule a complimentary assessment with our federal experts today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

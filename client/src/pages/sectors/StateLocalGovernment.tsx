@@ -206,7 +206,7 @@ export default function StateLocalGovernmentSector() {
                 State and local governments serve as the front line of public service delivery, directly impacting the daily lives of millions of citizens. From processing driver's licenses and managing public health programs to supporting law enforcement and maintaining critical infrastructure, these agencies face mounting pressure to modernize operations while working within constrained budgets and complex procurement requirements.
               </p>
               <p>
-                NexDyne Technologies understands the unique challenges facing state and local agencies. Unlike federal environments with standardized compliance frameworks, state and local governments must navigate a patchwork of regulations, procurement rules, and technical requirements that vary by jurisdiction. Our team brings deep experience across 20+ states, helping agencies implement StateRAMP/GovRAMP-authorized platforms, achieve CJIS compliance for public safety systems, and modernize legacy infrastructure without disrupting critical services.
+                Thalen Technologies understands the unique challenges facing state and local agencies. Unlike federal environments with standardized compliance frameworks, state and local governments must navigate a patchwork of regulations, procurement rules, and technical requirements that vary by jurisdiction. Our team brings deep experience across 20+ states, helping agencies implement StateRAMP/GovRAMP-authorized platforms, achieve CJIS compliance for public safety systems, and modernize legacy infrastructure without disrupting critical services.
               </p>
               <p>
                 We recognize that state and local agencies often lack the IT resources and specialized expertise available to larger federal organizations. That's why we provide end-to-end support—from navigating cooperative purchasing agreements and grant compliance to implementing solutions and training staff. Our mission-focused approach ensures that every technology investment delivers measurable improvements in constituent services, operational efficiency, and cost savings.
@@ -472,7 +472,7 @@ export default function StateLocalGovernmentSector() {
           >
             <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to Modernize Your State or Local Agency?</h2>
             <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-              Let's discuss how NexDyne can help your agency deliver better constituent services with compliant, cost-effective technology solutions. Schedule a complimentary assessment today.
+              Let's discuss how Thalen Technologies can help your agency deliver better constituent services with compliant, cost-effective technology solutions. Schedule a complimentary assessment today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">

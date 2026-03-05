@@ -41,7 +41,7 @@ export default function StateEnergyCommission() {
                 The challenges were compounded by the complexity of the existing infrastructure. Field technicians performed reactive inspections, often missing early warning signs of equipment degradation. When failures occurred, they happened unexpectedly, extending restoration times and increasing costs. The commission needed a solution that could provide predictive capabilities while meeting StateRAMP authorization requirements for state data security and integrating with legacy SCADA systems.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                NexDyne Technology was selected through a competitive state procurement process to design and implement a StateRAMP-authorized IoT platform for real-time grid monitoring and predictive maintenance. The solution would deploy 15,000+ sensors across 500+ substations, integrate with legacy SCADA systems, and use machine learning to predict equipment failures weeks in advance.
+                Thalen Technologies was selected through a competitive state procurement process to design and implement a StateRAMP-authorized IoT platform for real-time grid monitoring and predictive maintenance. The solution would deploy 15,000+ sensors across 500+ substations, integrate with legacy SCADA systems, and use machine learning to predict equipment failures weeks in advance.
               </p>
             </div>
           </section>
@@ -53,7 +53,7 @@ export default function StateEnergyCommission() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                NexDyne Technology deployed a StateRAMP-authorized cloud platform on Azure Government with 15,000+ IoT sensors across 500+ substations, collecting real-time data on temperature, vibration, load, and equipment health. The implementation achieved NERC CIP compliance for critical infrastructure protection while establishing secure data pipelines with encryption and access controls.
+                Thalen Technologies deployed a StateRAMP-authorized cloud platform on Azure Government with 15,000+ IoT sensors across 500+ substations, collecting real-time data on temperature, vibration, load, and equipment health. The implementation achieved NERC CIP compliance for critical infrastructure protection while establishing secure data pipelines with encryption and access controls.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 Machine learning models were developed using five years of historical maintenance and outage data. The models achieved 89% accuracy in predicting equipment failures 2-4 weeks in advance, enabling proactive maintenance scheduling during planned downtime windows. This predictive capability reduced emergency repairs by 78% through early failure detection and prevented 65% of potential outages through proactive interventions.
