@@ -25,7 +25,7 @@ export default function StateEnergyCommission() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-            How a StateRAMP-authorized IoT platform monitoring 500+ substations with 15,000+ sensors enabled predictive maintenance that reduced outages by 65% for 8.5 million residents and delivered $12M in annual savings.
+            How a StateRAMP-authorized IoT platform monitoring 500+ substations with 15,000+ sensors enabled predictive maintenance that reduced outages by 65% for 8.5 million residents and delivered an estimated $12M in annual savings.
           </p>
 
           {/* The Opportunity */}
@@ -35,7 +35,7 @@ export default function StateEnergyCommission() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                A state Energy Commission serving 8.5 million residents faced increasing grid outages due to aging infrastructure and reactive maintenance practices. The commission manually monitored 500+ substations across the state with no early warning system for equipment failures. Outages disrupted businesses, affected critical services, and cost the state economy over $45 million annually. Emergency repairs were expensive and time-consuming, while residents experienced extended power disruptions.
+                A state Energy Commission serving 8.5 million residents faced increasing grid outages due to aging infrastructure and reactive maintenance practices. The commission manually monitored 500+ substations across the state with no early warning system for equipment failures. Outages disrupted businesses, affected critical services, and cost the state economy an estimated $45 million annually. Emergency repairs were expensive and time-consuming, while residents experienced extended power disruptions.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The challenges were compounded by the complexity of the existing infrastructure. Field technicians performed reactive inspections, often missing early warning signs of equipment degradation. When failures occurred, they happened unexpectedly, extending restoration times and increasing costs. The commission needed a solution that could provide predictive capabilities while meeting StateRAMP authorization requirements for state data security and integrating with legacy SCADA systems.
@@ -74,7 +74,7 @@ export default function StateEnergyCommission() {
                 The platform delivered transformative results for grid reliability and operational efficiency. Grid outages decreased by 65% through predictive maintenance interventions, significantly improving service reliability for 8.5 million residents. The 89% prediction accuracy enabled the commission to shift from reactive emergency repairs to planned maintenance, reducing costs and minimizing service disruptions.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Financial impact was substantial, with $12 million in annual savings achieved through reduced emergency repairs, optimized maintenance scheduling, and prevented outages. The economic benefit to the state extended beyond direct savings, as improved grid reliability reduced business disruptions and supported economic growth across the service area.
+                Financial impact was substantial, with an estimated $12 million in annual savings achieved through reduced emergency repairs, optimized maintenance scheduling, and prevented outages. The economic benefit to the state extended beyond direct savings, as improved grid reliability reduced business disruptions and supported economic growth across the service area.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 The success has positioned the commission as a leader in smart grid modernization. The StateRAMP-authorized platform serves as a model for other state energy agencies seeking to improve grid reliability through predictive analytics. The integration approach demonstrated that modern IoT and analytics capabilities can be added to legacy infrastructure without disrupting existing operations, providing a pathway for other utilities facing similar modernization challenges.

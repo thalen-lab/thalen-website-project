@@ -46,7 +46,7 @@ export default function CaseStudies() {
     {
       category: 'Federal Government',
       title: 'Federal Agency Achieves 85% Process Automation',
-      description: 'Implemented UiPath RPA platform with FedRAMP authorization for federal agency, automating 85% of manual workflows while maintaining TS/SCI compliance. $4.2M contract delivered 6-month ROI.',
+      description: 'Implemented UiPath RPA platform with FedRAMP authorization for federal agency, automating 85% of manual workflows while maintaining TS/SCI compliance. Estimated $4.2M in annual savings with projected 6-month ROI.',
       tags: ['RPA', 'FedRAMP'],
       image: '/rocket-federal.webp',
       href: '/case-studies/federal-automation'
@@ -70,7 +70,7 @@ export default function CaseStudies() {
     {
       category: 'State Government',
       title: 'State Attorney General Prevents $50M+ in Fraud',
-      description: 'Implemented AI-powered fraud detection system with CJIS compliance for state law enforcement. Analyzed 2.3M cases, prevented $50M+ in fraud.',
+      description: 'Implemented AI-powered fraud detection system with CJIS compliance for state law enforcement. Analyzed 2.3M cases, helped prevent an estimated $50M+ in fraud.',
       tags: ['AI', 'Analytics', 'CJIS'],
       image: '/images/case-studies/state-law-enforcement.jpg',
       href: '/case-studies/state-attorney-general'
@@ -94,7 +94,7 @@ export default function CaseStudies() {
     {
       category: 'Defense',
       title: 'Defense Contractor: Zero-Downtime Cloud Migration',
-      description: 'Migrated 150+ applications and 500TB classified data to AWS GovCloud and Azure Government. Achieved CMMC Level 3 with 100% uptime and $4.5M annual savings.',
+      description: 'Migrated 150+ applications and 500TB classified data to AWS GovCloud and Azure Government. Achieved CMMC Level 3 with zero downtime and an estimated $4.5M in annual savings.',
       tags: ['Cloud', 'Cybersecurity', 'CMMC'],
       image: '/images/case-studies/defense-cyber-ops.jpg',
       href: '/case-studies/defense-cloud'
@@ -166,7 +166,7 @@ export default function CaseStudies() {
     {
       category: 'Defense',
       title: 'DOD Saves $12M Annually with Automated Data Pipelines',
-      description: 'Automated data pipelines processing 500TB+ classified data daily with 99.9% uptime and $12M annual savings.',
+      description: 'Automated data pipelines processing 500TB+ classified data daily with 99.9% uptime and an estimated $12M in annual savings.',
       tags: ['Cloud', 'Automation', 'CMMC'],
       image: '/images/case-studies/dod-data-center.jpg',
       href: '/case-studies/dod-data-pipelines'
@@ -182,7 +182,7 @@ export default function CaseStudies() {
     {
       category: 'State Government',
       title: 'State DOT Modernizes Asset Management with 92% Efficiency Gain',
-      description: 'Migrated 40-year-old COBOL mainframe to Salesforce Government Cloud, achieving 92% efficiency improvement and $3.8M annual savings.',
+      description: 'Migrated 40-year-old COBOL mainframe to Salesforce Government Cloud, achieving 92% efficiency improvement and an estimated $3.8M in annual savings.',
       tags: ['Cloud', 'Integration', 'StateRAMP'],
       image: '/images/case-studies/dot-infrastructure.jpg',
       href: '/case-studies/state-dot'
@@ -244,9 +244,9 @@ export default function CaseStudies() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {[
               { value: '15+', label: 'Years Government Experience' },
-              { value: '$45M+', label: 'Government Contracts' },
+              { value: '50+', label: 'Agency Partners Served' },
               { value: '50+', label: 'Authorized Platforms' },
-              { value: '100%', label: 'Authorization Success Rate' }
+              { value: '98%+', label: 'Client Satisfaction Rate' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-2xl xs:text-3xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[oklch(0.20_0.05_250)] mb-1 md:mb-2">{stat.value}</div>

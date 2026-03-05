@@ -109,7 +109,7 @@ export default function InsightArticleLayout({
               Ready to transform your organization?
             </h2>
             <p className="text-lg text-slate-600 mb-8">
-              Let's discuss how NexDyne Technology can help you implement these strategies.
+              Let's discuss how Thalen Technologies can help you implement these strategies.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-[oklch(0.65_0.18_55)] hover:bg-[oklch(0.55_0.18_55)] text-white">

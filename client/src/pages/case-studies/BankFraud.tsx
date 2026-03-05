@@ -25,7 +25,7 @@ export default function BankFraud() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-            How a top-10 U.S. bank deployed real-time machine learning fraud detection that reduced false positives by 80% while preventing $45 million in fraudulent transactions annually. The system analyzes 50M+ transactions daily with 99.7% accuracy and sub-second response times.
+            How a top-10 U.S. bank deployed real-time machine learning fraud detection that reduced false positives by 80% while preventing an estimated $45 million in fraudulent transactions annually. The system analyzes 50M+ transactions daily with 99.7% accuracy and sub-second response times.
           </p>
 
           {/* The Opportunity */}
@@ -35,7 +35,7 @@ export default function BankFraud() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                A top-10 U.S. bank, managing over 500 million transactions annually, faced a critical challenge with escalating fraud losses, which had surpassed $60 million per year. The sophistication of modern financial crime, including synthetic identity fraud and account takeover schemes, was overwhelming their legacy systems, posing a significant threat to the institution's financial stability and reputation.
+                A top-10 U.S. bank, managing over 500 million transactions annually, faced a critical challenge with escalating fraud losses, which had surpassed an estimated $60 million per year. The sophistication of modern financial crime, including synthetic identity fraud and account takeover schemes, was overwhelming their legacy systems, posing a significant threat to the institution's financial stability and reputation.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 The bank's existing rule-based fraud detection system was not only failing to keep pace with evolving threats but was also severely impacting customer experience. It generated an unacceptable 35% false positive rate, leading to the unwarranted decline of legitimate transactions and significant customer friction. This high rate of false alarms created operational inefficiencies and eroded customer trust.

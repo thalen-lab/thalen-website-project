@@ -349,7 +349,7 @@ export default function CookieConsent() {
                 </Link>
               </div>
               <span className="text-gray-400">
-                Powered by NexDyne
+                Powered by Thalen Technologies
               </span>
             </div>
           </div>

@@ -25,7 +25,7 @@ export default function VAPredictiveAnalytics() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-            How the Department of Veterans Affairs deployed machine learning to prioritize disability claims, processing 2M+ claims annually with 95% accuracy and delivering $8.2M in operational savings.
+            How the Department of Veterans Affairs deployed machine learning to prioritize disability claims, processing 2M+ claims annually with 95% accuracy and delivering an estimated $8.2M in operational savings.
           </p>
 
           {/* The Opportunity */}

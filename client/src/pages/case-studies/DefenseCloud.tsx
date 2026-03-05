@@ -25,7 +25,7 @@ export default function DefenseCloud() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-            How a major defense contractor modernized its entire infrastructure while maintaining continuous operations and achieving CMMC Level 3 certification. The 18-month migration delivered $4.5M in annual savings with 100% uptime maintained throughout.
+            How a major defense contractor modernized its entire infrastructure while maintaining continuous operations and achieving CMMC Level 3 certification. The 18-month migration delivered an estimated $4.5M in annual savings with zero downtime maintained throughout.
           </p>
 
           {/* The Opportunity */}

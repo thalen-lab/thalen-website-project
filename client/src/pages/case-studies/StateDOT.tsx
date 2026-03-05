@@ -25,7 +25,7 @@ export default function StateDOT() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-            How migrating a 40-year-old COBOL mainframe to Salesforce Government Cloud enabled real-time asset tracking across 12,000 miles of highway and 2,400 bridges, delivering $3.8M in annual savings.
+            How migrating a 40-year-old COBOL mainframe to Salesforce Government Cloud enabled real-time asset tracking across 12,000 miles of highway and 2,400 bridges, delivering an estimated $3.8M in annual savings.
           </p>
 
           {/* The Opportunity */}
@@ -35,10 +35,10 @@ export default function StateDOT() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                A state Department of Transportation managing 12,000+ miles of highway, 2,400 bridges, and $800M in annual infrastructure spending relied on a 40-year-old COBOL mainframe system for asset management. The legacy system lacked mobile access, real-time reporting, and integration with modern GIS platforms, creating operational inefficiencies and limiting the agency's ability to respond to infrastructure emergencies.
+                A state Department of Transportation managing 12,000+ miles of highway, 2,400 bridges, and an estimated $800M in annual infrastructure spending relied on a 40-year-old COBOL mainframe system for asset management. The legacy system lacked mobile access, real-time reporting, and integration with modern GIS platforms, creating operational inefficiencies and limiting the agency's ability to respond to infrastructure emergencies.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
-                The challenges were significant. Asset data resided in the mainframe, GIS data in ArcGIS, and financial data in SAP—with no integration between systems, requiring manual data reconciliation. Field crews lacked real-time access to asset condition data during emergency repairs, causing delays and safety risks. The mainframe itself cost $1.2M annually just to maintain.
+                The challenges were significant. Asset data resided in the mainframe, GIS data in ArcGIS, and financial data in SAP—with no integration between systems, requiring manual data reconciliation. Field crews lacked real-time access to asset condition data during emergency repairs, causing delays and safety risks. The mainframe itself cost an estimated $1.2M annually just to maintain.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 NexDyne Technology was selected through a competitive RFP process to migrate the DOT's asset management system to Salesforce Government Cloud, a StateRAMP-authorized platform. The project required zero downtime during migration, integration with existing GIS and financial systems, and comprehensive training for 850+ field and office personnel.
@@ -71,13 +71,13 @@ export default function StateDOT() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                The platform delivered transformative results for the DOT's operations. Efficiency improved by 92% as field crews gained real-time access to asset data and could submit inspection reports from anywhere. The project was completed in 14 months, on time and within budget. Annual cost savings of $3.8M were achieved through elimination of mainframe maintenance, reduced manual data reconciliation, and improved maintenance planning.
+                The platform delivered transformative results for the DOT's operations. Efficiency improved by 92% as field crews gained real-time access to asset data and could submit inspection reports from anywhere. The project was completed in 14 months, on time and within budget. Estimated annual cost savings of $3.8M were achieved through elimination of mainframe maintenance, reduced manual data reconciliation, and improved maintenance planning.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 Emergency response capabilities improved dramatically. Field crews now have immediate access to asset condition data, maintenance history, and related documentation during emergency repairs. The integration with ArcGIS enables rapid identification of nearby assets that may be affected by incidents. Response times have decreased significantly, improving both safety and service to the public.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                The success has positioned the DOT as a leader in transportation technology modernization. The StateRAMP-authorized platform serves as a model for other state agencies seeking to modernize legacy systems while meeting security and data sovereignty requirements. The predictive maintenance capabilities have enabled more proactive infrastructure management, extending asset life and improving allocation of the $800M annual infrastructure budget.
+                The success has positioned the DOT as a leader in transportation technology modernization. The StateRAMP-authorized platform serves as a model for other state agencies seeking to modernize legacy systems while meeting security and data sovereignty requirements. The predictive maintenance capabilities have enabled more proactive infrastructure management, extending asset life and improving allocation of the estimated $800M annual infrastructure budget.
               </p>
             </div>
           </section>

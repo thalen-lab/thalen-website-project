@@ -128,12 +128,12 @@ export default function CapabilityStatement() {
                 
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mt-10 mb-4">Intelligent Automation and Process Optimization</h3>
                 <p className="text-lg leading-relaxed mb-6">
-                  We design and implement robotic process automation solutions that transform manual, paper-based workflows into streamlined digital processes. Our automation practice has delivered documented savings exceeding $2.3 billion across client engagements, with typical implementations achieving 60-85% reductions in processing time. We specialize in automating high-volume, rules-based processes such as benefits adjudication, procurement workflows, and regulatory compliance reporting, always with full audit trails and security controls appropriate for government environments.
+                  We design and implement robotic process automation solutions that transform manual, paper-based workflows into streamlined digital processes. Our automation practice consistently delivers measurable efficiency gains, with typical implementations achieving 60-85% reductions in processing time. We specialize in automating high-volume, rules-based processes such as benefits adjudication, procurement workflows, and regulatory compliance reporting, always with full audit trails and security controls appropriate for government environments.
                 </p>
                 
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mt-10 mb-4">Cloud Infrastructure and Modernization</h3>
                 <p className="text-lg leading-relaxed mb-6">
-                  Our cloud practice guides agencies through every phase of cloud adoption, from initial assessment and strategy development through migration, optimization, and ongoing operations. We maintain partnerships with all major FedRAMP-authorized cloud service providers and have completed more than 15 FedRAMP authorizations for client systems. Our approach emphasizes security-first architecture, cost optimization, and the development of cloud-native capabilities that position agencies for long-term success.
+                  Our cloud practice guides agencies through every phase of cloud adoption, from initial assessment and strategy development through migration, optimization, and ongoing operations. We maintain partnerships with all major FedRAMP-authorized cloud service providers and have supported more than 15 FedRAMP implementations for client systems. Our approach emphasizes security-first architecture, cost optimization, and the development of cloud-native capabilities that position agencies for long-term success.
                 </p>
                 
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mt-10 mb-4">Cybersecurity and Compliance</h3>
@@ -227,7 +227,7 @@ export default function CapabilityStatement() {
                 
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mt-10 mb-4">Federal Agency Process Automation</h3>
                 <p className="text-lg leading-relaxed mb-6">
-                  We partnered with a major federal agency to automate their benefits processing workflow, which previously required extensive manual review and paper-based documentation. Our implementation of intelligent document processing and robotic process automation reduced processing time by 85% and eliminated a backlog of over 50,000 pending cases. The solution processes more than 2 million transactions annually with 99.7% accuracy and has generated documented savings exceeding $47 million over three years.
+                  We partnered with a major federal agency to automate their benefits processing workflow, which previously required extensive manual review and paper-based documentation. Our implementation of intelligent document processing and robotic process automation reduced processing time by 85% and eliminated a backlog of over 50,000 pending cases. The solution processes more than 2 million transactions annually with 99.7% accuracy and has generated estimated savings of over $47 million over three years.
                 </p>
                 
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mt-10 mb-4">Healthcare System Cloud Migration</h3>
@@ -237,7 +237,7 @@ export default function CapabilityStatement() {
                 
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mt-10 mb-4">Defense Manufacturing Predictive Maintenance</h3>
                 <p className="text-lg leading-relaxed mb-6">
-                  We implemented an AI-powered predictive maintenance system for a defense manufacturing facility that monitors over 2,000 pieces of critical equipment. The system uses machine learning to predict equipment failures before they occur, enabling proactive maintenance that has improved production uptime to 99.2% and reduced unplanned downtime by 73%. The implementation has prevented an estimated $180 million in potential production losses over two years.
+                  We implemented an AI-powered predictive maintenance system for a defense manufacturing facility that monitors over 2,000 pieces of critical equipment. The system uses machine learning to predict equipment failures before they occur, enabling proactive maintenance that has improved production uptime to 99.2% and reduced unplanned downtime by 73%. The implementation has helped prevent significant production losses over two years through early failure detection.
                 </p>
                 
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mt-10 mb-4">State Government Cybersecurity Transformation</h3>

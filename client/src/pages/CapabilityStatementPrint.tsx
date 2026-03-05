@@ -206,7 +206,7 @@ export default function CapabilityStatementPrint() {
                 <div className="text-sm text-gray-700 space-y-2">
                   <div className="border-l-2 border-[#FF6B35] pl-2">
                     <p className="font-semibold">Federal Agency Process Automation</p>
-                    <p className="text-xs">85% reduction in processing time, $47M savings over 3 years</p>
+                    <p className="text-xs">85% reduction in processing time, estimated $47M savings over 3 years</p>
                   </div>
                   <div className="border-l-2 border-[#FF6B35] pl-2">
                     <p className="font-semibold">Healthcare Cloud Migration</p>

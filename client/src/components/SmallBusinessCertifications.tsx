@@ -72,15 +72,15 @@ export default function SmallBusinessCertifications() {
               <div className="flex items-start gap-2 sm:gap-3">
                 <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
                 <div>
-                  <p className="font-semibold text-white text-xs sm:text-sm">FedRAMP Authorized</p>
-                  <p className="text-slate-300 text-xs sm:text-sm">15+ successful authorizations</p>
+                  <p className="font-semibold text-white text-xs sm:text-sm">FedRAMP Implementation Support</p>
+                  <p className="text-slate-300 text-xs sm:text-sm">15+ successful implementations</p>
                 </div>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
                 <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
                 <div>
                   <p className="font-semibold text-white text-xs sm:text-sm">CMMC Level 2 Certified</p>
-                  <p className="text-slate-300 text-xs sm:text-sm">100% first-time pass rate</p>
+                  <p className="text-slate-300 text-xs sm:text-sm">Proven compliance methodology</p>
                 </div>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">

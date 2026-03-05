@@ -25,7 +25,7 @@ export default function FederalAgencyAutomation() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-            How a large federal agency transformed benefit processing through intelligent automation, reducing processing time by 67% and delivering $4.2M ROI in just 6 months while maintaining TS/SCI compliance.
+            How a large federal agency transformed benefit processing through intelligent automation, reducing processing time by 67% and delivering an estimated $4.2M ROI in just 6 months while maintaining TS/SCI compliance.
           </p>
 
           {/* The Opportunity */}

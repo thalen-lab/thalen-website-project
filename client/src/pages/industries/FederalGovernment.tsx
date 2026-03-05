@@ -125,10 +125,10 @@ export default function FederalGovernment() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
-              { value: '15+', label: 'Years Federal Experience' },
+              { value: '25+', label: 'Years Combined Team Experience' },
               { value: '50+', label: 'Agency Partners Served' },
               { value: '7+', label: 'Security Certifications' },
-              { value: '100%', label: 'Security Clearance Rate' }
+              { value: '100%', label: 'Client Satisfaction Rate' }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -236,7 +236,7 @@ export default function FederalGovernment() {
                 Thalen Technologies maintains the highest levels of federal security certifications and clearances, enabling us to support classified and mission-critical operations across the federal government. Our comprehensive compliance framework ensures that every solution meets or exceeds federal security requirements while maintaining operational efficiency.
               </p>
               <p className="text-lg text-slate-600 mb-6">
-                We provide end-to-end ATO support including security control implementation, documentation preparation, continuous monitoring setup, and ongoing compliance management. Our proven methodology has achieved a 100% success rate across 50+ federal ATOs spanning FedRAMP Moderate, FedRAMP High, and FISMA authorizations.
+                We provide end-to-end ATO support including security control implementation, documentation preparation, continuous monitoring setup, and ongoing compliance management. Our team's proven methodology has supported successful outcomes across federal ATOs spanning FedRAMP Moderate, FedRAMP High, and FISMA authorizations.
               </p>
               <ul className="space-y-3">
                 {capabilities.map((cap, index) => (

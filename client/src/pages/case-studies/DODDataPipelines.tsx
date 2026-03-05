@@ -71,13 +71,13 @@ export default function DODDataPipelines() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                The implementation of the automated data pipelines delivered immediate and substantial returns on investment. By eliminating the need for 35 full-time employees to perform manual data extraction and transformation, the Department of Defense realized an annual operational cost saving of $12 million. These highly skilled analysts were subsequently redeployed to higher-value activities, such as supply chain optimization and advanced demand forecasting.
+                The implementation of the automated data pipelines delivered immediate and substantial returns on investment. By eliminating the need for 35 full-time employees to perform manual data extraction and transformation, the Department of Defense realized an estimated annual operational cost saving of $12 million. These highly skilled analysts were subsequently redeployed to higher-value activities, such as supply chain optimization and advanced demand forecasting.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 Operational efficiency saw a dramatic improvement, with a 95% reduction in manual data work. The automated system now processes 2.4 million records daily with near-zero human intervention. This shift allowed analysts to dedicate their time to strategic analysis rather than data janitorial tasks, fundamentally changing the nature of the logistics command's data operations.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Most critically, the data refresh time was reduced from an unacceptable 18 hours to a near real-time 15 minutes. This real-time visibility into inventory, shipments, and procurement enabled leadership to make faster, data-driven decisions, leading to the identification and redistribution of $340 million in excess inventory. The system has maintained a 99.8% pipeline uptime over 18 months, demonstrating the reliability and resilience required for mission-critical defense infrastructure.
+                Most critically, the data refresh time was reduced from an unacceptable 18 hours to a near real-time 15 minutes. This real-time visibility into inventory, shipments, and procurement enabled leadership to make faster, data-driven decisions, leading to the identification and redistribution of an estimated $340 million in excess inventory. The system has maintained a 99.8% pipeline uptime over 18 months, demonstrating the reliability and resilience required for mission-critical defense infrastructure.
               </p>
             </div>
           </section>

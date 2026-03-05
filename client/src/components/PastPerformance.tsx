@@ -34,7 +34,7 @@ const pastPerformance: PastPerformanceProject[] = [
     value: "$24.5M",
     duration: "2020-2024",
     outcome: "85% process automation achieved",
-    savings: "$18M annual cost savings",
+    savings: "Estimated $18M annual cost savings",
     metrics: [
       "Automated 127 mission-critical workflows",
       "Reduced processing time by 73%",
@@ -50,7 +50,7 @@ const pastPerformance: PastPerformanceProject[] = [
     value: "$16.8M",
     duration: "2019-2023",
     outcome: "60% faster claims processing",
-    savings: "$12M cost reduction",
+    savings: "Estimated $12M cost reduction",
     metrics: [
       "Processed 2.3M claims annually",
       "Reduced claim denial rate by 42%",
@@ -82,7 +82,7 @@ const pastPerformance: PastPerformanceProject[] = [
     value: "$8.9M",
     duration: "2022-2024",
     outcome: "Real-time visibility into veteran services delivery",
-    savings: "$5.2M operational efficiency gains",
+    savings: "Estimated $5.2M operational efficiency gains",
     metrics: [
       "Integrated 47 disparate data sources",
       "Reduced report generation time from days to minutes",
@@ -242,7 +242,7 @@ export default function PastPerformance() {
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">$35.2M</div>
-              <div className="text-sm md:text-base opacity-90">Documented Savings</div>
+              <div className="text-sm md:text-base opacity-90">Estimated Client Savings</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2 text-[#FF6B35]">100%</div>

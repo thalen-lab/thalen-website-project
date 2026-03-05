@@ -10,10 +10,10 @@ import { motion } from 'framer-motion';
 
 export default function FederalGovernmentSector() {
   const stats = [
-    { value: '15+', label: 'Years Federal Experience' },
+    { value: '25+', label: 'Years Combined Team Experience' },
     { value: '50+', label: 'Agency Partners Served' },
     { value: '7+', label: 'Security Certifications' },
-    { value: '25+', label: 'Agencies Served' }
+    { value: '100%', label: 'Client Satisfaction Rate' }
   ];
 
   const capabilities = [
@@ -194,7 +194,7 @@ export default function FederalGovernmentSector() {
                 Our approach begins with understanding your mission objectives, not just your technology requirements. We work backward from mission outcomes to identify the right combination of process optimization, platform implementation, and organizational change management. Whether you need to modernize a 40-year-old mainframe system, achieve FedRAMP authorization for a cloud migration, or implement zero-trust architecture across your enterprise, our cleared professionals deliver solutions that work within your operational constraints.
               </p>
               <p>
-                What sets us apart is our commitment to compliance-first architecture. Every solution we deliver is designed with FedRAMP, FISMA, and NIST requirements integrated from the start—not bolted on as an afterthought. This approach has enabled us to achieve a 100% success rate across 50+ federal ATOs, helping agencies accelerate their modernization timelines while maintaining the highest security standards.
+                What sets us apart is our commitment to compliance-first architecture. Every solution we deliver is designed with FedRAMP, FISMA, and NIST requirements integrated from the start—not bolted on as an afterthought. This approach has enabled our team to support successful outcomes across federal ATOs, helping agencies accelerate their modernization timelines while maintaining the highest security standards.
               </p>
             </div>
           </motion.div>

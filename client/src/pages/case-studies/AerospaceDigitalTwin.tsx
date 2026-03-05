@@ -25,7 +25,7 @@ export default function AerospaceDigitalTwin() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-            How a comprehensive digital twin platform enabled predictive maintenance across a fleet of 250+ aircraft, reducing design costs by 40% and accelerating time-to-market by 6 months for next-generation aircraft development. The platform delivered $95 million in annual operational savings.
+            How a comprehensive digital twin platform enabled predictive maintenance across a fleet of 250+ aircraft, reducing design costs by 40% and accelerating time-to-market by 6 months for next-generation aircraft development. The platform delivered an estimated $95 million in annual operational savings.
           </p>
 
           {/* The Opportunity */}
@@ -35,7 +35,7 @@ export default function AerospaceDigitalTwin() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                A leading aerospace and defense organization, managing a vast fleet of commercial aircraft, faced a critical challenge: escalating maintenance expenditures exceeding $240 million annually. The reliance on traditional, time-based maintenance schedules led to unnecessary component replacements, excessive downtime, and a high operational cost base.
+                A leading aerospace and defense organization, managing a vast fleet of commercial aircraft, faced a critical challenge: escalating maintenance expenditures estimated at over $240 million annually. The reliance on traditional, time-based maintenance schedules led to unnecessary component replacements, excessive downtime, and a high operational cost base.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 This reactive approach was further complicated by frequent, unscheduled maintenance events. These unexpected failures severely disrupted flight schedules, negatively impacting service delivery and creating significant logistical strain. The lack of foresight into component health meant the organization was constantly reacting to failures rather than proactively preventing them.
@@ -71,7 +71,7 @@ export default function AerospaceDigitalTwin() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                The implementation of the digital twin platform delivered immediate and substantial financial returns. Maintenance costs were reduced by a remarkable 40%, translating to an annual operational saving of $95 million. This rapid return on investment was achieved by eliminating unnecessary maintenance tasks and optimizing the timing of essential repairs.
+                The implementation of the digital twin platform delivered immediate and substantial financial returns. Maintenance costs were reduced by a remarkable 40%, translating to an estimated annual operational saving of $95 million. This rapid return on investment was achieved by eliminating unnecessary maintenance tasks and optimizing the timing of essential repairs.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
                 Operational reliability saw a dramatic improvement, with unscheduled maintenance events plummeting by 70%. By accurately predicting and preventing failures, the organization significantly enhanced its service delivery consistency and reduced the logistical complexity associated with unexpected groundings. Aircraft availability improved by 12%, enabling more efficient utilization of the fleet.

@@ -25,7 +25,7 @@ export default function DoDManufacturing() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-            How FedRAMP-authorized cybersecurity platforms and IoT-powered predictive maintenance across 50 production lines eliminated 75% of unplanned downtime while achieving CMMC Level 3 certification and delivering $12.5M in annual savings.
+            How FedRAMP-authorized cybersecurity platforms and IoT-powered predictive maintenance across 50 production lines eliminated 75% of unplanned downtime while achieving CMMC Level 3 certification and delivering an estimated $12.5M in annual savings.
           </p>
 
           {/* The Opportunity */}
@@ -35,7 +35,7 @@ export default function DoDManufacturing() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-600 leading-relaxed mb-6">
-                A Department of Defense manufacturing facility producing critical defense components across 50 production lines experienced 150+ unplanned downtime incidents annually. The facility's aging industrial control systems, some over 15 years old, lacked predictive maintenance capabilities and had significant cybersecurity vulnerabilities. Unplanned downtime disrupted mission-critical production schedules, threatened delivery commitments, and cost over $18 million annually in lost production and emergency repairs.
+                A Department of Defense manufacturing facility producing critical defense components across 50 production lines experienced 150+ unplanned downtime incidents annually. The facility's aging industrial control systems, some over 15 years old, lacked predictive maintenance capabilities and had significant cybersecurity vulnerabilities. Unplanned downtime disrupted mission-critical production schedules, threatened delivery commitments, and cost an estimated $18 million annually in lost production and emergency repairs.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 NexDyne Technology was awarded a contract through DoD's IDIQ vehicle to modernize the facility's cybersecurity posture, implement predictive maintenance analytics, and achieve CMMC Level 3 certification. The solution would eliminate unplanned downtime, provide real-time operational visibility, and ensure compliance with stringent defense cybersecurity requirements.
@@ -71,7 +71,7 @@ export default function DoDManufacturing() {
                 The implementation delivered transformative results for the manufacturing facility. System uptime improved to 99.2%, with unplanned downtime incidents reduced by 75%—from 150+ annually to just 38. The 72-hour advance warning for equipment failures allowed maintenance to be scheduled during planned downtime, eliminating the emergency repairs that had previously disrupted production schedules.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Financial impact was substantial, with $12.5 million in annual savings achieved through reduced emergency repairs, improved production efficiency, and optimized maintenance scheduling. The facility successfully achieved CMMC Level 3 certification, meeting all stringent defense cybersecurity requirements and maintaining eligibility for defense contracts.
+                Financial impact was substantial, with an estimated $12.5 million in annual savings achieved through reduced emergency repairs, improved production efficiency, and optimized maintenance scheduling. The facility successfully achieved CMMC Level 3 certification, meeting all stringent defense cybersecurity requirements and maintaining eligibility for defense contracts.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 The facility director noted that the predictive maintenance platform transformed manufacturing operations, enabling the shift from reactive emergency response to proactive maintenance planning. The success has led to discussions about expanding the implementation to additional DoD manufacturing facilities, establishing a model for defense industrial base modernization.

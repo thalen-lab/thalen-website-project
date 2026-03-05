@@ -25,7 +25,7 @@ export default function FederalAutomation() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-12">
-            How a federal agency implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. The initiative delivered $4.2M in annual savings with a six-month return on investment.
+            How a federal agency implemented UiPath RPA platform with FedRAMP authorization, automating 85% of manual workflows while maintaining TS/SCI compliance. The initiative delivered an estimated $4.2M in annual savings with a six-month return on investment.
           </p>
 
           {/* The Opportunity */}
