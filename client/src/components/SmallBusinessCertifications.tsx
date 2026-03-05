@@ -33,7 +33,7 @@ export default function SmallBusinessCertifications() {
               <div className="w-12 sm:w-14 md:w-16 h-1 bg-[#FF6B35] rounded-full"></div>
             </div>
             <p className="text-slate-300 text-sm sm:text-base mb-4 sm:mb-5 md:mb-6 leading-relaxed">
-              For over two decades, Thalen Technologies has been the trusted technology partner for federal, state, and local government agencies.
+              Thalen Technologies is built on over two decades of combined team expertise serving as trusted technology partners for federal, state, and local government agencies.
             </p>
             <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-5 md:mb-6">
               <div className="flex items-center gap-2 text-slate-300 text-xs sm:text-sm">

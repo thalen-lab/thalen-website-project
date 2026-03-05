@@ -89,7 +89,7 @@ export default function About() {
               
               <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/90">
                 <p>
-                  For 25 years, Thalen Technologies has been the trusted technology partner for federal, state, and local government agencies. We've witnessed the evolution of government technology—from legacy mainframes to cloud-native solutions—and we've been there every step of the way, helping our agency partners modernize critical systems, secure sensitive data, and deliver superior citizen services.
+                  Thalen Technologies is built on a foundation of over 25 years of combined team expertise serving as trusted technology partners for federal, state, and local government agencies. We've witnessed the evolution of government technology—from legacy mainframes to cloud-native solutions—and we've been there every step of the way, helping our agency partners modernize critical systems, secure sensitive data, and deliver superior citizen services.
                 </p>
                 
                 <p>

@@ -4820,3 +4820,7 @@
 - [x] Preserve all existing link routes
 ## Phase 88: Fix Homepage Hero Banner Text
 - [x] Change 'For 25 years, we have partnered...' to 'Our team brings over 25 years of combined experience partnering...'
+## Phase 89: Fix About Page Hero Section Text
+- [x] Change 'For 25 years, Thalen Technologies has been the trusted technology partner...' to 'Thalen Technologies is built on a foundation of over 25 years of combined team expertise serving as trusted technology partners...'
+## Phase 90: Fix SmallBusinessCertifications Component Text
+- [x] Reframe 'For over two decades, Thalen Technologies has been the trusted technology partner...' to match team expertise framing
