@@ -8,7 +8,7 @@ export const APP_LOGO = "/thalen-logo.png";
  * VAPID public key for web push notifications
  * This key is safe to expose in client-side code
  */
-export const VAPID_PUBLIC_KEY = 'BJZOyfhGVrNIjrT9TxHmXm0HvQaG5lQWSvphfkuND5bX0oPYO_DPcT5rNqIBDRSSpkYz1Inn-oLqSlO5dkWIFiU';
+export const VAPID_PUBLIC_KEY = import.meta.env.VITE_VAPID_PUBLIC_KEY || '';
 
 // Generate login URL at runtime so redirect URI reflects the current origin.
 export const getLoginUrl = () => {

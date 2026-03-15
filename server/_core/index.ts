@@ -50,15 +50,20 @@ async function startServer() {
     serveStatic(app);
   }
 
+  // In production (Railway), always use the PORT env var directly.
+  // Port scanning is only useful in local development.
   const preferredPort = parseInt(process.env.PORT || "3000");
-  const port = await findAvailablePort(preferredPort);
+  const port = process.env.NODE_ENV === "production"
+    ? preferredPort
+    : await findAvailablePort(preferredPort);
 
   if (port !== preferredPort) {
     console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
   }
 
-  server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}/`);
+  // Bind to 0.0.0.0 so Railway's proxy can reach the server.
+  server.listen(port, "0.0.0.0", () => {
+    console.log(`Server running on 0.0.0.0:${port} (NODE_ENV=${process.env.NODE_ENV})`);
   });
 }
 
