@@ -186,7 +186,7 @@ export default function GovernmentResources() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-base xs:text-lg sm:text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-10"
               >
-                Nexdyne provides secure, compliant, and efficient technology solutions to help federal, state, and local government agencies better serve their communities.
+                Thalen Technologies provides secure, compliant, and efficient technology solutions to help federal, state, and local government agencies better serve their communities.
               </motion.p>
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -501,7 +501,7 @@ export default function GovernmentResources() {
           <div className="container text-center max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold mb-4">Ready to Modernize Your Agency?</h2>
             <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-              Let's discuss your specific needs and how Nexdyne can help you achieve your modernization goals. Schedule a free consultation with our public sector experts today.
+              Let's discuss your specific needs and how Thalen Technologies can help you achieve your modernization goals. Schedule a free consultation with our public sector experts today.
             </p>
             <Button asChild size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
               <Link href="/contact">Request a Consultation</Link>

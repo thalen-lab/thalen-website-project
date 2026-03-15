@@ -17,7 +17,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/sarahchen',
       twitter: 'https://twitter.com/sarahchen',
-      email: 'sarah.chen@thalen.com'
+      email: 'sarah.chen@thalentechnologies.com'
     },
     image: '/authors/sarah-chen.jpg',
     stats: {
@@ -34,7 +34,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/michaelrodriguez',
       twitter: 'https://twitter.com/mrodriguez_sec',
-      email: 'michael.rodriguez@thalen.com'
+      email: 'michael.rodriguez@thalentechnologies.com'
     },
     image: '/authors/michael-rodriguez.jpg',
     stats: {
@@ -51,7 +51,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/drjenniferpark',
       twitter: 'https://twitter.com/drjpark_ai',
-      email: 'jennifer.park@thalen.com'
+      email: 'jennifer.park@thalentechnologies.com'
     },
     image: '/authors/jennifer-park.jpg',
     stats: {
@@ -68,7 +68,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/davidthompson',
       twitter: 'https://twitter.com/dthompson_cloud',
-      email: 'david.thompson@thalen.com'
+      email: 'david.thompson@thalentechnologies.com'
     },
     image: '/authors/david-thompson.jpg',
     stats: {
@@ -85,7 +85,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/lisamartinez',
       twitter: 'https://twitter.com/lmartinez_dx',
-      email: 'lisa.martinez@thalen.com'
+      email: 'lisa.martinez@thalentechnologies.com'
     },
     image: '/authors/lisa-martinez.jpg',
     stats: {
@@ -102,7 +102,7 @@ const authors = {
     social: {
       linkedin: 'https://linkedin.com/in/jameswilson',
       twitter: 'https://twitter.com/jwilson_data',
-      email: 'james.wilson@thalen.com'
+      email: 'james.wilson@thalentechnologies.com'
     },
     image: '/authors/james-wilson.jpg',
     stats: {

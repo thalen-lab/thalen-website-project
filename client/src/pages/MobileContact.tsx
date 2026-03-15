@@ -133,7 +133,7 @@ export default function MobileContact() {
             <span className="text-xs text-slate-400">1-800-555-1234</span>
           </a>
           <a
-            href="mailto:contact@thalentech.com"
+            href="mailto:info@thalentechnologies.com"
             className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-800 hover:border-[#FF6B35]/50 transition-all active:scale-95"
           >
             <div className="w-12 h-12 bg-[#FF6B35]/10 rounded-full flex items-center justify-center">

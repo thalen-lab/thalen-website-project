@@ -331,7 +331,7 @@ export default function CapabilityStatementPrint() {
                 </h2>
                 <div className="text-sm text-gray-700">
                   <p><strong>Website:</strong> www.thalentech.com</p>
-                  <p><strong>Email:</strong> contracts@thalentech.com</p>
+                  <p><strong>Email:</strong> contracts@thalentechnologies.com</p>
                   <p><strong>Phone:</strong> (202) 555-0100</p>
                   <p><strong>Address:</strong> 1200 Technology Drive, Suite 400, Arlington, VA 22201</p>
                 </div>

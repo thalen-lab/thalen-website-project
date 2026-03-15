@@ -168,7 +168,7 @@ export default function Security() {
               </p>
               <div className="flex items-center gap-4 mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.18_55)] flex-shrink-0 mt-1"></span>
-                <span className="font-medium text-[oklch(0.20_0.05_250)]">security@nexdyne.com</span>
+                <span className="font-medium text-[oklch(0.20_0.05_250)]">security@thalentechnologies.com</span>
               </div>
               <p className="text-sm text-slate-600">
                 Please include detailed information about the vulnerability, steps to reproduce, and any supporting evidence. We request that you do not publicly disclose the vulnerability until we have had an opportunity to address it.

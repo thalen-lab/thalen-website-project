@@ -32,11 +32,11 @@ What happens next:
 3. You can expect to hear from us via email or phone
 
 In the meantime, we encourage you to:
-- Learn more about our work at https://nexdyne.com
+- Learn more about our work at https://thalentechnologies.com
 - Follow us on LinkedIn for company updates
 - Review our case studies to understand our impact
 
-If you have any questions about your application, please don't hesitate to reach out to our recruiting team at careers@nexdyne.com.
+If you have any questions about your application, please don't hesitate to reach out to our recruiting team at careers@thalentechnologies.com.
 
 Thank you again for considering Thalen Technologies as your next career destination. We look forward to reviewing your application!
 
@@ -46,7 +46,7 @@ The Thalen Talent Acquisition Team
 ---
 Thalen Technologies
 Intelligence, Delivered.
-https://nexdyne.com
+https://thalentechnologies.com
   `.trim();
 
   // Log the confirmation (in production, this would send an actual email)

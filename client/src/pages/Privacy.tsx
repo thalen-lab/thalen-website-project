@@ -221,7 +221,7 @@ export default function Privacy() {
                 <p className="text-white/80 leading-relaxed mb-6">
                   If you have any questions about this Privacy Policy, please contact us.
                 </p>
-                <a href="mailto:privacy@nexdyne.com" className="inline-flex items-center gap-2 bg-white text-[oklch(0.22_0.06_250)] font-semibold px-6 py-3 rounded-md hover:bg-slate-200 transition-colors">
+                <a href="mailto:privacy@thalentechnologies.com" className="inline-flex items-center gap-2 bg-white text-[oklch(0.22_0.06_250)] font-semibold px-6 py-3 rounded-md hover:bg-slate-200 transition-colors">
                   <span>Email our Privacy Team</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>

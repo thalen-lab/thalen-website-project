@@ -2,10 +2,10 @@
 // Enhanced offline capability with advanced caching strategies
 
 const CACHE_VERSION = 'v2';
-const STATIC_CACHE = `nexdyne-static-${CACHE_VERSION}`;
-const DYNAMIC_CACHE = `nexdyne-dynamic-${CACHE_VERSION}`;
-const IMAGE_CACHE = `nexdyne-images-${CACHE_VERSION}`;
-const API_CACHE = `nexdyne-api-${CACHE_VERSION}`;
+const STATIC_CACHE = `thalen-static-${CACHE_VERSION}`;
+const DYNAMIC_CACHE = `thalen-dynamic-${CACHE_VERSION}`;
+const IMAGE_CACHE = `thalen-images-${CACHE_VERSION}`;
+const API_CACHE = `thalen-api-${CACHE_VERSION}`;
 const OFFLINE_URL = '/offline.html';
 
 // Maximum items in dynamic cache
@@ -62,7 +62,7 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames
             .filter((name) => {
-              return name.startsWith('nexdyne-') && 
+              return name.startsWith('thalen-') && 
                      name !== STATIC_CACHE && 
                      name !== DYNAMIC_CACHE && 
                      name !== IMAGE_CACHE &&
@@ -328,7 +328,7 @@ self.addEventListener('message', (event) => {
     event.waitUntil(
       caches.keys().then((names) => {
         return Promise.all(
-          names.filter(name => name.startsWith('nexdyne-'))
+          names.filter(name => name.startsWith('thalen-'))
                .map(name => caches.delete(name))
         );
       })
@@ -350,7 +350,7 @@ async function getCacheStatus() {
   const status = {};
   
   for (const name of cacheNames) {
-    if (name.startsWith('nexdyne-')) {
+    if (name.startsWith('thalen-')) {
       const cache = await caches.open(name);
       const keys = await cache.keys();
       status[name] = keys.length;

@@ -173,7 +173,7 @@ export default function Contact() {
                     <Mail className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-accent mr-3 sm:mr-4 mt-0.5 sm:mt-1 flex-shrink-0" />
                     <div className="min-w-0">
                       <h3 className="font-semibold text-sm sm:text-base mb-0.5 sm:mb-1">Email</h3>
-                      <p className="text-muted-foreground text-sm sm:text-base break-all">contact@thalen.tech</p>
+                      <p className="text-muted-foreground text-sm sm:text-base break-all">info@thalentechnologies.com</p>
                       <p className="text-xs sm:text-sm text-muted-foreground">24-hour response time</p>
                     </div>
                   </CardContent>

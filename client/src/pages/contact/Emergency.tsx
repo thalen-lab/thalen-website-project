@@ -92,8 +92,8 @@ export default function Emergency() {
                     <h3 className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">
                       24/7 Emergency Hotline
                     </h3>
-                    <a href="tel:1-800-NEXDYNE-911" className="text-[oklch(0.65_0.18_55)] hover:underline text-lg font-bold">
-                      Call: 1-800-NEXDYNE-911
+                    <a href="tel:1-800-THALEN-911" className="text-[oklch(0.65_0.18_55)] hover:underline text-lg font-bold">
+                      Call: 1-800-THALEN-911
                     </a>
                     <p className="text-sm text-slate-600 mt-2">
                       For immediate assistance, call our 24/7 emergency hotline.

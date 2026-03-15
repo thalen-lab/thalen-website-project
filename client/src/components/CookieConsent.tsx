@@ -19,8 +19,8 @@ interface CookieCategory {
   details: string[];
 }
 
-const COOKIE_CONSENT_KEY = 'nexdyne_cookie_consent';
-const COOKIE_PREFERENCES_KEY = 'nexdyne_cookie_preferences';
+const COOKIE_CONSENT_KEY = 'thalen_cookie_consent';
+const COOKIE_PREFERENCES_KEY = 'thalen_cookie_preferences';
 
 const cookieCategories: CookieCategory[] = [
   {

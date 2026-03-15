@@ -164,7 +164,7 @@ export default function FederalAutomationContract() {
                 <strong className="text-gray-900">Media Contact:</strong><br />
                 Corporate Communications<br />
                 Thalen Technologies, Inc.<br />
-                <a href="mailto:press@thalentech.com" className="text-[#FF6B35] hover:underline">press@thalentech.com</a>
+                <a href="mailto:press@thalentechnologies.com" className="text-[#FF6B35] hover:underline">press@thalentechnologies.com</a>
               </p>
             </div>
 

@@ -99,8 +99,8 @@ export default function Partnerships() {
               <Card className="mb-6 bg-white border-2 border-slate-200 hover:border-[oklch(0.70_0.18_55)] hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-3 sm:p-4 md:p-6">
                   <h3 className="font-semibold mb-2 text-[oklch(0.20_0.05_250)]">Direct Contact</h3>
-                  <a href="mailto:partnerships@nexdyne.com" className="text-[oklch(0.65_0.18_55)] hover:underline">
-                    partnerships@nexdyne.com
+                  <a href="mailto:partnerships@thalentechnologies.com" className="text-[oklch(0.65_0.18_55)] hover:underline">
+                    partnerships@thalentechnologies.com
                   </a>
                 </CardContent>
               </Card>

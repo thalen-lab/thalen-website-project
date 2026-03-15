@@ -186,7 +186,7 @@ export default function Financial() {
           <div className="container text-center max-w-4xl mx-auto">
             <h2 className="text-xl xs:text-2xl sm:text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to Modernize Your Financial Systems?</h2>
             <p className="text-lg text-white/80 mb-4 sm:mb-6 md:mb-4 sm:mb-6 md:mb-8">
-              Let's discuss how Nexdyne can help you navigate the complexities of digital transformation in the financial sector. Schedule a complimentary assessment with our experts today.
+              Let's discuss how Thalen Technologies can help you navigate the complexities of digital transformation in the financial sector. Schedule a complimentary assessment with our experts today.
             </p>
             <Button size="lg" className="bg-white text-[oklch(0.22_0.06_250)] hover:bg-white/90">
               Contact Our Financial Tech Experts

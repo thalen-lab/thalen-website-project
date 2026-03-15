@@ -259,7 +259,7 @@ export default function Resources() {
                 transition={{ duration: 0.5 }}
               >
                 <Breadcrumb items={breadcrumbItems} variant="light" />
-                <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mt-4">Nexdyne Resource Center</p>
+                <p className="text-[oklch(0.75_0.15_55)] font-semibold uppercase tracking-wider mt-4">Thalen Technologies Resource Center</p>
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mt-4">Guides, Tools & Reports</h1>
                 <p className="max-w-3xl mx-auto mt-6 text-lg text-white/90">Explore our library of whitepapers, checklists, calculators, and industry reports to accelerate your government automation and compliance initiatives.</p>
                 <div className="mt-8 flex justify-center gap-4">

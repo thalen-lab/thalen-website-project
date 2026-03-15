@@ -430,7 +430,7 @@ export default function ContractVehicles() {
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[oklch(0.22_0.06_250)]">
-                  <a href="/nexdyne-capabilities-statement.pdf" download>
+                  <a href="/thalen-capabilities-statement.pdf" download>
                     <FileText className="mr-2 h-5 w-5" />
                     Download Capabilities Statement
                   </a>
