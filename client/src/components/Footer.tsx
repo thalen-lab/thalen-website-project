@@ -338,7 +338,7 @@ export default function Footer() {
               <Mail className="h-5 w-5 text-white/50 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium text-white mb-1">Email</p>
-                <p className="text-white/70">contact@nexdynetechnologies.com</p>
+                <p className="text-white/70">info@thalentechnologies.com</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">

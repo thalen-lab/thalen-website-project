@@ -4908,3 +4908,7 @@
 - [x] Softened: FederalROICalculator.tsx (labor savings label)
 - [x] Verified: All display-only $12M/$50M/$25M values have 'Estimated' in labels
 - [x] Excluded from softening: Contract size ranges, pricing tiers, salary placeholders, budget selectors, DoD supply chain context ($180B)
+## Phase 97: Capability Statement Page Fixes
+- [x] Fix Company Overview: remove veteran-owned, change HQ to Grand Rapids Michigan
+- [x] Fix Contract Vehicles: replace current text with pursuing/evaluating language
+- [x] Update footer email to info@thalentechnologies.com

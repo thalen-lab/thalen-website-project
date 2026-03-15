@@ -274,7 +274,7 @@ export default function CapabilityStatement() {
                 
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mt-10 mb-4">Contract Vehicles</h3>
                 <p className="text-lg leading-relaxed mb-6">
-                  Thalen Technologies holds positions on multiple government-wide acquisition contracts including GSA Schedule 70 for IT Professional Services, GSA STARS III for technology services, and CIO-SP3 for IT solutions. We also maintain state-level contract vehicles in over 20 states and participate in cooperative purchasing agreements that extend our reach to local government entities. These vehicles enable rapid procurement while ensuring competitive pricing and compliance with applicable regulations.
+                  Thalen Technologies is actively pursuing positions on key government-wide acquisition contracts including GSA MAS (Multiple Award Schedule) under IT Professional Services (SIN 54151S), Highly Adaptive Cybersecurity Services (SIN 54151HACS), and Cloud Computing Services (SIN 518210C). The company is also evaluating future pursuit of SEWP VI and CIO-SP4 contract vehicles to expand federal procurement pathways for our clients.
                 </p>
                 
                 <h3 className="text-2xl font-bold text-[oklch(0.20_0.05_250)] mt-10 mb-4">Certifications and Registrations</h3>
@@ -336,7 +336,7 @@ export default function CapabilityStatement() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-[oklch(0.65_0.18_55)] uppercase tracking-wider mb-1">Headquarters</p>
-                      <p className="text-lg text-[oklch(0.20_0.05_250)]">Washington, D.C. Metropolitan Area</p>
+                      <p className="text-lg text-[oklch(0.20_0.05_250)]">Grand Rapids, Michigan</p>
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-[oklch(0.65_0.18_55)] uppercase tracking-wider mb-1">Years in Business</p>
