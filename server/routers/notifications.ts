@@ -6,12 +6,16 @@ import { eq, and } from "drizzle-orm";
 import webpush from "web-push";
 import { VAPID_KEYS, VAPID_SUBJECT } from "../push-config";
 
-// Configure web-push with VAPID keys
-webpush.setVapidDetails(
-  VAPID_SUBJECT,
-  VAPID_KEYS.publicKey,
-  VAPID_KEYS.privateKey
-);
+// Configure web-push (only if VAPID keys are available)
+if (VAPID_KEYS.publicKey && VAPID_KEYS.privateKey) {
+  webpush.setVapidDetails(
+    VAPID_SUBJECT,
+    VAPID_KEYS.publicKey,
+    VAPID_KEYS.privateKey
+  );
+} else {
+  console.warn("[Push] VAPID keys not configured — push notifications disabled");
+}
 
 /**
  * Notification preferences schema
